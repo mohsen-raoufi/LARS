@@ -37,10 +37,11 @@ If you use or adapt LARS or ARK in order to generate experimental results, pleas
 
 [2] Raoufi M., Romanczuk P., Hamann H. (2024) LARS: Light Augmented Reality System for Interaction in Multi-Robot Scenarios. 
 
-```
+<!--
 ### Contribution
 
 Please follow the rules defined in CONTRIBUTION.md
-```
+-->
+
 ### See Also
 * [Kilobot Wiki](http://diode.group.shef.ac.uk/kilobots/index.php/Kilobots)
