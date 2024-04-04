@@ -31,7 +31,7 @@ sudo usermod -a -G dialout <user-name>
 
 ### Citation
 
-If you use or adapt LARS or ARK in order to generate experimental results, please cite the following paper in any resulting publications:
+If you use or adapt LARS in order to generate experimental results, please cite the following paper in any resulting publications:
 
 [1] Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
 
