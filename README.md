@@ -3,7 +3,7 @@ Light Augmented Reality System for Interaction in Multi-Robot Scenarios
 
 The main part of dependencies are similar to ARK [1], hence the installation documents are derived from [DiODe](https://github.com/DiODeProject/KilobotArena).
 
-for detailed installation of dependencies check the [install_dep.md]() derived from [AILab](https://github.com/TBU-AILab/KilobotArena/blob/AILAB_TBU/ark_install.txt).
+for detailed installation of dependencies check the [install_dep.md](https://github.com/mohsen-raoufi/LARS/blob/main/install_dep.md) derived from [AILab](https://github.com/TBU-AILab/KilobotArena/blob/AILAB_TBU/ark_install.txt).
 
 ## Light Augmented Reality System (LARS)
 ### Installation
