@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Files/col_dec_mak.jpg</file>
+        <file>Files/KilobotHeter.png</file>
+        <file>qrCode.qml</file>
+        <file>Files/marker3.png</file>
+        <file>Files/marker2.png</file>
+        <file>Files/marker1.png</file>
+        <file>Files/marker0.png</file>
+        <file>Files/SCIoI_Logo.png</file>
+        <file>Files/arena_05.png</file>
+        <file>Files/arena_04.png</file>
+        <file>Files/arena_03.png</file>
+        <file>Files/arena_02.png</file>
+        <file>Files/arena_01.png</file>
+        <file>Files/arena_07.png</file>
+        <file>Files/arena_06.png</file>
+        <file>Files/scioiNet.gif</file>
+        <file>Files/arena_08.png</file>
+        <file>Files/webpage.png</file>
+        <file>Files/arena_white.png</file>
+        <file>Files/centroid.png</file>
+        <file>Files/psioi.png</file>
+        <file>Files/ball.png</file>
+    </qresource>
+</RCC>
