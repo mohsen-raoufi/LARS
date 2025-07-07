@@ -13,7 +13,7 @@
 ## ✨ What is LARS?
 
 **LARS** (Light Augmented Reality System) is a cross-platform, open-source framework for *experimentation, education, and outreach* in collective robotics.  
-It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects—such as gradients, fields, trails, and even robot states—directly into the environment where real robots operate.
+It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects, such as gradients, fields, trails, and even robot states, directly into the environment where real robots operate.
 
 LARS enables **indirect robot-robot communication** (stigmergy), while preserving all real-world constraints. It turns "invisible" swarm dynamics into tangible, interactive experiences for researchers, students, and the public.
 
