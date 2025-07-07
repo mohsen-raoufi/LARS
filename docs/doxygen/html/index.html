@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LARS: LARS</title>
+<title>LARS: LARS: Light Augmented Reality System for Collective Robotics</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,11 +89,96 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">LARS </div></div>
+  <div class="headertitle"><div class="title">LARS: Light Augmented Reality System for Collective Robotics </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_docs_2mainpage"></a> /*! </p>
-</div></div><!-- PageDoc -->
+<div class="textblock"><p><a class="anchor" id="md_docs_2mainpage"></a></p>
+<p><img src="images/lars_overview.jpg" alt="LARS System Overview" class="inline"/></p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+What is LARS?</h1>
+<p><b>LARS</b> (Light Augmented Reality System) is an open-source, cross-platform framework for <em>experimentation, education, and outreach</em> in collective robotics. It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects—such as gradients, fields, trails, and even robot states—directly into the environment where real robots operate.</p>
+<p>LARS uniquely enables <b>indirect robot-robot communication</b> (via stigmergy) while preserving all the physical and sensing constraints of actual robots. It also makes the otherwise "invisible" dynamics of multi-robot systems tangible and visible for human observers, students, and researchers.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Key Features</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Feature  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Real-time XR</b>  </td><td class="markdownTableBodyNone">Dynamic visual overlays and projected objects, synchronized with real robots  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Marker-free tracking</b>  </td><td class="markdownTableBodyNone">Robust, high-speed (38 FPS) detection of multiple robots, no tags required  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Multi-platform</b>  </td><td class="markdownTableBodyNone">Supports various robots (Kilobot, Thymio, E-puck, and others)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Open-source</b>  </td><td class="markdownTableBodyNone">Freely available for research, teaching, and public engagement  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Low-cost</b>  </td><td class="markdownTableBodyNone">No hardware modifications, affordable components  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Reproducible</b>  </td><td class="markdownTableBodyNone">Full logging, video recording, and experiment reproducibility  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Flexible</b>  </td><td class="markdownTableBodyNone">Easy configuration, extensible for new scenarios and environments  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Human-friendly GUI</b>  </td><td class="markdownTableBodyNone">Intuitive Qt-based interface for setup, monitoring, and control  </td></tr>
+</table>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Why LARS?</h1>
+<ul>
+<li><b>For Research:</b> <br  />
+ LARS bridges the <em>sim-to-real gap</em>, supporting reproducible, scalable multi-robot experiments and dynamic environment manipulation, all while keeping robots’ true limitations.</li>
+<li><b>For Education:</b> <br  />
+ The system's visualizations transform abstract swarm dynamics into hands-on, interactive learning, perfect for classroom demonstrations and outreach events.</li>
+<li><b>For Outreach:</b> <br  />
+ By projecting swarm intelligence in action, LARS makes the hidden world of robot collectives accessible and engaging to the general public.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Architecture Overview</h1>
+<p>LARS is built around the classic <b>Model-View-Controller (MVC)</b> pattern:</p>
+<ul>
+<li><b>Model Layer:</b> World state and physics of virtual/real objects</li>
+<li><b>View Layer:</b> Qt GUI and real-time visualization/projector outputs</li>
+<li><b>Controller Layer:</b> Experiment orchestration, tracking, and logic</li>
+</ul>
+<p><img src="images/lars_mvc.png" alt="LARS MVC Architecture" class="inline"/></p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Example Scenarios</h1>
+<ul>
+<li><b>Collective Decision-Making</b>: Track and visualize 100+ Kilobots in a noisy, projected environment.</li>
+<li><b>Robot Swarm Synchronization</b>: Observe and record robots’ internal states (e.g., color) and their dynamics in real-time.</li>
+<li><b>Interactive Public Demos</b>: Let visitors steer or interact with live robot swarms and see their collective behavior unfold instantly.</li>
+<li><b>Educational Labs</b>: Run and manipulate real robot experiments to teach concepts from physics, biology, and complex systems.</li>
+</ul>
+<p><img src="images/lars_demo.gif" alt="LARS in Action" class="inline"/></p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Publications</h1>
+<p>If you use LARS in your research or teaching, please cite:</p>
+<ul>
+<li>Raoufi, M., Romanczuk, P., &amp; Hamann, H. (2024). <br  />
+ <em>LARS: Light Augmented Reality System for Swarm</em>. <br  />
+ In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Getting Started</h1>
+<ul>
+<li><b><a class="el" href="md_install__dep.html">Installation Instructions</a></b> (Ubuntu recommended, Qt 5.6+, OpenCV 3.x with CUDA)</li>
+<li><b><a href="https://github.com/mohsen-raoufi/LARS">Source Code &amp; Releases</a></b></li>
+<li><b><a href="https://tubcloud.tu-berlin.de/s/bnXP7jkGtc99Yxj">Video Demonstrations</a></b></li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Acknowledgements</h1>
+<p>LARS is supported by the <em>Science of Intelligence</em> Cluster of Excellence, Berlin. <br  />
+ Contributors: <a href="#" onclick="location.href='mai'+'lto:'+'moh'+'se'+'nra'+'ou'+'fi@'+'ic'+'lou'+'d.'+'com'; return false;">Mohsen Raoufi</a>, Pawel Romanczuk, Heiko Hamann.</p>
+<hr  />
+<p><em>LARS is open-source under the GNU GPL v3.0. Designed for scientists, educators, and all who are curious about collective intelligence in robotics.</em></p>
+<hr  />
+ </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

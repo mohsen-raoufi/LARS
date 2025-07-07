@@ -15,7 +15,7 @@ var searchData=
   ['the_20plottable_12',['Leaving the color/pen up to the plottable',['../class_q_c_p_scatter_style.html#QCPScatterStyle-undefinedpen',1,'']]],
   ['the_20rendering_20order_20via_20layers_13',['Controlling the rendering order via layers',['../class_q_c_p_layer.html#qcplayer-ordering',1,'']]],
   ['the_20selecttest_20function_14',['The selectTest function',['../class_q_c_p_abstract_item.html#items-selection',1,'']]],
-  ['there_20are_20errors_20in_20compilation_20use_20an_20older_20version_20of_20gcc_20and_20g_20_3a_15',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md13',1,'']]],
+  ['there_20are_20errors_20in_20compilation_20use_20an_20older_20version_20of_20gcc_20and_20g_20_3a_15',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md31',1,'']]],
   ['ticker_16',['ticker',['../class_q_c_p_axis.html#a7b7a27151be8235059e1294f73ecf615',1,'QCPAxis::ticker()'],['../class_q_c_p_polar_axis_radial.html#a0c38b1920e69759bcc733975d5fbe758',1,'QCPPolarAxisRadial::ticker()']]],
   ['tickers_17',['Creating own axis tickers',['../class_q_c_p_axis_ticker.html#axisticker-subclassing',1,'']]],
   ['ticklabeldata_18',['TickLabelData',['../struct_q_c_p_axis_painter_private_1_1_tick_label_data.html',1,'QCPAxisPainterPrivate']]],
