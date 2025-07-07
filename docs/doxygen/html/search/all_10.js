@@ -1,7 +1,7 @@
 var searchData=
 [
   ['farthestdist_0',['farthestDist',['../classrcsc_1_1_segment2_d.html#a44170faa05fc845a56c066b337c15fec',1,'rcsc::Segment2D']]],
-  ['features_1',['Features',['../index.html#autotoc_md5',1,'🚀 Key Features'],['../md__r_e_a_d_m_e.html#autotoc_md44',1,'🛠️ Key Features']]],
+  ['features_1',['Features',['../index.html#autotoc_md5',1,'🛠️ Key Features'],['../md__r_e_a_d_m_e.html#autotoc_md47',1,'🛠️ Key Features']]],
   ['fill_2',['fill',['../class_q_c_p_color_map_data.html#a350f783260eb9b5de5c7b5e0d5d3e3c2',1,'QCPColorMapData']]],
   ['fillalpha_3',['fillAlpha',['../class_q_c_p_color_map_data.html#a93e2a549d7702bc849cd48a585294657',1,'QCPColorMapData']]],
   ['filling_20under_20or_20between_20graphs_4',['Filling under or between graphs',['../class_q_c_p_graph.html#filling',1,'']]],
@@ -16,7 +16,7 @@ var searchData=
   ['for_20the_20datatype_20template_20parameter_13',['Requirements for the DataType template parameter',['../class_q_c_p_data_container.html#qcpdatacontainer-datatype',1,'']]],
   ['forowsfirst_14',['foRowsFirst',['../class_q_c_p_layout_grid.html#a7d49ee08773de6b2fd246edfed353ccaa0202730954e26c474cc820164aedce3e',1,'QCPLayoutGrid']]],
   ['fractionstyle_15',['FractionStyle',['../class_q_c_p_axis_ticker_pi.html#a262f1534c7f0c79a7d5237f5d1e2c54c',1,'QCPAxisTickerPi']]],
-  ['from_20ark_20to_20lars_3a_20advanced_20multi_20robot_20tracking_20visual_20augmentation_16',['🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Visual Augmentation',['../md__r_e_a_d_m_e.html#autotoc_md48',1,'']]],
+  ['from_20ark_20to_20lars_3a_20advanced_20multi_20robot_20tracking_20visual_20augmentation_16',['From ARK to LARS: Advanced Multi Robot Tracking Visual Augmentation',['../index.html#autotoc_md9',1,'🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation'],['../md__r_e_a_d_m_e.html#autotoc_md51',1,'🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation']]],
   ['from_5fcenter_17',['from_center',['../classrcsc_1_1_rect2_d.html#a6b2449dbd686f523d164f524990ee9d9',1,'rcsc::Rect2D::from_center(const Vector2D &amp;center, const double &amp;length, const double &amp;width)'],['../classrcsc_1_1_rect2_d.html#a63d631f4ed9a67c5e1a375212d3431d5',1,'rcsc::Rect2D::from_center(const double &amp;center_x, const double &amp;center_y, const double &amp;length, const double &amp;width)']]],
   ['from_5fcorners_18',['from_corners',['../classrcsc_1_1_rect2_d.html#a01a5da32cdcc93c81c5c96eb3c231c1d',1,'rcsc::Rect2D::from_corners(const Vector2D &amp;top_left, const Vector2D &amp;bottom_right)'],['../classrcsc_1_1_rect2_d.html#a93e05f44bef99cb02b1bc0f4dffa1cbb',1,'rcsc::Rect2D::from_corners(const double &amp;l, const double &amp;t, const double &amp;r, const double &amp;b)']]],
   ['from_5fpolar_19',['from_polar',['../classrcsc_1_1_vector2_d.html#a110bdabfab62710278d400c534caaefa',1,'rcsc::Vector2D::from_polar(const double &amp;mag, const AngleDeg &amp;theta)'],['../classrcsc_1_1_vector2_d.html#a110bdabfab62710278d400c534caaefa',1,'rcsc::Vector2D::from_polar(const double &amp;mag, const AngleDeg &amp;theta)']]],

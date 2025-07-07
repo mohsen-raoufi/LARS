@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['g_20_3a_0',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md35',1,'']]],
-  ['gcc_20and_20g_20_3a_1',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md35',1,'']]],
+  ['g_20_3a_0',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md38',1,'']]],
+  ['gcc_20and_20g_20_3a_1',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md38',1,'']]],
   ['generate_2',['generate',['../class_q_c_p_axis_ticker.html#aefbd11725678ca824add8cf926cbc856',1,'QCPAxisTicker']]],
   ['geom_2eh_3',['geom.h',['../geom_8h.html',1,'']]],
   ['geometry_5fconcept_3c_20point_20_3e_4',['geometry_concept&lt; Point &gt;',['../structboost_1_1polygon_1_1geometry__concept_3_01_point_01_4.html',1,'boost::polygon']]],
@@ -28,7 +28,7 @@ var searchData=
   ['getvisibledatabounds_25',['getVisibleDataBounds',['../class_q_c_p_graph.html#a8599447a7f8cbbdcf0b94edcc11df560',1,'QCPGraph']]],
   ['getx_26',['getX',['../classrcsc_1_1_line2_d.html#a9c3fe7b1b8e23c294485fb165927c113',1,'rcsc::Line2D']]],
   ['gety_27',['getY',['../classrcsc_1_1_line2_d.html#a95a7f3cf6ad78a585ee8e3eb488b1324',1,'rcsc::Line2D']]],
-  ['git_28',['4. Install Git',['../md_install__dep.html#autotoc_md27',1,'']]],
+  ['git_28',['4. Install Git',['../md_install__dep.html#autotoc_md30',1,'']]],
   ['gpcandy_29',['gpCandy',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072a9e72663bf6b94b65945f7843f24e0721',1,'QCPColorGradient']]],
   ['gpcold_30',['gpCold',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072aec8c001f62c0d5cb853db5fd85309557',1,'QCPColorGradient']]],
   ['gpgeography_31',['gpGeography',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072a382f0b07cec1a59d8a533438aea815d2',1,'QCPColorGradient']]],
@@ -41,7 +41,7 @@ var searchData=
   ['gppolar_38',['gpPolar',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072ab7414ce4e36dc3e82e0132a7f0f41b52',1,'QCPColorGradient']]],
   ['gpspectrum_39',['gpSpectrum',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072ad63adc100ef46f6b4a8a6deacec4642f',1,'QCPColorGradient']]],
   ['gpthermal_40',['gpThermal',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072af1676b129f9f458ace453f280c731cf7',1,'QCPColorGradient']]],
-  ['gpu_20computing_20setup_41',['GPU Computing Setup',['../md_install__dep.html#autotoc_md29',1,'']]],
+  ['gpu_20computing_20setup_41',['GPU Computing Setup',['../md_install__dep.html#autotoc_md32',1,'']]],
   ['gradientchanged_42',['gradientChanged',['../class_q_c_p_color_scale.html#a5e5f8c5626242c8f7308bfab74d3d989',1,'QCPColorScale::gradientChanged()'],['../class_q_c_p_color_map.html#a31a12726736b1ac274e7b1d8dfb67468',1,'QCPColorMap::gradientChanged()']]],
   ['gradientpreset_43',['GradientPreset',['../class_q_c_p_color_gradient.html#aed6569828fee337023670272910c9072',1,'QCPColorGradient']]],
   ['graph_44',['graph',['../class_q_custom_plot.html#a6ecae130f684b25276fb47bd3a5875c6',1,'QCustomPlot::graph(int index) const'],['../class_q_custom_plot.html#aac190865a67f19af3fdf2136774997af',1,'QCustomPlot::graph() const']]],

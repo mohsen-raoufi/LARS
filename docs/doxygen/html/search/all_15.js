@@ -3,11 +3,11 @@ var searchData=
   ['labeldata_0',['LabelData',['../struct_q_c_p_label_painter_private_1_1_label_data.html',1,'QCPLabelPainterPrivate']]],
   ['labelmode_1',['LabelMode',['../class_q_c_p_polar_axis_angular.html#ad9d85ec7a6b5febe6c27ab54fdd46397',1,'QCPPolarAxisAngular']]],
   ['labelside_2',['LabelSide',['../class_q_c_p_axis.html#a24b13374b9b8f75f47eed2ea78c37db9',1,'QCPAxis']]],
-  ['lars_3',['LARS',['../index.html#autotoc_md3',1,'✨ What is LARS?'],['../md__r_e_a_d_m_e.html#autotoc_md42',1,'✨ What is LARS?'],['../index.html#autotoc_md7',1,'🎯 Why LARS?'],['../md_install__dep.html#autotoc_md37',1,'8. Compile LARS']]],
-  ['lars_20objectives_4',['🎯 Why LARS? (Objectives)',['../md__r_e_a_d_m_e.html#autotoc_md46',1,'']]],
-  ['lars_3a_20advanced_20multi_20robot_20tracking_20visual_20augmentation_5',['🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Visual Augmentation',['../md__r_e_a_d_m_e.html#autotoc_md48',1,'']]],
+  ['lars_3',['LARS',['../index.html#autotoc_md3',1,'✨ What is LARS?'],['../md__r_e_a_d_m_e.html#autotoc_md45',1,'✨ What is LARS?'],['../md_install__dep.html#autotoc_md40',1,'8. Compile LARS']]],
+  ['lars_20objectives_4',['LARS Objectives',['../index.html#autotoc_md7',1,'🎯 Why LARS? (Objectives)'],['../md__r_e_a_d_m_e.html#autotoc_md49',1,'🎯 Why LARS? (Objectives)']]],
+  ['lars_3a_20advanced_20multi_20robot_20tracking_20visual_20augmentation_5',['LARS: Advanced Multi Robot Tracking Visual Augmentation',['../index.html#autotoc_md9',1,'🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation'],['../md__r_e_a_d_m_e.html#autotoc_md51',1,'🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation']]],
   ['lars_3a_20light_20augmented_20reality_20system_20for_20collective_20robotics_20interaction_20🚦🤖_6',['LARS: Light Augmented Reality System for Collective Robotics Interaction 🚦🤖',['../md__r_e_a_d_m_e.html',1,'LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖'],['../index.html',1,'LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖']]],
-  ['latest_20qt_7',['3. Install Latest Qt',['../md_install__dep.html#autotoc_md26',1,'']]],
+  ['latest_20qt_7',['3. Install Latest Qt',['../md_install__dep.html#autotoc_md29',1,'']]],
   ['layer_8',['layer',['../class_q_custom_plot.html#a0a96244e7773b242ef23c32b7bdfb159',1,'QCustomPlot::layer(const QString &amp;name) const'],['../class_q_custom_plot.html#acbb570f4c24306e7c2324d40bfe157c2',1,'QCustomPlot::layer(int index) const'],['../class_q_c_p_layer.html#qcplayer-buffering',1,'Replotting only a specific layer']]],
   ['layerchanged_9',['layerChanged',['../class_q_c_p_layerable.html#abbf8657cedea73ac1c3499b521c90eba',1,'QCPLayerable']]],
   ['layercount_10',['layerCount',['../class_q_custom_plot.html#afa45d61e65292026f4c58c9c88c2cef0',1,'QCustomPlot']]],
@@ -47,5 +47,5 @@ var searchData=
   ['lsstepcenter_44',['lsStepCenter',['../class_q_c_p_graph.html#ad60175cd9b5cac937c5ee685c32c0859a5adf7b04da215a40a764c21294ea7366',1,'QCPGraph']]],
   ['lsstepleft_45',['lsStepLeft',['../class_q_c_p_graph.html#ad60175cd9b5cac937c5ee685c32c0859ae10568bda57836487d9dec5eba1d6c6e',1,'QCPGraph']]],
   ['lsstepright_46',['lsStepRight',['../class_q_c_p_graph.html#ad60175cd9b5cac937c5ee685c32c0859a9c37951f7d11aa070100fd16f2935c9e',1,'QCPGraph']]],
-  ['lts_47',['1. Install Ubuntu 20.04 LTS',['../md_install__dep.html#autotoc_md24',1,'']]]
+  ['lts_47',['1. Install Ubuntu 20.04 LTS',['../md_install__dep.html#autotoc_md27',1,'']]]
 ];

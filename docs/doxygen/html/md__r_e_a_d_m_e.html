@@ -92,7 +92,7 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
   <div class="headertitle"><div class="title">LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md39"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md42"></a></p>
 <blockquote class="doxtable">
 <p><b>📚 Documentation</b> <br  />
  Developer &amp; API Docs: <a href="docs/doxygen/html/index.html"><span class="tt">docs/doxygen/html/index.html</span></a> </p>
@@ -100,13 +100,13 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 <hr  />
 <p><img src="docs/doxygen/html/media/LARS_Logo.png" alt="LARS Logo" width="100%" class="inline"/></p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
 ✨ What is LARS?</h1>
 <p><b>LARS</b> (Light Augmented Reality System) is a cross-platform, open-source framework for <em>experimentation, education, and outreach</em> in collective robotics. <br  />
- It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects—such as gradients, fields, trails, and even robot states—directly into the environment where real robots operate.</p>
+ It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects, such as gradients, fields, trails, and even robot states, directly into the environment where real robots operate.</p>
 <p>LARS enables <b>indirect robot-robot communication</b> (stigmergy), while preserving all real-world constraints. It turns "invisible" swarm dynamics into tangible, interactive experiences for researchers, students, and the public.</p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
 🛠️ Key Features</h1>
 <ul>
 <li><b>Projection of Virtual, Visual Objects</b> 🔦 <br  />
@@ -133,7 +133,7 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
 🎯 Why LARS? (Objectives)</h1>
 <ul>
 <li><b>For Research:</b> <br  />
@@ -154,7 +154,7 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation</h1>
 <p>LARS features a robust, real-time tracking module based on the <b>ARK</b> (Automatic <a class="el" href="class_robot.html">Robot</a> Kinematics) algorithm, but goes far beyond:</p>
 <ul>
@@ -172,7 +172,7 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 <li>Exploration of new paradigms in human-swarm and robot-environment interaction</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
 🏗️ Architecture Overview</h1>
 <p>LARS is built on the classic <b>Model-View-Controller (MVC)</b> pattern:</p>
 <ul>
@@ -184,7 +184,7 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </ul>
 <p><img src="docs/doxygen/html/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px" class="inline"/></p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
 🧑‍🔬 Example Scenarios</h1>
 <ul>
 <li>🗳️ <b>Collective Decision-Making:</b> Track and visualize 100+ Kilobots in a noisy, projected environment</li>
@@ -197,36 +197,39 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 <p><img src="docs/doxygen/html/media/thymios_PT.png" alt="(e)" height="150px" class="inline"/> <img src="docs/doxygen/html/media/themios_RW.png" alt="(f)" height="150px" class="inline"/> </p>
 <p>(e) Thymios doing phototaxis &#160;&#160; (f) Thymios random walk </p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 🚦 Quick Start</h1>
 <p>LARS runs as a Qt application (Qt 5.6+ recommended). Ubuntu is preferred.</p>
 <p>See <a class="el" href="md_install__dep.html">install_dep.md</a> for full dependency details (Qt, CUDA/OpenCV3, etc.).</p>
 <div class="fragment"><div class="line">git clone https://github.com/mohsen-raoufi/LARS.git</div>
 <div class="line">cd LARS</div>
-<div class="line"># Install dependencies (see install_dep.md)</div>
-<div class="line"># Build with Qt Creator (recommended) or use qmake + make</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">### User permission</div>
-<div class="line">In order to operate the Kilobot&#39;s OHC, the user needs to be part of the dialout group. Therefore, add the user to the group `dialout` with command</div>
-</div><!-- fragment --><p> sudo usermod -a -G dialout &lt;user-name&gt; ```</p>
-<hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
-📄 Citation</h1>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
+Install dependencies (see install_dep.md)</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md59"></a>
+Build with Qt Creator (recommended) or use qmake + make</h1>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
+User permission</h3>
+<p>In order to operate the <a class="el" href="class_kilobot.html">Kilobot</a>'s OHC, the user needs to be part of the dialout group. Therefore, add the user to the group <span class="tt">dialout</span> with command</p>
+<div class="fragment"><div class="line">sudo usermod -a -G dialout &lt;user-name&gt;</div>
+</div><!-- fragment --><hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md62"></a>
+📄 Citation</h2>
 <p>If you use or adapt LARS in your research or publications, please cite:</p>
 <ul>
-<li>Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. <em>IEEE Robotics and Automation Letters</em> <b>2, 1755-1761</b>.</li>
 <li>Raoufi, M., Romanczuk, P., &amp; Hamann, H. (2024). <em>LARS: Light Augmented Reality System for Swarm</em>. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.</li>
 </ul>
+<p>also include ARK:</p><ul>
+<li>Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. <em>IEEE Robotics and Automation Letters</em> <b>2, 1755-1761</b>.</li>
+</ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
-🙌 Acknowledgements</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
+🙌 Acknowledgements</h2>
 <p>LARS is supported by the <em>Science of Intelligence</em> Cluster of Excellence, Berlin. <br  />
- Developed and maintained by Mohsen Raoufi et al. <br  />
+ Developed and maintained by Mohsen Raoufi. <br  />
  Open-source under the GNU GPL v3.0.</p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
-🔗 See Also</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
+🔗 See Also</h2>
 <ul>
 <li><a href="http://diode.group.shef.ac.uk/kilobots/index.php/Kilobots">Kilobot Wiki</a></li>
 <li>API Docs: <a href="docs/doxygen/html/index.html"><span class="tt">docs/doxygen/html/index.html</span></a></li>

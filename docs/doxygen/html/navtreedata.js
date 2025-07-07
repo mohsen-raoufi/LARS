@@ -27,35 +27,38 @@ var NAVTREE =
   [ "LARS", "index.html", [
     [ "LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖", "index.html", "index" ],
     [ "Setup Instructions", "md_install__dep.html", [
-      [ "1. Install Ubuntu 20.04 LTS", "md_install__dep.html#autotoc_md24", null ],
-      [ "2. Update Everything", "md_install__dep.html#autotoc_md25", null ],
-      [ "3. Install Latest Qt", "md_install__dep.html#autotoc_md26", null ],
-      [ "4. Install Git", "md_install__dep.html#autotoc_md27", null ],
-      [ "GPU Computing Setup", "md_install__dep.html#autotoc_md29", [
-        [ "5. Install Nvidia Driver", "md_install__dep.html#autotoc_md30", null ],
-        [ "6. Reboot", "md_install__dep.html#autotoc_md31", null ],
-        [ "7. Install OpenCV", "md_install__dep.html#autotoc_md32", [
-          [ "Install Prerequisites:", "md_install__dep.html#autotoc_md33", null ],
-          [ "Configure CMake:", "md_install__dep.html#autotoc_md34", [
-            [ "<em>Optional:</em> If there are errors in compilation, use an older version of gcc and g++:", "md_install__dep.html#autotoc_md35", null ]
+      [ "1. Install Ubuntu 20.04 LTS", "md_install__dep.html#autotoc_md27", null ],
+      [ "2. Update Everything", "md_install__dep.html#autotoc_md28", null ],
+      [ "3. Install Latest Qt", "md_install__dep.html#autotoc_md29", null ],
+      [ "4. Install Git", "md_install__dep.html#autotoc_md30", null ],
+      [ "GPU Computing Setup", "md_install__dep.html#autotoc_md32", [
+        [ "5. Install Nvidia Driver", "md_install__dep.html#autotoc_md33", null ],
+        [ "6. Reboot", "md_install__dep.html#autotoc_md34", null ],
+        [ "7. Install OpenCV", "md_install__dep.html#autotoc_md35", [
+          [ "Install Prerequisites:", "md_install__dep.html#autotoc_md36", null ],
+          [ "Configure CMake:", "md_install__dep.html#autotoc_md37", [
+            [ "<em>Optional:</em> If there are errors in compilation, use an older version of gcc and g++:", "md_install__dep.html#autotoc_md38", null ]
           ] ],
-          [ "Build and Install OpenCV:", "md_install__dep.html#autotoc_md36", null ]
+          [ "Build and Install OpenCV:", "md_install__dep.html#autotoc_md39", null ]
         ] ],
-        [ "8. Compile LARS", "md_install__dep.html#autotoc_md37", null ],
-        [ "9. Enjoy", "md_install__dep.html#autotoc_md38", null ]
+        [ "8. Compile LARS", "md_install__dep.html#autotoc_md40", null ],
+        [ "9. Enjoy", "md_install__dep.html#autotoc_md41", null ]
       ] ]
     ] ],
     [ "LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖", "md__r_e_a_d_m_e.html", [
-      [ "✨ What is LARS?", "md__r_e_a_d_m_e.html#autotoc_md42", null ],
-      [ "🛠️ Key Features", "md__r_e_a_d_m_e.html#autotoc_md44", null ],
-      [ "🎯 Why LARS? (Objectives)", "md__r_e_a_d_m_e.html#autotoc_md46", null ],
-      [ "🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation", "md__r_e_a_d_m_e.html#autotoc_md48", null ],
-      [ "🏗️ Architecture Overview", "md__r_e_a_d_m_e.html#autotoc_md50", null ],
-      [ "🧑‍🔬 Example Scenarios", "md__r_e_a_d_m_e.html#autotoc_md52", null ],
-      [ "🚦 Quick Start", "md__r_e_a_d_m_e.html#autotoc_md54", null ],
-      [ "📄 Citation", "md__r_e_a_d_m_e.html#autotoc_md56", null ],
-      [ "🙌 Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md58", null ],
-      [ "🔗 See Also", "md__r_e_a_d_m_e.html#autotoc_md60", null ]
+      [ "✨ What is LARS?", "md__r_e_a_d_m_e.html#autotoc_md45", null ],
+      [ "🛠️ Key Features", "md__r_e_a_d_m_e.html#autotoc_md47", null ],
+      [ "🎯 Why LARS? (Objectives)", "md__r_e_a_d_m_e.html#autotoc_md49", null ],
+      [ "🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp; Visual Augmentation", "md__r_e_a_d_m_e.html#autotoc_md51", null ],
+      [ "🏗️ Architecture Overview", "md__r_e_a_d_m_e.html#autotoc_md53", null ],
+      [ "🧑‍🔬 Example Scenarios", "md__r_e_a_d_m_e.html#autotoc_md55", null ],
+      [ "🚦 Quick Start", "md__r_e_a_d_m_e.html#autotoc_md57", null ],
+      [ "Install dependencies (see install_dep.md)", "md__r_e_a_d_m_e.html#autotoc_md58", null ],
+      [ "Build with Qt Creator (recommended) or use qmake + make", "md__r_e_a_d_m_e.html#autotoc_md59", [
+        [ "📄 Citation", "md__r_e_a_d_m_e.html#autotoc_md62", null ],
+        [ "🙌 Acknowledgements", "md__r_e_a_d_m_e.html#autotoc_md64", null ],
+        [ "🔗 See Also", "md__r_e_a_d_m_e.html#autotoc_md66", null ]
+      ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -101,7 +104,7 @@ var NAVTREEINDEX =
 "class_q_custom_plot.html#a903561be895fb6528a770d66ac5e6713",
 "classrcsc_1_1_matrix2_d.html#a9056a888d5c88698de18e949c8c75465",
 "classrcsc_1_1_vector2_d.html#a732e6543891c9a0970ef1255487b6bee",
-"md_install__dep.html#autotoc_md38"
+"md_install__dep.html#autotoc_md36"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

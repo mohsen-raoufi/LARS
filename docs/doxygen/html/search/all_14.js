@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['key_20features_0',['Key Features',['../index.html#autotoc_md5',1,'🚀 Key Features'],['../md__r_e_a_d_m_e.html#autotoc_md44',1,'🛠️ Key Features']]],
+  ['key_20features_0',['Key Features',['../index.html#autotoc_md5',1,'🛠️ Key Features'],['../md__r_e_a_d_m_e.html#autotoc_md47',1,'🛠️ Key Features']]],
   ['keyrange_1',['keyRange',['../class_q_c_p_data_container.html#aba6e1a93c21ccc56a432b4a02c9d0ed2',1,'QCPDataContainer']]],
   ['keytodatetime_2',['keyToDateTime',['../class_q_c_p_axis_ticker_date_time.html#a4c1761ad057f5564804a53f942629b53',1,'QCPAxisTickerDateTime']]],
   ['kilo_5fcmd_5ft_3',['kilo_cmd_t',['../structkilo__cmd__t.html',1,'']]],
