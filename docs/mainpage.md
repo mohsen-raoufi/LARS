@@ -1,105 +1,105 @@
-# LARS: Light-Augmented Reality System for Collective Robotics Interaction
+# LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
 
-<!-- ![LARS System Overview](images/lars_overview.jpg)  -->
-
----
-
-## What is LARS?
-
-**LARS** (Light Augmented Reality System) is an open-source, cross-platform framework for *experimentation, education, and outreach* in collective robotics. It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects—such as gradients, fields, trails, and even robot states—directly into the environment where real robots operate.
-
-LARS uniquely enables **indirect robot-robot communication** (via stigmergy) while preserving all the physical and sensing constraints of actual robots. It also makes the otherwise "invisible" dynamics of multi-robot systems tangible and visible for human observers, students, and researchers.
+> **📚 Documentation**  
+> Developer & API Docs: [`docs/doxygen/html/index.html`](docs/doxygen/html/index.html)
 
 ---
 
-## Key Features
-
-| Feature                  | Description                                                               |
-|--------------------------|---------------------------------------------------------------------------|
-| **Real-time XR**         | Dynamic visual overlays and projected objects, synchronized with real robots |
-| **Marker-free tracking** | Robust, high-speed (38 FPS) detection of multiple robots, no tags required  |
-| **Multi-platform**       | Supports various robots (Kilobot, Thymio, E-puck, and others)              |
-| **Open-source**          | Freely available for research, teaching, and public engagement             |
-| **Low-cost**             | No hardware modifications, affordable components                           |
-| **Reproducible**         | Full logging, video recording, and experiment reproducibility              |
-| **Flexible**             | Easy configuration, extensible for new scenarios and environments          |
-| **Human-friendly GUI**   | Intuitive Qt-based interface for setup, monitoring, and control            |
+![Tracking Example](docs/media/ARK_to_LARS.gif)
 
 ---
 
-## Why LARS?
+## ✨ What is LARS?
+
+**LARS** (Light Augmented Reality System) is an open-source, cross-platform framework for *experimentation, education, and outreach* in collective robotics.
+
+- 🚨 **Real-time Augmented Reality:** Projects gradients, fields, trails, and robot states *directly* onto real-world robot arenas.
+- 👀 **Invisible → Visible:** Makes collective dynamics tangible for researchers, students, and the public.
+- 🔬 **No Hardware Mods:** Works with existing robots—no tags or changes needed!
+
+---
+
+## 🚀 Key Features
+
+| 🛠️ Feature             | 💡 Description                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| **Real-time XR**       | Dynamic overlays and projections, synchronized with real robots                |
+| **Marker-free Tracking** | Fast (38+ FPS), robust tracking for 100+ robots, no tags required           |
+| **Multi-platform**     | Supports Kilobot, Thymio, E-puck, & more                                      |
+| **Open-source**        | Free for research, teaching, and engagement                                   |
+| **Low-cost**           | Uses affordable, off-the-shelf components                                     |
+| **Reproducible**       | Full data logging & video recording                                           |
+| **Flexible**           | Easy to configure and extend                                                  |
+| **User-friendly GUI**  | Intuitive Qt-based interface                                                  |
+
+---
+
+## 🎯 Why LARS?
 
 - **For Research:**  
-  LARS bridges the *sim-to-real gap*, supporting reproducible, scalable multi-robot experiments and dynamic environment manipulation, all while keeping robots’ true limitations.
+  🧪 Bridge the *sim-to-real* gap. Run reproducible, scalable, and dynamic experiments—preserving robot constraints.
 
 - **For Education:**  
-  The system's visualizations transform abstract swarm dynamics into hands-on, interactive learning, perfect for classroom demonstrations and outreach events.
+  📚 Transform abstract swarms into interactive, hands-on learning. Perfect for classrooms.
 
 - **For Outreach:**  
-  By projecting swarm intelligence in action, LARS makes the hidden world of robot collectives accessible and engaging to the general public.
+  🌟 Demo swarm intelligence live—LARS brings robot collectives to life for everyone.
 
 ---
 
-## From ARK to LARS: Advanced Multi-Robot Tracking & Interactive Visual Augmentation
+## 👁️‍🗨️ Advanced Tracking & Visual Augmentation
 
-LARS features a robust, real-time tracking module based on the **ARK** (Automatic Robot Kinematics) algorithm.  
-We have enhanced and optimized ARK to:
+LARS uses a powerful, real-time tracker based on **ARK** (Automatic Robot Kinematics) but goes much further:
 
-- Dramatically improve speed and accuracy, supporting dense populations (100+ robots)
-- Robustly handle occlusions, variable lighting, and noisy backgrounds
-- Generalize to **any robot that appears approximately circular from above**—including Kilobots, Thymio, e-puck, and others—without the need for tags, markers, or hardware modification
-- Automatically preserve and recover robot identities even during close interactions or when robots briefly leave the field of view
+- ⚡ **Tracks 100+ robots in real time**
+- 🔎 Robust to occlusions, lighting, and noise
+- 🔵 Generalizes to any “circular” robot (Kilobot, Thymio, E-puck, more)
+- 🏷️ *No tags or hardware mods!*
+- 🧠 Auto-preserves & recovers identities—even during close encounters
 
 **Beyond tracking:**  
-LARS uniquely enables real-time projection of **virtual visual objects**—such as gradients, cues, and interactive signals—directly onto the experimental arena and atop the robots themselves.  
-This allows researchers and educators to:
+LARS uniquely projects **virtual visual objects**—gradients, cues, interactive signals—onto the arena *and* atop robots.
 
-- Simulate virtual environments or signals without hardware changes
-- Provide dynamic, spatially precise feedback to individual robots or collectives
-- Explore new paradigms in human-swarm and robot-environment interaction
-
-This flexible and general tracking-plus-augmentation system makes LARS uniquely suitable for heterogeneous and large-scale multi-robot experiments.
-
-![Tracking Example](media/ARK_to_LARS.gif) 
+- 🌀 Simulate virtual environments and signals without hardware changes
+- 🛰️ Provide dynamic, spatial feedback to robots and collectives
+- 🕹️ Explore new human-swarm and robot-environment interaction
 
 ---
 
-## Architecture Overview
+## 🏗️ Architecture Overview
 
-LARS is built around the classic **Model-View-Controller (MVC)** pattern:
+LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 
-- **Model Layer:** World state and physics of virtual/real objects
-- **View Layer:** Qt GUI and real-time visualization/projector outputs
-- **Controller Layer:** Experiment orchestration, tracking, and logic
+- 🧩 **Model:** World state, physics, and objects  
+- 🖼️ **View:** GUI, visualization, and projector output  
+- 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
-<!-- ![LARS MVC Architecture](media/LARS_Diagram.png)  -->
-
-<img src="media/LARS_Diagram.png" alt="LARS MVC Architecture" height="400px">
+<img src="docs/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px">
 
 ---
 
-## Example Scenarios
+## 🧑‍🔬 Example Scenarios
 
-- **Collective Decision-Making**: Track and visualize 100+ Kilobots in a noisy, projected environment.
-- **Robot Swarm Synchronization**: Observe and record robots’ internal states (e.g., color) and their dynamics in real-time.
-- **Interactive Public Demos**: Let visitors steer or interact with live robot swarms and see their collective behavior unfold instantly.
-- **Educational Labs**: Run and manipulate real robot experiments to teach concepts from physics, biology, and complex systems.
+- 🗳️ **Collective Decision-Making:** Track & visualize 100+ Kilobots in a noisy, projected environment
+- ⏰ **Swarm Synchronization:** Record robot states and group dynamics in real time
+- 🕹️ **Interactive Demos:** Let visitors steer/interact with swarms and see collective behavior
+- 🧑‍🏫 **Educational Labs:** Manipulate real experiments to teach robotics, physics, and complexity
 
 <p align="center">
-  <img src="media/kilobot_sync.png" height="170px" alt="(a)">
-  <img src="media/kilobot_DM.png" height="170px" alt="(b)">
-  <img src="media/kilobot_109.png" height="170px" alt="(c)">
-  <img src="media/weazle_balls.png" height="170px" alt="(d)">
+  <img src="docs/media/kilobot_sync.png" height="140px" alt="(a)">
+  <img src="docs/media/kilobot_DM.png" height="140px" alt="(b)">
+  <img src="docs/media/kilobot_109.png" height="140px" alt="(c)">
+  <img src="docs/media/weazle_balls.png" height="140px" alt="(d)">
 </p>
 <p align="center" style="font-size: 13px;">
   (a) Kilobots synchronizing &nbsp;
   (b) Collective decision &nbsp;
   (c) 109 Kilobots snapshot &nbsp;
-  (d) Two active Weazle balls
+  (d) Active Weazle balls
 </p>
 <p align="center">
-  <img src="media/thymios_PT.png" height="180px" alt="(e)">
-  <img src="media/themios_RW.png" height="180px" alt="(f)">
+  <img src="docs/media/thymios_PT.png" height="150px" alt="(e)">
+  <img src="docs/media/themios_RW.png" height="150px" alt="(f)">
 </p>
 <p align="center" style="font-size: 13px;">
   (e) Thymios doing phototaxis &nbsp;&nbsp;
@@ -108,30 +108,47 @@ LARS is built around the classic **Model-View-Controller (MVC)** pattern:
 
 ---
 
-## Publications
+## 🚦 Quick Start
 
-If you use LARS in your research or teaching, please cite:
+**Runs as a Qt application. Ubuntu preferred. See [install_dep.md](install_dep.md) for details.**
 
-- Raoufi, M., Romanczuk, P., & Hamann, H. (2024).  
-  *LARS: Light Augmented Reality System for Swarm*.  
-  In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
+```bash
+git clone https://github.com/mohsen-raoufi/LARS.git
+cd LARS
+# Install dependencies (see install_dep.md)
+# Build with Qt Creator (recommended) or use qmake + make
+```
+
+**User Permissions:**  
+Add yourself to the `dialout` group for Kilobot OHC access:
+```bash
+sudo usermod -a -G dialout <user-name>
+```
 
 ---
 
-## Getting Started
+## 📄 Citation
 
-- **[Installation Instructions](install_dep.md)** (Ubuntu recommended, Qt 5.6+, OpenCV 3.x with CUDA)
-- **[Source Code & Releases](https://github.com/mohsen-raoufi/LARS)**
+If you use or adapt LARS in your research, please cite:
+
+- Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
+- Raoufi, M., Romanczuk, P., & Hamann, H. (2024). *LARS: Light Augmented Reality System for Swarm*. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
 
 ---
 
-## Acknowledgements
+## 🔗 See Also
+
+- [Kilobot Wiki](http://diode.group.shef.ac.uk/kilobots/index.php/Kilobots)
+- API Docs: [`docs/doxygen/html/index.html`](docs/doxygen/html/index.html)
+
+---
 
 LARS is supported by the *Science of Intelligence* Cluster of Excellence, Berlin.  
-Contributors: [Mohsen Raoufi](mailto:mohsenraoufi@icloud.com).
+Developed and maintained by Mohsen Raoufi et al.  
+Open-source under the GNU GPL v3.0.
 
 ---
 
-*LARS is open-source under the GNU GPL v3.0. Designed for scientists, educators, and all who are curious about collective intelligence in robotics.*
+🙌 **Contributions welcome! LARS is for scientists, educators, and all who are curious about collective intelligence in robotics.**
 
 ---
