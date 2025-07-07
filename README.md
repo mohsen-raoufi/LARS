@@ -6,7 +6,7 @@
 ---
 
 <!-- <img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="center"> -->
-<img src="docs/doxygen/html/media/LARS_Logo.png" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;">
+<img src="docs/doxygen/html/media/LARS_Logo.png" alt="LARS Logo" width="100%">
 
 ---
 
