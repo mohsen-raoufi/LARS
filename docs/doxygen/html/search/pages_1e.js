@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['what_20is_20lars_0',['What is LARS?',['../index.html#autotoc_md2',1,'']]],
-  ['why_20lars_1',['Why LARS?',['../index.html#autotoc_md6',1,'']]]
+  ['version_20of_20gcc_20and_20g_20_3a_0',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md33',1,'']]],
+  ['via_20layers_1',['Controlling the rendering order via layers',['../class_q_c_p_layer.html#qcplayer-ordering',1,'']]],
+  ['visual_20augmentation_2',['From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Interactive Visual Augmentation',['../index.html#autotoc_md8',1,'']]]
 ];

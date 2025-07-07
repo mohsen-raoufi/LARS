@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['template_20parameter_0',['Requirements for the DataType template parameter',['../class_q_c_p_data_container.html#qcpdatacontainer-datatype',1,'']]],
-  ['the_20appearance_1',['the appearance',['../class_q_c_p_graph.html#qcpgraph-appearance',1,'Changing the appearance'],['../class_q_c_p_curve.html#qcpcurve-appearance',1,'Changing the appearance'],['../class_q_c_p_bars.html#qcpbars-appearance',1,'Changing the appearance'],['../class_q_c_p_statistical_box.html#qcpstatisticalbox-appearance',1,'Changing the appearance'],['../class_q_c_p_color_map.html#qcpcolormap-appearance',1,'Changing the appearance'],['../class_q_c_p_financial.html#qcpfinancial-appearance',1,'Changing the appearance'],['../class_q_c_p_error_bars.html#qcperrorbars-appearance',1,'Changing the appearance']]],
-  ['the_20color_20pen_20up_20to_20the_20plottable_2',['Leaving the color/pen up to the plottable',['../class_q_c_p_scatter_style.html#QCPScatterStyle-undefinedpen',1,'']]],
-  ['the_20datatype_20template_20parameter_3',['Requirements for the DataType template parameter',['../class_q_c_p_data_container.html#qcpdatacontainer-datatype',1,'']]],
-  ['the_20draw_20function_4',['The draw function',['../class_q_c_p_abstract_item.html#items-drawing',1,'']]],
-  ['the_20item_20to_20be_20positioned_5',['Allowing the item to be positioned',['../class_q_c_p_abstract_item.html#items-positioning',1,'']]],
-  ['the_20plottable_6',['Leaving the color/pen up to the plottable',['../class_q_c_p_scatter_style.html#QCPScatterStyle-undefinedpen',1,'']]],
-  ['the_20rendering_20order_20via_20layers_7',['Controlling the rendering order via layers',['../class_q_c_p_layer.html#qcplayer-ordering',1,'']]],
-  ['the_20selecttest_20function_8',['The selectTest function',['../class_q_c_p_abstract_item.html#items-selection',1,'']]],
-  ['there_20are_20errors_20in_20compilation_20use_20an_20older_20version_20of_20gcc_20and_20g_20_3a_9',['&lt;em&gt;Optional:&lt;/em&gt; If there are errors in compilation, use an older version of gcc and g++:',['../md_install__dep.html#autotoc_md31',1,'']]],
-  ['tickers_10',['Creating own axis tickers',['../class_q_c_p_axis_ticker.html#axisticker-subclassing',1,'']]],
-  ['to_20be_20positioned_11',['Allowing the item to be positioned',['../class_q_c_p_abstract_item.html#items-positioning',1,'']]],
-  ['to_20the_20plottable_12',['Leaving the color/pen up to the plottable',['../class_q_c_p_scatter_style.html#QCPScatterStyle-undefinedpen',1,'']]],
-  ['transparency_13',['Transparency',['../class_q_c_p_color_map.html#qcpcolormap-transparency',1,'']]]
+  ['scatter_20style_0',['Specifying a scatter style',['../class_q_c_p_scatter_style.html#QCPScatterStyle-defining',1,'']]],
+  ['scenarios_1',['Example Scenarios',['../index.html#autotoc_md12',1,'']]],
+  ['see_20also_2',['See Also',['../md__r_e_a_d_m_e.html#autotoc_md43',1,'']]],
+  ['selection_3',['Iterating over a data selection',['../class_q_c_p_data_selection.html#qcpdataselection-iterating',1,'']]],
+  ['selecttest_20function_4',['The selectTest function',['../class_q_c_p_abstract_item.html#items-selection',1,'']]],
+  ['setup_5',['GPU Computing Setup',['../md_install__dep.html#autotoc_md27',1,'']]],
+  ['setup_20instructions_6',['Setup Instructions',['../md_install__dep.html',1,'']]],
+  ['shapes_20and_20pixmaps_7',['Custom shapes and pixmaps',['../class_q_c_p_scatter_style.html#QCPScatterStyle-custompath-and-pixmap',1,'']]],
+  ['specific_20layer_8',['Replotting only a specific layer',['../class_q_c_p_layer.html#qcplayer-buffering',1,'']]],
+  ['specifying_20a_20scatter_20style_9',['Specifying a scatter style',['../class_q_c_p_scatter_style.html#QCPScatterStyle-defining',1,'']]],
+  ['started_10',['Getting Started',['../index.html#autotoc_md16',1,'']]],
+  ['style_11',['Specifying a scatter style',['../class_q_c_p_scatter_style.html#QCPScatterStyle-defining',1,'']]],
+  ['system_20for_20collective_20robotics_20interaction_12',['LARS: Light-Augmented Reality System for Collective Robotics Interaction',['../index.html',1,'']]],
+  ['system_20lars_13',['Light Augmented Reality System (LARS)',['../md__r_e_a_d_m_e.html#autotoc_md38',1,'']]]
 ];

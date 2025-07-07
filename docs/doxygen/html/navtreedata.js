@@ -25,32 +25,32 @@
 var NAVTREE =
 [
   [ "LARS", "index.html", [
-    [ "LARS: Light Augmented Reality System for Collective Robotics", "index.html", "index" ],
+    [ "LARS: Light-Augmented Reality System for Collective Robotics Interaction", "index.html", "index" ],
     [ "Setup Instructions", "md_install__dep.html", [
-      [ "1. Install Ubuntu 20.04 LTS", "md_install__dep.html#autotoc_md20", null ],
-      [ "2. Update Everything", "md_install__dep.html#autotoc_md21", null ],
-      [ "3. Install Latest Qt", "md_install__dep.html#autotoc_md22", null ],
-      [ "4. Install Git", "md_install__dep.html#autotoc_md23", null ],
-      [ "GPU Computing Setup", "md_install__dep.html#autotoc_md25", [
-        [ "5. Install Nvidia Driver", "md_install__dep.html#autotoc_md26", null ],
-        [ "6. Reboot", "md_install__dep.html#autotoc_md27", null ],
-        [ "7. Install OpenCV", "md_install__dep.html#autotoc_md28", [
-          [ "Install Prerequisites:", "md_install__dep.html#autotoc_md29", null ],
-          [ "Configure CMake:", "md_install__dep.html#autotoc_md30", [
-            [ "<em>Optional:</em> If there are errors in compilation, use an older version of gcc and g++:", "md_install__dep.html#autotoc_md31", null ]
+      [ "1. Install Ubuntu 20.04 LTS", "md_install__dep.html#autotoc_md22", null ],
+      [ "2. Update Everything", "md_install__dep.html#autotoc_md23", null ],
+      [ "3. Install Latest Qt", "md_install__dep.html#autotoc_md24", null ],
+      [ "4. Install Git", "md_install__dep.html#autotoc_md25", null ],
+      [ "GPU Computing Setup", "md_install__dep.html#autotoc_md27", [
+        [ "5. Install Nvidia Driver", "md_install__dep.html#autotoc_md28", null ],
+        [ "6. Reboot", "md_install__dep.html#autotoc_md29", null ],
+        [ "7. Install OpenCV", "md_install__dep.html#autotoc_md30", [
+          [ "Install Prerequisites:", "md_install__dep.html#autotoc_md31", null ],
+          [ "Configure CMake:", "md_install__dep.html#autotoc_md32", [
+            [ "<em>Optional:</em> If there are errors in compilation, use an older version of gcc and g++:", "md_install__dep.html#autotoc_md33", null ]
           ] ],
-          [ "Build and Install OpenCV:", "md_install__dep.html#autotoc_md32", null ]
+          [ "Build and Install OpenCV:", "md_install__dep.html#autotoc_md34", null ]
         ] ],
-        [ "8. Compile LARS", "md_install__dep.html#autotoc_md33", null ],
-        [ "9. Enjoy", "md_install__dep.html#autotoc_md34", null ]
+        [ "8. Compile LARS", "md_install__dep.html#autotoc_md35", null ],
+        [ "9. Enjoy", "md_install__dep.html#autotoc_md36", null ]
       ] ]
     ] ],
     [ "LARS", "md__r_e_a_d_m_e.html", [
-      [ "Light Augmented Reality System (LARS)", "md__r_e_a_d_m_e.html#autotoc_md36", [
-        [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md37", null ],
-        [ "User permission", "md__r_e_a_d_m_e.html#autotoc_md38", null ],
-        [ "Citation", "md__r_e_a_d_m_e.html#autotoc_md39", null ],
-        [ "See Also", "md__r_e_a_d_m_e.html#autotoc_md41", null ]
+      [ "Light Augmented Reality System (LARS)", "md__r_e_a_d_m_e.html#autotoc_md38", [
+        [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md39", null ],
+        [ "User permission", "md__r_e_a_d_m_e.html#autotoc_md40", null ],
+        [ "Citation", "md__r_e_a_d_m_e.html#autotoc_md41", null ],
+        [ "See Also", "md__r_e_a_d_m_e.html#autotoc_md43", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
@@ -97,7 +97,7 @@ var NAVTREEINDEX =
 "class_q_custom_plot.html#a903561be895fb6528a770d66ac5e6713",
 "classrcsc_1_1_matrix2_d.html#a9056a888d5c88698de18e949c8c75465",
 "classrcsc_1_1_vector2_d.html#a732e6543891c9a0970ef1255487b6bee",
-"namespace_q_c_p.html#a2ad6bb6281c7c2d593d4277b44c2b037"
+"namespace_q_c_p.html#a17844f19e1019693a953e1eb93536d2faae8fcfaafee234ce18558afef83f6a78"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nvidia_20driver_0',['5. Install Nvidia Driver',['../md_install__dep.html#autotoc_md26',1,'']]]
+  ['multi_20robot_20tracking_20interactive_20visual_20augmentation_0',['From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Interactive Visual Augmentation',['../index.html#autotoc_md8',1,'']]]
 ];

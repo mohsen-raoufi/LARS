@@ -33,3 +33,4 @@
 *.out
 *.app
 .DS_Store
+.ipynb

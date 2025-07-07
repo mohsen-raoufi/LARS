@@ -59,5 +59,6 @@ var searchData=
   ['msleft_56',['msLeft',['../namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a9500c8bfcc9e80b9dff0a8e00e867f07',1,'QCP']]],
   ['msnone_57',['msNone',['../namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a80aa4149f16dabd538f8b2e3d42c42d5',1,'QCP']]],
   ['msright_58',['msRight',['../namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a93c719593bb2b94ed244d52c86d83b65',1,'QCP']]],
-  ['mstop_59',['msTop',['../namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0',1,'QCP']]]
+  ['mstop_59',['msTop',['../namespace_q_c_p.html#a7e487e3e2ccb62ab7771065bab7cae54a5db8fb0d0b0ecf0d611c2602a348e8a0',1,'QCP']]],
+  ['multi_20robot_20tracking_20interactive_20visual_20augmentation_60',['From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Interactive Visual Augmentation',['../index.html#autotoc_md8',1,'']]]
 ];
