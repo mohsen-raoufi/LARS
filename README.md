@@ -118,6 +118,8 @@ See [install_dep.md](install_dep.md) for full dependency details (Qt, CUDA/OpenC
 ```bash
 git clone https://github.com/mohsen-raoufi/LARS.git
 cd LARS
+```
+
 # Install dependencies (see install_dep.md)
 # Build with Qt Creator (recommended) or use qmake + make
 
