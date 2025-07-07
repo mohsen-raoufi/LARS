@@ -37,7 +37,7 @@ If you use or adapt LARS in order to generate experimental results, please cite 
 
 [1] Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
 
-[2] Raoufi M., Romanczuk P., Hamann H. (2024) LARS: Light Augmented Reality System for Interaction in Multi-Robot Scenarios. 
+[2] Raoufi, M., Romanczuk, P., & Hamann, H. (2024). LARS: Light Augmented Reality System for Swarm. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
 
 <!--
 ### Contribution
