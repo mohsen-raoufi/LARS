@@ -5,7 +5,7 @@
 
 ---
 
-<img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="right">
+<img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="center">
 
 ---
 
