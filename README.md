@@ -75,7 +75,9 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🖼️ **View:** GUI, visualization, and projector output  
 - 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
-<img src="docs/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px">
+<p align="center">
+  <img src="docs/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="400px">
+</p>
 
 ---
 
