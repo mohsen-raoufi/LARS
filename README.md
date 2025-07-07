@@ -5,7 +5,7 @@
 
 ---
 
-<img src="docs/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="right">
+<img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="right">
 
 ---
 
@@ -72,7 +72,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🖼️ **View:** GUI, visualization, and projector output  
 - 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
-<img src="docs/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px">
+<img src="docs/doxygen/html/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px">
 
 ---
 
@@ -84,10 +84,10 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🧑‍🏫 **Educational Labs:** Manipulate real experiments to teach robotics, physics, and complexity
 
 <p align="center">
-  <img src="docs/media/kilobot_sync.png" height="140px" alt="(a)">
-  <img src="docs/media/kilobot_DM.png" height="140px" alt="(b)">
-  <img src="docs/media/kilobot_109.png" height="140px" alt="(c)">
-  <img src="docs/media/weazle_balls.png" height="140px" alt="(d)">
+  <img src="docs/doxygen/html/media/kilobot_sync.png" height="140px" alt="(a)">
+  <img src="docs/doxygen/html/media/kilobot_DM.png" height="140px" alt="(b)">
+  <img src="docs/doxygen/html/media/kilobot_109.png" height="140px" alt="(c)">
+  <img src="docs/doxygen/html/media/weazle_balls.png" height="140px" alt="(d)">
 </p>
 <p align="center" style="font-size: 13px;">
   (a) Kilobots synchronizing &nbsp;
@@ -96,8 +96,8 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   (d) Active Weazle balls
 </p>
 <p align="center">
-  <img src="docs/media/thymios_PT.png" height="150px" alt="(e)">
-  <img src="docs/media/themios_RW.png" height="150px" alt="(f)">
+  <img src="docs/doxygen/html/media/thymios_PT.png" height="150px" alt="(e)">
+  <img src="docs/doxygen/html/media/themios_RW.png" height="150px" alt="(f)">
 </p>
 <p align="center" style="font-size: 13px;">
   (e) Thymios doing phototaxis &nbsp;&nbsp;
