@@ -137,15 +137,18 @@ sudo usermod -a -G dialout <user-name>
 
 If you use or adapt LARS in your research or publications, please cite:
 
-- Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
 - Raoufi, M., Romanczuk, P., & Hamann, H. (2024). *LARS: Light Augmented Reality System for Swarm*. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
+
+also include ARK:
+- Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
+
 
 ---
 
 ## 🙌 Acknowledgements
 
 LARS is supported by the *Science of Intelligence* Cluster of Excellence, Berlin.  
-Developed and maintained by Mohsen Raoufi et al.  
+Developed and maintained by Mohsen Raoufi.  
 Open-source under the GNU GPL v3.0.
 
 ---
