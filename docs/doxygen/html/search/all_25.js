@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['✨_20what_20is_20lars_0',['✨ What is LARS',['../md_docs_2index.html#autotoc_md3',1,'✨ What is LARS?'],['../index.html#autotoc_md29',1,'✨ What is LARS?'],['../md__r_e_a_d_m_e.html#autotoc_md71',1,'✨ What is LARS?']]]
+];
