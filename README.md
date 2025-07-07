@@ -105,7 +105,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   <img src="docs/media/themios_RW.png" height="150px" alt="(f)">
 </p>
 
-<p style="font-size: 13px; text-align: right;">
+<p style="font-size: 13px; text-align: left;">
   (top, left:) GUI snapshot of 42 Kilobots synchronizing on a grid with their internal binary state being detected by the color of their LED in blue or red,  <br>
   (top, mid-left:) user view of 63 Kilobots making a collective decision on a tiled environment with projected dynamic noise <br>
   (top, mid-right:) GUI Snapshot of 109 Kilobots with the trace of their random movement decaying over time <br>

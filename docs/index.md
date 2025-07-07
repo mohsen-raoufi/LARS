@@ -92,10 +92,10 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🧑‍🏫 **Educational Labs:** Manipulate real experiments to teach robotics, physics, and complexity
 
 <p align="center">
-  <img src="media/kilobot_sync.png" height="250px" alt="(a)">
-  <img src="media/kilobot_DM.png" height="250px" alt="(b)">
-  <img src="media/kilobot_109.png" height="250px" alt="(c)">
-  <img src="media/weazle_balls.png" height="250px" alt="(d)">
+  <img src="media/kilobot_sync.png" height="200px" alt="(a)">
+  <img src="media/kilobot_DM.png" height="200px" alt="(b)">
+  <img src="media/kilobot_109.png" height="200px" alt="(c)">
+  <img src="media/weazle_balls.png" height="200px" alt="(d)">
 </p>
 <!-- <p align="center">
   <img src="doxygen/html/media/kilobot_sync.png" height="140px" alt="(a)">
@@ -121,7 +121,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   (e) Thymios doing phototaxis &nbsp;&nbsp;
   (f) Thymios random walk
 </p> -->
-<p style="font-size: 13px; text-align: right;">
+<p style="font-size: 13px; text-align: left;">
   (top, left:) GUI snapshot of 42 Kilobots synchronizing on a grid with their internal binary state being detected by the color of their LED in blue or red,  <br>
   (top, mid-left:) user view of 63 Kilobots making a collective decision on a tiled environment with projected dynamic noise <br>
   (top, mid-right:) GUI Snapshot of 109 Kilobots with the trace of their random movement decaying over time <br>
