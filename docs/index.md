@@ -110,8 +110,8 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   (d) Active Weazle balls
 </p> -->
 <p align="center">
-  <img src="media/thymios_PT.png" height="300px" alt="(e)">
-  <img src="media/themios_RW.png" height="300px" alt="(f)">
+  <img src="media/thymios_PT.png" height="250px" alt="(e)">
+  <img src="media/themios_RW.png" height="250px" alt="(f)">
 </p>
 <!-- <p align="center">
   <img src="doxygen/html/media/thymios_PT.png" height="150px" alt="(e)">
