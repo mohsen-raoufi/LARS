@@ -3,37 +3,52 @@
 
 #include <opencv2/aruco.hpp>
 
+/**
+ * @brief Main constructor for the MainWindow class.
+ * 
+ * Initializes the GUI, sets up the camera environment, tracking modules, and the arena window.
+ * Handles conditional compilation for different camera types, UI setup, and initial state definitions.
+ * Assumes a multi-screen setup; positions main window on primary screen and maximizes it.
+ */
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-
+    // Move the main window to the top-left corner of the primary screen
     // Set main window on the specific screen
     this->move(QGuiApplication::screens().at(0)->geometry().topLeft()- this->rect().topLeft());
     this->showMaximized();
+    // Set up all UI elements defined in the .ui file
     ui->setupUi(this);
 
+    // Ensure the window is deleted properly on close to avoid memory leaks
     // close the application when the GUI is closed
     this->setAttribute(Qt::WA_DeleteOnClose);
 
+    // Timer used for internal periodic tasks (e.g., camera refresh, GUI updates)
     // Initial Definitions
     timer = new QTimer();
     //    joyStick_Timer = new QTimer();
 
+    // Create a secondary window (arena view) to render the experiment scene
     arenaWindow = new ArenaWindow(nullptr, &wm, "LARS ARENA WINDOW");
 //    arenaWindow2 = new ArenaWindow(nullptr, &wm, "ARENA WINDOW 2"); // Secondary Window is optional!
 
 
+    // Initialize environment processing logic (e.g., heatmaps, simulation states)
     // instantiating the envBrain to calculate the environment processes
     envBrain = new EnvBrain(&this->wm);
 
+    // Apply the main window's palette settings to the central widget
     ui->centralWidget->setPalette(this->palette());
 
     // Initial Parameters & Variables
 
+    // Initialize UI widgets, sliders, signal-slot connections, and setup logic
     // // Initialization of UI
     uiInitialization();
 
+    // Output the camera backend type (for debug)
 #ifdef USE_PYLON
     qDebug() << "Using Pylon Camera!";
 #else
@@ -46,12 +61,18 @@ MainWindow::MainWindow(QWidget *parent) :
     if(ui->fromVid_rButton->isChecked())
         ui->saveVid_button->setEnabled(false);
 
+    // Get the GUI canvas size for later use in image scaling
     GUIQSize = ui->outputLabel->size();
     qDebug() << "GUI size: " << GUIQSize.width() << ", " << GUIQSize.height();
 
     FPS = ui->FPS_comboBox->currentText().toInt();
     rotIndex = ui->Rotate_ComboBox->currentIndex();
 
+    /**
+     * @brief Initialize the marker detection containers.
+     * 
+     * Ensures that marker data is in a known default state to avoid crashes if detection fails.
+     */
     detectedMarker temp;
     temp.BoundingRect = QRect(0,0,0,0);
     detectedMarkersList.clear();
@@ -62,24 +83,40 @@ MainWindow::MainWindow(QWidget *parent) :
         detectedMarkerCenterList.insert(i, QPoint(0,0));
     }
 
+    // Default identity matrix for perspective transformation (Arena-to-Camera)
     // Just some initial values so that if no marker was detected the program does not crash
     mapA2C = cv::Mat::eye(3,3, 1);
     mapC2A = cv::Mat::eye(3,3, 1);
 
+    // Clear and initialize the heatmap matrix with a black image
     this->resetHeatMap();
 }
 
 
+/**
+ * @brief Destructor for MainWindow.
+ * 
+ * Cleans up allocated resources including UI and camera handles. 
+ * Prevents memory leaks and ensures a clean shutdown.
+ */
 MainWindow::~MainWindow()
 {
     qDebug() << "********* closing windows ... *********";
+    // Delete the arena window (secondary visualization)
     arenaWindow->close();
     arenaWindow->hide();
     delete arenaWindow;
     qDebug() << "Arena Window is closed!";
+    // Delete the UI components created with setupUi()
     delete ui;
 }
 
+/**
+ * @brief Logs Kilobot (or other robots) positions and LED colors to the log file.
+ * 
+ * This function is used when only position and LED color are needed per robot.
+ * Each entry includes timestamp, robot index, position (x, y), and LED color.
+ */
 void MainWindow::logToFile_PosLED(QVector<Kilobot *> kiloVec)
 {
     log_stream << elapsedTimer.elapsed();
@@ -89,6 +126,12 @@ void MainWindow::logToFile_PosLED(QVector<Kilobot *> kiloVec)
     log_stream << endl;
 }
 
+/**
+ * @brief Logs Kilobot (or other robots) positions, LED colors, and velocities to the log file.
+ * 
+ * Useful for full behavioral logging. Each entry includes timestamp, robot index,
+ * position (x, y), LED color, and velocity vector (vx, vy).
+ */
 void MainWindow::logToFile(QVector<Kilobot *> kiloVec)
 {
     log_stream << elapsedTimer.elapsed();
@@ -99,6 +142,12 @@ void MainWindow::logToFile(QVector<Kilobot *> kiloVec)
     log_stream << endl;
 }
 
+/**
+ * @brief Logs raw position data (without robot metadata) to the log file.
+ * 
+ * Used for simpler tracking or external agents not using full Kilobot objects.
+ * Each entry includes timestamp, index, and position (x, y).
+ */
 void MainWindow::logToFile(QVector<QPoint> posVec)
 {
     log_stream << elapsedTimer.elapsed();
@@ -108,6 +157,13 @@ void MainWindow::logToFile(QVector<QPoint> posVec)
     log_stream << endl;
 }
 
+/**
+ * @brief Slot triggered when the capturing button is clicked.
+ * 
+ * Starts or stops camera or video capture based on UI state. Initializes the
+ * capture source (camera or video), configures size parameters, and resets the heatmap.
+ * Also updates the UI text and button label accordingly.
+ */
 void MainWindow::on_capturing_button_clicked()
 {
     if(ui->useARKCap_CheckBox->isChecked()) {
@@ -158,6 +214,12 @@ void MainWindow::on_capturing_button_clicked()
 
 }
 
+/**
+ * @brief Converts an integer (0–15) to its hexadecimal string representation.
+ * 
+ * Used for displaying or logging compact hex values from numeric inputs.
+ * Modifies the output string passed by reference.
+ */
 void MainWindow::convertInt2HexStr(int input, std::string &output)
 {
 
@@ -190,6 +252,12 @@ void MainWindow::convertInt2HexStr(int input, std::string &output)
     }
 }
 
+/**
+ * @brief Displays the input image on the GUI and emits image signals.
+ * 
+ * Converts the input OpenCV frame to RGB, calls drawKilobots to render annotations,
+ * then displays the result in the GUI label. Emits signals before and after processing.
+ */
 void MainWindow::showImage(cv::Mat frame)
 {
     frame.copyTo(currentFrame); // MOHSEN: check if I am using "current frame somewhere else"
@@ -201,37 +269,6 @@ void MainWindow::showImage(cv::Mat frame)
 
         // TO DO: Process the image and add whatever you want, graphical stuff on the QImage....
         drawKilobots(frame);
-
-        //        qDebug() << "cap size: " << capSize.width << ", " << capSize.height;
-
-
-        //        qDebug() << "FRAME SIZE: " << frame.cols << ", " << frame.rows << "type: " << frame.type() << ",\t HEAT Map: " << wm.heatMap.type();
-
-        //        if(wm.drawHeatMap)
-        //        {
-        //            addWeighted(frame, 0.5, wm.heatMap, 0.5, 0.0, frame);
-        //        }
-
-        // TO DO: Complete this, find the bugs, and make it nicer!
-        //        if(frame.size>0)
-        //        {
-        //            //            qDebug() << "FRAME SIZE: " << frame.cols << ", " << frame.rows << "type: " << frame.type() << ",\t HEAT Map: " << wm.heatMap.type();
-        //            cv::Mat tmpHeatMap, tmp;
-        //            cv::resize(wm.heatMap, tmpHeatMap, Size(frame.cols, frame.rows));
-
-        //            ////            imshow("heatMap: ", tmpHeatMap);
-
-        //            tmpHeatMap.convertTo(tmp, frame.type());
-        //            cvtColor(tmp, tmp, cv::COLOR_BGRA2RGB);
-
-
-        //            addWeighted(frame, 0.5, tmp, 0.5, 0.0, frame);
-        //            ////            qDebug() << "frame size: " << frame.cols << ", " << frame.rows << " || heatMap size: " << wm.heatMap.cols << ", " << wm.heatMap.rows << " || temp Size: " <<
-        //            ////                        tmp.cols << ", " << tmp.rows;
-
-        //            ////            imshow("Temp:", tmp);
-        //        }
-
 
         QImage QIm((uchar*)frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888);
         QImage QImScaled = QIm.scaledToWidth(ui->outputLabel->width());
@@ -247,6 +284,12 @@ void MainWindow::showImage(cv::Mat frame)
 }
 
 
+/**
+ * @brief Writes user settings (e.g., window size, hue value) to disk.
+ * 
+ * Saves GUI state to persistent storage under "SCIoI" application group.
+ * Currently includes window size and slider value.
+ */
 void MainWindow::writeSettings()
 {
     // THESE ARE TO DOs!
@@ -258,6 +301,12 @@ void MainWindow::writeSettings()
     settings.endGroup();
 }
 
+/**
+ * @brief Reads saved user settings from disk.
+ * 
+ * Loads GUI state from previous session. Only the hue value is currently used.
+ * Resize and slider re-trigger are present as commented-out TODOs.
+ */
 void MainWindow::readSettings()
 {
     QSettings settings("SCIoI", "P27 VRK ver1.1");
@@ -269,11 +318,23 @@ void MainWindow::readSettings()
     settings.endGroup();
 }
 
+/**
+ * @brief Utility function to display debug messages in the GUI text output.
+ * 
+ * Allows internal status or error messages to be shown to the user via the interface.
+ */
 void MainWindow::myDebug(QString string)
 {
     ui->textOut->setText(string);
 }
 
+/**
+ * @brief Processes received robot data and updates internal state.
+ * 
+ * Accepts a list of Kilobots (or other robot instances), maps their positions into arena coordinates,
+ * and updates internal world model data (positions, traces, and which robots should be enlightened).
+ * Emits kilobot position vector for downstream modules.
+ */
 void MainWindow::getKilos(QVector<Kilobot *> kiloVec)
 {
     if(kiloVec.size()>0){
@@ -331,12 +392,23 @@ void MainWindow::getKilos(QVector<Kilobot *> kiloVec)
     //    qDebug() << "I have kilobots here!, the population is: " << kiloVec.size();
 }
 
+/**
+ * @brief Receives a list of drawn circles to overlay on the video frame.
+ * 
+ * Used to annotate the GUI with circular visual indicators (e.g., targets, zones).
+ */
 void MainWindow::getDrawnCircles(QVector<drawnCircle> circsToDraw)
 {
     this->circlsToDraw.clear();
     this->circlsToDraw = circsToDraw;
 }
 
+/**
+ * @brief Draws graphical overlays (like circles and optional labels) on top of a frame.
+ * 
+ * Handles both transparent and opaque overlays based on `drawnCircle` data.
+ * Supports future extensions for drawn lines (currently commented out).
+ */
 void MainWindow::drawOverlay(Mat &frame)
 {
     // MOHSEN: probably not needed! :)
@@ -348,7 +420,6 @@ void MainWindow::drawOverlay(Mat &frame)
             alphaCircles.push_back(this->circlsToDraw[i]);
         }
         else{
-            //            qDebug() << "MOHSEN: circle: " << i << " is not transparent!, Pos: " << this->circlsToDraw[i].pos.x << ", " << this->circlsToDraw[i].pos.y;
             cv::circle(frame,this->circlsToDraw[i].pos, this->circlsToDraw[i].r,
                        Scalar(this->circlsToDraw[i].col.red(),this->circlsToDraw[i].col.green(),this->circlsToDraw[i].col.blue()),
                        this->circlsToDraw[i].thickness);
@@ -416,6 +487,13 @@ void MainWindow::drawOverlay(Mat &frame)
 
 }
 
+/**
+ * @brief Renders Kilobots (or other robots) on the video frame.
+ * 
+ * Displays robot positions as colored circles, optionally with velocity vectors and IDs.
+ * Heatmap and color options depend on GUI checkboxes. This function integrates robot state,
+ * visual encoding, and conditional overlays.
+ */
 void MainWindow::drawKilobots(Mat &frame)
 {
     // we add overlay circles and orientation */
@@ -485,6 +563,12 @@ void MainWindow::drawKilobots(Mat &frame)
     }
 }
 
+/**
+ * @brief Draws and updates a heatmap based on robot positions.
+ * 
+ * For each Kilobot (or robot), draws a colored circle on a heatmap layer using the robot's LED color.
+ * This overlay is then blended with the GUI video feed to visualize collective activity over time.
+ */
 void MainWindow::drawHeatMapOnGUI(Mat &frame)
 {
     cv::Mat circTemp;
@@ -561,6 +645,12 @@ void MainWindow::drawHeatMapOnGUI(Mat &frame)
 
 }
 
+/**
+ * @brief Detects and maps marker positions between camera and arena coordinates.
+ * 
+ * Uses bounding rectangles and centers of four detected markers to compute perspective transforms
+ * (camera-to-arena and arena-to-camera). Updates the experimental field boundaries accordingly.
+ */
 void MainWindow::findMarkerRect()
 {
     //    qDebug() << "Finding the markers rect, with n Rects: " << detectedMarkersList.size();
@@ -655,22 +745,43 @@ void MainWindow::findMarkerRect()
     }
 }
 
+/**
+ * @brief Opens the calibration window for Kilobots.
+ */
 void MainWindow::calibrateKilobot()
 {
     calib->show();
 
 }
 
+/**
+ * @brief Slot triggered when 'From Video' radio button is selected.
+ * 
+ * Currently only used for toggling UI elements (partially implemented).
+ */
 void MainWindow::on_fromVid_rButton_clicked()
 {
     //    ui->save_set_button->setEnabled(false);
 }
 
+/**
+ * @brief Slot triggered when 'From Camera' radio button is selected.
+ * 
+ * Currently only used for toggling UI elements (partially implemented).
+ */
 void MainWindow::on_fromCam_rButton_clicked()
 {
     //    ui->save_set_button->setEnabled(true);
 }
 
+/**
+ * @brief Rotates the input image based on the specified flag.
+ * 
+ * Flags:
+ * 0 = 90° clockwise
+ * 1 = 180°
+ * 2 = 90° counterclockwise
+ */
 void MainWindow::rot90(cv::Mat &matImage, int rotflag)
 {
     // 0 = 90CW,  1 = 180,  2 = 90 CCW
@@ -688,6 +799,12 @@ void MainWindow::rot90(cv::Mat &matImage, int rotflag)
 
 }
 
+/**
+ * @brief Handles mouse release events used for defining a cropping region.
+ * 
+ * If the mouse position is valid, captures the rubber band (selection box) position
+ * and updates UI elements and internal cropping rectangle accordingly.
+ */
 void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     if(isValidPlaceForSelect(event->x(), event->y()))
@@ -710,27 +827,11 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
         qDebug() << "check this condition!";
 }
 
-
-//bool MainWindow::eventFilter(QObject *obj, QEvent *event)
-//{
-//    if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::MouseMove || event->type() == QEvent::MouseButtonRelease)
-//    {
-//        if(mouseButtonClicked)
-//        {
-//            return QMainWindow::eventFilter(obj, event);
-//        }
-//        else
-//        {
-//            qDebug()<<"Select a mode!";
-//        }
-//    }
-//    else
-//    {
-//        // pass the event on to the parent class
-//        return QMainWindow::eventFilter(obj, event);
-//    }
-//}
-
+/**
+ * @brief Handles mouse press events to start drawing a selection box.
+ * 
+ * If the press occurs within a valid area, initializes a rubber band rectangle at the cursor position.
+ */
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
 
@@ -743,6 +844,11 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     }
 }
 
+/**
+ * @brief Handles mouse movement while drawing a selection box.
+ * 
+ * Updates the geometry of the rubber band rectangle or hides it if the area is invalid.
+ */
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
 {
 
@@ -758,6 +864,11 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
+/**
+ * @brief Checks whether the given (x,y) position is within the allowed area for selection.
+ * 
+ * Selection is limited to the region inside the output display label, accounting for mouse bias.
+ */
 bool MainWindow::isValidPlaceForSelect(int x, int y)
 {
     bool isValid = false ;
@@ -766,6 +877,11 @@ bool MainWindow::isValidPlaceForSelect(int x, int y)
     return isValid;
 }
 
+/**
+ * @brief Opens a file dialog for selecting a settings file.
+ * 
+ * The chosen file path is displayed in the user interface for further use.
+ */
 void MainWindow::on_open_set_button_clicked()
 {
     // TO DO: the whole open/read/write/save Setting ...
@@ -773,6 +889,11 @@ void MainWindow::on_open_set_button_clicked()
     ui->filePath_user->setText(fileAddress);
 }
 
+/**
+ * @brief Updates the rotation index based on user selection.
+ * 
+ * Also updates a text output label to show the selected index.
+ */
 void MainWindow::on_Rotate_ComboBox_activated(const QString &arg1)
 {
     rotIndex = ui->Rotate_ComboBox->currentIndex();
@@ -780,6 +901,12 @@ void MainWindow::on_Rotate_ComboBox_activated(const QString &arg1)
     ui->textOut->setText(str);
 }
 
+/**
+ * @brief Starts or stops saving of raw and processed video streams.
+ * 
+ * If the button is checked, initializes video writers and starts saving based on the current settings.
+ * Otherwise, stops and releases video writer threads and related connections.
+ */
 void MainWindow::on_saveVid_button_clicked()
 {
     bool saveProcVidBool = true;
@@ -842,24 +969,37 @@ void MainWindow::on_saveVid_button_clicked()
 
 }
 
+/**
+ * @brief Initialize UI elements and connect signals and slots.
+ * 
+ * Sets initial UI states, configures sliders and buttons, connects UI elements to their
+ * respective handlers using Qt's signal/slot mechanism. Also initializes logging paths
+ * and camera source selection.
+ */
 void MainWindow::uiInitialization()
 {
+    // === UI ELEMENT SETUP AND INITIALIZATION ===
+    // Set initial appearance and interactivity for the file path text box.
     /// initialize openPath
     QString styleSheetStr = "background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);";
     ui->filePath_user->setStyleSheet(styleSheetStr);
     ui->filePath_user->setDisabled(false);
 
+    // Set initial background color based on current HSV slider values.
     bg_color.setHsv(ui->H_slider->value(), ui->S_slider->value(), ui->V_slider->value());
 
+    // Get list of available screens and use the last one to position arena window.
     screensList = QGuiApplication::screens();
 
-    // openArena
+    // === OPEN ARENA SETUP ===
+    // Position and show the arena window on an external screen.
     int screenIndex = screensList.size() - 1;
     arenaWindow->move(screensList.at(screenIndex)->geometry().topRight() - arenaWindow->frameGeometry().topRight());
     //    arenaWindow2->move(QGuiApplication::screens().at(0)->geometry().topRight() - arenaWindow->frameGeometry().topRight());
 
     ui->ArenaWindow_button->setText("Close Arena");
     ui->ArenaWindow_button->setChecked(true);
+    // Trigger default fullscreen and fitting options for the arena display.
     on_fullScreen_pushButton_clicked();
     on_fitRect_pushButton_clicked();
     arenaWindow->show();
@@ -869,11 +1009,12 @@ void MainWindow::uiInitialization()
     DebugAv = ui->debugAV_CheckBox->isChecked();
     boolDebug = ui->debug_CheckBox->isChecked();
 
+    // Setup for mouse selection tool (rubber band) for cropping or selection.
     rubberBand = new QRubberBand(QRubberBand::Rectangle, this->ui->outputLabel);
     mouseBias = QPoint(ui->outputLabel->x(), ui->outputLabel->y()) + QPoint(ui->frame->x(), ui->frame->y());
 
-    // Robot Tracker Initialization
-    //show default settings on the GUI
+    // === ROBOT TRACKER INITIALIZATION ===
+    // Load default tracking parameters into sliders for user interface.
     ui->kbMax_slider->setValue(this->kbtracker.kbMaxSize);
     ui->kbMin_slider->setValue(this->kbtracker.kbMinSize);
     ui->houghAcc_slider->setValue(this->kbtracker.houghAcc);
@@ -895,26 +1036,25 @@ void MainWindow::uiInitialization()
     ui->hiGLED_slider->setValue(100*this->kbtracker.greenHThreshold);
     ui->hiBLED_slider->setValue(100*this->kbtracker.blueHThreshold);
 
+    // Apply these values to ensure slider values are reflected in the UI correctly.
     // updating sliders on the GUI
     updateSliders();
 
-    // Connecting signals and slots
+    // === SIGNAL-SLOT CONNECTIONS ===
+    // Connections from tracker to GUI for displaying images and messages.
     connect(&this->kbtracker, SIGNAL(capturedImage(cv::Mat)), this, SLOT(showImage(cv::Mat)));
     connect(&this->kbtracker, SIGNAL(errorMessage(QString)), ui->error_label, SLOT(setText(QString)));
     //    connect(ui->refresh, SIGNAL(clicked(bool)), &this->kbtracker,SLOT(RefreshDisplayedImage()));
 
-
     connect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(getKilos(QVector<Kilobot*>)));
     //    connect(&this->kbtracker, SIGNAL(circlesToDrawSig(QVector<drawnCircle>)), this, SLOT(getDrawnCircles(QVector<drawnCircle>)));
 
-
-    // TO the ENV.
+    // --- To ENVIRONMENT MODULE ---
     //    connect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this->envBrain, SLOT(updateTraces(QVector<QPoint>))); // we use a timer inside envBrain to update the traces, instead of a signal
     connect(ui->resetHMap_pushButton, SIGNAL(clicked(bool)), this->envBrain, SLOT(resetHeatMap()));
     connect(ui->resetHMap_pushButton, SIGNAL(clicked(bool)), this, SLOT(resetHeatMap()));
 
-
-    // TO OverHeadController
+    // --- To OVERHEAD CONTROLLER MODULE ---
     connect(ui->ohc_connect, SIGNAL(clicked(bool)), &this->ohc, SLOT(toggleConnection()));
     connect(ui->ohc_reset, SIGNAL(toggled(bool)), &this->ohc, SLOT(resetKilobots()));
     connect(ui->ohc_sleep, SIGNAL(toggled(bool)), &this->ohc, SLOT(sleepKilobots()));
@@ -927,14 +1067,11 @@ void MainWindow::uiInitialization()
 
     connect(this,SIGNAL(sendKiloMessage(kilobot_message)), &this->ohc, SLOT(signalKilobot(kilobot_message))); // MOHSEN
 
-    // From OHC
+    // Signals emitted from OverheadController to update GUI elements.
     connect(&this->ohc,SIGNAL(setStopButton(bool)),ui->ohc_stop,SLOT(setChecked(bool)));
     connect(&this->ohc,SIGNAL(errorMessage(QString)), ui->error_label, SLOT(setText(QString)));
 
-
-    // TO DO: FOR KILOBOT STUFF
-//    connect(ui->calibrate_pushButton, SIGNAL(clicked(bool)), this, SLOT(calibrateKilobot())); // NOT WORKING YET!
-
+    // --- TRACKER PARAMETER SLIDERS ---
     // Kilobot Tracker sliders connections
     connect(ui->houghAcc_slider, SIGNAL(valueChanged(int)), &this->kbtracker, SLOT(setHoughAcc(int)));
     connect(ui->cannyThresh_slider, SIGNAL(valueChanged(int)), &this->kbtracker, SLOT(setCannyThresh(int)));
@@ -958,6 +1095,7 @@ void MainWindow::uiInitialization()
 
     connect(ui->refresh_pushButton, SIGNAL(clicked(bool)), &this->kbtracker,SLOT(RefreshDisplayedImage()));
 
+    // --- COLOR PICKING BUTTONS ---
     // Connect color buttons in GUI
     connect(ui->black_pushButton, &QPushButton::clicked, [this]() { QString txt = ui->black_pushButton->text(); qDebug() << "clicked : " << txt; updateColors(txt); clicked(txt); });
     connect(ui->blue_pushButton, &QPushButton::clicked, [this]() { QString txt = ui->blue_pushButton->text(); qDebug() << "clicked : " << txt; updateColors(txt); clicked(txt); });
@@ -965,21 +1103,25 @@ void MainWindow::uiInitialization()
     connect(ui->green_pushButton, &QPushButton::clicked, [this]() { QString txt = ui->green_pushButton->text(); qDebug() << "clicked : " << txt; updateColors(txt); clicked(txt); });
     connect(ui->white_pushButton, &QPushButton::clicked, [this]() { QString txt = ui->white_pushButton->text(); qDebug() << "clicked : " << txt; updateColors(txt); clicked(txt); });
 
+    // --- EXPERIMENT FIELD TYPE SELECTION ---
     connect(ui->gradientExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = GRADIENT;});
     connect(ui->imageExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = IMAGE;});
     connect(ui->nullExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = NULL_BRUSH;});
 
+    // --- ROBOT BRUSH TYPE SELECTION ---
     connect(ui->gradientRob_pushButton, &QPushButton::clicked, [this]() { wm.robBrushType = GRADIENT;});
     connect(ui->solidRob_pushButton, &QPushButton::clicked, [this]() { wm.robBrushType = SOLID;});
     connect(ui->nullRob_pushButton, &QPushButton::clicked, [this]() { wm.robBrushType = NULL_BRUSH;});
 
+    // --- ARENA RENDER COLOR SLIDERS ---
     // Render Arena
     connect(ui->H_slider, SIGNAL(valueChanged(int)), this, SLOT(updateColors()));
     connect(ui->V_slider, SIGNAL(valueChanged(int)), this, SLOT(updateColors()));
     connect(ui->S_slider, SIGNAL(valueChanged(int)), this, SLOT(updateColors()));
     connect(ui->A_slider, SIGNAL(valueChanged(int)), this, SLOT(updateColors()));
 
-    // Manual Calibration Widget
+    // --- MANUAL CALIBRATION CONNECTIONS ---
+    // Create and connect calibration window for manual robot tuning.
     calib = new CalibWindow("Calibration Values", this);
     connect(calib, SIGNAL(calibUID(int)), this, SLOT(calibUID(int)));
     connect(calib, SIGNAL(calibLeft(int)), this, SLOT(calibLeft(int)));
@@ -990,8 +1132,10 @@ void MainWindow::uiInitialization()
 
     connect(ui->black_pushButton, SIGNAL(objectNameChanged(QString)), this, SLOT(updateColors(QString)));
 
+    // Trigger one-time color update at startup using current button states.
     updateColors();
 
+    // Set the world model field size based on screen geometry (adapted for platform).
     wm.setFieldSize(QGuiApplication::screens().at(screenIndex)->geometry().size());
     qDebug() << "Field Size set to: " << wm.fieldSize.width() << ", " << wm.fieldSize.height();
 
@@ -1003,7 +1147,8 @@ void MainWindow::uiInitialization()
     wm.setFieldSize(wm.fieldSize-QSize(290,190));
 #endif
 
-
+    // === WORLD MODEL INITIALIZATION ===
+    // Load default arena image and apply initial render settings.
     // setting initial values of some parameters in the WM
     wm.arenaImg = QPixmap(":/Files/arena_01.png");
 
@@ -1012,10 +1157,18 @@ void MainWindow::uiInitialization()
     procQSize = ui->outputLabel->size(); // for saving the processed video, this would
     procSize = cv::Size(procQSize.width(), procQSize.height());
 
+    // Start main timer for tracking experiment runtime.
     elapsedTimer.start();
 }
 
 
+/**
+ * @brief Plots a new data point on the QCustomPlot.
+ *
+ * Updates the plot's x-axis range based on elapsed time and triggers a replot.
+ * @param customPlot Pointer to the QCustomPlot widget to update.
+ * @param value The new data value to plot (not currently used in this implementation).
+ */
 void MainWindow::plotData(QCustomPlot *customPlot, double value)
 {
     static QTime time(QTime::currentTime());
@@ -1025,6 +1178,15 @@ void MainWindow::plotData(QCustomPlot *customPlot, double value)
     customPlot->replot();
 }
 
+/**
+ * @brief Initializes the QCustomPlot for error visualization.
+ *
+ * Sets up two graphs ("Err Prec" and "Err True") for precision and trueness errors,
+ * configures time-based x-axis, y-axis range, legend, and visual customizations for each graph.
+ * Also adjusts margins and inset layout for optimal display.
+ *
+ * @param customPlot Pointer to the QCustomPlot widget to initialize.
+ */
 void MainWindow::initializePlot(QCustomPlot *customPlot)
 {
     // Initializing Plot
@@ -1037,12 +1199,13 @@ void MainWindow::initializePlot(QCustomPlot *customPlot)
     customPlot->axisRect()->setupFullAxesBox();
     customPlot->yAxis->setRange(-0.5, 0.5);
 
-
+    // Graph 0: Precision error
     customPlot->graph(0)->setName("Err Prec");
     customPlot->graph(0)->setPen(QColor(0, 0, 255, 255));
     customPlot->graph(0)->setLineStyle(QCPGraph::lsNone);
     customPlot->graph(0)->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssCircle, 4));
 
+    // Graph 1: Trueness error
     customPlot->graph(1)->setName("Err True");
     customPlot->graph(1)->setPen(QColor(255, 0, 255, 255));
     customPlot->graph(1)->setLineStyle(QCPGraph::lsNone);
@@ -1057,6 +1220,12 @@ void MainWindow::initializePlot(QCustomPlot *customPlot)
     customPlot->axisRect()->insetLayout()->setInsetRect(0, QRectF(1.1,0,0.1,0.1));
 }
 
+/**
+ * @brief Resets the heatmap overlay to a blank state.
+ *
+ * Clears the heatmap by initializing it to a black (zeroed) matrix
+ * matching the current capture size. Used to restart heatmap accumulation.
+ */
 void MainWindow::resetHeatMap()
 {
     //    cv::Mat tempHM(capSize.height, capSize.width, CV_16UC1, cv::Scalar(0)); // MOHSEN !! check why it is the reverse, height & Width
@@ -1069,45 +1238,42 @@ void MainWindow::resetHeatMap()
     tempHM.copyTo(this->heatMapOnFrame);
 }
 
+/**
+ * @brief Handles the "Debug" checkbox click event.
+ *
+ * Updates the DebugAv state according to the debugAV_CheckBox status.
+ */
 void MainWindow::on_debug_CheckBox_clicked()
 {
     DebugAv = ui->debugAV_CheckBox->isChecked();
 }
 
-
-//void MainWindow::on_save_var_button_clicked()
-//{
-//    std::ofstream dataFile;
-//    QString fileStr;
-//    fileStr = QDateTime::currentDateTime().toString("yy_MM_dd___hh_mm");
-//    fileStr = "/home/" + fileStr + "_tmp" + QString::number(ui->zoomSpeedGainEnCheckBox->isChecked()) + ".txt";
-//    dataFile.open(fileStr.toStdString());
-//    //    GainFile << ui->tempVal->value() << "\n";
-//    dataFile.close();
-//}
-
-
-//void MainWindow::on_load_var_button_clicked()
-//{
-//    QString fileAddress = QFileDialog::getOpenFileName(this,tr("Select DATA File"), "/home/p27/Kilobot_Materials/savedData/", tr("Text Files (*.txt)"));
-
-//    std::ifstream inputFile(fileAddress.toStdString());
-//    std::string line;
-//    int var[5], count = 0; // change this line accordingly
-//    while (std::getline(inputFile, line))
-//    {
-//        std::istringstream ss(line);
-
-//        ss >> var[count];
-//        std::cout << var[count] <<std::endl;
-//        count++;
-//    }
-//    inputFile.close();
-
-//    //    ui->tempVal->setValue(var[0]);
-
-//}
-
+/**
+ * @brief Handles keyboard input and triggers corresponding robot and UI actions.
+ *
+ * Supported keys and actions:
+ * - W (87), presenter Left (16777238): Move kilobot(s) forward.
+ * - A (65): Move kilobot(s) left.
+ * - D (68), presenter Right (16777239): Move kilobot(s) right.
+ * - S (83), B (66): Stop kilobot(s).
+ * - V (86): Increase V slider.
+ * - C (67): Decrease V slider.
+ * - X (88): Stop sending messages.
+ * - Z (90): Put kilobot(s) to sleep.
+ * - N (78): Run kilobot(s).
+ * - M (77): Reset kilobot(s).
+ * - I (73): Press black button (UI).
+ * - K (75): Toggle heatmap display (UI).
+ * - R (82): Reset heatmap.
+ * - L (76): Shuffle image experiment field.
+ * - 2 (50): Move marker0 down.
+ * - 8 (56): Move marker0 up.
+ * - 4 (52): Move marker0 left.
+ * - 6 (54): Move marker0 right.
+ * - 3 (51): Cycle experiment field type.
+ *
+ * @param key The integer key code received from the keyboard event.
+ */
 void MainWindow::SendKeyBoardData(int key)
 {
     qDebug() << " Key board : " << key;
@@ -1243,12 +1409,6 @@ void MainWindow::SendKeyBoardData(int key)
         //        ui->V_slider->setValue(ui->V_slider->value() + 10);
         break;
     }
-        //    case 74: // j  / left arrow JoyStick
-        //    {
-        //        qDebug() << "k or JoyStick down Pressed";
-        //        ui->V_slider->setValue(ui->V_slider->value() - 10);
-        //        break;
-        //    }
     case 75: // k  / Y JoyStick
     {
         qDebug() << "k or JoyStick Y Pressed";
@@ -1305,22 +1465,6 @@ void MainWindow::SendKeyBoardData(int key)
         update_wmMarkers();
         break;
     }
-        //    case 56: // 8 / 4/sq JoyStick
-        //    {
-        //        qDebug() << "?? or JoyStick 4/sq Pressed";
-        ////        ui->drawHeatMap_CheckBox->toggle();
-        //    }
-        //    case 52: // 4 / 4/sq JoyStick
-        //    {
-        //        qDebug() << "??? or JoyStick 4/sq Pressed";
-        ////        ui->drawHeatMap_CheckBox->toggle();
-        //    }
-        //    case 52: // 4 / 4/sq JoyStick
-        //    {
-        //        qDebug() << "? or JoyStick 4/sq Pressed";
-        ////        ui->drawHeatMap_CheckBox->toggle();
-        //    }
-
     case 51: // 3 / 3/B JoyStick
     {
         qDebug() << "3 or JoyStick 3/B Pressed";
@@ -1354,31 +1498,24 @@ void MainWindow::SendKeyBoardData(int key)
     prevKeyBoard = key;
 }
 
+/**
+ * @brief Override Qt key press handler.
+ * 
+ * Handles application-level keyboard shortcuts such as quitting the app with 'Esc'.
+ */
 void MainWindow::keyPressEvent(QKeyEvent *key)
 {
+    // If 'Esc' is pressed, close the main window
     SendKeyBoardData(key->key());
 }
 
-//void MainWindow::on_JoyStick_button_pressed()
-//{
-//    ui->JoyStick_button->setChecked(~ui->JoyStick_button->isChecked());
-//    if(ui->JoyStick_button->isChecked())
-//    {
-//        /// Start JoyStick Commanding
-//        joyStick_Timer->start(1);
-//        connect(joyStick_Timer,SIGNAL(timeout()),this,SLOT(joyStick_timeout()));
-//        ui->JoyStick_button->setText("Stop JoyStick");
 
-//    }
-//    else
-//    {
-//        /// Stop JoyStick Commanding
-//        ui->JoyStick_button->setText("Start JoyStick");
-//        disconnect(joyStick_Timer,SIGNAL(timeout()),this,SLOT(joyStick_timeout()));
-//    }
-
-//}
-
+/**
+ * @brief Handles Arena window open/close button click.
+ *
+ * Shows or hides the Arena window and updates the button label accordingly.
+ * Moves the window to the selected screen when opening.
+ */
 void MainWindow::on_ArenaWindow_button_clicked()
 {
     if(ui->ArenaWindow_button->isChecked()){
@@ -1392,6 +1529,11 @@ void MainWindow::on_ArenaWindow_button_clicked()
     }
 }
 
+/**
+ * @brief Updates colors for field or robots based on current GUI slider values.
+ *
+ * Depending on the selected object type (background, robot custom, or pen), updates color in the world model.
+ */
 void MainWindow::updateColors()
 {
     //    qDebug() << "updating for checked ID: " << ui->buttonGroupPaintObject->checkedId();
@@ -1421,6 +1563,12 @@ void MainWindow::updateColors()
     //        arenaWindow->changeScreenBG(bg_color);
 }
 
+/**
+ * @brief Updates color sliders and field/robot color from a color string.
+ *
+ * Converts a given color string (e.g., from a button) to HSV slider values, then updates the world model colors.
+ * @param colorString The color string (e.g., "#RRGGBB" or named color) to use.
+ */
 void MainWindow::updateColors(QString colorString)
 {
     //    qDebug() << "hey! I am here updating color: " << colorString;
@@ -1432,6 +1580,11 @@ void MainWindow::updateColors(QString colorString)
     updateColors();
 }
 
+/**
+ * @brief Sets sliders to a predefined red color and updates the interface.
+ *
+ * Applies a preset HSV value for red, updates sliders, and triggers color update.
+ */
 void MainWindow::on_userRed_pushButton_clicked()
 {
     QColor temp;
@@ -1443,6 +1596,11 @@ void MainWindow::on_userRed_pushButton_clicked()
     updateColors();
 }
 
+/**
+ * @brief Sets sliders to a predefined blue color and updates the interface.
+ *
+ * Applies a preset HSV value for blue, updates sliders, and triggers color update.
+ */
 void MainWindow::on_userBlue_pushButton_clicked()
 {
     QColor temp;
@@ -1454,6 +1612,11 @@ void MainWindow::on_userBlue_pushButton_clicked()
     updateColors();
 }
 
+/**
+ * @brief Toggles the Arena window fullscreen mode.
+ *
+ * Puts the Arena window into fullscreen and brings the main window to front.
+ */
 void MainWindow::on_fullScreen_pushButton_clicked()
 {
     arenaWindow->toggleFullScreen(true);
@@ -1461,17 +1624,24 @@ void MainWindow::on_fullScreen_pushButton_clicked()
     //    arenaWindow->isFullScreen() ? arenaWindow->showNormal() : arenaWindow->showFullScreen();
 }
 
-//void MainWindow::on_moveRect_pushButton_clicked()
-//{
-//    arenaWindow->changeSceneRect(QRect(100,100,100,100));
-//}
-
+/**
+ * @brief Handles the 'Fit Rect' button click event.
+ *
+ * Disables the button to prevent repeated clicks. Intended to fit the scene rectangle in the arena window
+ * (currently commented out).
+ */
 void MainWindow::on_fitRect_pushButton_clicked()
 {
     ui->fitRect_pushButton->setEnabled(false);
     //    arenaWindow->fitSceneRect();
 }
 
+/**
+ * @brief Handles the 'From Image' button click event.
+ *
+ * Disables the button to prevent repeated clicks. Intended for toggling loading/cleaning
+ * of a background image in the arena window (logic currently commented out).
+ */
 void MainWindow::on_fromImage_pushButton_clicked()
 {
     ui->fromImage_pushButton->setEnabled(false);
@@ -1486,6 +1656,11 @@ void MainWindow::on_fromImage_pushButton_clicked()
     //    }
 }
 
+/**
+ * @brief Updates all slider labels with current slider values.
+ *
+ * Synchronizes displayed numeric values for HSV sliders, kilobot tracker sliders, and LED detection sliders.
+ */
 void MainWindow::updateSliders()
 {
     ui->H_label->setNum(ui->H_slider->value());
@@ -1512,16 +1687,31 @@ void MainWindow::updateSliders()
     ui->hiBLED_label->setNum(ui->hiBLED_slider->value());
 }
 
+/**
+ * @brief Handles the 'Save Setting' button click event.
+ *
+ * Triggers saving of GUI and user settings.
+ */
 void MainWindow::on_saveSetting_pushButton_clicked()
 {
     writeSettings();
 }
 
+/**
+ * @brief Handles the 'Load Setting' button click event.
+ *
+ * Loads GUI and user settings from disk.
+ */
 void MainWindow::on_loadSetting_pushButton_clicked()
 {
     readSettings();
 }
 
+/**
+ * @brief Handles the 'Start Tracking' button click event.
+ *
+ * Starts or stops the tracking loop and updates button/text states accordingly.
+ */
 void MainWindow::on_startTracking_pushButton_clicked()
 {
     //    ui->startTracking_pushButton->isChecked() ? ui->startTracking_pushButton->setText("Stop Tracking") : ui->startTracking_pushButton->setText("Start Tracking");
@@ -1532,11 +1722,21 @@ void MainWindow::on_startTracking_pushButton_clicked()
     ui->startTracking_pushButton->isChecked() ? ui->crop_pushButton->setEnabled(false) : ui->crop_pushButton->setEnabled(true);
 }
 
+/**
+ * @brief Updates the 'Start Tracking' button label.
+ *
+ * Changes the button text based on its checked state.
+ */
 void MainWindow::update_startTracking_pushBotton()
 {
     ui->startTracking_pushButton->isChecked() ? ui->startTracking_pushButton->setText("Stop Tracking") : ui->startTracking_pushButton->setText("Start Tracking");
 }
 
+/**
+ * @brief Handles the 'Detect Kilobots' button click event.
+ *
+ * Initiates kilobot detection, updates the combo box for selection, and manages start tracking button states.
+ */
 void MainWindow::on_detectKilobots_pushButton_clicked()
 {
     this->kbtracker.SETUPfindKilobots();
@@ -1584,6 +1784,13 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
     //    }
 }
 
+/**
+ * @brief Handles the crop button click event to define or clear the cropping rectangle.
+ *
+ * When enabled, calculates crop rectangle coordinates based on UI fields or detected markers, 
+ * maps cropping region between GUI, fit, and capture coordinates, and updates internal state. 
+ * When disabled, resets cropping to the full capture region. Always triggers an update in the tracker and resets the heatmap.
+ */
 void MainWindow::on_crop_pushButton_clicked()
 {
 
@@ -1658,6 +1865,12 @@ void MainWindow::on_crop_pushButton_clicked()
     this->resetHeatMap();
 }
 
+/**
+ * @brief Handles the 'Detect Marker' button click event to find ArUco markers in the current video frame.
+ *
+ * Processes the current frame using OpenCV's ArUco detection tools. If markers are found, their positions and bounding rectangles are extracted and
+ * stored in internal lists, and details are printed for debugging. Calls findMarkerRect() to update arena mapping based on detected marker locations.
+ */
 void MainWindow::on_detectMarker_pushButton_clicked()
 {
     if(currentFrame.size>0)
@@ -1732,11 +1945,26 @@ void MainWindow::on_detectMarker_pushButton_clicked()
     //    }
 }
 
+/**
+ * @brief Handles the marker width slider movement.
+ *
+ * Updates the world model marker length parameter according to the slider position.
+ * @param position New slider value for marker width.
+ */
 void MainWindow::on_markerWidth_Slider_sliderMoved(int position)
 {
     wm.marker_length = position;
 }
 
+/**
+ * @brief Maps a QPoint using provided scale and bias.
+ *
+ * Applies a linear transformation to point P: scale and then bias.
+ * @param P Original point.
+ * @param scale 2D scaling factors.
+ * @param bias 2D bias/offset to add.
+ * @return Transformed QPoint.
+ */
 QPoint MainWindow::mapPoint(QPoint P, QVector2D scale, QVector2D bias)
 {
     QPoint P2;
@@ -1746,6 +1974,14 @@ QPoint MainWindow::mapPoint(QPoint P, QVector2D scale, QVector2D bias)
     return P2;
 }
 
+/**
+ * @brief Maps a QPoint using a 3x3 projective transformation matrix.
+ *
+ * Applies a homography (projective transform) to the input point.
+ * @param P Original point.
+ * @param lambda 3x3 transformation matrix (homography).
+ * @return Transformed QPoint.
+ */
 QPoint MainWindow::mapPoint(QPoint P, Matx33f lambda)
 {
     cv::Point3f homogeneous = lambda * Point2f(P.x(), P.y());
@@ -1753,6 +1989,15 @@ QPoint MainWindow::mapPoint(QPoint P, Matx33f lambda)
     return QPoint(homogeneous.x, homogeneous.y);
 }
 
+/**
+ * @brief Maps a QPoint using a 3x3 matrix and translation vector.
+ *
+ * Applies an affine or rigid transform (matrix and translation) to the point.
+ * @param P Original point.
+ * @param rvec 3x3 transformation matrix.
+ * @param tvec Translation vector.
+ * @return Transformed QPoint.
+ */
 QPoint MainWindow::mapPoint(QPoint P, Matx33f rvec, Point3f tvec)
 {
     cv::Point3f homogeneous = rvec*Point2f(P.x(), P.y())  + tvec;
@@ -1760,13 +2005,23 @@ QPoint MainWindow::mapPoint(QPoint P, Matx33f rvec, Point3f tvec)
 }
 
 
-
+/**
+ * @brief Handles state change for the tracker debug checkbox.
+ *
+ * Enables or disables debug drawing in the tracker.
+ * @param arg1 State change value (unused).
+ */
 void MainWindow::on_debug_tracker_stateChanged(int arg1)
 {
     this->kbtracker.drawDebugBool = ui->debug_tracker->isChecked();
 }
 
-
+/**
+ * @brief Handles the max displacement slider movement.
+ *
+ * Updates the tracker maximum allowed displacement parameter for object tracking.
+ * @param position New slider value.
+ */
 void MainWindow::on_maxDispl_slider_sliderMoved(int position)
 {
 //#ifdef FOR_KILOBOT
@@ -1776,7 +2031,12 @@ void MainWindow::on_maxDispl_slider_sliderMoved(int position)
 //#endif
 }
 
-
+/**
+ * @brief Handles the EFWL slider movement.
+ *
+ * Updates the EFWL (e.g., Exponential Forgetting Window Length) parameter in the tracker.
+ * @param position New slider value.
+ */
 void MainWindow::on_EFWL_slider_sliderMoved(int position)
 {
     this->kbtracker.EFWL = (float) position/10.0;
@@ -1792,19 +2052,34 @@ void MainWindow::on_EFWL_slider_sliderMoved(int position)
 //    //    wm.setRobotCustomColor(Qt::NoBrush);
 //}
 
-
+/**
+ * @brief Handles the robot rendering radius slider movement.
+ *
+ * Updates the robot rendering radius in the world model for visualization.
+ * @param position New slider value for robot radius.
+ */
 void MainWindow::on_robRendRad_slider_sliderMoved(int position)
 {
     wm.robRad = position;
 }
 
-
+/**
+ * @brief Handles the smoothness factor slider movement.
+ *
+ * Updates the tracker smoothing parameter for object trajectories.
+ * @param position New slider value.
+ */
 void MainWindow::on_smoothnessFact_slider_sliderMoved(int position)
 {
     this->kbtracker.smooth_fact = (float) position/100.0;
 }
 
-
+/**
+ * @brief Handles toggling of the image-based experiment field.
+ *
+ * Loads a background image for the experiment field if enabled.
+ * @param checked True if button is checked (enabled).
+ */
 void MainWindow::on_imageExpField_pushButton_clicked(bool checked)
 {
     wm.loadImgBackground = checked;
@@ -1813,7 +2088,12 @@ void MainWindow::on_imageExpField_pushButton_clicked(bool checked)
     wm.arenaImg = QPixmap(address);
 }
 
-
+/**
+ * @brief Handles initialization of points to draw (e.g., grid, star).
+ *
+ * Generates and sets up points for drawing, according to the selected mode.
+ * @param checked True if button is checked (enabled).
+ */
 void MainWindow::on_initPoints_pushButton_clicked(bool checked)
 {
     if(checked)
@@ -1846,13 +2126,22 @@ void MainWindow::on_initPoints_pushButton_clicked(bool checked)
         wm.pointsToDraw.clear();
 }
 
-
+/**
+ * @brief Handles the reset trace button click event.
+ *
+ * Clears the robot traces stored in the world model.
+ */
 void MainWindow::on_resetTrace_pushButton_clicked()
 {
     wm.rob_traces.clear();
 }
 
 
+/**
+ * @brief Stops the calibration routine.
+ *
+ * Currently only contains commented-out code for sending wakeup messages. Intended for future use.
+ */
 void MainWindow::calibStop() {
     //    if (sending) {
     //        sendMessage(WAKEUP);
@@ -1860,6 +2149,12 @@ void MainWindow::calibStop() {
     //    }
 }
 
+/**
+ * @brief Updates the positions of arena markers and the experimental field rectangle.
+ *
+ * Computes positions of the 4 arena markers based on the current marker0 position and arena width.
+ * Also updates bottom-right marker and experiment field rectangle.
+ */
 void MainWindow::update_wmMarkers()
 {
     wm.marker1_pos = QPoint(wm.marker0_pos.x(), wm.marker0_pos.y() + wm.arenaWidth);
@@ -1872,12 +2167,24 @@ void MainWindow::update_wmMarkers()
     qDebug() << "marker 0. pos.x: " << wm.marker0_pos.x() << ", marker 0. pos.y: " << wm.marker0_pos.y();
 }
 
+/**
+ * @brief Sends a save command to the overhead controller for calibration.
+ *
+ * Publishes a CALIB_SAVE message via the overhead controller.
+ */
 void MainWindow::calibSave() {
     static calibmsg_t msg;
     msg.mode = CALIB_SAVE;
     this->ohc.sendDataMessagePub((uint8_t *)&msg, CALIB);
     //    sendDataMessage((uint8_t*)&msg, CALIB);
 }
+
+/**
+ * @brief Sends a UID (unique ID) command to the overhead controller for calibration.
+ *
+ * Publishes a CALIB_UID message with the given UID value.
+ * @param x Unique ID for calibration.
+ */
 void MainWindow::calibUID(int x) {
     static calibmsg_t msg;
     msg.mode = CALIB_UID;
@@ -1885,6 +2192,13 @@ void MainWindow::calibUID(int x) {
     this->ohc.sendDataMessagePub((uint8_t *)&msg, CALIB);
     //    sendDataMessage((uint8_t *)&msg, CALIB);
 }
+
+/**
+ * @brief Sends a left turn calibration value to the overhead controller.
+ *
+ * Publishes a CALIB_TURN_LEFT message with the specified left turn value.
+ * @param x Left turn calibration value.
+ */
 void MainWindow::calibLeft(int x) {
     static calibmsg_t msg;
     msg.mode = CALIB_TURN_LEFT;
@@ -1892,6 +2206,13 @@ void MainWindow::calibLeft(int x) {
     this->ohc.sendDataMessagePub((uint8_t *)&msg, CALIB);
     //    sendDataMessage((uint8_t *)&msg, CALIB);
 }
+
+/**
+ * @brief Sends a right turn calibration value to the overhead controller.
+ *
+ * Publishes a CALIB_TURN_RIGHT message with the specified right turn value.
+ * @param x Right turn calibration value.
+ */
 void MainWindow::calibRight(int x) {
     static calibmsg_t msg;
     msg.mode = CALIB_TURN_RIGHT;
@@ -1899,6 +2220,13 @@ void MainWindow::calibRight(int x) {
     this->ohc.sendDataMessagePub((uint8_t *)&msg, CALIB);
     //    sendDataMessage((uint8_t *)&msg, CALIB);
 }
+
+/**
+ * @brief Sends a straight movement calibration value to the overhead controller.
+ *
+ * Publishes a CALIB_STRAIGHT message with left and right calibration values packed in x.
+ * @param x Straight calibration value (lower and upper bytes).
+ */
 void MainWindow::calibStraight(int x) {
     static calibmsg_t msg;
     msg.mode = CALIB_STRAIGHT;
@@ -1908,13 +2236,22 @@ void MainWindow::calibStraight(int x) {
     //    sendDataMessage((uint8_t *)&msg, CALIB);
 }
 
-
+/**
+ * @brief Handles the state change event for the 'Draw Trace' checkbox.
+ *
+ * Updates the drawTrace flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_drawTrace_CheckBox_stateChanged(int arg1)
 {
     wm.drawTrace = this->ui->drawTrace_CheckBox->isChecked();
 }
 
-
+/**
+ * @brief Randomizes and loads a background image for the experimental field.
+ *
+ * Selects a random arena image from a set of predefined files and loads it into the world model.
+ */
 void MainWindow::on_shuffleImageExpField_pushButton_clicked()
 {
     int rnd = rand() % 8 + 1;
@@ -1927,24 +2264,43 @@ void MainWindow::on_shuffleImageExpField_pushButton_clicked()
     //    imshow("test", wm.arenaImg)
 }
 
-
+/**
+ * @brief Handles the state change event for the 'Draw Boundary' checkbox.
+ *
+ * Updates the drawBoundary flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_drawBoundary_CheckBox_stateChanged(int arg1)
 {
     wm.drawBoundary = ui->drawBoundary_CheckBox->isChecked();
 }
 
-
+/**
+ * @brief Handles the 'Draw Heatmap' checkbox click event.
+ *
+ * Updates the drawHeatMap flag in the world model according to the UI checkbox.
+ */
 void MainWindow::on_drawHeatMap_CheckBox_clicked()
 {
     wm.drawHeatMap = ui->drawHeatMap_CheckBox->isChecked();
 }
 
-
+/**
+ * @brief Handles the 'Draw Colored Circles' checkbox click event.
+ *
+ * Updates the drawColCircles flag in the world model.
+ * @param checked True if the checkbox is checked.
+ */
 void MainWindow::on_drawColCircles_CheckBox_clicked(bool checked)
 {
     wm.drawColCircles = checked;
 }
 
+/**
+ * @brief Handles the 'Sea Blue' color preset button click.
+ *
+ * Sets the HSV sliders to a predefined 'sea blue' value and updates colors in the interface.
+ */
 void MainWindow::on_seaBlue_pushButton_clicked()
 {
     QColor temp;
@@ -1956,18 +2312,36 @@ void MainWindow::on_seaBlue_pushButton_clicked()
     updateColors();
 }
 
+/**
+ * @brief Handles the 'Draw Robot Circles' checkbox click event.
+ *
+ * Toggles drawing of robot circles in the visualization.
+ * @param checked True if the checkbox is checked (enabled).
+ */
 void MainWindow::on_drawRobCircles_CheckBox_clicked(bool checked)
 {
     wm.drawRobCircles = checked;
 }
 
 
+/**
+ * @brief Handles the 'Set Program' button click for the overhead controller.
+ *
+ * Logs an action for loading a .hex file to program the Kilobots.
+ */
 void MainWindow::on_ohc_set_prog_clicked()
 {
     qDebug() << "loading .hex file to program Kilobots!";
 }
 
 
+/**
+ * @brief Handles the 'Write Log' button click event.
+ *
+ * Starts or stops logging experiment data to a file based on the checked state.
+ * Sets up file streams and connects/disconnects relevant signals for different logging modes.
+ * @param checked True if logging is enabled.
+ */
 void MainWindow::on_writeLog_button_clicked(bool checked)
 {
     if(checked)
@@ -2028,6 +2402,12 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
 
 }
 
+/**
+ * @brief Handles the "Environment 1" radio button click event.
+ *
+ * Sets predefined marker positions and cropping rectangle for environment 1.
+ * @param checked True if the radio button is checked.
+ */
 void MainWindow::on_env1_rButton_clicked(bool checked)
 {
     // Markers Pos in Projected Space: set 1
@@ -2038,7 +2418,6 @@ void MainWindow::on_env1_rButton_clicked(bool checked)
     //    wm.marker2_pos = QPoint(wm.marker0_pos.x() + wm.arenaWidth, wm.marker0_pos.y());
     //    wm.marker3_pos = QPoint(wm.marker0_pos.x() + wm.arenaWidth, wm.marker0_pos.y() + wm.arenaWidth);
 
-
     ui->cropTL_xTextEdit->setText(QString::number(377));
     ui->cropTL_yTextEdit->setText(QString::number(146));
 
@@ -2046,6 +2425,12 @@ void MainWindow::on_env1_rButton_clicked(bool checked)
     ui->cropsz_hTextEdit->setText(QString::number(237));
 }
 
+/**
+ * @brief Handles the "Environment 2" radio button click event.
+ *
+ * Sets predefined marker positions and cropping rectangle for environment 2.
+ * @param checked True if the radio button is checked.
+ */
 void MainWindow::on_env2_rButton_clicked(bool checked)
 {
     // Markers Pos in Projected Space: set 2
@@ -2060,6 +2445,11 @@ void MainWindow::on_env2_rButton_clicked(bool checked)
     ui->cropsz_hTextEdit->setText(QString::number(320));
 }
 
+/**
+ * @brief Handles the "Environment 3" radio button click event.
+ *
+ * Sets predefined marker positions and cropping rectangle for environment 3.
+ */
 void MainWindow::on_env3_rButton_clicked()
 {
     wm.arenaWidth = 550;
@@ -2073,6 +2463,11 @@ void MainWindow::on_env3_rButton_clicked()
     ui->cropsz_hTextEdit->setText(QString::number(255));
 }
 
+/**
+ * @brief Handles the "Environment 4" radio button click event (Thymio arena).
+ *
+ * Sets marker positions and cropping rectangle for the largest Thymio arena.
+ */
 void MainWindow::on_env4_rButton_clicked()
 {
     // Markers Pos in Projected Space: set 4: for Thymios
@@ -2094,6 +2489,11 @@ void MainWindow::on_env4_rButton_clicked()
     ui->cropsz_hTextEdit->setText(QString::number(305));
 }
 
+/**
+ * @brief Opens a file dialog to select an arena image.
+ *
+ * Loads the selected arena image and updates the corresponding UI field.
+ */
 void MainWindow::on_openImageField_pushButton_clicked()
 {
     QString fileAddress = QFileDialog::getOpenFileName(this,tr("Select Arena Image"), "/home/p27/kilobot_project/VRK/New_VRK_GUI/Files/", tr("All Files (*.*)"));
@@ -2101,32 +2501,67 @@ void MainWindow::on_openImageField_pushButton_clicked()
     wm.arenaImg = QPixmap(fileAddress);
 }
 
+/**
+ * @brief Handles the "Gradient Experiment Field" button click event.
+ *
+ * Triggers an update of the gradient painter in the arena window.
+ */
 void MainWindow::on_gradientExpField_pushButton_clicked()
 {
     this->arenaWindow->_renderArea->updateGradientPainter();
 }
 
+/**
+ * @brief Handles the noise tiles slider value change event.
+ *
+ * Updates the number of noise tiles in the world model.
+ * @param value New number of noise tiles.
+ */
 void MainWindow::on_noiseTiles_slider_valueChanged(int value)
 {
     wm.noiseTileNo = value;
 }
 
+/**
+ * @brief Handles the noise frequency slider value change event.
+ *
+ * Updates the noise time interval in the world model and environment brain.
+ * @param value New noise frequency value.
+ */
 void MainWindow::on_noiseFreq_slider_valueChanged(int value)
 {
     wm.noiseTimeIntv = value;
     envBrain->updateNoiseProps(value);
 }
 
+/**
+ * @brief Handles the noise strength slider value change event.
+ *
+ * Updates the noise strength parameter in the world model.
+ * @param value New noise strength value.
+ */
 void MainWindow::on_noiseStrength_slider_valueChanged(int value)
 {
     wm.noiseStrength = (double) value/100.0;
 }
 
+/**
+ * @brief Handles the "Draw Network" checkbox state change event.
+ *
+ * Updates the drawNetwork flag in the world model.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_draw_network_stateChanged(int arg1)
 {
     wm.drawNetwork = ui->draw_network->isChecked();
 }
 
+/**
+ * @brief Handles the value change for a dummy/random slider.
+ *
+ * Updates a dummy variable in the world model. Used for testing or prototyping.
+ * @param value New slider value.
+ */
 void MainWindow::on_sliderRandom0_valueChanged(int value)
 {
     wm.dummy_var = value;
@@ -2135,6 +2570,12 @@ void MainWindow::on_sliderRandom0_valueChanged(int value)
     qDebug() << "Nothing is assigned!!";
 }
 
+/**
+ * @brief Handles the noise radio button click event.
+ *
+ * Connects or disconnects noise addition in the environment brain. Also updates noise interval.
+ * @param checked True if the radio button is checked (enabled).
+ */
 void MainWindow::on_noise_radioButton_clicked(bool checked)
 {
     envBrain->connect_disconnect_add_noise(checked);
@@ -2144,26 +2585,48 @@ void MainWindow::on_noise_radioButton_clicked(bool checked)
         wm.noiseTimeIntv = -1;
 }
 
-
-
+/**
+ * @brief Handles the 'Draw Centroid' checkbox state change event.
+ *
+ * Updates the drawCentroid flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_draw_centroid_stateChanged(int arg1)
 {
     wm.drawCentroid = ui->draw_centroid->isChecked();
 }
 
 
+/**
+ * @brief Handles the 'Draw Voronoii' checkbox state change event.
+ *
+ * Updates the drawVoronoii flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_draw_voronoii_stateChanged(int arg1)
 {
     wm.drawVoronoii = ui->draw_voronoii->isChecked();
 }
 
 
+/**
+ * @brief Handles the 'Draw Bots Colors' checkbox state change event.
+ *
+ * Updates the drawWithColors flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_draw_bots_colors_stateChanged(int arg1)
 {
     wm.drawWithColors = ui->draw_bots_colors->isChecked();
 }
 
 
+/**
+ * @brief Handles the value change for a dummy/random slider (slider 1).
+ *
+ * Updates a second dummy variable in the world model. Used for testing or prototyping.
+ * @param value New slider value.
+ */
 void MainWindow::on_sliderRandom1_valueChanged(int value)
 {
     qDebug() << "Dummy Var 1 changed: " << value;
@@ -2173,12 +2636,24 @@ void MainWindow::on_sliderRandom1_valueChanged(int value)
 }
 
 
+/**
+ * @brief Handles the 'Draw Spatial Network' checkbox state change event.
+ *
+ * Updates the spatialNetwork flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_draw_spatial_netw_stateChanged(int arg1)
 {
     wm.spatialNetwork = ui->draw_spatial_netw->isChecked();
 }
 
 
+/**
+ * @brief Handles the 'Draw Ball' checkbox state change event.
+ *
+ * Updates the drawBall flag in the world model according to the UI checkbox.
+ * @param arg1 State value (unused).
+ */
 void MainWindow::on_drawBall_stateChanged(int arg1)
 {
     wm.drawBall = ui->drawBall->isChecked();

@@ -21,6 +21,13 @@ namespace Ui {
 class ArenaWindow;
 }
 
+/**
+ * @class arenaWindow
+ * @brief The arenaWindow class provides the main window for the arena GUI.
+ *
+ * This class handles the user interface and logic for interacting with the arena environment.
+ */
+
 class ArenaWindow : public QMainWindow
 {
     Q_OBJECT
@@ -28,6 +35,9 @@ class ArenaWindow : public QMainWindow
 public:
 //    explicit ArenaWindow( WorldModel *wm = nullptr);
     explicit ArenaWindow(QWidget *parent = nullptr, WorldModel* wm = nullptr, QString title = "Arena Window");
+    /**
+     * @brief Destructor for arenaWindow.
+     */
     ~ArenaWindow();
 
 
