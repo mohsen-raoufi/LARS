@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_position_buffer" kind="class" language="C++" prot="public">
+    <compoundname>PositionBuffer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_position_buffer_1ad32ed290bf2b5692b0a368c98139447c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PositionBuffer::buffer_size</definition>
+        <argsstring></argsstring>
+        <name>buffer_size</name>
+        <qualifiedname>PositionBuffer::buffer_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="113" column="9" bodyfile="Kilobot/kilobot.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_position_buffer_1ad000e40903cdd9be75b26baf840ceff2" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; PositionBuffer::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>PositionBuffer::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="114" column="14" bodyfile="Kilobot/kilobot.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_position_buffer_1af72990572c9e500da013f9946e0c4a52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PositionBuffer::PositionBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>PositionBuffer</name>
+        <qualifiedname>PositionBuffer::PositionBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="105" column="5" bodyfile="Kilobot/kilobot.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_position_buffer_1a0ee0ea039065bfa10bca1a6506ca1962" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PositionBuffer::~PositionBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~PositionBuffer</name>
+        <qualifiedname>PositionBuffer::~PositionBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="106" column="5" bodyfile="Kilobot/kilobot.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_position_buffer_1ad7249c772e16b0e770fc66ddf9e79525" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PositionBuffer::PositionBuffer</definition>
+        <argsstring>(int size)</argsstring>
+        <name>PositionBuffer</name>
+        <qualifiedname>PositionBuffer::PositionBuffer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="107" column="5" bodyfile="Kilobot/kilobot.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_position_buffer_1a4d1d3f0c73833b52d75568f93e9584c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PositionBuffer::addPosition</definition>
+        <argsstring>(QPointF newPosition)</argsstring>
+        <name>addPosition</name>
+        <qualifiedname>PositionBuffer::addPosition</qualifiedname>
+        <param>
+          <type>QPointF</type>
+          <declname>newPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="108" column="10" bodyfile="Kilobot/kilobot.cpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_position_buffer_1acfc211fb3425ba28e973cc43f3fd6743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPointF</type>
+        <definition>QPointF PositionBuffer::getOrientationFromPositions</definition>
+        <argsstring>()</argsstring>
+        <name>getOrientationFromPositions</name>
+        <qualifiedname>PositionBuffer::getOrientationFromPositions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="109" column="13" bodyfile="Kilobot/kilobot.cpp" bodystart="105" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_position_buffer_1a573a8204b4a0129cd1d9ada969d991c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>QPointF</type>
+        <definition>QPointF PositionBuffer::getLastPosition</definition>
+        <argsstring>()</argsstring>
+        <name>getLastPosition</name>
+        <qualifiedname>PositionBuffer::getLastPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="110" column="13" bodyfile="Kilobot/kilobot.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kilobot/kilobot.h" line="103" column="1" bodyfile="Kilobot/kilobot.h" bodystart="103" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_position_buffer_1a4d1d3f0c73833b52d75568f93e9584c8" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>addPosition</name></member>
+      <member refid="class_position_buffer_1ad000e40903cdd9be75b26baf840ceff2" prot="private" virt="non-virtual"><scope>PositionBuffer</scope><name>buffer</name></member>
+      <member refid="class_position_buffer_1ad32ed290bf2b5692b0a368c98139447c" prot="private" virt="non-virtual"><scope>PositionBuffer</scope><name>buffer_size</name></member>
+      <member refid="class_position_buffer_1a573a8204b4a0129cd1d9ada969d991c4" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>getLastPosition</name></member>
+      <member refid="class_position_buffer_1acfc211fb3425ba28e973cc43f3fd6743" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>getOrientationFromPositions</name></member>
+      <member refid="class_position_buffer_1af72990572c9e500da013f9946e0c4a52" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>PositionBuffer</name></member>
+      <member refid="class_position_buffer_1ad7249c772e16b0e770fc66ddf9e79525" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>PositionBuffer</name></member>
+      <member refid="class_position_buffer_1a0ee0ea039065bfa10bca1a6506ca1962" prot="public" virt="non-virtual"><scope>PositionBuffer</scope><name>~PositionBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

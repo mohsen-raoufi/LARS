@@ -1,0 +1,659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_grid" kind="class" language="C++" prot="public">
+    <compoundname>QCPGrid</compoundname>
+    <basecompoundref refid="class_q_c_p_layerable" prot="public" virt="non-virtual">QCPLayerable</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_grid_1a4e4a0400d6319bb44c06341f6298c87b" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPGrid::mSubGridVisible</definition>
+        <argsstring></argsstring>
+        <name>mSubGridVisible</name>
+        <qualifiedname>QCPGrid::mSubGridVisible</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2066" column="8" bodyfile="qcustomplot.h" bodystart="2066" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1a71b7051f833f0c5de3094998d6afdd87" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPGrid::mAntialiasedSubGrid</definition>
+        <argsstring></argsstring>
+        <name>mAntialiasedSubGrid</name>
+        <qualifiedname>QCPGrid::mAntialiasedSubGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2067" column="8" bodyfile="qcustomplot.h" bodystart="2067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1a8c0df56ae86440408c050895dcdb922b" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPGrid::mAntialiasedZeroLine</definition>
+        <argsstring></argsstring>
+        <name>mAntialiasedZeroLine</name>
+        <qualifiedname>QCPGrid::mAntialiasedZeroLine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2067" column="28" bodyfile="qcustomplot.h" bodystart="2067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1a1cdc4a3bccf6a40c2d4360def9fefa40" prot="protected" static="no" mutable="no">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::mPen</definition>
+        <argsstring></argsstring>
+        <name>mPen</name>
+        <qualifiedname>QCPGrid::mPen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2068" column="8" bodyfile="qcustomplot.h" bodystart="2068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1aa9004bc139ad3ea92629f0aaae81d83f" prot="protected" static="no" mutable="no">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::mSubGridPen</definition>
+        <argsstring></argsstring>
+        <name>mSubGridPen</name>
+        <qualifiedname>QCPGrid::mSubGridPen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2068" column="13" bodyfile="qcustomplot.h" bodystart="2068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1a379481871f17655c27eda30af233554f" prot="protected" static="no" mutable="no">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::mZeroLinePen</definition>
+        <argsstring></argsstring>
+        <name>mZeroLinePen</name>
+        <qualifiedname>QCPGrid::mZeroLinePen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2068" column="25" bodyfile="qcustomplot.h" bodystart="2068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_grid_1a9a8a76731e6e737b65b929fd1995cc88" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+        <definition>QCPAxis* QCPGrid::mParentAxis</definition>
+        <argsstring></argsstring>
+        <name>mParentAxis</name>
+        <qualifiedname>QCPGrid::mParentAxis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2071" column="11" bodyfile="qcustomplot.h" bodystart="2071" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_grid_1af123edeca169ec7a31958a1d714e1a8a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPAxis</definition>
+        <argsstring></argsstring>
+        <name>QCPAxis</name>
+        <qualifiedname>QCPGrid::QCPAxis</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2081" column="16" bodyfile="qcustomplot.h" bodystart="2081" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_grid_1acd1cdd2909625388a13048b698494a17" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPGrid::QCPGrid</definition>
+        <argsstring>(QCPAxis *parentAxis)</argsstring>
+        <name>QCPGrid</name>
+        <qualifiedname>QCPGrid::QCPGrid</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>parentAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <ref refid="class_q_c_p_grid" kindref="compound">QCPGrid</ref> instance and sets default values.</para>
+<para>You shouldn&apos;t instantiate grids on their own, since every <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> brings its own <ref refid="class_q_c_p_grid" kindref="compound">QCPGrid</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2046" column="12" bodyfile="qcustomplot.cpp" bodystart="7855" bodyend="7871"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1afface6d8cb6df3cbdc0b5c7c2658f96a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPGrid::subGridVisible</definition>
+        <argsstring>() const</argsstring>
+        <name>subGridVisible</name>
+        <qualifiedname>QCPGrid::subGridVisible</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2049" column="8" bodyfile="qcustomplot.h" bodystart="2049" bodyend="2049"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1af16a269b15b2a8d904be087d060536bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPGrid::antialiasedSubGrid</definition>
+        <argsstring>() const</argsstring>
+        <name>antialiasedSubGrid</name>
+        <qualifiedname>QCPGrid::antialiasedSubGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2050" column="8" bodyfile="qcustomplot.h" bodystart="2050" bodyend="2050"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a578d0bd4d2e5000a2ca69b9a034d59aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPGrid::antialiasedZeroLine</definition>
+        <argsstring>() const</argsstring>
+        <name>antialiasedZeroLine</name>
+        <qualifiedname>QCPGrid::antialiasedZeroLine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2051" column="8" bodyfile="qcustomplot.h" bodystart="2051" bodyend="2051"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a1d68418766b3408c0b7b29ef40b04c2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::pen</definition>
+        <argsstring>() const</argsstring>
+        <name>pen</name>
+        <qualifiedname>QCPGrid::pen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2052" column="8" bodyfile="qcustomplot.h" bodystart="2052" bodyend="2052"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1ae231e5b87e68689a666f90531a15552f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::subGridPen</definition>
+        <argsstring>() const</argsstring>
+        <name>subGridPen</name>
+        <qualifiedname>QCPGrid::subGridPen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2053" column="8" bodyfile="qcustomplot.h" bodystart="2053" bodyend="2053"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a85f248487110c4043be696aef5f2f6e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QPen</type>
+        <definition>QPen QCPGrid::zeroLinePen</definition>
+        <argsstring>() const</argsstring>
+        <name>zeroLinePen</name>
+        <qualifiedname>QCPGrid::zeroLinePen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2054" column="8" bodyfile="qcustomplot.h" bodystart="2054" bodyend="2054"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1ad4ad6bf714ec45e08845456355a1b700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setSubGridVisible</definition>
+        <argsstring>(bool visible)</argsstring>
+        <name>setSubGridVisible</name>
+        <qualifiedname>QCPGrid::setSubGridVisible</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>visible</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether grid lines at sub tick marks are drawn.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_grid_1a9edd3593f384d1f0b0202a39cef4453d" kindref="member">setSubGridPen</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2057" column="8" bodyfile="qcustomplot.cpp" bodystart="7878" bodyend="7881"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a5692310ba183721a413d60951407d114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setAntialiasedSubGrid</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setAntialiasedSubGrid</name>
+        <qualifiedname>QCPGrid::setAntialiasedSubGrid</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether sub grid lines are drawn antialiased. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2058" column="8" bodyfile="qcustomplot.cpp" bodystart="7886" bodyend="7889"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a3cc6d54647393ee71afb6da56af07aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setAntialiasedZeroLine</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setAntialiasedZeroLine</name>
+        <qualifiedname>QCPGrid::setAntialiasedZeroLine</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether zero lines are drawn antialiased. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2059" column="8" bodyfile="qcustomplot.cpp" bodystart="7894" bodyend="7897"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1aa05ab9816ffb440908171e45e833b593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setPen</definition>
+        <argsstring>(const QPen &amp;pen)</argsstring>
+        <name>setPen</name>
+        <qualifiedname>QCPGrid::setPen</qualifiedname>
+        <param>
+          <type>const QPen &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the pen with which (major) grid lines are drawn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2060" column="8" bodyfile="qcustomplot.cpp" bodystart="7902" bodyend="7905"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a9edd3593f384d1f0b0202a39cef4453d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setSubGridPen</definition>
+        <argsstring>(const QPen &amp;pen)</argsstring>
+        <name>setSubGridPen</name>
+        <qualifiedname>QCPGrid::setSubGridPen</qualifiedname>
+        <param>
+          <type>const QPen &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the pen with which sub grid lines are drawn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2061" column="8" bodyfile="qcustomplot.cpp" bodystart="7910" bodyend="7913"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a209f40fdb252397b418b82d3494d8ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::setZeroLinePen</definition>
+        <argsstring>(const QPen &amp;pen)</argsstring>
+        <name>setZeroLinePen</name>
+        <qualifiedname>QCPGrid::setZeroLinePen</qualifiedname>
+        <param>
+          <type>const QPen &amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the pen with which zero lines are drawn.</para>
+<para>Zero lines are lines at value coordinate 0 which may be drawn with a different pen than other grid lines. To disable zero lines and just draw normal grid lines at zero, set <emphasis>pen</emphasis> to Qt::NoPen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2062" column="8" bodyfile="qcustomplot.cpp" bodystart="7921" bodyend="7924"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_grid_1a64fa48e16b4629f5df2a5029ab6e761c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGrid::applyDefaultAntialiasingHint</definition>
+        <argsstring>(QCPPainter *painter) const Q_DECL_OVERRIDE</argsstring>
+        <name>applyDefaultAntialiasingHint</name>
+        <qualifiedname>QCPGrid::applyDefaultAntialiasingHint</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1a1168944abbf9fa6731b0f4a2d0d67e8b">applyDefaultAntialiasingHint</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2074" column="16" bodyfile="qcustomplot.cpp" bodystart="7939" bodyend="7942"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1aad9a312d998e2d170956334d4cb80be2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGrid::draw</definition>
+        <argsstring>(QCPPainter *painter) Q_DECL_OVERRIDE</argsstring>
+        <name>draw</name>
+        <qualifiedname>QCPGrid::draw</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1adf62b4bac3ca934db80290792fc897e1">draw</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2075" column="16" bodyfile="qcustomplot.cpp" bodystart="7949" bodyend="7956"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1aee4e95d54acabbe298d6dda0dd86c0a4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::drawGridLines</definition>
+        <argsstring>(QCPPainter *painter) const</argsstring>
+        <name>drawGridLines</name>
+        <qualifiedname>QCPGrid::drawGridLines</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2078" column="8" bodyfile="qcustomplot.cpp" bodystart="7964" bodyend="8029"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_grid_1a751ce8aef815bcc9193432a30c8b6b6e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGrid::drawSubGridLines</definition>
+        <argsstring>(QCPPainter *painter) const</argsstring>
+        <name>drawSubGridLines</name>
+        <qualifiedname>QCPGrid::drawSubGridLines</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2079" column="8" bodyfile="qcustomplot.cpp" bodystart="8037" bodyend="8059"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Responsible for drawing the grid of a <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is tightly bound to <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref>. Every axis owns a grid instance and uses it to draw the grid lines, sub grid lines and zero-line. You can interact with the grid of an axis via <ref refid="class_q_c_p_axis_1a63f1dd2df663680d2a8d06c19592dd63" kindref="member">QCPAxis::grid</ref>. Normally, you don&apos;t need to create an instance of <ref refid="class_q_c_p_grid" kindref="compound">QCPGrid</ref> yourself.</para>
+<para>The axis and grid drawing was split into two classes to allow them to be placed on different layers (both <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> and <ref refid="class_q_c_p_grid" kindref="compound">QCPGrid</ref> inherit from <ref refid="class_q_c_p_layerable" kindref="compound">QCPLayerable</ref>). Thus it is possible to have the grid in the background and the axes in the foreground, and any plottables/items in between. This described situation is the default setup, see the <ref refid="class_q_c_p_layer" kindref="compound">QCPLayer</ref> documentation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="11">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="17">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="5">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="2034" column="1" bodyfile="qcustomplot.h" bodystart="2035" bodyend="2082"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_layerable_1a71cbd212fde2703cee076e204a475709" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>antialiased</name></member>
+      <member refid="class_q_c_p_grid_1af16a269b15b2a8d904be087d060536bc" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>antialiasedSubGrid</name></member>
+      <member refid="class_q_c_p_grid_1a578d0bd4d2e5000a2ca69b9a034d59aa" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>antialiasedZeroLine</name></member>
+      <member refid="class_q_c_p_layerable_1acb663e375d2d36dc5c55021ee5a2119b" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>applyAntialiasingHint</name></member>
+      <member refid="class_q_c_p_grid_1a64fa48e16b4629f5df2a5029ab6e761c" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>applyDefaultAntialiasingHint</name></member>
+      <member refid="class_q_c_p_layerable_1acbcfc9ecc75433747b1978a77b1864b3" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>clipRect</name></member>
+      <member refid="class_q_c_p_layerable_1ae546370644a5551c76af739afc008bee" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>deselectEvent</name></member>
+      <member refid="class_q_c_p_grid_1aad9a312d998e2d170956334d4cb80be2" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>draw</name></member>
+      <member refid="class_q_c_p_grid_1aee4e95d54acabbe298d6dda0dd86c0a4" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>drawGridLines</name></member>
+      <member refid="class_q_c_p_grid_1a751ce8aef815bcc9193432a30c8b6b6e" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>drawSubGridLines</name></member>
+      <member refid="class_q_c_p_layerable_1a8cbe5a0c9a5674249982f5ca5f8e02bc" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>initializeParentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1a9d4e121a7f1d2314f906fe698209cac9" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>layer</name></member>
+      <member refid="class_q_c_p_layerable_1abbf8657cedea73ac1c3499b521c90eba" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>layerChanged</name></member>
+      <member refid="class_q_c_p_layerable_1a3ab45a4c76a3333ce42eb217a81733ec" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mAntialiased</name></member>
+      <member refid="class_q_c_p_grid_1a71b7051f833f0c5de3094998d6afdd87" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mAntialiasedSubGrid</name></member>
+      <member refid="class_q_c_p_grid_1a8c0df56ae86440408c050895dcdb922b" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mAntialiasedZeroLine</name></member>
+      <member refid="class_q_c_p_layerable_1aa38ec5891aff0f50b36fd63e9372a0cd" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mLayer</name></member>
+      <member refid="class_q_c_p_layerable_1a4171e2e823aca242dd0279f00ed2de81" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a9eee1ba47fd69be111059ca3881933e4" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af6567604818db90f4fd52822f8bc8376" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>mousePressEvent</name></member>
+      <member refid="class_q_c_p_layerable_1aa0d79b005686f668622bbe66ac03ba2c" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af94484cfb7cbbddb7de522e9be71d9a4" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>moveToLayer</name></member>
+      <member refid="class_q_c_p_grid_1a9a8a76731e6e737b65b929fd1995cc88" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mParentAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a3291445a980053e2d17a21d15957624e" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mParentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1aa2a528433e44db02b8aef23c1f9f90ed" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_grid_1a1cdc4a3bccf6a40c2d4360def9fefa40" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mPen</name></member>
+      <member refid="class_q_c_p_grid_1aa9004bc139ad3ea92629f0aaae81d83f" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mSubGridPen</name></member>
+      <member refid="class_q_c_p_grid_1a4e4a0400d6319bb44c06341f6298c87b" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mSubGridVisible</name></member>
+      <member refid="class_q_c_p_layerable_1a62e3aed8427d6ce3ccf716f285106cb3" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mVisible</name></member>
+      <member refid="class_q_c_p_grid_1a379481871f17655c27eda30af233554f" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>mZeroLinePen</name></member>
+      <member refid="class_q_c_p_layerable_1aa78b7e644d2c519e1a9a6f2ac5fcd858" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>parentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1a36ed5b292b90934b524a4e5866a3526c" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>parentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab20b7dbd8e0249ed61adb9622c427382" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>parentPlotInitialized</name></member>
+      <member refid="class_q_c_p_grid_1a1d68418766b3408c0b7b29ef40b04c2a" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>pen</name></member>
+      <member refid="class_q_c_p_grid_1af123edeca169ec7a31958a1d714e1a8a" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>QCPAxis</name></member>
+      <member refid="class_q_c_p_grid_1acd1cdd2909625388a13048b698494a17" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>QCPGrid</name></member>
+      <member refid="class_q_c_p_layerable_1a4f87f420cb2597e2b393aab934d2f099" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>QCPLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1ab054e88f15d485defcb95e7376f119e7" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>realVisibility</name></member>
+      <member refid="class_q_c_p_layerable_1a7498c2d0d081cf7cad0fb3bb93aa0e91" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>selectEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a908c9edda761886f33893be326dab77d" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>selectionCategory</name></member>
+      <member refid="class_q_c_p_layerable_1a272989087fc8c4357b4ba614f9922336" prot="public" virt="virtual"><scope>QCPGrid</scope><name>selectTest</name></member>
+      <member refid="class_q_c_p_layerable_1a4fd43e89be4a553ead41652565ff0581" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setAntialiased</name></member>
+      <member refid="class_q_c_p_grid_1a5692310ba183721a413d60951407d114" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setAntialiasedSubGrid</name></member>
+      <member refid="class_q_c_p_grid_1a3cc6d54647393ee71afb6da56af07aa4" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setAntialiasedZeroLine</name></member>
+      <member refid="class_q_c_p_layerable_1ab0d0da6d2de45a118886d2c8e16d5a54" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1ab25a0e7b897993b44447caee0f142083" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1aa23c893671f1f6744ac235cf2204cf3a" prot="protected" virt="non-virtual"><scope>QCPGrid</scope><name>setParentLayerable</name></member>
+      <member refid="class_q_c_p_grid_1aa05ab9816ffb440908171e45e833b593" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setPen</name></member>
+      <member refid="class_q_c_p_grid_1a9edd3593f384d1f0b0202a39cef4453d" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setSubGridPen</name></member>
+      <member refid="class_q_c_p_grid_1ad4ad6bf714ec45e08845456355a1b700" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setSubGridVisible</name></member>
+      <member refid="class_q_c_p_layerable_1a3bed99ddc396b48ce3ebfdc0418744f8" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setVisible</name></member>
+      <member refid="class_q_c_p_grid_1a209f40fdb252397b418b82d3494d8ea0" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>setZeroLinePen</name></member>
+      <member refid="class_q_c_p_grid_1ae231e5b87e68689a666f90531a15552f" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>subGridPen</name></member>
+      <member refid="class_q_c_p_grid_1afface6d8cb6df3cbdc0b5c7c2658f96a" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>subGridVisible</name></member>
+      <member refid="class_q_c_p_layerable_1af0297b944b6192b6d67d00bff41b6b70" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>visible</name></member>
+      <member refid="class_q_c_p_layerable_1a47dfd7b8fd99c08ca54e09c362b6f022" prot="protected" virt="virtual"><scope>QCPGrid</scope><name>wheelEvent</name></member>
+      <member refid="class_q_c_p_grid_1a85f248487110c4043be696aef5f2f6e1" prot="public" virt="non-virtual"><scope>QCPGrid</scope><name>zeroLinePen</name></member>
+      <member refid="class_q_c_p_layerable_1a4231cf5b3601d6d3a5781283e7a9735b" prot="public" virt="virtual"><scope>QCPGrid</scope><name>~QCPLayerable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

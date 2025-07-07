@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_cf959125a685f70fa1841eef4947a290" kind="dir">
+    <compoundname>ui/geom</compoundname>
+    <innerfile refid="angle__deg_8cpp">angle_deg.cpp</innerfile>
+    <innerfile refid="angle__deg_8h">angle_deg.h</innerfile>
+    <innerfile refid="circle__2d_8cpp">circle_2d.cpp</innerfile>
+    <innerfile refid="circle__2d_8h">circle_2d.h</innerfile>
+    <innerfile refid="composite__region__2d_8cpp">composite_region_2d.cpp</innerfile>
+    <innerfile refid="composite__region__2d_8h">composite_region_2d.h</innerfile>
+    <innerfile refid="convex__hull_8cpp">convex_hull.cpp</innerfile>
+    <innerfile refid="convex__hull_8h">convex_hull.h</innerfile>
+    <innerfile refid="delaunay__triangulation_8cpp">delaunay_triangulation.cpp</innerfile>
+    <innerfile refid="delaunay__triangulation_8h">delaunay_triangulation.h</innerfile>
+    <innerfile refid="geom_8h">geom.h</innerfile>
+    <innerfile refid="line__2d_8cpp">line_2d.cpp</innerfile>
+    <innerfile refid="line__2d_8h">line_2d.h</innerfile>
+    <innerfile refid="matrix__2d_8cpp">matrix_2d.cpp</innerfile>
+    <innerfile refid="matrix__2d_8h">matrix_2d.h</innerfile>
+    <innerfile refid="polygon__2d_8cpp">polygon_2d.cpp</innerfile>
+    <innerfile refid="polygon__2d_8h">polygon_2d.h</innerfile>
+    <innerfile refid="ray__2d_8cpp">ray_2d.cpp</innerfile>
+    <innerfile refid="ray__2d_8h">ray_2d.h</innerfile>
+    <innerfile refid="rect__2d_8cpp">rect_2d.cpp</innerfile>
+    <innerfile refid="rect__2d_8h">rect_2d.h</innerfile>
+    <innerfile refid="region__2d_8h">region_2d.h</innerfile>
+    <innerfile refid="sector__2d_8cpp">sector_2d.cpp</innerfile>
+    <innerfile refid="sector__2d_8h">sector_2d.h</innerfile>
+    <innerfile refid="segment__2d_8cpp">segment_2d.cpp</innerfile>
+    <innerfile refid="segment__2d_8h">segment_2d.h</innerfile>
+    <innerfile refid="size__2d_8h">size_2d.h</innerfile>
+    <innerfile refid="triangle__2d_8cpp">triangle_2d.cpp</innerfile>
+    <innerfile refid="triangle__2d_8h">triangle_2d.h</innerfile>
+    <innerfile refid="triangulation_8h">triangulation.h</innerfile>
+    <innerfile refid="geom_2vector__2d_8h">vector_2d.h</innerfile>
+    <innerfile refid="voronoi__diagram_8cpp">voronoi_diagram.cpp</innerfile>
+    <innerfile refid="voronoi__diagram_8h">voronoi_diagram.h</innerfile>
+    <innerfile refid="voronoi_generator_8cpp">voronoiGenerator.cpp</innerfile>
+    <innerfile refid="voronoi_generator_8h">voronoiGenerator.h</innerfile>
+    <innerfile refid="voronoii_8cpp">voronoii.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/"/>
+  </compounddef>
+</doxygen>

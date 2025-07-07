@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structsrc_buffer" kind="struct" language="C++" prot="public">
+    <compoundname>srcBuffer</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsrc_buffer_1a7cf4fa49bf620656d6bf5e64994c4d0d" prot="public" static="no" mutable="no">
+        <type>MAT_TYPE</type>
+        <definition>MAT_TYPE srcBuffer::full_warped_image</definition>
+        <argsstring></argsstring>
+        <name>full_warped_image</name>
+        <qualifiedname>srcBuffer::full_warped_image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.h" line="90" column="14" bodyfile="tracker/kilobottracker_copy.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tracker/kilobottracker_copy.h" line="89" column="1" bodyfile="tracker/kilobottracker_copy.h" bodystart="89" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structsrc_buffer_1a7cf4fa49bf620656d6bf5e64994c4d0d" prot="public" virt="non-virtual"><scope>srcBuffer</scope><name>full_warped_image</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

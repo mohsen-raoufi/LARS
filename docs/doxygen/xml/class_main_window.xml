@@ -1,0 +1,3495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_main_window" kind="class" language="C++" prot="public">
+    <compoundname>MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
+    <sectiondef kind="user-defined">
+      <header>Calibration Slots</header>
+      <memberdef kind="slot" id="class_main_window_1a6b010981a13dee602c2f5c8175cdc248" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibrateKilobot</definition>
+        <argsstring>()</argsstring>
+        <name>calibrateKilobot</name>
+        <qualifiedname>MainWindow::calibrateKilobot</qualifiedname>
+        <briefdescription>
+<para>Opens the calibration window for Kilobots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="169" column="10" bodyfile="mainwindow.cpp" bodystart="751" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a69f3cca817ac33852d7d4296e9317eb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibUID</definition>
+        <argsstring>(int)</argsstring>
+        <name>calibUID</name>
+        <qualifiedname>MainWindow::calibUID</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Sends a UID (unique ID) command to the overhead controller for calibration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes a CALIB_UID message with the given UID value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique ID for calibration. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="171" column="10" bodyfile="mainwindow.cpp" bodystart="2188" bodyend="2194"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a89a92e85a57266aabc8337909144edc2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibLeft</definition>
+        <argsstring>(int)</argsstring>
+        <name>calibLeft</name>
+        <qualifiedname>MainWindow::calibLeft</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Sends a left turn calibration value to the overhead controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes a CALIB_TURN_LEFT message with the specified left turn value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left turn calibration value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="172" column="10" bodyfile="mainwindow.cpp" bodystart="2202" bodyend="2208"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad322cba527919362e2aafbcba39924e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibRight</definition>
+        <argsstring>(int)</argsstring>
+        <name>calibRight</name>
+        <qualifiedname>MainWindow::calibRight</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Sends a right turn calibration value to the overhead controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes a CALIB_TURN_RIGHT message with the specified right turn value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right turn calibration value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="173" column="10" bodyfile="mainwindow.cpp" bodystart="2216" bodyend="2222"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab7b44588aa819e8cc3f3865e17849d1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibStraight</definition>
+        <argsstring>(int)</argsstring>
+        <name>calibStraight</name>
+        <qualifiedname>MainWindow::calibStraight</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Sends a straight movement calibration value to the overhead controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes a CALIB_STRAIGHT message with left and right calibration values packed in x. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Straight calibration value (lower and upper bytes). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="174" column="10" bodyfile="mainwindow.cpp" bodystart="2230" bodyend="2237"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af7368f2593691fe0172d22367d5ff38e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibSave</definition>
+        <argsstring>()</argsstring>
+        <name>calibSave</name>
+        <qualifiedname>MainWindow::calibSave</qualifiedname>
+        <briefdescription>
+<para>Sends a save command to the overhead controller for calibration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes a CALIB_SAVE message via the overhead controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="175" column="10" bodyfile="mainwindow.cpp" bodystart="2175" bodyend="2180"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a198ef9fa32b08ed6ecc6406270fadc0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::calibStop</definition>
+        <argsstring>()</argsstring>
+        <name>calibStop</name>
+        <qualifiedname>MainWindow::calibStop</qualifiedname>
+        <briefdescription>
+<para>Stops the calibration routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Currently only contains commented-out code for sending wakeup messages. Intended for future use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="176" column="10" bodyfile="mainwindow.cpp" bodystart="2145" bodyend="2150"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>GUI Slots</header>
+      <memberdef kind="slot" id="class_main_window_1a19ef9c5577a56d1c5073ad0edff9f0c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::update_wmMarkers</definition>
+        <argsstring>()</argsstring>
+        <name>update_wmMarkers</name>
+        <qualifiedname>MainWindow::update_wmMarkers</qualifiedname>
+        <briefdescription>
+<para>Updates the positions of arena markers and the experimental field rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes positions of the 4 arena markers based on the current marker0 position and arena width. Also updates bottom-right marker and experiment field rectangle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="217" column="10" bodyfile="mainwindow.cpp" bodystart="2158" bodyend="2168"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a9b5e269cc3ba56e0308cc01e947e746f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_debug_CheckBox_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_debug_CheckBox_clicked</name>
+        <qualifiedname>MainWindow::on_debug_CheckBox_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &quot;Debug&quot; checkbox click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the DebugAv state according to the debugAV_CheckBox status. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="219" column="10" bodyfile="mainwindow.cpp" bodystart="1246" bodyend="1249"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a68275e661b69ba0e4fc72102561d26da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::SendKeyBoardData</definition>
+        <argsstring>(int key)</argsstring>
+        <name>SendKeyBoardData</name>
+        <qualifiedname>MainWindow::SendKeyBoardData</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Handles keyboard input and triggers corresponding robot and UI actions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported keys and actions:<itemizedlist>
+<listitem><para>W (87), presenter Left (16777238): Move kilobot(s) forward.</para>
+</listitem><listitem><para>A (65): Move kilobot(s) left.</para>
+</listitem><listitem><para>D (68), presenter Right (16777239): Move kilobot(s) right.</para>
+</listitem><listitem><para>S (83), B (66): Stop kilobot(s).</para>
+</listitem><listitem><para>V (86): Increase V slider.</para>
+</listitem><listitem><para>C (67): Decrease V slider.</para>
+</listitem><listitem><para>X (88): Stop sending messages.</para>
+</listitem><listitem><para>Z (90): Put kilobot(s) to sleep.</para>
+</listitem><listitem><para>N (78): Run kilobot(s).</para>
+</listitem><listitem><para>M (77): Reset kilobot(s).</para>
+</listitem><listitem><para>I (73): Press black button (UI).</para>
+</listitem><listitem><para>K (75): Toggle heatmap display (UI).</para>
+</listitem><listitem><para>R (82): Reset heatmap.</para>
+</listitem><listitem><para>L (76): Shuffle image experiment field.</para>
+</listitem><listitem><para>2 (50): Move marker0 down.</para>
+</listitem><listitem><para>8 (56): Move marker0 up.</para>
+</listitem><listitem><para>4 (52): Move marker0 left.</para>
+</listitem><listitem><para>6 (54): Move marker0 right.</para>
+</listitem><listitem><para>3 (51): Cycle experiment field type.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer key code received from the keyboard event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="225" column="10" bodyfile="mainwindow.cpp" bodystart="1277" bodyend="1499"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a165bd917c00fcef5290f888db61ec153" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::keyPressEvent</definition>
+        <argsstring>(QKeyEvent *key) override</argsstring>
+        <name>keyPressEvent</name>
+        <qualifiedname>MainWindow::keyPressEvent</qualifiedname>
+        <param>
+          <type>QKeyEvent *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Override Qt key press handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles application-level keyboard shortcuts such as quitting the app with &apos;Esc&apos;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="227" column="10" bodyfile="mainwindow.cpp" bodystart="1506" bodyend="1510"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a4f3caab9f29fd2973df538ed7d16a10c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_ArenaWindow_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_ArenaWindow_button_clicked</name>
+        <qualifiedname>MainWindow::on_ArenaWindow_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles Arena window open/close button click. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shows or hides the Arena window and updates the button label accordingly. Moves the window to the selected screen when opening. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="231" column="10" bodyfile="mainwindow.cpp" bodystart="1519" bodyend="1530"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a32ba9ff121102e8fd5556bfac8767306" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::updateColors</definition>
+        <argsstring>()</argsstring>
+        <name>updateColors</name>
+        <qualifiedname>MainWindow::updateColors</qualifiedname>
+        <briefdescription>
+<para>Updates colors for field or robots based on current GUI slider values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Depending on the selected object type (background, robot custom, or pen), updates color in the world model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="233" column="10" bodyfile="mainwindow.cpp" bodystart="1537" bodyend="1564"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1ff434c8d793d56bed75e8e4d5af8d41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::updateColors</definition>
+        <argsstring>(QString colorString)</argsstring>
+        <name>updateColors</name>
+        <qualifiedname>MainWindow::updateColors</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>colorString</declname>
+        </param>
+        <briefdescription>
+<para>Updates color sliders and field/robot color from a color string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a given color string (e.g., from a button) to HSV slider values, then updates the world model colors. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>colorString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color string (e.g., &quot;#RRGGBB&quot; or named color) to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="235" column="10" bodyfile="mainwindow.cpp" bodystart="1572" bodyend="1581"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aa343409e243bae79b6801cc6ba45cbf1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::updateSliders</definition>
+        <argsstring>()</argsstring>
+        <name>updateSliders</name>
+        <qualifiedname>MainWindow::updateSliders</qualifiedname>
+        <briefdescription>
+<para>Updates all slider labels with current slider values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Synchronizes displayed numeric values for HSV sliders, kilobot tracker sliders, and LED detection sliders. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="237" column="10" bodyfile="mainwindow.cpp" bodystart="1664" bodyend="1688"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a51e56d51439875625fe1df3644f41e39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_userRed_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_userRed_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_userRed_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Sets sliders to a predefined red color and updates the interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a preset HSV value for red, updates sliders, and triggers color update. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="239" column="10" bodyfile="mainwindow.cpp" bodystart="1588" bodyend="1597"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aa87bc5c87872201bc81854d1f9333b42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_userBlue_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_userBlue_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_userBlue_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Sets sliders to a predefined blue color and updates the interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a preset HSV value for blue, updates sliders, and triggers color update. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="241" column="10" bodyfile="mainwindow.cpp" bodystart="1604" bodyend="1613"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aedace6dcbb3f262dfcac505206a0a57b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_fullScreen_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fullScreen_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_fullScreen_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Toggles the Arena window fullscreen mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Puts the Arena window into fullscreen and brings the main window to front. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="243" column="10" bodyfile="mainwindow.cpp" bodystart="1620" bodyend="1625"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a3bd5d15802c07ec9aca06ce719a747d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_fitRect_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fitRect_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_fitRect_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Fit Rect&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the button to prevent repeated clicks. Intended to fit the scene rectangle in the arena window (currently commented out). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="245" column="10" bodyfile="mainwindow.cpp" bodystart="1633" bodyend="1637"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a83f54653f41e32e7938d97a271d0fd79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_fromImage_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fromImage_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_fromImage_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;From Image&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the button to prevent repeated clicks. Intended for toggling loading/cleaning of a background image in the arena window (logic currently commented out). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="247" column="10" bodyfile="mainwindow.cpp" bodystart="1645" bodyend="1657"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aa75fc0155fefb898f0be91126d58b63f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_saveSetting_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_saveSetting_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_saveSetting_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Save Setting&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Triggers saving of GUI and user settings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="250" column="10" bodyfile="mainwindow.cpp" bodystart="1695" bodyend="1698"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad327fa2f3368d34ef5911a41c1fe4eee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_loadSetting_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_loadSetting_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_loadSetting_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Load Setting&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads GUI and user settings from disk. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="252" column="10" bodyfile="mainwindow.cpp" bodystart="1705" bodyend="1708"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1afc2fda9253321760080c58e06d2fd91e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_startTracking_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_startTracking_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_startTracking_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Start Tracking&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts or stops the tracking loop and updates button/text states accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="254" column="10" bodyfile="mainwindow.cpp" bodystart="1715" bodyend="1723"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a263323ac14686f8b3965f222acbc12dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::update_startTracking_pushBotton</definition>
+        <argsstring>()</argsstring>
+        <name>update_startTracking_pushBotton</name>
+        <qualifiedname>MainWindow::update_startTracking_pushBotton</qualifiedname>
+        <briefdescription>
+<para>Updates the &apos;Start Tracking&apos; button label. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the button text based on its checked state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="256" column="10" bodyfile="mainwindow.cpp" bodystart="1730" bodyend="1733"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a14721646d35b58483e89782192048ee2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_detectKilobots_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_detectKilobots_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_detectKilobots_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Detect Kilobots&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiates kilobot detection, updates the combo box for selection, and manages start tracking button states. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="258" column="10" bodyfile="mainwindow.cpp" bodystart="1740" bodyend="1785"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ae3d36e89ec9886b258254d8b839724f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_crop_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_crop_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_crop_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the crop button click event to define or clear the cropping rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When enabled, calculates crop rectangle coordinates based on UI fields or detected markers, maps cropping region between GUI, fit, and capture coordinates, and updates internal state. When disabled, resets cropping to the full capture region. Always triggers an update in the tracker and resets the heatmap. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="261" column="10" bodyfile="mainwindow.cpp" bodystart="1794" bodyend="1866"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1afdb25de2ca5c18e34588141c07d3ebd8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_detectMarker_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_detectMarker_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_detectMarker_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Detect Marker&apos; button click event to find ArUco markers in the current video frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes the current frame using OpenCV&apos;s ArUco detection tools. If markers are found, their positions and bounding rectangles are extracted and stored in internal lists, and details are printed for debugging. Calls findMarkerRect() to update arena mapping based on detected marker locations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="263" column="10" bodyfile="mainwindow.cpp" bodystart="1874" bodyend="1946"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a5316c928a905dbb95ba628e028abd4e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_markerWidth_Slider_sliderMoved</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_markerWidth_Slider_sliderMoved</name>
+        <qualifiedname>MainWindow::on_markerWidth_Slider_sliderMoved</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Handles the marker width slider movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the world model marker length parameter according to the slider position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value for marker width. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="265" column="10" bodyfile="mainwindow.cpp" bodystart="1954" bodyend="1957"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1acc319ca2e9651105d32abbc93084a2bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_debug_tracker_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_debug_tracker_stateChanged</name>
+        <qualifiedname>MainWindow::on_debug_tracker_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles state change for the tracker debug checkbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables debug drawing in the tracker. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State change value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="267" column="10" bodyfile="mainwindow.cpp" bodystart="2014" bodyend="2017"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1fd59e91406cd58def2249171dd6a3df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_maxDispl_slider_sliderMoved</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_maxDispl_slider_sliderMoved</name>
+        <qualifiedname>MainWindow::on_maxDispl_slider_sliderMoved</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Handles the max displacement slider movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the tracker maximum allowed displacement parameter for object tracking. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="269" column="10" bodyfile="mainwindow.cpp" bodystart="2025" bodyend="2032"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a313938f546c13de30b0dfcd48d9f8055" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_EFWL_slider_sliderMoved</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_EFWL_slider_sliderMoved</name>
+        <qualifiedname>MainWindow::on_EFWL_slider_sliderMoved</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Handles the EFWL slider movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the EFWL (e.g., Exponential Forgetting Window Length) parameter in the tracker. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="271" column="10" bodyfile="mainwindow.cpp" bodystart="2040" bodyend="2043"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ae2e89c4fa4d958b80bfb4a721f8cb1b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_robRendRad_slider_sliderMoved</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_robRendRad_slider_sliderMoved</name>
+        <qualifiedname>MainWindow::on_robRendRad_slider_sliderMoved</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Handles the robot rendering radius slider movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the robot rendering radius in the world model for visualization. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value for robot radius. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="275" column="10" bodyfile="mainwindow.cpp" bodystart="2061" bodyend="2064"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a318c1108ba882b5da8a3516eb4d6d9e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_smoothnessFact_slider_sliderMoved</definition>
+        <argsstring>(int position)</argsstring>
+        <name>on_smoothnessFact_slider_sliderMoved</name>
+        <qualifiedname>MainWindow::on_smoothnessFact_slider_sliderMoved</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Handles the smoothness factor slider movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the tracker smoothing parameter for object trajectories. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="277" column="10" bodyfile="mainwindow.cpp" bodystart="2072" bodyend="2075"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ac13a5a8830ea6f85e1c3284d3182f1c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_imageExpField_pushButton_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_imageExpField_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_imageExpField_pushButton_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles toggling of the image-based experiment field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a background image for the experiment field if enabled. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if button is checked (enabled). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="279" column="10" bodyfile="mainwindow.cpp" bodystart="2083" bodyend="2089"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a5e1a8ff31982ac988833a983818735db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_initPoints_pushButton_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_initPoints_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_initPoints_pushButton_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles initialization of points to draw (e.g., grid, star). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates and sets up points for drawing, according to the selected mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if button is checked (enabled). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="281" column="10" bodyfile="mainwindow.cpp" bodystart="2097" bodyend="2127"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a6edcd142b67f88bc9f5fd71b71974ac7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_resetTrace_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_resetTrace_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_resetTrace_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the reset trace button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the robot traces stored in the world model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="283" column="10" bodyfile="mainwindow.cpp" bodystart="2134" bodyend="2137"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1adae0c07039c517471290d1b71b4a4200" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawTrace_CheckBox_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_drawTrace_CheckBox_stateChanged</name>
+        <qualifiedname>MainWindow::on_drawTrace_CheckBox_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the state change event for the &apos;Draw Trace&apos; checkbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawTrace flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="288" column="10" bodyfile="mainwindow.cpp" bodystart="2245" bodyend="2248"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab5aafc52781339a49aad19e81f60f871" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_shuffleImageExpField_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_shuffleImageExpField_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_shuffleImageExpField_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Randomizes and loads a background image for the experimental field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects a random arena image from a set of predefined files and loads it into the world model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="290" column="10" bodyfile="mainwindow.cpp" bodystart="2255" bodyend="2265"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a547dd9ce43b41608324063f394159832" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawBoundary_CheckBox_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_drawBoundary_CheckBox_stateChanged</name>
+        <qualifiedname>MainWindow::on_drawBoundary_CheckBox_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the state change event for the &apos;Draw Boundary&apos; checkbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawBoundary flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="292" column="10" bodyfile="mainwindow.cpp" bodystart="2273" bodyend="2276"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a0b9264ea397fd429cc9a7ad98cf74d62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawHeatMap_CheckBox_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_drawHeatMap_CheckBox_clicked</name>
+        <qualifiedname>MainWindow::on_drawHeatMap_CheckBox_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Draw Heatmap&apos; checkbox click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawHeatMap flag in the world model according to the UI checkbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="294" column="10" bodyfile="mainwindow.cpp" bodystart="2283" bodyend="2286"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1afb6da338b8e989cca4073aa3c1448ca4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawColCircles_CheckBox_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_drawColCircles_CheckBox_clicked</name>
+        <qualifiedname>MainWindow::on_drawColCircles_CheckBox_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Colored Circles&apos; checkbox click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawColCircles flag in the world model. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the checkbox is checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="296" column="10" bodyfile="mainwindow.cpp" bodystart="2294" bodyend="2297"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a42b315e7eca83876d388fddd26c09bca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_seaBlue_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_seaBlue_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_seaBlue_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Sea Blue&apos; color preset button click. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the HSV sliders to a predefined &apos;sea blue&apos; value and updates colors in the interface. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="302" column="10" bodyfile="mainwindow.cpp" bodystart="2304" bodyend="2313"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af748c221eeb4b4d389691c21228ec2d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawRobCircles_CheckBox_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_drawRobCircles_CheckBox_clicked</name>
+        <qualifiedname>MainWindow::on_drawRobCircles_CheckBox_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw <ref refid="class_robot" kindref="compound">Robot</ref> Circles&apos; checkbox click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Toggles drawing of robot circles in the visualization. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the checkbox is checked (enabled). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="304" column="10" bodyfile="mainwindow.cpp" bodystart="2321" bodyend="2324"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a2b0f1c4a480288494decc06e7bbca8b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_ohc_set_prog_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_ohc_set_prog_clicked</name>
+        <qualifiedname>MainWindow::on_ohc_set_prog_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &apos;Set Program&apos; button click for the overhead controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Logs an action for loading a .hex file to program the Kilobots. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="306" column="10" bodyfile="mainwindow.cpp" bodystart="2332" bodyend="2335"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aaed7ba54e48b288ea107435aba7beb00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_writeLog_button_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_writeLog_button_clicked</name>
+        <qualifiedname>MainWindow::on_writeLog_button_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Write Log&apos; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts or stops logging experiment data to a file based on the checked state. Sets up file streams and connects/disconnects relevant signals for different logging modes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if logging is enabled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="308" column="10" bodyfile="mainwindow.cpp" bodystart="2345" bodyend="2403"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a3b0726465a09b6c4737a23417aea1985" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_env2_rButton_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_env2_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_env2_rButton_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &quot;Environment 2&quot; radio button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets predefined marker positions and cropping rectangle for environment 2. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the radio button is checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="310" column="10" bodyfile="mainwindow.cpp" bodystart="2434" bodyend="2446"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a9503b8f32224abaa06e2f7409dbd06e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_env1_rButton_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_env1_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_env1_rButton_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &quot;Environment 1&quot; radio button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets predefined marker positions and cropping rectangle for environment 1. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the radio button is checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="312" column="10" bodyfile="mainwindow.cpp" bodystart="2411" bodyend="2426"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1d46efc779962370417a6327acd4b105" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_openImageField_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_openImageField_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_openImageField_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Opens a file dialog to select an arena image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the selected arena image and updates the corresponding UI field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="314" column="10" bodyfile="mainwindow.cpp" bodystart="2497" bodyend="2502"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a4f0c96588c6ee8dd3e68e31b762d5d0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_env3_rButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_env3_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_env3_rButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &quot;Environment 3&quot; radio button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets predefined marker positions and cropping rectangle for environment 3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="316" column="10" bodyfile="mainwindow.cpp" bodystart="2453" bodyend="2464"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a389ec3640825d8cea79fca29c96c4ace" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_env4_rButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_env4_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_env4_rButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &quot;Environment 4&quot; radio button click event (Thymio arena). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets marker positions and cropping rectangle for the largest Thymio arena. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="318" column="10" bodyfile="mainwindow.cpp" bodystart="2471" bodyend="2490"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af7151f366e41e06f7cc5a8d2276308c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_gradientExpField_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_gradientExpField_pushButton_clicked</name>
+        <qualifiedname>MainWindow::on_gradientExpField_pushButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Handles the &quot;Gradient Experiment Field&quot; button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Triggers an update of the gradient painter in the arena window. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="320" column="10" bodyfile="mainwindow.cpp" bodystart="2509" bodyend="2512"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a71f2fda790cd1ef5907b70d531eb6d4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_noiseTiles_slider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_noiseTiles_slider_valueChanged</name>
+        <qualifiedname>MainWindow::on_noiseTiles_slider_valueChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles the noise tiles slider value change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the number of noise tiles in the world model. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New number of noise tiles. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="322" column="10" bodyfile="mainwindow.cpp" bodystart="2520" bodyend="2523"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a3b18034e79876512a841e6a3811f5f36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_noiseFreq_slider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_noiseFreq_slider_valueChanged</name>
+        <qualifiedname>MainWindow::on_noiseFreq_slider_valueChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles the noise frequency slider value change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the noise time interval in the world model and environment brain. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New noise frequency value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="324" column="10" bodyfile="mainwindow.cpp" bodystart="2531" bodyend="2535"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af986269b7c363d8aaea1013118a58ed4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_noiseStrength_slider_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_noiseStrength_slider_valueChanged</name>
+        <qualifiedname>MainWindow::on_noiseStrength_slider_valueChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles the noise strength slider value change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the noise strength parameter in the world model. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New noise strength value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="326" column="10" bodyfile="mainwindow.cpp" bodystart="2543" bodyend="2546"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aa0511021da5bb0e42f87093c7971f0d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_draw_network_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_draw_network_stateChanged</name>
+        <qualifiedname>MainWindow::on_draw_network_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &quot;Draw Network&quot; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawNetwork flag in the world model. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="328" column="10" bodyfile="mainwindow.cpp" bodystart="2554" bodyend="2557"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af1dc08e6f45b425b1a5a6fed332eb903" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_sliderRandom0_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_sliderRandom0_valueChanged</name>
+        <qualifiedname>MainWindow::on_sliderRandom0_valueChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles the value change for a dummy/random slider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates a dummy variable in the world model. Used for testing or prototyping. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="330" column="10" bodyfile="mainwindow.cpp" bodystart="2565" bodyend="2571"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a8ff9ccfe71251326876e5a607ec56c62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_noise_radioButton_clicked</definition>
+        <argsstring>(bool checked)</argsstring>
+        <name>on_noise_radioButton_clicked</name>
+        <qualifiedname>MainWindow::on_noise_radioButton_clicked</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+<para>Handles the noise radio button click event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Connects or disconnects noise addition in the environment brain. Also updates noise interval. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the radio button is checked (enabled). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="332" column="10" bodyfile="mainwindow.cpp" bodystart="2579" bodyend="2586"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a04a2e0e8237d02545affb2af25ce2457" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_draw_centroid_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_draw_centroid_stateChanged</name>
+        <qualifiedname>MainWindow::on_draw_centroid_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Centroid&apos; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawCentroid flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="334" column="10" bodyfile="mainwindow.cpp" bodystart="2594" bodyend="2597"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a68b04903522034097f44f8828baec87e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_draw_voronoii_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_draw_voronoii_stateChanged</name>
+        <qualifiedname>MainWindow::on_draw_voronoii_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Voronoii&apos; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawVoronoii flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="336" column="10" bodyfile="mainwindow.cpp" bodystart="2606" bodyend="2609"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a0912c4ee60a2527766475db5499d0ae8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_draw_bots_colors_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_draw_bots_colors_stateChanged</name>
+        <qualifiedname>MainWindow::on_draw_bots_colors_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Bots Colors&apos; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawWithColors flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="338" column="10" bodyfile="mainwindow.cpp" bodystart="2618" bodyend="2621"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1acdfd374ddb5821de89ae42c8d43c9f23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_sliderRandom1_valueChanged</definition>
+        <argsstring>(int value)</argsstring>
+        <name>on_sliderRandom1_valueChanged</name>
+        <qualifiedname>MainWindow::on_sliderRandom1_valueChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles the value change for a dummy/random slider (slider 1). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates a second dummy variable in the world model. Used for testing or prototyping. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New slider value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="340" column="10" bodyfile="mainwindow.cpp" bodystart="2630" bodyend="2636"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af890c3822fec2bf35fe9e0a17ba76bb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_draw_spatial_netw_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_draw_spatial_netw_stateChanged</name>
+        <qualifiedname>MainWindow::on_draw_spatial_netw_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Spatial Network&apos; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the spatialNetwork flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="342" column="10" bodyfile="mainwindow.cpp" bodystart="2645" bodyend="2648"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a3f70912671fe509479e14b57adddc969" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_drawBall_stateChanged</definition>
+        <argsstring>(int arg1)</argsstring>
+        <name>on_drawBall_stateChanged</name>
+        <qualifiedname>MainWindow::on_drawBall_stateChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Handles the &apos;Draw Ball&apos; checkbox state change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the drawBall flag in the world model according to the UI checkbox. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State value (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="344" column="10" bodyfile="mainwindow.cpp" bodystart="2657" bodyend="2660"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_main_window_1ad7173645e07f49587a35c57fd95913fc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_world_model" kindref="compound">WorldModel</ref></type>
+        <definition>WorldModel MainWindow::wm</definition>
+        <argsstring></argsstring>
+        <name>wm</name>
+        <qualifiedname>MainWindow::wm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="135" column="16" bodyfile="mainwindow.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" static="no" mutable="no">
+        <type>Ui::MainWindow *</type>
+        <definition>Ui::MainWindow* MainWindow::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <qualifiedname>MainWindow::ui</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="348" column="20" bodyfile="mainwindow.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a4d657480beea8fcd69f97246cc873268" prot="private" static="no" mutable="no">
+        <type><ref refid="classpublic_vars" kindref="compound">publicVars</ref> *</type>
+        <definition>publicVars* MainWindow::publicVar</definition>
+        <argsstring></argsstring>
+        <name>publicVar</name>
+        <qualifiedname>MainWindow::publicVar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="350" column="16" bodyfile="mainwindow.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a2ae08888ffeb284cfd9e5eb27b89d678" prot="private" static="no" mutable="no">
+        <type><ref refid="class_arena_window" kindref="compound">ArenaWindow</ref> *</type>
+        <definition>ArenaWindow* MainWindow::arenaWindow</definition>
+        <argsstring></argsstring>
+        <name>arenaWindow</name>
+        <qualifiedname>MainWindow::arenaWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="352" column="17" bodyfile="mainwindow.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a850af48ba4a5444d3096c14fac2f5990" prot="private" static="no" mutable="no">
+        <type><ref refid="class_arena_window" kindref="compound">ArenaWindow</ref> *</type>
+        <definition>ArenaWindow * MainWindow::arenaWindow2</definition>
+        <argsstring></argsstring>
+        <name>arenaWindow2</name>
+        <qualifiedname>MainWindow::arenaWindow2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="352" column="29" bodyfile="mainwindow.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aa54ef7a71e954fbb2e988f5d5e6580e1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_env_brain" kindref="compound">EnvBrain</ref> *</type>
+        <definition>EnvBrain* MainWindow::envBrain</definition>
+        <argsstring></argsstring>
+        <name>envBrain</name>
+        <qualifiedname>MainWindow::envBrain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="354" column="14" bodyfile="mainwindow.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a794274c763468661cbf31b0a1e431365" prot="private" static="no" mutable="no">
+        <type>QList&lt; QScreen * &gt;</type>
+        <definition>QList&lt;QScreen*&gt; MainWindow::screensList</definition>
+        <argsstring></argsstring>
+        <name>screensList</name>
+        <qualifiedname>MainWindow::screensList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="356" column="11" bodyfile="mainwindow.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a96033da58d429bcdd976fb77583c572d" prot="private" static="no" mutable="no">
+        <type>QColor</type>
+        <definition>QColor MainWindow::bg_color</definition>
+        <argsstring></argsstring>
+        <name>bg_color</name>
+        <qualifiedname>MainWindow::bg_color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="358" column="12" bodyfile="mainwindow.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a067a0186c76000775db3c9668d80e054" prot="private" static="no" mutable="no">
+        <type><ref refid="class_kilobot_tracker" kindref="compound">KilobotTracker</ref></type>
+        <definition>KilobotTracker MainWindow::kbtracker</definition>
+        <argsstring></argsstring>
+        <name>kbtracker</name>
+        <qualifiedname>MainWindow::kbtracker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="360" column="20" bodyfile="mainwindow.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ae1e9feacad9383f6f5b7170fc44570dd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_kilobot_overhead_controller" kindref="compound">KilobotOverheadController</ref></type>
+        <definition>KilobotOverheadController MainWindow::ohc</definition>
+        <argsstring></argsstring>
+        <name>ohc</name>
+        <qualifiedname>MainWindow::ohc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="361" column="31" bodyfile="mainwindow.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a323cc7106081e5bdb776d8f8b168365a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_calib_window" kindref="compound">CalibWindow</ref> *</type>
+        <definition>CalibWindow* MainWindow::calib</definition>
+        <argsstring></argsstring>
+        <name>calib</name>
+        <qualifiedname>MainWindow::calib</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="363" column="17" bodyfile="mainwindow.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a4bcfe5f0fd057640f951a096c291b3e7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_serial_connection" kindref="compound">SerialConnection</ref> *</type>
+        <definition>SerialConnection* MainWindow::serial_conn</definition>
+        <argsstring></argsstring>
+        <name>serial_conn</name>
+        <qualifiedname>MainWindow::serial_conn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="364" column="22" bodyfile="mainwindow.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a9da931eae12d2a1bf3f27c04dbe149a1" prot="private" static="no" mutable="no">
+        <type><ref refid="classsave_vid_thread" kindref="compound">saveVidThread</ref> *</type>
+        <definition>saveVidThread* MainWindow::sRawVidThrd</definition>
+        <argsstring></argsstring>
+        <name>sRawVidThrd</name>
+        <qualifiedname>MainWindow::sRawVidThrd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="366" column="19" bodyfile="mainwindow.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a198d7ec591d107864cb55d5c3bf07972" prot="private" static="no" mutable="no">
+        <type><ref refid="classsave_vid_thread" kindref="compound">saveVidThread</ref> *</type>
+        <definition>saveVidThread * MainWindow::sProcVidThrd</definition>
+        <argsstring></argsstring>
+        <name>sProcVidThrd</name>
+        <qualifiedname>MainWindow::sProcVidThrd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="366" column="31" bodyfile="mainwindow.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a51ac2b126495216832501cea3929c6f6" prot="private" static="no" mutable="no">
+        <type>QGraphicsScene *</type>
+        <definition>QGraphicsScene* MainWindow::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <qualifiedname>MainWindow::scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="368" column="20" bodyfile="mainwindow.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aa97c1eec1cac9b19e0b34b872a12305a" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="structdetected_marker" kindref="compound">detectedMarker</ref> &gt;</type>
+        <definition>QList&lt;detectedMarker&gt; MainWindow::detectedMarkersList</definition>
+        <argsstring></argsstring>
+        <name>detectedMarkersList</name>
+        <qualifiedname>MainWindow::detectedMarkersList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="372" column="11" bodyfile="mainwindow.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a377c43484ed1effba480a4bca7fc5a2e" prot="private" static="no" mutable="no">
+        <type>QList&lt; QPoint &gt;</type>
+        <definition>QList&lt;QPoint&gt; MainWindow::detectedMarkerCenterList</definition>
+        <argsstring></argsstring>
+        <name>detectedMarkerCenterList</name>
+        <qualifiedname>MainWindow::detectedMarkerCenterList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="373" column="11" bodyfile="mainwindow.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a71eff3448484841fc49c60b2fe863186" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MainWindow::mapA2C</definition>
+        <argsstring></argsstring>
+        <name>mapA2C</name>
+        <qualifiedname>MainWindow::mapA2C</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="378" column="13" bodyfile="mainwindow.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a771b3dec3a5a8580b46403604bd9fac2" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MainWindow::mapC2A</definition>
+        <argsstring></argsstring>
+        <name>mapC2A</name>
+        <qualifiedname>MainWindow::mapC2A</qualifiedname>
+        <initializer>= cv::Mat::ones(3,3, CV_8UC3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="378" column="20" bodyfile="mainwindow.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a81e10b583aaef614b18380f383aaa450" prot="private" static="no" mutable="no">
+        <type>QFile</type>
+        <definition>QFile MainWindow::log_file</definition>
+        <argsstring></argsstring>
+        <name>log_file</name>
+        <qualifiedname>MainWindow::log_file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="381" column="11" bodyfile="mainwindow.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1abfcf5a9a3cc212c79b7897a9eae28b49" prot="private" static="no" mutable="no">
+        <type>QTextStream</type>
+        <definition>QTextStream MainWindow::log_stream</definition>
+        <argsstring></argsstring>
+        <name>log_stream</name>
+        <qualifiedname>MainWindow::log_stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="382" column="17" bodyfile="mainwindow.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a3569b51a5a66bb10998a519e94ff3c72" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::DebugAv</definition>
+        <argsstring></argsstring>
+        <name>DebugAv</name>
+        <qualifiedname>MainWindow::DebugAv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="385" column="10" bodyfile="mainwindow.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a89f9d58559f7980f0a00d6781d40f4e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::boolDebug</definition>
+        <argsstring></argsstring>
+        <name>boolDebug</name>
+        <qualifiedname>MainWindow::boolDebug</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="385" column="18" bodyfile="mainwindow.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aef9134131686c9b88fabe45001f221fe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::FilterAv</definition>
+        <argsstring></argsstring>
+        <name>FilterAv</name>
+        <qualifiedname>MainWindow::FilterAv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="385" column="29" bodyfile="mainwindow.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a8cc3370a955b763ce945c22744e71700" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainWindow::prevKeyBoard</definition>
+        <argsstring></argsstring>
+        <name>prevKeyBoard</name>
+        <qualifiedname>MainWindow::prevKeyBoard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="387" column="9" bodyfile="mainwindow.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1acd1071ba89b2c5a0e9173586ebfc8097" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::firstPointSelectedIsValid</definition>
+        <argsstring></argsstring>
+        <name>firstPointSelectedIsValid</name>
+        <qualifiedname>MainWindow::firstPointSelectedIsValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="389" column="10" bodyfile="mainwindow.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a0c7e6d6e922523f4806a8e96c0f374f6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::tl_set</definition>
+        <argsstring></argsstring>
+        <name>tl_set</name>
+        <qualifiedname>MainWindow::tl_set</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="390" column="10" bodyfile="mainwindow.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a693be53d4ba60628aa1eb48e630d0808" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::br_set</definition>
+        <argsstring></argsstring>
+        <name>br_set</name>
+        <qualifiedname>MainWindow::br_set</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="390" column="17" bodyfile="mainwindow.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1afb17c44dc2dd11cc0f0ce1af02a3a073" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::paused</definition>
+        <argsstring></argsstring>
+        <name>paused</name>
+        <qualifiedname>MainWindow::paused</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="390" column="24" bodyfile="mainwindow.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a3a5d341ed6673601cf0c330fc2126fd8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::boolSaveVideoFile</definition>
+        <argsstring></argsstring>
+        <name>boolSaveVideoFile</name>
+        <qualifiedname>MainWindow::boolSaveVideoFile</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="391" column="10" bodyfile="mainwindow.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ae4833e7ed21526d0a220ed31de11c7b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::capturingBool</definition>
+        <argsstring></argsstring>
+        <name>capturingBool</name>
+        <qualifiedname>MainWindow::capturingBool</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="392" column="10" bodyfile="mainwindow.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a9e1f771674fca774a59c8c306fa8646a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MainWindow::FPS</definition>
+        <argsstring></argsstring>
+        <name>FPS</name>
+        <qualifiedname>MainWindow::FPS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="394" column="12" bodyfile="mainwindow.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a95dba7af2dddfc6f88eb84ef96412cdb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MainWindow::rotIndex</definition>
+        <argsstring></argsstring>
+        <name>rotIndex</name>
+        <qualifiedname>MainWindow::rotIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="395" column="12" bodyfile="mainwindow.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1afbd1d4920f59a85049eac42e281b4d80" prot="private" static="no" mutable="no">
+        <type>QElapsedTimer</type>
+        <definition>QElapsedTimer MainWindow::elapsedTimer</definition>
+        <argsstring></argsstring>
+        <name>elapsedTimer</name>
+        <qualifiedname>MainWindow::elapsedTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="396" column="19" bodyfile="mainwindow.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a48ca1a660e5176c7629d6d4a3b505155" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <qualifiedname>MainWindow::origin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="397" column="12" bodyfile="mainwindow.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a7ddadbd5527ff2c64aaec95bfe82efab" prot="private" static="no" mutable="no">
+        <type>QRubberBand *</type>
+        <definition>QRubberBand* MainWindow::rubberBand</definition>
+        <argsstring></argsstring>
+        <name>rubberBand</name>
+        <qualifiedname>MainWindow::rubberBand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="398" column="17" bodyfile="mainwindow.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1aae0be8ee23039aa277724ace23f76842" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::mouseBias</definition>
+        <argsstring></argsstring>
+        <name>mouseBias</name>
+        <qualifiedname>MainWindow::mouseBias</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="399" column="12" bodyfile="mainwindow.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a6dbd1a16c9da965c4fca5ad60f9f01d8" prot="private" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect MainWindow::cropQRect</definition>
+        <argsstring></argsstring>
+        <name>cropQRect</name>
+        <qualifiedname>MainWindow::cropQRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="400" column="11" bodyfile="mainwindow.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a6b1e48b99bf2285ab6eeba5baf63c8ef" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainWindow::cropRectDefined</definition>
+        <argsstring></argsstring>
+        <name>cropRectDefined</name>
+        <qualifiedname>MainWindow::cropRectDefined</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="401" column="10" bodyfile="mainwindow.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ab136bc795069f6d3098473100a9c92cd" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MainWindow::srcStr</definition>
+        <argsstring></argsstring>
+        <name>srcStr</name>
+        <qualifiedname>MainWindow::srcStr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="403" column="13" bodyfile="mainwindow.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" prot="private" static="no" mutable="no">
+        <type>QTimer *</type>
+        <definition>QTimer* MainWindow::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>MainWindow::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="404" column="12" bodyfile="mainwindow.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a2560eacfd408a103e990cbc0c3c30310" prot="private" static="no" mutable="no">
+        <type>QTimer *</type>
+        <definition>QTimer * MainWindow::joyStick_Timer</definition>
+        <argsstring></argsstring>
+        <name>joyStick_Timer</name>
+        <qualifiedname>MainWindow::joyStick_Timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="404" column="18" bodyfile="mainwindow.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a3350db3811b59cffb4bad4a47512c38f" prot="private" static="no" mutable="no">
+        <type>cv::Rect</type>
+        <definition>cv::Rect MainWindow::cropRect</definition>
+        <argsstring></argsstring>
+        <name>cropRect</name>
+        <qualifiedname>MainWindow::cropRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="405" column="14" bodyfile="mainwindow.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1af4544f5e5be322d56b91c283a8a40439" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::procQSize</definition>
+        <argsstring></argsstring>
+        <name>procQSize</name>
+        <qualifiedname>MainWindow::procQSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="406" column="11" bodyfile="mainwindow.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a63ad534296eb7b5afa560c713a396e98" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::GUIQSize</definition>
+        <argsstring></argsstring>
+        <name>GUIQSize</name>
+        <qualifiedname>MainWindow::GUIQSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="406" column="21" bodyfile="mainwindow.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a466768f057e109f8c06ddec131b711d0" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::fullCapSize</definition>
+        <argsstring></argsstring>
+        <name>fullCapSize</name>
+        <qualifiedname>MainWindow::fullCapSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="406" column="30" bodyfile="mainwindow.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a5760aa1647505d70b1f0795e582c45e5" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size MainWindow::capSize</definition>
+        <argsstring></argsstring>
+        <name>capSize</name>
+        <qualifiedname>MainWindow::capSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="407" column="14" bodyfile="mainwindow.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a793ce86a170075754e87bc7975d59cf7" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size MainWindow::procSize</definition>
+        <argsstring></argsstring>
+        <name>procSize</name>
+        <qualifiedname>MainWindow::procSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="407" column="22" bodyfile="mainwindow.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a6de6e6b77dd0006dea5f6c6f75d57845" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainWindow::ui_trigID_zero</definition>
+        <argsstring></argsstring>
+        <name>ui_trigID_zero</name>
+        <qualifiedname>MainWindow::ui_trigID_zero</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="408" column="9" bodyfile="mainwindow.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a9c15239897ad355cbf427c439b66f501" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::TLInGUI</definition>
+        <argsstring></argsstring>
+        <name>TLInGUI</name>
+        <qualifiedname>MainWindow::TLInGUI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="411" column="12" bodyfile="mainwindow.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ac8b297db785a79cef8354326b8efa3d0" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::TLInFit</definition>
+        <argsstring></argsstring>
+        <name>TLInFit</name>
+        <qualifiedname>MainWindow::TLInFit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="411" column="20" bodyfile="mainwindow.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a87d7e2f658e81b7cd96e5a179b51f356" prot="private" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::TLInCap</definition>
+        <argsstring></argsstring>
+        <name>TLInCap</name>
+        <qualifiedname>MainWindow::TLInCap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="411" column="28" bodyfile="mainwindow.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1ab47eb5f985b399598a54c82f02781642" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::sizeInGUI</definition>
+        <argsstring></argsstring>
+        <name>sizeInGUI</name>
+        <qualifiedname>MainWindow::sizeInGUI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="412" column="11" bodyfile="mainwindow.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a9f1dbe966e0a7a41bf3d93f61696ac36" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::sizeInFit</definition>
+        <argsstring></argsstring>
+        <name>sizeInFit</name>
+        <qualifiedname>MainWindow::sizeInFit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="412" column="21" bodyfile="mainwindow.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a0bdb9de32fb4076f5a74f5086c06e8e8" prot="private" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize MainWindow::sizeInCap</definition>
+        <argsstring></argsstring>
+        <name>sizeInCap</name>
+        <qualifiedname>MainWindow::sizeInCap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="412" column="31" bodyfile="mainwindow.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1afa032d0b9c95e13ae331f229be0d3762" prot="private" static="no" mutable="no">
+        <type>QVector&lt; <ref refid="structdrawn_circle" kindref="compound">drawnCircle</ref> &gt;</type>
+        <definition>QVector&lt;drawnCircle&gt; MainWindow::circlsToDraw</definition>
+        <argsstring></argsstring>
+        <name>circlsToDraw</name>
+        <qualifiedname>MainWindow::circlsToDraw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="414" column="14" bodyfile="mainwindow.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a2340fe681f3266636cd9869682c502e4" prot="private" static="no" mutable="no">
+        <type>QVector&lt; <ref refid="class_kilobot" kindref="compound">Kilobot</ref> * &gt;</type>
+        <definition>QVector&lt;Kilobot *&gt; MainWindow::kiloVector</definition>
+        <argsstring></argsstring>
+        <name>kiloVector</name>
+        <qualifiedname>MainWindow::kiloVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="415" column="14" bodyfile="mainwindow.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a8722bdb46879e79e80bf1a3be13728de" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QPoint &gt;</type>
+        <definition>QVector&lt;QPoint&gt; MainWindow::kiloPosVec</definition>
+        <argsstring></argsstring>
+        <name>kiloPosVec</name>
+        <qualifiedname>MainWindow::kiloPosVec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="416" column="13" bodyfile="mainwindow.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a03b5e3794f343fcb8e35717a14d09960" prot="private" static="no" mutable="no">
+        <type>QList&lt; Vec3f &gt;</type>
+        <definition>QList&lt;Vec3f&gt; MainWindow::detectedCircles</definition>
+        <argsstring></argsstring>
+        <name>detectedCircles</name>
+        <qualifiedname>MainWindow::detectedCircles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="417" column="11" bodyfile="mainwindow.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a7e1c711b15069dc62f6bff1034d66c6a" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MainWindow::currentFrame</definition>
+        <argsstring></argsstring>
+        <name>currentFrame</name>
+        <qualifiedname>MainWindow::currentFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="419" column="13" bodyfile="mainwindow.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a5459a46e977f8b489ff906dcb2f19a6f" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MainWindow::heatMapOnFrame</definition>
+        <argsstring></argsstring>
+        <name>heatMapOnFrame</name>
+        <qualifiedname>MainWindow::heatMapOnFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="419" column="26" bodyfile="mainwindow.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a4462d0b73f32eec03967e13085cc9259" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainWindow::listInd</definition>
+        <argsstring></argsstring>
+        <name>listInd</name>
+        <qualifiedname>MainWindow::listInd</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="422" column="9" bodyfile="mainwindow.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_window_1a6a31a7abfb8f934ab9524b603bc0f140" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainWindow::nList</definition>
+        <argsstring></argsstring>
+        <name>nList</name>
+        <qualifiedname>MainWindow::nList</qualifiedname>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="422" column="18" bodyfile="mainwindow.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::MainWindow</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>MainWindow</name>
+        <qualifiedname>MainWindow::MainWindow</qualifiedname>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructs the main application window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Main constructor for the <ref refid="class_main_window" kindref="compound">MainWindow</ref> class.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to parent widget (default nullptr).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the GUI, sets up the camera environment, tracking modules, and the arena window. Handles conditional compilation for different camera types, UI setup, and initial state definitions. Assumes a multi-screen setup; positions main window on primary screen and maximizes it. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Initialize the marker detection containers.</para>
+<para>Ensures that marker data is in a known default state to avoid crashes if detection fails.</para>
+        </inbodydescription>
+        <location file="mainwindow.h" line="129" column="14" bodyfile="mainwindow.cpp" bodystart="13" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainWindow::~MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~MainWindow</name>
+        <qualifiedname>MainWindow::~MainWindow</qualifiedname>
+        <briefdescription>
+<para>Destructor for <ref refid="class_main_window" kindref="compound">MainWindow</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cleans up allocated resources including UI and camera handles. Prevents memory leaks and ensures a clean shutdown. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="133" column="5" bodyfile="mainwindow.cpp" bodystart="102" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_main_window_1a889bbb011274013c21cfe45e5950b2eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::logToFile</definition>
+        <argsstring>(QVector&lt; Kilobot * &gt; kiloVec)</argsstring>
+        <name>logToFile</name>
+        <qualifiedname>MainWindow::logToFile</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_kilobot" kindref="compound">Kilobot</ref> * &gt;</type>
+          <declname>kiloVec</declname>
+        </param>
+        <briefdescription>
+<para>Logs <ref refid="class_kilobot" kindref="compound">Kilobot</ref> (or other robots) positions, LED colors, and velocities to the log file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Useful for full behavioral logging. Each entry includes timestamp, robot index, position (x, y), LED color, and velocity vector (vx, vy). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="139" column="10" bodyfile="mainwindow.cpp" bodystart="135" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a54fd1b53fe5da62de760f0926b1601c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::logToFile</definition>
+        <argsstring>(QVector&lt; QPoint &gt; posVec)</argsstring>
+        <name>logToFile</name>
+        <qualifiedname>MainWindow::logToFile</qualifiedname>
+        <param>
+          <type>QVector&lt; QPoint &gt;</type>
+          <declname>posVec</declname>
+        </param>
+        <briefdescription>
+<para>Logs raw position data (without robot metadata) to the log file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for simpler tracking or external agents not using full <ref refid="class_kilobot" kindref="compound">Kilobot</ref> objects. Each entry includes timestamp, index, and position (x, y). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="140" column="10" bodyfile="mainwindow.cpp" bodystart="151" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a820f0dbe10457b65eccea53456eb5415" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::logToFile_PosLED</definition>
+        <argsstring>(QVector&lt; Kilobot * &gt; kiloVec)</argsstring>
+        <name>logToFile_PosLED</name>
+        <qualifiedname>MainWindow::logToFile_PosLED</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_kilobot" kindref="compound">Kilobot</ref> * &gt;</type>
+          <declname>kiloVec</declname>
+        </param>
+        <briefdescription>
+<para>Logs <ref refid="class_kilobot" kindref="compound">Kilobot</ref> (or other robots) positions and LED colors to the log file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used when only position and LED color are needed per robot. Each entry includes timestamp, robot index, position (x, y), and LED color. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="141" column="10" bodyfile="mainwindow.cpp" bodystart="120" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aac14e2d5b3dac147e5828d25d8099e03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_capturing_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_capturing_button_clicked</name>
+        <qualifiedname>MainWindow::on_capturing_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot triggered when the capturing button is clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts or stops camera or video capture based on UI state. Initializes the capture source (camera or video), configures size parameters, and resets the heatmap. Also updates the UI text and button label accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="143" column="10" bodyfile="mainwindow.cpp" bodystart="167" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad19401e83ebaa142eccb3953bc60ceb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::convertInt2HexStr</definition>
+        <argsstring>(int input, std::string &amp;output)</argsstring>
+        <name>convertInt2HexStr</name>
+        <qualifiedname>MainWindow::convertInt2HexStr</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Converts an integer (0–15) to its hexadecimal string representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for displaying or logging compact hex values from numeric inputs. Modifies the output string passed by reference. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="145" column="10" bodyfile="mainwindow.cpp" bodystart="223" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ac9f92ee7642a85ad4ebbec5dd20ef839" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::showImage</definition>
+        <argsstring>(cv::Mat frame)</argsstring>
+        <name>showImage</name>
+        <qualifiedname>MainWindow::showImage</qualifiedname>
+        <param>
+          <type>cv::Mat</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Displays the input image on the GUI and emits image signals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts the input OpenCV frame to RGB, calls drawKilobots to render annotations, then displays the result in the GUI label. Emits signals before and after processing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="147" column="10" bodyfile="mainwindow.cpp" bodystart="261" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a49be45fc9b993fdc3afe55d4b6fa0650" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::writeSettings</definition>
+        <argsstring>()</argsstring>
+        <name>writeSettings</name>
+        <qualifiedname>MainWindow::writeSettings</qualifiedname>
+        <briefdescription>
+<para>Writes user settings (e.g., window size, hue value) to disk. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves GUI state to persistent storage under &quot;SCIoI&quot; application group. Currently includes window size and slider value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="149" column="10" bodyfile="mainwindow.cpp" bodystart="293" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a06476208b8466211f3bb0fcae787052b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::readSettings</definition>
+        <argsstring>()</argsstring>
+        <name>readSettings</name>
+        <qualifiedname>MainWindow::readSettings</qualifiedname>
+        <briefdescription>
+<para>Reads saved user settings from disk. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads GUI state from previous session. Only the hue value is currently used. Resize and slider re-trigger are present as commented-out TODOs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="151" column="10" bodyfile="mainwindow.cpp" bodystart="310" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad133c88fc2593c2924ea3724487819df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::myDebug</definition>
+        <argsstring>(QString string)</argsstring>
+        <name>myDebug</name>
+        <qualifiedname>MainWindow::myDebug</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Utility function to display debug messages in the GUI text output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows internal status or error messages to be shown to the user via the interface. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="153" column="10" bodyfile="mainwindow.cpp" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a25ae54f8c8d7d5d54dc2c189dc962f75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::getKilos</definition>
+        <argsstring>(QVector&lt; Kilobot * &gt; kiloVec)</argsstring>
+        <name>getKilos</name>
+        <qualifiedname>MainWindow::getKilos</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_kilobot" kindref="compound">Kilobot</ref> * &gt;</type>
+          <declname>kiloVec</declname>
+        </param>
+        <briefdescription>
+<para>Processes received robot data and updates internal state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Accepts a list of Kilobots (or other robot instances), maps their positions into arena coordinates, and updates internal world model data (positions, traces, and which robots should be enlightened). Emits kilobot position vector for downstream modules. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="155" column="10" bodyfile="mainwindow.cpp" bodystart="338" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1b30cb96dfc83011d74e92f8d20ffd4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::getDrawnCircles</definition>
+        <argsstring>(QVector&lt; drawnCircle &gt; circsToDraw)</argsstring>
+        <name>getDrawnCircles</name>
+        <qualifiedname>MainWindow::getDrawnCircles</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="structdrawn_circle" kindref="compound">drawnCircle</ref> &gt;</type>
+          <declname>circsToDraw</declname>
+        </param>
+        <briefdescription>
+<para>Receives a list of drawn circles to overlay on the video frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to annotate the GUI with circular visual indicators (e.g., targets, zones). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="157" column="10" bodyfile="mainwindow.cpp" bodystart="400" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a3c8dab9418dc81bd51b724a6862dd923" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::drawOverlay</definition>
+        <argsstring>(Mat &amp;frame)</argsstring>
+        <name>drawOverlay</name>
+        <qualifiedname>MainWindow::drawOverlay</qualifiedname>
+        <param>
+          <type>Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Draws graphical overlays (like circles and optional labels) on top of a frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles both transparent and opaque overlays based on <computeroutput><ref refid="structdrawn_circle" kindref="compound">drawnCircle</ref></computeroutput> data. Supports future extensions for drawn lines (currently commented out). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="159" column="10" bodyfile="mainwindow.cpp" bodystart="412" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aef680ed7341363e69e8631d0fd9c9f8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::drawKilobots</definition>
+        <argsstring>(Mat &amp;frame)</argsstring>
+        <name>drawKilobots</name>
+        <qualifiedname>MainWindow::drawKilobots</qualifiedname>
+        <param>
+          <type>Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Renders Kilobots (or other robots) on the video frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays robot positions as colored circles, optionally with velocity vectors and IDs. Heatmap and color options depend on GUI checkboxes. This function integrates robot state, visual encoding, and conditional overlays. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="161" column="10" bodyfile="mainwindow.cpp" bodystart="497" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a420d3d3ded1a716ffe8da9904ef96637" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::drawHeatMapOnGUI</definition>
+        <argsstring>(Mat &amp;frame)</argsstring>
+        <name>drawHeatMapOnGUI</name>
+        <qualifiedname>MainWindow::drawHeatMapOnGUI</qualifiedname>
+        <param>
+          <type>Mat &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>Draws and updates a heatmap based on robot positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For each <ref refid="class_kilobot" kindref="compound">Kilobot</ref> (or robot), draws a colored circle on a heatmap layer using the robot&apos;s LED color. This overlay is then blended with the GUI video feed to visualize collective activity over time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="163" column="10" bodyfile="mainwindow.cpp" bodystart="572" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1acaed9f3e5b31926f72f8d1a8ac6d7b3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::findMarkerRect</definition>
+        <argsstring>()</argsstring>
+        <name>findMarkerRect</name>
+        <qualifiedname>MainWindow::findMarkerRect</qualifiedname>
+        <briefdescription>
+<para>Detects and maps marker positions between camera and arena coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses bounding rectangles and centers of four detected markers to compute perspective transforms (camera-to-arena and arena-to-camera). Updates the experimental field boundaries accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="165" column="10" bodyfile="mainwindow.cpp" bodystart="654" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1f545ad81b7e3c3e46c0f108428b7764" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_fromVid_rButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fromVid_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_fromVid_rButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot triggered when &apos;From Video&apos; radio button is selected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Currently only used for toggling UI elements (partially implemented). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="179" column="10" bodyfile="mainwindow.cpp" bodystart="762" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ae211e2311ba5385e237910e25885d9eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_fromCam_rButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_fromCam_rButton_clicked</name>
+        <qualifiedname>MainWindow::on_fromCam_rButton_clicked</qualifiedname>
+        <briefdescription>
+<para>Slot triggered when &apos;From Camera&apos; radio button is selected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Currently only used for toggling UI elements (partially implemented). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="181" column="10" bodyfile="mainwindow.cpp" bodystart="772" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a25d760da4792e45fc1c7bb9cd646aa99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::rot90</definition>
+        <argsstring>(cv::Mat &amp;matImage, int rotflag)</argsstring>
+        <name>rot90</name>
+        <qualifiedname>MainWindow::rot90</qualifiedname>
+        <param>
+          <type>cv::Mat &amp;</type>
+          <declname>matImage</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rotflag</declname>
+        </param>
+        <briefdescription>
+<para>Rotates the input image based on the specified flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags: 0 = 90° clockwise 1 = 180° 2 = 90° counterclockwise </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="183" column="10" bodyfile="mainwindow.cpp" bodystart="785" bodyend="800"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a1dff511c9697cbcb60150894f480b9c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::mousePressEvent</definition>
+        <argsstring>(QMouseEvent *event) override</argsstring>
+        <name>mousePressEvent</name>
+        <qualifiedname>MainWindow::mousePressEvent</qualifiedname>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handles mouse press events to start drawing a selection box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the press occurs within a valid area, initializes a rubber band rectangle at the cursor position. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="188" column="10" bodyfile="mainwindow.cpp" bodystart="835" bodyend="845"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a9c8748d463f01ddae6abcd8f8163fcef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::mouseMoveEvent</definition>
+        <argsstring>(QMouseEvent *event) override</argsstring>
+        <name>mouseMoveEvent</name>
+        <qualifiedname>MainWindow::mouseMoveEvent</qualifiedname>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handles mouse movement while drawing a selection box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the geometry of the rubber band rectangle or hides it if the area is invalid. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="190" column="10" bodyfile="mainwindow.cpp" bodystart="852" bodyend="865"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad162aaba235ea093b59f6a9bf0fc4d01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::mouseReleaseEvent</definition>
+        <argsstring>(QMouseEvent *event) override</argsstring>
+        <name>mouseReleaseEvent</name>
+        <qualifiedname>MainWindow::mouseReleaseEvent</qualifiedname>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handles mouse release events used for defining a cropping region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the mouse position is valid, captures the rubber band (selection box) position and updates UI elements and internal cropping rectangle accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="192" column="10" bodyfile="mainwindow.cpp" bodystart="808" bodyend="828"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ad3f8a70c4a1afc5d71b40bfd8122c309" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MainWindow::isValidPlaceForSelect</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>isValidPlaceForSelect</name>
+        <qualifiedname>MainWindow::isValidPlaceForSelect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether the given (x,y) position is within the allowed area for selection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Selection is limited to the region inside the output display label, accounting for mouse bias. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="194" column="10" bodyfile="mainwindow.cpp" bodystart="872" bodyend="878"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a146651da7b40691e7b9ad3f95f09b632" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_open_set_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_open_set_button_clicked</name>
+        <qualifiedname>MainWindow::on_open_set_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Opens a file dialog for selecting a settings file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The chosen file path is displayed in the user interface for further use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="198" column="10" bodyfile="mainwindow.cpp" bodystart="885" bodyend="890"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab2842b9f0ff05bd5f6648cd1a2c937a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_Rotate_ComboBox_activated</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_Rotate_ComboBox_activated</name>
+        <qualifiedname>MainWindow::on_Rotate_ComboBox_activated</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+<para>Updates the rotation index based on user selection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Also updates a text output label to show the selected index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="200" column="10" bodyfile="mainwindow.cpp" bodystart="897" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1abe91f8e37a59dd8872993adc2ead3aaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::on_saveVid_button_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_saveVid_button_clicked</name>
+        <qualifiedname>MainWindow::on_saveVid_button_clicked</qualifiedname>
+        <briefdescription>
+<para>Starts or stops saving of raw and processed video streams. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the button is checked, initializes video writers and starts saving based on the current settings. Otherwise, stops and releases video writer threads and related connections. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="202" column="10" bodyfile="mainwindow.cpp" bodystart="910" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab54cc0ffef264d86ad4909c747a4feac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::uiInitialization</definition>
+        <argsstring>()</argsstring>
+        <name>uiInitialization</name>
+        <qualifiedname>MainWindow::uiInitialization</qualifiedname>
+        <briefdescription>
+<para>Initialize UI elements and connect signals and slots. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets initial UI states, configures sliders and buttons, connects UI elements to their respective handlers using Qt&apos;s signal/slot mechanism. Also initializes logging paths and camera source selection. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>initialize openPath</para>
+        </inbodydescription>
+        <location file="mainwindow.h" line="204" column="10" bodyfile="mainwindow.cpp" bodystart="979" bodyend="1162"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1af50a406abfe2df83b67caa3b0ae480bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::plotData</definition>
+        <argsstring>(QCustomPlot *customPlot, double value)</argsstring>
+        <name>plotData</name>
+        <qualifiedname>MainWindow::plotData</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> *</type>
+          <declname>customPlot</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Plots a new data point on the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the plot&apos;s x-axis range based on elapsed time and triggers a replot. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>customPlot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> widget to update. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new data value to plot (not currently used in this implementation). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="206" column="10" bodyfile="mainwindow.cpp" bodystart="1172" bodyend="1179"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ab8b72eb0d4a06b4a192691942bf493c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::initializePlot</definition>
+        <argsstring>(QCustomPlot *customPlot)</argsstring>
+        <name>initializePlot</name>
+        <qualifiedname>MainWindow::initializePlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> *</type>
+          <declname>customPlot</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> for error visualization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up two graphs (&quot;Err Prec&quot; and &quot;Err True&quot;) for precision and trueness errors, configures time-based x-axis, y-axis range, legend, and visual customizations for each graph. Also adjusts margins and inset layout for optimal display.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>customPlot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> widget to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="208" column="10" bodyfile="mainwindow.cpp" bodystart="1190" bodyend="1221"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1aac08bdea981230774ac4a88278103622" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::resetHeatMap</definition>
+        <argsstring>()</argsstring>
+        <name>resetHeatMap</name>
+        <qualifiedname>MainWindow::resetHeatMap</qualifiedname>
+        <briefdescription>
+<para>Resets the heatmap overlay to a blank state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the heatmap by initializing it to a black (zeroed) matrix matching the current capture size. Used to restart heatmap accumulation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="210" column="10" bodyfile="mainwindow.cpp" bodystart="1229" bodyend="1239"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_main_window_1a78b369483a6432c263d7d1046d9cc1d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::mapPoint</definition>
+        <argsstring>(QPoint P, QVector2D scale, QVector2D bias)</argsstring>
+        <name>mapPoint</name>
+        <qualifiedname>MainWindow::mapPoint</qualifiedname>
+        <param>
+          <type>QPoint</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>QVector2D</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>QVector2D</type>
+          <declname>bias</declname>
+        </param>
+        <briefdescription>
+<para>Maps a QPoint using provided scale and bias. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a linear transformation to point P: scale and then bias. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D scaling factors. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D bias/offset to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Transformed QPoint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="375" column="12" bodyfile="mainwindow.cpp" bodystart="1968" bodyend="1975"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1aa3480b358424e08eaddadf1dcd7f3215" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::mapPoint</definition>
+        <argsstring>(QPoint P, Matx33f lambda)</argsstring>
+        <name>mapPoint</name>
+        <qualifiedname>MainWindow::mapPoint</qualifiedname>
+        <param>
+          <type>QPoint</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>Matx33f</type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+<para>Maps a QPoint using a 3x3 projective transformation matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a homography (projective transform) to the input point. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lambda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3x3 transformation matrix (homography). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Transformed QPoint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="376" column="12" bodyfile="mainwindow.cpp" bodystart="1985" bodyend="1990"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_window_1a8d143ad4e532e3998283005e21bcb4f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPoint</type>
+        <definition>QPoint MainWindow::mapPoint</definition>
+        <argsstring>(QPoint P, Matx33f rvec, Point3f tvec)</argsstring>
+        <name>mapPoint</name>
+        <qualifiedname>MainWindow::mapPoint</qualifiedname>
+        <param>
+          <type>QPoint</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>Matx33f</type>
+          <declname>rvec</declname>
+        </param>
+        <param>
+          <type>Point3f</type>
+          <declname>tvec</declname>
+        </param>
+        <briefdescription>
+<para>Maps a QPoint using a 3x3 matrix and translation vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies an affine or rigid transform (matrix and translation) to the point. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rvec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3x3 transformation matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tvec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Translation vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Transformed QPoint. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="377" column="12" bodyfile="mainwindow.cpp" bodystart="2001" bodyend="2005"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_main_window_1a2794088bfacf0ac95fe057577f2b9e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::QImageProcReady</definition>
+        <argsstring>(QImage image)</argsstring>
+        <name>QImageProcReady</name>
+        <qualifiedname>MainWindow::QImageProcReady</qualifiedname>
+        <param>
+          <type>QImage</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="426" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a8615eedbf31301077f9c707cd413d710" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::imageProcReady</definition>
+        <argsstring>(cv::Mat image)</argsstring>
+        <name>imageProcReady</name>
+        <qualifiedname>MainWindow::imageProcReady</qualifiedname>
+        <param>
+          <type>cv::Mat</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="427" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a924e23f7730f8f7c2bc2cbb4288ea8af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::imageRawReceived</definition>
+        <argsstring>(cv::Mat image)</argsstring>
+        <name>imageRawReceived</name>
+        <qualifiedname>MainWindow::imageRawReceived</qualifiedname>
+        <param>
+          <type>cv::Mat</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="428" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1afb3e2fb7e9b2b4379bea14c8d9d92ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::clicked</definition>
+        <argsstring>(const QString &amp;text)</argsstring>
+        <name>clicked</name>
+        <qualifiedname>MainWindow::clicked</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="429" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a66e3c7774fb0b7b10749e2c527ad63fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::broadcastMessage</definition>
+        <argsstring>(kilobot_broadcast msg)</argsstring>
+        <name>broadcastMessage</name>
+        <qualifiedname>MainWindow::broadcastMessage</qualifiedname>
+        <param>
+          <type><ref refid="structkilobot__broadcast" kindref="compound">kilobot_broadcast</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="430" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1a9786e4980d5b0dd23d2add6f2ea55be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::sendKiloMessage</definition>
+        <argsstring>(kilobot_message msg)</argsstring>
+        <name>sendKiloMessage</name>
+        <qualifiedname>MainWindow::sendKiloMessage</qualifiedname>
+        <param>
+          <type><ref refid="structkilobot__message" kindref="compound">kilobot_message</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="431" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_main_window_1aaa28cc4980e601eba11462fbf50c515f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::kilobotPosVecReady</definition>
+        <argsstring>(QVector&lt; QPoint &gt; posVec)</argsstring>
+        <name>kilobotPosVecReady</name>
+        <qualifiedname>MainWindow::kilobotPosVecReady</qualifiedname>
+        <param>
+          <type>QVector&lt; QPoint &gt;</type>
+          <declname>posVec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="432" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Main application window for the LARS system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles all GUI events, robot tracking, data logging, and interface to the overhead controller. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>wm</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="3">
+        <label>WorldModel</label>
+        <link refid="class_world_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="mainwindow.h" line="120" column="1" bodyfile="mainwindow.h" bodystart="121" bodyend="434"/>
+    <listofallmembers>
+      <member refid="class_main_window_1a2ae08888ffeb284cfd9e5eb27b89d678" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>arenaWindow</name></member>
+      <member refid="class_main_window_1a850af48ba4a5444d3096c14fac2f5990" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>arenaWindow2</name></member>
+      <member refid="class_main_window_1a96033da58d429bcdd976fb77583c572d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>bg_color</name></member>
+      <member refid="class_main_window_1a89f9d58559f7980f0a00d6781d40f4e4" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>boolDebug</name></member>
+      <member refid="class_main_window_1a3a5d341ed6673601cf0c330fc2126fd8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>boolSaveVideoFile</name></member>
+      <member refid="class_main_window_1a693be53d4ba60628aa1eb48e630d0808" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>br_set</name></member>
+      <member refid="class_main_window_1a66e3c7774fb0b7b10749e2c527ad63fb" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>broadcastMessage</name></member>
+      <member refid="class_main_window_1a323cc7106081e5bdb776d8f8b168365a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calib</name></member>
+      <member refid="class_main_window_1a89a92e85a57266aabc8337909144edc2" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibLeft</name></member>
+      <member refid="class_main_window_1a6b010981a13dee602c2f5c8175cdc248" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibrateKilobot</name></member>
+      <member refid="class_main_window_1ad322cba527919362e2aafbcba39924e3" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibRight</name></member>
+      <member refid="class_main_window_1af7368f2593691fe0172d22367d5ff38e" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibSave</name></member>
+      <member refid="class_main_window_1a198ef9fa32b08ed6ecc6406270fadc0c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibStop</name></member>
+      <member refid="class_main_window_1ab7b44588aa819e8cc3f3865e17849d1c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibStraight</name></member>
+      <member refid="class_main_window_1a69f3cca817ac33852d7d4296e9317eb9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>calibUID</name></member>
+      <member refid="class_main_window_1a5760aa1647505d70b1f0795e582c45e5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>capSize</name></member>
+      <member refid="class_main_window_1ae4833e7ed21526d0a220ed31de11c7b1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>capturingBool</name></member>
+      <member refid="class_main_window_1afa032d0b9c95e13ae331f229be0d3762" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>circlsToDraw</name></member>
+      <member refid="class_main_window_1afb3e2fb7e9b2b4379bea14c8d9d92ee8" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>clicked</name></member>
+      <member refid="class_main_window_1ad19401e83ebaa142eccb3953bc60ceb1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>convertInt2HexStr</name></member>
+      <member refid="class_main_window_1a6dbd1a16c9da965c4fca5ad60f9f01d8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>cropQRect</name></member>
+      <member refid="class_main_window_1a3350db3811b59cffb4bad4a47512c38f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>cropRect</name></member>
+      <member refid="class_main_window_1a6b1e48b99bf2285ab6eeba5baf63c8ef" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>cropRectDefined</name></member>
+      <member refid="class_main_window_1a7e1c711b15069dc62f6bff1034d66c6a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>currentFrame</name></member>
+      <member refid="class_main_window_1a3569b51a5a66bb10998a519e94ff3c72" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>DebugAv</name></member>
+      <member refid="class_main_window_1a03b5e3794f343fcb8e35717a14d09960" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>detectedCircles</name></member>
+      <member refid="class_main_window_1a377c43484ed1effba480a4bca7fc5a2e" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>detectedMarkerCenterList</name></member>
+      <member refid="class_main_window_1aa97c1eec1cac9b19e0b34b872a12305a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>detectedMarkersList</name></member>
+      <member refid="class_main_window_1a420d3d3ded1a716ffe8da9904ef96637" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>drawHeatMapOnGUI</name></member>
+      <member refid="class_main_window_1aef680ed7341363e69e8631d0fd9c9f8f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>drawKilobots</name></member>
+      <member refid="class_main_window_1a3c8dab9418dc81bd51b724a6862dd923" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>drawOverlay</name></member>
+      <member refid="class_main_window_1afbd1d4920f59a85049eac42e281b4d80" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>elapsedTimer</name></member>
+      <member refid="class_main_window_1aa54ef7a71e954fbb2e988f5d5e6580e1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>envBrain</name></member>
+      <member refid="class_main_window_1aef9134131686c9b88fabe45001f221fe" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>FilterAv</name></member>
+      <member refid="class_main_window_1acaed9f3e5b31926f72f8d1a8ac6d7b3d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>findMarkerRect</name></member>
+      <member refid="class_main_window_1acd1071ba89b2c5a0e9173586ebfc8097" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>firstPointSelectedIsValid</name></member>
+      <member refid="class_main_window_1a9e1f771674fca774a59c8c306fa8646a" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>FPS</name></member>
+      <member refid="class_main_window_1a466768f057e109f8c06ddec131b711d0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>fullCapSize</name></member>
+      <member refid="class_main_window_1a1b30cb96dfc83011d74e92f8d20ffd4d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>getDrawnCircles</name></member>
+      <member refid="class_main_window_1a25ae54f8c8d7d5d54dc2c189dc962f75" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>getKilos</name></member>
+      <member refid="class_main_window_1a63ad534296eb7b5afa560c713a396e98" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>GUIQSize</name></member>
+      <member refid="class_main_window_1a5459a46e977f8b489ff906dcb2f19a6f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>heatMapOnFrame</name></member>
+      <member refid="class_main_window_1a8615eedbf31301077f9c707cd413d710" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>imageProcReady</name></member>
+      <member refid="class_main_window_1a924e23f7730f8f7c2bc2cbb4288ea8af" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>imageRawReceived</name></member>
+      <member refid="class_main_window_1ab8b72eb0d4a06b4a192691942bf493c8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>initializePlot</name></member>
+      <member refid="class_main_window_1ad3f8a70c4a1afc5d71b40bfd8122c309" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>isValidPlaceForSelect</name></member>
+      <member refid="class_main_window_1a2560eacfd408a103e990cbc0c3c30310" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>joyStick_Timer</name></member>
+      <member refid="class_main_window_1a067a0186c76000775db3c9668d80e054" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>kbtracker</name></member>
+      <member refid="class_main_window_1a165bd917c00fcef5290f888db61ec153" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>keyPressEvent</name></member>
+      <member refid="class_main_window_1aaa28cc4980e601eba11462fbf50c515f" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>kilobotPosVecReady</name></member>
+      <member refid="class_main_window_1a8722bdb46879e79e80bf1a3be13728de" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>kiloPosVec</name></member>
+      <member refid="class_main_window_1a2340fe681f3266636cd9869682c502e4" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>kiloVector</name></member>
+      <member refid="class_main_window_1a4462d0b73f32eec03967e13085cc9259" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>listInd</name></member>
+      <member refid="class_main_window_1a81e10b583aaef614b18380f383aaa450" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>log_file</name></member>
+      <member refid="class_main_window_1abfcf5a9a3cc212c79b7897a9eae28b49" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>log_stream</name></member>
+      <member refid="class_main_window_1a889bbb011274013c21cfe45e5950b2eb" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>logToFile</name></member>
+      <member refid="class_main_window_1a54fd1b53fe5da62de760f0926b1601c9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>logToFile</name></member>
+      <member refid="class_main_window_1a820f0dbe10457b65eccea53456eb5415" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>logToFile_PosLED</name></member>
+      <member refid="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_main_window_1a71eff3448484841fc49c60b2fe863186" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mapA2C</name></member>
+      <member refid="class_main_window_1a771b3dec3a5a8580b46403604bd9fac2" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mapC2A</name></member>
+      <member refid="class_main_window_1a78b369483a6432c263d7d1046d9cc1d1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mapPoint</name></member>
+      <member refid="class_main_window_1aa3480b358424e08eaddadf1dcd7f3215" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mapPoint</name></member>
+      <member refid="class_main_window_1a8d143ad4e532e3998283005e21bcb4f0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mapPoint</name></member>
+      <member refid="class_main_window_1aae0be8ee23039aa277724ace23f76842" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mouseBias</name></member>
+      <member refid="class_main_window_1a9c8748d463f01ddae6abcd8f8163fcef" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_main_window_1a1dff511c9697cbcb60150894f480b9c8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mousePressEvent</name></member>
+      <member refid="class_main_window_1ad162aaba235ea093b59f6a9bf0fc4d01" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_main_window_1ad133c88fc2593c2924ea3724487819df" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>myDebug</name></member>
+      <member refid="class_main_window_1a6a31a7abfb8f934ab9524b603bc0f140" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>nList</name></member>
+      <member refid="class_main_window_1ae1e9feacad9383f6f5b7170fc44570dd" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ohc</name></member>
+      <member refid="class_main_window_1a4f3caab9f29fd2973df538ed7d16a10c" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_ArenaWindow_button_clicked</name></member>
+      <member refid="class_main_window_1aac14e2d5b3dac147e5828d25d8099e03" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_capturing_button_clicked</name></member>
+      <member refid="class_main_window_1ae3d36e89ec9886b258254d8b839724f6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_crop_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a9b5e269cc3ba56e0308cc01e947e746f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_debug_CheckBox_clicked</name></member>
+      <member refid="class_main_window_1acc319ca2e9651105d32abbc93084a2bb" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_debug_tracker_stateChanged</name></member>
+      <member refid="class_main_window_1a14721646d35b58483e89782192048ee2" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_detectKilobots_pushButton_clicked</name></member>
+      <member refid="class_main_window_1afdb25de2ca5c18e34588141c07d3ebd8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_detectMarker_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a0912c4ee60a2527766475db5499d0ae8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_draw_bots_colors_stateChanged</name></member>
+      <member refid="class_main_window_1a04a2e0e8237d02545affb2af25ce2457" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_draw_centroid_stateChanged</name></member>
+      <member refid="class_main_window_1aa0511021da5bb0e42f87093c7971f0d4" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_draw_network_stateChanged</name></member>
+      <member refid="class_main_window_1af890c3822fec2bf35fe9e0a17ba76bb6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_draw_spatial_netw_stateChanged</name></member>
+      <member refid="class_main_window_1a68b04903522034097f44f8828baec87e" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_draw_voronoii_stateChanged</name></member>
+      <member refid="class_main_window_1a3f70912671fe509479e14b57adddc969" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawBall_stateChanged</name></member>
+      <member refid="class_main_window_1a547dd9ce43b41608324063f394159832" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawBoundary_CheckBox_stateChanged</name></member>
+      <member refid="class_main_window_1afb6da338b8e989cca4073aa3c1448ca4" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawColCircles_CheckBox_clicked</name></member>
+      <member refid="class_main_window_1a0b9264ea397fd429cc9a7ad98cf74d62" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawHeatMap_CheckBox_clicked</name></member>
+      <member refid="class_main_window_1af748c221eeb4b4d389691c21228ec2d7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawRobCircles_CheckBox_clicked</name></member>
+      <member refid="class_main_window_1adae0c07039c517471290d1b71b4a4200" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_drawTrace_CheckBox_stateChanged</name></member>
+      <member refid="class_main_window_1a313938f546c13de30b0dfcd48d9f8055" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_EFWL_slider_sliderMoved</name></member>
+      <member refid="class_main_window_1a9503b8f32224abaa06e2f7409dbd06e9" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_env1_rButton_clicked</name></member>
+      <member refid="class_main_window_1a3b0726465a09b6c4737a23417aea1985" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_env2_rButton_clicked</name></member>
+      <member refid="class_main_window_1a4f0c96588c6ee8dd3e68e31b762d5d0d" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_env3_rButton_clicked</name></member>
+      <member refid="class_main_window_1a389ec3640825d8cea79fca29c96c4ace" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_env4_rButton_clicked</name></member>
+      <member refid="class_main_window_1a3bd5d15802c07ec9aca06ce719a747d1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_fitRect_pushButton_clicked</name></member>
+      <member refid="class_main_window_1ae211e2311ba5385e237910e25885d9eb" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_fromCam_rButton_clicked</name></member>
+      <member refid="class_main_window_1a83f54653f41e32e7938d97a271d0fd79" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_fromImage_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a1f545ad81b7e3c3e46c0f108428b7764" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_fromVid_rButton_clicked</name></member>
+      <member refid="class_main_window_1aedace6dcbb3f262dfcac505206a0a57b" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_fullScreen_pushButton_clicked</name></member>
+      <member refid="class_main_window_1af7151f366e41e06f7cc5a8d2276308c0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_gradientExpField_pushButton_clicked</name></member>
+      <member refid="class_main_window_1ac13a5a8830ea6f85e1c3284d3182f1c0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_imageExpField_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a5e1a8ff31982ac988833a983818735db" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_initPoints_pushButton_clicked</name></member>
+      <member refid="class_main_window_1ad327fa2f3368d34ef5911a41c1fe4eee" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_loadSetting_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a5316c928a905dbb95ba628e028abd4e3" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_markerWidth_Slider_sliderMoved</name></member>
+      <member refid="class_main_window_1a1fd59e91406cd58def2249171dd6a3df" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_maxDispl_slider_sliderMoved</name></member>
+      <member refid="class_main_window_1a8ff9ccfe71251326876e5a607ec56c62" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_noise_radioButton_clicked</name></member>
+      <member refid="class_main_window_1a3b18034e79876512a841e6a3811f5f36" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_noiseFreq_slider_valueChanged</name></member>
+      <member refid="class_main_window_1af986269b7c363d8aaea1013118a58ed4" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_noiseStrength_slider_valueChanged</name></member>
+      <member refid="class_main_window_1a71f2fda790cd1ef5907b70d531eb6d4b" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_noiseTiles_slider_valueChanged</name></member>
+      <member refid="class_main_window_1a2b0f1c4a480288494decc06e7bbca8b0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_ohc_set_prog_clicked</name></member>
+      <member refid="class_main_window_1a146651da7b40691e7b9ad3f95f09b632" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_open_set_button_clicked</name></member>
+      <member refid="class_main_window_1a1d46efc779962370417a6327acd4b105" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_openImageField_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a6edcd142b67f88bc9f5fd71b71974ac7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_resetTrace_pushButton_clicked</name></member>
+      <member refid="class_main_window_1ae2e89c4fa4d958b80bfb4a721f8cb1b5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_robRendRad_slider_sliderMoved</name></member>
+      <member refid="class_main_window_1ab2842b9f0ff05bd5f6648cd1a2c937a8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_Rotate_ComboBox_activated</name></member>
+      <member refid="class_main_window_1aa75fc0155fefb898f0be91126d58b63f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_saveSetting_pushButton_clicked</name></member>
+      <member refid="class_main_window_1abe91f8e37a59dd8872993adc2ead3aaa" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_saveVid_button_clicked</name></member>
+      <member refid="class_main_window_1a42b315e7eca83876d388fddd26c09bca" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_seaBlue_pushButton_clicked</name></member>
+      <member refid="class_main_window_1ab5aafc52781339a49aad19e81f60f871" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_shuffleImageExpField_pushButton_clicked</name></member>
+      <member refid="class_main_window_1af1dc08e6f45b425b1a5a6fed332eb903" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_sliderRandom0_valueChanged</name></member>
+      <member refid="class_main_window_1acdfd374ddb5821de89ae42c8d43c9f23" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_sliderRandom1_valueChanged</name></member>
+      <member refid="class_main_window_1a318c1108ba882b5da8a3516eb4d6d9e6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_smoothnessFact_slider_sliderMoved</name></member>
+      <member refid="class_main_window_1afc2fda9253321760080c58e06d2fd91e" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_startTracking_pushButton_clicked</name></member>
+      <member refid="class_main_window_1aa87bc5c87872201bc81854d1f9333b42" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_userBlue_pushButton_clicked</name></member>
+      <member refid="class_main_window_1a51e56d51439875625fe1df3644f41e39" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_userRed_pushButton_clicked</name></member>
+      <member refid="class_main_window_1aaed7ba54e48b288ea107435aba7beb00" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>on_writeLog_button_clicked</name></member>
+      <member refid="class_main_window_1a48ca1a660e5176c7629d6d4a3b505155" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>origin</name></member>
+      <member refid="class_main_window_1afb17c44dc2dd11cc0f0ce1af02a3a073" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>paused</name></member>
+      <member refid="class_main_window_1af50a406abfe2df83b67caa3b0ae480bf" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>plotData</name></member>
+      <member refid="class_main_window_1a8cc3370a955b763ce945c22744e71700" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>prevKeyBoard</name></member>
+      <member refid="class_main_window_1af4544f5e5be322d56b91c283a8a40439" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>procQSize</name></member>
+      <member refid="class_main_window_1a793ce86a170075754e87bc7975d59cf7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>procSize</name></member>
+      <member refid="class_main_window_1a4d657480beea8fcd69f97246cc873268" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>publicVar</name></member>
+      <member refid="class_main_window_1a2794088bfacf0ac95fe057577f2b9e9d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>QImageProcReady</name></member>
+      <member refid="class_main_window_1a06476208b8466211f3bb0fcae787052b" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>readSettings</name></member>
+      <member refid="class_main_window_1aac08bdea981230774ac4a88278103622" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>resetHeatMap</name></member>
+      <member refid="class_main_window_1a25d760da4792e45fc1c7bb9cd646aa99" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>rot90</name></member>
+      <member refid="class_main_window_1a95dba7af2dddfc6f88eb84ef96412cdb" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>rotIndex</name></member>
+      <member refid="class_main_window_1a7ddadbd5527ff2c64aaec95bfe82efab" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>rubberBand</name></member>
+      <member refid="class_main_window_1a51ac2b126495216832501cea3929c6f6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>scene</name></member>
+      <member refid="class_main_window_1a794274c763468661cbf31b0a1e431365" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>screensList</name></member>
+      <member refid="class_main_window_1a68275e661b69ba0e4fc72102561d26da" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>SendKeyBoardData</name></member>
+      <member refid="class_main_window_1a9786e4980d5b0dd23d2add6f2ea55be6" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>sendKiloMessage</name></member>
+      <member refid="class_main_window_1a4bcfe5f0fd057640f951a096c291b3e7" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>serial_conn</name></member>
+      <member refid="class_main_window_1ac9f92ee7642a85ad4ebbec5dd20ef839" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>showImage</name></member>
+      <member refid="class_main_window_1a0bdb9de32fb4076f5a74f5086c06e8e8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>sizeInCap</name></member>
+      <member refid="class_main_window_1a9f1dbe966e0a7a41bf3d93f61696ac36" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>sizeInFit</name></member>
+      <member refid="class_main_window_1ab47eb5f985b399598a54c82f02781642" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>sizeInGUI</name></member>
+      <member refid="class_main_window_1a198d7ec591d107864cb55d5c3bf07972" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>sProcVidThrd</name></member>
+      <member refid="class_main_window_1a9da931eae12d2a1bf3f27c04dbe149a1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>sRawVidThrd</name></member>
+      <member refid="class_main_window_1ab136bc795069f6d3098473100a9c92cd" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>srcStr</name></member>
+      <member refid="class_main_window_1a356578805ed1248a7f2807434cb0e5ee" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>timer</name></member>
+      <member refid="class_main_window_1a0c7e6d6e922523f4806a8e96c0f374f6" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>tl_set</name></member>
+      <member refid="class_main_window_1a87d7e2f658e81b7cd96e5a179b51f356" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>TLInCap</name></member>
+      <member refid="class_main_window_1ac8b297db785a79cef8354326b8efa3d0" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>TLInFit</name></member>
+      <member refid="class_main_window_1a9c15239897ad355cbf427c439b66f501" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>TLInGUI</name></member>
+      <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui</name></member>
+      <member refid="class_main_window_1a6de6e6b77dd0006dea5f6c6f75d57845" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ui_trigID_zero</name></member>
+      <member refid="class_main_window_1ab54cc0ffef264d86ad4909c747a4feac" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>uiInitialization</name></member>
+      <member refid="class_main_window_1a263323ac14686f8b3965f222acbc12dd" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>update_startTracking_pushBotton</name></member>
+      <member refid="class_main_window_1a19ef9c5577a56d1c5073ad0edff9f0c8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>update_wmMarkers</name></member>
+      <member refid="class_main_window_1a32ba9ff121102e8fd5556bfac8767306" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>updateColors</name></member>
+      <member refid="class_main_window_1a1ff434c8d793d56bed75e8e4d5af8d41" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>updateColors</name></member>
+      <member refid="class_main_window_1aa343409e243bae79b6801cc6ba45cbf1" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>updateSliders</name></member>
+      <member refid="class_main_window_1ad7173645e07f49587a35c57fd95913fc" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>wm</name></member>
+      <member refid="class_main_window_1a49be45fc9b993fdc3afe55d4b6fa0650" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>writeSettings</name></member>
+      <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

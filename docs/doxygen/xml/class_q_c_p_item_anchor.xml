@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_item_anchor" kind="class" language="C++" prot="public">
+    <compoundname>QCPItemAnchor</compoundname>
+    <derivedcompoundref refid="class_q_c_p_item_position" prot="public" virt="non-virtual">QCPItemPosition</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a23ad4d0ab0d2cbb41a7baf05bcf996ec" prot="protected" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString QCPItemAnchor::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <qualifiedname>QCPItemAnchor::mName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3581" column="11" bodyfile="qcustomplot.h" bodystart="3581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a59b968410831ba91a25cc75a77dde6f5" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> *</type>
+        <definition>QCustomPlot* QCPItemAnchor::mParentPlot</definition>
+        <argsstring></argsstring>
+        <name>mParentPlot</name>
+        <qualifiedname>QCPItemAnchor::mParentPlot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3584" column="15" bodyfile="qcustomplot.h" bodystart="3584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a80fad480ad3bb980446ed6ebc00818ae" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_abstract_item" kindref="compound">QCPAbstractItem</ref> *</type>
+        <definition>QCPAbstractItem* QCPItemAnchor::mParentItem</definition>
+        <argsstring></argsstring>
+        <name>mParentItem</name>
+        <qualifiedname>QCPItemAnchor::mParentItem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3585" column="19" bodyfile="qcustomplot.h" bodystart="3585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a00c62070333e8345976b579676ad3997" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPItemAnchor::mAnchorId</definition>
+        <argsstring></argsstring>
+        <name>mAnchorId</name>
+        <qualifiedname>QCPItemAnchor::mAnchorId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3586" column="7" bodyfile="qcustomplot.h" bodystart="3586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a3c0bfd6e50f3b48e2a9b3824695b20f7" prot="protected" static="no" mutable="no">
+        <type>QSet&lt; <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> * &gt;</type>
+        <definition>QSet&lt;QCPItemPosition*&gt; QCPItemAnchor::mChildrenX</definition>
+        <argsstring></argsstring>
+        <name>mChildrenX</name>
+        <qualifiedname>QCPItemAnchor::mChildrenX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3587" column="8" bodyfile="qcustomplot.h" bodystart="3587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_item_anchor_1a3abe4eebd0683454d81c8341df6f7115" prot="protected" static="no" mutable="no">
+        <type>QSet&lt; <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> * &gt;</type>
+        <definition>QSet&lt;QCPItemPosition*&gt; QCPItemAnchor::mChildrenY</definition>
+        <argsstring></argsstring>
+        <name>mChildrenY</name>
+        <qualifiedname>QCPItemAnchor::mChildrenY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3587" column="19" bodyfile="qcustomplot.h" bodystart="3587" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_item_anchor_1aa9b8ddc062778e202a0be06a57d18d17" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPItemPosition</definition>
+        <argsstring></argsstring>
+        <name>QCPItemPosition</name>
+        <qualifiedname>QCPItemAnchor::QCPItemPosition</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3601" column="16" bodyfile="qcustomplot.h" bodystart="3601" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1a32573023c6fa65b4496f1f995e5bfa5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPItemAnchor::QCPItemAnchor</definition>
+        <argsstring>(QCustomPlot *parentPlot, QCPAbstractItem *parentItem, const QString &amp;name, int anchorId=-1)</argsstring>
+        <name>QCPItemAnchor</name>
+        <qualifiedname>QCPItemAnchor::QCPItemAnchor</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> *</type>
+          <declname>parentPlot</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_abstract_item" kindref="compound">QCPAbstractItem</ref> *</type>
+          <declname>parentItem</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>anchorId</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref>. You shouldn&apos;t create <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref> instances directly, even if you want to make a new item subclass. Use QCPAbstractItem::createAnchor instead, as explained in the subclassing section of the <ref refid="class_q_c_p_abstract_item" kindref="compound">QCPAbstractItem</ref> documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3572" column="3" bodyfile="qcustomplot.cpp" bodystart="12038" bodyend="12044"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1a1868559407600688ee4d1a4621e81ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>QCPItemAnchor::~QCPItemAnchor</definition>
+        <argsstring>()</argsstring>
+        <name>~QCPItemAnchor</name>
+        <qualifiedname>QCPItemAnchor::~QCPItemAnchor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3573" column="11" bodyfile="qcustomplot.cpp" bodystart="12046" bodyend="12059"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1aad37cdf5a3f63428f61be739014e212e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString QCPItemAnchor::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <qualifiedname>QCPItemAnchor::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3576" column="11" bodyfile="qcustomplot.h" bodystart="3576" bodyend="3576"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1a06dcfb7220d26eee93eef56ae66582cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QPointF</type>
+        <definition>QPointF QCPItemAnchor::pixelPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>pixelPosition</name>
+        <qualifiedname>QCPItemAnchor::pixelPosition</qualifiedname>
+        <reimplementedby refid="class_q_c_p_item_position_1a8be9a4787635433edecc75164beb748d">pixelPosition</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the final absolute pixel position of the <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref> on the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> surface.</para>
+<para>The pixel information is internally retrieved via QCPAbstractItem::anchorPixelPosition of the parent item, <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref> is just an intermediary. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3577" column="19" bodyfile="qcustomplot.cpp" bodystart="12067" bodyend="12084"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1ab04819cd5bc6dc607a68413828313675" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> *</type>
+        <definition>virtual QCPItemPosition * QCPItemAnchor::toQCPItemPosition</definition>
+        <argsstring>()</argsstring>
+        <name>toQCPItemPosition</name>
+        <qualifiedname>QCPItemAnchor::toQCPItemPosition</qualifiedname>
+        <reimplementedby refid="class_q_c_p_item_position_1a0d2c5b823c99207eda710a37a4bb1dbf">toQCPItemPosition</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns <computeroutput>nullptr</computeroutput> if this instance is merely a <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref>, and a valid pointer of type QCPItemPosition* if it actually is a <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> (which is a subclass of <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref>).</para>
+<para>This safe downcast functionality could also be achieved with a dynamic_cast. However, <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> avoids dynamic_cast to work with projects that don&apos;t have RTTI support enabled (e.g. -fno-rtti flag with gcc compiler). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3590" column="27" bodyfile="qcustomplot.h" bodystart="3590" bodyend="3590"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1aef15daa640debfb11b0aeaa2116c6fbc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPItemAnchor::addChildX</definition>
+        <argsstring>(QCPItemPosition *pos)</argsstring>
+        <name>addChildX</name>
+        <qualifiedname>QCPItemAnchor::addChildX</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3593" column="8" bodyfile="qcustomplot.cpp" bodystart="12094" bodyend="12100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1a230b1d494cda63458e289bbe1b642599" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPItemAnchor::removeChildX</definition>
+        <argsstring>(QCPItemPosition *pos)</argsstring>
+        <name>removeChildX</name>
+        <qualifiedname>QCPItemAnchor::removeChildX</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3594" column="8" bodyfile="qcustomplot.cpp" bodystart="12108" bodyend="12112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1af05dc56f24536f0c7a9a0f57b58cea67" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPItemAnchor::addChildY</definition>
+        <argsstring>(QCPItemPosition *pos)</argsstring>
+        <name>addChildY</name>
+        <qualifiedname>QCPItemAnchor::addChildY</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3595" column="8" bodyfile="qcustomplot.cpp" bodystart="12122" bodyend="12128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_item_anchor_1aa2394911d8fff3bd958b9f4f1994b64d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPItemAnchor::removeChildY</definition>
+        <argsstring>(QCPItemPosition *pos)</argsstring>
+        <name>removeChildY</name>
+        <qualifiedname>QCPItemAnchor::removeChildY</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="3596" column="8" bodyfile="qcustomplot.cpp" bodystart="12136" bodyend="12140"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An anchor of an item to which positions can be attached to. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An item (<ref refid="class_q_c_p_abstract_item" kindref="compound">QCPAbstractItem</ref>) may have one or more anchors. Unlike <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref>, an anchor doesn&apos;t control anything on its item, but provides a way to tie other items via their positions to the anchor.</para>
+<para>For example, a <ref refid="class_q_c_p_item_rect" kindref="compound">QCPItemRect</ref> is defined by its positions <emphasis>topLeft</emphasis> and <emphasis>bottomRight</emphasis>. Additionally it has various anchors like <emphasis>top</emphasis>, <emphasis>topRight</emphasis> or <emphasis>bottomLeft</emphasis> etc. So you can attach the <emphasis>start</emphasis> (which is a <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref>) of a <ref refid="class_q_c_p_item_line" kindref="compound">QCPItemLine</ref> to one of the anchors by calling <ref refid="class_q_c_p_item_position_1ac094d67a95d2dceafa0d50b9db3a7e51" kindref="member">QCPItemPosition::setParentAnchor</ref> on <emphasis>start</emphasis>, passing the wanted anchor of the <ref refid="class_q_c_p_item_rect" kindref="compound">QCPItemRect</ref>. This way the start of the line will now always follow the respective anchor location on the rect item.</para>
+<para>Note that <ref refid="class_q_c_p_item_position" kindref="compound">QCPItemPosition</ref> derives from <ref refid="class_q_c_p_item_anchor" kindref="compound">QCPItemAnchor</ref>, so every position can also serve as an anchor to other positions.</para>
+<para>To learn how to provide anchors in your own item subclasses, see the subclassing section of the <ref refid="class_q_c_p_abstract_item" kindref="compound">QCPAbstractItem</ref> documentation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QCPItemAnchor</label>
+        <link refid="class_q_c_p_item_anchor"/>
+      </node>
+      <node id="2">
+        <label>QCPItemPosition</label>
+        <link refid="class_q_c_p_item_position"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>QCPAbstractItem</label>
+        <link refid="class_q_c_p_abstract_item"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPItemAnchor</label>
+        <link refid="class_q_c_p_item_anchor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mParentItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="12">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="18">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QObject</label>
+      </node>
+      <node id="3">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="3568" column="1" bodyfile="qcustomplot.h" bodystart="3569" bodyend="3602"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_item_anchor_1aef15daa640debfb11b0aeaa2116c6fbc" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>addChildX</name></member>
+      <member refid="class_q_c_p_item_anchor_1af05dc56f24536f0c7a9a0f57b58cea67" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>addChildY</name></member>
+      <member refid="class_q_c_p_item_anchor_1a00c62070333e8345976b579676ad3997" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mAnchorId</name></member>
+      <member refid="class_q_c_p_item_anchor_1a3c0bfd6e50f3b48e2a9b3824695b20f7" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mChildrenX</name></member>
+      <member refid="class_q_c_p_item_anchor_1a3abe4eebd0683454d81c8341df6f7115" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mChildrenY</name></member>
+      <member refid="class_q_c_p_item_anchor_1a23ad4d0ab0d2cbb41a7baf05bcf996ec" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mName</name></member>
+      <member refid="class_q_c_p_item_anchor_1a80fad480ad3bb980446ed6ebc00818ae" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mParentItem</name></member>
+      <member refid="class_q_c_p_item_anchor_1a59b968410831ba91a25cc75a77dde6f5" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_item_anchor_1aad37cdf5a3f63428f61be739014e212e" prot="public" virt="non-virtual"><scope>QCPItemAnchor</scope><name>name</name></member>
+      <member refid="class_q_c_p_item_anchor_1a06dcfb7220d26eee93eef56ae66582cb" prot="public" virt="virtual"><scope>QCPItemAnchor</scope><name>pixelPosition</name></member>
+      <member refid="class_q_c_p_item_anchor_1a32573023c6fa65b4496f1f995e5bfa5f" prot="public" virt="non-virtual"><scope>QCPItemAnchor</scope><name>QCPItemAnchor</name></member>
+      <member refid="class_q_c_p_item_anchor_1aa9b8ddc062778e202a0be06a57d18d17" prot="private" virt="non-virtual"><scope>QCPItemAnchor</scope><name>QCPItemPosition</name></member>
+      <member refid="class_q_c_p_item_anchor_1a230b1d494cda63458e289bbe1b642599" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>removeChildX</name></member>
+      <member refid="class_q_c_p_item_anchor_1aa2394911d8fff3bd958b9f4f1994b64d" prot="protected" virt="non-virtual"><scope>QCPItemAnchor</scope><name>removeChildY</name></member>
+      <member refid="class_q_c_p_item_anchor_1ab04819cd5bc6dc607a68413828313675" prot="protected" virt="virtual"><scope>QCPItemAnchor</scope><name>toQCPItemPosition</name></member>
+      <member refid="class_q_c_p_item_anchor_1a1868559407600688ee4d1a4621e81ceb" prot="public" virt="virtual"><scope>QCPItemAnchor</scope><name>~QCPItemAnchor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

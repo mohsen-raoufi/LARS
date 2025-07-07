@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structkilo_light" kind="struct" language="C++" prot="public">
+    <compoundname>kiloLight</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkilo_light_1a906c9f6d406d977a304042a02f609749" prot="public" static="no" mutable="no">
+        <type>lightColour</type>
+        <definition>lightColour kiloLight::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <qualifiedname>kiloLight::col</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.h" line="120" column="17" bodyfile="tracker/kilobottracker_copy.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkilo_light_1a7f47efdb899bfdbb8c907f61cceccdb9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+        <definition>Point kiloLight::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>kiloLight::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.h" line="121" column="11" bodyfile="tracker/kilobottracker_copy.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Point</label>
+        <link refid="struct_point"/>
+      </node>
+      <node id="1">
+        <label>kiloLight</label>
+        <link refid="structkilo_light"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tracker/kilobottracker_copy.h" line="119" column="1" bodyfile="tracker/kilobottracker_copy.h" bodystart="119" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structkilo_light_1a906c9f6d406d977a304042a02f609749" prot="public" virt="non-virtual"><scope>kiloLight</scope><name>col</name></member>
+      <member refid="structkilo_light_1a7f47efdb899bfdbb8c907f61cceccdb9" prot="public" virt="non-virtual"><scope>kiloLight</scope><name>pos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

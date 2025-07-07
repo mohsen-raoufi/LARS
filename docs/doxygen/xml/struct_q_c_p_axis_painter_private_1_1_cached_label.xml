@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_q_c_p_axis_painter_private_1_1_cached_label" kind="struct" language="C++" prot="protected">
+    <compoundname>QCPAxisPainterPrivate::CachedLabel</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_q_c_p_axis_painter_private_1_1_cached_label_1a5f502db71c92e572f1e6f44f62c59d8e" prot="public" static="no" mutable="no">
+        <type>QPointF</type>
+        <definition>QPointF QCPAxisPainterPrivate::CachedLabel::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>QCPAxisPainterPrivate::CachedLabel::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2433" column="13" bodyfile="qcustomplot.h" bodystart="2433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_axis_painter_private_1_1_cached_label_1a461597cbd470914a9d24b64d16037a88" prot="public" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap QCPAxisPainterPrivate::CachedLabel::pixmap</definition>
+        <argsstring></argsstring>
+        <name>pixmap</name>
+        <qualifiedname>QCPAxisPainterPrivate::CachedLabel::pixmap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2434" column="13" bodyfile="qcustomplot.h" bodystart="2434" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="2431" column="3" bodyfile="qcustomplot.h" bodystart="2432" bodyend="2435"/>
+    <listofallmembers>
+      <member refid="struct_q_c_p_axis_painter_private_1_1_cached_label_1a5f502db71c92e572f1e6f44f62c59d8e" prot="public" virt="non-virtual"><scope>QCPAxisPainterPrivate::CachedLabel</scope><name>offset</name></member>
+      <member refid="struct_q_c_p_axis_painter_private_1_1_cached_label_1a461597cbd470914a9d24b64d16037a88" prot="public" virt="non-virtual"><scope>QCPAxisPainterPrivate::CachedLabel</scope><name>pixmap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

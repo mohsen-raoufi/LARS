@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="kilobot_8h" kind="file" language="C++">
+    <compoundname>kilobot.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">QPointF</includes>
+    <includes local="no">QVector</includes>
+    <includes local="no">QObject</includes>
+    <includedby refid="kilobot_8cpp" local="yes">Kilobot/kilobot.cpp</includedby>
+    <includedby refid="kilobotenvironment_8h" local="yes">Kilobot/kilobotenvironment.h</includedby>
+    <includedby refid="kilobotexperiment_8h" local="yes">Kilobot/kilobotexperiment.h</includedby>
+    <includedby refid="kilobotoverheadcontroller_8h" local="yes">Kilobot/kilobotoverheadcontroller.h</includedby>
+    <includedby refid="kilobottracker__copy_8h" local="yes">tracker/kilobottracker_copy.h</includedby>
+    <includedby refid="robottracker_8h" local="yes">tracker/robottracker.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Kilobot/kilobot.h</label>
+        <link refid="kilobot_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+      <node id="3">
+        <label>QPointF</label>
+      </node>
+      <node id="4">
+        <label>QVector</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>Kilobot/kilobot.h</label>
+        <link refid="kilobot_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Kilobot/kilobotenvironment.h</label>
+        <link refid="kilobotenvironment_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Kilobot/kilobotexperiment.h</label>
+        <link refid="kilobotexperiment_8h_source"/>
+      </node>
+      <node id="4">
+        <label>Kilobot/kilobotoverheadcontroller.h</label>
+        <link refid="kilobotoverheadcontroller_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+      </node>
+      <node id="6">
+        <label>tracker/kilobottracker_copy.h</label>
+        <link refid="kilobottracker__copy_8h_source"/>
+      </node>
+      <node id="7">
+        <label>tracker/robottracker.h</label>
+        <link refid="robottracker_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structkilobot__message" prot="public">kilobot_message</innerclass>
+    <innerclass refid="structkilobot__broadcast" prot="public">kilobot_broadcast</innerclass>
+    <innerclass refid="class_colour_buffer" prot="public">ColourBuffer</innerclass>
+    <innerclass refid="class_orientation_buffer" prot="public">OrientationBuffer</innerclass>
+    <innerclass refid="class_position_buffer" prot="public">PositionBuffer</innerclass>
+    <innerclass refid="class_kilobot" prot="public">Kilobot</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="kilobot_8h_1a7db6402ec62b0705b85a272428e14ae3" prot="public" static="no">
+        <name>uint8_t_LENGTH</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="36" column="9" bodyfile="Kilobot/kilobot.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1abc45f80fb294f89012accf48397fec03" prot="public" static="no">
+        <name>KILOBOT_MESSAGE_TYPE_LENGTH</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="37" column="9" bodyfile="Kilobot/kilobot.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1ae2c983de5c5933e01411f17068318a23" prot="public" static="no">
+        <name>KILOBOT_MESSAGE_DATA_LENGTH</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="38" column="9" bodyfile="Kilobot/kilobot.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1aa532bf132de2d6272ed40ec1f1bf2494" prot="public" static="no">
+        <name>KILOBOT_MAX_COLOUR</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="39" column="9" bodyfile="Kilobot/kilobot.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1a25005cbe7585242ca88c4538912412db" prot="public" static="no">
+        <name>KILOBOT_REFRESH_DELAY</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="40" column="9" bodyfile="Kilobot/kilobot.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1ae9e057bb870495f5868ed6bcf38a864b" prot="public" static="no">
+        <name>KILOBOT_MAX_ID</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="42" column="9" bodyfile="Kilobot/kilobot.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kilobot_8h_1aa383c9176e13e7036e5a5911b7913e81" prot="public" static="no">
+        <name>UNASSIGNED_ID</name>
+        <initializer>INT16_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="44" column="9" bodyfile="Kilobot/kilobot.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="kilobot_8h_1a5ae27081b74f814ca7bfc5182aa9f283" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lightColour</name>
+        <enumvalue id="kilobot_8h_1a5ae27081b74f814ca7bfc5182aa9f283aac132f2982b98bcaa3445e535a03ff75" prot="public">
+          <name>OFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a5ae27081b74f814ca7bfc5182aa9f283af80f9a890089d211842d59625e561f88" prot="public">
+          <name>RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a5ae27081b74f814ca7bfc5182aa9f283aa60bd322f93178d68184e30e162571ca" prot="public">
+          <name>GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a5ae27081b74f814ca7bfc5182aa9f283a35d6719cb4d7577c031b3d79057a1b79" prot="public">
+          <name>BLUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="15" column="1" bodyfile="Kilobot/kilobot.h" bodystart="15" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="enum" id="kilobot_8h_1a8810be9e45f032edb9314e71674e829b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>tracking_flags</name>
+        <enumvalue id="kilobot_8h_1a8810be9e45f032edb9314e71674e829ba91743bc3932693c4b8a6ca984e8a8437" prot="public">
+          <name>POS</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a8810be9e45f032edb9314e71674e829ba21447137d62c46e603b924d455e8cd12" prot="public">
+          <name>LED</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a8810be9e45f032edb9314e71674e829ba2f6f259dba1a383748771becb45639ef" prot="public">
+          <name>ADAPTIVE_LED</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kilobot_8h_1a8810be9e45f032edb9314e71674e829ba59b0dd0d260e722b287c37c6099128b8" prot="public">
+          <name>ROT</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="54" column="1" bodyfile="Kilobot/kilobot.h" bodystart="54" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="kilobot_8h_1aef2863aa72a857dc635deef586ffe05f" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t kilobot_id</definition>
+        <argsstring></argsstring>
+        <name>kilobot_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="22" column="18" bodyfile="Kilobot/kilobot.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kilobot_8h_1a0c86ee1121b58b61e06863a6ec21c049" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char kilobot_channel_colour</definition>
+        <argsstring></argsstring>
+        <name>kilobot_channel_colour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="23" column="23" bodyfile="Kilobot/kilobot.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kilobot_8h_1a9a7433df9379dc7c271b4136437ec6e5" prot="public" static="no">
+        <type>lightColour</type>
+        <definition>typedef lightColour kilobot_colour</definition>
+        <argsstring></argsstring>
+        <name>kilobot_colour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="70" column="21" bodyfile="Kilobot/kilobot.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Kilobot.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>16<sp/>Sep<sp/>2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>marshall</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>KILOBOT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPointF&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>lightColour<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>OFF,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>RED,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>GREEN,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>BLUE</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/>kilobot_id;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>kilobot_channel_colour;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//typedef<sp/>unsigned<sp/>char<sp/>kilobot_message_type;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="structkilobot__message" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>type<sp/>:4;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kilobot_id<sp/>id<sp/>:10;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>data<sp/>:10;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><ref refid="structkilobot__message" kindref="compound">kilobot_message</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structkilobot__broadcast" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkilobot__broadcast" kindref="compound">kilobot_broadcast</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QVector<sp/>&lt;<sp/>uint8_t<sp/>&gt;<sp/>data;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>uint8_t_LENGTH<sp/>10<sp/></highlight><highlight class="comment">//<sp/>in<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_MESSAGE_TYPE_LENGTH<sp/>4<sp/></highlight><highlight class="comment">//<sp/>in<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_MESSAGE_DATA_LENGTH<sp/>10<sp/></highlight><highlight class="comment">//<sp/>in<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_MAX_COLOUR<sp/>255<sp/></highlight><highlight class="comment">//<sp/>colour<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_REFRESH_DELAY<sp/>3<sp/></highlight><highlight class="comment">//<sp/>in<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KILOBOT_MAX_ID<sp/>1024<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNASSIGNED_ID<sp/>INT16_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*enum<sp/>tracking_type<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>POS_ONLY,</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>LED_ONLY,</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>ADAPTIVE_LED_ONLY,</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>POS_LED,</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>POS_ADAPTIVE_LED,</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">};*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>tracking_flags<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>POS<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>0,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>LED<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>1,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>ADAPTIVE_LED<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>2,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ROT<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>3</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*struct<sp/>kilobot_colour</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/>kilobot_channel_colour<sp/>r;</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>kilobot_channel_colour<sp/>g;</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>kilobot_channel_colour<sp/>b;</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">};*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>lightColour<sp/>kilobot_colour;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_colour_buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ColourBuffer{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>ColourBuffer()<sp/>:<sp/>ColourBuffer(1)<sp/>{}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>~ColourBuffer()<sp/>{}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>ColourBuffer(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addColour(lightColour<sp/>newColour);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>lightColour<sp/>getAvgColour();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>lightColour<sp/>getLastColour()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.at(buffer.size()-1);}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_size;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector<sp/>&lt;<sp/>lightColour<sp/>&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_orientation_buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">OrientationBuffer{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>OrientationBuffer()<sp/>:<sp/>OrientationBuffer(1)<sp/>{}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>~OrientationBuffer()<sp/>{}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>OrientationBuffer(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>:<sp/>buffer_size(size)<sp/>{}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addOrientation(QPointF<sp/>newOrientation);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getAvgOrientation();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getLastOrientation()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.at(buffer.size()-1);}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_size;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector<sp/>&lt;<sp/>QPointF<sp/>&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_position_buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PositionBuffer{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>PositionBuffer()<sp/>:<sp/>PositionBuffer(1)<sp/>{}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>~PositionBuffer()<sp/>{}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>PositionBuffer(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>:<sp/>buffer_size(size)<sp/>{}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addPosition(QPointF<sp/>newPosition);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getOrientationFromPositions();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getLastPosition()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer.at(buffer.size()-1);}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_size;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector<sp/>&lt;<sp/>QPointF<sp/>&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_kilobot" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Kilobot<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QObject<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>Kilobot(kilobot_id<sp/>identifier,<sp/>QPointF<sp/>position,<sp/>QPointF<sp/>velocity,<sp/>kilobot_colour<sp/>colourValues);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>Kilobot()<sp/>{}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>~Kilobot();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>Kilobot(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Kilobot&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>kilobot_id<sp/>getID();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setID(kilobot_id);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getPosition();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>getVelocity();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>kilobot_colour<sp/>getLedColour();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//kilobot_colour<sp/>resolveKilobotState(stateColours);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateState(QPointF<sp/>position,<sp/>QPointF<sp/>velocity,<sp/>kilobot_colour<sp/>colourValues);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kilobot_1aaf03cead4b32ad917de63f31334fc81f" kindref="member">updateHardware</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kilobot_1a67ecef49336cb57362d385006c7cab2c" kindref="member">updateExperiment</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lightThreshold<sp/>=<sp/>230;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_colour_buffer" kindref="compound">ColourBuffer</ref><sp/>colBuffer<sp/>=<sp/><ref refid="class_colour_buffer" kindref="compound">ColourBuffer</ref>(5);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_orientation_buffer" kindref="compound">OrientationBuffer</ref><sp/>velocityBuffer<sp/>=<sp/><ref refid="class_orientation_buffer" kindref="compound">OrientationBuffer</ref>(5);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_position_buffer" kindref="compound">PositionBuffer</ref><sp/>posBuffer<sp/>=<sp/><ref refid="class_position_buffer" kindref="compound">PositionBuffer</ref>(6);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendUpdateToHardware(Kilobot);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendUpdateToExperiment(Kilobot*,Kilobot);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>kilobot_id<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>UNASSIGNED_ID;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>pos<sp/>=<sp/>QPointF(0,0);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>QPointF<sp/>vel<sp/>=<sp/>QPointF(1,1);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>kilobot_colour<sp/>col<sp/>=<sp/>OFF;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>KILOBOT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Kilobot/kilobot.h"/>
+  </compounddef>
+</doxygen>

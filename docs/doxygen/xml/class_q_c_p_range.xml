@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_range" kind="class" language="C++" prot="public">
+    <compoundname>QCPRange</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_q_c_p_range_1aa3aca3edb14f7ca0c85d912647b91745" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPRange::lower</definition>
+        <argsstring></argsstring>
+        <name>lower</name>
+        <qualifiedname>QCPRange::lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="799" column="10" bodyfile="qcustomplot.h" bodystart="799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_range_1ae44eb3aafe1d0e2ed34b499b6d2e074f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPRange::upper</definition>
+        <argsstring></argsstring>
+        <name>upper</name>
+        <qualifiedname>QCPRange::upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="799" column="16" bodyfile="qcustomplot.h" bodystart="799" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_q_c_p_range_1ab46d3bc95030ee25efda41b89e2b616b" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double QCPRange::minRange</definition>
+        <argsstring></argsstring>
+        <name>minRange</name>
+        <qualifiedname>QCPRange::minRange</qualifiedname>
+        <initializer>= 1e-280</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum range size (<emphasis>upper</emphasis> - <emphasis>lower</emphasis>) the range changing functions will accept. Smaller intervals would cause errors due to the 11-bit exponent of double precision numbers, corresponding to a minimum magnitude of roughly 1e-308.</para>
+<para><simplesect kind="warning"><para>Do not use this constant to indicate &quot;arbitrarily small&quot; values in plotting logic (as values that will appear in the plot)! It is intended only as a bound to compare against, e.g. to prevent axis ranges from obtaining underflowing ranges.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">validRange</ref>, <ref refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" kindref="member">maxRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="832" column="23" bodyfile="qcustomplot.h" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double QCPRange::maxRange</definition>
+        <argsstring></argsstring>
+        <name>maxRange</name>
+        <qualifiedname>QCPRange::maxRange</qualifiedname>
+        <initializer>= 1e250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum values (negative and positive) the range will accept in range-changing functions. Larger absolute values would cause errors due to the 11-bit exponent of double precision numbers, corresponding to a maximum magnitude of roughly 1e308.</para>
+<para><simplesect kind="warning"><para>Do not use this constant to indicate &quot;arbitrarily large&quot; values in plotting logic (as values that will appear in the plot)! It is intended only as a bound to compare against, e.g. to prevent axis ranges from obtaining overflowing ranges.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">validRange</ref>, <ref refid="class_q_c_p_range_1ab46d3bc95030ee25efda41b89e2b616b" kindref="member">minRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="833" column="23" bodyfile="qcustomplot.h" bodystart="833" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_range_1aca158d7e69702cee5d77d10a269b01e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPRange::QCPRange</definition>
+        <argsstring>()</argsstring>
+        <name>QCPRange</name>
+        <qualifiedname>QCPRange::QCPRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a range with <emphasis>lower</emphasis> and <emphasis>upper</emphasis> set to zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="801" column="3" bodyfile="qcustomplot.cpp" bodystart="1927" bodyend="1931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a1d9d84d084c8f368fdedd42e0978d405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPRange::QCPRange</definition>
+        <argsstring>(double lower, double upper)</argsstring>
+        <name>QCPRange</name>
+        <qualifiedname>QCPRange::QCPRange</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Constructs a range with the specified <emphasis>lower</emphasis> and <emphasis>upper</emphasis> values.</para>
+<para>The resulting range will be normalized (see <ref refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" kindref="member">normalize</ref>), so if <emphasis>lower</emphasis> is not numerically smaller than <emphasis>upper</emphasis>, they will be swapped. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="802" column="3" bodyfile="qcustomplot.cpp" bodystart="1940" bodyend="1945"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a9f8d1fdcf4b6d19779f1c3d9a14b09c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPRange::operator==</definition>
+        <argsstring>(const QCPRange &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>QCPRange::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="804" column="8" bodyfile="qcustomplot.h" bodystart="804" bodyend="804"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a4827a37c83b8bb4bf53fcf8f6a257e77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPRange::operator!=</definition>
+        <argsstring>(const QCPRange &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>QCPRange::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="805" column="8" bodyfile="qcustomplot.h" bodystart="805" bodyend="805"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1afea7c1aa7d08f061cd9bd8832f957df8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+        <definition>QCPRange &amp; QCPRange::operator+=</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>QCPRange::operator+=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds <emphasis>value</emphasis> to both boundaries of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="807" column="12" bodyfile="qcustomplot.h" bodystart="807" bodyend="807"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a95894bcb15a16a75ca564091374e2191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+        <definition>QCPRange &amp; QCPRange::operator-=</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>QCPRange::operator-=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subtracts <emphasis>value</emphasis> from both boundaries of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="808" column="12" bodyfile="qcustomplot.h" bodystart="808" bodyend="808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a6876aa9620ff2f0f7f1873f998372cef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+        <definition>QCPRange &amp; QCPRange::operator*=</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>QCPRange::operator*=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiplies both boundaries of the range by <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="809" column="12" bodyfile="qcustomplot.h" bodystart="809" bodyend="809"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a6137d8682b6835ace840730b4c1e2d63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+        <definition>QCPRange &amp; QCPRange::operator/=</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>operator/=</name>
+        <qualifiedname>QCPRange::operator/=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Divides both boundaries of the range by <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="810" column="12" bodyfile="qcustomplot.h" bodystart="810" bodyend="810"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a62326e7cc4316b96df6a60813230e63f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPRange::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>QCPRange::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the size of the range, i.e. <emphasis>upper-<emphasis>lower</emphasis> </emphasis> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="818" column="10" bodyfile="qcustomplot.h" bodystart="818" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1af57d4a37a45d0101177ca30fae5d4ca8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPRange::center</definition>
+        <argsstring>() const</argsstring>
+        <name>center</name>
+        <qualifiedname>QCPRange::center</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the center of the range, i.e. (<emphasis>upper+<emphasis>lower</emphasis>)*0</emphasis>.5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="819" column="10" bodyfile="qcustomplot.h" bodystart="819" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPRange::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <qualifiedname>QCPRange::normalize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes sure <emphasis>lower</emphasis> is numerically smaller than <emphasis>upper</emphasis>. If this is not the case, the values are swapped. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="820" column="8" bodyfile="qcustomplot.h" bodystart="820" bodyend="820"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a0fa1bc8048be50d52bea93a8caf08305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPRange::expand</definition>
+        <argsstring>(const QCPRange &amp;otherRange)</argsstring>
+        <name>expand</name>
+        <qualifiedname>QCPRange::expand</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>otherRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Expands this range such that <emphasis>otherRange</emphasis> is contained in the new range. It is assumed that both this range and <emphasis>otherRange</emphasis> are normalized (see <ref refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" kindref="member">normalize</ref>).</para>
+<para>If this range contains NaN as lower or upper bound, it will be replaced by the respective bound of <emphasis>otherRange</emphasis>.</para>
+<para>If <emphasis>otherRange</emphasis> is already inside the current range, this function does nothing.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_range_1a9cbfb7cd06eac1839cae981e05c19633" kindref="member">expanded</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="821" column="8" bodyfile="qcustomplot.cpp" bodystart="1959" bodyend="1965"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a5fa977db0a4b7800075c629c62cf5e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPRange::expand</definition>
+        <argsstring>(double includeCoord)</argsstring>
+        <name>expand</name>
+        <qualifiedname>QCPRange::expand</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>includeCoord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Expands this range such that <emphasis>includeCoord</emphasis> is contained in the new range. It is assumed that this range is normalized (see <ref refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" kindref="member">normalize</ref>).</para>
+<para>If this range contains NaN as lower or upper bound, the respective bound will be set to <emphasis>includeCoord</emphasis>.</para>
+<para>If <emphasis>includeCoord</emphasis> is already inside the current range, this function does nothing.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_range_1a0fa1bc8048be50d52bea93a8caf08305" kindref="member">expand</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="822" column="8" bodyfile="qcustomplot.cpp" bodystart="1979" bodyend="1985"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a9cbfb7cd06eac1839cae981e05c19633" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPRange::expanded</definition>
+        <argsstring>(const QCPRange &amp;otherRange) const</argsstring>
+        <name>expanded</name>
+        <qualifiedname>QCPRange::expanded</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>otherRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Returns an expanded range that contains this and <emphasis>otherRange</emphasis>. It is assumed that both this range and <emphasis>otherRange</emphasis> are normalized (see <ref refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" kindref="member">normalize</ref>).</para>
+<para>If this range contains NaN as lower or upper bound, the returned range&apos;s bound will be taken from <emphasis>otherRange</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_range_1a0fa1bc8048be50d52bea93a8caf08305" kindref="member">expand</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="823" column="12" bodyfile="qcustomplot.cpp" bodystart="1998" bodyend="2003"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1af81d70f1add7233d73a19dcbe5decb2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPRange::expanded</definition>
+        <argsstring>(double includeCoord) const</argsstring>
+        <name>expanded</name>
+        <qualifiedname>QCPRange::expanded</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>includeCoord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Returns an expanded range that includes the specified <emphasis>includeCoord</emphasis>. It is assumed that this range is normalized (see <ref refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" kindref="member">normalize</ref>).</para>
+<para>If this range contains NaN as lower or upper bound, the returned range&apos;s bound will be set to <emphasis>includeCoord</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_range_1a0fa1bc8048be50d52bea93a8caf08305" kindref="member">expand</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="824" column="12" bodyfile="qcustomplot.cpp" bodystart="2015" bodyend="2020"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a22151e18d961d762d25721211e89c2e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPRange::bounded</definition>
+        <argsstring>(double lowerBound, double upperBound) const</argsstring>
+        <name>bounded</name>
+        <qualifiedname>QCPRange::bounded</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>lowerBound</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upperBound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns this range, possibly modified to not exceed the bounds provided as <emphasis>lowerBound</emphasis> and <emphasis>upperBound</emphasis>. If possible, the size of the current range is preserved in the process.</para>
+<para>If the range shall only be bounded at the lower side, you can set <emphasis>upperBound</emphasis> to <ref refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" kindref="member">QCPRange::maxRange</ref>. If it shall only be bounded at the upper side, set <emphasis>lowerBound</emphasis> to -<ref refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" kindref="member">QCPRange::maxRange</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="825" column="12" bodyfile="qcustomplot.cpp" bodystart="2030" bodyend="2051"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a3d66288d66e1d6df3636075eb42502ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPRange::sanitizedForLogScale</definition>
+        <argsstring>() const</argsstring>
+        <name>sanitizedForLogScale</name>
+        <qualifiedname>QCPRange::sanitizedForLogScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a sanitized version of the range. Sanitized means for logarithmic scales, that the range won&apos;t span the positive and negative sign domain, i.e. contain zero. Further <emphasis>lower</emphasis> will always be numerically smaller (or equal) to <emphasis>upper</emphasis>.</para>
+<para>If the original range does span positive and negative sign domains or contains zero, the returned range will try to approximate the original range as good as possible. If the positive interval of the original range is wider than the negative interval, the returned range will only contain the positive interval, with lower bound set to <emphasis>rangeFac</emphasis> or <emphasis>rangeFac</emphasis> *<emphasis>upper</emphasis>, whichever is closer to zero. Same procedure is used if the negative interval is wider than the positive interval, this time by changing the <emphasis>upper</emphasis> bound. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="826" column="12" bodyfile="qcustomplot.cpp" bodystart="2065" bodyend="2108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a808751fdd9b17ef52327ba011df2e5f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPRange::sanitizedForLinScale</definition>
+        <argsstring>() const</argsstring>
+        <name>sanitizedForLinScale</name>
+        <qualifiedname>QCPRange::sanitizedForLinScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a sanitized version of the range. Sanitized means for linear scales, that <emphasis>lower</emphasis> will always be numerically smaller (or equal) to <emphasis>upper</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="827" column="12" bodyfile="qcustomplot.cpp" bodystart="2114" bodyend="2119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1ae9842b48b6d38dc5e9607358e3083cc8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPRange::contains</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>QCPRange::contains</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true when <emphasis>value</emphasis> lies within or exactly on the borders of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="828" column="8" bodyfile="qcustomplot.h" bodystart="828" bodyend="828"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_range_1aede14e69c31568a75bd3e9286603c9e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator+</definition>
+        <argsstring>(const QCPRange &amp;range, double value)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>QCPRange::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds <emphasis>value</emphasis> to both boundaries of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="811" column="32" bodyfile="qcustomplot.h" bodystart="851" bodyend="856"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_range_1aa7dd8efde53d115b7107826194879069" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator+</definition>
+        <argsstring>(double value, const QCPRange &amp;range)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>QCPRange::operator+</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds <emphasis>value</emphasis> to both boundaries of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="812" column="32" bodyfile="qcustomplot.h" bodystart="861" bodyend="866"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_range_1a797f82830b516646da8873f82e39e356" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator-</definition>
+        <argsstring>(const QCPRange &amp;range, double value)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>QCPRange::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subtracts <emphasis>value</emphasis> from both boundaries of the range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="813" column="32" bodyfile="qcustomplot.h" bodystart="871" bodyend="876"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_range_1a558b1248ff6a9e41fd5b2630555a8acc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator*</definition>
+        <argsstring>(const QCPRange &amp;range, double value)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>QCPRange::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiplies both boundaries of the range by <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="814" column="32" bodyfile="qcustomplot.h" bodystart="881" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_range_1a5cb2332f6957021f47cc768089f4f090" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator*</definition>
+        <argsstring>(double value, const QCPRange &amp;range)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>QCPRange::operator*</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiplies both boundaries of the range by <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="815" column="32" bodyfile="qcustomplot.h" bodystart="891" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_range_1a4b366a3a21974c88e09b0d39d4a24a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>const QCPRange operator/</definition>
+        <argsstring>(const QCPRange &amp;range, double value)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>QCPRange::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Divides both boundaries of the range by <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="816" column="32" bodyfile="qcustomplot.h" bodystart="901" bodyend="906"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPRange::validRange</definition>
+        <argsstring>(double lower, double upper)</argsstring>
+        <name>validRange</name>
+        <qualifiedname>QCPRange::validRange</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks, whether the specified range is within valid bounds, which are defined as <ref refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" kindref="member">QCPRange::maxRange</ref> and <ref refid="class_q_c_p_range_1ab46d3bc95030ee25efda41b89e2b616b" kindref="member">QCPRange::minRange</ref>. A valid range means: <itemizedlist>
+<listitem><para>range bounds within -maxRange and maxRange </para>
+</listitem>
+<listitem><para>range size above minRange </para>
+</listitem>
+<listitem><para>range size below maxRange </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="830" column="15" bodyfile="qcustomplot.cpp" bodystart="2129" bodyend="2137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_range_1a801b964752eaad6219be9d8a651ec2b3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPRange::validRange</definition>
+        <argsstring>(const QCPRange &amp;range)</argsstring>
+        <name>validRange</name>
+        <qualifiedname>QCPRange::validRange</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Checks, whether the specified range is within valid bounds, which are defined as <ref refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" kindref="member">QCPRange::maxRange</ref> and <ref refid="class_q_c_p_range_1ab46d3bc95030ee25efda41b89e2b616b" kindref="member">QCPRange::minRange</ref>. A valid range means: <itemizedlist>
+<listitem><para>range bounds within -maxRange and maxRange </para>
+</listitem>
+<listitem><para>range size above minRange </para>
+</listitem>
+<listitem><para>range size below maxRange </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="831" column="15" bodyfile="qcustomplot.cpp" bodystart="2148" bodyend="2156"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="related">
+      <memberdef kind="function" id="class_q_c_p_range_1ab4b7d434541ec2e2e00ef3764dde90d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>QDebug</type>
+        <definition>QDebug operator&lt;&lt;</definition>
+        <argsstring>(QDebug d, const QCPRange &amp;range)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>QCPRange::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>QDebug</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints <emphasis>range</emphasis> in a human readable format to the qDebug output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="842" column="8" bodyfile="qcustomplot.h" bodystart="842" bodyend="846"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the range an axis is encompassing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>contains a <emphasis>lower</emphasis> and <emphasis>upper</emphasis> double value and provides convenience input, output and modification functions.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_axis_1aebdfea5d44c3a0ad2b4700cd4d25b641" kindref="member">QCPAxis::setRange</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="796" column="1" bodyfile="qcustomplot.h" bodystart="797" bodyend="835"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_range_1a22151e18d961d762d25721211e89c2e5" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>bounded</name></member>
+      <member refid="class_q_c_p_range_1af57d4a37a45d0101177ca30fae5d4ca8" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>center</name></member>
+      <member refid="class_q_c_p_range_1ae9842b48b6d38dc5e9607358e3083cc8" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>contains</name></member>
+      <member refid="class_q_c_p_range_1a0fa1bc8048be50d52bea93a8caf08305" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>expand</name></member>
+      <member refid="class_q_c_p_range_1a5fa977db0a4b7800075c629c62cf5e80" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>expand</name></member>
+      <member refid="class_q_c_p_range_1a9cbfb7cd06eac1839cae981e05c19633" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>expanded</name></member>
+      <member refid="class_q_c_p_range_1af81d70f1add7233d73a19dcbe5decb2e" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>expanded</name></member>
+      <member refid="class_q_c_p_range_1aa3aca3edb14f7ca0c85d912647b91745" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>lower</name></member>
+      <member refid="class_q_c_p_range_1a5ca51e7a2dc5dc0d49527ab171fe1f4f" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>maxRange</name></member>
+      <member refid="class_q_c_p_range_1ab46d3bc95030ee25efda41b89e2b616b" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>minRange</name></member>
+      <member refid="class_q_c_p_range_1af914a7740269b0604d0827c634a878a9" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>normalize</name></member>
+      <member refid="class_q_c_p_range_1a4827a37c83b8bb4bf53fcf8f6a257e77" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator!=</name></member>
+      <member refid="class_q_c_p_range_1a558b1248ff6a9e41fd5b2630555a8acc" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator*</name></member>
+      <member refid="class_q_c_p_range_1a5cb2332f6957021f47cc768089f4f090" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator*</name></member>
+      <member refid="class_q_c_p_range_1a6876aa9620ff2f0f7f1873f998372cef" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator*=</name></member>
+      <member refid="class_q_c_p_range_1aede14e69c31568a75bd3e9286603c9e0" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator+</name></member>
+      <member refid="class_q_c_p_range_1aa7dd8efde53d115b7107826194879069" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator+</name></member>
+      <member refid="class_q_c_p_range_1afea7c1aa7d08f061cd9bd8832f957df8" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator+=</name></member>
+      <member refid="class_q_c_p_range_1a797f82830b516646da8873f82e39e356" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator-</name></member>
+      <member refid="class_q_c_p_range_1a95894bcb15a16a75ca564091374e2191" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator-=</name></member>
+      <member refid="class_q_c_p_range_1a4b366a3a21974c88e09b0d39d4a24a4b" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator/</name></member>
+      <member refid="class_q_c_p_range_1a6137d8682b6835ace840730b4c1e2d63" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator/=</name></member>
+      <member refid="class_q_c_p_range_1ab4b7d434541ec2e2e00ef3764dde90d8" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_q_c_p_range_1a9f8d1fdcf4b6d19779f1c3d9a14b09c9" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>operator==</name></member>
+      <member refid="class_q_c_p_range_1aca158d7e69702cee5d77d10a269b01e2" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>QCPRange</name></member>
+      <member refid="class_q_c_p_range_1a1d9d84d084c8f368fdedd42e0978d405" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>QCPRange</name></member>
+      <member refid="class_q_c_p_range_1a808751fdd9b17ef52327ba011df2e5f1" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>sanitizedForLinScale</name></member>
+      <member refid="class_q_c_p_range_1a3d66288d66e1d6df3636075eb42502ee" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>sanitizedForLogScale</name></member>
+      <member refid="class_q_c_p_range_1a62326e7cc4316b96df6a60813230e63f" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>size</name></member>
+      <member refid="class_q_c_p_range_1ae44eb3aafe1d0e2ed34b499b6d2e074f" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>upper</name></member>
+      <member refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>validRange</name></member>
+      <member refid="class_q_c_p_range_1a801b964752eaad6219be9d8a651ec2b3" prot="public" virt="non-virtual"><scope>QCPRange</scope><name>validRange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

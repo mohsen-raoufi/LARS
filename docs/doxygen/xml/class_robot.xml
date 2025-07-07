@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_robot" kind="class" language="C++" prot="public">
+    <compoundname>Robot</compoundname>
+    <basecompoundref refid="class_mobile_object" prot="public" virt="non-virtual">MobileObject</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_robot_1a4fc7c70ae20623f05e06f2ecb388b6c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Robot::Robot</definition>
+        <argsstring>()</argsstring>
+        <name>Robot</name>
+        <qualifiedname>Robot::Robot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/robot.h" line="14" column="5" bodyfile="ui/robot.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_robot_1aaa4f916978c6b49d6bd98c520e6237a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Robot::seenAt</definition>
+        <argsstring>(vector&lt; Position &gt; p, double t, int c)</argsstring>
+        <name>seenAt</name>
+        <qualifiedname>Robot::seenAt</qualifiedname>
+        <reimplements refid="class_mobile_object_1afd1c5a49bcda5dfa7566dd62281fd288">seenAt</reimplements>
+        <param>
+          <type>vector&lt; <ref refid="struct_position" kindref="compound">Position</ref> &gt;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/robot.h" line="15" column="18" bodyfile="ui/robot.cpp" bodystart="9" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MobileObject</label>
+        <link refid="class_mobile_object"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>Robot</label>
+        <link refid="class_robot"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MobileObject</label>
+        <link refid="class_mobile_object"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pos</edgelabel>
+          <edgelabel>pos_predicted</edgelabel>
+          <edgelabel>vel</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>last_post</edgelabel>
+          <edgelabel>vel_post</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Position</label>
+        <link refid="struct_position"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PositionTime</label>
+        <link refid="struct_position_time"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>Robot</label>
+        <link refid="class_robot"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>rcsc::Vector2D</label>
+        <link refid="classrcsc_1_1_vector2_d"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>INVALIDATED</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ui/robot.h" line="9" column="1" bodyfile="ui/robot.h" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_mobile_object_1a33edf1f95eb69a0b6531e37c4d05c8d8" prot="protected" virt="non-virtual"><scope>Robot</scope><name>appendPostc</name></member>
+      <member refid="class_mobile_object_1acfcd06b7c80f98f1fa2d17adcd1c7553" prot="public" virt="non-virtual"><scope>Robot</scope><name>camera_timeout</name></member>
+      <member refid="class_mobile_object_1a3535facf70974c0ef10eb4a9ef985cb0" prot="public" virt="non-virtual"><scope>Robot</scope><name>isValid</name></member>
+      <member refid="class_mobile_object_1a7e5efb54b940f3d9863ddfe845459f39" prot="protected" virt="non-virtual"><scope>Robot</scope><name>last_post</name></member>
+      <member refid="class_mobile_object_1a599e40471b9a94fe3ff57fb3c327989f" prot="public" virt="non-virtual"><scope>Robot</scope><name>MobileObject</name></member>
+      <member refid="class_mobile_object_1a71fc62afafcc768f2775b05a4038ed49" prot="public" virt="non-virtual"><scope>Robot</scope><name>pos</name></member>
+      <member refid="class_mobile_object_1a981b6987ee82b421ffe16d5837cf2afc" prot="public" virt="non-virtual"><scope>Robot</scope><name>pos_predicted</name></member>
+      <member refid="class_robot_1a4fc7c70ae20623f05e06f2ecb388b6c4" prot="public" virt="non-virtual"><scope>Robot</scope><name>Robot</name></member>
+      <member refid="class_robot_1aaa4f916978c6b49d6bd98c520e6237a2" prot="public" virt="virtual"><scope>Robot</scope><name>seenAt</name></member>
+      <member refid="class_mobile_object_1a23d08dc43a53fc43bf0d821483f03674" prot="public" virt="non-virtual"><scope>Robot</scope><name>time</name></member>
+      <member refid="class_mobile_object_1a8244448ecee28e0e9366a066cc33a33f" prot="protected" virt="non-virtual"><scope>Robot</scope><name>timer_seen</name></member>
+      <member refid="class_mobile_object_1a07c04890cf5c505201791ca9c530f15e" prot="protected" virt="non-virtual"><scope>Robot</scope><name>timer_seen_interval</name></member>
+      <member refid="class_mobile_object_1a1e401dc80d51db76b76cda7b7daf2588" prot="protected" virt="non-virtual"><scope>Robot</scope><name>timer_vel</name></member>
+      <member refid="class_mobile_object_1a6dd6cd82b80596082d8c1733525fb41f" prot="protected" virt="non-virtual"><scope>Robot</scope><name>timer_vel_interval</name></member>
+      <member refid="class_mobile_object_1aef5fe9a6fdfe2b33070213323334aef7" prot="public" virt="non-virtual"><scope>Robot</scope><name>vel</name></member>
+      <member refid="class_mobile_object_1a58facf6a8a928979db3c900b3c6f1ad3" prot="protected" virt="non-virtual"><scope>Robot</scope><name>vel_calc</name></member>
+      <member refid="class_mobile_object_1a6df4e76fab4bf59cca806f33945c252c" prot="protected" virt="non-virtual"><scope>Robot</scope><name>vel_post</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

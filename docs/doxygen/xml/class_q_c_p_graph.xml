@@ -1,0 +1,1667 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_graph" kind="class" language="C++" prot="public">
+    <compoundname>QCPGraph</compoundname>
+    <basecompoundref refid="class_q_c_p_abstract_plottable1_d" prot="public" virt="non-virtual">QCPAbstractPlottable1D&lt; QCPGraphData &gt;</basecompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LineStyle</name>
+        <qualifiedname>QCPGraph::LineStyle</qualifiedname>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859aea9591b933733cc7b20786b71e60fa04" prot="public">
+          <name>lsNone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>data points are not connected with any lines (e.g. data only represented with symbols according to the scatter style, see <ref refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" kindref="member">setScatterStyle</ref>) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515" prot="public">
+          <name>lsLine</name>
+          <briefdescription>
+<para>data points are connected by a straight line </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859ae10568bda57836487d9dec5eba1d6c6e" prot="public">
+          <name>lsStepLeft</name>
+          <briefdescription>
+<para>line is drawn as steps where the step height is the value of the left data point </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a9c37951f7d11aa070100fd16f2935c9e" prot="public">
+          <name>lsStepRight</name>
+          <briefdescription>
+<para>line is drawn as steps where the step height is the value of the right data point </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a5adf7b04da215a40a764c21294ea7366" prot="public">
+          <name>lsStepCenter</name>
+          <briefdescription>
+<para>line is drawn as steps where the step is in between two data points </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859aa3b358b4ae7cca94aceeb8e529c12ebb" prot="public">
+          <name>lsImpulse</name>
+          <briefdescription>
+<para>each data point is represented by a line parallel to the value axis, which reaches from the data point to the zero-value-line </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines how the graph&apos;s line is represented visually in the plot. The line is drawn with the current pen of the graph (<ref refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" kindref="member">setPen</ref>). <simplesect kind="see"><para><ref refid="class_q_c_p_graph_1a513fecccff5b2a50ce53f665338c60ff" kindref="member">setLineStyle</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5473" column="3" bodyfile="qcustomplot.h" bodystart="5473" bodyend="5480"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_graph_1a8604fd98402035a63375849f7341ee25" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859" kindref="member">LineStyle</ref></type>
+        <definition>LineStyle QCPGraph::mLineStyle</definition>
+        <argsstring></argsstring>
+        <name>mLineStyle</name>
+        <qualifiedname>QCPGraph::mLineStyle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5514" column="13" bodyfile="qcustomplot.h" bodystart="5514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_graph_1a4aa36241f166ccd1f75fc8f24e4a3247" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_scatter_style" kindref="compound">QCPScatterStyle</ref></type>
+        <definition>QCPScatterStyle QCPGraph::mScatterStyle</definition>
+        <argsstring></argsstring>
+        <name>mScatterStyle</name>
+        <qualifiedname>QCPGraph::mScatterStyle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5515" column="19" bodyfile="qcustomplot.h" bodystart="5515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_graph_1a4ca1e50fbfe8307022b42a6f6178fae0" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPGraph::mScatterSkip</definition>
+        <argsstring></argsstring>
+        <name>mScatterSkip</name>
+        <qualifiedname>QCPGraph::mScatterSkip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5516" column="7" bodyfile="qcustomplot.h" bodystart="5516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_graph_1a2f1777c7accf8244fc640c33f0b04577" prot="protected" static="no" mutable="no">
+        <type>QPointer&lt; <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> &gt;</type>
+        <definition>QPointer&lt;QCPGraph&gt; QCPGraph::mChannelFillGraph</definition>
+        <argsstring></argsstring>
+        <name>mChannelFillGraph</name>
+        <qualifiedname>QCPGraph::mChannelFillGraph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5517" column="12" bodyfile="qcustomplot.h" bodystart="5517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_graph_1aa951e78aeba714cf443be6da2e52502e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPGraph::mAdaptiveSampling</definition>
+        <argsstring></argsstring>
+        <name>mAdaptiveSampling</name>
+        <qualifiedname>QCPGraph::mAdaptiveSampling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5518" column="8" bodyfile="qcustomplot.h" bodystart="5518" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_graph_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCustomPlot</definition>
+        <argsstring></argsstring>
+        <name>QCustomPlot</name>
+        <qualifiedname>QCPGraph::QCustomPlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5554" column="16" bodyfile="qcustomplot.h" bodystart="5554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_graph_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPLegend</definition>
+        <argsstring></argsstring>
+        <name>QCPLegend</name>
+        <qualifiedname>QCPGraph::QCPLegend</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5555" column="16" bodyfile="qcustomplot.h" bodystart="5555" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_graph_1a0393a38cf7183cbf46348eb6cf9a5a6c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPGraph::QCPGraph</definition>
+        <argsstring>(QCPAxis *keyAxis, QCPAxis *valueAxis)</argsstring>
+        <name>QCPGraph</name>
+        <qualifiedname>QCPGraph::QCPGraph</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>keyAxis</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>valueAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a graph which uses <emphasis>keyAxis</emphasis> as its key axis (&quot;x&quot;) and <emphasis>valueAxis</emphasis> as its value axis (&quot;y&quot;). <emphasis>keyAxis</emphasis> and <emphasis>valueAxis</emphasis> must reside in the same <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance and not have the same orientation. If either of these restrictions is violated, a corresponding message is printed to the debug output (qDebug), the construction is not aborted, though.</para>
+<para>The created <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> is automatically registered with the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance inferred from <emphasis>keyAxis</emphasis>. This <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance takes ownership of the <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref>, so do not delete it manually but use <ref refid="class_q_custom_plot_1af3dafd56884208474f311d6226513ab2" kindref="member">QCustomPlot::removePlottable()</ref> instead.</para>
+<para>To directly create a graph inside a plot, you can also use the simpler <ref refid="class_q_custom_plot_1a2836a46e31d5aee174ae054c0aa6580b" kindref="member">QCustomPlot::addGraph</ref> function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5483" column="12" bodyfile="qcustomplot.cpp" bodystart="20860" bodyend="20876"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1aa8770e21b472d7ad00a1eca72a1c2d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>QCPGraph::~QCPGraph</definition>
+        <argsstring>() Q_DECL_OVERRIDE</argsstring>
+        <name>~QCPGraph</name>
+        <qualifiedname>QCPGraph::~QCPGraph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5484" column="11" bodyfile="qcustomplot.cpp" bodystart="20878" bodyend="20880"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a141aa31a1f19bbd0ce60f55eaeb9ea60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QSharedPointer&lt; <ref refid="class_q_c_p_data_container" kindref="compound">QCPGraphDataContainer</ref> &gt;</type>
+        <definition>QSharedPointer&lt; QCPGraphDataContainer &gt; QCPGraph::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>QCPGraph::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a shared pointer to the internal data storage of type QCPGraphDataContainer. You may use it to directly manipulate the data, which may be more convenient and faster than using the regular <ref refid="class_q_c_p_graph_1a1eae9429a316b008e2d99b2d65a54395" kindref="member">setData</ref> or <ref refid="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" kindref="member">addData</ref> methods. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5487" column="18" bodyfile="qcustomplot.h" bodystart="5487" bodyend="5487"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1ac3e6f4b3387338df45992b47691b2551" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859" kindref="member">LineStyle</ref></type>
+        <definition>LineStyle QCPGraph::lineStyle</definition>
+        <argsstring>() const</argsstring>
+        <name>lineStyle</name>
+        <qualifiedname>QCPGraph::lineStyle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5488" column="13" bodyfile="qcustomplot.h" bodystart="5488" bodyend="5488"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a36d5b641db08e27527827c212542bbbd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_scatter_style" kindref="compound">QCPScatterStyle</ref></type>
+        <definition>QCPScatterStyle QCPGraph::scatterStyle</definition>
+        <argsstring>() const</argsstring>
+        <name>scatterStyle</name>
+        <qualifiedname>QCPGraph::scatterStyle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5489" column="19" bodyfile="qcustomplot.h" bodystart="5489" bodyend="5489"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a44487a3a706605bb9fc97ad5e05d347e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPGraph::scatterSkip</definition>
+        <argsstring>() const</argsstring>
+        <name>scatterSkip</name>
+        <qualifiedname>QCPGraph::scatterSkip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5490" column="7" bodyfile="qcustomplot.h" bodystart="5490" bodyend="5490"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1aed4515b717d6d97d6482ebc0db6204ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> *</type>
+        <definition>QCPGraph * QCPGraph::channelFillGraph</definition>
+        <argsstring>() const</argsstring>
+        <name>channelFillGraph</name>
+        <qualifiedname>QCPGraph::channelFillGraph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5491" column="12" bodyfile="qcustomplot.h" bodystart="5491" bodyend="5491"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a1ba934b9621270b9a40fcdd2d9ba2adb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPGraph::adaptiveSampling</definition>
+        <argsstring>() const</argsstring>
+        <name>adaptiveSampling</name>
+        <qualifiedname>QCPGraph::adaptiveSampling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5492" column="8" bodyfile="qcustomplot.h" bodystart="5492" bodyend="5492"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a1eae9429a316b008e2d99b2d65a54395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setData</definition>
+        <argsstring>(QSharedPointer&lt; QCPGraphDataContainer &gt; data)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPGraph::setData</qualifiedname>
+        <param>
+          <type>QSharedPointer&lt; <ref refid="class_q_c_p_data_container" kindref="compound">QCPGraphDataContainer</ref> &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data container with the provided <emphasis>data</emphasis> container.</para>
+<para>Since a QSharedPointer is used, multiple QCPGraphs may share the same data container safely. Modifying the data in the container will then affect all graphs that share the container. Sharing can be achieved by simply exchanging the data containers wrapped in shared pointers: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting></para>
+<para>If you do not wish to share containers, but create a copy from an existing container, rather use the <ref refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" kindref="member">QCPDataContainer&lt;DataType&gt;::set</ref> method on the graph&apos;s data container directly: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting></para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5495" column="8" bodyfile="qcustomplot.cpp" bodystart="20897" bodyend="20900"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a73578d786532132310a926c3cd529b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values, bool alreadySorted=false)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPGraph::setData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data with the provided points in <emphasis>keys</emphasis> and <emphasis>values</emphasis>. The provided vectors should have equal length. Else, the number of added points will be the size of the smallest vector.</para>
+<para>If you can guarantee that the passed data points are sorted by <emphasis>keys</emphasis> in ascending order, you can set <emphasis>alreadySorted</emphasis> to true, to improve performance by saving a sorting run.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5496" column="8" bodyfile="qcustomplot.cpp" bodystart="20913" bodyend="20917"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a513fecccff5b2a50ce53f665338c60ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setLineStyle</definition>
+        <argsstring>(LineStyle ls)</argsstring>
+        <name>setLineStyle</name>
+        <qualifiedname>QCPGraph::setLineStyle</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859" kindref="member">LineStyle</ref></type>
+          <declname>ls</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets how the single data points are connected in the plot. For scatter-only plots, set <emphasis>ls</emphasis> to <ref refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859aea9591b933733cc7b20786b71e60fa04" kindref="member">lsNone</ref> and <ref refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" kindref="member">setScatterStyle</ref> to the desired scatter style.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" kindref="member">setScatterStyle</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5497" column="8" bodyfile="qcustomplot.cpp" bodystart="20925" bodyend="20928"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setScatterStyle</definition>
+        <argsstring>(const QCPScatterStyle &amp;style)</argsstring>
+        <name>setScatterStyle</name>
+        <qualifiedname>QCPGraph::setScatterStyle</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_scatter_style" kindref="compound">QCPScatterStyle</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the visual appearance of single data points in the plot. If set to <ref refid="class_q_c_p_scatter_style_1adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022" kindref="member">QCPScatterStyle::ssNone</ref>, no scatter points are drawn (e.g. for line-only-plots with appropriate line style).</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_scatter_style" kindref="compound">QCPScatterStyle</ref>, <ref refid="class_q_c_p_graph_1a513fecccff5b2a50ce53f665338c60ff" kindref="member">setLineStyle</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5498" column="8" bodyfile="qcustomplot.cpp" bodystart="20936" bodyend="20939"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a17cebd3196f434258abb82ba6dc443f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setScatterSkip</definition>
+        <argsstring>(int skip)</argsstring>
+        <name>setScatterSkip</name>
+        <qualifiedname>QCPGraph::setScatterSkip</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If scatters are displayed (scatter style not <ref refid="class_q_c_p_scatter_style_1adb31525af6b680e6f1b7472e43859349abd144c291ca274f77053ec68cab6c022" kindref="member">QCPScatterStyle::ssNone</ref>), <emphasis>skip</emphasis> number of scatter points are skipped/not drawn after every drawn scatter point.</para>
+<para>This can be used to make the data appear sparser while for example still having a smooth line, and to improve performance for very high density plots.</para>
+<para>If <emphasis>skip</emphasis> is set to 0 (default), all scatter points are drawn.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" kindref="member">setScatterStyle</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5499" column="8" bodyfile="qcustomplot.cpp" bodystart="20952" bodyend="20955"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a2d03156df1b64037a2e36cfa50351ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setChannelFillGraph</definition>
+        <argsstring>(QCPGraph *targetGraph)</argsstring>
+        <name>setChannelFillGraph</name>
+        <qualifiedname>QCPGraph::setChannelFillGraph</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> *</type>
+          <declname>targetGraph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the target graph for filling the area between this graph and <emphasis>targetGraph</emphasis> with the current brush (<ref refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" kindref="member">setBrush</ref>).</para>
+<para>When <emphasis>targetGraph</emphasis> is set to 0, a normal graph fill to the zero-value-line will be shown. To disable any filling, set the brush to Qt::NoBrush.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" kindref="member">setBrush</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5500" column="8" bodyfile="qcustomplot.cpp" bodystart="20966" bodyend="20984"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1ab468cd600160f327836aa0644291e64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::setAdaptiveSampling</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setAdaptiveSampling</name>
+        <qualifiedname>QCPGraph::setAdaptiveSampling</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether adaptive sampling shall be used when plotting this graph. <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref>&apos;s adaptive sampling technique can drastically improve the replot performance for graphs with a larger number of points (e.g. above 10,000), without notably changing the appearance of the graph.</para>
+<para>By default, adaptive sampling is enabled. Even if enabled, <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> decides whether adaptive sampling shall actually be used on a per-graph basis. So leaving adaptive sampling enabled has no disadvantage in almost all cases.</para>
+<para><image type="html" name="adaptive-sampling-line.png">A line plot of 500,000 points without and with adaptive sampling</image>
+</para>
+<para>As can be seen, line plots experience no visual degradation from adaptive sampling. Outliers are reproduced reliably, as well as the overall shape of the data set. The replot time reduces dramatically though. This allows <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> to display large amounts of data in realtime.</para>
+<para><image type="html" name="adaptive-sampling-scatter.png">A scatter plot of 100,000 points without and with adaptive sampling</image>
+</para>
+<para>Care must be taken when using high-density scatter plots in combination with adaptive sampling. The adaptive sampling algorithm treats scatter plots more carefully than line plots which still gives a significant reduction of replot times, but not quite as much as for line plots. This is because scatter plots inherently need more data points to be preserved in order to still resemble the original, non-adaptive-sampling plot. As shown above, the results still aren&apos;t quite identical, as banding occurs for the outer data points. This is in fact intentional, such that the boundaries of the data cloud stay visible to the viewer. How strong the banding appears, depends on the point density, i.e. the number of points in the plot.</para>
+<para>For some situations with scatter plots it might thus be desirable to manually turn adaptive sampling off. For example, when saving the plot to disk. This can be achieved by setting <emphasis>enabled</emphasis> to false before issuing a command like <ref refid="class_q_custom_plot_1ac92cc9256d12f354b40a4be4600b5fb9" kindref="member">QCustomPlot::savePng</ref>, and setting <emphasis>enabled</emphasis> back to true afterwards. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5501" column="8" bodyfile="qcustomplot.cpp" bodystart="21017" bodyend="21020"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::addData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values, bool alreadySorted=false)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPGraph::addData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds the provided points in <emphasis>keys</emphasis> and <emphasis>values</emphasis> to the current data. The provided vectors should have equal length. Else, the number of added points will be the size of the smallest vector.</para>
+<para>If you can guarantee that the passed data points are sorted by <emphasis>keys</emphasis> in ascending order, you can set <emphasis>alreadySorted</emphasis> to true, to improve performance by saving a sorting run.</para>
+<para>Alternatively, you can also access and modify the data directly via the <ref refid="class_q_c_p_graph_1a141aa31a1f19bbd0ce60f55eaeb9ea60" kindref="member">data</ref> method, which returns a pointer to the internal data container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5504" column="8" bodyfile="qcustomplot.cpp" bodystart="21034" bodyend="21051"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a0bf98b1972286cfb7b1c4b7dd6ae2012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::addData</definition>
+        <argsstring>(double key, double value)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPGraph::addData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds the provided data point as <emphasis>key</emphasis> and <emphasis>value</emphasis> to the current data.</para>
+<para>Alternatively, you can also access and modify the data directly via the <ref refid="class_q_c_p_graph_1a141aa31a1f19bbd0ce60f55eaeb9ea60" kindref="member">data</ref> method, which returns a pointer to the internal data container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5505" column="8" bodyfile="qcustomplot.cpp" bodystart="21060" bodyend="21063"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1af524307eacb919827b88233ef7449ce3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPGraph::selectTest</definition>
+        <argsstring>(const QPointF &amp;pos, bool onlySelectable, QVariant *details=nullptr) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTest</name>
+        <qualifiedname>QCPGraph::selectTest</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable1_d_1a2f169c3c2989e5d08ec7a9e3eb56a261">selectTest</reimplements>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <param>
+          <type>QVariant *</type>
+          <declname>details</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements a selectTest specific to this plottable&apos;s point geometry.</para>
+<para>If <emphasis>details</emphasis> is not 0, it will be set to a <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref>, describing the closest data point to <emphasis>pos</emphasis>.</para>
+<para>\seebaseclassmethod <ref refid="class_q_c_p_abstract_plottable_1a8e4964b629802ce50e1427c7fb21d35b" kindref="member">QCPAbstractPlottable::selectTest</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5508" column="18" bodyfile="qcustomplot.cpp" bodystart="21073" bodyend="21092"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1aac47c6189e3aea46ea46939e5d14796c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPGraph::getKeyRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth) const Q_DECL_OVERRIDE</argsstring>
+        <name>getKeyRange</name>
+        <qualifiedname>QCPGraph::getKeyRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a56b4d9000f4de0de86c566c84eb05a21">getKeyRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that all data in this plottable span in the key axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_graph_1a8f773e56f191a61c06e129e90a604d77" kindref="member">getValueRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5509" column="20" bodyfile="qcustomplot.cpp" bodystart="21095" bodyend="21098"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a8f773e56f191a61c06e129e90a604d77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPGraph::getValueRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth, const QCPRange &amp;inKeyRange=QCPRange()) const Q_DECL_OVERRIDE</argsstring>
+        <name>getValueRange</name>
+        <qualifiedname>QCPGraph::getValueRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1aa81c95aec08d86cdd5407e48b83ab186">getValueRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>inKeyRange</declname>
+          <defval><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that the data points in the specified key range (<emphasis>inKeyRange</emphasis>) span in the value axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>If <emphasis>inKeyRange</emphasis> has both lower and upper bound set to zero (is equal to <computeroutput><ref refid="class_q_c_p_range" kindref="compound">QCPRange()</ref></computeroutput>), all data points are considered, without any restriction on the keys.</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_graph_1aac47c6189e3aea46ea46939e5d14796c" kindref="member">getKeyRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5510" column="20" bodyfile="qcustomplot.cpp" bodystart="21101" bodyend="21104"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_graph_1a2b0849598f06e834b43ce18cd13bcdc3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::draw</definition>
+        <argsstring>(QCPPainter *painter) Q_DECL_OVERRIDE</argsstring>
+        <name>draw</name>
+        <qualifiedname>QCPGraph::draw</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a453f676a5cee7bf846c5f0fa05ea84b3">draw</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5521" column="16" bodyfile="qcustomplot.cpp" bodystart="21107" bodyend="21172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a6efbab06c400bdb15e28b2d0a4ecc18a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::drawLegendIcon</definition>
+        <argsstring>(QCPPainter *painter, const QRectF &amp;rect) const Q_DECL_OVERRIDE</argsstring>
+        <name>drawLegendIcon</name>
+        <qualifiedname>QCPGraph::drawLegendIcon</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a71c259f4f96533d12df152c446b17425">drawLegendIcon</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5522" column="16" bodyfile="qcustomplot.cpp" bodystart="21175" bodyend="21207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a67c5ea573f604efd8bf121a0b7a380d1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::drawFill</definition>
+        <argsstring>(QCPPainter *painter, QVector&lt; QPointF &gt; *lines) const</argsstring>
+        <name>drawFill</name>
+        <qualifiedname>QCPGraph::drawFill</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>QVector&lt; QPointF &gt; *</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5525" column="16" bodyfile="qcustomplot.cpp" bodystart="21570" bodyend="21595"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1abeb0bbe81026c024bf3d508d13cf5e0e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::drawScatterPlot</definition>
+        <argsstring>(QCPPainter *painter, const QVector&lt; QPointF &gt; &amp;scatters, const QCPScatterStyle &amp;style) const</argsstring>
+        <name>drawScatterPlot</name>
+        <qualifiedname>QCPGraph::drawScatterPlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; &amp;</type>
+          <declname>scatters</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_scatter_style" kindref="compound">QCPScatterStyle</ref> &amp;</type>
+          <declname>style</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5526" column="16" bodyfile="qcustomplot.cpp" bodystart="21604" bodyend="21610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a4c3edacb2a11064bf2e16b322156aeda" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::drawLinePlot</definition>
+        <argsstring>(QCPPainter *painter, const QVector&lt; QPointF &gt; &amp;lines) const</argsstring>
+        <name>drawLinePlot</name>
+        <qualifiedname>QCPGraph::drawLinePlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; &amp;</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5527" column="16" bodyfile="qcustomplot.cpp" bodystart="21618" bodyend="21625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a217ef6bf6c5689eb1dcbe02187d2cc61" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::drawImpulsePlot</definition>
+        <argsstring>(QCPPainter *painter, const QVector&lt; QPointF &gt; &amp;lines) const</argsstring>
+        <name>drawImpulsePlot</name>
+        <qualifiedname>QCPGraph::drawImpulsePlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; &amp;</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5528" column="16" bodyfile="qcustomplot.cpp" bodystart="21635" bodyend="21647"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a1fed1c9d627d9d3b49a6206cc2e60fe1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::getOptimizedLineData</definition>
+        <argsstring>(QVector&lt; QCPGraphData &gt; *lineData, const QCPGraphDataContainer::const_iterator &amp;begin, const QCPGraphDataContainer::const_iterator &amp;end) const</argsstring>
+        <name>getOptimizedLineData</name>
+        <qualifiedname>QCPGraph::getOptimizedLineData</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; *</type>
+          <declname>lineData</declname>
+        </param>
+        <param>
+          <type>const QCPGraphDataContainer::const_iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const QCPGraphDataContainer::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5530" column="16" bodyfile="qcustomplot.cpp" bodystart="21661" bodyend="21739"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a5423245898537e375b9364cf26e89aea" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPGraph::getOptimizedScatterData</definition>
+        <argsstring>(QVector&lt; QCPGraphData &gt; *scatterData, QCPGraphDataContainer::const_iterator begin, QCPGraphDataContainer::const_iterator end) const</argsstring>
+        <name>getOptimizedScatterData</name>
+        <qualifiedname>QCPGraph::getOptimizedScatterData</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; *</type>
+          <declname>scatterData</declname>
+        </param>
+        <param>
+          <type>QCPGraphDataContainer::const_iterator</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>QCPGraphDataContainer::const_iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5531" column="16" bodyfile="qcustomplot.cpp" bodystart="21753" bodyend="21923"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a8599447a7f8cbbdcf0b94edcc11df560" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::getVisibleDataBounds</definition>
+        <argsstring>(QCPGraphDataContainer::const_iterator &amp;begin, QCPGraphDataContainer::const_iterator &amp;end, const QCPDataRange &amp;rangeRestriction) const</argsstring>
+        <name>getVisibleDataBounds</name>
+        <qualifiedname>QCPGraph::getVisibleDataBounds</qualifiedname>
+        <param>
+          <type>QCPGraphDataContainer::const_iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>QCPGraphDataContainer::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>rangeRestriction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method outputs the currently visible data range via <emphasis>begin</emphasis> and <emphasis>end</emphasis>. The returned range will also never exceed <emphasis>rangeRestriction</emphasis>.</para>
+<para>This method takes into account that the drawing of data lines at the axis rect border always requires the points just outside the visible axis range. So <emphasis>begin</emphasis> and <emphasis>end</emphasis> may actually indicate a range that contains one additional data point to the left and right of the visible axis range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5534" column="8" bodyfile="qcustomplot.cpp" bodystart="21934" bodyend="21951"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a563c6da2126300a4d9d2bdee30dad040" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::getLines</definition>
+        <argsstring>(QVector&lt; QPointF &gt; *lines, const QCPDataRange &amp;dataRange) const</argsstring>
+        <name>getLines</name>
+        <qualifiedname>QCPGraph::getLines</qualifiedname>
+        <param>
+          <type>QVector&lt; QPointF &gt; *</type>
+          <declname>lines</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>dataRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5535" column="8" bodyfile="qcustomplot.cpp" bodystart="21229" bodyend="21256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a9d7ba5904fdcaca413222335d4b283c3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPGraph::getScatters</definition>
+        <argsstring>(QVector&lt; QPointF &gt; *scatters, const QCPDataRange &amp;dataRange) const</argsstring>
+        <name>getScatters</name>
+        <qualifiedname>QCPGraph::getScatters</qualifiedname>
+        <param>
+          <type>QVector&lt; QPointF &gt; *</type>
+          <declname>scatters</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>dataRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5536" column="8" bodyfile="qcustomplot.cpp" bodystart="21270" bodyend="21313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a0085ee728fdd72a827c1e6ced4476363" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; QCPGraph::dataToLines</definition>
+        <argsstring>(const QVector&lt; QCPGraphData &gt; &amp;data) const</argsstring>
+        <name>dataToLines</name>
+        <qualifiedname>QCPGraph::dataToLines</qualifiedname>
+        <param>
+          <type>const QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5537" column="11" bodyfile="qcustomplot.cpp" bodystart="21325" bodyend="21351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a1f3e9e41fc67538c4940c74665840474" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; QCPGraph::dataToStepLeftLines</definition>
+        <argsstring>(const QVector&lt; QCPGraphData &gt; &amp;data) const</argsstring>
+        <name>dataToStepLeftLines</name>
+        <qualifiedname>QCPGraph::dataToStepLeftLines</qualifiedname>
+        <param>
+          <type>const QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5538" column="11" bodyfile="qcustomplot.cpp" bodystart="21363" bodyend="21399"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1ab1fb6cb91d24a854f85bf54200f6d101" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; QCPGraph::dataToStepRightLines</definition>
+        <argsstring>(const QVector&lt; QCPGraphData &gt; &amp;data) const</argsstring>
+        <name>dataToStepRightLines</name>
+        <qualifiedname>QCPGraph::dataToStepRightLines</qualifiedname>
+        <param>
+          <type>const QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5539" column="11" bodyfile="qcustomplot.cpp" bodystart="21411" bodyend="21447"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a238116f1898c49cb8209d61707b5b367" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; QCPGraph::dataToStepCenterLines</definition>
+        <argsstring>(const QVector&lt; QCPGraphData &gt; &amp;data) const</argsstring>
+        <name>dataToStepCenterLines</name>
+        <qualifiedname>QCPGraph::dataToStepCenterLines</qualifiedname>
+        <param>
+          <type>const QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5540" column="11" bodyfile="qcustomplot.cpp" bodystart="21459" bodyend="21507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a2a958a5c6a6e1e4a03556be88b6fe37e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; QCPGraph::dataToImpulseLines</definition>
+        <argsstring>(const QVector&lt; QCPGraphData &gt; &amp;data) const</argsstring>
+        <name>dataToImpulseLines</name>
+        <qualifiedname>QCPGraph::dataToImpulseLines</qualifiedname>
+        <param>
+          <type>const QVector&lt; <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5541" column="11" bodyfile="qcustomplot.cpp" bodystart="21519" bodyend="21551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a0e0886b9ec7731d8993bbb104465f3b9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt;</type>
+        <definition>QVector&lt; QCPDataRange &gt; QCPGraph::getNonNanSegments</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *lineData, Qt::Orientation keyOrientation) const</argsstring>
+        <name>getNonNanSegments</name>
+        <qualifiedname>QCPGraph::getNonNanSegments</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>lineData</declname>
+        </param>
+        <param>
+          <type>Qt::Orientation</type>
+          <declname>keyOrientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5542" column="11" bodyfile="qcustomplot.cpp" bodystart="21964" bodyend="22002"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a334b15c43ee1855bf724daf886e8530e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QPair&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>, <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt; &gt;</type>
+        <definition>QVector&lt; QPair&lt; QCPDataRange, QCPDataRange &gt; &gt; QCPGraph::getOverlappingSegments</definition>
+        <argsstring>(QVector&lt; QCPDataRange &gt; thisSegments, const QVector&lt; QPointF &gt; *thisData, QVector&lt; QCPDataRange &gt; otherSegments, const QVector&lt; QPointF &gt; *otherData) const</argsstring>
+        <name>getOverlappingSegments</name>
+        <qualifiedname>QCPGraph::getOverlappingSegments</qualifiedname>
+        <param>
+          <type>QVector&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt;</type>
+          <declname>thisSegments</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>thisData</declname>
+        </param>
+        <param>
+          <type>QVector&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt;</type>
+          <declname>otherSegments</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>otherData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5543" column="11" bodyfile="qcustomplot.cpp" bodystart="22022" bodyend="22069"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1abb9c674b207a1f6df5e083aa9f3e071a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPGraph::segmentsIntersect</definition>
+        <argsstring>(double aLower, double aUpper, double bLower, double bUpper, int &amp;bPrecedence) const</argsstring>
+        <name>segmentsIntersect</name>
+        <qualifiedname>QCPGraph::segmentsIntersect</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>aLower</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aUpper</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bLower</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bUpper</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>bPrecedence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5544" column="8" bodyfile="qcustomplot.cpp" bodystart="22085" bodyend="22105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a13f2c756f3114703159c2e604783e208" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QPointF</type>
+        <definition>QPointF QCPGraph::getFillBasePoint</definition>
+        <argsstring>(QPointF matchingDataPoint) const</argsstring>
+        <name>getFillBasePoint</name>
+        <qualifiedname>QCPGraph::getFillBasePoint</qualifiedname>
+        <param>
+          <type>QPointF</type>
+          <declname>matchingDataPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5545" column="11" bodyfile="qcustomplot.cpp" bodystart="22118" bodyend="22159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1af73d5fe97cde966785bfd67201e44391" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const QPolygonF</type>
+        <definition>const QPolygonF QCPGraph::getFillPolygon</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *lineData, QCPDataRange segment) const</argsstring>
+        <name>getFillPolygon</name>
+        <qualifiedname>QCPGraph::getFillPolygon</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>lineData</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+          <declname>segment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5546" column="19" bodyfile="qcustomplot.cpp" bodystart="22177" bodyend="22188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a27f29ed181e97f29d50384ab611773c1" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const QPolygonF</type>
+        <definition>const QPolygonF QCPGraph::getChannelFillPolygon</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *thisData, QCPDataRange thisSegment, const QVector&lt; QPointF &gt; *otherData, QCPDataRange otherSegment) const</argsstring>
+        <name>getChannelFillPolygon</name>
+        <qualifiedname>QCPGraph::getChannelFillPolygon</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>thisData</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+          <declname>thisSegment</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>otherData</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+          <declname>otherSegment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5547" column="19" bodyfile="qcustomplot.cpp" bodystart="22208" bodyend="22305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a8c3f15dd5a06633011a6ef36016d308b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPGraph::findIndexBelowX</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *data, double x) const</argsstring>
+        <name>findIndexBelowX</name>
+        <qualifiedname>QCPGraph::findIndexBelowX</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5548" column="7" bodyfile="qcustomplot.cpp" bodystart="22338" bodyend="22351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1aaabd6c6a7200a2672c44e62bd2a1cafa" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPGraph::findIndexAboveX</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *data, double x) const</argsstring>
+        <name>findIndexAboveX</name>
+        <qualifiedname>QCPGraph::findIndexAboveX</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5549" column="7" bodyfile="qcustomplot.cpp" bodystart="22315" bodyend="22328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a5b0291f248e8ca8eaa82833ab420dcd0" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPGraph::findIndexBelowY</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *data, double y) const</argsstring>
+        <name>findIndexBelowY</name>
+        <qualifiedname>QCPGraph::findIndexBelowY</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5550" column="7" bodyfile="qcustomplot.cpp" bodystart="22443" bodyend="22456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a8b952a5f937840dc242489585cc8000d" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPGraph::findIndexAboveY</definition>
+        <argsstring>(const QVector&lt; QPointF &gt; *data, double y) const</argsstring>
+        <name>findIndexAboveY</name>
+        <qualifiedname>QCPGraph::findIndexAboveY</qualifiedname>
+        <param>
+          <type>const QVector&lt; QPointF &gt; *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5551" column="7" bodyfile="qcustomplot.cpp" bodystart="22361" bodyend="22374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_1a89acf99c0b52b8eecb2438adf7ec0170" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPGraph::pointDistance</definition>
+        <argsstring>(const QPointF &amp;pixelPoint, QCPGraphDataContainer::const_iterator &amp;closestData) const</argsstring>
+        <name>pointDistance</name>
+        <qualifiedname>QCPGraph::pointDistance</qualifiedname>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pixelPoint</declname>
+        </param>
+        <param>
+          <type>QCPGraphDataContainer::const_iterator &amp;</type>
+          <declname>closestData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5552" column="10" bodyfile="qcustomplot.cpp" bodystart="22387" bodyend="22433"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A plottable representing a graph in a plot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="QCPGraph.png"></image>
+</para>
+<para>Usually you create new graphs by calling <ref refid="class_q_custom_plot_1a2836a46e31d5aee174ae054c0aa6580b" kindref="member">QCustomPlot::addGraph</ref>. The resulting instance can be accessed via <ref refid="class_q_custom_plot_1a6ecae130f684b25276fb47bd3a5875c6" kindref="member">QCustomPlot::graph</ref>.</para>
+<para>To plot data, assign it with the <ref refid="class_q_c_p_graph_1a1eae9429a316b008e2d99b2d65a54395" kindref="member">setData</ref> or <ref refid="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" kindref="member">addData</ref> functions. Alternatively, you can also access and modify the data via the <ref refid="class_q_c_p_graph_1a141aa31a1f19bbd0ce60f55eaeb9ea60" kindref="member">data</ref> method, which returns a pointer to the internal QCPGraphDataContainer.</para>
+<para>Graphs are used to display single-valued data. Single-valued means that there should only be one data point per unique key coordinate. In other words, the graph can&apos;t have <emphasis>loops</emphasis>. If you do want to plot non-single-valued curves, rather use the <ref refid="class_q_c_p_curve" kindref="compound">QCPCurve</ref> plottable.</para>
+<para>Gaps in the graph line can be created by adding data points with NaN as value (<computeroutput>qQNaN()</computeroutput> or <computeroutput>std::numeric_limits&lt;double&gt;::quiet_NaN()</computeroutput>) in between the two data points that shall be separated.</para>
+<sect1 id="class_q_c_p_graph_1qcpgraph-appearance">
+<title>Changing the appearance</title><para>The appearance of the graph is mainly determined by the line style, scatter style, brush and pen of the graph (<ref refid="class_q_c_p_graph_1a513fecccff5b2a50ce53f665338c60ff" kindref="member">setLineStyle</ref>, <ref refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" kindref="member">setScatterStyle</ref>, <ref refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" kindref="member">setBrush</ref>, <ref refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" kindref="member">setPen</ref>).</para>
+<sect2 id="class_q_c_p_graph_1filling">
+<title>Filling under or between graphs</title><para><ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> knows two types of fills: Normal graph fills towards the zero-value-line parallel to the key axis of the graph, and fills between two graphs, called channel fills. To enable a fill, just set a brush with <ref refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" kindref="member">setBrush</ref> which is neither Qt::NoBrush nor fully transparent.</para>
+<para>By default, a normal fill towards the zero-value-line will be drawn. To set up a channel fill between this graph and another one, call <ref refid="class_q_c_p_graph_1a2d03156df1b64037a2e36cfa50351ca3" kindref="member">setChannelFillGraph</ref> with the other graph as parameter.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_custom_plot_1a2836a46e31d5aee174ae054c0aa6580b" kindref="member">QCustomPlot::addGraph</ref>, <ref refid="class_q_custom_plot_1a6ecae130f684b25276fb47bd3a5875c6" kindref="member">QCustomPlot::graph</ref> </para>
+</simplesect>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPAbstractPlottable1D&lt; QCPGraphData &gt;</label>
+        <link refid="class_q_c_p_abstract_plottable1_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPGraph</label>
+        <link refid="class_q_c_p_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>mSelection</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>mSelectionDecorator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPAbstractPlottable1D&lt; QCPGraphData &gt;</label>
+        <link refid="class_q_c_p_abstract_plottable1_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>QCPDataSelection</label>
+        <link refid="class_q_c_p_data_selection"/>
+      </node>
+      <node id="1">
+        <label>QCPGraph</label>
+        <link refid="class_q_c_p_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>mScatterStyle</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="24">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="13">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="23">
+        <label>QCPScatterStyle</label>
+        <link refid="class_q_c_p_scatter_style"/>
+      </node>
+      <node id="22">
+        <label>QCPSelectionDecorator</label>
+        <link refid="class_q_c_p_selection_decorator"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>mScatterStyle</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mPlottable</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+      <node id="7">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="5457" column="1" bodyfile="qcustomplot.h" bodystart="5458" bodyend="5556"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_graph_1a1ba934b9621270b9a40fcdd2d9ba2adb" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>adaptiveSampling</name></member>
+      <member refid="class_q_c_p_graph_1ae0555c0d3fe0fa7cb8628f88158d420f" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>addData</name></member>
+      <member refid="class_q_c_p_graph_1a0bf98b1972286cfb7b1c4b7dd6ae2012" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>addData</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa64e93cb5b606d8110d2cc0a349bb30f" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a70f8cabfd808f7d5204b9f18c45c13f5" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_layerable_1a71cbd212fde2703cee076e204a475709" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>antialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a022717896dc57b638a7b5a7be7212ba9" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>antialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a795370db6b1309de0ab60b633efb5ec2" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>antialiasedScatters</name></member>
+      <member refid="class_q_c_p_layerable_1acb663e375d2d36dc5c55021ee5a2119b" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>applyAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac032077fb0db93d6faa3273d02363398" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>applyDefaultAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8d06a59ea23324cce6330ebf2262c0ed" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>applyFillAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95f26b15a1e5d9c7bd2c0a46d760fc9" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>applyScattersAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a893b4896dfd92b68b05b2600b80f5826" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>brush</name></member>
+      <member refid="class_q_c_p_graph_1aed4515b717d6d97d6482ebc0db6204ed" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>channelFillGraph</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a635cee3effc07ad421414c76fd83548c" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>clipRect</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7ad84a36472441cf1f555c5683d0da93" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a5acb50ae984eef09a7ab92315d2ad708" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_graph_1a141aa31a1f19bbd0ce60f55eaeb9ea60" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>data</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ab5dd99e4f1621e7dbd63438e0b02984e" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataCount</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1aeb156ebf5d3c8de906b428be30733ad8" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataMainKey</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a6be0f657ba85a1688336d76ad649ecf2" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataMainValue</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a6ca0699a6af5f25a7565de7c50ce13b2" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataPixelPosition</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1aa8277da921b009bce474437d50b4a2d8" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataSortKey</name></member>
+      <member refid="class_q_c_p_graph_1a2a958a5c6a6e1e4a03556be88b6fe37e" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>dataToImpulseLines</name></member>
+      <member refid="class_q_c_p_graph_1a0085ee728fdd72a827c1e6ced4476363" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>dataToLines</name></member>
+      <member refid="class_q_c_p_graph_1a238116f1898c49cb8209d61707b5b367" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>dataToStepCenterLines</name></member>
+      <member refid="class_q_c_p_graph_1a1f3e9e41fc67538c4940c74665840474" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>dataToStepLeftLines</name></member>
+      <member refid="class_q_c_p_graph_1ab1fb6cb91d24a854f85bf54200f6d101" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>dataToStepRightLines</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a55f937ba6a63e56e57f0b1a6e85a333a" prot="public" virt="virtual"><scope>QCPGraph</scope><name>dataValueRange</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a9b104d9da4f38f934363945c313bf82e" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>deselectEvent</name></member>
+      <member refid="class_q_c_p_graph_1a2b0849598f06e834b43ce18cd13bcdc3" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>draw</name></member>
+      <member refid="class_q_c_p_graph_1a67c5ea573f604efd8bf121a0b7a380d1" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>drawFill</name></member>
+      <member refid="class_q_c_p_graph_1a217ef6bf6c5689eb1dcbe02187d2cc61" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>drawImpulsePlot</name></member>
+      <member refid="class_q_c_p_graph_1a6efbab06c400bdb15e28b2d0a4ecc18a" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>drawLegendIcon</name></member>
+      <member refid="class_q_c_p_graph_1a4c3edacb2a11064bf2e16b322156aeda" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>drawLinePlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a7adc6c3cccebb5341f11e0c2b7d54206" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>drawPolyline</name></member>
+      <member refid="class_q_c_p_graph_1abeb0bbe81026c024bf3d508d13cf5e0e" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>drawScatterPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ad0b46d25cde3d035b180fb8f10c056e6" prot="public" virt="virtual"><scope>QCPGraph</scope><name>findBegin</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a6e3ba20c9160d7361e58070390d10b1a" prot="public" virt="virtual"><scope>QCPGraph</scope><name>findEnd</name></member>
+      <member refid="class_q_c_p_graph_1aaabd6c6a7200a2672c44e62bd2a1cafa" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>findIndexAboveX</name></member>
+      <member refid="class_q_c_p_graph_1a8b952a5f937840dc242489585cc8000d" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>findIndexAboveY</name></member>
+      <member refid="class_q_c_p_graph_1a8c3f15dd5a06633011a6ef36016d308b" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>findIndexBelowX</name></member>
+      <member refid="class_q_c_p_graph_1a5b0291f248e8ca8eaa82833ab420dcd0" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>findIndexBelowY</name></member>
+      <member refid="class_q_c_p_graph_1a27f29ed181e97f29d50384ab611773c1" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getChannelFillPolygon</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ae890e62ce403c54f575c73b9529f1af8" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getDataSegments</name></member>
+      <member refid="class_q_c_p_graph_1a13f2c756f3114703159c2e604783e208" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getFillBasePoint</name></member>
+      <member refid="class_q_c_p_graph_1af73d5fe97cde966785bfd67201e44391" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getFillPolygon</name></member>
+      <member refid="class_q_c_p_graph_1aac47c6189e3aea46ea46939e5d14796c" prot="public" virt="virtual"><scope>QCPGraph</scope><name>getKeyRange</name></member>
+      <member refid="class_q_c_p_graph_1a563c6da2126300a4d9d2bdee30dad040" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getLines</name></member>
+      <member refid="class_q_c_p_graph_1a0e0886b9ec7731d8993bbb104465f3b9" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getNonNanSegments</name></member>
+      <member refid="class_q_c_p_graph_1a1fed1c9d627d9d3b49a6206cc2e60fe1" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>getOptimizedLineData</name></member>
+      <member refid="class_q_c_p_graph_1a5423245898537e375b9364cf26e89aea" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>getOptimizedScatterData</name></member>
+      <member refid="class_q_c_p_graph_1a334b15c43ee1855bf724daf886e8530e" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getOverlappingSegments</name></member>
+      <member refid="class_q_c_p_graph_1a9d7ba5904fdcaca413222335d4b283c3" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getScatters</name></member>
+      <member refid="class_q_c_p_graph_1a8f773e56f191a61c06e129e90a604d77" prot="public" virt="virtual"><scope>QCPGraph</scope><name>getValueRange</name></member>
+      <member refid="class_q_c_p_graph_1a8599447a7f8cbbdcf0b94edcc11df560" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>getVisibleDataBounds</name></member>
+      <member refid="class_q_c_p_layerable_1a8cbe5a0c9a5674249982f5ca5f8e02bc" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>initializeParentPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1acb01f095cfb292f2cce2257e074554c4" prot="public" virt="virtual"><scope>QCPGraph</scope><name>interface1D</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa6f25b97ee99988fe352f17cb9ed962b" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>keyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a9d4e121a7f1d2314f906fe698209cac9" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>layer</name></member>
+      <member refid="class_q_c_p_layerable_1abbf8657cedea73ac1c3499b521c90eba" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>layerChanged</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>LineStyle</name></member>
+      <member refid="class_q_c_p_graph_1ac3e6f4b3387338df45992b47691b2551" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lineStyle</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859aa3b358b4ae7cca94aceeb8e529c12ebb" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsImpulse</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsLine</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859aea9591b933733cc7b20786b71e60fa04" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsNone</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a5adf7b04da215a40a764c21294ea7366" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsStepCenter</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859ae10568bda57836487d9dec5eba1d6c6e" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsStepLeft</name></member>
+      <member refid="class_q_c_p_graph_1ad60175cd9b5cac937c5ee685c32c0859a9c37951f7d11aa070100fd16f2935c9e" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>lsStepRight</name></member>
+      <member refid="class_q_c_p_graph_1aa951e78aeba714cf443be6da2e52502e" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mAdaptiveSampling</name></member>
+      <member refid="class_q_c_p_layerable_1a3ab45a4c76a3333ce42eb217a81733ec" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a152ac765bedf927fb240545d11d453ea" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa115755e525a8e3a86dc683f9cab755b" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a33f00674c0161c13315ab9da0895418e" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mBrush</name></member>
+      <member refid="class_q_c_p_graph_1a2f1777c7accf8244fc640c33f0b04577" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mChannelFillGraph</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ac139cf70590707a1fb40eabe97fac246" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mDataContainer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a426f42e254d0f8ce5436a868c61a6827" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1aa38ec5891aff0f50b36fd63e9372a0cd" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mLayer</name></member>
+      <member refid="class_q_c_p_graph_1a8604fd98402035a63375849f7341ee25" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mLineStyle</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac29ffef424e2488675930de18cde612a" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mName</name></member>
+      <member refid="class_q_c_p_layerable_1a4171e2e823aca242dd0279f00ed2de81" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a9eee1ba47fd69be111059ca3881933e4" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af6567604818db90f4fd52822f8bc8376" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>mousePressEvent</name></member>
+      <member refid="class_q_c_p_layerable_1aa0d79b005686f668622bbe66ac03ba2c" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af94484cfb7cbbddb7de522e9be71d9a4" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>moveToLayer</name></member>
+      <member refid="class_q_c_p_layerable_1a3291445a980053e2d17a21d15957624e" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mParentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1aa2a528433e44db02b8aef23c1f9f90ed" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a67bc0622fd1b9fa14e54c14922dcec66" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mPen</name></member>
+      <member refid="class_q_c_p_graph_1a4ca1e50fbfe8307022b42a6f6178fae0" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mScatterSkip</name></member>
+      <member refid="class_q_c_p_graph_1a4aa36241f166ccd1f75fc8f24e4a3247" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mScatterStyle</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3944521f7bec90974737c9d192fc57ba" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a206aa62c9eba32c82e892b29cdbf6314" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0dbc731cab717f4ff67b4ca100c74046" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mSelectionDecorator</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2901452ca4aea911a1827717934a4bda" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a62e3aed8427d6ce3ccf716f285106cb3" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>mVisible</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a52c226eefcb1920240eeabae574d28c0" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>name</name></member>
+      <member refid="class_q_c_p_layerable_1aa78b7e644d2c519e1a9a6f2ac5fcd858" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>parentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1a36ed5b292b90934b524a4e5866a3526c" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>parentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab20b7dbd8e0249ed61adb9622c427382" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>parentPlotInitialized</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ad5972efc31344e5a7a78ab4f8864b2d3" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>pen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3903c1120ab5c27e7fa46b597ef267bd" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a28d32c0062b9450847851ffdee1c5f69" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_graph_1a89acf99c0b52b8eecb2438adf7ec0170" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>pointDistance</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af78a036e40db6f53a31abadc5323715a" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a30b2e50ab0afce65f104ea7a95440315" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>QCPAbstractPlottable1D</name></member>
+      <member refid="class_q_c_p_graph_1a0393a38cf7183cbf46348eb6cf9a5a6c" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>QCPGraph</name></member>
+      <member refid="class_q_c_p_layerable_1a4f87f420cb2597e2b393aab934d2f099" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>QCPLayerable</name></member>
+      <member refid="class_q_c_p_graph_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>QCPLegend</name></member>
+      <member refid="class_q_c_p_graph_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>QCustomPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab054e88f15d485defcb95e7376f119e7" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>realVisibility</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3cc235007e2343a65ad4f463767e0e20" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95fb2604d9106d0852ad9ceb326fe8c" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>rescaleAxes</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ae96b83c961e257da116c6acf9c7da308" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>rescaleKeyAxis</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a714eaf36b12434cd71846215504db82e" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>rescaleValueAxis</name></member>
+      <member refid="class_q_c_p_graph_1a44487a3a706605bb9fc97ad5e05d347e" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>scatterSkip</name></member>
+      <member refid="class_q_c_p_graph_1a36d5b641db08e27527827c212542bbbd" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>scatterStyle</name></member>
+      <member refid="class_q_c_p_graph_1abb9c674b207a1f6df5e083aa9f3e071a" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>segmentsIntersect</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a016653741033bd332d1d4c3c725cc284" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a663b1a44123c8340ac041a29d1e2c973" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selectableChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0b3b514474fe93354fc74cfc144184b4" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selected</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2d488568cf16600dd81fa23d7d439829" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>selectEvent</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a040bf09f41d456284cfd39cc37aa068f" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af80ad8531642e786b6f4fad551c203c4" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>selectionCategory</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3af66432b1dca93b28e00e78a8c7c1d9" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a787a9c39421059006891744b731fa473" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7861518e47ca0c6a0c386032c2db075e" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>selectionDecorator</name></member>
+      <member refid="class_q_c_p_graph_1af524307eacb919827b88233ef7449ce3" prot="public" virt="virtual"><scope>QCPGraph</scope><name>selectTest</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a22377bf6e57ab7eedbc9e489250c6ded" prot="public" virt="virtual"><scope>QCPGraph</scope><name>selectTestRect</name></member>
+      <member refid="class_q_c_p_graph_1ab468cd600160f327836aa0644291e64c" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setAdaptiveSampling</name></member>
+      <member refid="class_q_c_p_layerable_1a4fd43e89be4a553ead41652565ff0581" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a089d6b5577120239b55c39ed27c39536" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2f03f067ede2ed4da6f7d0e4777a3f02" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setBrush</name></member>
+      <member refid="class_q_c_p_graph_1a2d03156df1b64037a2e36cfa50351ca3" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setChannelFillGraph</name></member>
+      <member refid="class_q_c_p_graph_1a1eae9429a316b008e2d99b2d65a54395" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setData</name></member>
+      <member refid="class_q_c_p_graph_1a73578d786532132310a926c3cd529b29" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setData</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8524fa2994c63c0913ebd9bb2ffa3920" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1ab0d0da6d2de45a118886d2c8e16d5a54" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1ab25a0e7b897993b44447caee0f142083" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_graph_1a513fecccff5b2a50ce53f665338c60ff" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setLineStyle</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab79c7ba76bc7fa89a4b3580e12149f1f" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setName</name></member>
+      <member refid="class_q_c_p_layerable_1aa23c893671f1f6744ac235cf2204cf3a" prot="protected" virt="non-virtual"><scope>QCPGraph</scope><name>setParentLayerable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setPen</name></member>
+      <member refid="class_q_c_p_graph_1a17cebd3196f434258abb82ba6dc443f2" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setScatterSkip</name></member>
+      <member refid="class_q_c_p_graph_1a12bd17a8ba21983163ec5d8f42a9fea5" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setScatterStyle</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac238d6e910f976f1f30d41c2bca44ac3" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a219bc5403a9d85d3129165ec3f5ae436" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a20e266ad646f8c4a7e4631040510e5d9" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setSelectionDecorator</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a71626a07367e241ec62ad2c34baf21cb" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a3bed99ddc396b48ce3ebfdc0418744f8" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>setVisible</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1afe0d56e39cc076032922f059b304c092" prot="public" virt="virtual"><scope>QCPGraph</scope><name>sortKeyIsMainKey</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a842b3831660d3e33b73863fd133889dd" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>valueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1af0297b944b6192b6d67d00bff41b6b70" prot="public" virt="non-virtual"><scope>QCPGraph</scope><name>visible</name></member>
+      <member refid="class_q_c_p_layerable_1a47dfd7b8fd99c08ca54e09c362b6f022" prot="protected" virt="virtual"><scope>QCPGraph</scope><name>wheelEvent</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3223d1e2073bd1d3516863a1dce554b0" prot="public" virt="virtual"><scope>QCPGraph</scope><name>~QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ae4d821dbdc530b6910321e53599ec39b" prot="public" virt="virtual"><scope>QCPGraph</scope><name>~QCPAbstractPlottable1D</name></member>
+      <member refid="class_q_c_p_graph_1aa8770e21b472d7ad00a1eca72a1c2d33" prot="public" virt="virtual"><scope>QCPGraph</scope><name>~QCPGraph</name></member>
+      <member refid="class_q_c_p_layerable_1a4231cf5b3601d6d3a5781283e7a9735b" prot="public" virt="virtual"><scope>QCPGraph</scope><name>~QCPLayerable</name></member>
+      <member refid="class_q_c_p_plottable_interface1_d_1a97508cd3c61b9e8580b9f0d9964f7fb1" prot="public" virt="virtual"><scope>QCPGraph</scope><name>~QCPPlottableInterface1D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

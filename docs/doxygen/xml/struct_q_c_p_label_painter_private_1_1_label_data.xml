@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_q_c_p_label_painter_private_1_1_label_data" kind="struct" language="C++" prot="protected">
+    <compoundname>QCPLabelPainterPrivate::LabelData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1af7606f1262f0892069925803a95b8966" prot="public" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_label_painter_private_1a88c58f8a333dbbf48ae51148dcee9875" kindref="member">AnchorSide</ref></type>
+        <definition>AnchorSide QCPLabelPainterPrivate::LabelData::side</definition>
+        <argsstring></argsstring>
+        <name>side</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::side</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1641" column="16" bodyfile="qcustomplot.h" bodystart="1641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a37774ba8469ad8c5e4b3b75fef6f1ea7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPLabelPainterPrivate::LabelData::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::rotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1642" column="12" bodyfile="qcustomplot.h" bodystart="1642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a5e53ca7c728fbbd6abaf66f9eba5186c" prot="public" static="no" mutable="no">
+        <type>QTransform</type>
+        <definition>QTransform QCPLabelPainterPrivate::LabelData::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1643" column="16" bodyfile="qcustomplot.h" bodystart="1643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1af8f24a54da447806852feb64ecd91684" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString QCPLabelPainterPrivate::LabelData::basePart</definition>
+        <argsstring></argsstring>
+        <name>basePart</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::basePart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1644" column="13" bodyfile="qcustomplot.h" bodystart="1644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a822f5054fed414d70c444d612c8ebfa4" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString QCPLabelPainterPrivate::LabelData::expPart</definition>
+        <argsstring></argsstring>
+        <name>expPart</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::expPart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1644" column="22" bodyfile="qcustomplot.h" bodystart="1644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a4aefeae9615a47a789bfff5e73ce54a6" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString QCPLabelPainterPrivate::LabelData::suffixPart</definition>
+        <argsstring></argsstring>
+        <name>suffixPart</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::suffixPart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1644" column="30" bodyfile="qcustomplot.h" bodystart="1644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1afdc7e946aa5f66f66a972138a2bc5a60" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect QCPLabelPainterPrivate::LabelData::baseBounds</definition>
+        <argsstring></argsstring>
+        <name>baseBounds</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::baseBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1645" column="11" bodyfile="qcustomplot.h" bodystart="1645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a366bda1befa2ca0993b70d6d83300220" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect QCPLabelPainterPrivate::LabelData::expBounds</definition>
+        <argsstring></argsstring>
+        <name>expBounds</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::expBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1645" column="22" bodyfile="qcustomplot.h" bodystart="1645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1abd6814f47433d8209aaad6cdb6e44053" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect QCPLabelPainterPrivate::LabelData::suffixBounds</definition>
+        <argsstring></argsstring>
+        <name>suffixBounds</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::suffixBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1645" column="32" bodyfile="qcustomplot.h" bodystart="1645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1af4843231109ed291e6d1801e355ea723" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect QCPLabelPainterPrivate::LabelData::totalBounds</definition>
+        <argsstring></argsstring>
+        <name>totalBounds</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::totalBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1646" column="11" bodyfile="qcustomplot.h" bodystart="1646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1ac5360318c8f86dc79fd485f125befa09" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect QCPLabelPainterPrivate::LabelData::rotatedTotalBounds</definition>
+        <argsstring></argsstring>
+        <name>rotatedTotalBounds</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::rotatedTotalBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1647" column="11" bodyfile="qcustomplot.h" bodystart="1647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a6b8bc1f743bc98996478f2314f36d66a" prot="public" static="no" mutable="no">
+        <type>QFont</type>
+        <definition>QFont QCPLabelPainterPrivate::LabelData::baseFont</definition>
+        <argsstring></argsstring>
+        <name>baseFont</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::baseFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1648" column="11" bodyfile="qcustomplot.h" bodystart="1648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a1a164c8a6640f06fb9cf72365a24f9ab" prot="public" static="no" mutable="no">
+        <type>QFont</type>
+        <definition>QFont QCPLabelPainterPrivate::LabelData::expFont</definition>
+        <argsstring></argsstring>
+        <name>expFont</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::expFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1648" column="20" bodyfile="qcustomplot.h" bodystart="1648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_label_data_1a7280fdb3f3fa8c0c12d5613a1da30b32" prot="public" static="no" mutable="no">
+        <type>QColor</type>
+        <definition>QColor QCPLabelPainterPrivate::LabelData::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>QCPLabelPainterPrivate::LabelData::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1649" column="12" bodyfile="qcustomplot.h" bodystart="1649" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="1639" column="3" bodyfile="qcustomplot.h" bodystart="1640" bodyend="1650"/>
+    <listofallmembers>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1afdc7e946aa5f66f66a972138a2bc5a60" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>baseBounds</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a6b8bc1f743bc98996478f2314f36d66a" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>baseFont</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1af8f24a54da447806852feb64ecd91684" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>basePart</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a7280fdb3f3fa8c0c12d5613a1da30b32" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>color</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a366bda1befa2ca0993b70d6d83300220" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>expBounds</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a1a164c8a6640f06fb9cf72365a24f9ab" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>expFont</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a822f5054fed414d70c444d612c8ebfa4" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>expPart</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1ac5360318c8f86dc79fd485f125befa09" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>rotatedTotalBounds</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a37774ba8469ad8c5e4b3b75fef6f1ea7" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>rotation</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1af7606f1262f0892069925803a95b8966" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>side</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1abd6814f47433d8209aaad6cdb6e44053" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>suffixBounds</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a4aefeae9615a47a789bfff5e73ce54a6" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>suffixPart</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1af4843231109ed291e6d1801e355ea723" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>totalBounds</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_label_data_1a5e53ca7c728fbbd6abaf66f9eba5186c" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::LabelData</scope><name>transform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

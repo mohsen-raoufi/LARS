@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_axis_ticker" kind="class" language="C++" prot="public">
+    <compoundname>QCPAxisTicker</compoundname>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_date_time" prot="public" virt="non-virtual">QCPAxisTickerDateTime</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_fixed" prot="public" virt="non-virtual">QCPAxisTickerFixed</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_log" prot="public" virt="non-virtual">QCPAxisTickerLog</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_pi" prot="public" virt="non-virtual">QCPAxisTickerPi</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_text" prot="public" virt="non-virtual">QCPAxisTickerText</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_axis_ticker_time" prot="public" virt="non-virtual">QCPAxisTickerTime</derivedcompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TickStepStrategy</name>
+        <qualifiedname>QCPAxisTicker::TickStepStrategy</qualifiedname>
+        <enumvalue id="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8" prot="public">
+          <name>tssReadability</name>
+          <briefdescription>
+<para>A nicely readable tick step is prioritized over matching the requested number of ticks (see <ref refid="class_q_c_p_axis_ticker_1a47752abba8293e6dc18491501ae34008" kindref="member">setTickCount</ref>) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2" prot="public">
+          <name>tssMeetTickCount</name>
+          <briefdescription>
+<para>Less readable tick steps are allowed which in turn facilitates getting closer to the requested tick count. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the strategies that the axis ticker may follow when choosing the size of the tick step.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" kindref="member">setTickStepStrategy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1706" column="3" bodyfile="qcustomplot.h" bodystart="1707" bodyend="1710"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_1ac059d6d670b2f6132c593fb4de156701" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" kindref="member">TickStepStrategy</ref></type>
+        <definition>TickStepStrategy QCPAxisTicker::mTickStepStrategy</definition>
+        <argsstring></argsstring>
+        <name>mTickStepStrategy</name>
+        <qualifiedname>QCPAxisTicker::mTickStepStrategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1731" column="20" bodyfile="qcustomplot.h" bodystart="1731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_1a14a35b47d1aad11b08d18ea0e25937b8" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPAxisTicker::mTickCount</definition>
+        <argsstring></argsstring>
+        <name>mTickCount</name>
+        <qualifiedname>QCPAxisTicker::mTickCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1732" column="7" bodyfile="qcustomplot.h" bodystart="1732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_1a560ef9347b1aa599a9bf0e2f29d3ec16" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPAxisTicker::mTickOrigin</definition>
+        <argsstring></argsstring>
+        <name>mTickOrigin</name>
+        <qualifiedname>QCPAxisTicker::mTickOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1733" column="10" bodyfile="qcustomplot.h" bodystart="1733" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a8fcf23c79ebd72202fe79253f9f01ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPAxisTicker::QCPAxisTicker</definition>
+        <argsstring>()</argsstring>
+        <name>QCPAxisTicker</name>
+        <qualifiedname>QCPAxisTicker::QCPAxisTicker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <ref refid="class_q_c_p_axis_1a4ee03fcd2c74d05cd1a419b9af5cfbdc" kindref="member">QCPAxis::setTicker</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1713" column="3" bodyfile="qcustomplot.cpp" bodystart="6119" bodyend="6124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a1119d6f09ad720f9c5dfdd2559047161" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>QCPAxisTicker::~QCPAxisTicker</definition>
+        <argsstring>()</argsstring>
+        <name>~QCPAxisTicker</name>
+        <qualifiedname>QCPAxisTicker::~QCPAxisTicker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1714" column="11" bodyfile="qcustomplot.cpp" bodystart="6126" bodyend="6129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a58df76f2ec3eb48401bdd314b0e14ba1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" kindref="member">TickStepStrategy</ref></type>
+        <definition>TickStepStrategy QCPAxisTicker::tickStepStrategy</definition>
+        <argsstring>() const</argsstring>
+        <name>tickStepStrategy</name>
+        <qualifiedname>QCPAxisTicker::tickStepStrategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1717" column="20" bodyfile="qcustomplot.h" bodystart="1717" bodyend="1717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1aaf9edbe4169ce55e216fd067cc139452" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPAxisTicker::tickCount</definition>
+        <argsstring>() const</argsstring>
+        <name>tickCount</name>
+        <qualifiedname>QCPAxisTicker::tickCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1718" column="7" bodyfile="qcustomplot.h" bodystart="1718" bodyend="1718"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1ac0c6e9587c36fdeefb5518c00fe7ab15" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPAxisTicker::tickOrigin</definition>
+        <argsstring>() const</argsstring>
+        <name>tickOrigin</name>
+        <qualifiedname>QCPAxisTicker::tickOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1719" column="10" bodyfile="qcustomplot.h" bodystart="1719" bodyend="1719"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTicker::setTickStepStrategy</definition>
+        <argsstring>(TickStepStrategy strategy)</argsstring>
+        <name>setTickStepStrategy</name>
+        <qualifiedname>QCPAxisTicker::setTickStepStrategy</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" kindref="member">TickStepStrategy</ref></type>
+          <declname>strategy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets which strategy the axis ticker follows when choosing the size of the tick step. For the available strategies, see <ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" kindref="member">TickStepStrategy</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1722" column="8" bodyfile="qcustomplot.cpp" bodystart="6135" bodyend="6138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a47752abba8293e6dc18491501ae34008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTicker::setTickCount</definition>
+        <argsstring>(int count)</argsstring>
+        <name>setTickCount</name>
+        <qualifiedname>QCPAxisTicker::setTickCount</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets how many ticks this ticker shall aim to generate across the axis range. Note that <emphasis>count</emphasis> is not guaranteed to be matched exactly, as generating readable tick intervals may conflict with the requested number of ticks.</para>
+<para>Whether the readability has priority over meeting the requested <emphasis>count</emphasis> can be specified with <ref refid="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" kindref="member">setTickStepStrategy</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1723" column="8" bodyfile="qcustomplot.cpp" bodystart="6148" bodyend="6154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1ab509c7e500293bf66a8409f0d7c23943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTicker::setTickOrigin</definition>
+        <argsstring>(double origin)</argsstring>
+        <name>setTickOrigin</name>
+        <qualifiedname>QCPAxisTicker::setTickOrigin</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the mathematical coordinate (or &quot;offset&quot;) of the zeroth tick. This tick coordinate is just a concept and doesn&apos;t need to be inside the currently visible axis range.</para>
+<para>By default <emphasis>origin</emphasis> is zero, which for example yields ticks {-5, 0, 5, 10, 15,...} when the tick step is five. If <emphasis>origin</emphasis> is now set to 1 instead, the correspondingly generated ticks would be {-4, 1, 6, 11, 16,...}. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1724" column="8" bodyfile="qcustomplot.cpp" bodystart="6164" bodyend="6167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1aefbd11725678ca824add8cf926cbc856" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPAxisTicker::generate</definition>
+        <argsstring>(const QCPRange &amp;range, const QLocale &amp;locale, QChar formatChar, int precision, QVector&lt; double &gt; &amp;ticks, QVector&lt; double &gt; *subTicks, QVector&lt; QString &gt; *tickLabels)</argsstring>
+        <name>generate</name>
+        <qualifiedname>QCPAxisTicker::generate</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>const QLocale &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <param>
+          <type>QChar</type>
+          <declname>formatChar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <param>
+          <type>QVector&lt; double &gt; &amp;</type>
+          <declname>ticks</declname>
+        </param>
+        <param>
+          <type>QVector&lt; double &gt; *</type>
+          <declname>subTicks</declname>
+        </param>
+        <param>
+          <type>QVector&lt; QString &gt; *</type>
+          <declname>tickLabels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the method called by <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> in order to actually generate tick coordinates (<emphasis>ticks</emphasis>), tick label strings (<emphasis>tickLabels</emphasis>) and sub tick coordinates (<emphasis>subTicks</emphasis>).</para>
+<para>The ticks are generated for the specified <emphasis>range</emphasis>. The generated labels typically follow the specified <emphasis>locale</emphasis>, <emphasis>formatChar</emphasis> and number <emphasis>precision</emphasis>, however this might be different (or even irrelevant) for certain <ref refid="class_q_c_p_axis_ticker" kindref="compound">QCPAxisTicker</ref> subclasses.</para>
+<para>The output parameter <emphasis>ticks</emphasis> is filled with the generated tick positions in axis coordinates. The output parameters <emphasis>subTicks</emphasis> and <emphasis>tickLabels</emphasis> are optional (set them to <computeroutput>nullptr</computeroutput> if not needed) and are respectively filled with sub tick coordinates, and tick label strings belonging to <emphasis>ticks</emphasis> by index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1727" column="16" bodyfile="qcustomplot.cpp" bodystart="6182" bodyend="6205"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a910d69bcec2de37e92d8d4e1ecf201e2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPAxisTicker::getTickStep</definition>
+        <argsstring>(const QCPRange &amp;range)</argsstring>
+        <name>getTickStep</name>
+        <qualifiedname>QCPAxisTicker::getTickStep</qualifiedname>
+        <reimplementedby refid="class_q_c_p_axis_ticker_date_time_1a0560c14a3f87bb99ab136aca8321b32a">getTickStep</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_fixed_1a9e99da01ab92a86aed415eef32fed13a">getTickStep</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_pi_1a55301f0072983bd2d7c131a24e1779e7">getTickStep</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_text_1a628f16c41905e8c95c6622d6757a38c4">getTickStep</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_time_1a5615064642090fe193797caea8b98cb4">getTickStep</reimplementedby>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1736" column="18" bodyfile="qcustomplot.cpp" bodystart="6217" bodyend="6221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a4ccc403ced7a1457ce6ba293509933c8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int QCPAxisTicker::getSubTickCount</definition>
+        <argsstring>(double tickStep)</argsstring>
+        <name>getSubTickCount</name>
+        <qualifiedname>QCPAxisTicker::getSubTickCount</qualifiedname>
+        <reimplementedby refid="class_q_c_p_axis_ticker_date_time_1a78dece0d51426a3c310528d413e09193">getSubTickCount</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_log_1a352fef7ae68837acd26e35188aa86167">getSubTickCount</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_pi_1a56c90f870da97c8670cfae4d04ff3ac7">getSubTickCount</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_text_1a9c2488b877776870239abda4c8106052">getSubTickCount</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_time_1acace84c46598176aa53837e147595471">getSubTickCount</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>tickStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1737" column="15" bodyfile="qcustomplot.cpp" bodystart="6230" bodyend="6280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a8201eb4aa8be192bf786b126eb5ee089" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString QCPAxisTicker::getTickLabel</definition>
+        <argsstring>(double tick, const QLocale &amp;locale, QChar formatChar, int precision)</argsstring>
+        <name>getTickLabel</name>
+        <qualifiedname>QCPAxisTicker::getTickLabel</qualifiedname>
+        <reimplementedby refid="class_q_c_p_axis_ticker_date_time_1a4dc6a03f7ea5c619477528a683ed5c18">getTickLabel</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_pi_1a9a087d931d4344b8a91d5cecceff7109">getTickLabel</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_text_1a99247779a9c20bea1f50911117540a71">getTickLabel</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_time_1a046eb771bdf2a959f570db542b3a0be6">getTickLabel</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>const QLocale &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <param>
+          <type>QChar</type>
+          <declname>formatChar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1738" column="19" bodyfile="qcustomplot.cpp" bodystart="6293" bodyend="6296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1af4645a824c7bd2ca8fc7e86ebf9055bd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; QCPAxisTicker::createTickVector</definition>
+        <argsstring>(double tickStep, const QCPRange &amp;range)</argsstring>
+        <name>createTickVector</name>
+        <qualifiedname>QCPAxisTicker::createTickVector</qualifiedname>
+        <reimplementedby refid="class_q_c_p_axis_ticker_date_time_1a44c2c09a303d281801b69226e243047d">createTickVector</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_log_1af8873a8d1d2b9392d8f7a73218c889ab">createTickVector</reimplementedby>
+        <reimplementedby refid="class_q_c_p_axis_ticker_text_1aa195c4fd0364d0393f1798fb495d6a60">createTickVector</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>tickStep</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1739" column="19" bodyfile="qcustomplot.cpp" bodystart="6338" bodyend="6350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a9a6435723fa0bd366d1ea4c2cff7c33f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; QCPAxisTicker::createSubTickVector</definition>
+        <argsstring>(int subTickCount, const QVector&lt; double &gt; &amp;ticks)</argsstring>
+        <name>createSubTickVector</name>
+        <qualifiedname>QCPAxisTicker::createSubTickVector</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>subTickCount</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>ticks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1740" column="19" bodyfile="qcustomplot.cpp" bodystart="6307" bodyend="6321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a804050e408f37a0b9770c6654ebe6aa7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; QCPAxisTicker::createLabelVector</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;ticks, const QLocale &amp;locale, QChar formatChar, int precision)</argsstring>
+        <name>createLabelVector</name>
+        <qualifiedname>QCPAxisTicker::createLabelVector</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>ticks</declname>
+        </param>
+        <param>
+          <type>const QLocale &amp;</type>
+          <declname>locale</declname>
+        </param>
+        <param>
+          <type>QChar</type>
+          <declname>formatChar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1741" column="19" bodyfile="qcustomplot.cpp" bodystart="6361" bodyend="6368"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1ab28cc1ab549489be7975f5ce7e717916" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTicker::trimTicks</definition>
+        <argsstring>(const QCPRange &amp;range, QVector&lt; double &gt; &amp;ticks, bool keepOneOutlier) const</argsstring>
+        <name>trimTicks</name>
+        <qualifiedname>QCPAxisTicker::trimTicks</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <param>
+          <type>QVector&lt; double &gt; &amp;</type>
+          <declname>ticks</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>keepOneOutlier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1744" column="8" bodyfile="qcustomplot.cpp" bodystart="6377" bodyend="6411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1a4ea0a7c4ca1c610f92b9bd5944ab4260" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPAxisTicker::pickClosest</definition>
+        <argsstring>(double target, const QVector&lt; double &gt; &amp;candidates) const</argsstring>
+        <name>pickClosest</name>
+        <qualifiedname>QCPAxisTicker::pickClosest</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>candidates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1745" column="10" bodyfile="qcustomplot.cpp" bodystart="6419" bodyend="6430"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1abe99aaaf6c512812869b0a19937c76ff" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPAxisTicker::getMantissa</definition>
+        <argsstring>(double input, double *magnitude=nullptr) const</argsstring>
+        <name>getMantissa</name>
+        <qualifiedname>QCPAxisTicker::getMantissa</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>magnitude</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1746" column="10" bodyfile="qcustomplot.cpp" bodystart="6439" bodyend="6444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_1ac7df6c72876b7abd67c932663a0b0f6a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPAxisTicker::cleanMantissa</definition>
+        <argsstring>(double input) const</argsstring>
+        <name>cleanMantissa</name>
+        <qualifiedname>QCPAxisTicker::cleanMantissa</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1747" column="10" bodyfile="qcustomplot.cpp" bodystart="6452" bodyend="6472"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The base class tick generator used by <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> to create tick positions and tick labels. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each <ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> has an internal <ref refid="class_q_c_p_axis_ticker" kindref="compound">QCPAxisTicker</ref> (or a subclass) in order to generate tick positions and tick labels for the current axis range. The ticker of an axis can be set via <ref refid="class_q_c_p_axis_1a4ee03fcd2c74d05cd1a419b9af5cfbdc" kindref="member">QCPAxis::setTicker</ref>. Since that method takes a <computeroutput>QSharedPointer&lt;QCPAxisTicker&gt;</computeroutput>, multiple axes can share the same ticker instance.</para>
+<para>This base class generates normal tick coordinates and numeric labels for linear axes. It picks a reasonable tick step (the separation between ticks) which results in readable tick labels. The number of ticks that should be approximately generated can be set via <ref refid="class_q_c_p_axis_ticker_1a47752abba8293e6dc18491501ae34008" kindref="member">setTickCount</ref>. Depending on the current tick step strategy (<ref refid="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" kindref="member">setTickStepStrategy</ref>), the algorithm either sacrifices readability to better match the specified tick count (<ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2" kindref="member">QCPAxisTicker::tssMeetTickCount</ref>) or relaxes the tick count in favor of better tick steps (<ref refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8" kindref="member">QCPAxisTicker::tssReadability</ref>), which is the default.</para>
+<para>The following more specialized axis ticker subclasses are available, see details in the respective class documentation:</para>
+<para><center> <table rows="6" cols="2"><row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_fixed" kindref="compound">QCPAxisTickerFixed</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-fixed.png"></image>
+</para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_log" kindref="compound">QCPAxisTickerLog</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-log.png"></image>
+</para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_pi" kindref="compound">QCPAxisTickerPi</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-pi.png"></image>
+</para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_text" kindref="compound">QCPAxisTickerText</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-text.png"></image>
+</para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_date_time" kindref="compound">QCPAxisTickerDateTime</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-datetime.png"></image>
+</para>
+</entry></row>
+<row>
+<entry thead="no"><para><ref refid="class_q_c_p_axis_ticker_time" kindref="compound">QCPAxisTickerTime</ref></para>
+</entry><entry thead="no"><para><image type="html" name="axisticker-time.png"></image>
+ <image type="html" name="axisticker-time2.png"></image>
+</para>
+</entry></row>
+</table>
+</center></para>
+<sect1 id="class_q_c_p_axis_ticker_1axisticker-subclassing">
+<title>Creating own axis tickers</title><para>Creating own axis tickers can be achieved very easily by sublassing <ref refid="class_q_c_p_axis_ticker" kindref="compound">QCPAxisTicker</ref> and reimplementing some or all of the available virtual methods.</para>
+<para>In the simplest case you might wish to just generate different tick steps than the other tickers, so you only reimplement the method getTickStep. If you additionally want control over the string that will be shown as tick label, reimplement getTickLabel.</para>
+<para>If you wish to have complete control, you can generate the tick vectors and tick label vectors yourself by reimplementing createTickVector and createLabelVector. The default implementations use the previously mentioned virtual methods getTickStep and getTickLabel, but your reimplementations don&apos;t necessarily need to do so. For example in the case of unequal tick steps, the method getTickStep loses its usefulness and can be ignored.</para>
+<para>The sub tick count between major ticks can be controlled with getSubTickCount. Full sub tick placement control is obtained by reimplementing createSubTickVector.</para>
+<para>See the documentation of all these virtual methods in <ref refid="class_q_c_p_axis_ticker" kindref="compound">QCPAxisTicker</ref> for detailed information about the parameters and expected return values. </para>
+</sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QCPAxisTicker</label>
+        <link refid="class_q_c_p_axis_ticker"/>
+      </node>
+      <node id="2">
+        <label>QCPAxisTickerDateTime</label>
+        <link refid="class_q_c_p_axis_ticker_date_time"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QCPAxisTickerFixed</label>
+        <link refid="class_q_c_p_axis_ticker_fixed"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPAxisTickerLog</label>
+        <link refid="class_q_c_p_axis_ticker_log"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCPAxisTickerPi</label>
+        <link refid="class_q_c_p_axis_ticker_pi"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCPAxisTickerText</label>
+        <link refid="class_q_c_p_axis_ticker_text"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QCPAxisTickerTime</label>
+        <link refid="class_q_c_p_axis_ticker_time"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="qcustomplot.h" line="1697" column="1" bodyfile="qcustomplot.h" bodystart="1698" bodyend="1752"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_axis_ticker_1ac7df6c72876b7abd67c932663a0b0f6a" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>cleanMantissa</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a804050e408f37a0b9770c6654ebe6aa7" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>createLabelVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a9a6435723fa0bd366d1ea4c2cff7c33f" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>createSubTickVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_1af4645a824c7bd2ca8fc7e86ebf9055bd" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>createTickVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_1aefbd11725678ca824add8cf926cbc856" prot="public" virt="virtual"><scope>QCPAxisTicker</scope><name>generate</name></member>
+      <member refid="class_q_c_p_axis_ticker_1abe99aaaf6c512812869b0a19937c76ff" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>getMantissa</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a4ccc403ced7a1457ce6ba293509933c8" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>getSubTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a8201eb4aa8be192bf786b126eb5ee089" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>getTickLabel</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a910d69bcec2de37e92d8d4e1ecf201e2" prot="protected" virt="virtual"><scope>QCPAxisTicker</scope><name>getTickStep</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a14a35b47d1aad11b08d18ea0e25937b8" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>mTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a560ef9347b1aa599a9bf0e2f29d3ec16" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>mTickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ac059d6d670b2f6132c593fb4de156701" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>mTickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a4ea0a7c4ca1c610f92b9bd5944ab4260" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>pickClosest</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a8fcf23c79ebd72202fe79253f9f01ea8" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>QCPAxisTicker</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a47752abba8293e6dc18491501ae34008" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>setTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab509c7e500293bf66a8409f0d7c23943" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>setTickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>setTickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1aaf9edbe4169ce55e216fd067cc139452" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>tickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ac0c6e9587c36fdeefb5518c00fe7ab15" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>tickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>TickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a58df76f2ec3eb48401bdd314b0e14ba1" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>tickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab28cc1ab549489be7975f5ce7e717916" prot="protected" virt="non-virtual"><scope>QCPAxisTicker</scope><name>trimTicks</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>tssMeetTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8" prot="public" virt="non-virtual"><scope>QCPAxisTicker</scope><name>tssReadability</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a1119d6f09ad720f9c5dfdd2559047161" prot="public" virt="virtual"><scope>QCPAxisTicker</scope><name>~QCPAxisTicker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

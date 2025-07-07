@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_pylon_video_source" kind="class" language="C++" prot="public">
+    <compoundname>PylonVideoSource</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">cv::VideoCapture</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">cv::VideoCapture</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pylon_video_source_1a46c7f1d14ed1d5c5310feafe361c933d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Pylon::CInstantCamera &gt;</type>
+        <definition>std::shared_ptr&lt; Pylon::CInstantCamera &gt; PylonVideoSource::mCamera</definition>
+        <argsstring></argsstring>
+        <name>mCamera</name>
+        <qualifiedname>PylonVideoSource::mCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="12" column="21" bodyfile="tracker/pylon.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pylon_video_source_1a650474ddc8bd6cc68c83953f0f9973ca" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::mOpened</definition>
+        <argsstring></argsstring>
+        <name>mOpened</name>
+        <qualifiedname>PylonVideoSource::mOpened</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="13" column="10" bodyfile="tracker/pylon.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pylon_video_source_1a4e39810d3f9650a28619a124a623b70f" prot="private" static="no" mutable="no">
+        <type>Pylon::CGrabResultPtr</type>
+        <definition>Pylon::CGrabResultPtr PylonVideoSource::mGrabResult</definition>
+        <argsstring></argsstring>
+        <name>mGrabResult</name>
+        <qualifiedname>PylonVideoSource::mGrabResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="14" column="27" bodyfile="tracker/pylon.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pylon_video_source_1ac187767b76b497e54461fad0527e0127" prot="private" static="no" mutable="no">
+        <type>Pylon::CImageFormatConverter</type>
+        <definition>Pylon::CImageFormatConverter PylonVideoSource::mImgFormater</definition>
+        <argsstring></argsstring>
+        <name>mImgFormater</name>
+        <qualifiedname>PylonVideoSource::mImgFormater</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="15" column="34" bodyfile="tracker/pylon.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pylon_video_source_1ac63d56a42c783261e8c424d2d5cc5b21" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PylonVideoSource::camera_frequency</definition>
+        <argsstring></argsstring>
+        <name>camera_frequency</name>
+        <qualifiedname>PylonVideoSource::camera_frequency</qualifiedname>
+        <initializer>= 125e6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="33" column="13" bodyfile="tracker/pylon.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pylon_video_source_1a09572b3827529056fd3da1feee519c05" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* PylonVideoSource::v_camera_id</definition>
+        <argsstring></argsstring>
+        <name>v_camera_id</name>
+        <qualifiedname>PylonVideoSource::v_camera_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="34" column="13" bodyfile="tracker/pylon.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pylon_video_source_1a474fb9aee9931604e4e79b46b91ee6f7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PylonVideoSource::PylonVideoSource</definition>
+        <argsstring>()</argsstring>
+        <name>PylonVideoSource</name>
+        <qualifiedname>PylonVideoSource::PylonVideoSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="19" column="14" bodyfile="tracker/pylon.cpp" bodystart="9" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1ae9f13f9d26bf331398836d9e478e1d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PylonVideoSource::~PylonVideoSource</definition>
+        <argsstring>()</argsstring>
+        <name>~PylonVideoSource</name>
+        <qualifiedname>PylonVideoSource::~PylonVideoSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="20" column="5" bodyfile="tracker/pylon.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a0a5e38a46bdd1d92f3d353d2afcaa258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::isOpened</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpened</name>
+        <qualifiedname>PylonVideoSource::isOpened</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="22" column="10" bodyfile="tracker/pylon.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a8c1b8813f884891b8481706bfca5a5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PylonVideoSource::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <qualifiedname>PylonVideoSource::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="23" column="10" bodyfile="tracker/pylon.cpp" bodystart="30" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1ae4a79e2e7f1442b03bc6a3e84ba7ec4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::retrieve</definition>
+        <argsstring>(cv::OutputArray image, int flag=0)</argsstring>
+        <name>retrieve</name>
+        <qualifiedname>PylonVideoSource::retrieve</qualifiedname>
+        <param>
+          <type>cv::OutputArray</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="24" column="10" bodyfile="tracker/pylon.cpp" bodystart="38" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a32ba6d91fe91a588652e09706c988b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::open</definition>
+        <argsstring>(int index, int apiPreference=cv::CAP_ANY)</argsstring>
+        <name>open</name>
+        <qualifiedname>PylonVideoSource::open</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>apiPreference</declname>
+          <defval>cv::CAP_ANY</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="25" column="10" bodyfile="tracker/pylon.cpp" bodystart="50" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1ae76cc95fcf28270369a176e6057c20ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PylonVideoSource::readAllParameterValues</definition>
+        <argsstring>()</argsstring>
+        <name>readAllParameterValues</name>
+        <qualifiedname>PylonVideoSource::readAllParameterValues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a1d75013e49a2e163f37070514929e78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PylonVideoSource::writeParameterValues</definition>
+        <argsstring>()</argsstring>
+        <name>writeParameterValues</name>
+        <qualifiedname>PylonVideoSource::writeParameterValues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="29" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a474fb9aee9931604e4e79b46b91ee6f7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PylonVideoSource::PylonVideoSource</definition>
+        <argsstring>()</argsstring>
+        <name>PylonVideoSource</name>
+        <qualifiedname>PylonVideoSource::PylonVideoSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="17" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1ae9f13f9d26bf331398836d9e478e1d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PylonVideoSource::~PylonVideoSource</definition>
+        <argsstring>()</argsstring>
+        <name>~PylonVideoSource</name>
+        <qualifiedname>PylonVideoSource::~PylonVideoSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="18" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a0a5e38a46bdd1d92f3d353d2afcaa258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::isOpened</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpened</name>
+        <qualifiedname>PylonVideoSource::isOpened</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="20" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a8c1b8813f884891b8481706bfca5a5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PylonVideoSource::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <qualifiedname>PylonVideoSource::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1ae4a79e2e7f1442b03bc6a3e84ba7ec4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::retrieve</definition>
+        <argsstring>(cv::OutputArray image, int flag=0)</argsstring>
+        <name>retrieve</name>
+        <qualifiedname>PylonVideoSource::retrieve</qualifiedname>
+        <param>
+          <type>cv::OutputArray</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a32ba6d91fe91a588652e09706c988b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::open</definition>
+        <argsstring>(int index, int apiPreference=cv::CAP_ANY)</argsstring>
+        <name>open</name>
+        <qualifiedname>PylonVideoSource::open</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>apiPreference</declname>
+          <defval>cv::CAP_ANY</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon_org.h" line="23" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pylon_video_source_1a8634c7385105c6a96229541e937fbb60" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PylonVideoSource::resetCamera</definition>
+        <argsstring>(unsigned int new_id)</argsstring>
+        <name>resetCamera</name>
+        <qualifiedname>PylonVideoSource::resetCamera</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>new_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="48" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a7b0c18c376aa8958e80dcf1b06d989de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::_stopCapture</definition>
+        <argsstring>()</argsstring>
+        <name>_stopCapture</name>
+        <qualifiedname>PylonVideoSource::_stopCapture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pylon_video_source_1a159e46710664f1344ff1d840ee386b23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PylonVideoSource::_buildCamera</definition>
+        <argsstring>()</argsstring>
+        <name>_buildCamera</name>
+        <qualifiedname>PylonVideoSource::_buildCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/pylon.h" line="50" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PylonVideoSource</label>
+        <link refid="class_pylon_video_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::VideoCapture</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PylonVideoSource</label>
+        <link refid="class_pylon_video_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::VideoCapture</label>
+      </node>
+    </collaborationgraph>
+    <location file="tracker/pylon.h" line="10" column="1" bodyfile="tracker/pylon.h" bodystart="10" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_pylon_video_source_1a159e46710664f1344ff1d840ee386b23" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>_buildCamera</name></member>
+      <member refid="class_pylon_video_source_1a7b0c18c376aa8958e80dcf1b06d989de" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>_stopCapture</name></member>
+      <member refid="class_pylon_video_source_1ac63d56a42c783261e8c424d2d5cc5b21" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>camera_frequency</name></member>
+      <member refid="class_pylon_video_source_1a0a5e38a46bdd1d92f3d353d2afcaa258" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>isOpened</name></member>
+      <member refid="class_pylon_video_source_1a0a5e38a46bdd1d92f3d353d2afcaa258" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>isOpened</name></member>
+      <member refid="class_pylon_video_source_1a46c7f1d14ed1d5c5310feafe361c933d" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>mCamera</name></member>
+      <member refid="class_pylon_video_source_1a4e39810d3f9650a28619a124a623b70f" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>mGrabResult</name></member>
+      <member refid="class_pylon_video_source_1ac187767b76b497e54461fad0527e0127" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>mImgFormater</name></member>
+      <member refid="class_pylon_video_source_1a650474ddc8bd6cc68c83953f0f9973ca" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>mOpened</name></member>
+      <member refid="class_pylon_video_source_1a32ba6d91fe91a588652e09706c988b7a" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>open</name></member>
+      <member refid="class_pylon_video_source_1a32ba6d91fe91a588652e09706c988b7a" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>open</name></member>
+      <member refid="class_pylon_video_source_1a474fb9aee9931604e4e79b46b91ee6f7" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>PylonVideoSource</name></member>
+      <member refid="class_pylon_video_source_1a474fb9aee9931604e4e79b46b91ee6f7" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>PylonVideoSource</name></member>
+      <member refid="class_pylon_video_source_1ae76cc95fcf28270369a176e6057c20ca" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>readAllParameterValues</name></member>
+      <member refid="class_pylon_video_source_1a8c1b8813f884891b8481706bfca5a5a1" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>release</name></member>
+      <member refid="class_pylon_video_source_1a8c1b8813f884891b8481706bfca5a5a1" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>release</name></member>
+      <member refid="class_pylon_video_source_1a8634c7385105c6a96229541e937fbb60" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>resetCamera</name></member>
+      <member refid="class_pylon_video_source_1ae4a79e2e7f1442b03bc6a3e84ba7ec4c" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>retrieve</name></member>
+      <member refid="class_pylon_video_source_1ae4a79e2e7f1442b03bc6a3e84ba7ec4c" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>retrieve</name></member>
+      <member refid="class_pylon_video_source_1a09572b3827529056fd3da1feee519c05" prot="private" virt="non-virtual"><scope>PylonVideoSource</scope><name>v_camera_id</name></member>
+      <member refid="class_pylon_video_source_1a1d75013e49a2e163f37070514929e78d" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>writeParameterValues</name></member>
+      <member refid="class_pylon_video_source_1ae9f13f9d26bf331398836d9e478e1d48" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>~PylonVideoSource</name></member>
+      <member refid="class_pylon_video_source_1ae9f13f9d26bf331398836d9e478e1d48" prot="public" virt="non-virtual"><scope>PylonVideoSource</scope><name>~PylonVideoSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

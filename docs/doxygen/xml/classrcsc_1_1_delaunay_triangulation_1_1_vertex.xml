@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_delaunay_triangulation_1_1_vertex" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::DelaunayTriangulation::Vertex</compoundname>
+    <includes refid="delaunay__triangulation_8h" local="no">delaunay_triangulation.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a91cbe03bd9a05520104bc877d8a97b43" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rcsc::DelaunayTriangulation::Vertex::M_id</definition>
+        <argsstring></argsstring>
+        <name>M_id</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::M_id</qualifiedname>
+        <briefdescription>
+<para>Id number of this vertex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="74" column="13" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a62b2b6cda6220c0c84c86d0cc645d412" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::DelaunayTriangulation::Vertex::M_pos</definition>
+        <argsstring></argsstring>
+        <name>M_pos</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::M_pos</qualifiedname>
+        <briefdescription>
+<para>coordinate of kernel point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="75" column="18" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a4b3ae2be7581c956d3b09d49d39860ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::DelaunayTriangulation::Vertex::Vertex</definition>
+        <argsstring>()</argsstring>
+        <name>Vertex</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::Vertex</qualifiedname>
+        <briefdescription>
+<para>create vertex with Id number 0 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="81" column="9" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a083bd29e48cbf7b541c8d7e6de6f719b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::DelaunayTriangulation::Vertex::Vertex</definition>
+        <argsstring>(const int id)</argsstring>
+        <name>Vertex</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::Vertex</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>create vertex with Id </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="90" column="9" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a8cd5487b3b6bcd563d1de96fca4b120f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual rcsc::DelaunayTriangulation::Vertex::~Vertex</definition>
+        <argsstring>()</argsstring>
+        <name>~Vertex</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::~Vertex</qualifiedname>
+        <briefdescription>
+<para>nothing to do </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="98" column="9" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="98" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a707edd0ead1e8ecaa3cf5b3884fdb3d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::DelaunayTriangulation::Vertex::Vertex</definition>
+        <argsstring>(const int id, const Vector2D &amp;p)</argsstring>
+        <name>Vertex</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::Vertex</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>create vertex with Id &amp; coordinates </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="106" column="9" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a8df5ca51ae0519ecd7790f1141c50cce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::DelaunayTriangulation::Vertex::Vertex</definition>
+        <argsstring>(const int id, const double &amp;x, const double &amp;y)</argsstring>
+        <name>Vertex</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::Vertex</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>create vertex with Id &amp; coordinates </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="118" column="9" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="118" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1aa916b58cfbaf5906abc2b5b16378b895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex" kindref="compound">Vertex</ref> &amp;</type>
+        <definition>Vertex &amp; rcsc::DelaunayTriangulation::Vertex::assign</definition>
+        <argsstring>(const int id, const Vector2D &amp;p)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::assign</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>assign data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="130" column="17" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a9206b73c79883696bbe0b56ba202eee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex" kindref="compound">Vertex</ref> &amp;</type>
+        <definition>Vertex &amp; rcsc::DelaunayTriangulation::Vertex::assign</definition>
+        <argsstring>(const int id, const double &amp;x, const double &amp;y)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::assign</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>assign data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinates of kernel point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="144" column="17" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="144" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a50f94652526175de00764edd9be4cbbd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int rcsc::DelaunayTriangulation::Vertex::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::id</qualifiedname>
+        <briefdescription>
+<para>get the Id of this vertex </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Id number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="157" column="13" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a799c8ab9a65509120bab1a9b4ce6b151" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>const Vector2D &amp; rcsc::DelaunayTriangulation::Vertex::pos</definition>
+        <argsstring>() const</argsstring>
+        <name>pos</name>
+        <qualifiedname>rcsc::DelaunayTriangulation::Vertex::pos</qualifiedname>
+        <briefdescription>
+<para>get the coordinates of the kernel point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the vector object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/delaunay_triangulation.h" line="167" column="19" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="167" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>triangle&apos;s vertex data. This is handled as kernel point for the Voronoi diagram.. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/delaunay_triangulation.h" line="72" column="5" bodyfile="ui/geom/delaunay_triangulation.h" bodystart="72" bodyend="171"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1aa916b58cfbaf5906abc2b5b16378b895" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a9206b73c79883696bbe0b56ba202eee5" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a50f94652526175de00764edd9be4cbbd" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>id</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a91cbe03bd9a05520104bc877d8a97b43" prot="private" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>M_id</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a62b2b6cda6220c0c84c86d0cc645d412" prot="private" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>M_pos</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a799c8ab9a65509120bab1a9b4ce6b151" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>pos</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a4b3ae2be7581c956d3b09d49d39860ba" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>Vertex</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a083bd29e48cbf7b541c8d7e6de6f719b" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>Vertex</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a707edd0ead1e8ecaa3cf5b3884fdb3d6" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>Vertex</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a8df5ca51ae0519ecd7790f1141c50cce" prot="public" virt="non-virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>Vertex</name></member>
+      <member refid="classrcsc_1_1_delaunay_triangulation_1_1_vertex_1a8cd5487b3b6bcd563d1de96fca4b120f" prot="public" virt="virtual"><scope>rcsc::DelaunayTriangulation::Vertex</scope><name>~Vertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

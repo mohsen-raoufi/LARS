@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_x_more_equal" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::XMoreEqual</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_x_more_equal_1a3bbdd98f6c1ad96888b33a45b69e31f5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::XMoreEqual::threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <qualifiedname>rcsc::XMoreEqual::threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="474" column="12" bodyfile="ui/geom/polygon_2d.cpp" bodystart="474" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_x_more_equal_1a71edf6a4ffb59cdaddb7a0e0472bf600" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::XMoreEqual::XMoreEqual</definition>
+        <argsstring>(double threshold)</argsstring>
+        <name>XMoreEqual</name>
+        <qualifiedname>rcsc::XMoreEqual::XMoreEqual</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="477" column="5" bodyfile="ui/geom/polygon_2d.cpp" bodystart="477" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_x_more_equal_1a0d4d4d16cd375b04ddd0ae364837b3a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::XMoreEqual::operator()</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>rcsc::XMoreEqual::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="482" column="10" bodyfile="ui/geom/polygon_2d.cpp" bodystart="482" bodyend="485"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/polygon_2d.cpp" line="471" column="1" bodyfile="ui/geom/polygon_2d.cpp" bodystart="472" bodyend="486"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_x_more_equal_1a0d4d4d16cd375b04ddd0ae364837b3a3" prot="public" virt="non-virtual"><scope>rcsc::XMoreEqual</scope><name>operator()</name></member>
+      <member refid="classrcsc_1_1_x_more_equal_1a3bbdd98f6c1ad96888b33a45b69e31f5" prot="private" virt="non-virtual"><scope>rcsc::XMoreEqual</scope><name>threshold</name></member>
+      <member refid="classrcsc_1_1_x_more_equal_1a71edf6a4ffb59cdaddb7a0e0472bf600" prot="public" virt="non-virtual"><scope>rcsc::XMoreEqual</scope><name>XMoreEqual</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

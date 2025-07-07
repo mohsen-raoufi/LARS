@@ -1,0 +1,1341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_bars" kind="class" language="C++" prot="public">
+    <compoundname>QCPBars</compoundname>
+    <basecompoundref refid="class_q_c_p_abstract_plottable1_d" prot="public" virt="non-virtual">QCPAbstractPlottable1D&lt; QCPBarsData &gt;</basecompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" prot="public" static="no" strong="no">
+        <type></type>
+        <name>WidthType</name>
+        <qualifiedname>QCPBars::WidthType</qualifiedname>
+        <enumvalue id="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649ab74315c9aa77df593c58dd25dfc0de35" prot="public">
+          <name>wtAbsolute</name>
+          <briefdescription>
+<para>Bar width is in absolute pixels. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649a90bc09899361ad3422ff277f7c790ffe" prot="public">
+          <name>wtAxisRectRatio</name>
+          <briefdescription>
+<para>Bar width is given by a fraction of the axis rect size. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649aad3cc60ae1bfb1160a30237bee9eaf10" prot="public">
+          <name>wtPlotCoords</name>
+          <briefdescription>
+<para>Bar width is in key coordinates and thus scales with the key axis range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the ways the width of the bar can be specified. Thus it defines what the number passed to <ref refid="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" kindref="member">setWidth</ref> actually means.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1adcaa3b41281bb2c0f7949b341592fcc0" kindref="member">setWidthType</ref>, <ref refid="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" kindref="member">setWidth</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5795" column="3" bodyfile="qcustomplot.h" bodystart="5795" bodyend="5798"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_bars_1a7c4e0f2246f8133f48a9c3f24cf5b920" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPBars::mWidth</definition>
+        <argsstring></argsstring>
+        <name>mWidth</name>
+        <qualifiedname>QCPBars::mWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5838" column="10" bodyfile="qcustomplot.h" bodystart="5838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1a94dba1309496c7601d01e2c59715cbb3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" kindref="member">WidthType</ref></type>
+        <definition>WidthType QCPBars::mWidthType</definition>
+        <argsstring></argsstring>
+        <name>mWidthType</name>
+        <qualifiedname>QCPBars::mWidthType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5839" column="13" bodyfile="qcustomplot.h" bodystart="5839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1a9f59c255f3739182ca9744dff75beaa9" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref> *</type>
+        <definition>QCPBarsGroup* QCPBars::mBarsGroup</definition>
+        <argsstring></argsstring>
+        <name>mBarsGroup</name>
+        <qualifiedname>QCPBars::mBarsGroup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5840" column="16" bodyfile="qcustomplot.h" bodystart="5840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1aa0515cf47fa6044cc28e59b1ae5ec759" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPBars::mBaseValue</definition>
+        <argsstring></argsstring>
+        <name>mBaseValue</name>
+        <qualifiedname>QCPBars::mBaseValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5841" column="10" bodyfile="qcustomplot.h" bodystart="5841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1a2022ddbcf8b464a05d434700a666da18" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPBars::mStackingGap</definition>
+        <argsstring></argsstring>
+        <name>mStackingGap</name>
+        <qualifiedname>QCPBars::mStackingGap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5842" column="10" bodyfile="qcustomplot.h" bodystart="5842" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1ad51db970eed7e286f2753b0216fc56de" prot="protected" static="no" mutable="no">
+        <type>QPointer&lt; <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> &gt;</type>
+        <definition>QPointer&lt;QCPBars&gt; QCPBars::mBarBelow</definition>
+        <argsstring></argsstring>
+        <name>mBarBelow</name>
+        <qualifiedname>QCPBars::mBarBelow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5843" column="12" bodyfile="qcustomplot.h" bodystart="5843" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_bars_1a0c1c46076c41a478dbb373cfd35929aa" prot="protected" static="no" mutable="no">
+        <type>QPointer&lt; <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> &gt;</type>
+        <definition>QPointer&lt;QCPBars&gt; QCPBars::mBarAbove</definition>
+        <argsstring></argsstring>
+        <name>mBarAbove</name>
+        <qualifiedname>QCPBars::mBarAbove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5843" column="22" bodyfile="qcustomplot.h" bodystart="5843" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_bars_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCustomPlot</definition>
+        <argsstring></argsstring>
+        <name>QCustomPlot</name>
+        <qualifiedname>QCPBars::QCustomPlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5856" column="16" bodyfile="qcustomplot.h" bodystart="5856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_bars_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPLegend</definition>
+        <argsstring></argsstring>
+        <name>QCPLegend</name>
+        <qualifiedname>QCPBars::QCPLegend</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5857" column="16" bodyfile="qcustomplot.h" bodystart="5857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_bars_1ae1051b4d58a2786cb420367a586e2fee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPBarsGroup</definition>
+        <argsstring></argsstring>
+        <name>QCPBarsGroup</name>
+        <qualifiedname>QCPBars::QCPBarsGroup</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5858" column="16" bodyfile="qcustomplot.h" bodystart="5858" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_bars_1a64006999ad9dff308f40df41cef176ad" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPBars::QCPBars</definition>
+        <argsstring>(QCPAxis *keyAxis, QCPAxis *valueAxis)</argsstring>
+        <name>QCPBars</name>
+        <qualifiedname>QCPBars::QCPBars</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>keyAxis</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>valueAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a bar chart which uses <emphasis>keyAxis</emphasis> as its key axis (&quot;x&quot;) and <emphasis>valueAxis</emphasis> as its value axis (&quot;y&quot;). <emphasis>keyAxis</emphasis> and <emphasis>valueAxis</emphasis> must reside in the same <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance and not have the same orientation. If either of these restrictions is violated, a corresponding message is printed to the debug output (qDebug), the construction is not aborted, though.</para>
+<para>The created <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> is automatically registered with the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance inferred from <emphasis>keyAxis</emphasis>. This <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance takes ownership of the <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref>, so do not delete it manually but use <ref refid="class_q_custom_plot_1af3dafd56884208474f311d6226513ab2" kindref="member">QCustomPlot::removePlottable()</ref> instead. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5801" column="12" bodyfile="qcustomplot.cpp" bodystart="24408" bodyend="24422"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a7cfc40a41ce0a2bce71cfb34f30886ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>QCPBars::~QCPBars</definition>
+        <argsstring>() Q_DECL_OVERRIDE</argsstring>
+        <name>~QCPBars</name>
+        <qualifiedname>QCPBars::~QCPBars</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5802" column="11" bodyfile="qcustomplot.cpp" bodystart="24424" bodyend="24429"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1abe7eb3987d8711f45829db879aee2280" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPBars::width</definition>
+        <argsstring>() const</argsstring>
+        <name>width</name>
+        <qualifiedname>QCPBars::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5805" column="10" bodyfile="qcustomplot.h" bodystart="5805" bodyend="5805"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a4c103fb405a45f47853e0345f0c6e708" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" kindref="member">WidthType</ref></type>
+        <definition>WidthType QCPBars::widthType</definition>
+        <argsstring>() const</argsstring>
+        <name>widthType</name>
+        <qualifiedname>QCPBars::widthType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5806" column="13" bodyfile="qcustomplot.h" bodystart="5806" bodyend="5806"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a5af22a56b1e0898291c8d95d49ad3525" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref> *</type>
+        <definition>QCPBarsGroup * QCPBars::barsGroup</definition>
+        <argsstring>() const</argsstring>
+        <name>barsGroup</name>
+        <qualifiedname>QCPBars::barsGroup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5807" column="16" bodyfile="qcustomplot.h" bodystart="5807" bodyend="5807"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a29a7b3b86f80b2a04bd1f9ec0ebaf422" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPBars::baseValue</definition>
+        <argsstring>() const</argsstring>
+        <name>baseValue</name>
+        <qualifiedname>QCPBars::baseValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5808" column="10" bodyfile="qcustomplot.h" bodystart="5808" bodyend="5808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a2e6192fa9c16df7ba94cd50c0c9ec7ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPBars::stackingGap</definition>
+        <argsstring>() const</argsstring>
+        <name>stackingGap</name>
+        <qualifiedname>QCPBars::stackingGap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5809" column="10" bodyfile="qcustomplot.h" bodystart="5809" bodyend="5809"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a1b58664864b141f45e02044a855b3213" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+        <definition>QCPBars * QCPBars::barBelow</definition>
+        <argsstring>() const</argsstring>
+        <name>barBelow</name>
+        <qualifiedname>QCPBars::barBelow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the bars plottable that is directly below this bars plottable. If there is no such plottable, returns <computeroutput>nullptr</computeroutput>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1ab97f2acd9f6cb40d2cc3c33d278f0e78" kindref="member">barAbove</ref>, <ref refid="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" kindref="member">moveBelow</ref>, <ref refid="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" kindref="member">moveAbove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5810" column="11" bodyfile="qcustomplot.h" bodystart="5810" bodyend="5810"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ab97f2acd9f6cb40d2cc3c33d278f0e78" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+        <definition>QCPBars * QCPBars::barAbove</definition>
+        <argsstring>() const</argsstring>
+        <name>barAbove</name>
+        <qualifiedname>QCPBars::barAbove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the bars plottable that is directly above this bars plottable. If there is no such plottable, returns <computeroutput>nullptr</computeroutput>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1a1b58664864b141f45e02044a855b3213" kindref="member">barBelow</ref>, <ref refid="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" kindref="member">moveBelow</ref>, <ref refid="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" kindref="member">moveAbove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5811" column="11" bodyfile="qcustomplot.h" bodystart="5811" bodyend="5811"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a7e373a534d82e18ed27b3fafd1f08fae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QSharedPointer&lt; <ref refid="class_q_c_p_data_container" kindref="compound">QCPBarsDataContainer</ref> &gt;</type>
+        <definition>QSharedPointer&lt; QCPBarsDataContainer &gt; QCPBars::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>QCPBars::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a shared pointer to the internal data storage of type QCPBarsDataContainer. You may use it to directly manipulate the data, which may be more convenient and faster than using the regular <ref refid="class_q_c_p_bars_1a6dc562ec7120a8521e1061f2134367e4" kindref="member">setData</ref> or <ref refid="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" kindref="member">addData</ref> methods. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5812" column="18" bodyfile="qcustomplot.h" bodystart="5812" bodyend="5812"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a6dc562ec7120a8521e1061f2134367e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setData</definition>
+        <argsstring>(QSharedPointer&lt; QCPBarsDataContainer &gt; data)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPBars::setData</qualifiedname>
+        <param>
+          <type>QSharedPointer&lt; <ref refid="class_q_c_p_data_container" kindref="compound">QCPBarsDataContainer</ref> &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data container with the provided <emphasis>data</emphasis> container.</para>
+<para>Since a QSharedPointer is used, multiple <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> may share the same data container safely. Modifying the data in the container will then affect all bars that share the container. Sharing can be achieved by simply exchanging the data containers wrapped in shared pointers: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting></para>
+<para>If you do not wish to share containers, but create a copy from an existing container, rather use the <ref refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" kindref="member">QCPDataContainer&lt;DataType&gt;::set</ref> method on the bar&apos;s data container directly: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting></para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5815" column="8" bodyfile="qcustomplot.cpp" bodystart="24446" bodyend="24449"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a2a88cd5b16ec7b71e5a590f95b50c5ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values, bool alreadySorted=false)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPBars::setData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data with the provided points in <emphasis>keys</emphasis> and <emphasis>values</emphasis>. The provided vectors should have equal length. Else, the number of added points will be the size of the smallest vector.</para>
+<para>If you can guarantee that the passed data points are sorted by <emphasis>keys</emphasis> in ascending order, you can set <emphasis>alreadySorted</emphasis> to true, to improve performance by saving a sorting run.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5816" column="8" bodyfile="qcustomplot.cpp" bodystart="24462" bodyend="24466"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setWidth</definition>
+        <argsstring>(double width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>QCPBars::setWidth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the width of the bars.</para>
+<para>How the number passed as <emphasis>width</emphasis> is interpreted (e.g. screen pixels, plot coordinates,...), depends on the currently set width type, see <ref refid="class_q_c_p_bars_1adcaa3b41281bb2c0f7949b341592fcc0" kindref="member">setWidthType</ref> and <ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" kindref="member">WidthType</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5817" column="8" bodyfile="qcustomplot.cpp" bodystart="24474" bodyend="24477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1adcaa3b41281bb2c0f7949b341592fcc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setWidthType</definition>
+        <argsstring>(WidthType widthType)</argsstring>
+        <name>setWidthType</name>
+        <qualifiedname>QCPBars::setWidthType</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" kindref="member">WidthType</ref></type>
+          <declname>widthType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets how the width of the bars is defined. See the documentation of <ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" kindref="member">WidthType</ref> for an explanation of the possible values for <emphasis>widthType</emphasis>.</para>
+<para>The default value is <ref refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649aad3cc60ae1bfb1160a30237bee9eaf10" kindref="member">wtPlotCoords</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" kindref="member">setWidth</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5818" column="8" bodyfile="qcustomplot.cpp" bodystart="24487" bodyend="24490"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1aedd1709061f0b307c47ddb45e172ef9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setBarsGroup</definition>
+        <argsstring>(QCPBarsGroup *barsGroup)</argsstring>
+        <name>setBarsGroup</name>
+        <qualifiedname>QCPBars::setBarsGroup</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref> *</type>
+          <declname>barsGroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets to which <ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref> this <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> instance belongs to. Alternatively, you can also use <ref refid="class_q_c_p_bars_group_1a809ed63cc4ff7cd5b0b8c96b470163d3" kindref="member">QCPBarsGroup::append</ref>.</para>
+<para>To remove this <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> from any group, set <emphasis>barsGroup</emphasis> to <computeroutput>nullptr</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5819" column="8" bodyfile="qcustomplot.cpp" bodystart="24498" bodyend="24507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a574ec7eb7537566df1a28ff085d75623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setBaseValue</definition>
+        <argsstring>(double baseValue)</argsstring>
+        <name>setBaseValue</name>
+        <qualifiedname>QCPBars::setBaseValue</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>baseValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the base value of this bars plottable.</para>
+<para>The base value defines where on the value coordinate the bars start. How far the bars extend from the base value is given by their individual value data. For example, if the base value is set to 1, a bar with data value 2 will have its lowest point at value coordinate 1 and highest point at 3.</para>
+<para>For stacked bars, only the base value of the bottom-most <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> has meaning.</para>
+<para>The default base value is 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5820" column="8" bodyfile="qcustomplot.cpp" bodystart="24521" bodyend="24524"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1aeacf7561afb1c70284b22822b57c7bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::setStackingGap</definition>
+        <argsstring>(double pixels)</argsstring>
+        <name>setStackingGap</name>
+        <qualifiedname>QCPBars::setStackingGap</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>pixels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this bars plottable is stacked on top of another bars plottable (<ref refid="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" kindref="member">moveAbove</ref>), this method allows specifying a distance in <emphasis>pixels</emphasis>, by which the drawn bar rectangles will be separated by the bars below it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5821" column="8" bodyfile="qcustomplot.cpp" bodystart="24531" bodyend="24534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::addData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values, bool alreadySorted=false)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPBars::addData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds the provided points in <emphasis>keys</emphasis> and <emphasis>values</emphasis> to the current data. The provided vectors should have equal length. Else, the number of added points will be the size of the smallest vector.</para>
+<para>If you can guarantee that the passed data points are sorted by <emphasis>keys</emphasis> in ascending order, you can set <emphasis>alreadySorted</emphasis> to true, to improve performance by saving a sorting run.</para>
+<para>Alternatively, you can also access and modify the data directly via the <ref refid="class_q_c_p_bars_1a7e373a534d82e18ed27b3fafd1f08fae" kindref="member">data</ref> method, which returns a pointer to the internal data container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5824" column="8" bodyfile="qcustomplot.cpp" bodystart="24548" bodyend="24565"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a684dd105403a5497fda42f2094fecbb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::addData</definition>
+        <argsstring>(double key, double value)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPBars::addData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Adds the provided data point as <emphasis>key</emphasis> and <emphasis>value</emphasis> to the current data.</para>
+<para>Alternatively, you can also access and modify the data directly via the <ref refid="class_q_c_p_bars_1a7e373a534d82e18ed27b3fafd1f08fae" kindref="member">data</ref> method, which returns a pointer to the internal data container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5825" column="8" bodyfile="qcustomplot.cpp" bodystart="24573" bodyend="24576"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::moveBelow</definition>
+        <argsstring>(QCPBars *bars)</argsstring>
+        <name>moveBelow</name>
+        <qualifiedname>QCPBars::moveBelow</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+          <declname>bars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves this bars plottable below <emphasis>bars</emphasis>. In other words, the bars of this plottable will appear below the bars of <emphasis>bars</emphasis>. The move target <emphasis>bars</emphasis> must use the same key and value axis as this plottable.</para>
+<para>Inserting into and removing from existing bar stacking is handled gracefully. If <emphasis>bars</emphasis> already has a bars object below itself, this bars object is inserted between the two. If this bars object is already between two other bars, the two other bars will be stacked on top of each other after the operation.</para>
+<para>To remove this bars plottable from any stacking, set <emphasis>bars</emphasis> to <computeroutput>nullptr</computeroutput>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" kindref="member">moveBelow</ref>, <ref refid="class_q_c_p_bars_1ab97f2acd9f6cb40d2cc3c33d278f0e78" kindref="member">barAbove</ref>, <ref refid="class_q_c_p_bars_1a1b58664864b141f45e02044a855b3213" kindref="member">barBelow</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5826" column="8" bodyfile="qcustomplot.cpp" bodystart="24592" bodyend="24609"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::moveAbove</definition>
+        <argsstring>(QCPBars *bars)</argsstring>
+        <name>moveAbove</name>
+        <qualifiedname>QCPBars::moveAbove</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+          <declname>bars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves this bars plottable above <emphasis>bars</emphasis>. In other words, the bars of this plottable will appear above the bars of <emphasis>bars</emphasis>. The move target <emphasis>bars</emphasis> must use the same key and value axis as this plottable.</para>
+<para>Inserting into and removing from existing bar stacking is handled gracefully. If <emphasis>bars</emphasis> already has a bars object above itself, this bars object is inserted between the two. If this bars object is already between two other bars, the two other bars will be stacked on top of each other after the operation.</para>
+<para>To remove this bars plottable from any stacking, set <emphasis>bars</emphasis> to <computeroutput>nullptr</computeroutput>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" kindref="member">moveBelow</ref>, <ref refid="class_q_c_p_bars_1a1b58664864b141f45e02044a855b3213" kindref="member">barBelow</ref>, <ref refid="class_q_c_p_bars_1ab97f2acd9f6cb40d2cc3c33d278f0e78" kindref="member">barAbove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5827" column="8" bodyfile="qcustomplot.cpp" bodystart="24625" bodyend="24642"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ab03bb6125c3e983b89d694f75ce6b3d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref></type>
+        <definition>QCPDataSelection QCPBars::selectTestRect</definition>
+        <argsstring>(const QRectF &amp;rect, bool onlySelectable) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTestRect</name>
+        <qualifiedname>QCPBars::selectTestRect</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable1_d_1a22377bf6e57ab7eedbc9e489250c6ded">selectTestRect</reimplements>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data selection containing all the data points of this plottable which are contained (or hit by) <emphasis>rect</emphasis>. This is used mainly in the selection rect interaction for data selection (data selection mechanism).</para>
+<para>If <emphasis>onlySelectable</emphasis> is true, an empty <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> is returned if this plottable is not selectable (i.e. if <ref refid="class_q_c_p_abstract_plottable_1ac238d6e910f976f1f30d41c2bca44ac3" kindref="member">QCPAbstractPlottable::setSelectable</ref> is <ref refid="namespace_q_c_p_1ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe" kindref="member">QCP::stNone</ref>).</para>
+<para><simplesect kind="note"><para><emphasis>rect</emphasis> must be a normalized rect (positive or zero width and height). This is especially important when using the rect of <ref refid="class_q_c_p_selection_rect_1a15a43542e1f7b953a44c260b419e6d2c" kindref="member">QCPSelectionRect::accepted</ref>, which is not necessarily normalized. Use <computeroutput>QRect::normalized()</computeroutput> when passing a rect which might not be normalized.    </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5830" column="28" bodyfile="qcustomplot.cpp" bodystart="24647" bodyend="24665"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ae490d8589b7e5f5d7e2e5ee88ce3e6c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPBars::selectTest</definition>
+        <argsstring>(const QPointF &amp;pos, bool onlySelectable, QVariant *details=nullptr) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTest</name>
+        <qualifiedname>QCPBars::selectTest</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable1_d_1a2f169c3c2989e5d08ec7a9e3eb56a261">selectTest</reimplements>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <param>
+          <type>QVariant *</type>
+          <declname>details</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements a selectTest specific to this plottable&apos;s point geometry.</para>
+<para>If <emphasis>details</emphasis> is not 0, it will be set to a <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref>, describing the closest data point to <emphasis>pos</emphasis>.</para>
+<para>\seebaseclassmethod <ref refid="class_q_c_p_abstract_plottable_1a8e4964b629802ce50e1427c7fb21d35b" kindref="member">QCPAbstractPlottable::selectTest</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5831" column="18" bodyfile="qcustomplot.cpp" bodystart="24675" bodyend="24702"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ac5a3854774d9d9cd129b1eae1426de2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPBars::getKeyRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth) const Q_DECL_OVERRIDE</argsstring>
+        <name>getKeyRange</name>
+        <qualifiedname>QCPBars::getKeyRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a56b4d9000f4de0de86c566c84eb05a21">getKeyRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that all data in this plottable span in the key axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_bars_1a02cee4bf94d48a1e5f6fc185d9a10477" kindref="member">getValueRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5832" column="20" bodyfile="qcustomplot.cpp" bodystart="24705" bodyend="24741"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a02cee4bf94d48a1e5f6fc185d9a10477" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPBars::getValueRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth, const QCPRange &amp;inKeyRange=QCPRange()) const Q_DECL_OVERRIDE</argsstring>
+        <name>getValueRange</name>
+        <qualifiedname>QCPBars::getValueRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1aa81c95aec08d86cdd5407e48b83ab186">getValueRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>inKeyRange</declname>
+          <defval><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that the data points in the specified key range (<emphasis>inKeyRange</emphasis>) span in the value axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>If <emphasis>inKeyRange</emphasis> has both lower and upper bound set to zero (is equal to <computeroutput><ref refid="class_q_c_p_range" kindref="compound">QCPRange()</ref></computeroutput>), all data points are considered, without any restriction on the keys.</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_bars_1ac5a3854774d9d9cd129b1eae1426de2d" kindref="member">getKeyRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5833" column="20" bodyfile="qcustomplot.cpp" bodystart="24744" bodyend="24781"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a55cdaf565cd3384158d1f7f89533bc2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QPointF</type>
+        <definition>QPointF QCPBars::dataPixelPosition</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataPixelPosition</name>
+        <qualifiedname>QCPBars::dataPixelPosition</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable1_d_1a6ca0699a6af5f25a7565de7c50ce13b2">dataPixelPosition</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the pixel position on the widget surface at which the data point at the given <emphasis>index</emphasis> appears.</para>
+<para>Usually this corresponds to the point of dataMainKey/ dataMainValue, in pixel coordinates. However, depending on the plottable, this might be a different apparent position than just a coord-to-pixel transform of those values. For example, <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> apparent data values can be shifted depending on their stacking, bar grouping or configured base value.    </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5834" column="19" bodyfile="qcustomplot.cpp" bodystart="24784" bodyend="24804"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_bars_1aa267c20650d55084c3f47cb2f8fac9dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPBars::draw</definition>
+        <argsstring>(QCPPainter *painter) Q_DECL_OVERRIDE</argsstring>
+        <name>draw</name>
+        <qualifiedname>QCPBars::draw</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a453f676a5cee7bf846c5f0fa05ea84b3">draw</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5846" column="16" bodyfile="qcustomplot.cpp" bodystart="24807" bodyend="24853"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1aee7c3e1763fd6b504c45baa8775be7b7" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPBars::drawLegendIcon</definition>
+        <argsstring>(QCPPainter *painter, const QRectF &amp;rect) const Q_DECL_OVERRIDE</argsstring>
+        <name>drawLegendIcon</name>
+        <qualifiedname>QCPBars::drawLegendIcon</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a71c259f4f96533d12df152c446b17425">drawLegendIcon</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5847" column="16" bodyfile="qcustomplot.cpp" bodystart="24856" bodyend="24865"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ac8b6b514a665a7bff4fb080413ba996a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::getVisibleDataBounds</definition>
+        <argsstring>(QCPBarsDataContainer::const_iterator &amp;begin, QCPBarsDataContainer::const_iterator &amp;end) const</argsstring>
+        <name>getVisibleDataBounds</name>
+        <qualifiedname>QCPBars::getVisibleDataBounds</qualifiedname>
+        <param>
+          <type>QCPBarsDataContainer::const_iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>QCPBarsDataContainer::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5850" column="8" bodyfile="qcustomplot.cpp" bodystart="24881" bodyend="24933"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a01b87e38e5d5089d214646d2af7896ea" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QRectF</type>
+        <definition>QRectF QCPBars::getBarRect</definition>
+        <argsstring>(double key, double value) const</argsstring>
+        <name>getBarRect</name>
+        <qualifiedname>QCPBars::getBarRect</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5851" column="10" bodyfile="qcustomplot.cpp" bodystart="24941" bodyend="24967"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1ad87586cc5e9806740bc0e867667da409" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::getPixelWidth</definition>
+        <argsstring>(double key, double &amp;lower, double &amp;upper) const</argsstring>
+        <name>getPixelWidth</name>
+        <qualifiedname>QCPBars::getPixelWidth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5852" column="8" bodyfile="qcustomplot.cpp" bodystart="24978" bodyend="25017"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_bars_1a0ffd6e043876e13e89eaa54e9f8a04b9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPBars::getStackedBaseValue</definition>
+        <argsstring>(double key, bool positive) const</argsstring>
+        <name>getStackedBaseValue</name>
+        <qualifiedname>QCPBars::getStackedBaseValue</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>positive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5853" column="10" bodyfile="qcustomplot.cpp" bodystart="25028" bodyend="25053"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_q_c_p_bars_1a6ea37802cd22f97235cab614b14b9f19" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPBars::connectBars</definition>
+        <argsstring>(QCPBars *lower, QCPBars *upper)</argsstring>
+        <name>connectBars</name>
+        <qualifiedname>QCPBars::connectBars</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> *</type>
+          <declname>upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5854" column="15" bodyfile="qcustomplot.cpp" bodystart="25063" bodyend="25090"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A plottable representing a bar chart in a plot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="QCPBars.png"></image>
+</para>
+<para>To plot data, assign it with the <ref refid="class_q_c_p_bars_1a6dc562ec7120a8521e1061f2134367e4" kindref="member">setData</ref> or <ref refid="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" kindref="member">addData</ref> functions.</para>
+<sect1 id="class_q_c_p_bars_1qcpbars-appearance">
+<title>Changing the appearance</title><para>The appearance of the bars is determined by the pen and the brush (<ref refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" kindref="member">setPen</ref>, <ref refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" kindref="member">setBrush</ref>). The width of the individual bars can be controlled with <ref refid="class_q_c_p_bars_1adcaa3b41281bb2c0f7949b341592fcc0" kindref="member">setWidthType</ref> and <ref refid="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" kindref="member">setWidth</ref>.</para>
+<para>Bar charts are stackable. This means, two <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> plottables can be placed on top of each other (see <ref refid="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" kindref="member">QCPBars::moveAbove</ref>). So when two bars are at the same key position, they will appear stacked.</para>
+<para>If you would like to group multiple <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> plottables together so they appear side by side as shown below, use <ref refid="class_q_c_p_bars_group" kindref="compound">QCPBarsGroup</ref>.</para>
+<para><image type="html" name="QCPBarsGroup.png"></image>
+</para>
+</sect1>
+<sect1 id="class_q_c_p_bars_1qcpbars-usage">
+<title>Usage</title><para>Like all data representing objects in <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref>, the <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> is a plottable (<ref refid="class_q_c_p_abstract_plottable" kindref="compound">QCPAbstractPlottable</ref>). So the plottable-interface of <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> applies (<ref refid="class_q_custom_plot_1a32de81ff53e263e785b83b52ecd99d6f" kindref="member">QCustomPlot::plottable</ref>, <ref refid="class_q_custom_plot_1af3dafd56884208474f311d6226513ab2" kindref="member">QCustomPlot::removePlottable</ref>, etc.)</para>
+<para>Usually, you first create an instance: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting> which registers it with the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance of the passed axes. Note that this <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance takes ownership of the plottable, so do not delete it manually but use <ref refid="class_q_custom_plot_1af3dafd56884208474f311d6226513ab2" kindref="member">QCustomPlot::removePlottable()</ref> instead. The newly created plottable can be modified, e.g.: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPAbstractPlottable1D&lt; QCPBarsData &gt;</label>
+        <link refid="class_q_c_p_abstract_plottable1_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPBars</label>
+        <link refid="class_q_c_p_bars"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>mSelection</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>mSelectionDecorator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPAbstractPlottable1D&lt; QCPBarsData &gt;</label>
+        <link refid="class_q_c_p_abstract_plottable1_d"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPBars</label>
+        <link refid="class_q_c_p_bars"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>mBarsGroup</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>QCPBarsGroup</label>
+        <link refid="class_q_c_p_bars_group"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>QCPDataSelection</label>
+        <link refid="class_q_c_p_data_selection"/>
+      </node>
+      <node id="14">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="24">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="13">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="23">
+        <label>QCPScatterStyle</label>
+        <link refid="class_q_c_p_scatter_style"/>
+      </node>
+      <node id="22">
+        <label>QCPSelectionDecorator</label>
+        <link refid="class_q_c_p_selection_decorator"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>mScatterStyle</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mPlottable</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+      <node id="7">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="5776" column="1" bodyfile="qcustomplot.h" bodystart="5777" bodyend="5859"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_bars_1a323d6970d6d6e3166d89916a7f60f733" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_bars_1a684dd105403a5497fda42f2094fecbb7" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa64e93cb5b606d8110d2cc0a349bb30f" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a70f8cabfd808f7d5204b9f18c45c13f5" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_layerable_1a71cbd212fde2703cee076e204a475709" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>antialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a022717896dc57b638a7b5a7be7212ba9" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>antialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a795370db6b1309de0ab60b633efb5ec2" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>antialiasedScatters</name></member>
+      <member refid="class_q_c_p_layerable_1acb663e375d2d36dc5c55021ee5a2119b" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>applyAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac032077fb0db93d6faa3273d02363398" prot="protected" virt="virtual"><scope>QCPBars</scope><name>applyDefaultAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8d06a59ea23324cce6330ebf2262c0ed" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>applyFillAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95f26b15a1e5d9c7bd2c0a46d760fc9" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>applyScattersAntialiasingHint</name></member>
+      <member refid="class_q_c_p_bars_1ab97f2acd9f6cb40d2cc3c33d278f0e78" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>barAbove</name></member>
+      <member refid="class_q_c_p_bars_1a1b58664864b141f45e02044a855b3213" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>barBelow</name></member>
+      <member refid="class_q_c_p_bars_1a5af22a56b1e0898291c8d95d49ad3525" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>barsGroup</name></member>
+      <member refid="class_q_c_p_bars_1a29a7b3b86f80b2a04bd1f9ec0ebaf422" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>baseValue</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a893b4896dfd92b68b05b2600b80f5826" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>brush</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a635cee3effc07ad421414c76fd83548c" prot="protected" virt="virtual"><scope>QCPBars</scope><name>clipRect</name></member>
+      <member refid="class_q_c_p_bars_1a6ea37802cd22f97235cab614b14b9f19" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>connectBars</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7ad84a36472441cf1f555c5683d0da93" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a5acb50ae984eef09a7ab92315d2ad708" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_bars_1a7e373a534d82e18ed27b3fafd1f08fae" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>data</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ab5dd99e4f1621e7dbd63438e0b02984e" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataCount</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1aeb156ebf5d3c8de906b428be30733ad8" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataMainKey</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a6be0f657ba85a1688336d76ad649ecf2" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataMainValue</name></member>
+      <member refid="class_q_c_p_bars_1a55cdaf565cd3384158d1f7f89533bc2d" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataPixelPosition</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1aa8277da921b009bce474437d50b4a2d8" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataSortKey</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a55f937ba6a63e56e57f0b1a6e85a333a" prot="public" virt="virtual"><scope>QCPBars</scope><name>dataValueRange</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a9b104d9da4f38f934363945c313bf82e" prot="protected" virt="virtual"><scope>QCPBars</scope><name>deselectEvent</name></member>
+      <member refid="class_q_c_p_bars_1aa267c20650d55084c3f47cb2f8fac9dc" prot="protected" virt="virtual"><scope>QCPBars</scope><name>draw</name></member>
+      <member refid="class_q_c_p_bars_1aee7c3e1763fd6b504c45baa8775be7b7" prot="protected" virt="virtual"><scope>QCPBars</scope><name>drawLegendIcon</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a7adc6c3cccebb5341f11e0c2b7d54206" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>drawPolyline</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ad0b46d25cde3d035b180fb8f10c056e6" prot="public" virt="virtual"><scope>QCPBars</scope><name>findBegin</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a6e3ba20c9160d7361e58070390d10b1a" prot="public" virt="virtual"><scope>QCPBars</scope><name>findEnd</name></member>
+      <member refid="class_q_c_p_bars_1a01b87e38e5d5089d214646d2af7896ea" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>getBarRect</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ae890e62ce403c54f575c73b9529f1af8" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>getDataSegments</name></member>
+      <member refid="class_q_c_p_bars_1ac5a3854774d9d9cd129b1eae1426de2d" prot="public" virt="virtual"><scope>QCPBars</scope><name>getKeyRange</name></member>
+      <member refid="class_q_c_p_bars_1ad87586cc5e9806740bc0e867667da409" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>getPixelWidth</name></member>
+      <member refid="class_q_c_p_bars_1a0ffd6e043876e13e89eaa54e9f8a04b9" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>getStackedBaseValue</name></member>
+      <member refid="class_q_c_p_bars_1a02cee4bf94d48a1e5f6fc185d9a10477" prot="public" virt="virtual"><scope>QCPBars</scope><name>getValueRange</name></member>
+      <member refid="class_q_c_p_bars_1ac8b6b514a665a7bff4fb080413ba996a" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>getVisibleDataBounds</name></member>
+      <member refid="class_q_c_p_layerable_1a8cbe5a0c9a5674249982f5ca5f8e02bc" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>initializeParentPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1acb01f095cfb292f2cce2257e074554c4" prot="public" virt="virtual"><scope>QCPBars</scope><name>interface1D</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa6f25b97ee99988fe352f17cb9ed962b" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>keyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a9d4e121a7f1d2314f906fe698209cac9" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>layer</name></member>
+      <member refid="class_q_c_p_layerable_1abbf8657cedea73ac1c3499b521c90eba" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>layerChanged</name></member>
+      <member refid="class_q_c_p_layerable_1a3ab45a4c76a3333ce42eb217a81733ec" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a152ac765bedf927fb240545d11d453ea" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa115755e525a8e3a86dc683f9cab755b" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_bars_1a0c1c46076c41a478dbb373cfd35929aa" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mBarAbove</name></member>
+      <member refid="class_q_c_p_bars_1ad51db970eed7e286f2753b0216fc56de" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mBarBelow</name></member>
+      <member refid="class_q_c_p_bars_1a9f59c255f3739182ca9744dff75beaa9" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mBarsGroup</name></member>
+      <member refid="class_q_c_p_bars_1aa0515cf47fa6044cc28e59b1ae5ec759" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mBaseValue</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a33f00674c0161c13315ab9da0895418e" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mBrush</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ac139cf70590707a1fb40eabe97fac246" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mDataContainer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a426f42e254d0f8ce5436a868c61a6827" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1aa38ec5891aff0f50b36fd63e9372a0cd" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mLayer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac29ffef424e2488675930de18cde612a" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mName</name></member>
+      <member refid="class_q_c_p_layerable_1a4171e2e823aca242dd0279f00ed2de81" prot="protected" virt="virtual"><scope>QCPBars</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a9eee1ba47fd69be111059ca3881933e4" prot="protected" virt="virtual"><scope>QCPBars</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af6567604818db90f4fd52822f8bc8376" prot="protected" virt="virtual"><scope>QCPBars</scope><name>mousePressEvent</name></member>
+      <member refid="class_q_c_p_layerable_1aa0d79b005686f668622bbe66ac03ba2c" prot="protected" virt="virtual"><scope>QCPBars</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_q_c_p_bars_1ac22e00a6a41509538c21b04f0a57318c" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>moveAbove</name></member>
+      <member refid="class_q_c_p_bars_1a69fc371346980f19177c3d1ecdad78ee" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>moveBelow</name></member>
+      <member refid="class_q_c_p_layerable_1af94484cfb7cbbddb7de522e9be71d9a4" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>moveToLayer</name></member>
+      <member refid="class_q_c_p_layerable_1a3291445a980053e2d17a21d15957624e" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mParentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1aa2a528433e44db02b8aef23c1f9f90ed" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a67bc0622fd1b9fa14e54c14922dcec66" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mPen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3944521f7bec90974737c9d192fc57ba" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a206aa62c9eba32c82e892b29cdbf6314" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0dbc731cab717f4ff67b4ca100c74046" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mSelectionDecorator</name></member>
+      <member refid="class_q_c_p_bars_1a2022ddbcf8b464a05d434700a666da18" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mStackingGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2901452ca4aea911a1827717934a4bda" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a62e3aed8427d6ce3ccf716f285106cb3" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mVisible</name></member>
+      <member refid="class_q_c_p_bars_1a7c4e0f2246f8133f48a9c3f24cf5b920" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mWidth</name></member>
+      <member refid="class_q_c_p_bars_1a94dba1309496c7601d01e2c59715cbb3" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>mWidthType</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a52c226eefcb1920240eeabae574d28c0" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>name</name></member>
+      <member refid="class_q_c_p_layerable_1aa78b7e644d2c519e1a9a6f2ac5fcd858" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>parentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1a36ed5b292b90934b524a4e5866a3526c" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>parentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab20b7dbd8e0249ed61adb9622c427382" prot="protected" virt="virtual"><scope>QCPBars</scope><name>parentPlotInitialized</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ad5972efc31344e5a7a78ab4f8864b2d3" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>pen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3903c1120ab5c27e7fa46b597ef267bd" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a28d32c0062b9450847851ffdee1c5f69" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af78a036e40db6f53a31abadc5323715a" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1a30b2e50ab0afce65f104ea7a95440315" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>QCPAbstractPlottable1D</name></member>
+      <member refid="class_q_c_p_bars_1a64006999ad9dff308f40df41cef176ad" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>QCPBars</name></member>
+      <member refid="class_q_c_p_bars_1ae1051b4d58a2786cb420367a586e2fee" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>QCPBarsGroup</name></member>
+      <member refid="class_q_c_p_layerable_1a4f87f420cb2597e2b393aab934d2f099" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>QCPLayerable</name></member>
+      <member refid="class_q_c_p_bars_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>QCPLegend</name></member>
+      <member refid="class_q_c_p_bars_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>QCustomPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab054e88f15d485defcb95e7376f119e7" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>realVisibility</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3cc235007e2343a65ad4f463767e0e20" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95fb2604d9106d0852ad9ceb326fe8c" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>rescaleAxes</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ae96b83c961e257da116c6acf9c7da308" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>rescaleKeyAxis</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a714eaf36b12434cd71846215504db82e" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>rescaleValueAxis</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a016653741033bd332d1d4c3c725cc284" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a663b1a44123c8340ac041a29d1e2c973" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selectableChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0b3b514474fe93354fc74cfc144184b4" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selected</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2d488568cf16600dd81fa23d7d439829" prot="protected" virt="virtual"><scope>QCPBars</scope><name>selectEvent</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a040bf09f41d456284cfd39cc37aa068f" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af80ad8531642e786b6f4fad551c203c4" prot="protected" virt="virtual"><scope>QCPBars</scope><name>selectionCategory</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3af66432b1dca93b28e00e78a8c7c1d9" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a787a9c39421059006891744b731fa473" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7861518e47ca0c6a0c386032c2db075e" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>selectionDecorator</name></member>
+      <member refid="class_q_c_p_bars_1ae490d8589b7e5f5d7e2e5ee88ce3e6c2" prot="public" virt="virtual"><scope>QCPBars</scope><name>selectTest</name></member>
+      <member refid="class_q_c_p_bars_1ab03bb6125c3e983b89d694f75ce6b3d5" prot="public" virt="virtual"><scope>QCPBars</scope><name>selectTestRect</name></member>
+      <member refid="class_q_c_p_layerable_1a4fd43e89be4a553ead41652565ff0581" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a089d6b5577120239b55c39ed27c39536" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2f03f067ede2ed4da6f7d0e4777a3f02" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_bars_1aedd1709061f0b307c47ddb45e172ef9a" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setBarsGroup</name></member>
+      <member refid="class_q_c_p_bars_1a574ec7eb7537566df1a28ff085d75623" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setBaseValue</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setBrush</name></member>
+      <member refid="class_q_c_p_bars_1a6dc562ec7120a8521e1061f2134367e4" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setData</name></member>
+      <member refid="class_q_c_p_bars_1a2a88cd5b16ec7b71e5a590f95b50c5ce" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setData</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8524fa2994c63c0913ebd9bb2ffa3920" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1ab0d0da6d2de45a118886d2c8e16d5a54" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1ab25a0e7b897993b44447caee0f142083" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab79c7ba76bc7fa89a4b3580e12149f1f" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setName</name></member>
+      <member refid="class_q_c_p_layerable_1aa23c893671f1f6744ac235cf2204cf3a" prot="protected" virt="non-virtual"><scope>QCPBars</scope><name>setParentLayerable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setPen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac238d6e910f976f1f30d41c2bca44ac3" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a219bc5403a9d85d3129165ec3f5ae436" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a20e266ad646f8c4a7e4631040510e5d9" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setSelectionDecorator</name></member>
+      <member refid="class_q_c_p_bars_1aeacf7561afb1c70284b22822b57c7bb5" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setStackingGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a71626a07367e241ec62ad2c34baf21cb" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a3bed99ddc396b48ce3ebfdc0418744f8" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setVisible</name></member>
+      <member refid="class_q_c_p_bars_1afec6116579d44d5b706e0fa5e5332507" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setWidth</name></member>
+      <member refid="class_q_c_p_bars_1adcaa3b41281bb2c0f7949b341592fcc0" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>setWidthType</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1afe0d56e39cc076032922f059b304c092" prot="public" virt="virtual"><scope>QCPBars</scope><name>sortKeyIsMainKey</name></member>
+      <member refid="class_q_c_p_bars_1a2e6192fa9c16df7ba94cd50c0c9ec7ce" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>stackingGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a842b3831660d3e33b73863fd133889dd" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>valueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1af0297b944b6192b6d67d00bff41b6b70" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>visible</name></member>
+      <member refid="class_q_c_p_layerable_1a47dfd7b8fd99c08ca54e09c362b6f022" prot="protected" virt="virtual"><scope>QCPBars</scope><name>wheelEvent</name></member>
+      <member refid="class_q_c_p_bars_1abe7eb3987d8711f45829db879aee2280" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>width</name></member>
+      <member refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>WidthType</name></member>
+      <member refid="class_q_c_p_bars_1a4c103fb405a45f47853e0345f0c6e708" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>widthType</name></member>
+      <member refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649ab74315c9aa77df593c58dd25dfc0de35" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>wtAbsolute</name></member>
+      <member refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649a90bc09899361ad3422ff277f7c790ffe" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>wtAxisRectRatio</name></member>
+      <member refid="class_q_c_p_bars_1a65dbbf1ab41cbe993d71521096ed4649aad3cc60ae1bfb1160a30237bee9eaf10" prot="public" virt="non-virtual"><scope>QCPBars</scope><name>wtPlotCoords</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3223d1e2073bd1d3516863a1dce554b0" prot="public" virt="virtual"><scope>QCPBars</scope><name>~QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_abstract_plottable1_d_1ae4d821dbdc530b6910321e53599ec39b" prot="public" virt="virtual"><scope>QCPBars</scope><name>~QCPAbstractPlottable1D</name></member>
+      <member refid="class_q_c_p_bars_1a7cfc40a41ce0a2bce71cfb34f30886ac" prot="public" virt="virtual"><scope>QCPBars</scope><name>~QCPBars</name></member>
+      <member refid="class_q_c_p_layerable_1a4231cf5b3601d6d3a5781283e7a9735b" prot="public" virt="virtual"><scope>QCPBars</scope><name>~QCPLayerable</name></member>
+      <member refid="class_q_c_p_plottable_interface1_d_1a97508cd3c61b9e8580b9f0d9964f7fb1" prot="public" virt="virtual"><scope>QCPBars</scope><name>~QCPPlottableInterface1D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

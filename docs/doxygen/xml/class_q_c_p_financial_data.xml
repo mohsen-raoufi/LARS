@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_financial_data" kind="class" language="C++" prot="public">
+    <compoundname>QCPFinancialData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_q_c_p_financial_data_1a18bc92126f28c214b05b0161e5f5958b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPFinancialData::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <qualifiedname>QCPFinancialData::key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6136" column="10" bodyfile="qcustomplot.h" bodystart="6136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_financial_data_1a3059e1e1fbcb9fd243fde0450f238032" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPFinancialData::open</definition>
+        <argsstring></argsstring>
+        <name>open</name>
+        <qualifiedname>QCPFinancialData::open</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6136" column="14" bodyfile="qcustomplot.h" bodystart="6136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_financial_data_1a299a4b241296fb6cd1baf5ab03f7126a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPFinancialData::high</definition>
+        <argsstring></argsstring>
+        <name>high</name>
+        <qualifiedname>QCPFinancialData::high</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6136" column="19" bodyfile="qcustomplot.h" bodystart="6136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_financial_data_1aecce0fb45a115e3f3a25eea78491ac16" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPFinancialData::low</definition>
+        <argsstring></argsstring>
+        <name>low</name>
+        <qualifiedname>QCPFinancialData::low</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6136" column="24" bodyfile="qcustomplot.h" bodystart="6136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_financial_data_1a45e9b96944c4a08ea6c82a72d3d22df2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPFinancialData::close</definition>
+        <argsstring></argsstring>
+        <name>close</name>
+        <qualifiedname>QCPFinancialData::close</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6136" column="28" bodyfile="qcustomplot.h" bodystart="6136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a1ca53b3a9ae4e9658a4fd1ca57d76ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPFinancialData::QCPFinancialData</definition>
+        <argsstring>()</argsstring>
+        <name>QCPFinancialData</name>
+        <qualifiedname>QCPFinancialData::QCPFinancialData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a data point with key and all values set to zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6124" column="3" bodyfile="qcustomplot.cpp" bodystart="26969" bodyend="26976"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a069b72c514dfd4fc8e1d5df811e54ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPFinancialData::QCPFinancialData</definition>
+        <argsstring>(double key, double open, double high, double low, double close)</argsstring>
+        <name>QCPFinancialData</name>
+        <qualifiedname>QCPFinancialData::QCPFinancialData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>open</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>high</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>close</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a data point with the specified <emphasis>key</emphasis> and OHLC values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6125" column="3" bodyfile="qcustomplot.cpp" bodystart="26981" bodyend="26988"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1ab378e8ef6aef482735aba69115cb442e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPFinancialData::sortKey</definition>
+        <argsstring>() const</argsstring>
+        <name>sortKey</name>
+        <qualifiedname>QCPFinancialData::sortKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>key</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6127" column="17" bodyfile="qcustomplot.h" bodystart="6127" bodyend="6127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1af6ed6349c65d938fabd2e4dd2cd499ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPFinancialData::mainKey</definition>
+        <argsstring>() const</argsstring>
+        <name>mainKey</name>
+        <qualifiedname>QCPFinancialData::mainKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>key</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6131" column="17" bodyfile="qcustomplot.h" bodystart="6131" bodyend="6131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a65206c76b6f31a57e04dc7da88c9be60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPFinancialData::mainValue</definition>
+        <argsstring>() const</argsstring>
+        <name>mainValue</name>
+        <qualifiedname>QCPFinancialData::mainValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>open</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6132" column="17" bodyfile="qcustomplot.h" bodystart="6132" bodyend="6132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a164d5584eeeb9ba48b4b595ac2ac7fcf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPFinancialData::valueRange</definition>
+        <argsstring>() const</argsstring>
+        <name>valueRange</name>
+        <qualifiedname>QCPFinancialData::valueRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> spanning from the <emphasis>low</emphasis> to the <emphasis>high</emphasis> value of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6134" column="19" bodyfile="qcustomplot.h" bodystart="6134" bodyend="6134"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a54a0ca7ee7fd7713972477e8e2533ce5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_financial_data" kindref="compound">QCPFinancialData</ref></type>
+        <definition>static QCPFinancialData QCPFinancialData::fromSortKey</definition>
+        <argsstring>(double sortKey)</argsstring>
+        <name>fromSortKey</name>
+        <qualifiedname>QCPFinancialData::fromSortKey</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data point with the specified <emphasis>sortKey</emphasis>. All other members are set to zero.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6128" column="34" bodyfile="qcustomplot.h" bodystart="6128" bodyend="6128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_financial_data_1a45c90527fd3cececeb41e47555333794" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool QCPFinancialData::sortKeyIsMainKey</definition>
+        <argsstring>()</argsstring>
+        <name>sortKeyIsMainKey</name>
+        <qualifiedname>QCPFinancialData::sortKeyIsMainKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Since the member <emphasis>key</emphasis> is both the data point key coordinate and the data ordering parameter, this method returns true.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6129" column="22" bodyfile="qcustomplot.h" bodystart="6129" bodyend="6129"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the data of one single data point for <ref refid="class_q_c_p_financial" kindref="compound">QCPFinancial</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The stored data is: <itemizedlist>
+<listitem><para><emphasis>key:</emphasis> coordinate on the key axis of this data point (this is the <emphasis>mainKey</emphasis> and the <emphasis>sortKey</emphasis>) </para>
+</listitem>
+<listitem><para><emphasis>open:</emphasis> The opening value at the data point (this is the <emphasis>mainValue</emphasis>) </para>
+</listitem>
+<listitem><para><emphasis>high:</emphasis> The high/maximum value at the data point </para>
+</listitem>
+<listitem><para><emphasis>low:</emphasis> The low/minimum value at the data point </para>
+</listitem>
+<listitem><para><emphasis>close:</emphasis> The closing value at the data point</para>
+</listitem>
+</itemizedlist>
+The container for storing multiple data points is QCPFinancialDataContainer. It is a typedef for <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref> with <ref refid="class_q_c_p_financial_data" kindref="compound">QCPFinancialData</ref> as the DataType template parameter. See the documentation there for an explanation regarding the data type&apos;s generic methods.</para>
+<para><simplesect kind="see"><para>QCPFinancialDataContainer </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="6121" column="1" bodyfile="qcustomplot.h" bodystart="6122" bodyend="6137"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_financial_data_1a45e9b96944c4a08ea6c82a72d3d22df2" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>close</name></member>
+      <member refid="class_q_c_p_financial_data_1a54a0ca7ee7fd7713972477e8e2533ce5" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>fromSortKey</name></member>
+      <member refid="class_q_c_p_financial_data_1a299a4b241296fb6cd1baf5ab03f7126a" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>high</name></member>
+      <member refid="class_q_c_p_financial_data_1a18bc92126f28c214b05b0161e5f5958b" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>key</name></member>
+      <member refid="class_q_c_p_financial_data_1aecce0fb45a115e3f3a25eea78491ac16" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>low</name></member>
+      <member refid="class_q_c_p_financial_data_1af6ed6349c65d938fabd2e4dd2cd499ff" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>mainKey</name></member>
+      <member refid="class_q_c_p_financial_data_1a65206c76b6f31a57e04dc7da88c9be60" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>mainValue</name></member>
+      <member refid="class_q_c_p_financial_data_1a3059e1e1fbcb9fd243fde0450f238032" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>open</name></member>
+      <member refid="class_q_c_p_financial_data_1a1ca53b3a9ae4e9658a4fd1ca57d76ba4" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>QCPFinancialData</name></member>
+      <member refid="class_q_c_p_financial_data_1a069b72c514dfd4fc8e1d5df811e54ca4" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>QCPFinancialData</name></member>
+      <member refid="class_q_c_p_financial_data_1ab378e8ef6aef482735aba69115cb442e" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>sortKey</name></member>
+      <member refid="class_q_c_p_financial_data_1a45c90527fd3cececeb41e47555333794" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>sortKeyIsMainKey</name></member>
+      <member refid="class_q_c_p_financial_data_1a164d5584eeeb9ba48b4b595ac2ac7fcf" prot="public" virt="non-virtual"><scope>QCPFinancialData</scope><name>valueRange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

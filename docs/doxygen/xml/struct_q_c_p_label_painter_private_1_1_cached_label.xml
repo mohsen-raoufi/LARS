@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_q_c_p_label_painter_private_1_1_cached_label" kind="struct" language="C++" prot="protected">
+    <compoundname>QCPLabelPainterPrivate::CachedLabel</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_cached_label_1aff2308f620a6b725433feb602597fce9" prot="public" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint QCPLabelPainterPrivate::CachedLabel::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>QCPLabelPainterPrivate::CachedLabel::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1636" column="12" bodyfile="qcustomplot.h" bodystart="1636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_q_c_p_label_painter_private_1_1_cached_label_1a71983eb806e0cb7fa76df4a4b7e3aeca" prot="public" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap QCPLabelPainterPrivate::CachedLabel::pixmap</definition>
+        <argsstring></argsstring>
+        <name>pixmap</name>
+        <qualifiedname>QCPLabelPainterPrivate::CachedLabel::pixmap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1637" column="13" bodyfile="qcustomplot.h" bodystart="1637" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="1634" column="3" bodyfile="qcustomplot.h" bodystart="1635" bodyend="1638"/>
+    <listofallmembers>
+      <member refid="struct_q_c_p_label_painter_private_1_1_cached_label_1aff2308f620a6b725433feb602597fce9" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::CachedLabel</scope><name>offset</name></member>
+      <member refid="struct_q_c_p_label_painter_private_1_1_cached_label_1a71983eb806e0cb7fa76df4a4b7e3aeca" prot="public" virt="non-virtual"><scope>QCPLabelPainterPrivate::CachedLabel</scope><name>pixmap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

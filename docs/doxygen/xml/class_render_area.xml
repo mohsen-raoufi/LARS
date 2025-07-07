@@ -1,0 +1,849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_render_area" kind="class" language="C++" prot="public">
+    <compoundname>RenderArea</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_render_area_1ae0b1cef064d17fd061b3c6a0facf212b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_world_model" kindref="compound">WorldModel</ref> *</type>
+        <definition>WorldModel* RenderArea::_wm</definition>
+        <argsstring></argsstring>
+        <name>_wm</name>
+        <qualifiedname>RenderArea::_wm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="37" column="16" bodyfile="ui/renderarea.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a74eaf23804ebe5ea39fb3654a7f349c3" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush* RenderArea::brush_field</definition>
+        <argsstring></argsstring>
+        <name>brush_field</name>
+        <qualifiedname>RenderArea::brush_field</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="12" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1af0898616a79989954498b7180f543fc4" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_insideRect</definition>
+        <argsstring></argsstring>
+        <name>brush_insideRect</name>
+        <qualifiedname>RenderArea::brush_insideRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="24" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a050aa55d3c1af0c9ba7cbd843c9914b4" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_yrobot</definition>
+        <argsstring></argsstring>
+        <name>brush_yrobot</name>
+        <qualifiedname>RenderArea::brush_yrobot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="41" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a24e36819e4484759c6ca71720962218f" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_yrobot_MT</definition>
+        <argsstring></argsstring>
+        <name>brush_yrobot_MT</name>
+        <qualifiedname>RenderArea::brush_yrobot_MT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="54" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a1376cfd743ccaca20e9efa2eecbb5c6f" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_brobot</definition>
+        <argsstring></argsstring>
+        <name>brush_brobot</name>
+        <qualifiedname>RenderArea::brush_brobot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="70" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a656abdf1482a6a22a98cb4d243df3906" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_test</definition>
+        <argsstring></argsstring>
+        <name>brush_test</name>
+        <qualifiedname>RenderArea::brush_test</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="41" column="83" bodyfile="ui/renderarea.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a262a0648341c0a9db233f53d0ff1187f" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush* RenderArea::brush_initPoints</definition>
+        <argsstring></argsstring>
+        <name>brush_initPoints</name>
+        <qualifiedname>RenderArea::brush_initPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="42" column="12" bodyfile="ui/renderarea.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1ab03d00999c628dc3523eeb1fd0f4295f" prot="private" static="no" mutable="no">
+        <type>QBrush *</type>
+        <definition>QBrush * RenderArea::brush_initPoints2</definition>
+        <argsstring></argsstring>
+        <name>brush_initPoints2</name>
+        <qualifiedname>RenderArea::brush_initPoints2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="42" column="29" bodyfile="ui/renderarea.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a373ad4b65627736267a7c123a0a53642" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer RenderArea::_timer</definition>
+        <argsstring></argsstring>
+        <name>_timer</name>
+        <qualifiedname>RenderArea::_timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="43" column="12" bodyfile="ui/renderarea.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a7ab293a8ba62e5691c19dce5c694ed76" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RenderArea::bias_X</definition>
+        <argsstring></argsstring>
+        <name>bias_X</name>
+        <qualifiedname>RenderArea::bias_X</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="44" column="9" bodyfile="ui/renderarea.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a2ac6f5f87b6ccb28aa6344450505ddfd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RenderArea::bias_Y</definition>
+        <argsstring></argsstring>
+        <name>bias_Y</name>
+        <qualifiedname>RenderArea::bias_Y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="44" column="16" bodyfile="ui/renderarea.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1ac8201949f8f169e0dcfbfc351927a53e" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen* RenderArea::pen_insideRect</definition>
+        <argsstring></argsstring>
+        <name>pen_insideRect</name>
+        <qualifiedname>RenderArea::pen_insideRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="10" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a6e4c2482f18a328b47b3f5a8a6c31631" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_RobCust1</definition>
+        <argsstring></argsstring>
+        <name>pen_RobCust1</name>
+        <qualifiedname>RenderArea::pen_RobCust1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="25" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1addb17a0368e64eab4e8de6fa80c6673f" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_pnts2Draw</definition>
+        <argsstring></argsstring>
+        <name>pen_pnts2Draw</name>
+        <qualifiedname>RenderArea::pen_pnts2Draw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="38" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a1bff2a71a41b509cf38fec557299629d" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_circ2Draw</definition>
+        <argsstring></argsstring>
+        <name>pen_circ2Draw</name>
+        <qualifiedname>RenderArea::pen_circ2Draw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="52" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a0ccd6b10ad036b15fd6b1a417a16e811" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_network</definition>
+        <argsstring></argsstring>
+        <name>pen_network</name>
+        <qualifiedname>RenderArea::pen_network</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="66" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a524b434b63b42d36ac523379aedb86ae" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_voronoii</definition>
+        <argsstring></argsstring>
+        <name>pen_voronoii</name>
+        <qualifiedname>RenderArea::pen_voronoii</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="78" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1ad87834b76151d76e0d5cd0bdb4e48d3d" prot="private" static="no" mutable="no">
+        <type>QPen *</type>
+        <definition>QPen * RenderArea::pen_tracePnts</definition>
+        <argsstring></argsstring>
+        <name>pen_tracePnts</name>
+        <qualifiedname>RenderArea::pen_tracePnts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="46" column="91" bodyfile="ui/renderarea.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a8d3912b23d57afe994e9a6d3179f999c" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::marker0</definition>
+        <argsstring></argsstring>
+        <name>marker0</name>
+        <qualifiedname>RenderArea::marker0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="48" column="13" bodyfile="ui/renderarea.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1ac8bb7204441e13425e76b7c53e77806c" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::marker1</definition>
+        <argsstring></argsstring>
+        <name>marker1</name>
+        <qualifiedname>RenderArea::marker1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="48" column="21" bodyfile="ui/renderarea.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a2ee0dbc2988dd64efe9b1c549fa99083" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::marker2</definition>
+        <argsstring></argsstring>
+        <name>marker2</name>
+        <qualifiedname>RenderArea::marker2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="48" column="29" bodyfile="ui/renderarea.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1aa26370924d56784e566e527291a4ec08" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::marker3</definition>
+        <argsstring></argsstring>
+        <name>marker3</name>
+        <qualifiedname>RenderArea::marker3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="48" column="37" bodyfile="ui/renderarea.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a644a54165c0b92a10a0972cb85f89e4d" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::arenaImg</definition>
+        <argsstring></argsstring>
+        <name>arenaImg</name>
+        <qualifiedname>RenderArea::arenaImg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="49" column="13" bodyfile="ui/renderarea.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a5303edd249a73cb4e88561c877e134c7" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::SCIoIImg</definition>
+        <argsstring></argsstring>
+        <name>SCIoIImg</name>
+        <qualifiedname>RenderArea::SCIoIImg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="49" column="22" bodyfile="ui/renderarea.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a5b441f5bc07b646af1010e4bd43f339e" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::webPage</definition>
+        <argsstring></argsstring>
+        <name>webPage</name>
+        <qualifiedname>RenderArea::webPage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="49" column="31" bodyfile="ui/renderarea.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a1dea13723ee82e1ce9ae8d823d7659ac" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::centroidImage</definition>
+        <argsstring></argsstring>
+        <name>centroidImage</name>
+        <qualifiedname>RenderArea::centroidImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="49" column="39" bodyfile="ui/renderarea.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a9979fa949b75eb9db6bc1a51a4605859" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap RenderArea::ballImage</definition>
+        <argsstring></argsstring>
+        <name>ballImage</name>
+        <qualifiedname>RenderArea::ballImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="49" column="53" bodyfile="ui/renderarea.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1abbf53fb5868180d532b7f36170ec02d1" prot="private" static="no" mutable="no">
+        <type>QRadialGradient *</type>
+        <definition>QRadialGradient* RenderArea::radGradient</definition>
+        <argsstring></argsstring>
+        <name>radGradient</name>
+        <qualifiedname>RenderArea::radGradient</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="50" column="21" bodyfile="ui/renderarea.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1adcc7245a2f0f60eed639bdb8a88122cc" prot="private" static="no" mutable="no">
+        <type>QRadialGradient *</type>
+        <definition>QRadialGradient * RenderArea::radGradientRob</definition>
+        <argsstring></argsstring>
+        <name>radGradientRob</name>
+        <qualifiedname>RenderArea::radGradientRob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="50" column="33" bodyfile="ui/renderarea.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a04ebcc3681203b3a23f6c38e7d6ad37b" prot="private" static="no" mutable="no">
+        <type>QRect *</type>
+        <definition>QRect* RenderArea::expArena</definition>
+        <argsstring></argsstring>
+        <name>expArena</name>
+        <qualifiedname>RenderArea::expArena</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="51" column="11" bodyfile="ui/renderarea.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1afe85bf4a551294cc3218cedec79f7f2b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RenderArea::robRad</definition>
+        <argsstring></argsstring>
+        <name>robRad</name>
+        <qualifiedname>RenderArea::robRad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="52" column="9" bodyfile="ui/renderarea.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a2480b61c7b2d180d451539f8280ea8c5" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat RenderArea::heatMapTemp</definition>
+        <argsstring></argsstring>
+        <name>heatMapTemp</name>
+        <qualifiedname>RenderArea::heatMapTemp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="54" column="13" bodyfile="ui/renderarea.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a7c567c05cf066d822414ae793b2cadec" prot="private" static="no" mutable="no">
+        <type>QImage</type>
+        <definition>QImage RenderArea::heatMapQImage</definition>
+        <argsstring></argsstring>
+        <name>heatMapQImage</name>
+        <qualifiedname>RenderArea::heatMapQImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="55" column="12" bodyfile="ui/renderarea.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a042824f5b637d1a741a950f86ee12996" prot="private" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect RenderArea::bigFieldRect</definition>
+        <argsstring></argsstring>
+        <name>bigFieldRect</name>
+        <qualifiedname>RenderArea::bigFieldRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="57" column="11" bodyfile="ui/renderarea.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1aa6099130ab07d7b25cf569b70cc06373" prot="private" static="no" mutable="no">
+        <type>QPolygon</type>
+        <definition>QPolygon RenderArea::bigFieldPoly</definition>
+        <argsstring></argsstring>
+        <name>bigFieldPoly</name>
+        <qualifiedname>RenderArea::bigFieldPoly</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="58" column="14" bodyfile="ui/renderarea.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a97c145da38019c81bbfd7d92544d2061" prot="private" static="no" mutable="no">
+        <type>QImage</type>
+        <definition>QImage RenderArea::arenaImage</definition>
+        <argsstring></argsstring>
+        <name>arenaImage</name>
+        <qualifiedname>RenderArea::arenaImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="60" column="12" bodyfile="ui/renderarea.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a22ef6c03c71add1332fbdfe05699b874" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RenderArea::refreshNoiseBool</definition>
+        <argsstring></argsstring>
+        <name>refreshNoiseBool</name>
+        <qualifiedname>RenderArea::refreshNoiseBool</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="62" column="10" bodyfile="ui/renderarea.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a04f59dc84763150e1648e214b5ead586" prot="private" static="no" mutable="no">
+        <type><ref refid="classvoronoi_generator" kindref="compound">voronoiGenerator</ref></type>
+        <definition>voronoiGenerator RenderArea::VoronoiiGen</definition>
+        <argsstring></argsstring>
+        <name>VoronoiiGen</name>
+        <qualifiedname>RenderArea::VoronoiiGen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="64" column="22" bodyfile="ui/renderarea.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a4d6221e6c1f742084f9ee336ca5aa605" prot="private" static="no" mutable="no">
+        <type>boost::polygon::voronoi_diagram&lt; double &gt;</type>
+        <definition>boost::polygon::voronoi_diagram&lt;double&gt; RenderArea::vd</definition>
+        <argsstring></argsstring>
+        <name>vd</name>
+        <qualifiedname>RenderArea::vd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="65" column="37" bodyfile="ui/renderarea.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1aacb27ca3ce5c12e61e09cd493398601a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RenderArea::centroid_width</definition>
+        <argsstring></argsstring>
+        <name>centroid_width</name>
+        <qualifiedname>RenderArea::centroid_width</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="67" column="9" bodyfile="ui/renderarea.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1acb23644c69a89d0aee03f01910cbf215" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RenderArea::index_node_to_light_net</definition>
+        <argsstring></argsstring>
+        <name>index_node_to_light_net</name>
+        <qualifiedname>RenderArea::index_node_to_light_net</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="69" column="9" bodyfile="ui/renderarea.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a822661d518c5ec413e97a30b6e88c794" prot="private" static="no" mutable="no">
+        <type>igraph_t</type>
+        <definition>igraph_t RenderArea::graph</definition>
+        <argsstring></argsstring>
+        <name>graph</name>
+        <qualifiedname>RenderArea::graph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="71" column="14" bodyfile="ui/renderarea.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_render_area_1a41544081d9962f5064656cfa6d8b7f37" prot="private" static="no" mutable="no">
+        <type>igraph_vector_int_t</type>
+        <definition>igraph_vector_int_t RenderArea::edges</definition>
+        <argsstring></argsstring>
+        <name>edges</name>
+        <qualifiedname>RenderArea::edges</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="72" column="25" bodyfile="ui/renderarea.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_render_area_1abd4670bdc43cf403ecc1cafa7376d926" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RenderArea::RenderArea</definition>
+        <argsstring>(WorldModel *wm)</argsstring>
+        <name>RenderArea</name>
+        <qualifiedname>RenderArea::RenderArea</qualifiedname>
+        <param>
+          <type><ref refid="class_world_model" kindref="compound">WorldModel</ref> *</type>
+          <declname>wm</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="class_render_area" kindref="compound">RenderArea</ref> widget for rendering graphical elements in the UI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the <ref refid="class_render_area" kindref="compound">RenderArea</ref>, setting up graphical assets, brushes, pens, and timers for periodic updates. Loads resources such as markers, logo, arena images, and custom brushes. Associates the provided <ref refid="class_world_model" kindref="compound">WorldModel</ref> instance for access to rendering data. Also sets up gradients, pens, and event connections needed for UI drawing and updates.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_world_model" kindref="compound">WorldModel</ref> providing data and state for rendering. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="33" column="14" bodyfile="ui/renderarea.cpp" bodystart="53" bodyend="156"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_render_area_1aeb588465e908da6d2890c764c095125a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RenderArea::refresh</definition>
+        <argsstring>()</argsstring>
+        <name>refresh</name>
+        <qualifiedname>RenderArea::refresh</qualifiedname>
+        <briefdescription>
+<para>Refresh the <ref refid="class_render_area" kindref="compound">RenderArea</ref> display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="class_render_area_1a666f727978fd9f8073cd62c4c4390c22" kindref="member">updatePainters()</ref> and schedules a repaint. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="78" column="10" bodyfile="ui/renderarea.cpp" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_render_area_1a9a2a5da5a33b86bc539217c9b852d6f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RenderArea::paintEvent</definition>
+        <argsstring>(QPaintEvent *)</argsstring>
+        <name>paintEvent</name>
+        <qualifiedname>RenderArea::paintEvent</qualifiedname>
+        <param>
+          <type>QPaintEvent *</type>
+        </param>
+        <briefdescription>
+<para>Handles the paint event for the <ref refid="class_render_area" kindref="compound">RenderArea</ref> widget. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws all relevant graphical elements including background, markers, images, robots, networks, and overlays. Uses current state of the <ref refid="class_world_model" kindref="compound">WorldModel</ref> for data and configuration.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the paint event (unused). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="80" column="10" bodyfile="ui/renderarea.cpp" bodystart="199" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_render_area_1a666f727978fd9f8073cd62c4c4390c22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RenderArea::updatePainters</definition>
+        <argsstring>()</argsstring>
+        <name>updatePainters</name>
+        <qualifiedname>RenderArea::updatePainters</qualifiedname>
+        <briefdescription>
+<para>Update painter objects (brushes, pens, gradients) to match current <ref refid="class_world_model" kindref="compound">WorldModel</ref> state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="81" column="10" bodyfile="ui/renderarea.cpp" bodystart="650" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_render_area_1ac3da0ab875312e5dd3374110327ee0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RenderArea::updateGradientPainter</definition>
+        <argsstring>()</argsstring>
+        <name>updateGradientPainter</name>
+        <qualifiedname>RenderArea::updateGradientPainter</qualifiedname>
+        <briefdescription>
+<para>Updates the gradient painter for the arena background, based on arena size and center. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="82" column="10" bodyfile="ui/renderarea.cpp" bodystart="673" bodyend="695"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_render_area_1ac17dcdfc39b8f8107576db59ccc58b0b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RenderArea::getMostCentralNode</definition>
+        <argsstring>(const igraph_t &amp;graph)</argsstring>
+        <name>getMostCentralNode</name>
+        <qualifiedname>RenderArea::getMostCentralNode</qualifiedname>
+        <param>
+          <type>const igraph_t &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+<para>Returns the index of the most central node in a graph (by degree centrality). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>igraph_t object representing the network graph. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Index of the node with highest degree centrality. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/renderarea.h" line="85" column="9" bodyfile="ui/renderarea.cpp" bodystart="175" bodyend="189"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QWidget</label>
+      </node>
+      <node id="1">
+        <label>RenderArea</label>
+        <link refid="class_render_area"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QWidget</label>
+      </node>
+      <node id="1">
+        <label>RenderArea</label>
+        <link refid="class_render_area"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ui/renderarea.h" line="29" column="1" bodyfile="ui/renderarea.h" bodystart="30" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_render_area_1a373ad4b65627736267a7c123a0a53642" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>_timer</name></member>
+      <member refid="class_render_area_1ae0b1cef064d17fd061b3c6a0facf212b" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>_wm</name></member>
+      <member refid="class_render_area_1a97c145da38019c81bbfd7d92544d2061" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>arenaImage</name></member>
+      <member refid="class_render_area_1a644a54165c0b92a10a0972cb85f89e4d" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>arenaImg</name></member>
+      <member refid="class_render_area_1a9979fa949b75eb9db6bc1a51a4605859" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>ballImage</name></member>
+      <member refid="class_render_area_1a7ab293a8ba62e5691c19dce5c694ed76" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>bias_X</name></member>
+      <member refid="class_render_area_1a2ac6f5f87b6ccb28aa6344450505ddfd" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>bias_Y</name></member>
+      <member refid="class_render_area_1aa6099130ab07d7b25cf569b70cc06373" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>bigFieldPoly</name></member>
+      <member refid="class_render_area_1a042824f5b637d1a741a950f86ee12996" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>bigFieldRect</name></member>
+      <member refid="class_render_area_1a1376cfd743ccaca20e9efa2eecbb5c6f" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_brobot</name></member>
+      <member refid="class_render_area_1a74eaf23804ebe5ea39fb3654a7f349c3" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_field</name></member>
+      <member refid="class_render_area_1a262a0648341c0a9db233f53d0ff1187f" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_initPoints</name></member>
+      <member refid="class_render_area_1ab03d00999c628dc3523eeb1fd0f4295f" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_initPoints2</name></member>
+      <member refid="class_render_area_1af0898616a79989954498b7180f543fc4" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_insideRect</name></member>
+      <member refid="class_render_area_1a656abdf1482a6a22a98cb4d243df3906" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_test</name></member>
+      <member refid="class_render_area_1a050aa55d3c1af0c9ba7cbd843c9914b4" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_yrobot</name></member>
+      <member refid="class_render_area_1a24e36819e4484759c6ca71720962218f" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>brush_yrobot_MT</name></member>
+      <member refid="class_render_area_1aacb27ca3ce5c12e61e09cd493398601a" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>centroid_width</name></member>
+      <member refid="class_render_area_1a1dea13723ee82e1ce9ae8d823d7659ac" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>centroidImage</name></member>
+      <member refid="class_render_area_1a41544081d9962f5064656cfa6d8b7f37" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>edges</name></member>
+      <member refid="class_render_area_1a04ebcc3681203b3a23f6c38e7d6ad37b" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>expArena</name></member>
+      <member refid="class_render_area_1ac17dcdfc39b8f8107576db59ccc58b0b" prot="protected" virt="non-virtual"><scope>RenderArea</scope><name>getMostCentralNode</name></member>
+      <member refid="class_render_area_1a822661d518c5ec413e97a30b6e88c794" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>graph</name></member>
+      <member refid="class_render_area_1a7c567c05cf066d822414ae793b2cadec" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>heatMapQImage</name></member>
+      <member refid="class_render_area_1a2480b61c7b2d180d451539f8280ea8c5" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>heatMapTemp</name></member>
+      <member refid="class_render_area_1acb23644c69a89d0aee03f01910cbf215" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>index_node_to_light_net</name></member>
+      <member refid="class_render_area_1a8d3912b23d57afe994e9a6d3179f999c" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>marker0</name></member>
+      <member refid="class_render_area_1ac8bb7204441e13425e76b7c53e77806c" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>marker1</name></member>
+      <member refid="class_render_area_1a2ee0dbc2988dd64efe9b1c549fa99083" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>marker2</name></member>
+      <member refid="class_render_area_1aa26370924d56784e566e527291a4ec08" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>marker3</name></member>
+      <member refid="class_render_area_1a9a2a5da5a33b86bc539217c9b852d6f5" prot="public" virt="non-virtual"><scope>RenderArea</scope><name>paintEvent</name></member>
+      <member refid="class_render_area_1a1bff2a71a41b509cf38fec557299629d" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_circ2Draw</name></member>
+      <member refid="class_render_area_1ac8201949f8f169e0dcfbfc351927a53e" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_insideRect</name></member>
+      <member refid="class_render_area_1a0ccd6b10ad036b15fd6b1a417a16e811" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_network</name></member>
+      <member refid="class_render_area_1addb17a0368e64eab4e8de6fa80c6673f" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_pnts2Draw</name></member>
+      <member refid="class_render_area_1a6e4c2482f18a328b47b3f5a8a6c31631" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_RobCust1</name></member>
+      <member refid="class_render_area_1ad87834b76151d76e0d5cd0bdb4e48d3d" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_tracePnts</name></member>
+      <member refid="class_render_area_1a524b434b63b42d36ac523379aedb86ae" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>pen_voronoii</name></member>
+      <member refid="class_render_area_1abbf53fb5868180d532b7f36170ec02d1" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>radGradient</name></member>
+      <member refid="class_render_area_1adcc7245a2f0f60eed639bdb8a88122cc" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>radGradientRob</name></member>
+      <member refid="class_render_area_1aeb588465e908da6d2890c764c095125a" prot="public" virt="non-virtual"><scope>RenderArea</scope><name>refresh</name></member>
+      <member refid="class_render_area_1a22ef6c03c71add1332fbdfe05699b874" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>refreshNoiseBool</name></member>
+      <member refid="class_render_area_1abd4670bdc43cf403ecc1cafa7376d926" prot="public" virt="non-virtual"><scope>RenderArea</scope><name>RenderArea</name></member>
+      <member refid="class_render_area_1afe85bf4a551294cc3218cedec79f7f2b" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>robRad</name></member>
+      <member refid="class_render_area_1a5303edd249a73cb4e88561c877e134c7" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>SCIoIImg</name></member>
+      <member refid="class_render_area_1ac3da0ab875312e5dd3374110327ee0b3" prot="public" virt="non-virtual"><scope>RenderArea</scope><name>updateGradientPainter</name></member>
+      <member refid="class_render_area_1a666f727978fd9f8073cd62c4c4390c22" prot="public" virt="non-virtual"><scope>RenderArea</scope><name>updatePainters</name></member>
+      <member refid="class_render_area_1a4d6221e6c1f742084f9ee336ca5aa605" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>vd</name></member>
+      <member refid="class_render_area_1a04f59dc84763150e1648e214b5ead586" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>VoronoiiGen</name></member>
+      <member refid="class_render_area_1a5b441f5bc07b646af1010e4bd43f339e" prot="private" virt="non-virtual"><scope>RenderArea</scope><name>webPage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

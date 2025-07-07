@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_axis_ticker_log" kind="class" language="C++" prot="public">
+    <compoundname>QCPAxisTickerLog</compoundname>
+    <basecompoundref refid="class_q_c_p_axis_ticker" prot="public" virt="non-virtual">QCPAxisTicker</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_log_1a4108bcc1cd68dcec54dc75667440d328" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPAxisTickerLog::mLogBase</definition>
+        <argsstring></argsstring>
+        <name>mLogBase</name>
+        <qualifiedname>QCPAxisTickerLog::mLogBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2017" column="10" bodyfile="qcustomplot.h" bodystart="2017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_log_1a3d92b729bedbbbd34ee5f74565defd95" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPAxisTickerLog::mSubTickCount</definition>
+        <argsstring></argsstring>
+        <name>mSubTickCount</name>
+        <qualifiedname>QCPAxisTickerLog::mSubTickCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2018" column="7" bodyfile="qcustomplot.h" bodystart="2018" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_axis_ticker_log_1aeba719bbeec39957f475ef89d6ae2fe7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPAxisTickerLog::mLogBaseLnInv</definition>
+        <argsstring></argsstring>
+        <name>mLogBaseLnInv</name>
+        <qualifiedname>QCPAxisTickerLog::mLogBaseLnInv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2021" column="10" bodyfile="qcustomplot.h" bodystart="2021" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1af3cb86ea5eef2023c0b96b5260c4cbdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPAxisTickerLog::QCPAxisTickerLog</definition>
+        <argsstring>()</argsstring>
+        <name>QCPAxisTickerLog</name>
+        <qualifiedname>QCPAxisTickerLog::QCPAxisTickerLog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the ticker and sets reasonable default values. Axis tickers are commonly created managed by a QSharedPointer, which then can be passed to <ref refid="class_q_c_p_axis_1a4ee03fcd2c74d05cd1a419b9af5cfbdc" kindref="member">QCPAxis::setTicker</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2005" column="3" bodyfile="qcustomplot.cpp" bodystart="7724" bodyend="7729"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1a841a97f2b6850ff1ef3aa73e89d94775" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPAxisTickerLog::logBase</definition>
+        <argsstring>() const</argsstring>
+        <name>logBase</name>
+        <qualifiedname>QCPAxisTickerLog::logBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2008" column="10" bodyfile="qcustomplot.h" bodystart="2008" bodyend="2008"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1aebe43661977364fc1fd220fa1ae36a10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPAxisTickerLog::subTickCount</definition>
+        <argsstring>() const</argsstring>
+        <name>subTickCount</name>
+        <qualifiedname>QCPAxisTickerLog::subTickCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2009" column="7" bodyfile="qcustomplot.h" bodystart="2009" bodyend="2009"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1ac6e3b4e03baea3816f898869ab9751ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTickerLog::setLogBase</definition>
+        <argsstring>(double base)</argsstring>
+        <name>setLogBase</name>
+        <qualifiedname>QCPAxisTickerLog::setLogBase</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the logarithm base used for tick coordinate generation. The ticks will be placed at integer powers of <emphasis>base</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2012" column="8" bodyfile="qcustomplot.cpp" bodystart="7735" bodyend="7743"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1ad51989c798c0cfd50936d77aac57c56a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAxisTickerLog::setSubTickCount</definition>
+        <argsstring>(int subTicks)</argsstring>
+        <name>setSubTickCount</name>
+        <qualifiedname>QCPAxisTickerLog::setSubTickCount</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>subTicks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the number of sub ticks in a tick interval. Within each interval, the sub ticks are spaced linearly to provide a better visual guide, so the sub tick density increases toward the higher tick.</para>
+<para>Note that <emphasis>subTicks</emphasis> is the number of sub ticks (not sub intervals) in one tick interval. So in the case of logarithm base 10 an intuitive sub tick spacing would be achieved with eight sub ticks (the default). This means e.g. between the ticks 10 and 100 there will be eight ticks, namely at 20, 30, 40, 50, 60, 70, 80 and 90. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2013" column="8" bodyfile="qcustomplot.cpp" bodystart="7755" bodyend="7761"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1a352fef7ae68837acd26e35188aa86167" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int QCPAxisTickerLog::getSubTickCount</definition>
+        <argsstring>(double tickStep) Q_DECL_OVERRIDE</argsstring>
+        <name>getSubTickCount</name>
+        <qualifiedname>QCPAxisTickerLog::getSubTickCount</qualifiedname>
+        <reimplements refid="class_q_c_p_axis_ticker_1a4ccc403ced7a1457ce6ba293509933c8">getSubTickCount</reimplements>
+        <param>
+          <type>double</type>
+          <declname>tickStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2024" column="15" bodyfile="qcustomplot.cpp" bodystart="7770" bodyend="7774"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_axis_ticker_log_1af8873a8d1d2b9392d8f7a73218c889ab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; QCPAxisTickerLog::createTickVector</definition>
+        <argsstring>(double tickStep, const QCPRange &amp;range) Q_DECL_OVERRIDE</argsstring>
+        <name>createTickVector</name>
+        <qualifiedname>QCPAxisTickerLog::createTickVector</qualifiedname>
+        <reimplements refid="class_q_c_p_axis_ticker_1af4645a824c7bd2ca8fc7e86ebf9055bd">createTickVector</reimplements>
+        <param>
+          <type>double</type>
+          <declname>tickStep</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2025" column="19" bodyfile="qcustomplot.cpp" bodystart="7788" bodyend="7825"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Specialized axis ticker suited for logarithmic axes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="axisticker-log.png"></image>
+</para>
+<para>This <ref refid="class_q_c_p_axis_ticker" kindref="compound">QCPAxisTicker</ref> subclass generates ticks with unequal tick intervals suited for logarithmic axis scales. The ticks are placed at powers of the specified log base (<ref refid="class_q_c_p_axis_ticker_log_1ac6e3b4e03baea3816f898869ab9751ef" kindref="member">setLogBase</ref>).</para>
+<para>Especially in the case of a log base equal to 10 (the default), it might be desirable to have tick labels in the form of powers of ten without mantissa display. To achieve this, set the number precision (<ref refid="class_q_c_p_axis_1a21dc8023ad7500382ad9574b48137e63" kindref="member">QCPAxis::setNumberPrecision</ref>) to zero and the number format (<ref refid="class_q_c_p_axis_1ae585a54dc2aac662e90a2ca82f002590" kindref="member">QCPAxis::setNumberFormat</ref>) to scientific (exponential) display with beautifully typeset decimal powers, so a format string of <computeroutput>&quot;eb&quot;</computeroutput>. This will result in the following axis tick labels:</para>
+<para><image type="html" name="axisticker-log-powers.png"></image>
+</para>
+<para>The ticker can be created and assigned to an axis like this: <programlisting filename="documentation/doc-image-generator/mainwindow.cpp"></programlisting></para>
+<para>Note that the nature of logarithmic ticks imply that there exists a smallest possible tick step, corresponding to one multiplication by the log base. If the user zooms in further than that, no new ticks would appear, leading to very sparse or even no axis ticks on the axis. To prevent this situation, this ticker falls back to regular tick generation if the axis range would be covered by too few logarithmically placed ticks. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QCPAxisTicker</label>
+        <link refid="class_q_c_p_axis_ticker"/>
+      </node>
+      <node id="1">
+        <label>QCPAxisTickerLog</label>
+        <link refid="class_q_c_p_axis_ticker_log"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QCPAxisTicker</label>
+        <link refid="class_q_c_p_axis_ticker"/>
+      </node>
+      <node id="1">
+        <label>QCPAxisTickerLog</label>
+        <link refid="class_q_c_p_axis_ticker_log"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="2002" column="1" bodyfile="qcustomplot.h" bodystart="2003" bodyend="2026"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_axis_ticker_1ac7df6c72876b7abd67c932663a0b0f6a" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>cleanMantissa</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a804050e408f37a0b9770c6654ebe6aa7" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>createLabelVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a9a6435723fa0bd366d1ea4c2cff7c33f" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>createSubTickVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1af8873a8d1d2b9392d8f7a73218c889ab" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>createTickVector</name></member>
+      <member refid="class_q_c_p_axis_ticker_1aefbd11725678ca824add8cf926cbc856" prot="public" virt="virtual"><scope>QCPAxisTickerLog</scope><name>generate</name></member>
+      <member refid="class_q_c_p_axis_ticker_1abe99aaaf6c512812869b0a19937c76ff" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>getMantissa</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1a352fef7ae68837acd26e35188aa86167" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>getSubTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a8201eb4aa8be192bf786b126eb5ee089" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>getTickLabel</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a910d69bcec2de37e92d8d4e1ecf201e2" prot="protected" virt="virtual"><scope>QCPAxisTickerLog</scope><name>getTickStep</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1a841a97f2b6850ff1ef3aa73e89d94775" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>logBase</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1a4108bcc1cd68dcec54dc75667440d328" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mLogBase</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1aeba719bbeec39957f475ef89d6ae2fe7" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mLogBaseLnInv</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1a3d92b729bedbbbd34ee5f74565defd95" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mSubTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a14a35b47d1aad11b08d18ea0e25937b8" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a560ef9347b1aa599a9bf0e2f29d3ec16" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mTickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ac059d6d670b2f6132c593fb4de156701" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>mTickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a4ea0a7c4ca1c610f92b9bd5944ab4260" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>pickClosest</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a8fcf23c79ebd72202fe79253f9f01ea8" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>QCPAxisTicker</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1af3cb86ea5eef2023c0b96b5260c4cbdf" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>QCPAxisTickerLog</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1ac6e3b4e03baea3816f898869ab9751ef" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>setLogBase</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1ad51989c798c0cfd50936d77aac57c56a" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>setSubTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a47752abba8293e6dc18491501ae34008" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>setTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab509c7e500293bf66a8409f0d7c23943" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>setTickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a73b1d847c1a12159af6bfda4ebebe7d5" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>setTickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_log_1aebe43661977364fc1fd220fa1ae36a10" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>subTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1aaf9edbe4169ce55e216fd067cc139452" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>tickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ac0c6e9587c36fdeefb5518c00fe7ab15" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>tickOrigin</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49a" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>TickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a58df76f2ec3eb48401bdd314b0e14ba1" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>tickStepStrategy</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab28cc1ab549489be7975f5ce7e717916" prot="protected" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>trimTicks</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa770312b6b9b0c64a37ceeba96e0cd7f2" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>tssMeetTickCount</name></member>
+      <member refid="class_q_c_p_axis_ticker_1ab6d2f9d9477821623ac9bc4b21ddf49aa9002aa2fd5633ab5556c71a26fed63a8" prot="public" virt="non-virtual"><scope>QCPAxisTickerLog</scope><name>tssReadability</name></member>
+      <member refid="class_q_c_p_axis_ticker_1a1119d6f09ad720f9c5dfdd2559047161" prot="public" virt="virtual"><scope>QCPAxisTickerLog</scope><name>~QCPAxisTicker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

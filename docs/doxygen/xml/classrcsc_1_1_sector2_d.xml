@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_sector2_d" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::Sector2D</compoundname>
+    <basecompoundref refid="classrcsc_1_1_region2_d" prot="public" virt="non-virtual">rcsc::Region2D</basecompoundref>
+    <includes refid="sector__2d_8h" local="no">sector_2d.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_sector2_d_1a48857afd307c811a1b811f99939377f0" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Sector2D::M_center</definition>
+        <argsstring></argsstring>
+        <name>M_center</name>
+        <qualifiedname>rcsc::Sector2D::M_center</qualifiedname>
+        <briefdescription>
+<para>center point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="48" column="14" bodyfile="ui/geom/sector_2d.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_sector2_d_1a57a1125b2c00e74e694db7328dbf73c5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::Sector2D::M_min_radius</definition>
+        <argsstring></argsstring>
+        <name>M_min_radius</name>
+        <qualifiedname>rcsc::Sector2D::M_min_radius</qualifiedname>
+        <briefdescription>
+<para>smaller radius </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="51" column="12" bodyfile="ui/geom/sector_2d.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_sector2_d_1a80c66f71d096a53903174cca1622487e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::Sector2D::M_max_radius</definition>
+        <argsstring></argsstring>
+        <name>M_max_radius</name>
+        <qualifiedname>rcsc::Sector2D::M_max_radius</qualifiedname>
+        <briefdescription>
+<para>bigger radius </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="53" column="12" bodyfile="ui/geom/sector_2d.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_sector2_d_1a02233aa97c0d31127c9a075378cb7560" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref></type>
+        <definition>AngleDeg rcsc::Sector2D::M_angle_left_start</definition>
+        <argsstring></argsstring>
+        <name>M_angle_left_start</name>
+        <qualifiedname>rcsc::Sector2D::M_angle_left_start</qualifiedname>
+        <briefdescription>
+<para>start angle. (turn clockwise) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="56" column="14" bodyfile="ui/geom/sector_2d.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_sector2_d_1a62a8b404809e5e4d9ff0c02f61a30cd4" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref></type>
+        <definition>AngleDeg rcsc::Sector2D::M_angle_right_end</definition>
+        <argsstring></argsstring>
+        <name>M_angle_right_end</name>
+        <qualifiedname>rcsc::Sector2D::M_angle_right_end</qualifiedname>
+        <briefdescription>
+<para>end angle. (turn clockwise) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="58" column="14" bodyfile="ui/geom/sector_2d.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a6c542eb94feaa9591f271c418ad92b2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Sector2D::Sector2D</definition>
+        <argsstring>()</argsstring>
+        <name>Sector2D</name>
+        <qualifiedname>rcsc::Sector2D::Sector2D</qualifiedname>
+        <briefdescription>
+<para>not used </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="61" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a38c0ac48640d60c0c0c289dac0f184b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Sector2D::Sector2D</definition>
+        <argsstring>(const Vector2D &amp;c, const double &amp;min_r, const double &amp;max_r, const AngleDeg &amp;start, const AngleDeg &amp;end)</argsstring>
+        <name>Sector2D</name>
+        <qualifiedname>rcsc::Sector2D::Sector2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>min_r</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max_r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>constructor with all variables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>center point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>smaller radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bigger radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start angle(turn clockwise) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end angle(turn clockwise) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="72" column="5" bodyfile="ui/geom/sector_2d.cpp" bodystart="44" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a524391b69a820f92726ca3ee0ef12e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_sector2_d" kindref="compound">Sector2D</ref> &amp;</type>
+        <definition>const Sector2D &amp; rcsc::Sector2D::assign</definition>
+        <argsstring>(const Vector2D &amp;c, const double &amp;min_r, const double &amp;max_r, const AngleDeg &amp;start, const AngleDeg &amp;end)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Sector2D::assign</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>min_r</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>max_r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>assign new value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>center point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>smaller radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bigger radius </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start angle(turn clockwise) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end angle(turn clockwise) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="87" column="15" bodyfile="ui/geom/sector_2d.cpp" bodystart="73" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a4b976611abbe4b1fbeadde622ea4514a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>const Vector2D &amp; rcsc::Sector2D::center</definition>
+        <argsstring>() const</argsstring>
+        <name>center</name>
+        <qualifiedname>rcsc::Sector2D::center</qualifiedname>
+        <briefdescription>
+<para>get the center point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="98" column="15" bodyfile="ui/geom/sector_2d.h" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a7f740760d85c7355d814dcf11877d989" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Sector2D::radiusMin</definition>
+        <argsstring>() const</argsstring>
+        <name>radiusMin</name>
+        <qualifiedname>rcsc::Sector2D::radiusMin</qualifiedname>
+        <briefdescription>
+<para>get the small side radius </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="108" column="13" bodyfile="ui/geom/sector_2d.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a45066a1a648c42ec7ab864bf0bb1bd80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Sector2D::radiusMax</definition>
+        <argsstring>() const</argsstring>
+        <name>radiusMax</name>
+        <qualifiedname>rcsc::Sector2D::radiusMax</qualifiedname>
+        <briefdescription>
+<para>get the big side radius </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="118" column="13" bodyfile="ui/geom/sector_2d.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1abe32a97abcc8b8922a8a334cff5314b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::Sector2D::angleLeftStart</definition>
+        <argsstring>() const</argsstring>
+        <name>angleLeftStart</name>
+        <qualifiedname>rcsc::Sector2D::angleLeftStart</qualifiedname>
+        <briefdescription>
+<para>get the left start angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="128" column="15" bodyfile="ui/geom/sector_2d.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1ad6ede4589fb2b4919fa823c038484622" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::Sector2D::angleRightEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>angleRightEnd</name>
+        <qualifiedname>rcsc::Sector2D::angleRightEnd</qualifiedname>
+        <briefdescription>
+<para>get the right end angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="138" column="15" bodyfile="ui/geom/sector_2d.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a3f415e44c6265d2d3a811c42625f7100" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double rcsc::Sector2D::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <qualifiedname>rcsc::Sector2D::area</qualifiedname>
+        <reimplements refid="classrcsc_1_1_region2_d_1a2502791cb8472d99df26d9e216e74357">area</reimplements>
+        <briefdescription>
+<para>calculate the area of this region </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the value of area </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="148" column="12" bodyfile="ui/geom/sector_2d.cpp" bodystart="106" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a554a696e5c1ca054bc29039d645baba4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool rcsc::Sector2D::contains</definition>
+        <argsstring>(const Vector2D &amp;point) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>rcsc::Sector2D::contains</qualifiedname>
+        <reimplements refid="classrcsc_1_1_region2_d_1a5be3cd9e4045fd957aef13b7be798774">contains</reimplements>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>check if point is within this region </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="156" column="10" bodyfile="ui/geom/sector_2d.h" bodystart="156" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a033cf7d55e71b1ce5446967fc498cc0a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Sector2D::getCircumferenceMin</definition>
+        <argsstring>() const</argsstring>
+        <name>getCircumferenceMin</name>
+        <qualifiedname>rcsc::Sector2D::getCircumferenceMin</qualifiedname>
+        <briefdescription>
+<para>get smaller side circumference(ENSYUU NO NAGASA) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the length of circumference </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="170" column="12" bodyfile="ui/geom/sector_2d.h" bodystart="170" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_sector2_d_1a89f63cc97b5dc0db94f49972d75aa3ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Sector2D::getCircumferenceMax</definition>
+        <argsstring>() const</argsstring>
+        <name>getCircumferenceMax</name>
+        <qualifiedname>rcsc::Sector2D::getCircumferenceMax</qualifiedname>
+        <briefdescription>
+<para>get bigger side circumference(ENSYUU NO NAGASA) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the length of circumference </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/sector_2d.h" line="184" column="12" bodyfile="ui/geom/sector_2d.h" bodystart="184" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>2D sector region(OUGI-GATA) class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rcsc::Region2D</label>
+        <link refid="classrcsc_1_1_region2_d"/>
+      </node>
+      <node id="1">
+        <label>rcsc::Sector2D</label>
+        <link refid="classrcsc_1_1_sector2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rcsc::Region2D</label>
+        <link refid="classrcsc_1_1_region2_d"/>
+      </node>
+      <node id="1">
+        <label>rcsc::Sector2D</label>
+        <link refid="classrcsc_1_1_sector2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ui/geom/sector_2d.h" line="44" column="1" bodyfile="ui/geom/sector_2d.h" bodystart="45" bodyend="193"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_sector2_d_1abe32a97abcc8b8922a8a334cff5314b2" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>angleLeftStart</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1ad6ede4589fb2b4919fa823c038484622" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>angleRightEnd</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a3f415e44c6265d2d3a811c42625f7100" prot="public" virt="virtual"><scope>rcsc::Sector2D</scope><name>area</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a524391b69a820f92726ca3ee0ef12e12" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a4b976611abbe4b1fbeadde622ea4514a" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>center</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a554a696e5c1ca054bc29039d645baba4" prot="public" virt="virtual"><scope>rcsc::Sector2D</scope><name>contains</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a89f63cc97b5dc0db94f49972d75aa3ee" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>getCircumferenceMax</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a033cf7d55e71b1ce5446967fc498cc0a" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>getCircumferenceMin</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a02233aa97c0d31127c9a075378cb7560" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>M_angle_left_start</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a62a8b404809e5e4d9ff0c02f61a30cd4" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>M_angle_right_end</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a48857afd307c811a1b811f99939377f0" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>M_center</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a80c66f71d096a53903174cca1622487e" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>M_max_radius</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a57a1125b2c00e74e694db7328dbf73c5" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>M_min_radius</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a45066a1a648c42ec7ab864bf0bb1bd80" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>radiusMax</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a7f740760d85c7355d814dcf11877d989" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>radiusMin</name></member>
+      <member refid="classrcsc_1_1_region2_d_1a577990d3a9f85a96ec51c412bd47fb1d" prot="protected" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>Region2D</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a6c542eb94feaa9591f271c418ad92b2b" prot="private" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>Sector2D</name></member>
+      <member refid="classrcsc_1_1_sector2_d_1a38c0ac48640d60c0c0c289dac0f184b1" prot="public" virt="non-virtual"><scope>rcsc::Sector2D</scope><name>Sector2D</name></member>
+      <member refid="classrcsc_1_1_region2_d_1abc34bfdd9e0683003012f25ae7a2512b" prot="public" virt="virtual"><scope>rcsc::Sector2D</scope><name>~Region2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

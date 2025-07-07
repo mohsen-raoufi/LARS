@@ -92,32 +92,32 @@ $(function(){initNavTree('md_install__dep.html','',''); });
   <div class="headertitle"><div class="title">Setup Instructions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md21"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md23"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 1. Install Ubuntu 20.04 LTS</h1>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 2. Update Everything</h1>
 <ul>
 <li>Run the following commands in the terminal: <div class="fragment"><div class="line">sudo apt-get update &amp;&amp; sudo apt-get upgrade</div>
 </div><!-- fragment --></li>
 <li>Run the Software Updater.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 3. Install Latest Qt</h1>
 <ul>
 <li>Use the command: <div class="fragment"><div class="line">sudo apt-get install qtcreator</div>
 </div><!-- fragment --></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 4. Install Git</h1>
 <ul>
 <li>Install Git with: <div class="fragment"><div class="line">sudo apt-get install git</div>
 </div><!-- fragment --></li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 GPU Computing Setup</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 5. Install Nvidia Driver</h2>
 <ul>
 <li><b>Purge everything Nvidia related:</b> <div class="fragment"><div class="line">sudo apt purge nvidia-*</div>
@@ -129,9 +129,9 @@ GPU Computing Setup</h1>
 <li><b>Install driver:</b> <div class="fragment"><div class="line">sudo apt-get install nvidia-470</div>
 </div><!-- fragment --></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 6. Reboot</h2>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 7. Install OpenCV</h2>
 <ul>
 <li><b>Download OpenCV 4.5.5 from:</b> <a href="https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz">https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz</a></li>
@@ -142,7 +142,7 @@ GPU Computing Setup</h1>
 <li><b>Download OpenCV contrib tools:</b> <div class="fragment"><div class="line">git clone https://github.com/opencv/opencv_contrib.git</div>
 </div><!-- fragment --></li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
 Install Prerequisites:</h3>
 <ul>
 <li>Install necessary packages using the following commands: <div class="fragment"><div class="line">sudo apt install --assume-yes build-essential cmake git pkg-config unzip ffmpeg qtbase5-dev python-dev python3-dev python-numpy python3-numpy</div>
@@ -153,7 +153,7 @@ Install Prerequisites:</h3>
 <div class="line">sudo apt install --assume-yes libvorbis-dev libxvidcore-dev v4l-utils</div>
 </div><!-- fragment --></li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Configure CMake:</h3>
 <ul>
 <li>Navigate and configure using cmake with the following steps: <div class="fragment"><div class="line">cd ~/LARS_project/opencv-4.5.5</div>
@@ -162,7 +162,7 @@ Configure CMake:</h3>
 <div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_CUDA=ON -D WITH_CUBLAS=ON -D WITH_TBB=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D BUILD_PERF_TESTS=OFF -D BUILD_TESTS=OFF -DCUDA_NVCC_FLAGS=&quot;-D_FORCE_INLINES&quot; -DOPENCV_EXTRA_MODULES_PATH=~/ARK_project/opencv_contrib/modules -DCMAKE_SHARED_LINKER_FLAGS=&#39;-latomic&#39; ..</div>
 </div><!-- fragment --></li>
 </ul>
-<h4 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
 <em>Optional:</em> If there are errors in compilation, use an older version of gcc and g++:</h4>
 <ul>
 <li>Install different versions and update system alternatives with the following commands: <div class="fragment"><div class="line">sudo apt -y install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9</div>
@@ -175,14 +175,14 @@ Configure CMake:</h3>
 </div><!-- fragment --></li>
 <li>Switch to gcc-7 and g++-7 as needed.</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
 Build and Install OpenCV:</h3>
 <ul>
 <li>Compile and install OpenCV with the commands: <div class="fragment"><div class="line">make -j $(($(nproc) + 1))</div>
 <div class="line">sudo make install</div>
 </div><!-- fragment --></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
 8. Compile LARS</h2>
 <ul>
 <li>Follow these steps to compile and set up LARS:<ul>
@@ -201,7 +201,7 @@ Build and Install OpenCV:</h3>
 </ul>
 </li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
 9. Enjoy</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

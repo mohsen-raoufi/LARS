@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="triangulation_8h" kind="file" language="C++">
+    <compoundname>triangulation.h</compoundname>
+    <includes refid="geom_2vector__2d_8h" local="no">geom/vector_2d.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">set</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>ui/geom/angle_deg.h</label>
+        <link refid="angle__deg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ui/geom/triangulation.h</label>
+        <link refid="triangulation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>geom/vector_2d.h</label>
+        <link refid="geom_2vector__2d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrcsc_1_1_triangulation" prot="public">rcsc::Triangulation</innerclass>
+    <innerclass refid="structrcsc_1_1_triangulation_1_1_triangle" prot="public">rcsc::Triangulation::Triangle</innerclass>
+    <innernamespace refid="namespacercsc">rcsc</innernamespace>
+    <briefdescription>
+<para>2D triangulation Header File. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-c++-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*Copyright:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>Copyright<sp/>(C)<sp/>Hidehisa<sp/>Akiyama</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>This<sp/>code<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*EndCopyright:</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RCSC_GEOM_TRIANGULATION_USING_TRIANGLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCSC_GEOM_TRIANGULATION_USING_TRIANGLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="geom_2vector__2d_8h" kindref="compound">geom/vector_2d.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">rcsc<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classrcsc_1_1_triangulation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrcsc_1_1_triangulation_1a44e1d792d57d1708249fdd39c665e3c2" kindref="member">Triangulation</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="structrcsc_1_1_triangulation_1_1_triangle" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a3ab2157f03d7ab4471cc17cff8ba0bf4" kindref="member">Triangle</ref><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="structrcsc_1_1_triangulation_1_1_triangle_1af6372d1d76ee5900f6cce39cae697fe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1af6372d1d76ee5900f6cce39cae697fe0" kindref="member">v0_</ref>;<sp/></highlight></codeline>
+<codeline lineno="52" refid="structrcsc_1_1_triangulation_1_1_triangle_1a16f999251cad836c3c3412602cd81947" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a16f999251cad836c3c3412602cd81947" kindref="member">v1_</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="structrcsc_1_1_triangulation_1_1_triangle_1a84c3462667f0962e5afc9532abd306a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a84c3462667f0962e5afc9532abd306a3" kindref="member">v2_</ref>;<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structrcsc_1_1_triangulation_1_1_triangle_1a3ab2157f03d7ab4471cc17cff8ba0bf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a3ab2157f03d7ab4471cc17cff8ba0bf4" kindref="member">Triangle</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>v0,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>v1,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>v2<sp/>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1af6372d1d76ee5900f6cce39cae697fe0" kindref="member">v0_</ref>(<sp/>v0<sp/>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a16f999251cad836c3c3412602cd81947" kindref="member">v1_</ref>(<sp/>v1<sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle_1a84c3462667f0962e5afc9532abd306a3" kindref="member">v2_</ref>(<sp/>v2<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classrcsc_1_1_triangulation_1aceb10f832f8eb0df4287f58c4391291c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;<sp/>Vector2D<sp/>&gt;<sp/><ref refid="classrcsc_1_1_triangulation_1aceb10f832f8eb0df4287f58c4391291c" kindref="member">PointCont</ref>;<sp/></highlight></codeline>
+<codeline lineno="71" refid="classrcsc_1_1_triangulation_1adffeecc5443e22ec6d56c68ac345c405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;<sp/>Triangle<sp/>&gt;<sp/><ref refid="classrcsc_1_1_triangulation_1adffeecc5443e22ec6d56c68ac345c405" kindref="member">TriangleCont</ref>;<sp/></highlight></codeline>
+<codeline lineno="72" refid="classrcsc_1_1_triangulation_1a6fd635029a08790493891ddfe0bfb918" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;<sp/>size_t,<sp/>size_t<sp/>&gt;<sp/><ref refid="classrcsc_1_1_triangulation_1a6fd635029a08790493891ddfe0bfb918" kindref="member">Segment</ref>;<sp/></highlight></codeline>
+<codeline lineno="73" refid="classrcsc_1_1_triangulation_1a1b6bc9e8919d65ee9b2a690c2a400f21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::set&lt;<sp/>Segment<sp/>&gt;<sp/><ref refid="classrcsc_1_1_triangulation_1a1b6bc9e8919d65ee9b2a690c2a400f21" kindref="member">SegmentSet</ref>;<sp/></highlight></codeline>
+<codeline lineno="74" refid="classrcsc_1_1_triangulation_1ad4491d541330a5d0ec43a257037b21d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;<sp/>Segment<sp/>&gt;<sp/><ref refid="classrcsc_1_1_triangulation_1ad4491d541330a5d0ec43a257037b21d6" kindref="member">SegmentCont</ref>;<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>M_use_triangles;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>M_use_edges;<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TRIANGULATION_STRICT_POINT_SET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>std::set&lt;<sp/>Vector2D,<sp/>Vector2D::XYCmp<sp/>&gt;<sp/>M_point_set;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_triangulation_1aceb10f832f8eb0df4287f58c4391291c" kindref="member">PointCont</ref><sp/>M_points;<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_triangulation_1a1b6bc9e8919d65ee9b2a690c2a400f21" kindref="member">SegmentSet</ref><sp/>M_constraints;<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_triangulation_1adffeecc5443e22ec6d56c68ac345c405" kindref="member">TriangleCont</ref><sp/>M_triangles;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_triangulation_1ad4491d541330a5d0ec43a257037b21d6" kindref="member">SegmentCont</ref><sp/>M_edges;<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="95" refid="classrcsc_1_1_triangulation_1a44e1d792d57d1708249fdd39c665e3c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_triangulation_1a44e1d792d57d1708249fdd39c665e3c2" kindref="member">Triangulation</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>M_use_triangles(<sp/>true<sp/>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>M_use_edges(<sp/>true<sp/>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classrcsc_1_1_triangulation_1a8be387846570894a2fd94ae2494fee12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a8be387846570894a2fd94ae2494fee12" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="classrcsc_1_1_triangulation_1abf124f45c7c1080cf9b76a9c93656a63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1abf124f45c7c1080cf9b76a9c93656a63" kindref="member">clearResults</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classrcsc_1_1_triangulation_1ad695be1b66a475f950875c98a7ebeebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1aceb10f832f8eb0df4287f58c4391291c" kindref="member">PointCont</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_triangulation_1ad695be1b66a475f950875c98a7ebeebb" kindref="member">points</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="115"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_points;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classrcsc_1_1_triangulation_1ab76080c81c01a239a5a20c376e3ad8b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a1b6bc9e8919d65ee9b2a690c2a400f21" kindref="member">SegmentSet</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_triangulation_1ab76080c81c01a239a5a20c376e3ad8b3" kindref="member">constraints</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="124"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_constraints;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classrcsc_1_1_triangulation_1aaa2ae6c1b1229e7bb6a0e741d85383d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1adffeecc5443e22ec6d56c68ac345c405" kindref="member">TriangleCont</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_triangulation_1aaa2ae6c1b1229e7bb6a0e741d85383d2" kindref="member">triangles</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="133"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_triangles;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classrcsc_1_1_triangulation_1aac021107c854b8c7dc22cd6eafc6246f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1ad4491d541330a5d0ec43a257037b21d6" kindref="member">SegmentCont</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_triangulation_1aac021107c854b8c7dc22cd6eafc6246f" kindref="member">edges</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="142"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_edges;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classrcsc_1_1_triangulation_1a2acfde3bfd6576e26af0a9d467d511d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a2acfde3bfd6576e26af0a9d467d511d7" kindref="member">setUseTriangles</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>on<sp/>)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>M_use_triangles<sp/>=<sp/>on;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classrcsc_1_1_triangulation_1a21b1138ae12487e025b27a222b57d23f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a21b1138ae12487e025b27a222b57d23f" kindref="member">setUseEdges</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>on<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>M_use_edges<sp/>=<sp/>on;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classrcsc_1_1_triangulation_1a5d36c1cab122ded7affed8e2ecd20691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a5d36c1cab122ded7affed8e2ecd20691" kindref="member">addPoint</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classrcsc_1_1_triangulation_1a3db659474d5314a49ed6526af7222fcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a3db659474d5314a49ed6526af7222fcb" kindref="member">addPoints</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1aceb10f832f8eb0df4287f58c4391291c" kindref="member">PointCont</ref><sp/>&amp;<sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="classrcsc_1_1_triangulation_1a75862722cd321c7bca846e9b7f1b5737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1a75862722cd321c7bca846e9b7f1b5737" kindref="member">addConstraint</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;<sp/>origin_index,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;<sp/>terminal_index<sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="classrcsc_1_1_triangulation_1ace43e87633ac97a11b2bbda91734dbca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1ace43e87633ac97a11b2bbda91734dbca" kindref="member">compute</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="classrcsc_1_1_triangulation_1ac339ceab0f297ee1ac448af652768260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrcsc_1_1_triangulation_1_1_triangle" kindref="compound">Triangle</ref><sp/>*<sp/><ref refid="classrcsc_1_1_triangulation_1ac339ceab0f297ee1ac448af652768260" kindref="member">findTriangleContains</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/>point<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classrcsc_1_1_triangulation_1aff820a76be425c23658044a4901c932b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_triangulation_1aff820a76be425c23658044a4901c932b" kindref="member">findNearestPoint</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/>point<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ui/geom/triangulation.h"/>
+  </compounddef>
+</doxygen>

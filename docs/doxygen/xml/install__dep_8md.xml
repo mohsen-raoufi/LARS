@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="install__dep_8md" kind="file" language="Markdown">
+    <compoundname>install_dep.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Setup<sp/>Instructions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.<sp/>Install<sp/>Ubuntu<sp/>20.04<sp/>LTS</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>2.<sp/>Update<sp/>Everything</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Run<sp/>the<sp/>following<sp/>commands<sp/>in<sp/>the<sp/>terminal:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>update<sp/>&amp;&amp;<sp/>sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Run<sp/>the<sp/>Software<sp/>Updater.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>3.<sp/>Install<sp/>Latest<sp/>Qt</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Use<sp/>the<sp/>command:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>qtcreator</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>4.<sp/>Install<sp/>Git</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Install<sp/>Git<sp/>with:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>git</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>GPU<sp/>Computing<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>5.<sp/>Install<sp/>Nvidia<sp/>Driver</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Purge<sp/>everything<sp/>Nvidia<sp/>related:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>purge<sp/>nvidia-*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Add<sp/>repository:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>add-apt-repository<sp/>ppa:graphics/ppa</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Update:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>update</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Install<sp/>driver:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>nvidia-470</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>6.<sp/>Reboot</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>7.<sp/>Install<sp/>OpenCV</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Download<sp/>OpenCV<sp/>4.5.5<sp/>from:**<sp/>[https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz](https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Create<sp/>folder<sp/>for<sp/>LARS<sp/>and<sp/>cd:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir<sp/>~/LARS_project<sp/>&amp;&amp;<sp/>cd<sp/>~/LARS_project</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Untar<sp/>downloaded<sp/>OpenCV:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tar<sp/>-xcf<sp/>~/Downloads/opencv-4.5.5.tar.gz<sp/>opencv-4.5.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Download<sp/>OpenCV<sp/>contrib<sp/>tools:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/opencv/opencv_contrib.git</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Install<sp/>Prerequisites:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Install<sp/>necessary<sp/>packages<sp/>using<sp/>the<sp/>following<sp/>commands:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>build-essential<sp/>cmake<sp/>git<sp/>pkg-config<sp/>unzip<sp/>ffmpeg<sp/>qtbase5-dev<sp/>python-dev<sp/>python3-dev<sp/>python-numpy<sp/>python3-numpy</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>libhdf5-dev</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libgtk-3-dev<sp/>libdc1394-22<sp/>libdc1394-22-dev<sp/>libjpeg-dev<sp/>libpng-dev<sp/>libtiff5-dev</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libavcodec-dev<sp/>libavformat-dev<sp/>libswscale-dev<sp/>libxine2-dev<sp/>libgstreamer1.0-dev<sp/>libgstreamer-plugins-base1.0-dev</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libv4l-dev<sp/>libtbb-dev<sp/>libfaac-dev<sp/>libmp3lame-dev<sp/>libopencore-amrnb-dev<sp/>libopencore-amrwb-dev<sp/>libtheora-dev</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libvorbis-dev<sp/>libxvidcore-dev<sp/>v4l-utils</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Configure<sp/>CMake:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Navigate<sp/>and<sp/>configure<sp/>using<sp/>cmake<sp/>with<sp/>the<sp/>following<sp/>steps:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>~/LARS_project/opencv-4.5.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmake<sp/>-D<sp/>CMAKE_BUILD_TYPE=RELEASE<sp/>-D<sp/>CMAKE_INSTALL_PREFIX=/usr/local<sp/>-D<sp/>WITH_CUDA=ON<sp/>-D<sp/>WITH_CUBLAS=ON<sp/>-D<sp/>WITH_TBB=ON<sp/>-D<sp/>WITH_V4L=ON<sp/>-D<sp/>WITH_QT=ON<sp/>-D<sp/>WITH_OPENGL=ON<sp/>-D<sp/>BUILD_PERF_TESTS=OFF<sp/>-D<sp/>BUILD_TESTS=OFF<sp/>-DCUDA_NVCC_FLAGS=&quot;-D_FORCE_INLINES&quot;<sp/>-DOPENCV_EXTRA_MODULES_PATH=~/ARK_project/opencv_contrib/modules<sp/>-DCMAKE_SHARED_LINKER_FLAGS=&apos;-latomic&apos;<sp/>..</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>*Optional:*<sp/>If<sp/>there<sp/>are<sp/>errors<sp/>in<sp/>compilation,<sp/>use<sp/>an<sp/>older<sp/>version<sp/>of<sp/>gcc<sp/>and<sp/>g++:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Install<sp/>different<sp/>versions<sp/>and<sp/>update<sp/>system<sp/>alternatives<sp/>with<sp/>the<sp/>following<sp/>commands:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>-y<sp/>install<sp/>gcc-7<sp/>g++-7<sp/>gcc-8<sp/>g++-8<sp/>gcc-9<sp/>g++-9</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-7<sp/>7</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-8<sp/>8</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-9<sp/>9</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-7<sp/>7</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-8<sp/>8</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-9<sp/>9</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Switch<sp/>to<sp/>gcc-7<sp/>and<sp/>g++-7<sp/>as<sp/>needed.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build<sp/>and<sp/>Install<sp/>OpenCV:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Compile<sp/>and<sp/>install<sp/>OpenCV<sp/>with<sp/>the<sp/>commands:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>make<sp/>-j<sp/>$(($(nproc)<sp/>+<sp/>1))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>make<sp/>install</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>8.<sp/>Compile<sp/>LARS</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Follow<sp/>these<sp/>steps<sp/>to<sp/>compile<sp/>and<sp/>set<sp/>up<sp/>LARS:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**Navigate<sp/>to<sp/>the<sp/>LARS<sp/>project<sp/>directory:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cd<sp/>~/LARS_project</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**Clone<sp/>the<sp/>LARS<sp/>Code:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/mohsen-raoufi/LARS.git</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**Open<sp/>QT<sp/>Creator<sp/>and<sp/>the<sp/>project:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Open<sp/>QT<sp/>creator.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Open<sp/>project<sp/>and<sp/>select<sp/>`CMakeList.txt`<sp/>(or<sp/>`.pro`<sp/>file)<sp/>in<sp/>the<sp/>cloned<sp/>directory<sp/>of<sp/>LARS.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Build<sp/>and<sp/>run.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>9.<sp/>Enjoy</highlight></codeline>
+    </programlisting>
+    <location file="install_dep.md"/>
+  </compounddef>
+</doxygen>

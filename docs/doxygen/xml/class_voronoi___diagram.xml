@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_voronoi___diagram" kind="class" language="C++" prot="public">
+    <compoundname>Voronoi_Diagram</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_voronoi___diagram_1a1da4f28afe9923caa296eeb597e3d631" prot="private" static="no" mutable="no">
+        <type><ref refid="class_world_model" kindref="compound">WorldModel</ref> *</type>
+        <definition>WorldModel* Voronoi_Diagram::wm</definition>
+        <argsstring></argsstring>
+        <name>wm</name>
+        <qualifiedname>Voronoi_Diagram::wm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="50" column="16" bodyfile="ui/geom/voronoi_diagram.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_voronoi___diagram_1a6020a9c427be724b5a8202881d7d7fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Voronoi_Diagram::Voronoi_Diagram</definition>
+        <argsstring>()</argsstring>
+        <name>Voronoi_Diagram</name>
+        <qualifiedname>Voronoi_Diagram::Voronoi_Diagram</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="45" column="5" bodyfile="ui/geom/voronoi_diagram.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voronoi___diagram_1a423d07d31c4919bbb45e6c47b1bddbd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QList&lt; <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &gt;</type>
+        <definition>QList&lt; Vector2D &gt; Voronoi_Diagram::calculate</definition>
+        <argsstring>(QList&lt; Vector2D &gt; in_points)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>Voronoi_Diagram::calculate</qualifiedname>
+        <param>
+          <type>QList&lt; <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &gt;</type>
+          <declname>in_points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="46" column="11" bodyfile="ui/geom/voronoi_diagram.cpp" bodystart="7" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voronoi___diagram_1a51835a0b456c2f9c976b5b10e54f0202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Voronoi_Diagram::setWorldModel</definition>
+        <argsstring>(WorldModel *wm)</argsstring>
+        <name>setWorldModel</name>
+        <qualifiedname>Voronoi_Diagram::setWorldModel</qualifiedname>
+        <param>
+          <type><ref refid="class_world_model" kindref="compound">WorldModel</ref> *</type>
+          <declname>wm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="47" column="10" bodyfile="ui/geom/voronoi_diagram.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/voronoi_diagram.h" line="42" column="1" bodyfile="ui/geom/voronoi_diagram.h" bodystart="43" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_voronoi___diagram_1a423d07d31c4919bbb45e6c47b1bddbd8" prot="public" virt="non-virtual"><scope>Voronoi_Diagram</scope><name>calculate</name></member>
+      <member refid="class_voronoi___diagram_1a51835a0b456c2f9c976b5b10e54f0202" prot="public" virt="non-virtual"><scope>Voronoi_Diagram</scope><name>setWorldModel</name></member>
+      <member refid="class_voronoi___diagram_1a6020a9c427be724b5a8202881d7d7fc7" prot="public" virt="non-virtual"><scope>Voronoi_Diagram</scope><name>Voronoi_Diagram</name></member>
+      <member refid="class_voronoi___diagram_1a1da4f28afe9923caa296eeb597e3d631" prot="private" virt="non-virtual"><scope>Voronoi_Diagram</scope><name>wm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

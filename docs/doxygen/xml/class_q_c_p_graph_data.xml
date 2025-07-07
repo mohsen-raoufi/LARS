@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_graph_data" kind="class" language="C++" prot="public">
+    <compoundname>QCPGraphData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_q_c_p_graph_data_1a2fcebdf84af975761c0661237d7e28ec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPGraphData::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <qualifiedname>QCPGraphData::key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5441" column="10" bodyfile="qcustomplot.h" bodystart="5441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_graph_data_1ac97e3ddbdcbe0b58d0b4d6f95250d59c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPGraphData::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>QCPGraphData::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5441" column="14" bodyfile="qcustomplot.h" bodystart="5441" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_graph_data_1ac43f7499383d2fa2ffb7a4ad43f76c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPGraphData::QCPGraphData</definition>
+        <argsstring>()</argsstring>
+        <name>QCPGraphData</name>
+        <qualifiedname>QCPGraphData::QCPGraphData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a data point with key and value set to zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5429" column="3" bodyfile="qcustomplot.cpp" bodystart="20779" bodyend="20783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a2c32177f12f902f4e05f712837082bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPGraphData::QCPGraphData</definition>
+        <argsstring>(double key, double value)</argsstring>
+        <name>QCPGraphData</name>
+        <qualifiedname>QCPGraphData::QCPGraphData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a data point with the specified <emphasis>key</emphasis> and <emphasis>value</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5430" column="3" bodyfile="qcustomplot.cpp" bodystart="20788" bodyend="20792"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a5e0f37ea101eeec245d8c32a2206b204" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPGraphData::sortKey</definition>
+        <argsstring>() const</argsstring>
+        <name>sortKey</name>
+        <qualifiedname>QCPGraphData::sortKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>key</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5432" column="17" bodyfile="qcustomplot.h" bodystart="5432" bodyend="5432"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a72fdaf738f679ef93bea3d552ba42d1b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPGraphData::mainKey</definition>
+        <argsstring>() const</argsstring>
+        <name>mainKey</name>
+        <qualifiedname>QCPGraphData::mainKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>key</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5436" column="17" bodyfile="qcustomplot.h" bodystart="5436" bodyend="5436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a1b1e440a430a4a83d9a3f6f247510f27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPGraphData::mainValue</definition>
+        <argsstring>() const</argsstring>
+        <name>mainValue</name>
+        <qualifiedname>QCPGraphData::mainValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <emphasis>value</emphasis> member of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5437" column="17" bodyfile="qcustomplot.h" bodystart="5437" bodyend="5437"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a2f8dd30360356f66cc418a170a9f3792" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPGraphData::valueRange</definition>
+        <argsstring>() const</argsstring>
+        <name>valueRange</name>
+        <qualifiedname>QCPGraphData::valueRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> with both lower and upper boundary set to <emphasis>value</emphasis> of this data point.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5439" column="19" bodyfile="qcustomplot.h" bodystart="5439" bodyend="5439"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a4646eac7f7a48970ea0fc5153aab0e77" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref></type>
+        <definition>static QCPGraphData QCPGraphData::fromSortKey</definition>
+        <argsstring>(double sortKey)</argsstring>
+        <name>fromSortKey</name>
+        <qualifiedname>QCPGraphData::fromSortKey</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data point with the specified <emphasis>sortKey</emphasis>. All other members are set to zero.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5433" column="30" bodyfile="qcustomplot.h" bodystart="5433" bodyend="5433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_graph_data_1a61da5d975de269a23d98ad18bc4f4ab3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool QCPGraphData::sortKeyIsMainKey</definition>
+        <argsstring>()</argsstring>
+        <name>sortKeyIsMainKey</name>
+        <qualifiedname>QCPGraphData::sortKeyIsMainKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Since the member <emphasis>key</emphasis> is both the data point key coordinate and the data ordering parameter, this method returns true.</para>
+<para>For a general explanation of what this method is good for in the context of the data container, see the documentation of <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5434" column="22" bodyfile="qcustomplot.h" bodystart="5434" bodyend="5434"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the data of one single data point for <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The stored data is: <itemizedlist>
+<listitem><para><emphasis>key:</emphasis> coordinate on the key axis of this data point (this is the <emphasis>mainKey</emphasis> and the <emphasis>sortKey</emphasis>) </para>
+</listitem>
+<listitem><para><emphasis>value:</emphasis> coordinate on the value axis of this data point (this is the <emphasis>mainValue</emphasis>)</para>
+</listitem>
+</itemizedlist>
+The container for storing multiple data points is QCPGraphDataContainer. It is a typedef for <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref> with <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref> as the DataType template parameter. See the documentation there for an explanation regarding the data type&apos;s generic methods.</para>
+<para><simplesect kind="see"><para>QCPGraphDataContainer </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="5426" column="1" bodyfile="qcustomplot.h" bodystart="5427" bodyend="5442"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_graph_data_1a4646eac7f7a48970ea0fc5153aab0e77" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>fromSortKey</name></member>
+      <member refid="class_q_c_p_graph_data_1a2fcebdf84af975761c0661237d7e28ec" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>key</name></member>
+      <member refid="class_q_c_p_graph_data_1a72fdaf738f679ef93bea3d552ba42d1b" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>mainKey</name></member>
+      <member refid="class_q_c_p_graph_data_1a1b1e440a430a4a83d9a3f6f247510f27" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>mainValue</name></member>
+      <member refid="class_q_c_p_graph_data_1ac43f7499383d2fa2ffb7a4ad43f76c7c" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>QCPGraphData</name></member>
+      <member refid="class_q_c_p_graph_data_1a2c32177f12f902f4e05f712837082bd6" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>QCPGraphData</name></member>
+      <member refid="class_q_c_p_graph_data_1a5e0f37ea101eeec245d8c32a2206b204" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>sortKey</name></member>
+      <member refid="class_q_c_p_graph_data_1a61da5d975de269a23d98ad18bc4f4ab3" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>sortKeyIsMainKey</name></member>
+      <member refid="class_q_c_p_graph_data_1ac97e3ddbdcbe0b58d0b4d6f95250d59c" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>value</name></member>
+      <member refid="class_q_c_p_graph_data_1a2f8dd30360356f66cc418a170a9f3792" prot="public" virt="non-virtual"><scope>QCPGraphData</scope><name>valueRange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

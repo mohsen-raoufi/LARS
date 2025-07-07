@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structwm_circle" kind="struct" language="C++" prot="public">
+    <compoundname>wmCircle</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwm_circle_1a7f241142a279fd4a6c1e54770b702284" prot="public" static="no" mutable="no">
+        <type>QPoint</type>
+        <definition>QPoint wmCircle::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>wmCircle::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="30" column="12" bodyfile="ui/worldmodel.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm_circle_1a1391dfb78bc22d759c23550adb9cb846" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wmCircle::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>wmCircle::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="31" column="9" bodyfile="ui/worldmodel.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm_circle_1aad92392f0ccf46049534fe5b1f5ab5c1" prot="public" static="no" mutable="no">
+        <type>QColor</type>
+        <definition>QColor wmCircle::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <qualifiedname>wmCircle::col</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="32" column="12" bodyfile="ui/worldmodel.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm_circle_1a3621b36f552fad742bde71fb17dab460" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wmCircle::thickness</definition>
+        <argsstring></argsstring>
+        <name>thickness</name>
+        <qualifiedname>wmCircle::thickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="33" column="9" bodyfile="ui/worldmodel.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm_circle_1af975d72a560e5ad0b698b931fd955948" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string wmCircle::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>wmCircle::text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="34" column="17" bodyfile="ui/worldmodel.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm_circle_1a59a1ea0f955feded0fda1dda4e6a11ed" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool wmCircle::transparent</definition>
+        <argsstring></argsstring>
+        <name>transparent</name>
+        <qualifiedname>wmCircle::transparent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/worldmodel.h" line="35" column="10" bodyfile="ui/worldmodel.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/worldmodel.h" line="29" column="1" bodyfile="ui/worldmodel.h" bodystart="29" bodyend="36"/>
+    <listofallmembers>
+      <member refid="structwm_circle_1aad92392f0ccf46049534fe5b1f5ab5c1" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>col</name></member>
+      <member refid="structwm_circle_1a7f241142a279fd4a6c1e54770b702284" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>pos</name></member>
+      <member refid="structwm_circle_1a1391dfb78bc22d759c23550adb9cb846" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>r</name></member>
+      <member refid="structwm_circle_1af975d72a560e5ad0b698b931fd955948" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>text</name></member>
+      <member refid="structwm_circle_1a3621b36f552fad742bde71fb17dab460" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>thickness</name></member>
+      <member refid="structwm_circle_1a59a1ea0f955feded0fda1dda4e6a11ed" prot="public" virt="non-virtual"><scope>wmCircle</scope><name>transparent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

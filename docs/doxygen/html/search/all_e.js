@@ -51,7 +51,7 @@ var searchData=
   ['drawpolyline_48',['drawPolyline',['../class_q_c_p_abstract_plottable1_d.html#a7adc6c3cccebb5341f11e0c2b7d54206',1,'QCPAbstractPlottable1D']]],
   ['drawshape_49',['drawShape',['../class_q_c_p_scatter_style.html#a89b5105e6027bfcbfeefed9d201b607c',1,'QCPScatterStyle::drawShape(QCPPainter *painter, const QPointF &amp;pos) const'],['../class_q_c_p_scatter_style.html#a95c297b114c77c22428ef40f54620ddf',1,'QCPScatterStyle::drawShape(QCPPainter *painter, double x, double y) const']]],
   ['drawstatisticalbox_50',['drawStatisticalBox',['../class_q_c_p_statistical_box.html#a02dc6b561be8203d460d7263da74b8a9',1,'QCPStatisticalBox']]],
-  ['driver_51',['5. Install Nvidia Driver',['../md_install__dep.html#autotoc_md28',1,'']]],
+  ['driver_51',['5. Install Nvidia Driver',['../md_install__dep.html#autotoc_md30',1,'']]],
   ['dx_52',['dx',['../classrcsc_1_1_matrix2_d.html#a34037b22bc795a7a5b81f1666ead8a48',1,'rcsc::Matrix2D']]],
   ['dy_53',['dy',['../classrcsc_1_1_matrix2_d.html#ab4958615f83b19d63c68594b8354a611',1,'rcsc::Matrix2D']]]
 ];

@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_mobile_object" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MobileObject</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <derivedcompoundref refid="class_robot" prot="public" virt="non-virtual">Robot</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_mobile_object_1a3535facf70974c0ef10eb4a9ef985cb0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MobileObject::isValid</definition>
+        <argsstring></argsstring>
+        <name>isValid</name>
+        <qualifiedname>MobileObject::isValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="34" column="10" bodyfile="ui/mobileobject.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a71fc62afafcc768f2775b05a4038ed49" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position MobileObject::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>MobileObject::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="36" column="14" bodyfile="ui/mobileobject.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a981b6987ee82b421ffe16d5837cf2afc" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position MobileObject::pos_predicted</definition>
+        <argsstring></argsstring>
+        <name>pos_predicted</name>
+        <qualifiedname>MobileObject::pos_predicted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="37" column="14" bodyfile="ui/mobileobject.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a23d08dc43a53fc43bf0d821483f03674" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MobileObject::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>MobileObject::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="38" column="12" bodyfile="ui/mobileobject.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1acfcd06b7c80f98f1fa2d17adcd1c7553" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MobileObject::camera_timeout</definition>
+        <argsstring></argsstring>
+        <name>camera_timeout</name>
+        <qualifiedname>MobileObject::camera_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="40" column="9" bodyfile="ui/mobileobject.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1aef5fe9a6fdfe2b33070213323334aef7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_position" kindref="compound">Position</ref></type>
+        <definition>Position MobileObject::vel</definition>
+        <argsstring></argsstring>
+        <name>vel</name>
+        <qualifiedname>MobileObject::vel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="42" column="14" bodyfile="ui/mobileobject.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_mobile_object_1a7e5efb54b940f3d9863ddfe845459f39" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_position_time" kindref="compound">PositionTime</ref></type>
+        <definition>PositionTime MobileObject::last_post[LAST_COUNT]</definition>
+        <argsstring>[LAST_COUNT]</argsstring>
+        <name>last_post</name>
+        <qualifiedname>MobileObject::last_post</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="45" column="18" bodyfile="ui/mobileobject.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a6df4e76fab4bf59cca806f33945c252c" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_position_time" kindref="compound">PositionTime</ref></type>
+        <definition>PositionTime MobileObject::vel_post</definition>
+        <argsstring></argsstring>
+        <name>vel_post</name>
+        <qualifiedname>MobileObject::vel_post</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="46" column="18" bodyfile="ui/mobileobject.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a8244448ecee28e0e9366a066cc33a33f" prot="protected" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer MobileObject::timer_seen</definition>
+        <argsstring></argsstring>
+        <name>timer_seen</name>
+        <qualifiedname>MobileObject::timer_seen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="50" column="12" bodyfile="ui/mobileobject.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a07c04890cf5c505201791ca9c530f15e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MobileObject::timer_seen_interval</definition>
+        <argsstring></argsstring>
+        <name>timer_seen_interval</name>
+        <qualifiedname>MobileObject::timer_seen_interval</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="51" column="12" bodyfile="ui/mobileobject.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a1e401dc80d51db76b76cda7b7daf2588" prot="protected" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer MobileObject::timer_vel</definition>
+        <argsstring></argsstring>
+        <name>timer_vel</name>
+        <qualifiedname>MobileObject::timer_vel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="52" column="12" bodyfile="ui/mobileobject.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mobile_object_1a6dd6cd82b80596082d8c1733525fb41f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MobileObject::timer_vel_interval</definition>
+        <argsstring></argsstring>
+        <name>timer_vel_interval</name>
+        <qualifiedname>MobileObject::timer_vel_interval</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="53" column="12" bodyfile="ui/mobileobject.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mobile_object_1a599e40471b9a94fe3ff57fb3c327989f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MobileObject::MobileObject</definition>
+        <argsstring>()</argsstring>
+        <name>MobileObject</name>
+        <qualifiedname>MobileObject::MobileObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="31" column="14" bodyfile="ui/mobileobject.cpp" bodystart="3" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mobile_object_1afd1c5a49bcda5dfa7566dd62281fd288" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MobileObject::seenAt</definition>
+        <argsstring>(vector&lt; Position &gt; p, double t, int c)=0</argsstring>
+        <name>seenAt</name>
+        <qualifiedname>MobileObject::seenAt</qualifiedname>
+        <reimplementedby refid="class_robot_1aaa4f916978c6b49d6bd98c520e6237a2">seenAt</reimplementedby>
+        <param>
+          <type>vector&lt; <ref refid="struct_position" kindref="compound">Position</ref> &gt;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="32" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mobile_object_1a33edf1f95eb69a0b6531e37c4d05c8d8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MobileObject::appendPostc</definition>
+        <argsstring>(PositionTime &amp;post)</argsstring>
+        <name>appendPostc</name>
+        <qualifiedname>MobileObject::appendPostc</qualifiedname>
+        <param>
+          <type><ref refid="struct_position_time" kindref="compound">PositionTime</ref> &amp;</type>
+          <declname>post</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="47" column="10" bodyfile="ui/mobileobject.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mobile_object_1a58facf6a8a928979db3c900b3c6f1ad3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MobileObject::vel_calc</definition>
+        <argsstring>()</argsstring>
+        <name>vel_calc</name>
+        <qualifiedname>MobileObject::vel_calc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="54" column="12" bodyfile="ui/mobileobject.cpp" bodystart="48" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_mobile_object_1a035ecab6f881fe26dc764d36114f0cfc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MobileObject::timer_seen_timeout</definition>
+        <argsstring>()</argsstring>
+        <name>timer_seen_timeout</name>
+        <qualifiedname>MobileObject::timer_seen_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="57" column="10" bodyfile="ui/mobileobject.cpp" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_mobile_object_1a0fd2784fc723398610a5869745772b2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MobileObject::timer_vel_timeout</definition>
+        <argsstring>()</argsstring>
+        <name>timer_vel_timeout</name>
+        <qualifiedname>MobileObject::timer_vel_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/mobileobject.h" line="58" column="10" bodyfile="ui/mobileobject.cpp" bodystart="24" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MobileObject</label>
+        <link refid="class_mobile_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="3">
+        <label>Robot</label>
+        <link refid="class_robot"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MobileObject</label>
+        <link refid="class_mobile_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pos</edgelabel>
+          <edgelabel>pos_predicted</edgelabel>
+          <edgelabel>vel</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>last_post</edgelabel>
+          <edgelabel>vel_post</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Position</label>
+        <link refid="struct_position"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PositionTime</label>
+        <link refid="struct_position_time"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="4">
+        <label>rcsc::Vector2D</label>
+        <link refid="classrcsc_1_1_vector2_d"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>INVALIDATED</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ui/mobileobject.h" line="26" column="1" bodyfile="ui/mobileobject.h" bodystart="27" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_mobile_object_1a33edf1f95eb69a0b6531e37c4d05c8d8" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>appendPostc</name></member>
+      <member refid="class_mobile_object_1acfcd06b7c80f98f1fa2d17adcd1c7553" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>camera_timeout</name></member>
+      <member refid="class_mobile_object_1a3535facf70974c0ef10eb4a9ef985cb0" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>isValid</name></member>
+      <member refid="class_mobile_object_1a7e5efb54b940f3d9863ddfe845459f39" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>last_post</name></member>
+      <member refid="class_mobile_object_1a599e40471b9a94fe3ff57fb3c327989f" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>MobileObject</name></member>
+      <member refid="class_mobile_object_1a71fc62afafcc768f2775b05a4038ed49" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>pos</name></member>
+      <member refid="class_mobile_object_1a981b6987ee82b421ffe16d5837cf2afc" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>pos_predicted</name></member>
+      <member refid="class_mobile_object_1afd1c5a49bcda5dfa7566dd62281fd288" prot="public" virt="pure-virtual"><scope>MobileObject</scope><name>seenAt</name></member>
+      <member refid="class_mobile_object_1a23d08dc43a53fc43bf0d821483f03674" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>time</name></member>
+      <member refid="class_mobile_object_1a8244448ecee28e0e9366a066cc33a33f" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>timer_seen</name></member>
+      <member refid="class_mobile_object_1a07c04890cf5c505201791ca9c530f15e" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>timer_seen_interval</name></member>
+      <member refid="class_mobile_object_1a035ecab6f881fe26dc764d36114f0cfc" prot="private" virt="non-virtual"><scope>MobileObject</scope><name>timer_seen_timeout</name></member>
+      <member refid="class_mobile_object_1a1e401dc80d51db76b76cda7b7daf2588" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>timer_vel</name></member>
+      <member refid="class_mobile_object_1a6dd6cd82b80596082d8c1733525fb41f" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>timer_vel_interval</name></member>
+      <member refid="class_mobile_object_1a0fd2784fc723398610a5869745772b2a" prot="private" virt="non-virtual"><scope>MobileObject</scope><name>timer_vel_timeout</name></member>
+      <member refid="class_mobile_object_1aef5fe9a6fdfe2b33070213323334aef7" prot="public" virt="non-virtual"><scope>MobileObject</scope><name>vel</name></member>
+      <member refid="class_mobile_object_1a58facf6a8a928979db3c900b3c6f1ad3" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>vel_calc</name></member>
+      <member refid="class_mobile_object_1a6df4e76fab4bf59cca806f33945c252c" prot="protected" virt="non-virtual"><scope>MobileObject</scope><name>vel_post</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

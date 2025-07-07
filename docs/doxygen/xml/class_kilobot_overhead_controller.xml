@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_kilobot_overhead_controller" kind="class" language="C++" prot="public">
+    <compoundname>KilobotOverheadController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1af4887bcdbbf76854e6fa4b6544db4440" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int KilobotOverheadController::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>KilobotOverheadController::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="66" column="9" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1a1fcb50d45890b6ce2145215b82e739a4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KilobotOverheadController::sending</definition>
+        <argsstring></argsstring>
+        <name>sending</name>
+        <qualifiedname>KilobotOverheadController::sending</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="67" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1ad31d1553cc57e7e0d7c27fdb10b7c3b7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KilobotOverheadController::connected</definition>
+        <argsstring></argsstring>
+        <name>connected</name>
+        <qualifiedname>KilobotOverheadController::connected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="68" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1a2ecf62f3d502fb5c67a01d41527595c9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_serial_connection" kindref="compound">SerialConnection</ref> *</type>
+        <definition>SerialConnection* KilobotOverheadController::serial_conn</definition>
+        <argsstring></argsstring>
+        <name>serial_conn</name>
+        <qualifiedname>KilobotOverheadController::serial_conn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="70" column="22" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1ad52a02356c6d0a2c1dc64d9541f103fe" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString KilobotOverheadController::serial_status</definition>
+        <argsstring></argsstring>
+        <name>serial_status</name>
+        <qualifiedname>KilobotOverheadController::serial_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="72" column="13" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1a031a4072cc71fd1ea28d98f0e7542529" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString KilobotOverheadController::program_file</definition>
+        <argsstring></argsstring>
+        <name>program_file</name>
+        <qualifiedname>KilobotOverheadController::program_file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="74" column="13" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1ada515fc263e38e488a06b218d3736ff7" prot="private" static="no" mutable="no">
+        <type>QVector&lt; <ref refid="structkilobot__message" kindref="compound">kilobot_message</ref> &gt;</type>
+        <definition>QVector&lt; kilobot_message &gt; KilobotOverheadController::message_q</definition>
+        <argsstring></argsstring>
+        <name>message_q</name>
+        <qualifiedname>KilobotOverheadController::message_q</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="83" column="14" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1a7516af521826e97cc11e055f0fc83615" prot="private" static="no" mutable="no">
+        <type>QTimer</type>
+        <definition>QTimer KilobotOverheadController::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>KilobotOverheadController::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="85" column="12" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kilobot_overhead_controller_1adf1135d5b0629b16c01ba1c331837a1d" prot="private" static="no" mutable="no">
+        <type>QTime</type>
+        <definition>QTime KilobotOverheadController::lastMsgTime</definition>
+        <argsstring></argsstring>
+        <name>lastMsgTime</name>
+        <qualifiedname>KilobotOverheadController::lastMsgTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="86" column="11" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kilobot_overhead_controller_1ae44d8f79974e9900d6e6212538f3e5e3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KilobotOverheadController::KilobotOverheadController</definition>
+        <argsstring>(QObject *parent=0)</argsstring>
+        <name>KilobotOverheadController</name>
+        <qualifiedname>KilobotOverheadController::KilobotOverheadController</qualifiedname>
+        <param>
+          <type>QObject *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="24" column="14" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="44" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kilobot_overhead_controller_1aced08aca8105c45cdd0195fd87498bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KilobotOverheadController::~KilobotOverheadController</definition>
+        <argsstring>()</argsstring>
+        <name>~KilobotOverheadController</name>
+        <qualifiedname>KilobotOverheadController::~KilobotOverheadController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="25" column="5" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_kilobot_overhead_controller_1a99be14dabb0a2007b0959417035eae21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::errorMessage</definition>
+        <argsstring>(QString)</argsstring>
+        <name>errorMessage</name>
+        <qualifiedname>KilobotOverheadController::errorMessage</qualifiedname>
+        <param>
+          <type>QString</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_kilobot_overhead_controller_1a2924799a797d50a6ce4d986f35f42466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::setStopButton</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setStopButton</name>
+        <qualifiedname>KilobotOverheadController::setStopButton</qualifiedname>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="29" column="10"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_kilobot_overhead_controller_1ae42b1bd7a418ee2561edcb29b9180fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::SignalMsgsQueueState</definition>
+        <argsstring>(bool)</argsstring>
+        <name>SignalMsgsQueueState</name>
+        <qualifiedname>KilobotOverheadController::SignalMsgsQueueState</qualifiedname>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="30" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a1aeb28de37563f88d6274ade34d7fff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::identifyKilobot</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>identifyKilobot</name>
+        <qualifiedname>KilobotOverheadController::identifyKilobot</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="33" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a9dc858f988e81dc7f0fba09d00279941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::broadcastMessage</definition>
+        <argsstring>(kilobot_broadcast)</argsstring>
+        <name>broadcastMessage</name>
+        <qualifiedname>KilobotOverheadController::broadcastMessage</qualifiedname>
+        <param>
+          <type><ref refid="structkilobot__broadcast" kindref="compound">kilobot_broadcast</ref></type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="34" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="181" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1af96c29dda0b0a1fe45bb8564313bd607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::signalKilobot</definition>
+        <argsstring>(kilobot_message)</argsstring>
+        <name>signalKilobot</name>
+        <qualifiedname>KilobotOverheadController::signalKilobot</qualifiedname>
+        <param>
+          <type><ref refid="structkilobot__message" kindref="compound">kilobot_message</ref></type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="35" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="87" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a63e3aad7044ffd54bad806c1109d5838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::serialUpdateStatus</definition>
+        <argsstring>(QString)</argsstring>
+        <name>serialUpdateStatus</name>
+        <qualifiedname>KilobotOverheadController::serialUpdateStatus</qualifiedname>
+        <param>
+          <type>QString</type>
+          <defname>str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="36" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="215" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a8adc9fda68a16ccc8dbec3cdf4268faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::showError</definition>
+        <argsstring>(QString)</argsstring>
+        <name>showError</name>
+        <qualifiedname>KilobotOverheadController::showError</qualifiedname>
+        <param>
+          <type>QString</type>
+          <defname>str</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="37" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="354" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a849c8b456f9f693c360f64da66b2f468" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::SendMsgsQueueState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>SendMsgsQueueState</name>
+        <qualifiedname>KilobotOverheadController::SendMsgsQueueState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="38" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a3bd3044f38d13aa00d3f1a6a145eeb47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::clearMsgQueue</definition>
+        <argsstring>()</argsstring>
+        <name>clearMsgQueue</name>
+        <qualifiedname>KilobotOverheadController::clearMsgQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="41" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a7a499ea2da7bdeef42c2fefee45c204c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::toggleConnection</definition>
+        <argsstring>()</argsstring>
+        <name>toggleConnection</name>
+        <qualifiedname>KilobotOverheadController::toggleConnection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="44" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="237" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a440f34b685f3119e4546dcf0bd70a1df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::resetKilobots</definition>
+        <argsstring>()</argsstring>
+        <name>resetKilobots</name>
+        <qualifiedname>KilobotOverheadController::resetKilobots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="47" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="359" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a7f82a3698cabea823517d3b16e22fdfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::sleepKilobots</definition>
+        <argsstring>()</argsstring>
+        <name>sleepKilobots</name>
+        <qualifiedname>KilobotOverheadController::sleepKilobots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="48" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1abdd37a814090c694f49b5e7d0ecd2590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::runKilobots</definition>
+        <argsstring>()</argsstring>
+        <name>runKilobots</name>
+        <qualifiedname>KilobotOverheadController::runKilobots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="49" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="369" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1acc943a335ae75882880dbf55aa841672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::stopSending</definition>
+        <argsstring>()</argsstring>
+        <name>stopSending</name>
+        <qualifiedname>KilobotOverheadController::stopSending</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="50" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="250" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a1e518508755bf564e77fba84df69ffbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::checkVoltage</definition>
+        <argsstring>()</argsstring>
+        <name>checkVoltage</name>
+        <qualifiedname>KilobotOverheadController::checkVoltage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="51" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1ac9d1c74b4273f4c9908cadd195e53b6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::chooseProgramFile</definition>
+        <argsstring>()</argsstring>
+        <name>chooseProgramFile</name>
+        <qualifiedname>KilobotOverheadController::chooseProgramFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="54" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="308" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a29a659d5a40eddcb9bc0bd50364bcd56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::uploadProgram</definition>
+        <argsstring>()</argsstring>
+        <name>uploadProgram</name>
+        <qualifiedname>KilobotOverheadController::uploadProgram</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="55" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="337" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1a23da5b9ed961f1bf03e4e3bc22ff6c38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::sendBatch</definition>
+        <argsstring>()</argsstring>
+        <name>sendBatch</name>
+        <qualifiedname>KilobotOverheadController::sendBatch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="58" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="98" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_overhead_controller_1ad0032ebcc57ce4c4b5820fcf93483b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::sendDataMessagePub</definition>
+        <argsstring>(uint8_t *payload, uint8_t type)</argsstring>
+        <name>sendDataMessagePub</name>
+        <qualifiedname>KilobotOverheadController::sendDataMessagePub</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="60" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="159" bodyend="179"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_kilobot_overhead_controller_1a13f6bf712caf45e3001716cd27b04f44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::updateStatus</definition>
+        <argsstring>()</argsstring>
+        <name>updateStatus</name>
+        <qualifiedname>KilobotOverheadController::updateStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="78" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="221" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kilobot_overhead_controller_1a8feddf6fa24eba8944594adfc6524a70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::sendMessage</definition>
+        <argsstring>(int)</argsstring>
+        <name>sendMessage</name>
+        <qualifiedname>KilobotOverheadController::sendMessage</qualifiedname>
+        <param>
+          <type>int</type>
+          <defname>type_int</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="80" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="254" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kilobot_overhead_controller_1ac0dd7c6f4f5f92df43428488a659d0b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotOverheadController::sendDataMessage</definition>
+        <argsstring>(uint8_t *, uint8_t)</argsstring>
+        <name>sendDataMessage</name>
+        <qualifiedname>KilobotOverheadController::sendDataMessage</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <defname>payload</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>type</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotoverheadcontroller.h" line="81" column="10" bodyfile="Kilobot/kilobotoverheadcontroller.cpp" bodystart="287" bodyend="306"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>KilobotOverheadController</label>
+        <link refid="class_kilobot_overhead_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>KilobotOverheadController</label>
+        <link refid="class_kilobot_overhead_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="Kilobot/kilobotoverheadcontroller.h" line="20" column="1" bodyfile="Kilobot/kilobotoverheadcontroller.h" bodystart="21" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_kilobot_overhead_controller_1a9dc858f988e81dc7f0fba09d00279941" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>broadcastMessage</name></member>
+      <member refid="class_kilobot_overhead_controller_1a1e518508755bf564e77fba84df69ffbf" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>checkVoltage</name></member>
+      <member refid="class_kilobot_overhead_controller_1ac9d1c74b4273f4c9908cadd195e53b6a" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>chooseProgramFile</name></member>
+      <member refid="class_kilobot_overhead_controller_1a3bd3044f38d13aa00d3f1a6a145eeb47" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>clearMsgQueue</name></member>
+      <member refid="class_kilobot_overhead_controller_1ad31d1553cc57e7e0d7c27fdb10b7c3b7" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>connected</name></member>
+      <member refid="class_kilobot_overhead_controller_1af4887bcdbbf76854e6fa4b6544db4440" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>device</name></member>
+      <member refid="class_kilobot_overhead_controller_1a99be14dabb0a2007b0959417035eae21" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>errorMessage</name></member>
+      <member refid="class_kilobot_overhead_controller_1a1aeb28de37563f88d6274ade34d7fff2" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>identifyKilobot</name></member>
+      <member refid="class_kilobot_overhead_controller_1ae44d8f79974e9900d6e6212538f3e5e3" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>KilobotOverheadController</name></member>
+      <member refid="class_kilobot_overhead_controller_1adf1135d5b0629b16c01ba1c331837a1d" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>lastMsgTime</name></member>
+      <member refid="class_kilobot_overhead_controller_1ada515fc263e38e488a06b218d3736ff7" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>message_q</name></member>
+      <member refid="class_kilobot_overhead_controller_1a031a4072cc71fd1ea28d98f0e7542529" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>program_file</name></member>
+      <member refid="class_kilobot_overhead_controller_1a440f34b685f3119e4546dcf0bd70a1df" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>resetKilobots</name></member>
+      <member refid="class_kilobot_overhead_controller_1abdd37a814090c694f49b5e7d0ecd2590" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>runKilobots</name></member>
+      <member refid="class_kilobot_overhead_controller_1a23da5b9ed961f1bf03e4e3bc22ff6c38" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sendBatch</name></member>
+      <member refid="class_kilobot_overhead_controller_1ac0dd7c6f4f5f92df43428488a659d0b7" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sendDataMessage</name></member>
+      <member refid="class_kilobot_overhead_controller_1ad0032ebcc57ce4c4b5820fcf93483b86" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sendDataMessagePub</name></member>
+      <member refid="class_kilobot_overhead_controller_1a1fcb50d45890b6ce2145215b82e739a4" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sending</name></member>
+      <member refid="class_kilobot_overhead_controller_1a8feddf6fa24eba8944594adfc6524a70" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sendMessage</name></member>
+      <member refid="class_kilobot_overhead_controller_1a849c8b456f9f693c360f64da66b2f468" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>SendMsgsQueueState</name></member>
+      <member refid="class_kilobot_overhead_controller_1a2ecf62f3d502fb5c67a01d41527595c9" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>serial_conn</name></member>
+      <member refid="class_kilobot_overhead_controller_1ad52a02356c6d0a2c1dc64d9541f103fe" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>serial_status</name></member>
+      <member refid="class_kilobot_overhead_controller_1a63e3aad7044ffd54bad806c1109d5838" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>serialUpdateStatus</name></member>
+      <member refid="class_kilobot_overhead_controller_1a2924799a797d50a6ce4d986f35f42466" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>setStopButton</name></member>
+      <member refid="class_kilobot_overhead_controller_1a8adc9fda68a16ccc8dbec3cdf4268faf" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>showError</name></member>
+      <member refid="class_kilobot_overhead_controller_1af96c29dda0b0a1fe45bb8564313bd607" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>signalKilobot</name></member>
+      <member refid="class_kilobot_overhead_controller_1ae42b1bd7a418ee2561edcb29b9180fef" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>SignalMsgsQueueState</name></member>
+      <member refid="class_kilobot_overhead_controller_1a7f82a3698cabea823517d3b16e22fdfe" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>sleepKilobots</name></member>
+      <member refid="class_kilobot_overhead_controller_1acc943a335ae75882880dbf55aa841672" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>stopSending</name></member>
+      <member refid="class_kilobot_overhead_controller_1a7516af521826e97cc11e055f0fc83615" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>timer</name></member>
+      <member refid="class_kilobot_overhead_controller_1a7a499ea2da7bdeef42c2fefee45c204c" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>toggleConnection</name></member>
+      <member refid="class_kilobot_overhead_controller_1a13f6bf712caf45e3001716cd27b04f44" prot="private" virt="non-virtual"><scope>KilobotOverheadController</scope><name>updateStatus</name></member>
+      <member refid="class_kilobot_overhead_controller_1a29a659d5a40eddcb9bc0bd50364bcd56" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>uploadProgram</name></member>
+      <member refid="class_kilobot_overhead_controller_1aced08aca8105c45cdd0195fd87498bc4" prot="public" virt="non-virtual"><scope>KilobotOverheadController</scope><name>~KilobotOverheadController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

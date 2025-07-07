@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="mainwindow_8h" local="yes">mainwindow.h</includes>
+    <includes local="no">QApplication</includes>
+    <incdepgraph>
+      <node id="73">
+        <label>Kilobot/kilobot.h</label>
+        <link refid="kilobot_8h_source"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>Kilobot/kilobotoverheadcontroller.h</label>
+        <link refid="kilobotoverheadcontroller_8h_source"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>arenaWindow.h</label>
+        <link refid="arena_window_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>envbrain.h</label>
+        <link refid="envbrain_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>etc/publicvars.h</label>
+        <link refid="publicvars_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>ohc/calibrate.h</label>
+        <link refid="calibrate_8h_source"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>intelhex.h</label>
+        <link refid="intelhex_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>ohc/serialconn.h</label>
+        <link refid="serialconn_8h_source"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>ohc/serialwin.h</label>
+        <link refid="serialwin_8h_source"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>qcustomplot.h</label>
+        <link refid="qcustomplot_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>savevidthread.h</label>
+        <link refid="savevidthread_8h_source"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>tracker/robottracker.h</label>
+        <link refid="robottracker_8h_source"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>geom/voronoiGenerator.h</label>
+        <link refid="voronoi_generator_8h_source"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>ui/renderarea.h</label>
+        <link refid="renderarea_8h_source"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>ui/worldmodel.h</label>
+        <link refid="worldmodel_8h_source"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>QApplication</label>
+      </node>
+      <node id="98">
+        <label>QColor</label>
+      </node>
+      <node id="16">
+        <label>QDebug</label>
+      </node>
+      <node id="71">
+        <label>QElapsedTimer</label>
+      </node>
+      <node id="94">
+        <label>QEvent</label>
+      </node>
+      <node id="15">
+        <label>QFileDialog</label>
+      </node>
+      <node id="92">
+        <label>QGraphicsScene</label>
+      </node>
+      <node id="93">
+        <label>QGraphicsSceneMouseEvent</label>
+      </node>
+      <node id="109">
+        <label>QGridLayout</label>
+      </node>
+      <node id="52">
+        <label>QImage</label>
+      </node>
+      <node id="107">
+        <label>QLineF</label>
+      </node>
+      <node id="80">
+        <label>QList</label>
+      </node>
+      <node id="3">
+        <label>QMainWindow</label>
+      </node>
+      <node id="13">
+        <label>QMouseEvent</label>
+      </node>
+      <node id="67">
+        <label>QObject</label>
+      </node>
+      <node id="95">
+        <label>QPainter</label>
+      </node>
+      <node id="69">
+        <label>QPixmap</label>
+      </node>
+      <node id="68">
+        <label>QPoint</label>
+      </node>
+      <node id="75">
+        <label>QPointF</label>
+      </node>
+      <node id="81">
+        <label>QPushButton</label>
+      </node>
+      <node id="108">
+        <label>QRectF</label>
+      </node>
+      <node id="14">
+        <label>QRubberBand</label>
+      </node>
+      <node id="70">
+        <label>QSemaphore</label>
+      </node>
+      <node id="90">
+        <label>QSpinBox</label>
+      </node>
+      <node id="84">
+        <label>QString</label>
+      </node>
+      <node id="17">
+        <label>QThread</label>
+      </node>
+      <node id="72">
+        <label>QTime</label>
+      </node>
+      <node id="12">
+        <label>QTimer</label>
+      </node>
+      <node id="76">
+        <label>QVector</label>
+      </node>
+      <node id="83">
+        <label>QWidget</label>
+      </node>
+      <node id="51">
+        <label>QtCore</label>
+      </node>
+      <node id="40">
+        <label>QtCore/QCache</label>
+      </node>
+      <node id="35">
+        <label>QtCore/QDateTime</label>
+      </node>
+      <node id="38">
+        <label>QtCore/QDebug</label>
+      </node>
+      <node id="48">
+        <label>QtCore/QElapsedTimer</label>
+      </node>
+      <node id="37">
+        <label>QtCore/QFlags</label>
+      </node>
+      <node id="41">
+        <label>QtCore/QMargins</label>
+      </node>
+      <node id="36">
+        <label>QtCore/QMultiMap</label>
+      </node>
+      <node id="23">
+        <label>QtCore/QObject</label>
+      </node>
+      <node id="24">
+        <label>QtCore/QPointer</label>
+      </node>
+      <node id="25">
+        <label>QtCore/QSharedPointer</label>
+      </node>
+      <node id="39">
+        <label>QtCore/QStack</label>
+      </node>
+      <node id="34">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="49">
+        <label>QtCore/QTimeZone</label>
+      </node>
+      <node id="26">
+        <label>QtCore/QTimer</label>
+      </node>
+      <node id="33">
+        <label>QtCore/QVector</label>
+      </node>
+      <node id="22">
+        <label>QtCore/qglobal.h</label>
+      </node>
+      <node id="30">
+        <label>QtGui/QMouseEvent</label>
+      </node>
+      <node id="29">
+        <label>QtGui/QPaintEvent</label>
+      </node>
+      <node id="27">
+        <label>QtGui/QPainter</label>
+      </node>
+      <node id="28">
+        <label>QtGui/QPainterPath</label>
+      </node>
+      <node id="32">
+        <label>QtGui/QPixmap</label>
+      </node>
+      <node id="31">
+        <label>QtGui/QWheelEvent</label>
+      </node>
+      <node id="45">
+        <label>QtNumeric</label>
+      </node>
+      <node id="47">
+        <label>QtPrintSupport/QtPrintSupport</label>
+      </node>
+      <node id="46">
+        <label>QtWidgets/QWidget</label>
+      </node>
+      <node id="44">
+        <label>algorithm</label>
+      </node>
+      <node id="78">
+        <label>assert.h</label>
+      </node>
+      <node id="99">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="100">
+        <label>boost/graph/graph_traits.hpp</label>
+      </node>
+      <node id="101">
+        <label>boost/graph/graphviz.hpp</label>
+      </node>
+      <node id="105">
+        <label>boost/polygon/polygon.hpp</label>
+      </node>
+      <node id="106">
+        <label>boost/polygon/segment_concept.hpp</label>
+      </node>
+      <node id="104">
+        <label>boost/polygon/voronoi.hpp</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
+      </node>
+      <node id="102">
+        <label>igraph/igraph.h</label>
+      </node>
+      <node id="55">
+        <label>ios</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="43">
+        <label>limits</label>
+      </node>
+      <node id="87">
+        <label>map</label>
+      </node>
+      <node id="79">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>opencv2/core/core.hpp</label>
+      </node>
+      <node id="61">
+        <label>opencv2/core/ocl.hpp</label>
+      </node>
+      <node id="62">
+        <label>opencv2/cudaarithm.hpp</label>
+      </node>
+      <node id="65">
+        <label>opencv2/cudafeatures2d.hpp</label>
+      </node>
+      <node id="64">
+        <label>opencv2/cudafilters.hpp</label>
+      </node>
+      <node id="63">
+        <label>opencv2/cudaimgproc.hpp</label>
+      </node>
+      <node id="66">
+        <label>opencv2/cudawarping.hpp</label>
+      </node>
+      <node id="59">
+        <label>opencv2/features2d.hpp</label>
+      </node>
+      <node id="53">
+        <label>opencv2/highgui.hpp</label>
+      </node>
+      <node id="5">
+        <label>opencv2/highgui/highgui.hpp</label>
+      </node>
+      <node id="9">
+        <label>opencv2/imgcodecs.hpp</label>
+      </node>
+      <node id="57">
+        <label>opencv2/imgproc.hpp</label>
+      </node>
+      <node id="6">
+        <label>opencv2/imgproc/imgproc.hpp</label>
+      </node>
+      <node id="7">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="8">
+        <label>opencv2/video.hpp</label>
+      </node>
+      <node id="60">
+        <label>opencv2/videoio.hpp</label>
+      </node>
+      <node id="58">
+        <label>opencv2/videostab.hpp</label>
+      </node>
+      <node id="42">
+        <label>qmath.h</label>
+      </node>
+      <node id="74">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
+        <label>stdio.h</label>
+      </node>
+      <node id="19">
+        <label>stdlib.h</label>
+      </node>
+      <node id="88">
+        <label>unistd.h</label>
+      </node>
+      <node id="56">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cpp" line="4" column="5" bodyfile="main.cpp" bodystart="4" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mainwindow_8h" kindref="compound">mainwindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>QCoreApplication::setOrganizationName(</highlight><highlight class="stringliteral">&quot;SCIoI&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>QCoreApplication::setOrganizationDomain(</highlight><highlight class="stringliteral">&quot;www.scioi.de&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>QCoreApplication::setApplicationName(</highlight><highlight class="stringliteral">&quot;LARS<sp/>ver2.1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>QApplication<sp/>a(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;***<sp/>©<sp/>Science<sp/>of<sp/>Intelligence,<sp/>Project<sp/>27,<sp/>Mohsen<sp/>Raoufi<sp/>***&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;*****<sp/>Light<sp/>Augmented<sp/>Reality<sp/>for<sp/>Swarm<sp/>Systems<sp/>(LARS)<sp/>*****&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;***********************<sp/>Version:<sp/>2.1<sp/>***********************&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>QApplication::setStyle(QStyleFactory::create(</highlight><highlight class="stringliteral">&quot;Fusion&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>QPalette<sp/>p;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Window,<sp/>QColor(53,53,53));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Button,<sp/>QColor(53,53,53));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Base,<sp/>QColor(53,53,53));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Highlight,<sp/>QColor(50,<sp/>153,<sp/>168));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::ButtonText,<sp/>QColor(255,255,255));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Foreground,<sp/>QColor(255,255,255));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>p.setColor(QPalette::Text,<sp/>QColor(255,255,255));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>a.setPalette(p);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>a.setWindowIcon(QIcon(&quot;&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>a.setWindowIcon(QIcon(</highlight><highlight class="stringliteral">&quot;Files/KilobotHeter.png&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>a.setWindowIcon(QIcon(</highlight><highlight class="stringliteral">&quot;../Files/KilobotHeter.png&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>set<sp/>the<sp/>icon<sp/>of<sp/>the<sp/>application</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window" kindref="compound">MainWindow</ref><sp/>w;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>w.show();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.exec();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_ray2_d" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::Ray2D</compoundname>
+    <includes refid="ray__2d_8h" local="no">ray_2d.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_ray2_d_1a18f4ed73ebf16c508b4212aa4b6ae4f0" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Ray2D::M_origin</definition>
+        <argsstring></argsstring>
+        <name>M_origin</name>
+        <qualifiedname>rcsc::Ray2D::M_origin</qualifiedname>
+        <briefdescription>
+<para>ray&apos;s origin point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="47" column="14" bodyfile="ui/geom/ray_2d.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_ray2_d_1a8c7425f7ae195528fc8adc146978b7ed" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref></type>
+        <definition>AngleDeg rcsc::Ray2D::M_direction</definition>
+        <argsstring></argsstring>
+        <name>M_direction</name>
+        <qualifiedname>rcsc::Ray2D::M_direction</qualifiedname>
+        <briefdescription>
+<para>ray&apos;s direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="49" column="14" bodyfile="ui/geom/ray_2d.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a93dd877eb3ab21249e92024ac52b7cef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Ray2D::Ray2D</definition>
+        <argsstring>()</argsstring>
+        <name>Ray2D</name>
+        <qualifiedname>rcsc::Ray2D::Ray2D</qualifiedname>
+        <briefdescription>
+<para>defalut constructor. all values are set to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="55" column="5" bodyfile="ui/geom/ray_2d.h" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1aefb6e5de065f0d08b4c2fb5792f6e315" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Ray2D::Ray2D</definition>
+        <argsstring>(const Vector2D &amp;origin, const AngleDeg &amp;direction)</argsstring>
+        <name>Ray2D</name>
+        <qualifiedname>rcsc::Ray2D::Ray2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>constructor with origin and direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>origin point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="65" column="5" bodyfile="ui/geom/ray_2d.h" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a2e9d22850ff1e843e4ebb6d579ff5f04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Ray2D::Ray2D</definition>
+        <argsstring>(const Vector2D &amp;origin, const Vector2D &amp;dir_point)</argsstring>
+        <name>Ray2D</name>
+        <qualifiedname>rcsc::Ray2D::Ray2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>dir_point</declname>
+        </param>
+        <briefdescription>
+<para>constructor with origin and other point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>origin point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dir_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="75" column="5" bodyfile="ui/geom/ray_2d.h" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>const Vector2D &amp; rcsc::Ray2D::origin</definition>
+        <argsstring>() const</argsstring>
+        <name>origin</name>
+        <qualifiedname>rcsc::Ray2D::origin</qualifiedname>
+        <briefdescription>
+<para>get origin point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const referenct to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="86" column="15" bodyfile="ui/geom/ray_2d.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::Ray2D::dir</definition>
+        <argsstring>() const</argsstring>
+        <name>dir</name>
+        <qualifiedname>rcsc::Ray2D::dir</qualifiedname>
+        <briefdescription>
+<para>get the angle of this ray line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const referenct to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="96" column="15" bodyfile="ui/geom/ray_2d.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a467c947cf6a5a3245d1276f2cc6883e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Ray2D::line</definition>
+        <argsstring>() const</argsstring>
+        <name>line</name>
+        <qualifiedname>rcsc::Ray2D::line</qualifiedname>
+        <briefdescription>
+<para>get line generated from this ray </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>new line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="105" column="12" bodyfile="ui/geom/ray_2d.h" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1ab37e5ead4b484cf2a29369e2d5b0f6b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::Ray2D::inRightDir</definition>
+        <argsstring>(const Vector2D &amp;point, const double &amp;thr=10.0) const</argsstring>
+        <name>inRightDir</name>
+        <qualifiedname>rcsc::Ray2D::inRightDir</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>thr</declname>
+          <defval>10.0</defval>
+        </param>
+        <briefdescription>
+<para>check whether p is on the direction of this Ray </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>threshold angle buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="116" column="10" bodyfile="ui/geom/ray_2d.h" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a798fc0534be6c792df6a23983d8a416c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Ray2D::intersection</definition>
+        <argsstring>(const Line2D &amp;other) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Ray2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>get the intersection point with &apos;line&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>intersection point. if it does not exist, the invaidated value vector is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="128" column="14" bodyfile="ui/geom/ray_2d.cpp" bodystart="45" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_ray2_d_1a10ab4f933a31cbe0a92259212637e69d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Ray2D::intersection</definition>
+        <argsstring>(const Ray2D &amp;other) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Ray2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_ray2_d" kindref="compound">Ray2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>get the intersection point with &apos;ray&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered ray </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>intersection point. if it does not exist, the invaidated value vector is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/ray_2d.h" line="136" column="14" bodyfile="ui/geom/ray_2d.cpp" bodystart="69" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>2D ray line class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/ray_2d.h" line="44" column="1" bodyfile="ui/geom/ray_2d.h" bodystart="44" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>dir</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1ab37e5ead4b484cf2a29369e2d5b0f6b6" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>inRightDir</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a798fc0534be6c792df6a23983d8a416c" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a10ab4f933a31cbe0a92259212637e69d" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a467c947cf6a5a3245d1276f2cc6883e2" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>line</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a8c7425f7ae195528fc8adc146978b7ed" prot="private" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>M_direction</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a18f4ed73ebf16c508b4212aa4b6ae4f0" prot="private" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>M_origin</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>origin</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a93dd877eb3ab21249e92024ac52b7cef" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>Ray2D</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1aefb6e5de065f0d08b4c2fb5792f6e315" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>Ray2D</name></member>
+      <member refid="classrcsc_1_1_ray2_d_1a2e9d22850ff1e843e4ebb6d579ff5f04" prot="public" virt="non-virtual"><scope>rcsc::Ray2D</scope><name>Ray2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

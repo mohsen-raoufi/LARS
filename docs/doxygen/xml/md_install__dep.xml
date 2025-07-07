@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="md_install__dep" kind="page">
+    <compoundname>md_install__dep</compoundname>
+    <title>Setup Instructions</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_install__dep_1autotoc_md23"/></para>
+<sect1 id="md_install__dep_1autotoc_md24">
+<title>1. Install Ubuntu 20.04 LTS</title></sect1>
+<sect1 id="md_install__dep_1autotoc_md25">
+<title>2. Update Everything</title><para><itemizedlist>
+<listitem><para>Run the following commands in the terminal: <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>update<sp/>&amp;&amp;<sp/>sudo<sp/>apt-get<sp/>upgrade</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Run the Software Updater.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_install__dep_1autotoc_md26">
+<title>3. Install Latest Qt</title><para><itemizedlist>
+<listitem><para>Use the command: <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>qtcreator</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_install__dep_1autotoc_md27">
+<title>4. Install Git</title><para><itemizedlist>
+<listitem><para>Install Git with: <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>git</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="md_install__dep_1autotoc_md29">
+<title>GPU Computing Setup</title><sect2 id="md_install__dep_1autotoc_md30">
+<title>5. Install Nvidia Driver</title><para><itemizedlist>
+<listitem><para><bold>Purge everything Nvidia related:</bold> <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>purge<sp/>nvidia-*</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Add repository:</bold> <programlisting><codeline><highlight class="normal">sudo<sp/>add-apt-repository<sp/>ppa:graphics/ppa</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Update:</bold> <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>update</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Install driver:</bold> <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>nvidia-470</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md_install__dep_1autotoc_md31">
+<title>6. Reboot</title></sect2>
+<sect2 id="md_install__dep_1autotoc_md32">
+<title>7. Install OpenCV</title><para><itemizedlist>
+<listitem><para><bold>Download OpenCV 4.5.5 from:</bold> <ulink url="https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz">https://github.com/opencv/opencv/archive/refs/tags/4.5.5.tar.gz</ulink></para>
+</listitem><listitem><para><bold>Create folder for LARS and cd:</bold> <programlisting><codeline><highlight class="normal">mkdir<sp/>~/LARS_project<sp/>&amp;&amp;<sp/>cd<sp/>~/LARS_project</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Untar downloaded OpenCV:</bold> <programlisting><codeline><highlight class="normal">tar<sp/>-xcf<sp/>~/Downloads/opencv-4.5.5.tar.gz<sp/>opencv-4.5.5</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Download OpenCV contrib tools:</bold> <programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/opencv/opencv_contrib.git</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="md_install__dep_1autotoc_md33">
+<title>Install Prerequisites:</title><para><itemizedlist>
+<listitem><para>Install necessary packages using the following commands: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>build-essential<sp/>cmake<sp/>git<sp/>pkg-config<sp/>unzip<sp/>ffmpeg<sp/>qtbase5-dev<sp/>python-dev<sp/>python3-dev<sp/>python-numpy<sp/>python3-numpy</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>libhdf5-dev</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libgtk-3-dev<sp/>libdc1394-22<sp/>libdc1394-22-dev<sp/>libjpeg-dev<sp/>libpng-dev<sp/>libtiff5-dev</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libavcodec-dev<sp/>libavformat-dev<sp/>libswscale-dev<sp/>libxine2-dev<sp/>libgstreamer1.0-dev<sp/>libgstreamer-plugins-base1.0-dev</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libv4l-dev<sp/>libtbb-dev<sp/>libfaac-dev<sp/>libmp3lame-dev<sp/>libopencore-amrnb-dev<sp/>libopencore-amrwb-dev<sp/>libtheora-dev</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>--assume-yes<sp/>libvorbis-dev<sp/>libxvidcore-dev<sp/>v4l-utils</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md_install__dep_1autotoc_md34">
+<title>Configure CMake:</title><para><itemizedlist>
+<listitem><para>Navigate and configure using cmake with the following steps: <programlisting><codeline><highlight class="normal">cd<sp/>~/LARS_project/opencv-4.5.5</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-D<sp/>CMAKE_BUILD_TYPE=RELEASE<sp/>-D<sp/>CMAKE_INSTALL_PREFIX=/usr/local<sp/>-D<sp/>WITH_CUDA=ON<sp/>-D<sp/>WITH_CUBLAS=ON<sp/>-D<sp/>WITH_TBB=ON<sp/>-D<sp/>WITH_V4L=ON<sp/>-D<sp/>WITH_QT=ON<sp/>-D<sp/>WITH_OPENGL=ON<sp/>-D<sp/>BUILD_PERF_TESTS=OFF<sp/>-D<sp/>BUILD_TESTS=OFF<sp/>-DCUDA_NVCC_FLAGS=&quot;-D_FORCE_INLINES&quot;<sp/>-DOPENCV_EXTRA_MODULES_PATH=~/ARK_project/opencv_contrib/modules<sp/>-DCMAKE_SHARED_LINKER_FLAGS=&apos;-latomic&apos;<sp/>..</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<sect4 id="md_install__dep_1autotoc_md35">
+<title><emphasis>Optional:</emphasis> If there are errors in compilation, use an older version of gcc and g++:</title><para><itemizedlist>
+<listitem><para>Install different versions and update system alternatives with the following commands: <programlisting><codeline><highlight class="normal">sudo<sp/>apt<sp/>-y<sp/>install<sp/>gcc-7<sp/>g++-7<sp/>gcc-8<sp/>g++-8<sp/>gcc-9<sp/>g++-9</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-7<sp/>7</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-8<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/gcc<sp/>gcc<sp/>/usr/bin/gcc-9<sp/>9</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-7<sp/>7</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-8<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>update-alternatives<sp/>--install<sp/>/usr/bin/g++<sp/>g++<sp/>/usr/bin/g++-9<sp/>9</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Switch to gcc-7 and g++-7 as needed.</para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+</sect3>
+<sect3 id="md_install__dep_1autotoc_md36">
+<title>Build and Install OpenCV:</title><para><itemizedlist>
+<listitem><para>Compile and install OpenCV with the commands: <programlisting><codeline><highlight class="normal">make<sp/>-j<sp/>$(($(nproc)<sp/>+<sp/>1))</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>make<sp/>install</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+<sect2 id="md_install__dep_1autotoc_md37">
+<title>8. Compile LARS</title><para><itemizedlist>
+<listitem><para>Follow these steps to compile and set up LARS:<itemizedlist>
+<listitem><para><bold>Navigate to the LARS project directory:</bold> <computeroutput> cd ~/LARS_project </computeroutput></para>
+</listitem><listitem><para><bold>Clone the LARS Code:</bold> <computeroutput> git clone <ulink url="https://github.com/mohsen-raoufi/LARS.git">https://github.com/mohsen-raoufi/LARS.git</ulink> </computeroutput></para>
+</listitem><listitem><para><bold>Open QT Creator and the project:</bold><itemizedlist>
+<listitem><para>Open QT creator.</para>
+</listitem><listitem><para>Open project and select <computeroutput>CMakeList.txt</computeroutput> (or <computeroutput>.pro</computeroutput> file) in the cloned directory of LARS.</para>
+</listitem><listitem><para>Build and run.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md_install__dep_1autotoc_md38">
+<title>9. Enjoy</title></sect2>
+</sect1>
+    </detaileddescription>
+    <location file="install_dep.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_1d1336ff9f3d0f4e119af5e3f9cf7cde" kind="dir">
+    <compoundname>Kilobot</compoundname>
+    <innerfile refid="kilobot_8cpp">kilobot.cpp</innerfile>
+    <innerfile refid="kilobot_8h">kilobot.h</innerfile>
+    <innerfile refid="kilobotcalibrate_8cpp">kilobotcalibrate.cpp</innerfile>
+    <innerfile refid="kilobotenvironment_8h">kilobotenvironment.h</innerfile>
+    <innerfile refid="kilobotexperiment_8h">kilobotexperiment.h</innerfile>
+    <innerfile refid="kilobotoverheadcontroller_8cpp">kilobotoverheadcontroller.cpp</innerfile>
+    <innerfile refid="kilobotoverheadcontroller_8h">kilobotoverheadcontroller.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kilobot/"/>
+  </compounddef>
+</doxygen>

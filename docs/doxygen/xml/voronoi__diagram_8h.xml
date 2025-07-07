@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="voronoi__diagram_8h" kind="file" language="C++">
+    <compoundname>voronoi_diagram.h</compoundname>
+    <includes local="no">CGAL/Exact_predicates_inexact_constructions_kernel.h</includes>
+    <includes local="no">CGAL/Delaunay_triangulation_2.h</includes>
+    <includes local="no">iterator</includes>
+    <includes refid="geom_8h" local="no">geom/geom.h</includes>
+    <includes local="no">QList</includes>
+    <includes local="no">QDebug</includes>
+    <includes refid="worldmodel_8h" local="yes">worldmodel.h</includes>
+    <includedby refid="voronoi__diagram_8cpp" local="yes">ui/geom/voronoi_diagram.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>ui/geom/angle_deg.h</label>
+        <link refid="angle__deg_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>geom/geom.h</label>
+        <link refid="geom_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ui/geom/vector_2d.h</label>
+        <link refid="geom_2vector__2d_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ui/geom/voronoi_diagram.h</label>
+        <link refid="voronoi__diagram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>worldmodel.h</label>
+        <link refid="worldmodel_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CGAL/Delaunay_triangulation_2.h</label>
+      </node>
+      <node id="2">
+        <label>CGAL/Exact_predicates_inexact_constructions_kernel.h</label>
+      </node>
+      <node id="14">
+        <label>QColor</label>
+      </node>
+      <node id="12">
+        <label>QDebug</label>
+      </node>
+      <node id="11">
+        <label>QList</label>
+      </node>
+      <node id="15">
+        <label>QPainter</label>
+      </node>
+      <node id="17">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="18">
+        <label>boost/graph/graph_traits.hpp</label>
+      </node>
+      <node id="19">
+        <label>boost/graph/graphviz.hpp</label>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="20">
+        <label>igraph/igraph.h</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>iterator</label>
+      </node>
+      <node id="16">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_cropped__voronoi__from__delaunay" prot="public">Cropped_voronoi_from_delaunay</innerclass>
+    <innerclass refid="class_voronoi___diagram" prot="public">Voronoi_Diagram</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1a891e241aa245ae63618f03737efba309" prot="public" static="no">
+        <type>CGAL::Exact_predicates_inexact_constructions_kernel</type>
+        <definition>typedef CGAL::Exact_predicates_inexact_constructions_kernel K</definition>
+        <argsstring></argsstring>
+        <name>K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="12" column="61" bodyfile="ui/geom/voronoi_diagram.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1ae78d446e5a38328af86f58f933a55cfa" prot="public" static="no">
+        <type>K::Point_2</type>
+        <definition>typedef K::Point_2 Point_2</definition>
+        <argsstring></argsstring>
+        <name>Point_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="13" column="20" bodyfile="ui/geom/voronoi_diagram.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1aa477e7551b60fa84a8f5bb4c5c843367" prot="public" static="no">
+        <type>K::Iso_rectangle_2</type>
+        <definition>typedef K::Iso_rectangle_2 Iso_rectangle_2</definition>
+        <argsstring></argsstring>
+        <name>Iso_rectangle_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="14" column="28" bodyfile="ui/geom/voronoi_diagram.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1a8c6897a0acf5626017f9a3f05f14e8bf" prot="public" static="no">
+        <type>K::Segment_2</type>
+        <definition>typedef K::Segment_2 Segment_2</definition>
+        <argsstring></argsstring>
+        <name>Segment_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="15" column="22" bodyfile="ui/geom/voronoi_diagram.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1a039514809cbcb193b97b45f7e6cf6f0c" prot="public" static="no">
+        <type>K::Ray_2</type>
+        <definition>typedef K::Ray_2 Ray_2</definition>
+        <argsstring></argsstring>
+        <name>Ray_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="16" column="18" bodyfile="ui/geom/voronoi_diagram.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1ac488fb3a36bca9a3ad9c01c99ac8ade4" prot="public" static="no">
+        <type>K::Line_2</type>
+        <definition>typedef K::Line_2 Line_2</definition>
+        <argsstring></argsstring>
+        <name>Line_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="17" column="19" bodyfile="ui/geom/voronoi_diagram.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="voronoi__diagram_8h_1ae1e74f233b60c936c97cda1bcffdb628" prot="public" static="no">
+        <type>CGAL::Delaunay_triangulation_2&lt; K &gt;</type>
+        <definition>typedef CGAL::Delaunay_triangulation_2&lt;K&gt; Delaunay_triangulation_2</definition>
+        <argsstring></argsstring>
+        <name>Delaunay_triangulation_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoi_diagram.h" line="18" column="41" bodyfile="ui/geom/voronoi_diagram.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VORONOI_DIAGRAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VORONOI_DIAGRAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CGAL/Exact_predicates_inexact_constructions_kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CGAL/Delaunay_triangulation_2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="geom_8h" kindref="compound">geom/geom.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QList&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;worldmodel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CGAL::Exact_predicates_inexact_constructions_kernel<sp/>K;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>K::Point_2<sp/>Point_2;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>K::Iso_rectangle_2<sp/>Iso_rectangle_2;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>K::Segment_2<sp/>Segment_2;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>K::Ray_2<sp/>Ray_2;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>K::Line_2<sp/>Line_2;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CGAL::Delaunay_triangulation_2&lt;K&gt;<sp/><sp/>Delaunay_triangulation_2;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//A<sp/>class<sp/>to<sp/>recover<sp/>Voronoi<sp/>diagram<sp/>from<sp/>stream.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//Rays,<sp/>lines<sp/>and<sp/>segments<sp/>are<sp/>cropped<sp/>to<sp/>a<sp/>rectangle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//so<sp/>that<sp/>only<sp/>segments<sp/>are<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_cropped__voronoi__from__delaunay" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Cropped_voronoi_from_delaunay</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Segment_2&gt;<sp/>m_cropped_vd;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Iso_rectangle_2<sp/>m_bbox;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>Cropped_voronoi_from_delaunay(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Iso_rectangle_2&amp;<sp/>bbox):m_bbox(bbox){}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>RSL&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>crop_and_extract_segment(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RSL&amp;<sp/>rsl){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CGAL::Object<sp/>obj<sp/>=<sp/>CGAL::intersection(rsl,m_bbox);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Segment_2*<sp/>s=CGAL::object_cast&lt;Segment_2&gt;(&amp;obj);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s)<sp/>m_cropped_vd.push_back(*s);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator&lt;&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ray_2&amp;<sp/>ray)<sp/><sp/><sp/><sp/>{<sp/>crop_and_extract_segment(ray);<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator&lt;&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Line_2&amp;<sp/>line)<sp/><sp/>{<sp/>crop_and_extract_segment(line);<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator&lt;&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Segment_2&amp;<sp/>seg){<sp/>crop_and_extract_segment(seg);<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_voronoi___diagram" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Voronoi_Diagram</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>Voronoi_Diagram();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>QList&lt;Vector2D&gt;<sp/>calculate(QList&lt;Vector2D&gt;<sp/>in_points);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWorldModel(<ref refid="class_world_model" kindref="compound">WorldModel</ref><sp/>*wm);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_model" kindref="compound">WorldModel</ref><sp/>*wm;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>VORONOI_DIAGRAM_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ui/geom/voronoi_diagram.h"/>
+  </compounddef>
+</doxygen>

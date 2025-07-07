@@ -1,0 +1,893 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_abstract_legend_item" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>QCPAbstractLegendItem</compoundname>
+    <basecompoundref refid="class_q_c_p_layout_element" prot="public" virt="non-virtual">QCPLayoutElement</basecompoundref>
+    <derivedcompoundref refid="class_q_c_p_plottable_legend_item" prot="public" virt="non-virtual">QCPPlottableLegendItem</derivedcompoundref>
+    <derivedcompoundref refid="class_q_c_p_polar_legend_item" prot="public" virt="non-virtual">QCPPolarLegendItem</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1aafcd9fc6fcb10f4a8d46037011afafe8" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref> *</type>
+        <definition>QCPLegend* QCPAbstractLegendItem::mParentLegend</definition>
+        <argsstring></argsstring>
+        <name>mParentLegend</name>
+        <qualifiedname>QCPAbstractLegendItem::mParentLegend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5054" column="13" bodyfile="qcustomplot.h" bodystart="5054" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1ae916a78ac0d2a60e20a17ca2f24f9754" prot="protected" static="no" mutable="no">
+        <type>QFont</type>
+        <definition>QFont QCPAbstractLegendItem::mFont</definition>
+        <argsstring></argsstring>
+        <name>mFont</name>
+        <qualifiedname>QCPAbstractLegendItem::mFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5055" column="9" bodyfile="qcustomplot.h" bodystart="5055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1a974b21e9930227d281344bd2242d289d" prot="protected" static="no" mutable="no">
+        <type>QColor</type>
+        <definition>QColor QCPAbstractLegendItem::mTextColor</definition>
+        <argsstring></argsstring>
+        <name>mTextColor</name>
+        <qualifiedname>QCPAbstractLegendItem::mTextColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5056" column="10" bodyfile="qcustomplot.h" bodystart="5056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1ab971df604306b192875a7d097feb1e21" prot="protected" static="no" mutable="no">
+        <type>QFont</type>
+        <definition>QFont QCPAbstractLegendItem::mSelectedFont</definition>
+        <argsstring></argsstring>
+        <name>mSelectedFont</name>
+        <qualifiedname>QCPAbstractLegendItem::mSelectedFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5057" column="9" bodyfile="qcustomplot.h" bodystart="5057" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1a4965c13854d970b24c284f0a4f005fbd" prot="protected" static="no" mutable="no">
+        <type>QColor</type>
+        <definition>QColor QCPAbstractLegendItem::mSelectedTextColor</definition>
+        <argsstring></argsstring>
+        <name>mSelectedTextColor</name>
+        <qualifiedname>QCPAbstractLegendItem::mSelectedTextColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5058" column="10" bodyfile="qcustomplot.h" bodystart="5058" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1aa84029f57b1b32f642fb7db63c3fc2c2" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPAbstractLegendItem::mSelectable</definition>
+        <argsstring></argsstring>
+        <name>mSelectable</name>
+        <qualifiedname>QCPAbstractLegendItem::mSelectable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5059" column="8" bodyfile="qcustomplot.h" bodystart="5059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_abstract_legend_item_1ae58ebebbd0c36cc6fe897483369984d2" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPAbstractLegendItem::mSelected</definition>
+        <argsstring></argsstring>
+        <name>mSelected</name>
+        <qualifiedname>QCPAbstractLegendItem::mSelected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5059" column="20" bodyfile="qcustomplot.h" bodystart="5059" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_abstract_legend_item_1a8429035e7adfbd7f05805a6530ad5e3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPLegend</definition>
+        <argsstring></argsstring>
+        <name>QCPLegend</name>
+        <qualifiedname>QCPAbstractLegendItem::QCPLegend</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5073" column="16" bodyfile="qcustomplot.h" bodystart="5073" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1afaff87610e8da0fa238ecf552872d774" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPAbstractLegendItem::QCPAbstractLegendItem</definition>
+        <argsstring>(QCPLegend *parent)</argsstring>
+        <name>QCPAbstractLegendItem</name>
+        <qualifiedname>QCPAbstractLegendItem::QCPAbstractLegendItem</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="class_q_c_p_abstract_legend_item" kindref="compound">QCPAbstractLegendItem</ref> and associates it with the <ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref> <emphasis>parent</emphasis>. This does not cause the item to be added to <emphasis>parent</emphasis>, so <ref refid="class_q_c_p_legend_1a3ab274de52d2951faea45a6d975e6b3f" kindref="member">QCPLegend::addItem</ref> must be called separately. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5026" column="12" bodyfile="qcustomplot.cpp" bodystart="18733" bodyend="18745"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a062a244753e1e23387cbe5b294a780f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref> *</type>
+        <definition>QCPLegend * QCPAbstractLegendItem::parentLegend</definition>
+        <argsstring>() const</argsstring>
+        <name>parentLegend</name>
+        <qualifiedname>QCPAbstractLegendItem::parentLegend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5029" column="13" bodyfile="qcustomplot.h" bodystart="5029" bodyend="5029"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a699b18e1d9e70372e51e75f462dbb643" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QFont</type>
+        <definition>QFont QCPAbstractLegendItem::font</definition>
+        <argsstring>() const</argsstring>
+        <name>font</name>
+        <qualifiedname>QCPAbstractLegendItem::font</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5030" column="9" bodyfile="qcustomplot.h" bodystart="5030" bodyend="5030"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a35b35fa697dcece86cf7e5818c0820b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QColor</type>
+        <definition>QColor QCPAbstractLegendItem::textColor</definition>
+        <argsstring>() const</argsstring>
+        <name>textColor</name>
+        <qualifiedname>QCPAbstractLegendItem::textColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5031" column="10" bodyfile="qcustomplot.h" bodystart="5031" bodyend="5031"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1ace98814b31762578228f6b32111cd3c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QFont</type>
+        <definition>QFont QCPAbstractLegendItem::selectedFont</definition>
+        <argsstring>() const</argsstring>
+        <name>selectedFont</name>
+        <qualifiedname>QCPAbstractLegendItem::selectedFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5032" column="9" bodyfile="qcustomplot.h" bodystart="5032" bodyend="5032"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a09540594509fb0074f3a1b39548e3bdc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QColor</type>
+        <definition>QColor QCPAbstractLegendItem::selectedTextColor</definition>
+        <argsstring>() const</argsstring>
+        <name>selectedTextColor</name>
+        <qualifiedname>QCPAbstractLegendItem::selectedTextColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5033" column="10" bodyfile="qcustomplot.h" bodystart="5033" bodyend="5033"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1af054a668038bcd7e35a35a07d1e79a23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPAbstractLegendItem::selectable</definition>
+        <argsstring>() const</argsstring>
+        <name>selectable</name>
+        <qualifiedname>QCPAbstractLegendItem::selectable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5034" column="8" bodyfile="qcustomplot.h" bodystart="5034" bodyend="5034"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1adf427dbb05d5f1a8e84c6abcb05becdf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPAbstractLegendItem::selected</definition>
+        <argsstring>() const</argsstring>
+        <name>selected</name>
+        <qualifiedname>QCPAbstractLegendItem::selected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5035" column="8" bodyfile="qcustomplot.h" bodystart="5035" bodyend="5035"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a409c53455d8112f71d70c0c43eb10265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::setFont</definition>
+        <argsstring>(const QFont &amp;font)</argsstring>
+        <name>setFont</name>
+        <qualifiedname>QCPAbstractLegendItem::setFont</qualifiedname>
+        <param>
+          <type>const QFont &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the default font of this specific legend item to <emphasis>font</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_legend_item_1a6ebace6aaffaedcdab2d74e88acc2d1e" kindref="member">setTextColor</ref>, <ref refid="class_q_c_p_legend_1aa4cda8499e3cb0f3be415edc02984c73" kindref="member">QCPLegend::setFont</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5038" column="8" bodyfile="qcustomplot.cpp" bodystart="18752" bodyend="18755"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a6ebace6aaffaedcdab2d74e88acc2d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::setTextColor</definition>
+        <argsstring>(const QColor &amp;color)</argsstring>
+        <name>setTextColor</name>
+        <qualifiedname>QCPAbstractLegendItem::setTextColor</qualifiedname>
+        <param>
+          <type>const QColor &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the default text color of this specific legend item to <emphasis>color</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_legend_item_1a409c53455d8112f71d70c0c43eb10265" kindref="member">setFont</ref>, <ref refid="class_q_c_p_legend_1ae1eb239ff4a4632fe1b6c3e668d845c6" kindref="member">QCPLegend::setTextColor</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5039" column="8" bodyfile="qcustomplot.cpp" bodystart="18762" bodyend="18765"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a91db5aee48617a9d3206e61376807365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::setSelectedFont</definition>
+        <argsstring>(const QFont &amp;font)</argsstring>
+        <name>setSelectedFont</name>
+        <qualifiedname>QCPAbstractLegendItem::setSelectedFont</qualifiedname>
+        <param>
+          <type>const QFont &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When this legend item is selected, <emphasis>font</emphasis> is used to draw generic text, instead of the normal font set with <ref refid="class_q_c_p_abstract_legend_item_1a409c53455d8112f71d70c0c43eb10265" kindref="member">setFont</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_legend_item_1a409c53455d8112f71d70c0c43eb10265" kindref="member">setFont</ref>, <ref refid="class_q_c_p_legend_1ab580a01c3c0a239374ed66c29edf5ad2" kindref="member">QCPLegend::setSelectedFont</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5040" column="8" bodyfile="qcustomplot.cpp" bodystart="18773" bodyend="18776"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a4d01d008ee1a5bfe9905b0397a421936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::setSelectedTextColor</definition>
+        <argsstring>(const QColor &amp;color)</argsstring>
+        <name>setSelectedTextColor</name>
+        <qualifiedname>QCPAbstractLegendItem::setSelectedTextColor</qualifiedname>
+        <param>
+          <type>const QColor &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When this legend item is selected, <emphasis>color</emphasis> is used to draw generic text, instead of the normal color set with <ref refid="class_q_c_p_abstract_legend_item_1a6ebace6aaffaedcdab2d74e88acc2d1e" kindref="member">setTextColor</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_legend_item_1a6ebace6aaffaedcdab2d74e88acc2d1e" kindref="member">setTextColor</ref>, <ref refid="class_q_c_p_legend_1a7674dfc7a1f30e1abd1018c0ed45e0bc" kindref="member">QCPLegend::setSelectedTextColor</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5041" column="8" bodyfile="qcustomplot.cpp" bodystart="18784" bodyend="18787"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a9913ef48730551b696e7f98a2391c599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Q_SLOT void</type>
+        <definition>void QCPAbstractLegendItem::setSelectable</definition>
+        <argsstring>(bool selectable)</argsstring>
+        <name>setSelectable</name>
+        <qualifiedname>QCPAbstractLegendItem::setSelectable</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>selectable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether this specific legend item is selectable.</para>
+<para><simplesect kind="see"><para>setSelectedParts, <ref refid="class_q_custom_plot_1a5ee1e2f6ae27419deca53e75907c27e5" kindref="member">QCustomPlot::setInteractions</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5042" column="15" bodyfile="qcustomplot.cpp" bodystart="18794" bodyend="18801"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a6eed93b0ab99cb3eabb043fb08179c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Q_SLOT void</type>
+        <definition>void QCPAbstractLegendItem::setSelected</definition>
+        <argsstring>(bool selected)</argsstring>
+        <name>setSelected</name>
+        <qualifiedname>QCPAbstractLegendItem::setSelected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>selected</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether this specific legend item is selected.</para>
+<para>It is possible to set the selection state of this item by calling this function directly, even if setSelectable is set to false.</para>
+<para><simplesect kind="see"><para>setSelectableParts, <ref refid="class_q_custom_plot_1a5ee1e2f6ae27419deca53e75907c27e5" kindref="member">QCustomPlot::setInteractions</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5043" column="15" bodyfile="qcustomplot.cpp" bodystart="18811" bodyend="18818"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a206879d493749c3fb1494850bff40e7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPAbstractLegendItem::selectTest</definition>
+        <argsstring>(const QPointF &amp;pos, bool onlySelectable, QVariant *details=nullptr) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTest</name>
+        <qualifiedname>QCPAbstractLegendItem::selectTest</qualifiedname>
+        <reimplements refid="class_q_c_p_layout_element_1a62d60f1b0ee9bb23e38811d71586d79c">selectTest</reimplements>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <param>
+          <type>QVariant *</type>
+          <declname>details</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Layout elements are sensitive to events inside their outer rect. If <emphasis>pos</emphasis> is within the outer rect, this method returns a value corresponding to 0.99 times the parent plot&apos;s selection tolerance. However, layout elements are not selectable by default. So if <emphasis>onlySelectable</emphasis> is true, -1.0 is returned.</para>
+<para>See <ref refid="class_q_c_p_layerable_1a272989087fc8c4357b4ba614f9922336" kindref="member">QCPLayerable::selectTest</ref> for a general explanation of this virtual method.</para>
+<para><ref refid="class_q_c_p_layout_element" kindref="compound">QCPLayoutElement</ref> subclasses may reimplement this method to provide more specific selection test behaviour. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5046" column="18" bodyfile="qcustomplot.cpp" bodystart="18821" bodyend="18832"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_q_c_p_abstract_legend_item_1a7cb61fdfbaf69c590bacb8f9e7099d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::selectionChanged</definition>
+        <argsstring>(bool selected)</argsstring>
+        <name>selectionChanged</name>
+        <qualifiedname>QCPAbstractLegendItem::selectionChanged</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>selected</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This signal is emitted when the selection state of this legend item has changed, either by user interaction or by a direct call to <ref refid="class_q_c_p_abstract_legend_item_1a6eed93b0ab99cb3eabb043fb08179c2b" kindref="member">setSelected</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5049" column="8"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_q_c_p_abstract_legend_item_1abc4d779b938cc9235f9196737dbaa6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::selectableChanged</definition>
+        <argsstring>(bool selectable)</argsstring>
+        <name>selectableChanged</name>
+        <qualifiedname>QCPAbstractLegendItem::selectableChanged</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>selectable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5050" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1af8eb0fda0e11b0a23e1051b0102c8c6a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespace_q_c_p_1a2ad6bb6281c7c2d593d4277b44c2b037" kindref="member">QCP::Interaction</ref></type>
+        <definition>QCP::Interaction QCPAbstractLegendItem::selectionCategory</definition>
+        <argsstring>() const Q_DECL_OVERRIDE</argsstring>
+        <name>selectionCategory</name>
+        <qualifiedname>QCPAbstractLegendItem::selectionCategory</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1a908c9edda761886f33893be326dab77d">selectionCategory</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5062" column="28" bodyfile="qcustomplot.cpp" bodystart="19598" bodyend="19601"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a6bfbcb9ace779f4f6fe22241c32a67c9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::applyDefaultAntialiasingHint</definition>
+        <argsstring>(QCPPainter *painter) const Q_DECL_OVERRIDE</argsstring>
+        <name>applyDefaultAntialiasingHint</name>
+        <qualifiedname>QCPAbstractLegendItem::applyDefaultAntialiasingHint</qualifiedname>
+        <reimplements refid="class_q_c_p_layout_element_1a0a8f18141bcf46cf40ad4c13324ff346">applyDefaultAntialiasingHint</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5063" column="16" bodyfile="qcustomplot.cpp" bodystart="18835" bodyend="18838"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a806fa4d0104bdfc141aa8a36fcc9d51c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QRect</type>
+        <definition>QRect QCPAbstractLegendItem::clipRect</definition>
+        <argsstring>() const Q_DECL_OVERRIDE</argsstring>
+        <name>clipRect</name>
+        <qualifiedname>QCPAbstractLegendItem::clipRect</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1acbcfc9ecc75433747b1978a77b1864b3">clipRect</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5064" column="17" bodyfile="qcustomplot.cpp" bodystart="18841" bodyend="18844"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a14ce0b09f5b814c765a0d790bd838909" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void QCPAbstractLegendItem::draw</definition>
+        <argsstring>(QCPPainter *painter) Q_DECL_OVERRIDE=0</argsstring>
+        <name>draw</name>
+        <qualifiedname>QCPAbstractLegendItem::draw</qualifiedname>
+        <reimplements refid="class_q_c_p_layout_element_1ad1c597b1d608cfdd86e7b76819a94cfb">draw</reimplements>
+        <reimplementedby refid="class_q_c_p_plottable_legend_item_1a5838366619200e99680afa6d355d13fa">draw</reimplementedby>
+        <reimplementedby refid="class_q_c_p_polar_legend_item_1abf9639f11bfc64779f243cca920aadef">draw</reimplementedby>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5065" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1a0081acfd8c4bb8ac4e9dcfe0f6c49b74" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::selectEvent</definition>
+        <argsstring>(QMouseEvent *event, bool additive, const QVariant &amp;details, bool *selectionStateChanged) Q_DECL_OVERRIDE</argsstring>
+        <name>selectEvent</name>
+        <qualifiedname>QCPAbstractLegendItem::selectEvent</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1a7498c2d0d081cf7cad0fb3bb93aa0e91">selectEvent</reimplements>
+        <param>
+          <type>QMouseEvent *</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>additive</declname>
+        </param>
+        <param>
+          <type>const QVariant &amp;</type>
+          <declname>details</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>selectionStateChanged</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5067" column="16" bodyfile="qcustomplot.cpp" bodystart="18847" bodyend="18858"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_abstract_legend_item_1aa1c0620558cc8e2a2e6fb7ab558f6097" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPAbstractLegendItem::deselectEvent</definition>
+        <argsstring>(bool *selectionStateChanged) Q_DECL_OVERRIDE</argsstring>
+        <name>deselectEvent</name>
+        <qualifiedname>QCPAbstractLegendItem::deselectEvent</qualifiedname>
+        <reimplements refid="class_q_c_p_layerable_1ae546370644a5551c76af739afc008bee">deselectEvent</reimplements>
+        <param>
+          <type>bool *</type>
+          <declname>selectionStateChanged</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="5068" column="16" bodyfile="qcustomplot.cpp" bodystart="18861" bodyend="18870"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The abstract base class for all entries in a <ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It defines a very basic interface for entries in a <ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref>. For representing plottables in the legend, the subclass <ref refid="class_q_c_p_plottable_legend_item" kindref="compound">QCPPlottableLegendItem</ref> is more suitable.</para>
+<para>Only derive directly from this class when you need absolute freedom (e.g. a custom legend entry that&apos;s not even associated with a plottable).</para>
+<para>You must implement the following pure virtual functions: <itemizedlist>
+<listitem><para>draw (from <ref refid="class_q_c_p_layerable" kindref="compound">QCPLayerable</ref>)</para>
+</listitem>
+</itemizedlist>
+You inherit the following members you may use: <table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref> *<bold>mParentLegend</bold> </para>
+</entry><entry thead="no"><para>A pointer to the parent <ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref>.</para>
+</entry></row>
+<row>
+<entry thead="no"><para>QFont <bold>mFont</bold> </para>
+</entry><entry thead="no"><para>The generic font of the item. You should use this font for all or at least the most prominent text of the item.</para>
+</entry></row>
+</table>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>QCPAbstractLegendItem</label>
+        <link refid="class_q_c_p_abstract_legend_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCPPlottableLegendItem</label>
+        <link refid="class_q_c_p_plottable_legend_item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QCPPolarLegendItem</label>
+        <link refid="class_q_c_p_polar_legend_item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QCPAbstractLegendItem</label>
+        <link refid="class_q_c_p_abstract_legend_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>mParentLegend</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="11">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="18">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+      <node id="6">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="5013" column="1" bodyfile="qcustomplot.h" bodystart="5014" bodyend="5074"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_layerable_1a71cbd212fde2703cee076e204a475709" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>antialiased</name></member>
+      <member refid="class_q_c_p_layerable_1acb663e375d2d36dc5c55021ee5a2119b" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>applyAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a6bfbcb9ace779f4f6fe22241c32a67c9" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>applyDefaultAntialiasingHint</name></member>
+      <member refid="class_q_c_p_layout_element_1a2585bc8c5cc70ee712909751a2fc8909" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>autoMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a005c9f0fe84bc1591a2cf2c46fd477b4" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>calculateAutoMargin</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a806fa4d0104bdfc141aa8a36fcc9d51c" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>clipRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1aa1c0620558cc8e2a2e6fb7ab558f6097" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>deselectEvent</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a14ce0b09f5b814c765a0d790bd838909" prot="protected" virt="pure-virtual"><scope>QCPAbstractLegendItem</scope><name>draw</name></member>
+      <member refid="class_q_c_p_layout_element_1a76dec8cb31e498994a944d7647a43309" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>elements</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a699b18e1d9e70372e51e75f462dbb643" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>font</name></member>
+      <member refid="class_q_c_p_layerable_1a8cbe5a0c9a5674249982f5ca5f8e02bc" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>initializeParentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1a9d4e121a7f1d2314f906fe698209cac9" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>layer</name></member>
+      <member refid="class_q_c_p_layerable_1abbf8657cedea73ac1c3499b521c90eba" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>layerChanged</name></member>
+      <member refid="class_q_c_p_layout_element_1a4efdcbde9d28f410e5ef166c9d691deb" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>layout</name></member>
+      <member refid="class_q_c_p_layout_element_1a765f041a73af0c2de41b41a5a03e31a4" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>layoutChanged</name></member>
+      <member refid="class_q_c_p_layerable_1a3ab45a4c76a3333ce42eb217a81733ec" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mAntialiased</name></member>
+      <member refid="class_q_c_p_layout_element_1aa5513622910f31d9309f87886bee597a" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>marginGroup</name></member>
+      <member refid="class_q_c_p_layout_element_1acdd2c6b2ffb1c712e3bb3014fdec2e1b" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>marginGroups</name></member>
+      <member refid="class_q_c_p_layout_element_1af4ac9450aa2d60863bf3a8ea0c940c9d" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>margins</name></member>
+      <member refid="class_q_c_p_layout_element_1af61c70354d1275778d68206b2a1b2d36" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mAutoMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1ad96efb977a26e360e8a64a4c1e56456d" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>maximumOuterSizeHint</name></member>
+      <member refid="class_q_c_p_layout_element_1afb9503858d4aa0f3b9f1794b084fb40a" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>maximumSize</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1ae916a78ac0d2a60e20a17ca2f24f9754" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mFont</name></member>
+      <member refid="class_q_c_p_layout_element_1a5eae30e28f28d73fd1c56409c011393e" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>minimumMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a46789036c4fcb190fa374f91321d7c09" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>minimumOuterSizeHint</name></member>
+      <member refid="class_q_c_p_layout_element_1a60d4295468a2b57fe91f6f68e20c3993" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>minimumSize</name></member>
+      <member refid="class_q_c_p_layerable_1aa38ec5891aff0f50b36fd63e9372a0cd" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mLayer</name></member>
+      <member refid="class_q_c_p_layout_element_1aeafbbc1130e02eee663c5326761fc963" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mMarginGroups</name></member>
+      <member refid="class_q_c_p_layout_element_1ac2a32b99ee527ca5dfff9da03628fe94" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a64a387973fd4addac842028c89088998" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mMaximumSize</name></member>
+      <member refid="class_q_c_p_layout_element_1a5ba71f25d1af4bb092b28df618538e63" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mMinimumMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1affef747c81632de33f08483b7fd10d01" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mMinimumSize</name></member>
+      <member refid="class_q_c_p_layerable_1a4171e2e823aca242dd0279f00ed2de81" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a9eee1ba47fd69be111059ca3881933e4" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af6567604818db90f4fd52822f8bc8376" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>mousePressEvent</name></member>
+      <member refid="class_q_c_p_layerable_1aa0d79b005686f668622bbe66ac03ba2c" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_q_c_p_layout_element_1a07bb4973379e75cb0fa5b032c1d24afd" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mOuterRect</name></member>
+      <member refid="class_q_c_p_layerable_1af94484cfb7cbbddb7de522e9be71d9a4" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>moveToLayer</name></member>
+      <member refid="class_q_c_p_layerable_1a3291445a980053e2d17a21d15957624e" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mParentLayerable</name></member>
+      <member refid="class_q_c_p_layout_element_1ae7c75c25549608bd688bdb65d4c38066" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mParentLayout</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1aafcd9fc6fcb10f4a8d46037011afafe8" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mParentLegend</name></member>
+      <member refid="class_q_c_p_layerable_1aa2a528433e44db02b8aef23c1f9f90ed" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_layout_element_1ad8896f05550389f7b9e92c9e6cdf6e01" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1aa84029f57b1b32f642fb7db63c3fc2c2" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mSelectable</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1ae58ebebbd0c36cc6fe897483369984d2" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mSelected</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1ab971df604306b192875a7d097feb1e21" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mSelectedFont</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a4965c13854d970b24c284f0a4f005fbd" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mSelectedTextColor</name></member>
+      <member refid="class_q_c_p_layout_element_1acc012635b1ae178ff3c4da8a3af303a2" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mSizeConstraintRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a974b21e9930227d281344bd2242d289d" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mTextColor</name></member>
+      <member refid="class_q_c_p_layerable_1a62e3aed8427d6ce3ccf716f285106cb3" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>mVisible</name></member>
+      <member refid="class_q_c_p_layout_element_1a2a32a12a6161c9dffbadeb9cc585510c" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>outerRect</name></member>
+      <member refid="class_q_c_p_layerable_1aa78b7e644d2c519e1a9a6f2ac5fcd858" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>parentLayerable</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a062a244753e1e23387cbe5b294a780f2" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>parentLegend</name></member>
+      <member refid="class_q_c_p_layerable_1a36ed5b292b90934b524a4e5866a3526c" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>parentPlot</name></member>
+      <member refid="class_q_c_p_layout_element_1ab4bb5c5a958451f5f153fdce350f13cf" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>parentPlotInitialized</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1afaff87610e8da0fa238ecf552872d774" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>QCPAbstractLegendItem</name></member>
+      <member refid="class_q_c_p_layerable_1a4f87f420cb2597e2b393aab934d2f099" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>QCPLayerable</name></member>
+      <member refid="class_q_c_p_layout_element_1a2c25c7bf27eaa1fad66807af855d8d81" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>QCPLayoutElement</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a8429035e7adfbd7f05805a6530ad5e3b" prot="private" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>QCPLegend</name></member>
+      <member refid="class_q_c_p_layerable_1ab054e88f15d485defcb95e7376f119e7" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>realVisibility</name></member>
+      <member refid="class_q_c_p_layout_element_1a208effccfe2cca4a0eaf9393e60f2dd4" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>rect</name></member>
+      <member refid="class_q_c_p_layout_element_1a0afb3e5773529e4bd20e448f81be4d2aa7fa7e25cd23758b9915c64ed9f1be26c" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>scrInnerRect</name></member>
+      <member refid="class_q_c_p_layout_element_1a0afb3e5773529e4bd20e448f81be4d2aabe2745b41a6131ed194e13591b08e04d" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>scrOuterRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1af054a668038bcd7e35a35a07d1e79a23" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selectable</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1abc4d779b938cc9235f9196737dbaa6bd" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selectableChanged</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1adf427dbb05d5f1a8e84c6abcb05becdf" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selected</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1ace98814b31762578228f6b32111cd3c0" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selectedFont</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a09540594509fb0074f3a1b39548e3bdc" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selectedTextColor</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a0081acfd8c4bb8ac4e9dcfe0f6c49b74" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>selectEvent</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1af8eb0fda0e11b0a23e1051b0102c8c6a" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>selectionCategory</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a7cb61fdfbaf69c590bacb8f9e7099d9e" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a206879d493749c3fb1494850bff40e7e" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>selectTest</name></member>
+      <member refid="class_q_c_p_layerable_1a4fd43e89be4a553ead41652565ff0581" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setAntialiased</name></member>
+      <member refid="class_q_c_p_layout_element_1accfda49994e3e6d51ed14504abf9d27d" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setAutoMargins</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a409c53455d8112f71d70c0c43eb10265" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setFont</name></member>
+      <member refid="class_q_c_p_layerable_1ab0d0da6d2de45a118886d2c8e16d5a54" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1ab25a0e7b897993b44447caee0f142083" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layout_element_1a516e56f76b6bc100e8e71d329866847d" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMarginGroup</name></member>
+      <member refid="class_q_c_p_layout_element_1a8f450b1f3f992ad576fce2c63d8b79cf" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a74eb5280a737ab44833d506db65efd95" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMaximumSize</name></member>
+      <member refid="class_q_c_p_layout_element_1a03e0e9c48f230217c529b0819f832d84" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMaximumSize</name></member>
+      <member refid="class_q_c_p_layout_element_1a0a8a17abc16b7923159fcc7608f94673" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMinimumMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a5dd29a3c8bc88440c97c06b67be7886b" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMinimumSize</name></member>
+      <member refid="class_q_c_p_layout_element_1a8e0447614a0bf92de9a7304588c6b96e" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setMinimumSize</name></member>
+      <member refid="class_q_c_p_layout_element_1a38975ea13e36de8e53391ce41d94bc0f" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setOuterRect</name></member>
+      <member refid="class_q_c_p_layerable_1aa23c893671f1f6744ac235cf2204cf3a" prot="protected" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setParentLayerable</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a9913ef48730551b696e7f98a2391c599" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setSelectable</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a6eed93b0ab99cb3eabb043fb08179c2b" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setSelected</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a91db5aee48617a9d3206e61376807365" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setSelectedFont</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a4d01d008ee1a5bfe9905b0397a421936" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setSelectedTextColor</name></member>
+      <member refid="class_q_c_p_layout_element_1a361666cdcc6fbfd37344cc44be746b0f" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setSizeConstraintRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a6ebace6aaffaedcdab2d74e88acc2d1e" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setTextColor</name></member>
+      <member refid="class_q_c_p_layerable_1a3bed99ddc396b48ce3ebfdc0418744f8" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>setVisible</name></member>
+      <member refid="class_q_c_p_layout_element_1a0afb3e5773529e4bd20e448f81be4d2a" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>SizeConstraintRect</name></member>
+      <member refid="class_q_c_p_layout_element_1a66136f121ee3e1c933b748761203cab4" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>sizeConstraintRect</name></member>
+      <member refid="class_q_c_p_abstract_legend_item_1a35b35fa697dcece86cf7e5818c0820b2" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>textColor</name></member>
+      <member refid="class_q_c_p_layout_element_1a929c2ec62e0e0e1d8418eaa802e2af9b" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>update</name></member>
+      <member refid="class_q_c_p_layout_element_1a0d83360e05735735aaf6d7983c56374d" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>UpdatePhase</name></member>
+      <member refid="class_q_c_p_layout_element_1a0d83360e05735735aaf6d7983c56374da5d1ccf5d79967c232c3c511796860045" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>upLayout</name></member>
+      <member refid="class_q_c_p_layout_element_1a0d83360e05735735aaf6d7983c56374da288cb59a92280e47261a341f2813e676" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>upMargins</name></member>
+      <member refid="class_q_c_p_layout_element_1a0d83360e05735735aaf6d7983c56374dad6119882eba136357c2f627992e527d3" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>upPreparation</name></member>
+      <member refid="class_q_c_p_layerable_1af0297b944b6192b6d67d00bff41b6b70" prot="public" virt="non-virtual"><scope>QCPAbstractLegendItem</scope><name>visible</name></member>
+      <member refid="class_q_c_p_layerable_1a47dfd7b8fd99c08ca54e09c362b6f022" prot="protected" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>wheelEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a4231cf5b3601d6d3a5781283e7a9735b" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>~QCPLayerable</name></member>
+      <member refid="class_q_c_p_layout_element_1a2fa26d3d22a2854c4da1d80f188db961" prot="public" virt="virtual"><scope>QCPAbstractLegendItem</scope><name>~QCPLayoutElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

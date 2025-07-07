@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['features_0',['Key Features',['../index.html#autotoc_md4',1,'']]],
+  ['features_0',['Features',['../index.html#autotoc_md5',1,'🚀 Key Features'],['../md__r_e_a_d_m_e.html#autotoc_md44',1,'🛠️ Key Features']]],
   ['filling_20under_20or_20between_20graphs_1',['Filling under or between graphs',['../class_q_c_p_graph.html#filling',1,'']]],
-  ['for_20collective_20robotics_20interaction_2',['LARS: Light-Augmented Reality System for Collective Robotics Interaction',['../index.html',1,'']]],
+  ['for_20collective_20robotics_20interaction_20🚦🤖_2',['for Collective Robotics Interaction 🚦🤖',['../md__r_e_a_d_m_e.html',1,'LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖'],['../index.html',1,'LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖']]],
   ['for_20the_20datatype_20template_20parameter_3',['Requirements for the DataType template parameter',['../class_q_c_p_data_container.html#qcpdatacontainer-datatype',1,'']]],
-  ['from_20ark_20to_20lars_3a_20advanced_20multi_20robot_20tracking_20interactive_20visual_20augmentation_4',['From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Interactive Visual Augmentation',['../index.html#autotoc_md8',1,'']]],
+  ['from_20ark_20to_20lars_3a_20advanced_20multi_20robot_20tracking_20visual_20augmentation_4',['🏹 From ARK to LARS: Advanced Multi-Robot Tracking &amp;amp; Visual Augmentation',['../md__r_e_a_d_m_e.html#autotoc_md48',1,'']]],
   ['function_5',['function',['../class_q_c_p_abstract_item.html#items-drawing',1,'The draw function'],['../class_q_c_p_abstract_item.html#items-selection',1,'The selectTest function']]]
 ];

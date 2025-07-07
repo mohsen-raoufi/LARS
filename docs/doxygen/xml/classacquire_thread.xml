@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classacquire_thread" kind="class" language="C++" prot="public">
+    <compoundname>acquireThread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QThread</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">QThread</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classacquire_thread_1a01981a0d3e159c124b4ac9b4b970c633" prot="public" static="no" mutable="no">
+        <type>Mat</type>
+        <definition>Mat acquireThread::K</definition>
+        <argsstring></argsstring>
+        <name>K</name>
+        <qualifiedname>acquireThread::K</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="53" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a6a07cfebbf71c45df913d22d42b88b5c" prot="public" static="no" mutable="no">
+        <type>Mat</type>
+        <definition>Mat acquireThread::R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <qualifiedname>acquireThread::R</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="54" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a3416939b95209f8b61e860f03af84ced" prot="public" static="no" mutable="no">
+        <type>Mat</type>
+        <definition>Mat acquireThread::camCalibMat</definition>
+        <argsstring></argsstring>
+        <name>camCalibMat</name>
+        <qualifiedname>acquireThread::camCalibMat</qualifiedname>
+        <initializer>= Mat::eye(3, 3, CV_64F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="55" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a1a5f6fe71f6f09a11e2f026792d418fa" prot="public" static="no" mutable="no">
+        <type>Mat</type>
+        <definition>Mat acquireThread::camDistMat</definition>
+        <argsstring></argsstring>
+        <name>camDistMat</name>
+        <qualifiedname>acquireThread::camDistMat</qualifiedname>
+        <initializer>= Mat::zeros(5, 1, CV_64F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="56" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a6725f2ce59b7015851ca7bfa284b2f61" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+        <definition>Point acquireThread::corner</definition>
+        <argsstring></argsstring>
+        <name>corner</name>
+        <qualifiedname>acquireThread::corner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="58" column="11" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1ab9e196b59aa5d57c4c4972c6d821e694" prot="public" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size acquireThread::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>acquireThread::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="59" column="10" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a2702615d12eb41f440cc00f91a585c73" prot="public" static="no" mutable="no">
+        <type>QSize</type>
+        <definition>QSize acquireThread::fullCapSize</definition>
+        <argsstring></argsstring>
+        <name>fullCapSize</name>
+        <qualifiedname>acquireThread::fullCapSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="61" column="11" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a469620efff40507470e4d3e9fd57ec09" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+        <definition>Point acquireThread::fullCorner</definition>
+        <argsstring></argsstring>
+        <name>fullCorner</name>
+        <qualifiedname>acquireThread::fullCorner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="62" column="11" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1aa0f4d4081aa20f85a694b34f21df8a29" prot="public" static="no" mutable="no">
+        <type>Point2f</type>
+        <definition>Point2f acquireThread::arenaCorners</definition>
+        <argsstring>[4]</argsstring>
+        <name>arenaCorners</name>
+        <qualifiedname>acquireThread::arenaCorners</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="63" column="13" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1ad971b06f18d49c48b6489eb82c63ebb9" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString acquireThread::videoDir</definition>
+        <argsstring></argsstring>
+        <name>videoDir</name>
+        <qualifiedname>acquireThread::videoDir</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="64" column="13" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a156ba3c99651fb18c9645873b63d0d99" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::height_x_adj</definition>
+        <argsstring></argsstring>
+        <name>height_x_adj</name>
+        <qualifiedname>acquireThread::height_x_adj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="65" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1ae8aa604710210989181faf9ccf6d11bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::height_y_adj</definition>
+        <argsstring></argsstring>
+        <name>height_y_adj</name>
+        <qualifiedname>acquireThread::height_y_adj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="66" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a2a1d3dab7f919a6429410972a3abee60" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint acquireThread::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>acquireThread::index</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="69" column="10" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a3d25104316f67a381d6a92a26610198e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool acquireThread::keepRunning</definition>
+        <argsstring></argsstring>
+        <name>keepRunning</name>
+        <qualifiedname>acquireThread::keepRunning</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="71" column="10" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1aa8a465e8f1a6c9b18e1f3abbbe26a32b" prot="public" static="no" mutable="no">
+        <type>srcDataType</type>
+        <definition>srcDataType acquireThread::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>acquireThread::type</qualifiedname>
+        <initializer>= CAMERA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="73" column="17" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a7d801ff729d1be07491157d0c761f7d4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::CRPX0</definition>
+        <argsstring></argsstring>
+        <name>CRPX0</name>
+        <qualifiedname>acquireThread::CRPX0</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="75" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a918b1210eb210f5b8604b2a6a5f4c951" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::CRPY0</definition>
+        <argsstring></argsstring>
+        <name>CRPY0</name>
+        <qualifiedname>acquireThread::CRPY0</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="76" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a54995323de3ba3f5fd0da81e69e28ddb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::CRPW</definition>
+        <argsstring></argsstring>
+        <name>CRPW</name>
+        <qualifiedname>acquireThread::CRPW</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="77" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a5aec212355ee94744564945787f9e474" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int acquireThread::CRPH</definition>
+        <argsstring></argsstring>
+        <name>CRPH</name>
+        <qualifiedname>acquireThread::CRPH</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="78" column="9" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1ae38dacb717bdde7a5d83f67f77848c3d" prot="public" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture acquireThread::cap</definition>
+        <argsstring></argsstring>
+        <name>cap</name>
+        <qualifiedname>acquireThread::cap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="84" column="22" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1aad15243d12f8a81bc8cec0203136f9f5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool acquireThread::savecamerasframes</definition>
+        <argsstring></argsstring>
+        <name>savecamerasframes</name>
+        <qualifiedname>acquireThread::savecamerasframes</qualifiedname>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="88" column="10" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a135f535df5debaba9d3a5ead4a0d015b" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString acquireThread::videoframeprefix</definition>
+        <argsstring></argsstring>
+        <name>videoframeprefix</name>
+        <qualifiedname>acquireThread::videoframeprefix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="89" column="13" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classacquire_thread_1a41e63f3e93b130743e9f49784d7dda48" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool acquireThread::bool_halfSize</definition>
+        <argsstring></argsstring>
+        <name>bool_halfSize</name>
+        <qualifiedname>acquireThread::bool_halfSize</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/robottracker.cpp" line="81" column="10" bodyfile="tracker/robottracker.cpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classacquire_thread_1a819bff7bcf2912a05cd309371096b4b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>acquireThread::~acquireThread</definition>
+        <argsstring>()</argsstring>
+        <name>~acquireThread</name>
+        <qualifiedname>acquireThread::~acquireThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="45" column="5" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classacquire_thread_1a819bff7bcf2912a05cd309371096b4b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>acquireThread::~acquireThread</definition>
+        <argsstring>()</argsstring>
+        <name>~acquireThread</name>
+        <qualifiedname>acquireThread::~acquireThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/robottracker.cpp" line="42" column="5" bodyfile="tracker/robottracker.cpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classacquire_thread_1a1866ebb900ebef32d922712aaec0eba4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void acquireThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>acquireThread::run</qualifiedname>
+        <briefdescription>
+<para>run The execution method for the thread </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/kilobottracker_copy.cpp" line="97" column="10" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="97" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classacquire_thread_1a1866ebb900ebef32d922712aaec0eba4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void acquireThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>acquireThread::run</qualifiedname>
+        <briefdescription>
+<para>run The execution method for the thread </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tracker/robottracker.cpp" line="101" column="10" bodyfile="tracker/robottracker.cpp" bodystart="101" bodyend="297"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classacquire_thread" kindref="compound">acquireThread</ref> class This thread acquires input data from a source, applies the local warps to the data, and then places the data in a circular buffer for use by the main thread, which operates on a QTimer to allow UI responsivity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QThread</label>
+      </node>
+      <node id="1">
+        <label>acquireThread</label>
+        <link refid="classacquire_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Point</label>
+        <link refid="struct_point"/>
+      </node>
+      <node id="2">
+        <label>QThread</label>
+      </node>
+      <node id="1">
+        <label>acquireThread</label>
+        <link refid="classacquire_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>corner</edgelabel>
+          <edgelabel>fullCorner</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tracker/kilobottracker_copy.cpp" line="41" column="1" bodyfile="tracker/kilobottracker_copy.cpp" bodystart="42" bodyend="286"/>
+    <listofallmembers>
+      <member refid="classacquire_thread_1aa0f4d4081aa20f85a694b34f21df8a29" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>arenaCorners</name></member>
+      <member refid="classacquire_thread_1a41e63f3e93b130743e9f49784d7dda48" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>bool_halfSize</name></member>
+      <member refid="classacquire_thread_1a3416939b95209f8b61e860f03af84ced" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>camCalibMat</name></member>
+      <member refid="classacquire_thread_1a1a5f6fe71f6f09a11e2f026792d418fa" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>camDistMat</name></member>
+      <member refid="classacquire_thread_1ae38dacb717bdde7a5d83f67f77848c3d" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>cap</name></member>
+      <member refid="classacquire_thread_1a6725f2ce59b7015851ca7bfa284b2f61" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>corner</name></member>
+      <member refid="classacquire_thread_1a5aec212355ee94744564945787f9e474" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>CRPH</name></member>
+      <member refid="classacquire_thread_1a54995323de3ba3f5fd0da81e69e28ddb" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>CRPW</name></member>
+      <member refid="classacquire_thread_1a7d801ff729d1be07491157d0c761f7d4" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>CRPX0</name></member>
+      <member refid="classacquire_thread_1a918b1210eb210f5b8604b2a6a5f4c951" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>CRPY0</name></member>
+      <member refid="classacquire_thread_1a2702615d12eb41f440cc00f91a585c73" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>fullCapSize</name></member>
+      <member refid="classacquire_thread_1a469620efff40507470e4d3e9fd57ec09" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>fullCorner</name></member>
+      <member refid="classacquire_thread_1a156ba3c99651fb18c9645873b63d0d99" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>height_x_adj</name></member>
+      <member refid="classacquire_thread_1ae8aa604710210989181faf9ccf6d11bf" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>height_y_adj</name></member>
+      <member refid="classacquire_thread_1a2a1d3dab7f919a6429410972a3abee60" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>index</name></member>
+      <member refid="classacquire_thread_1a01981a0d3e159c124b4ac9b4b970c633" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>K</name></member>
+      <member refid="classacquire_thread_1a3d25104316f67a381d6a92a26610198e" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>keepRunning</name></member>
+      <member refid="classacquire_thread_1a6a07cfebbf71c45df913d22d42b88b5c" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>R</name></member>
+      <member refid="classacquire_thread_1a1866ebb900ebef32d922712aaec0eba4" prot="private" virt="non-virtual"><scope>acquireThread</scope><name>run</name></member>
+      <member refid="classacquire_thread_1a1866ebb900ebef32d922712aaec0eba4" prot="private" virt="non-virtual"><scope>acquireThread</scope><name>run</name></member>
+      <member refid="classacquire_thread_1aad15243d12f8a81bc8cec0203136f9f5" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>savecamerasframes</name></member>
+      <member refid="classacquire_thread_1ab9e196b59aa5d57c4c4972c6d821e694" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>size</name></member>
+      <member refid="classacquire_thread_1aa8a465e8f1a6c9b18e1f3abbbe26a32b" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>type</name></member>
+      <member refid="classacquire_thread_1ad971b06f18d49c48b6489eb82c63ebb9" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>videoDir</name></member>
+      <member refid="classacquire_thread_1a135f535df5debaba9d3a5ead4a0d015b" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>videoframeprefix</name></member>
+      <member refid="classacquire_thread_1a819bff7bcf2912a05cd309371096b4b6" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>~acquireThread</name></member>
+      <member refid="classacquire_thread_1a819bff7bcf2912a05cd309371096b4b6" prot="public" virt="non-virtual"><scope>acquireThread</scope><name>~acquireThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

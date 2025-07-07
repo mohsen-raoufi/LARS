@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structdetected_marker" kind="struct" language="C++" prot="public">
+    <compoundname>detectedMarker</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdetected_marker_1af08510295a4851d95877cf197ffcf9b5" prot="public" static="no" mutable="no">
+        <type>QRect</type>
+        <definition>QRect detectedMarker::BoundingRect</definition>
+        <argsstring></argsstring>
+        <name>BoundingRect</name>
+        <qualifiedname>detectedMarker::BoundingRect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="56" column="11" bodyfile="mainwindow.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdetected_marker_1a3d46d7e0394fb2ea8718e5f43356e14c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int detectedMarker::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>detectedMarker::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mainwindow.h" line="57" column="9" bodyfile="mainwindow.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="mainwindow.h" line="54" column="1" bodyfile="mainwindow.h" bodystart="55" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structdetected_marker_1af08510295a4851d95877cf197ffcf9b5" prot="public" virt="non-virtual"><scope>detectedMarker</scope><name>BoundingRect</name></member>
+      <member refid="structdetected_marker_1a3d46d7e0394fb2ea8718e5f43356e14c" prot="public" virt="non-virtual"><scope>detectedMarker</scope><name>id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespacercsc_1_1_0d040210060247060367320045043337321347112047123252" kind="namespace" language="C++">
+    <compoundname>rcsc</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/convex_hull.cpp" line="44" column="1"/>
+  </compounddef>
+</doxygen>

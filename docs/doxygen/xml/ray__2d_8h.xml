@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="ray__2d_8h" kind="file" language="C++">
+    <compoundname>ray_2d.h</compoundname>
+    <includes refid="line__2d_8h" local="no">geom/line_2d.h</includes>
+    <includes refid="geom_2vector__2d_8h" local="no">geom/vector_2d.h</includes>
+    <includedby refid="circle__2d_8cpp" local="yes">ui/geom/circle_2d.cpp</includedby>
+    <includedby refid="ray__2d_8cpp" local="yes">ui/geom/ray_2d.cpp</includedby>
+    <includedby refid="rect__2d_8cpp" local="yes">ui/geom/rect_2d.cpp</includedby>
+    <includedby refid="triangle__2d_8cpp" local="yes">ui/geom/triangle_2d.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>ui/geom/angle_deg.h</label>
+        <link refid="angle__deg_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>geom/line_2d.h</label>
+        <link refid="line__2d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ui/geom/ray_2d.h</label>
+        <link refid="ray__2d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>geom/vector_2d.h</label>
+        <link refid="geom_2vector__2d_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ui/geom/circle_2d.cpp</label>
+        <link refid="circle__2d_8cpp"/>
+      </node>
+      <node id="3">
+        <label>ui/geom/ray_2d.cpp</label>
+        <link refid="ray__2d_8cpp"/>
+      </node>
+      <node id="1">
+        <label>ui/geom/ray_2d.h</label>
+        <link refid="ray__2d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ui/geom/rect_2d.cpp</label>
+        <link refid="rect__2d_8cpp"/>
+      </node>
+      <node id="5">
+        <label>ui/geom/triangle_2d.cpp</label>
+        <link refid="triangle__2d_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrcsc_1_1_ray2_d" prot="public">rcsc::Ray2D</innerclass>
+    <innernamespace refid="namespacercsc">rcsc</innernamespace>
+    <briefdescription>
+<para>2D ray line class Header File. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-c++-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*Copyright:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>Copyright<sp/>(C)<sp/>Hidehisa<sp/>Akiyama</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>This<sp/>code<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*EndCopyright:</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RCSC_GEOM_RAY2D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCSC_GEOM_RAY2D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="line__2d_8h" kindref="compound">geom/line_2d.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="geom_2vector__2d_8h" kindref="compound">geom/vector_2d.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">rcsc<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classrcsc_1_1_ray2_d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrcsc_1_1_ray2_d_1a93dd877eb3ab21249e92024ac52b7cef" kindref="member">Ray2D</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>M_origin;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref><sp/>M_direction;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="classrcsc_1_1_ray2_d_1a93dd877eb3ab21249e92024ac52b7cef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_ray2_d_1a93dd877eb3ab21249e92024ac52b7cef" kindref="member">Ray2D</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>M_origin(<sp/>0.0,<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>M_direction(<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classrcsc_1_1_ray2_d_1aefb6e5de065f0d08b4c2fb5792f6e315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_ray2_d_1aefb6e5de065f0d08b4c2fb5792f6e315" kindref="member">Ray2D</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref><sp/>&amp;<sp/>direction<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>M_origin(<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref><sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>M_direction(<sp/>direction<sp/>)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="75" refid="classrcsc_1_1_ray2_d_1a2e9d22850ff1e843e4ebb6d579ff5f04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_ray2_d_1a2e9d22850ff1e843e4ebb6d579ff5f04" kindref="member">Ray2D</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/>dir_point<sp/>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>M_origin(<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref><sp/>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>M_direction(<sp/>(<sp/>dir_point<sp/>-<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref><sp/>).th()<sp/>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="87"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_origin;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref><sp/>&amp;<sp/><ref refid="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" kindref="member">dir</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="97"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>M_direction;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classrcsc_1_1_ray2_d_1a467c947cf6a5a3245d1276f2cc6883e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref><sp/><ref refid="classrcsc_1_1_ray2_d_1a467c947cf6a5a3245d1276f2cc6883e2" kindref="member">line</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="106"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref>(<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref>(),<sp/><ref refid="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" kindref="member">dir</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classrcsc_1_1_ray2_d_1ab37e5ead4b484cf2a29369e2d5b0f6b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_ray2_d_1ab37e5ead4b484cf2a29369e2d5b0f6b6" kindref="member">inRightDir</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;<sp/>point,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;<sp/>thr<sp/>=<sp/>10.0<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="118"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>(<sp/>point<sp/>-<sp/><ref refid="classrcsc_1_1_ray2_d_1a0017a2ed97b75564a005787617261c81" kindref="member">origin</ref>()<sp/>).th()<sp/>-<sp/><ref refid="classrcsc_1_1_ray2_d_1a307c4b549933ec2157c05248a41bf37e" kindref="member">dir</ref>()<sp/>).abs()<sp/>&lt;<sp/>thr;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/><ref refid="classrcsc_1_1_ray2_d_1a798fc0534be6c792df6a23983d8a416c" kindref="member">intersection</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref><sp/>&amp;<sp/>other<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/><ref refid="classrcsc_1_1_ray2_d_1a798fc0534be6c792df6a23983d8a416c" kindref="member">intersection</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrcsc_1_1_ray2_d" kindref="compound">Ray2D</ref><sp/>&amp;<sp/>other<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ui/geom/ray_2d.h"/>
+  </compounddef>
+</doxygen>

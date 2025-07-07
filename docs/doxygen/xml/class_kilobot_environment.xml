@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_kilobot_environment" kind="class" language="C++" prot="public">
+    <compoundname>KilobotEnvironment</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kilobot_environment_1abf403f0a18a43cbcef9dfd525b037268" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KilobotEnvironment::KilobotEnvironment</definition>
+        <argsstring>(QObject *)</argsstring>
+        <name>KilobotEnvironment</name>
+        <qualifiedname>KilobotEnvironment::KilobotEnvironment</qualifiedname>
+        <param>
+          <type>QObject *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotenvironment.h" line="12" column="14" bodyfile="Kilobot/kilobotenvironment.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kilobot_environment_1ac54799db3589c016d57a3a50f990db37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KilobotEnvironment::KilobotEnvironment</definition>
+        <argsstring>()</argsstring>
+        <name>KilobotEnvironment</name>
+        <qualifiedname>KilobotEnvironment::KilobotEnvironment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotenvironment.h" line="13" column="5" bodyfile="Kilobot/kilobotenvironment.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_kilobot_environment_1a098e748ca3fb134668692bf1e6d2ec77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KilobotEnvironment::transmitKiloState</definition>
+        <argsstring>(kilobot_message)</argsstring>
+        <name>transmitKiloState</name>
+        <qualifiedname>KilobotEnvironment::transmitKiloState</qualifiedname>
+        <param>
+          <type><ref refid="structkilobot__message" kindref="compound">kilobot_message</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotenvironment.h" line="17" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_kilobot_environment_1af3e59c4546c2e2b32434299b9585a3bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void KilobotEnvironment::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>KilobotEnvironment::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotenvironment.h" line="20" column="18" bodyfile="Kilobot/kilobotenvironment.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_kilobot_environment_1ab6ca4918e8e64c412da9c36bb2bbd666" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void KilobotEnvironment::updateVirtualSensor</definition>
+        <argsstring>(Kilobot)</argsstring>
+        <name>updateVirtualSensor</name>
+        <qualifiedname>KilobotEnvironment::updateVirtualSensor</qualifiedname>
+        <param>
+          <type><ref refid="class_kilobot" kindref="compound">Kilobot</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobotenvironment.h" line="21" column="18" bodyfile="Kilobot/kilobotenvironment.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>KilobotEnvironment</label>
+        <link refid="class_kilobot_environment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>KilobotEnvironment</label>
+        <link refid="class_kilobot_environment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="Kilobot/kilobotenvironment.h" line="8" column="1" bodyfile="Kilobot/kilobotenvironment.h" bodystart="9" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_kilobot_environment_1abf403f0a18a43cbcef9dfd525b037268" prot="public" virt="non-virtual"><scope>KilobotEnvironment</scope><name>KilobotEnvironment</name></member>
+      <member refid="class_kilobot_environment_1ac54799db3589c016d57a3a50f990db37" prot="public" virt="non-virtual"><scope>KilobotEnvironment</scope><name>KilobotEnvironment</name></member>
+      <member refid="class_kilobot_environment_1a098e748ca3fb134668692bf1e6d2ec77" prot="public" virt="non-virtual"><scope>KilobotEnvironment</scope><name>transmitKiloState</name></member>
+      <member refid="class_kilobot_environment_1af3e59c4546c2e2b32434299b9585a3bc" prot="public" virt="virtual"><scope>KilobotEnvironment</scope><name>update</name></member>
+      <member refid="class_kilobot_environment_1ab6ca4918e8e64c412da9c36bb2bbd666" prot="public" virt="virtual"><scope>KilobotEnvironment</scope><name>updateVirtualSensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

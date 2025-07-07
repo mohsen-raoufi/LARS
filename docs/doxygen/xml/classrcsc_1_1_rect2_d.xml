@@ -1,0 +1,2351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_rect2_d" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::Rect2D</compoundname>
+    <basecompoundref refid="classrcsc_1_1_region2_d" prot="public" virt="non-virtual">rcsc::Region2D</basecompoundref>
+    <includes refid="rect__2d_8h" local="no">rect_2d.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_rect2_d_1ab1db5ca02e48ca75b74f70f5e9e4402c" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Rect2D::M_top_left</definition>
+        <argsstring></argsstring>
+        <name>M_top_left</name>
+        <qualifiedname>rcsc::Rect2D::M_top_left</qualifiedname>
+        <briefdescription>
+<para>top left point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="62" column="14" bodyfile="ui/geom/rect_2d.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_rect2_d_1ac1d612ee289d88d40efa976d8293aa46" prot="private" static="no" mutable="no">
+        <type><ref refid="classrcsc_1_1_size2_d" kindref="compound">Size2D</ref></type>
+        <definition>Size2D rcsc::Rect2D::M_size</definition>
+        <argsstring></argsstring>
+        <name>M_size</name>
+        <qualifiedname>rcsc::Rect2D::M_size</qualifiedname>
+        <briefdescription>
+<para>XY range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="65" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8e590a45bd54a388969bffc136835726" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Rect2D::Rect2D</definition>
+        <argsstring>()</argsstring>
+        <name>Rect2D</name>
+        <qualifiedname>rcsc::Rect2D::Rect2D</qualifiedname>
+        <briefdescription>
+<para>default constructor creates a zero area rectanble at (0,0) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="71" column="5" bodyfile="ui/geom/rect_2d.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a9912890c53e4f8dfdd366dd9d72e032e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Rect2D::Rect2D</definition>
+        <argsstring>(const Vector2D &amp;top_left, const Size2D &amp;size)</argsstring>
+        <name>Rect2D</name>
+        <qualifiedname>rcsc::Rect2D::Rect2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_size2_d" kindref="compound">Size2D</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>constructor with variables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XY range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="110" column="5" bodyfile="ui/geom/rect_2d.h" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a0a890f66406d003cc21d12269285747e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Rect2D::Rect2D</definition>
+        <argsstring>(const Vector2D &amp;top_left, const Vector2D &amp;bottom_right)</argsstring>
+        <name>Rect2D</name>
+        <qualifiedname>rcsc::Rect2D::Rect2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>bottom_right</declname>
+        </param>
+        <briefdescription>
+<para>constructor with 2 points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottom_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bottom right vertex</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Even if argument point has incorrect values, the assigned values are normalized automatically. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="124" column="5" bodyfile="ui/geom/rect_2d.h" bodystart="124" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a9f2ea459a31ee54cb56ab9557d69febf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::assign</definition>
+        <argsstring>(const Vector2D &amp;top_left, const Size2D &amp;size)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Rect2D::assign</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_size2_d" kindref="compound">Size2D</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>assign new values </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XY range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="248" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="248" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aca32db28e04d31ad179bdf5588bf113b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveCenter</definition>
+        <argsstring>(const Vector2D &amp;point)</argsstring>
+        <name>moveCenter</name>
+        <qualifiedname>rcsc::Rect2D::moveCenter</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the center point is set to the given position. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new center coordinates </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="264" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="264" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a4eefd2da71d6e05ffa132c125463bc7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveTopLeft</definition>
+        <argsstring>(const Vector2D &amp;point)</argsstring>
+        <name>moveTopLeft</name>
+        <qualifiedname>rcsc::Rect2D::moveTopLeft</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the top-left coner is set to the given position. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top-left corner </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="279" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="279" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ac75803c09a6a7648c577b11f84c8c078" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveBottomRight</definition>
+        <argsstring>(const Vector2D &amp;point)</argsstring>
+        <name>moveBottomRight</name>
+        <qualifiedname>rcsc::Rect2D::moveBottomRight</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the bottom-right coner is set to the given position. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new bottom-right conrer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="293" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="293" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a50fdd7d3b2dff3b755f845eaf4790a99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveLeft</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>moveLeft</name>
+        <qualifiedname>rcsc::Rect2D::moveLeft</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the left line is set to the given position. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new left value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="308" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="308" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ac8d706745c83da842307a7a0d675bf68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveMinX</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>moveMinX</name>
+        <qualifiedname>rcsc::Rect2D::moveMinX</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>alias of moveLeft. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new left value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="320" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aeb2b7ee1741494b4f48569348ffe8e23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveRight</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>moveRight</name>
+        <qualifiedname>rcsc::Rect2D::moveRight</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the right line is set to the given value. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new right value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="333" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="333" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ac74be6148e8584017cc6d7f08bc1d292" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveMaxX</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>moveMaxX</name>
+        <qualifiedname>rcsc::Rect2D::moveMaxX</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>alias of moveRight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new right value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="345" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a859b30a98c245410f96c102f2606f445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveTop</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>moveTop</name>
+        <qualifiedname>rcsc::Rect2D::moveTop</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the top line is set to the given value. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="358" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="358" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ae99f42f96c10ef943cb5404cead69303" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveMinY</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>moveMinY</name>
+        <qualifiedname>rcsc::Rect2D::moveMinY</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>alias of moveTop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="370" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1acc90b8e16b08e09967c1a16a54ca1b63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveBottom</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>moveBottom</name>
+        <qualifiedname>rcsc::Rect2D::moveBottom</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>move the rectangle. the top line is set to the given value. the size is unchanged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="383" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="383" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1adcc9b70fbc8ea76631ecc0da69766915" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::moveMaxY</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>moveMaxY</name>
+        <qualifiedname>rcsc::Rect2D::moveMaxY</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>alias of moveTop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="395" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8d311ff4486d6c71d69b4ce9782c3f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setTopLeft</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>setTopLeft</name>
+        <qualifiedname>rcsc::Rect2D::setTopLeft</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>set the top-left corner of the rectangle. the size may be changed, but the bottom-right corner will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new x coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new y coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="409" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="51" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8f9c1715e8d78714b8a0100786154dd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setTopLeft</definition>
+        <argsstring>(const Vector2D &amp;point)</argsstring>
+        <name>setTopLeft</name>
+        <qualifiedname>rcsc::Rect2D::setTopLeft</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>set the top-left corner of the rectangle. the size may be changed, but the bottom-right corner will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="419" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="419" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a69fdd4ef177983b6dd93d4ca173426b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setBottomRight</definition>
+        <argsstring>(const double &amp;x, const double &amp;y)</argsstring>
+        <name>setBottomRight</name>
+        <qualifiedname>rcsc::Rect2D::setBottomRight</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>set the bottom-right corner of the rectangle. the size may be changed, but the top-left corner will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new x coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new y coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="432" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="71" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a834401e31f59b2420b50b1ec609b455e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setBottomRight</definition>
+        <argsstring>(const Vector2D &amp;point)</argsstring>
+        <name>setBottomRight</name>
+        <qualifiedname>rcsc::Rect2D::setBottomRight</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>set the bottom-right corner of the rectangle. the size may be changed, but the top-left corner will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="442" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="442" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a9b8d9b6be58e83768bb4a84b5d35bf8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setLeft</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>setLeft</name>
+        <qualifiedname>rcsc::Rect2D::setLeft</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>set the left of rectangle. the size may be changed, but the right will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new left value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="454" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a3a29022e9aaa5b26e4e9ec96966a50b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setMinX</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>setMinX</name>
+        <qualifiedname>rcsc::Rect2D::setMinX</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>alias of setLeft. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new left value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="462" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="462" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a817559d1a85bebd8752baf45f3a82da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setRight</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>setRight</name>
+        <qualifiedname>rcsc::Rect2D::setRight</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>set the right of rectangle. the size may be changed, but the left will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new right value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="474" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="107" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a89055ff21be6bd295467d63c22e13833" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setMaxX</definition>
+        <argsstring>(const double &amp;x)</argsstring>
+        <name>setMaxX</name>
+        <qualifiedname>rcsc::Rect2D::setMaxX</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>alias of setRight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new right value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="482" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="482" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ae080db592934357047998e2253837b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setTop</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>setTop</name>
+        <qualifiedname>rcsc::Rect2D::setTop</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>set the top of rectangle. the size may be changed, but the bottom will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="494" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="123" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1adbee2f79ce0f30304b8c080c433fc4af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setMinY</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>setMinY</name>
+        <qualifiedname>rcsc::Rect2D::setMinY</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>alias of setTop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="502" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="502" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a96a6a62525692923352241078b32d59a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setBottom</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>setBottom</name>
+        <qualifiedname>rcsc::Rect2D::setBottom</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>set the bottom of rectangle. the size may be changed, but the top will never be changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new bottom value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="514" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="139" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1af1f8092ebe879af8e864eedb1b48abf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setMaxY</definition>
+        <argsstring>(const double &amp;y)</argsstring>
+        <name>setMaxY</name>
+        <qualifiedname>rcsc::Rect2D::setMaxY</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>alias of setBottom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new top value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="522" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a6221b551ab83f166d699a00dcc6e28a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setLength</definition>
+        <argsstring>(const double &amp;length)</argsstring>
+        <name>setLength</name>
+        <qualifiedname>rcsc::Rect2D::setLength</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>set a new x-range </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="533" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="533" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a34976bf20ec8124e6a360a994787bb42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setWidth</definition>
+        <argsstring>(const double &amp;width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>rcsc::Rect2D::setWidth</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>set a new y-range </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="545" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="545" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1adc18d307d5c57034a24ebd85a9e67a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setSize</definition>
+        <argsstring>(const double &amp;length, const double &amp;width)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>rcsc::Rect2D::setSize</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>set a new size </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="558" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="558" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a273bbf3b76e056dcd08495e47bf3bdb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::setSize</definition>
+        <argsstring>(const Size2D &amp;size)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>rcsc::Rect2D::setSize</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_size2_d" kindref="compound">Size2D</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>set a new size </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="571" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="571" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ad4fc967b95e802849b830c9c745c5424" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::Rect2D::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>rcsc::Rect2D::isValid</qualifiedname>
+        <briefdescription>
+<para>check if this rectangle is valid or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the area of this rectangle is not 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="581" column="10" bodyfile="ui/geom/rect_2d.h" bodystart="581" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a6c728aa47f6ded2ce493b954a90dfe3d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double rcsc::Rect2D::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <qualifiedname>rcsc::Rect2D::area</qualifiedname>
+        <reimplements refid="classrcsc_1_1_region2_d_1a2502791cb8472d99df26d9e216e74357">area</reimplements>
+        <briefdescription>
+<para>get the area value of this rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>value of the area </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="592" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="592" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a2b392cff448b228ea0f31abe6dbf18a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool rcsc::Rect2D::contains</definition>
+        <argsstring>(const Vector2D &amp;point) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>rcsc::Rect2D::contains</qualifiedname>
+        <reimplements refid="classrcsc_1_1_region2_d_1a5be3cd9e4045fd957aef13b7be798774">contains</reimplements>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>check if point is within this region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="603" column="10" bodyfile="ui/geom/rect_2d.h" bodystart="603" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aa77a36687a1d73493753ef10796a1166" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::Rect2D::contains</definition>
+        <argsstring>(const Vector2D &amp;point, const double &amp;error_thr) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>rcsc::Rect2D::contains</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>error_thr</declname>
+        </param>
+        <briefdescription>
+<para>check if point is within this region with error threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error_thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error threshold </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="617" column="10" bodyfile="ui/geom/rect_2d.h" bodystart="617" bodyend="624"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a2fc489d02d46cacc3548624a079f5503" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Rect2D::left</definition>
+        <argsstring>() const</argsstring>
+        <name>left</name>
+        <qualifiedname>rcsc::Rect2D::left</qualifiedname>
+        <briefdescription>
+<para>get the left x coordinate of this rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x coordinate value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="631" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="631" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a4c66c2cb57a67fbbe7a8b5a10f5593c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::right</definition>
+        <argsstring>() const</argsstring>
+        <name>right</name>
+        <qualifiedname>rcsc::Rect2D::right</qualifiedname>
+        <briefdescription>
+<para>get the right x coordinate of this rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x coordinate value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="640" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="640" bodyend="643"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a35a4b78aabc06e593be66915a871b349" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Rect2D::top</definition>
+        <argsstring>() const</argsstring>
+        <name>top</name>
+        <qualifiedname>rcsc::Rect2D::top</qualifiedname>
+        <briefdescription>
+<para>get the top y coordinate of this rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>y coordinate value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="650" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="650" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a407ce2c016609bae2b26166046e8519b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::bottom</definition>
+        <argsstring>() const</argsstring>
+        <name>bottom</name>
+        <qualifiedname>rcsc::Rect2D::bottom</qualifiedname>
+        <briefdescription>
+<para>get the bottom y coordinate of this rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>y coordinate value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="659" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="659" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a48fe00ac368257dad5fec2827df667e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::minX</definition>
+        <argsstring>() const</argsstring>
+        <name>minX</name>
+        <qualifiedname>rcsc::Rect2D::minX</qualifiedname>
+        <briefdescription>
+<para>get minimum value of x coordinate of this rectangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x coordinate value (equivalent to <ref refid="classrcsc_1_1_rect2_d_1a2fc489d02d46cacc3548624a079f5503" kindref="member">left()</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="668" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="668" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aa144d43739d795fba54db66df0c1767c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::maxX</definition>
+        <argsstring>() const</argsstring>
+        <name>maxX</name>
+        <qualifiedname>rcsc::Rect2D::maxX</qualifiedname>
+        <briefdescription>
+<para>get maximum value of x coordinate of this rectangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x coordinate value (equivalent to <ref refid="classrcsc_1_1_rect2_d_1a4c66c2cb57a67fbbe7a8b5a10f5593c1" kindref="member">right()</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="677" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="677" bodyend="680"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1acde3f368bd007cc3dfc75ce3240ebfee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::minY</definition>
+        <argsstring>() const</argsstring>
+        <name>minY</name>
+        <qualifiedname>rcsc::Rect2D::minY</qualifiedname>
+        <briefdescription>
+<para>get minimum value of y coordinate of this rectangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>y coordinate value (equivalent to <ref refid="classrcsc_1_1_rect2_d_1a35a4b78aabc06e593be66915a871b349" kindref="member">top()</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="686" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="686" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8dff99190bc14568ae0cbe6356810d2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Rect2D::maxY</definition>
+        <argsstring>() const</argsstring>
+        <name>maxY</name>
+        <qualifiedname>rcsc::Rect2D::maxY</qualifiedname>
+        <briefdescription>
+<para>get maximum value of y coordinate of this rectangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>y coordinate value (equivalent to <ref refid="classrcsc_1_1_rect2_d_1a407ce2c016609bae2b26166046e8519b" kindref="member">bottom()</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="695" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="695" bodyend="698"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8bcceb9282c47198411421e4e9ecaf03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_size2_d" kindref="compound">Size2D</ref> &amp;</type>
+        <definition>const Size2D &amp; rcsc::Rect2D::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>rcsc::Rect2D::size</qualifiedname>
+        <briefdescription>
+<para>get the XY range of this rectangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>size object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="705" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="705" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1ab4d9792fc5ec31d3dce7413ddc1bdfe5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Rect2D::center</definition>
+        <argsstring>() const</argsstring>
+        <name>center</name>
+        <qualifiedname>rcsc::Rect2D::center</qualifiedname>
+        <briefdescription>
+<para>get center point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coordinate value by vector object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="714" column="14" bodyfile="ui/geom/rect_2d.h" bodystart="714" bodyend="718"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aa9beeca3aee229669212c431ab67c03e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>const Vector2D &amp; rcsc::Rect2D::topLeft</definition>
+        <argsstring>() const</argsstring>
+        <name>topLeft</name>
+        <qualifiedname>rcsc::Rect2D::topLeft</qualifiedname>
+        <briefdescription>
+<para>get the top-left corner point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coordiante value by vector object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="725" column="15" bodyfile="ui/geom/rect_2d.h" bodystart="725" bodyend="728"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a3e3871bb993de285502664576feb1cde" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Rect2D::topRight</definition>
+        <argsstring>() const</argsstring>
+        <name>topRight</name>
+        <qualifiedname>rcsc::Rect2D::topRight</qualifiedname>
+        <briefdescription>
+<para>get the top-right corner point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coordiante value by vector object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="734" column="14" bodyfile="ui/geom/rect_2d.h" bodystart="734" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a2c8f4fc7d74930246e75ec830b83fa65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Rect2D::bottomLeft</definition>
+        <argsstring>() const</argsstring>
+        <name>bottomLeft</name>
+        <qualifiedname>rcsc::Rect2D::bottomLeft</qualifiedname>
+        <briefdescription>
+<para>get the bottom-left corner point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coordiante value by vector object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="743" column="14" bodyfile="ui/geom/rect_2d.h" bodystart="743" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a784edcde1c6a4a38df3867f9dd38e3de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Rect2D::bottomRight</definition>
+        <argsstring>() const</argsstring>
+        <name>bottomRight</name>
+        <qualifiedname>rcsc::Rect2D::bottomRight</qualifiedname>
+        <briefdescription>
+<para>get the bottom-right corner point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coordiante value by vector object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="752" column="14" bodyfile="ui/geom/rect_2d.h" bodystart="752" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a74a2182e4bb3fa341f249e771c06ec41" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Rect2D::leftEdge</definition>
+        <argsstring>() const</argsstring>
+        <name>leftEdge</name>
+        <qualifiedname>rcsc::Rect2D::leftEdge</qualifiedname>
+        <briefdescription>
+<para>get the left edge line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="761" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="761" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aadb1be2d363e5afdba2a890f654e9ff9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Rect2D::rightEdge</definition>
+        <argsstring>() const</argsstring>
+        <name>rightEdge</name>
+        <qualifiedname>rcsc::Rect2D::rightEdge</qualifiedname>
+        <briefdescription>
+<para>get the right edge line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="770" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="770" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a8bb0f0b5a46f01def93f44f93f207bba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Rect2D::topEdge</definition>
+        <argsstring>() const</argsstring>
+        <name>topEdge</name>
+        <qualifiedname>rcsc::Rect2D::topEdge</qualifiedname>
+        <briefdescription>
+<para>get the top edge line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="779" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="779" bodyend="782"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a35456fa3d98e105ca6bdcd93e1d42c13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Rect2D::bottomEdge</definition>
+        <argsstring>() const</argsstring>
+        <name>bottomEdge</name>
+        <qualifiedname>rcsc::Rect2D::bottomEdge</qualifiedname>
+        <briefdescription>
+<para>get the bottom edge line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="788" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="788" bodyend="791"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1af800c2559171e0887338bc0f7e891d3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rcsc::Rect2D::intersection</definition>
+        <argsstring>(const Line2D &amp;line, Vector2D *sol1, Vector2D *sol2) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Rect2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol1</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol2</declname>
+        </param>
+        <briefdescription>
+<para>calculate intersection point with line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considerd line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 1st solution variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 2nd solution variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of intersection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="800" column="9" bodyfile="ui/geom/rect_2d.cpp" bodystart="154" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a134405fb80cbb547e4d41edcf0c7ce6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rcsc::Rect2D::intersection</definition>
+        <argsstring>(const Ray2D &amp;ray, Vector2D *sol1, Vector2D *sol2) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Rect2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_ray2_d" kindref="compound">Ray2D</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol1</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol2</declname>
+        </param>
+        <briefdescription>
+<para>calculate intersection point with ray. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considerd ray line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 1st solution variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 2nd solution variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of intersection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="811" column="9" bodyfile="ui/geom/rect_2d.cpp" bodystart="221" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a3d6ee928260bab9b7a9721cefbd3409e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rcsc::Rect2D::intersection</definition>
+        <argsstring>(const Segment2D &amp;segment, Vector2D *sol1, Vector2D *sol2) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Rect2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_segment2_d" kindref="compound">Segment2D</ref> &amp;</type>
+          <declname>segment</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol1</declname>
+        </param>
+        <param>
+          <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> *</type>
+          <declname>sol2</declname>
+        </param>
+        <briefdescription>
+<para>calculate intersection point with line segment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>segment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considerd line segment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 1st solution variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sol2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the 2nd solution variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of intersection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="822" column="9" bodyfile="ui/geom/rect_2d.cpp" bodystart="261" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1aca61b0a743bcb8f326200e9ed158602b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::operator&amp;=</definition>
+        <argsstring>(const Rect2D &amp;other)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>rcsc::Rect2D::operator&amp;=</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>convert this rectangle to the intersection rectangle with other. If no intersection between rectangles, this rectangle becomes empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="833" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="302" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a36a9c47fe7041c641528ae473d8a8196" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>Rect2D rcsc::Rect2D::intersected</definition>
+        <argsstring>(const Rect2D &amp;other) const</argsstring>
+        <name>intersected</name>
+        <qualifiedname>rcsc::Rect2D::intersected</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>get the intersected rectangle of this rectangle and the other rectangle. This method is equivalent to operator &apos;&amp;&apos;. If no intersection between rectangles, empty rectangle is returned. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other rectangle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new rectangle instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="842" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="842" bodyend="845"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1afbf5922dcf9469fb56d88cee16bda389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::operator|=</definition>
+        <argsstring>(const Rect2D &amp;other)</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>rcsc::Rect2D::operator|=</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>convert this rectangle to the united rectangle with other. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="853" column="13" bodyfile="ui/geom/rect_2d.cpp" bodystart="335" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a83cf206e1da747db46a0595d4b892c22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>Rect2D rcsc::Rect2D::united</definition>
+        <argsstring>(const Rect2D &amp;other) const</argsstring>
+        <name>united</name>
+        <qualifiedname>rcsc::Rect2D::united</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>get the united rectangle of this rectangle and the other rectangle. This method is equivalent to operator &apos;|&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other rectangle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new rectangle instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="861" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="861" bodyend="864"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a7abc05c63ec9cef64d3cf5bbce8e0be3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Rect2D::Rect2D</definition>
+        <argsstring>(const double &amp;left_x, const double &amp;top_y, const double &amp;length, const double &amp;width)</argsstring>
+        <name>Rect2D</name>
+        <qualifiedname>rcsc::Rect2D::Rect2D</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>left_x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>top_y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>constructor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length (x-range) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width (y-range) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="83" column="5" bodyfile="ui/geom/rect_2d.h" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a5db539915dd5a06d181b2ad547d05995" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Rect2D::Rect2D</definition>
+        <argsstring>(const Vector2D &amp;top_left, const double &amp;length, const double &amp;width)</argsstring>
+        <name>Rect2D</name>
+        <qualifiedname>rcsc::Rect2D::Rect2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>constructor with variables </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="97" column="5" bodyfile="ui/geom/rect_2d.h" bodystart="97" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a7cd62dc1cda222278b63a8c1dc7712b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::assign</definition>
+        <argsstring>(const double &amp;left_x, const double &amp;top_y, const double &amp;length, const double &amp;width)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Rect2D::assign</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>left_x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>top_y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>assign new values </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="213" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="213" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1abff46055c8c7a35d10114fc85c20f44d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref> &amp;</type>
+        <definition>const Rect2D &amp; rcsc::Rect2D::assign</definition>
+        <argsstring>(const Vector2D &amp;top_left, const double &amp;length, const double &amp;width)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Rect2D::assign</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>assign new values </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const referenct to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="231" column="13" bodyfile="ui/geom/rect_2d.h" bodystart="231" bodyend="238"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a6b2449dbd686f523d164f524990ee9d9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>static Rect2D rcsc::Rect2D::from_center</definition>
+        <argsstring>(const Vector2D &amp;center, const double &amp;length, const double &amp;width)</argsstring>
+        <name>from_center</name>
+        <qualifiedname>rcsc::Rect2D::from_center</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>create rectangle with center point and size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>center point of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length(x-range) of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width(y-range) of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="147" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="147" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a63d631f4ed9a67c5e1a375212d3431d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>static Rect2D rcsc::Rect2D::from_center</definition>
+        <argsstring>(const double &amp;center_x, const double &amp;center_y, const double &amp;length, const double &amp;width)</argsstring>
+        <name>from_center</name>
+        <qualifiedname>rcsc::Rect2D::from_center</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>center_x</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>center_y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>create rectangle with center point and size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value of center point of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>center_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y value of center point of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length(x-range) of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width(y-range) of new rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="165" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="165" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a01a5da32cdcc93c81c5c96eb3c231c1d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>static Rect2D rcsc::Rect2D::from_corners</definition>
+        <argsstring>(const Vector2D &amp;top_left, const Vector2D &amp;bottom_right)</argsstring>
+        <name>from_corners</name>
+        <qualifiedname>rcsc::Rect2D::from_corners</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>bottom_right</declname>
+        </param>
+        <briefdescription>
+<para>create rectangle with 2 corner points. just call one of constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>top_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top left vertex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottom_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bottom right vertex </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="182" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="182" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_rect2_d_1a93e05f44bef99cb02b1bc0f4dffa1cbb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_rect2_d" kindref="compound">Rect2D</ref></type>
+        <definition>static Rect2D rcsc::Rect2D::from_corners</definition>
+        <argsstring>(const double &amp;l, const double &amp;t, const double &amp;r, const double &amp;b)</argsstring>
+        <name>from_corners</name>
+        <qualifiedname>rcsc::Rect2D::from_corners</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>create rectangle with 2 corner points. just call one of constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>top y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bottom y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/rect_2d.h" line="196" column="12" bodyfile="ui/geom/rect_2d.h" bodystart="196" bodyend="202"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>2D rectangle regin class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The model and naming rules are depend on soccer simulator environment -34.0 | | -52.5 ---<mdash/>+----<mdash/> 52.5 | | 34.0 </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>rcsc::Rect2D</label>
+        <link refid="classrcsc_1_1_rect2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rcsc::Region2D</label>
+        <link refid="classrcsc_1_1_region2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>rcsc::Rect2D</label>
+        <link refid="classrcsc_1_1_rect2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rcsc::Region2D</label>
+        <link refid="classrcsc_1_1_region2_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="ui/geom/rect_2d.h" line="58" column="1" bodyfile="ui/geom/rect_2d.h" bodystart="59" bodyend="865"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_rect2_d_1a6c728aa47f6ded2ce493b954a90dfe3d" prot="public" virt="virtual"><scope>rcsc::Rect2D</scope><name>area</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a7cd62dc1cda222278b63a8c1dc7712b2" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1abff46055c8c7a35d10114fc85c20f44d" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a9f2ea459a31ee54cb56ab9557d69febf" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a407ce2c016609bae2b26166046e8519b" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>bottom</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a35456fa3d98e105ca6bdcd93e1d42c13" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>bottomEdge</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a2c8f4fc7d74930246e75ec830b83fa65" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>bottomLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a784edcde1c6a4a38df3867f9dd38e3de" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>bottomRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ab4d9792fc5ec31d3dce7413ddc1bdfe5" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>center</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a2b392cff448b228ea0f31abe6dbf18a2" prot="public" virt="virtual"><scope>rcsc::Rect2D</scope><name>contains</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aa77a36687a1d73493753ef10796a1166" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>contains</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a6b2449dbd686f523d164f524990ee9d9" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>from_center</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a63d631f4ed9a67c5e1a375212d3431d5" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>from_center</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a01a5da32cdcc93c81c5c96eb3c231c1d" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>from_corners</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a93e05f44bef99cb02b1bc0f4dffa1cbb" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>from_corners</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a36a9c47fe7041c641528ae473d8a8196" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>intersected</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1af800c2559171e0887338bc0f7e891d3b" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a134405fb80cbb547e4d41edcf0c7ce6d" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a3d6ee928260bab9b7a9721cefbd3409e" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ad4fc967b95e802849b830c9c745c5424" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>isValid</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a2fc489d02d46cacc3548624a079f5503" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>left</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a74a2182e4bb3fa341f249e771c06ec41" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>leftEdge</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ac1d612ee289d88d40efa976d8293aa46" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>M_size</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ab1db5ca02e48ca75b74f70f5e9e4402c" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>M_top_left</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aa144d43739d795fba54db66df0c1767c" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>maxX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8dff99190bc14568ae0cbe6356810d2a" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>maxY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a48fe00ac368257dad5fec2827df667e2" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>minX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1acde3f368bd007cc3dfc75ce3240ebfee" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>minY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1acc90b8e16b08e09967c1a16a54ca1b63" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveBottom</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ac75803c09a6a7648c577b11f84c8c078" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveBottomRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aca32db28e04d31ad179bdf5588bf113b" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveCenter</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a50fdd7d3b2dff3b755f845eaf4790a99" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ac74be6148e8584017cc6d7f08bc1d292" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveMaxX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1adcc9b70fbc8ea76631ecc0da69766915" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveMaxY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ac8d706745c83da842307a7a0d675bf68" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveMinX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ae99f42f96c10ef943cb5404cead69303" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveMinY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aeb2b7ee1741494b4f48569348ffe8e23" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a859b30a98c245410f96c102f2606f445" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveTop</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a4eefd2da71d6e05ffa132c125463bc7d" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>moveTopLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aca61b0a743bcb8f326200e9ed158602b" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>operator&amp;=</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1afbf5922dcf9469fb56d88cee16bda389" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>operator|=</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8e590a45bd54a388969bffc136835726" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Rect2D</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a7abc05c63ec9cef64d3cf5bbce8e0be3" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Rect2D</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a5db539915dd5a06d181b2ad547d05995" prot="private" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Rect2D</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a9912890c53e4f8dfdd366dd9d72e032e" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Rect2D</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a0a890f66406d003cc21d12269285747e" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Rect2D</name></member>
+      <member refid="classrcsc_1_1_region2_d_1a577990d3a9f85a96ec51c412bd47fb1d" prot="protected" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>Region2D</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a4c66c2cb57a67fbbe7a8b5a10f5593c1" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>right</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aadb1be2d363e5afdba2a890f654e9ff9" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>rightEdge</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a96a6a62525692923352241078b32d59a" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setBottom</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a69fdd4ef177983b6dd93d4ca173426b4" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setBottomRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a834401e31f59b2420b50b1ec609b455e" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setBottomRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a9b8d9b6be58e83768bb4a84b5d35bf8d" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a6221b551ab83f166d699a00dcc6e28a1" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setLength</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a89055ff21be6bd295467d63c22e13833" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setMaxX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1af1f8092ebe879af8e864eedb1b48abf5" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setMaxY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a3a29022e9aaa5b26e4e9ec96966a50b0" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setMinX</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1adbee2f79ce0f30304b8c080c433fc4af" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setMinY</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a817559d1a85bebd8752baf45f3a82da9" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1adc18d307d5c57034a24ebd85a9e67a93" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setSize</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a273bbf3b76e056dcd08495e47bf3bdb0" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setSize</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1ae080db592934357047998e2253837b3c" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setTop</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8d311ff4486d6c71d69b4ce9782c3f26" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setTopLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8f9c1715e8d78714b8a0100786154dd7" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setTopLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a34976bf20ec8124e6a360a994787bb42" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>setWidth</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8bcceb9282c47198411421e4e9ecaf03" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>size</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a35a4b78aabc06e593be66915a871b349" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>top</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a8bb0f0b5a46f01def93f44f93f207bba" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>topEdge</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1aa9beeca3aee229669212c431ab67c03e" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>topLeft</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a3e3871bb993de285502664576feb1cde" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>topRight</name></member>
+      <member refid="classrcsc_1_1_rect2_d_1a83cf206e1da747db46a0595d4b892c22" prot="public" virt="non-virtual"><scope>rcsc::Rect2D</scope><name>united</name></member>
+      <member refid="classrcsc_1_1_region2_d_1abc34bfdd9e0683003012f25ae7a2512b" prot="public" virt="virtual"><scope>rcsc::Rect2D</scope><name>~Region2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

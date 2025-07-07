@@ -1,0 +1,1237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_angle_deg" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::AngleDeg</compoundname>
+    <includes refid="angle__deg_8h" local="no">angle_deg.h</includes>
+    <innerclass refid="classrcsc_1_1_angle_deg_1_1_degree_cmp" prot="public">rcsc::AngleDeg::DegreeCmp</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1a399a4fbb73805ff5a6ce6c4f629df72e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::M_degree</definition>
+        <argsstring></argsstring>
+        <name>M_degree</name>
+        <qualifiedname>rcsc::AngleDeg::M_degree</qualifiedname>
+        <briefdescription>
+<para>degree, NOT radian </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="56" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1aca58254a104e4800a8449a13629bfcd3" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::AngleDeg::EPSILON</definition>
+        <argsstring></argsstring>
+        <name>EPSILON</name>
+        <qualifiedname>rcsc::AngleDeg::EPSILON</qualifiedname>
+        <initializer>= 1.0e-5</initializer>
+        <briefdescription>
+<para>epsilon value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="60" column="25" bodyfile="ui/geom/angle_deg.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1a7faf54c0f138b67e3e44df23036c504b" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::AngleDeg::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <qualifiedname>rcsc::AngleDeg::PI</qualifiedname>
+        <initializer>= <ref refid="angle__deg_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref></initializer>
+        <briefdescription>
+<para>pi valur </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="63" column="25" bodyfile="ui/geom/angle_deg.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1ab38f16c64201c06fd9ee104ff9f7d858" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::AngleDeg::TWO_PI</definition>
+        <argsstring></argsstring>
+        <name>TWO_PI</name>
+        <qualifiedname>rcsc::AngleDeg::TWO_PI</qualifiedname>
+        <initializer>= <ref refid="angle__deg_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref> * 2.0</initializer>
+        <briefdescription>
+<para>2*pi valur </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="65" column="25" bodyfile="ui/geom/angle_deg.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1a9ef1030928deba0502e075b7ecb97646" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::AngleDeg::DEG2RAD</definition>
+        <argsstring></argsstring>
+        <name>DEG2RAD</name>
+        <qualifiedname>rcsc::AngleDeg::DEG2RAD</qualifiedname>
+        <initializer>= <ref refid="angle__deg_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref> / 180.0</initializer>
+        <briefdescription>
+<para>constant variable to convert DEGREE to RADIAN. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="67" column="25" bodyfile="ui/geom/angle_deg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_angle_deg_1abed2fa0e29521eac96ad36ba3b5bb331" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::AngleDeg::RAD2DEG</definition>
+        <argsstring></argsstring>
+        <name>RAD2DEG</name>
+        <qualifiedname>rcsc::AngleDeg::RAD2DEG</qualifiedname>
+        <initializer>= 180.0 / <ref refid="angle__deg_8cpp_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref></initializer>
+        <briefdescription>
+<para>constant variable to convert RADIAN to DEGREE. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="69" column="25" bodyfile="ui/geom/angle_deg.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ac0fe04cd5fdd5a51a567ee3195e76a2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::AngleDeg::AngleDeg</definition>
+        <argsstring>()</argsstring>
+        <name>AngleDeg</name>
+        <qualifiedname>rcsc::AngleDeg::AngleDeg</qualifiedname>
+        <briefdescription>
+<para>default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="72" column="5" bodyfile="ui/geom/angle_deg.h" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a6acec5b65918e1ae183f548ddbf90651" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::AngleDeg::AngleDeg</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>AngleDeg</name>
+        <qualifiedname>rcsc::AngleDeg::AngleDeg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>constructor with value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>NO explicit. This means that we can use this class as follows. <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> angle = 3.0; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="82" column="5" bodyfile="ui/geom/angle_deg.h" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a9b1fbb335e6d910a584f4efbc8fa5823" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator=</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rcsc::AngleDeg::operator=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>operator substitution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initialization parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="94" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="94" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a2d565b488e01f61f5ddc99a90caa9bab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::AngleDeg::degree</definition>
+        <argsstring>() const</argsstring>
+        <name>degree</name>
+        <qualifiedname>rcsc::AngleDeg::degree</qualifiedname>
+        <briefdescription>
+<para>get value of this angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to the member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="133" column="13" bodyfile="ui/geom/angle_deg.h" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ade2a121d5170ef456c1fbd2f54094383" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::abs</definition>
+        <argsstring>() const</argsstring>
+        <name>abs</name>
+        <qualifiedname>rcsc::AngleDeg::abs</qualifiedname>
+        <briefdescription>
+<para>get absolute value of this angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>absolute value of <ref refid="classrcsc_1_1_angle_deg_1a2d565b488e01f61f5ddc99a90caa9bab" kindref="member">degree()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="142" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a1c5f8ecf0f327a23b71ffb68e8be49f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::radian</definition>
+        <argsstring>() const</argsstring>
+        <name>radian</name>
+        <qualifiedname>rcsc::AngleDeg::radian</qualifiedname>
+        <briefdescription>
+<para>get RADIAN value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>radian value of <ref refid="classrcsc_1_1_angle_deg_1a2d565b488e01f61f5ddc99a90caa9bab" kindref="member">degree()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="150" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1aa21532a813eac53b4968f45e9353fef2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref></type>
+        <definition>AngleDeg rcsc::AngleDeg::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>rcsc::AngleDeg::operator-</qualifiedname>
+        <briefdescription>
+<para>get new <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> multiplyed by -1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>new <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="166" column="14" bodyfile="ui/geom/angle_deg.h" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a5d58f795a74bf1b59ff84c6bebf5b7cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator+=</definition>
+        <argsstring>(const AngleDeg &amp;angle)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>rcsc::AngleDeg::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>operator += with <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>added value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="177" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a64c6fffdc1f17ee0d8fd36f9947edfbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator+=</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>rcsc::AngleDeg::operator+=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>operator += with double </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>added value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="189" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="189" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a86382ec87084051443d31e331dfaa89a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator-=</definition>
+        <argsstring>(const AngleDeg &amp;angle)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>rcsc::AngleDeg::operator-=</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>operator -= with <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>subtract argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="201" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ae8b75de687d0a9555946dc655880cbf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator-=</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>rcsc::AngleDeg::operator-=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>operator -= with double </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>subtract argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="213" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="213" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a7d1152ed7ab93ed6fef82bd6d8b6ed87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator*=</definition>
+        <argsstring>(const double &amp;scalar)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>rcsc::AngleDeg::operator*=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>operator *= </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>multiply argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="225" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="225" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ada84fb1605e6868beddf26ad96bbb216" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::operator/=</definition>
+        <argsstring>(const double &amp;scalar)</argsstring>
+        <name>operator/=</name>
+        <qualifiedname>rcsc::AngleDeg::operator/=</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>operator /= </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>division argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="237" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="237" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ae4b27ba472d04c68e66590a3157e1ca9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::AngleDeg::isLeftOf</definition>
+        <argsstring>(const AngleDeg &amp;angle) const</argsstring>
+        <name>isLeftOf</name>
+        <qualifiedname>rcsc::AngleDeg::isLeftOf</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>check if this angle is left of &apos;angle&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="253" column="10" bodyfile="ui/geom/angle_deg.h" bodystart="253" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a276a0f172a609711d1ecb1814ce1c14c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::AngleDeg::isLeftEqualOf</definition>
+        <argsstring>(const AngleDeg &amp;angle) const</argsstring>
+        <name>isLeftEqualOf</name>
+        <qualifiedname>rcsc::AngleDeg::isLeftEqualOf</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>check if this angle is left or equal of &apos;angle&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="265" column="10" bodyfile="ui/geom/angle_deg.h" bodystart="265" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a76145d091b6a7889dad1c49af51b4cac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::AngleDeg::isRightOf</definition>
+        <argsstring>(const AngleDeg &amp;angle) const</argsstring>
+        <name>isRightOf</name>
+        <qualifiedname>rcsc::AngleDeg::isRightOf</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>check if this angle is right of &apos;angle&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="277" column="10" bodyfile="ui/geom/angle_deg.h" bodystart="277" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ab88ab3cb3407661d356ec25cb04be390" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::AngleDeg::isRightEqualOf</definition>
+        <argsstring>(const AngleDeg &amp;angle) const</argsstring>
+        <name>isRightEqualOf</name>
+        <qualifiedname>rcsc::AngleDeg::isRightEqualOf</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>check if this angle is right or equal of &apos;angle&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="289" column="10" bodyfile="ui/geom/angle_deg.h" bodystart="289" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a420766fcd9c822487a84c5e9f5a4b2ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::cos</definition>
+        <argsstring>() const</argsstring>
+        <name>cos</name>
+        <qualifiedname>rcsc::AngleDeg::cos</qualifiedname>
+        <briefdescription>
+<para>calculate cosine </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>cosine value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="301" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ade2598d25b98ea1e7e7b84d774d5d4af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::sin</definition>
+        <argsstring>() const</argsstring>
+        <name>sin</name>
+        <qualifiedname>rcsc::AngleDeg::sin</qualifiedname>
+        <briefdescription>
+<para>calculate sine </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>sine value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="310" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a0ebf74706bb163d70703f5f8e21d18ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::AngleDeg::tan</definition>
+        <argsstring>() const</argsstring>
+        <name>tan</name>
+        <qualifiedname>rcsc::AngleDeg::tan</qualifiedname>
+        <briefdescription>
+<para>calculate tarngetn </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>tangent value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="319" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ae8d2a289c5241b12b7575d5aaf9e22be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::AngleDeg::isWithin</definition>
+        <argsstring>(const AngleDeg &amp;left, const AngleDeg &amp;right) const</argsstring>
+        <name>isWithin</name>
+        <qualifiedname>rcsc::AngleDeg::isWithin</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>check if this angle is within [left, right] (turn clockwise). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this is within [left, right]. else false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="330" column="10" bodyfile="ui/geom/angle_deg.cpp" bodystart="60" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ae11973230dd44da1ab33aa6464d67656" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rcsc::AngleDeg::sinMinMax</definition>
+        <argsstring>(const double &amp;angle_err, double *minsin, double *maxsin) const</argsstring>
+        <name>sinMinMax</name>
+        <qualifiedname>rcsc::AngleDeg::sinMinMax</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>angle_err</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>minsin</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>maxsin</declname>
+        </param>
+        <briefdescription>
+<para>calculate min/max sine value with angle error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error value of angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minsin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the solution variable to store the min value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxsin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the solution variable to store the max value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="339" column="10" bodyfile="ui/geom/angle_deg.cpp" bodystart="90" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ac77bf37ae142bbc3bf7575c0de9b4576" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rcsc::AngleDeg::cosMinMax</definition>
+        <argsstring>(const double &amp;angle_err, double *mincos, double *maxcos) const</argsstring>
+        <name>cosMinMax</name>
+        <qualifiedname>rcsc::AngleDeg::cosMinMax</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>angle_err</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>mincos</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>maxcos</declname>
+        </param>
+        <briefdescription>
+<para>calculate min/max cosine value of angle with angle error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error value of angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mincos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the solution variable to store the min value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxcos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the solution variable to store the max value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="349" column="10" bodyfile="ui/geom/angle_deg.cpp" bodystart="135" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ab952552052df55585da22402c5e916b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; rcsc::AngleDeg::print</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>print</name>
+        <qualifiedname>rcsc::AngleDeg::print</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>output value to ostream </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the output stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to the output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="522" column="19" bodyfile="ui/geom/angle_deg.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ac64e1b01f390845b5ac6dc54daf8358f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; rcsc::AngleDeg::printRound</definition>
+        <argsstring>(std::ostream &amp;os, const double &amp;step=0.1) const</argsstring>
+        <name>printRound</name>
+        <qualifiedname>rcsc::AngleDeg::printRound</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>step</declname>
+          <defval>0.1</defval>
+        </param>
+        <briefdescription>
+<para>output rounded value to ostream </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to the output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>round step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to the output stream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="533" column="19" bodyfile="ui/geom/angle_deg.h" bodystart="533" bodyend="537"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1acbe55489830885fb08c1129ee0009fdd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+        <definition>const AngleDeg &amp; rcsc::AngleDeg::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <qualifiedname>rcsc::AngleDeg::normalize</qualifiedname>
+        <briefdescription>
+<para>normalize the value to [-180, 180]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const reference to itself. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="106" column="15" bodyfile="ui/geom/angle_deg.h" bodystart="106" bodyend="124"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a9b95d3816a52bec51cba5de0bc5dbbf4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::normalize_angle</definition>
+        <argsstring>(double dir)</argsstring>
+        <name>normalize_angle</name>
+        <qualifiedname>rcsc::AngleDeg::normalize_angle</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>static utility. normalize angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle value to be normalized </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>normalized angle value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="363" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="363" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a50cf52917a599a30812f6bd7e809ad56" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::rad2deg</definition>
+        <argsstring>(const double &amp;rad)</argsstring>
+        <name>rad2deg</name>
+        <qualifiedname>rcsc::AngleDeg::rad2deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+<para>static utility. convert radian to degree </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radian value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>degree value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="390" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a2e7b10ee79ddc18c11424067165ac462" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::deg2rad</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>deg2rad</name>
+        <qualifiedname>rcsc::AngleDeg::deg2rad</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>static utility. convert degree to radian </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>degree value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>radian value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="402" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a00461994a2f69b0184685e7b5d17b3c9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::cos_deg</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>cos_deg</name>
+        <qualifiedname>rcsc::AngleDeg::cos_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate cosine value for degree angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>degree value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cosine value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="414" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="414" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a65333b50ba5419110500d997aec2e24d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::sin_deg</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>sin_deg</name>
+        <qualifiedname>rcsc::AngleDeg::sin_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate sine value for degree angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>degree value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sine value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="426" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="426" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ad2215f18a2238dd44c30562263ecd80f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::tan_deg</definition>
+        <argsstring>(const double &amp;deg)</argsstring>
+        <name>tan_deg</name>
+        <qualifiedname>rcsc::AngleDeg::tan_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate tangent value for degree angle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>degree value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>tangent value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="438" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="438" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1af86015fd28c1f0ed2014c45e48ea8a2b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::acos_deg</definition>
+        <argsstring>(const double &amp;cosine)</argsstring>
+        <name>acos_deg</name>
+        <qualifiedname>rcsc::AngleDeg::acos_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>cosine</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate arc cosine value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cosine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cosine value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arc cosine value, that is degree type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="450" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="450" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1aac65c276bcb77b6c8b0171ecb0e36327" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::asin_deg</definition>
+        <argsstring>(const double &amp;sine)</argsstring>
+        <name>asin_deg</name>
+        <qualifiedname>rcsc::AngleDeg::asin_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>sine</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate arc sine value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sine value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arc sine value, that is degree type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="466" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="466" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a4a3f8708dc159df949e3468ffa9a7aad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::atan_deg</definition>
+        <argsstring>(const double &amp;tangent)</argsstring>
+        <name>atan_deg</name>
+        <qualifiedname>rcsc::AngleDeg::atan_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tangent</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate arc tangent value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tangent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tangent value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arc tangent value, that is degree. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="482" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="482" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1a8ca871ed02458c85638b9a6f594d4e6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double rcsc::AngleDeg::atan2_deg</definition>
+        <argsstring>(const double &amp;y, const double &amp;x)</argsstring>
+        <name>atan2_deg</name>
+        <qualifiedname>rcsc::AngleDeg::atan2_deg</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>static utility. calculate arc tangent value from XY </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>coordinate Y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>coordinate X </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>arc tangent value, that is degree type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="495" column="12" bodyfile="ui/geom/angle_deg.h" bodystart="495" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_angle_deg_1ace1993737f1792f67323e78fd150db0c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref></type>
+        <definition>AngleDeg rcsc::AngleDeg::bisect</definition>
+        <argsstring>(const AngleDeg &amp;left, const AngleDeg &amp;right)</argsstring>
+        <name>bisect</name>
+        <qualifiedname>rcsc::AngleDeg::bisect</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>static utility that returns bisect angle of [left, right]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left start angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right end angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bisect angle</para>
+</simplesect>
+this methid can take obtuse angle. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/angle_deg.h" line="512" column="14" bodyfile="ui/geom/angle_deg.cpp" bodystart="177" bodyend="193"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>degree wrapper class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/angle_deg.h" line="45" column="1" bodyfile="ui/geom/angle_deg.h" bodystart="45" bodyend="555"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_angle_deg_1ade2a121d5170ef456c1fbd2f54094383" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>abs</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1af86015fd28c1f0ed2014c45e48ea8a2b" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>acos_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ac0fe04cd5fdd5a51a567ee3195e76a2f" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>AngleDeg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a6acec5b65918e1ae183f548ddbf90651" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>AngleDeg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1aac65c276bcb77b6c8b0171ecb0e36327" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>asin_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a8ca871ed02458c85638b9a6f594d4e6b" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>atan2_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a4a3f8708dc159df949e3468ffa9a7aad" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>atan_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ace1993737f1792f67323e78fd150db0c" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>bisect</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a420766fcd9c822487a84c5e9f5a4b2ec" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>cos</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a00461994a2f69b0184685e7b5d17b3c9" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>cos_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ac77bf37ae142bbc3bf7575c0de9b4576" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>cosMinMax</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a9ef1030928deba0502e075b7ecb97646" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>DEG2RAD</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a2e7b10ee79ddc18c11424067165ac462" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>deg2rad</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a2d565b488e01f61f5ddc99a90caa9bab" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>degree</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1aca58254a104e4800a8449a13629bfcd3" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>EPSILON</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a276a0f172a609711d1ecb1814ce1c14c" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>isLeftEqualOf</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ae4b27ba472d04c68e66590a3157e1ca9" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>isLeftOf</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ab88ab3cb3407661d356ec25cb04be390" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>isRightEqualOf</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a76145d091b6a7889dad1c49af51b4cac" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>isRightOf</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ae8d2a289c5241b12b7575d5aaf9e22be" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>isWithin</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a399a4fbb73805ff5a6ce6c4f629df72e" prot="private" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>M_degree</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1acbe55489830885fb08c1129ee0009fdd" prot="private" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>normalize</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a9b95d3816a52bec51cba5de0bc5dbbf4" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>normalize_angle</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a7d1152ed7ab93ed6fef82bd6d8b6ed87" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator*=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a5d58f795a74bf1b59ff84c6bebf5b7cd" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator+=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a64c6fffdc1f17ee0d8fd36f9947edfbb" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator+=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1aa21532a813eac53b4968f45e9353fef2" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator-</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a86382ec87084051443d31e331dfaa89a" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator-=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ae8b75de687d0a9555946dc655880cbf0" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator-=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ada84fb1605e6868beddf26ad96bbb216" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator/=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a9b1fbb335e6d910a584f4efbc8fa5823" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>operator=</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a7faf54c0f138b67e3e44df23036c504b" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>PI</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ab952552052df55585da22402c5e916b8" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>print</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ac64e1b01f390845b5ac6dc54daf8358f" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>printRound</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1abed2fa0e29521eac96ad36ba3b5bb331" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>RAD2DEG</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a50cf52917a599a30812f6bd7e809ad56" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>rad2deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a1c5f8ecf0f327a23b71ffb68e8be49f3" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>radian</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ade2598d25b98ea1e7e7b84d774d5d4af" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>sin</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a65333b50ba5419110500d997aec2e24d" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>sin_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ae11973230dd44da1ab33aa6464d67656" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>sinMinMax</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1a0ebf74706bb163d70703f5f8e21d18ab" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>tan</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ad2215f18a2238dd44c30562263ecd80f" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>tan_deg</name></member>
+      <member refid="classrcsc_1_1_angle_deg_1ab38f16c64201c06fd9ee104ff9f7d858" prot="public" virt="non-virtual"><scope>rcsc::AngleDeg</scope><name>TWO_PI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

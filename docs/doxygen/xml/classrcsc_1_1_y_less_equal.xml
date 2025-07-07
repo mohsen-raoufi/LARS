@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_y_less_equal" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::YLessEqual</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_y_less_equal_1a2f6ecc6a6e204f495a4af3636062ab95" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::YLessEqual::threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <qualifiedname>rcsc::YLessEqual::threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="491" column="12" bodyfile="ui/geom/polygon_2d.cpp" bodystart="491" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_y_less_equal_1a1a483e505ba402136b77c9f2ee912d6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::YLessEqual::YLessEqual</definition>
+        <argsstring>(double threshold)</argsstring>
+        <name>YLessEqual</name>
+        <qualifiedname>rcsc::YLessEqual::YLessEqual</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="494" column="5" bodyfile="ui/geom/polygon_2d.cpp" bodystart="494" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_y_less_equal_1a49031ef8bccfe10da1dfed0e7db23cb0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::YLessEqual::operator()</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>rcsc::YLessEqual::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/polygon_2d.cpp" line="499" column="10" bodyfile="ui/geom/polygon_2d.cpp" bodystart="499" bodyend="502"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/polygon_2d.cpp" line="488" column="1" bodyfile="ui/geom/polygon_2d.cpp" bodystart="489" bodyend="503"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_y_less_equal_1a49031ef8bccfe10da1dfed0e7db23cb0" prot="public" virt="non-virtual"><scope>rcsc::YLessEqual</scope><name>operator()</name></member>
+      <member refid="classrcsc_1_1_y_less_equal_1a2f6ecc6a6e204f495a4af3636062ab95" prot="private" virt="non-virtual"><scope>rcsc::YLessEqual</scope><name>threshold</name></member>
+      <member refid="classrcsc_1_1_y_less_equal_1a1a483e505ba402136b77c9f2ee912d6e" prot="public" virt="non-virtual"><scope>rcsc::YLessEqual</scope><name>YLessEqual</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

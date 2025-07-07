@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_vector2_d_1_1_abs_y_cmp" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::Vector2D::AbsYCmp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::binary_function&lt; Vector2D, Vector2D, bool &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::binary_function&lt; Vector2D, Vector2D, bool &gt;</basecompoundref>
+    <includes refid="geom_2vector__2d_8h" local="no">vector_2d.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_vector2_d_1_1_abs_y_cmp_1a9d6d1431e8bb96fc3123299f15a3fbd5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>result_type</type>
+        <definition>result_type rcsc::Vector2D::AbsYCmp::operator()</definition>
+        <argsstring>(const first_argument_type &amp;lhs, const second_argument_type &amp;rhs) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>rcsc::Vector2D::AbsYCmp::operator()</qualifiedname>
+        <param>
+          <type>const first_argument_type &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const second_argument_type &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>functional operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left hand side argument. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right hand side argument. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>compared result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/vector_2d.h" line="712" column="21" bodyfile="ui/geom/vector_2d.h" bodystart="712" bodyend="716"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_vector2_d_1_1_abs_y_cmp_1a9d6d1431e8bb96fc3123299f15a3fbd5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>result_type</type>
+        <definition>result_type rcsc::Vector2D::AbsYCmp::operator()</definition>
+        <argsstring>(const first_argument_type &amp;lhs, const second_argument_type &amp;rhs) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>rcsc::Vector2D::AbsYCmp::operator()</qualifiedname>
+        <param>
+          <type>const first_argument_type &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const second_argument_type &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>functional operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left hand side argument. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right hand side argument. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>compared result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/vector_2d.h" line="712" column="21" bodyfile="ui/vector_2d.h" bodystart="712" bodyend="716"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>comparison predicate for absolute Y value. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>rcsc::Vector2D::AbsYCmp</label>
+        <link refid="classrcsc_1_1_vector2_d_1_1_abs_y_cmp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::binary_function&lt; Vector2D, Vector2D, bool &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>rcsc::Vector2D::AbsYCmp</label>
+        <link refid="classrcsc_1_1_vector2_d_1_1_abs_y_cmp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::binary_function&lt; Vector2D, Vector2D, bool &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="ui/geom/vector_2d.h" line="703" column="5" bodyfile="ui/geom/vector_2d.h" bodystart="704" bodyend="717"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_vector2_d_1_1_abs_y_cmp_1a9d6d1431e8bb96fc3123299f15a3fbd5" prot="public" virt="non-virtual"><scope>rcsc::Vector2D::AbsYCmp</scope><name>operator()</name></member>
+      <member refid="classrcsc_1_1_vector2_d_1_1_abs_y_cmp_1a9d6d1431e8bb96fc3123299f15a3fbd5" prot="public" virt="non-virtual"><scope>rcsc::Vector2D::AbsYCmp</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

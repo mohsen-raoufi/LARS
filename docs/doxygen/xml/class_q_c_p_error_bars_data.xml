@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_error_bars_data" kind="class" language="C++" prot="public">
+    <compoundname>QCPErrorBarsData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_q_c_p_error_bars_data_1af8aaea160e52c14c57836224ee78020b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPErrorBarsData::errorMinus</definition>
+        <argsstring></argsstring>
+        <name>errorMinus</name>
+        <qualifiedname>QCPErrorBarsData::errorMinus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6267" column="10" bodyfile="qcustomplot.h" bodystart="6267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_error_bars_data_1ad1283c99fbfccf37a0226b1df52f0776" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPErrorBarsData::errorPlus</definition>
+        <argsstring></argsstring>
+        <name>errorPlus</name>
+        <qualifiedname>QCPErrorBarsData::errorPlus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6267" column="21" bodyfile="qcustomplot.h" bodystart="6267" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_error_bars_data_1ac18bdb46dec56f8df7f3c99d058cc725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPErrorBarsData::QCPErrorBarsData</definition>
+        <argsstring>()</argsstring>
+        <name>QCPErrorBarsData</name>
+        <qualifiedname>QCPErrorBarsData::QCPErrorBarsData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an error bar with errors set to zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6263" column="3" bodyfile="qcustomplot.cpp" bodystart="27876" bodyend="27880"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_data_1a73ebdaa55fa7f0052b70895b28edb444" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPErrorBarsData::QCPErrorBarsData</definition>
+        <argsstring>(double error)</argsstring>
+        <name>QCPErrorBarsData</name>
+        <qualifiedname>QCPErrorBarsData::QCPErrorBarsData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an error bar with equal <emphasis>error</emphasis> in both negative and positive direction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6264" column="12" bodyfile="qcustomplot.cpp" bodystart="27885" bodyend="27889"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_data_1a7c61e42d87aea3312262d5429bc28387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPErrorBarsData::QCPErrorBarsData</definition>
+        <argsstring>(double errorMinus, double errorPlus)</argsstring>
+        <name>QCPErrorBarsData</name>
+        <qualifiedname>QCPErrorBarsData::QCPErrorBarsData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>errorMinus</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>errorPlus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an error bar with negative and positive errors set to <emphasis>errorMinus</emphasis> and <emphasis>errorPlus</emphasis>, respectively. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6265" column="3" bodyfile="qcustomplot.cpp" bodystart="27895" bodyend="27899"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the data of one single error bar for <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The stored data is: <itemizedlist>
+<listitem><para><emphasis>errorMinus:</emphasis> how much the error bar extends towards negative coordinates from the data point position </para>
+</listitem>
+<listitem><para><emphasis>errorPlus:</emphasis> how much the error bar extends towards positive coordinates from the data point position</para>
+</listitem>
+</itemizedlist>
+The container for storing the error bar information is QCPErrorBarsDataContainer. It is a typedef for <computeroutput>QVector&lt;<ref refid="class_q_c_p_error_bars_data" kindref="compound">QCPErrorBarsData</ref>&gt;</computeroutput>.</para>
+<para><simplesect kind="see"><para>QCPErrorBarsDataContainer </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="6260" column="1" bodyfile="qcustomplot.h" bodystart="6261" bodyend="6268"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_error_bars_data_1af8aaea160e52c14c57836224ee78020b" prot="public" virt="non-virtual"><scope>QCPErrorBarsData</scope><name>errorMinus</name></member>
+      <member refid="class_q_c_p_error_bars_data_1ad1283c99fbfccf37a0226b1df52f0776" prot="public" virt="non-virtual"><scope>QCPErrorBarsData</scope><name>errorPlus</name></member>
+      <member refid="class_q_c_p_error_bars_data_1ac18bdb46dec56f8df7f3c99d058cc725" prot="public" virt="non-virtual"><scope>QCPErrorBarsData</scope><name>QCPErrorBarsData</name></member>
+      <member refid="class_q_c_p_error_bars_data_1a73ebdaa55fa7f0052b70895b28edb444" prot="public" virt="non-virtual"><scope>QCPErrorBarsData</scope><name>QCPErrorBarsData</name></member>
+      <member refid="class_q_c_p_error_bars_data_1a7c61e42d87aea3312262d5429bc28387" prot="public" virt="non-virtual"><scope>QCPErrorBarsData</scope><name>QCPErrorBarsData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

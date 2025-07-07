@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_orientation_buffer" kind="class" language="C++" prot="public">
+    <compoundname>OrientationBuffer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_orientation_buffer_1aa91d3ceef8088a7171ef6aa685e35754" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OrientationBuffer::buffer_size</definition>
+        <argsstring></argsstring>
+        <name>buffer_size</name>
+        <qualifiedname>OrientationBuffer::buffer_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="98" column="9" bodyfile="Kilobot/kilobot.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_orientation_buffer_1a9293a356bb1a5664c9bca97bdb36b7dc" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QPointF &gt;</type>
+        <definition>QVector&lt; QPointF &gt; OrientationBuffer::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>OrientationBuffer::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="99" column="14" bodyfile="Kilobot/kilobot.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_orientation_buffer_1aa3c36cb4e1e9213bbbf612a47b87edec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OrientationBuffer::OrientationBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>OrientationBuffer</name>
+        <qualifiedname>OrientationBuffer::OrientationBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="90" column="5" bodyfile="Kilobot/kilobot.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orientation_buffer_1ae0a06fde70be4c2cea7a917c6cabe3eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OrientationBuffer::~OrientationBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~OrientationBuffer</name>
+        <qualifiedname>OrientationBuffer::~OrientationBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="91" column="5" bodyfile="Kilobot/kilobot.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orientation_buffer_1a2c18b0cb109abfd6f4b8b98c43b53ffe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OrientationBuffer::OrientationBuffer</definition>
+        <argsstring>(int size)</argsstring>
+        <name>OrientationBuffer</name>
+        <qualifiedname>OrientationBuffer::OrientationBuffer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="92" column="5" bodyfile="Kilobot/kilobot.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orientation_buffer_1aea03fb41b85aebbfbefae0c473933df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrientationBuffer::addOrientation</definition>
+        <argsstring>(QPointF newOrientation)</argsstring>
+        <name>addOrientation</name>
+        <qualifiedname>OrientationBuffer::addOrientation</qualifiedname>
+        <param>
+          <type>QPointF</type>
+          <declname>newOrientation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="93" column="10" bodyfile="Kilobot/kilobot.cpp" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orientation_buffer_1aff243aa079ec35296512eadb5081a4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPointF</type>
+        <definition>QPointF OrientationBuffer::getAvgOrientation</definition>
+        <argsstring>()</argsstring>
+        <name>getAvgOrientation</name>
+        <qualifiedname>OrientationBuffer::getAvgOrientation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="94" column="13" bodyfile="Kilobot/kilobot.cpp" bodystart="84" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_orientation_buffer_1a3d6c63f5bb17287d59242d7f5efb9b1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>QPointF</type>
+        <definition>QPointF OrientationBuffer::getLastOrientation</definition>
+        <argsstring>()</argsstring>
+        <name>getLastOrientation</name>
+        <qualifiedname>OrientationBuffer::getLastOrientation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kilobot/kilobot.h" line="95" column="13" bodyfile="Kilobot/kilobot.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kilobot/kilobot.h" line="88" column="1" bodyfile="Kilobot/kilobot.h" bodystart="88" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_orientation_buffer_1aea03fb41b85aebbfbefae0c473933df6" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>addOrientation</name></member>
+      <member refid="class_orientation_buffer_1a9293a356bb1a5664c9bca97bdb36b7dc" prot="private" virt="non-virtual"><scope>OrientationBuffer</scope><name>buffer</name></member>
+      <member refid="class_orientation_buffer_1aa91d3ceef8088a7171ef6aa685e35754" prot="private" virt="non-virtual"><scope>OrientationBuffer</scope><name>buffer_size</name></member>
+      <member refid="class_orientation_buffer_1aff243aa079ec35296512eadb5081a4be" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>getAvgOrientation</name></member>
+      <member refid="class_orientation_buffer_1a3d6c63f5bb17287d59242d7f5efb9b1f" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>getLastOrientation</name></member>
+      <member refid="class_orientation_buffer_1aa3c36cb4e1e9213bbbf612a47b87edec" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>OrientationBuffer</name></member>
+      <member refid="class_orientation_buffer_1a2c18b0cb109abfd6f4b8b98c43b53ffe" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>OrientationBuffer</name></member>
+      <member refid="class_orientation_buffer_1ae0a06fde70be4c2cea7a917c6cabe3eb" prot="public" virt="non-virtual"><scope>OrientationBuffer</scope><name>~OrientationBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

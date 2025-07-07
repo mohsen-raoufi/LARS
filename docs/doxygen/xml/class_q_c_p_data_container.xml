@@ -1,0 +1,860 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_data_container" kind="class" language="C++" prot="public">
+    <compoundname>QCPDataContainer</compoundname>
+    <includes refid="qcustomplot_8h" local="no">qcustomplot.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class DataType</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_q_c_p_data_container_1ae40a91f5cb0bcac61d727427449b7d15" prot="public" static="no">
+        <type>QVector&lt; DataType &gt;::const_iterator</type>
+        <definition>typedef QVector&lt;DataType&gt;::const_iterator QCPDataContainer&lt; DataType &gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <qualifiedname>QCPDataContainer::const_iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2581" column="45" bodyfile="qcustomplot.h" bodystart="2581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_q_c_p_data_container_1a1bb453c3ae37d1ee5268878acb3a9d29" prot="public" static="no">
+        <type>QVector&lt; DataType &gt;::iterator</type>
+        <definition>typedef QVector&lt;DataType&gt;::iterator QCPDataContainer&lt; DataType &gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <qualifiedname>QCPDataContainer::iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2582" column="39" bodyfile="qcustomplot.h" bodystart="2582" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_data_container_1aae64c517d64511ad7a81ff8ee7b29147" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QCPDataContainer&lt; DataType &gt;::mAutoSqueeze</definition>
+        <argsstring></argsstring>
+        <name>mAutoSqueeze</name>
+        <qualifiedname>QCPDataContainer::mAutoSqueeze</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2622" column="8" bodyfile="qcustomplot.h" bodystart="2622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_data_container_1a74906b4da829849c4062b5337c72585d" prot="protected" static="no" mutable="no">
+        <type>QVector&lt; DataType &gt;</type>
+        <definition>QVector&lt;DataType&gt; QCPDataContainer&lt; DataType &gt;::mData</definition>
+        <argsstring></argsstring>
+        <name>mData</name>
+        <qualifiedname>QCPDataContainer::mData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2625" column="11" bodyfile="qcustomplot.h" bodystart="2625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_data_container_1a3554d3ad00e69f7ce057efa00ea6f4b2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPDataContainer&lt; DataType &gt;::mPreallocSize</definition>
+        <argsstring></argsstring>
+        <name>mPreallocSize</name>
+        <qualifiedname>QCPDataContainer::mPreallocSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2626" column="7" bodyfile="qcustomplot.h" bodystart="2626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_data_container_1ab2115bf023c29691f441eaf1889de84a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPDataContainer&lt; DataType &gt;::mPreallocIteration</definition>
+        <argsstring></argsstring>
+        <name>mPreallocIteration</name>
+        <qualifiedname>QCPDataContainer::mPreallocIteration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2627" column="7" bodyfile="qcustomplot.h" bodystart="2627" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_data_container_1af86c0c63719f92c360ff67cc06c6fe6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPDataContainer&lt; DataType &gt;::QCPDataContainer</definition>
+        <argsstring>()</argsstring>
+        <name>QCPDataContainer</name>
+        <qualifiedname>QCPDataContainer::QCPDataContainer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref> used for plottable classes that represent a series of key-sorted data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2584" column="3" bodyfile="qcustomplot.h" bodystart="2771" bodyend="2776"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a8e9b262c739672e13472d0d45b720258" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPDataContainer&lt; DataType &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>QCPDataContainer::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of data points in the container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2587" column="7" bodyfile="qcustomplot.h" bodystart="2587" bodyend="2587"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a7bdebfccd2f9f84bf032882f9d6b00a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataContainer&lt; DataType &gt;::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>QCPDataContainer::isEmpty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether this container holds no data points. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2588" column="8" bodyfile="qcustomplot.h" bodystart="2588" bodyend="2588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a64f0f1621ca46de2352eaf87476db9b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataContainer&lt; DataType &gt;::autoSqueeze</definition>
+        <argsstring>() const</argsstring>
+        <name>autoSqueeze</name>
+        <qualifiedname>QCPDataContainer::autoSqueeze</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2589" column="8" bodyfile="qcustomplot.h" bodystart="2589" bodyend="2589"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a233f866760a78950d2a393c1a4bc54b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::setAutoSqueeze</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setAutoSqueeze</name>
+        <qualifiedname>QCPDataContainer::setAutoSqueeze</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether the container automatically decides when to release memory from its post- and preallocation pools when data points are removed. By default this is enabled and for typical applications shouldn&apos;t be changed.</para>
+<para>If auto squeeze is disabled, you can manually decide when to release pre-/postallocation with <ref refid="class_q_c_p_data_container_1a82fcc511def22287fc62579d0706387c" kindref="member">squeeze</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2592" column="8" bodyfile="qcustomplot.h" bodystart="2787" bodyend="2795"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::set</definition>
+        <argsstring>(const QCPDataContainer&lt; DataType &gt; &amp;data)</argsstring>
+        <name>set</name>
+        <qualifiedname>QCPDataContainer::set</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>&lt; DataType &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data in this container with the provided <emphasis>data</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1a42b98bd994307ccd163a43d576f91ad9" kindref="member">add</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2595" column="8" bodyfile="qcustomplot.h" bodystart="2804" bodyend="2808"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aff99fffbb26597a354c4bc8312596ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::set</definition>
+        <argsstring>(const QVector&lt; DataType &gt; &amp;data, bool alreadySorted=false)</argsstring>
+        <name>set</name>
+        <qualifiedname>QCPDataContainer::set</qualifiedname>
+        <param>
+          <type>const QVector&lt; DataType &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data in this container with the provided <emphasis>data</emphasis> </para>
+<para>If you can guarantee that the data points in <emphasis>data</emphasis> have ascending order with respect to the DataType&apos;s sort key, set <emphasis>alreadySorted</emphasis> to true to avoid an unnecessary sorting run.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1a42b98bd994307ccd163a43d576f91ad9" kindref="member">add</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2596" column="8" bodyfile="qcustomplot.h" bodystart="2820" bodyend="2827"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a42b98bd994307ccd163a43d576f91ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::add</definition>
+        <argsstring>(const QCPDataContainer&lt; DataType &gt; &amp;data)</argsstring>
+        <name>add</name>
+        <qualifiedname>QCPDataContainer::add</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>&lt; DataType &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds the provided <emphasis>data</emphasis> to the current data in this container.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" kindref="member">set</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2597" column="8" bodyfile="qcustomplot.h" bodystart="2836" bodyend="2857"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a51d2a4c9ce4baf5e950b767d26673972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::add</definition>
+        <argsstring>(const QVector&lt; DataType &gt; &amp;data, bool alreadySorted=false)</argsstring>
+        <name>add</name>
+        <qualifiedname>QCPDataContainer::add</qualifiedname>
+        <param>
+          <type>const QVector&lt; DataType &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alreadySorted</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the provided data points in <emphasis>data</emphasis> to the current data.</para>
+<para>If you can guarantee that the data points in <emphasis>data</emphasis> have ascending order with respect to the DataType&apos;s sort key, set <emphasis>alreadySorted</emphasis> to true to avoid an unnecessary sorting run.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" kindref="member">set</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2598" column="8" bodyfile="qcustomplot.h" bodystart="2868" bodyend="2896"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a715e8e9972466804954a2f8fbd5288b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::add</definition>
+        <argsstring>(const DataType &amp;data)</argsstring>
+        <name>add</name>
+        <qualifiedname>QCPDataContainer::add</qualifiedname>
+        <param>
+          <type>const DataType &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds the provided single data point to the current data.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2599" column="8" bodyfile="qcustomplot.h" bodystart="2905" bodyend="2921"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::removeBefore</definition>
+        <argsstring>(double sortKey)</argsstring>
+        <name>removeBefore</name>
+        <qualifiedname>QCPDataContainer::removeBefore</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all data points with (sort-)keys smaller than or equal to <emphasis>sortKey</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" kindref="member">removeAfter</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref>, <ref refid="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" kindref="member">clear</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2600" column="8" bodyfile="qcustomplot.h" bodystart="2929" bodyend="2936"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::removeAfter</definition>
+        <argsstring>(double sortKey)</argsstring>
+        <name>removeAfter</name>
+        <qualifiedname>QCPDataContainer::removeAfter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all data points with (sort-)keys greater than or equal to <emphasis>sortKey</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" kindref="member">removeBefore</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref>, <ref refid="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" kindref="member">clear</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2601" column="8" bodyfile="qcustomplot.h" bodystart="2944" bodyend="2951"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::remove</definition>
+        <argsstring>(double sortKeyFrom, double sortKeyTo)</argsstring>
+        <name>remove</name>
+        <qualifiedname>QCPDataContainer::remove</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKeyFrom</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sortKeyTo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all data points with (sort-)keys between <emphasis>sortKeyFrom</emphasis> and <emphasis>sortKeyTo</emphasis>. if <emphasis>sortKeyFrom</emphasis> is greater or equal to <emphasis>sortKeyTo</emphasis>, the function does nothing. To remove a single data point with known (sort-)key, use <ref refid="class_q_c_p_data_container_1a2dbded7f0732bacf9db48fdfbbb620bc" kindref="member">remove(double sortKey)</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" kindref="member">removeBefore</ref>, <ref refid="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" kindref="member">removeAfter</ref>, <ref refid="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" kindref="member">clear</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2602" column="8" bodyfile="qcustomplot.h" bodystart="2961" bodyend="2971"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a2dbded7f0732bacf9db48fdfbbb620bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::remove</definition>
+        <argsstring>(double sortKey)</argsstring>
+        <name>remove</name>
+        <qualifiedname>QCPDataContainer::remove</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Removes a single data point at <emphasis>sortKey</emphasis>. If the position is not known with absolute (binary) precision, consider using <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove(double sortKeyFrom, double sortKeyTo)</ref> with a small fuzziness interval around the suspected position, depeding on the precision with which the (sort-)key is known.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" kindref="member">removeBefore</ref>, <ref refid="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" kindref="member">removeAfter</ref>, <ref refid="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" kindref="member">clear</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2603" column="8" bodyfile="qcustomplot.h" bodystart="2983" bodyend="2995"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>QCPDataContainer::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all data points.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref>, <ref refid="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" kindref="member">removeAfter</ref>, <ref refid="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" kindref="member">removeBefore</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2604" column="8" bodyfile="qcustomplot.h" bodystart="3003" bodyend="3008"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::sort</definition>
+        <argsstring>()</argsstring>
+        <name>sort</name>
+        <qualifiedname>QCPDataContainer::sort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Re-sorts all data points in the container by their sort key.</para>
+<para>When setting, adding or removing points using the <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref> interface (<ref refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" kindref="member">set</ref>, <ref refid="class_q_c_p_data_container_1a42b98bd994307ccd163a43d576f91ad9" kindref="member">add</ref>, <ref refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" kindref="member">remove</ref>, etc.), the container makes sure to always stay in a sorted state such that a full resort is never necessary. However, if you choose to directly manipulate the sort key on data points by accessing and modifying it through the non-const iterators (<ref refid="class_q_c_p_data_container_1a58c6f18e40003df1759ef571b485d720" kindref="member">begin</ref>, <ref refid="class_q_c_p_data_container_1a3c7d450cdad10302e6102f7fe064223c" kindref="member">end</ref>), it is your responsibility to bring the container back into a sorted state before any other methods are called on it. This can be achieved by calling this method immediately after finishing the sort key manipulation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2605" column="8" bodyfile="qcustomplot.h" bodystart="3022" bodyend="3025"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a82fcc511def22287fc62579d0706387c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::squeeze</definition>
+        <argsstring>(bool preAllocation=true, bool postAllocation=true)</argsstring>
+        <name>squeeze</name>
+        <qualifiedname>QCPDataContainer::squeeze</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>preAllocation</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>postAllocation</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frees all unused memory that is currently in the preallocation and postallocation pools.</para>
+<para>Note that <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref> automatically decides whether squeezing is necessary, if <ref refid="class_q_c_p_data_container_1a233f866760a78950d2a393c1a4bc54b5" kindref="member">setAutoSqueeze</ref> is left enabled. It should thus not be necessary to use this method for typical applications.</para>
+<para>The parameters <emphasis>preAllocation</emphasis> and <emphasis>postAllocation</emphasis> control whether pre- and/or post allocation should be freed, respectively. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2606" column="8" bodyfile="qcustomplot.h" bodystart="3038" bodyend="3052"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1afcfa138af53d0c8c78953a71d7960ae3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator QCPDataContainer&lt; DataType &gt;::constBegin</definition>
+        <argsstring>() const</argsstring>
+        <name>constBegin</name>
+        <qualifiedname>QCPDataContainer::constBegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a const iterator to the first data point in this container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2608" column="18" bodyfile="qcustomplot.h" bodystart="2608" bodyend="2608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator QCPDataContainer&lt; DataType &gt;::constEnd</definition>
+        <argsstring>() const</argsstring>
+        <name>constEnd</name>
+        <qualifiedname>QCPDataContainer::constEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a const iterator to the element past the last data point in this container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2609" column="18" bodyfile="qcustomplot.h" bodystart="2609" bodyend="2609"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a58c6f18e40003df1759ef571b485d720" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator QCPDataContainer&lt; DataType &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>QCPDataContainer::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a non-const iterator to the first data point in this container.</para>
+<para>You can manipulate the data points in-place through the non-const iterators, but great care must be taken when manipulating the sort key of a data point, see <ref refid="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" kindref="member">sort</ref>, or the detailed description of this class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2610" column="12" bodyfile="qcustomplot.h" bodystart="2610" bodyend="2610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a3c7d450cdad10302e6102f7fe064223c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator QCPDataContainer&lt; DataType &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>QCPDataContainer::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a non-const iterator to the element past the last data point in this container.</para>
+<para>You can manipulate the data points in-place through the non-const iterators, but great care must be taken when manipulating the sort key of a data point, see <ref refid="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" kindref="member">sort</ref>, or the detailed description of this class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2611" column="12" bodyfile="qcustomplot.h" bodystart="2611" bodyend="2611"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>QCPDataContainer&lt; DataType &gt;::const_iterator QCPDataContainer&lt; DataType &gt;::findBegin</definition>
+        <argsstring>(double sortKey, bool expandedRange=true) const</argsstring>
+        <name>findBegin</name>
+        <qualifiedname>QCPDataContainer::findBegin</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>expandedRange</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an iterator to the data point with a (sort-)key that is equal to, just below, or just above <emphasis>sortKey</emphasis>. If <emphasis>expandedRange</emphasis> is true, the data point just below <emphasis>sortKey</emphasis> will be considered, otherwise the one just above.</para>
+<para>This can be used in conjunction with <ref refid="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" kindref="member">findEnd</ref> to iterate over data points within a given key range, including or excluding the bounding data points that are just beyond the specified range.</para>
+<para>If <emphasis>expandedRange</emphasis> is true but there are no data points below <emphasis>sortKey</emphasis>, <ref refid="class_q_c_p_data_container_1afcfa138af53d0c8c78953a71d7960ae3" kindref="member">constBegin</ref> is returned.</para>
+<para>If the container is empty, returns <ref refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" kindref="member">constEnd</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" kindref="member">findEnd</ref>, <ref refid="class_q_c_p_plottable_interface1_d_1ac8f224af7f2afeed46d82368344d8d9e" kindref="member">QCPPlottableInterface1D::findBegin</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2612" column="18" bodyfile="qcustomplot.h" bodystart="3070" bodyend="3079"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>QCPDataContainer&lt; DataType &gt;::const_iterator QCPDataContainer&lt; DataType &gt;::findEnd</definition>
+        <argsstring>(double sortKey, bool expandedRange=true) const</argsstring>
+        <name>findEnd</name>
+        <qualifiedname>QCPDataContainer::findEnd</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>expandedRange</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an iterator to the element after the data point with a (sort-)key that is equal to, just above or just below <emphasis>sortKey</emphasis>. If <emphasis>expandedRange</emphasis> is true, the data point just above <emphasis>sortKey</emphasis> will be considered, otherwise the one just below.</para>
+<para>This can be used in conjunction with <ref refid="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" kindref="member">findBegin</ref> to iterate over data points within a given key range, including the bounding data points that are just below and above the specified range.</para>
+<para>If <emphasis>expandedRange</emphasis> is true but there are no data points above <emphasis>sortKey</emphasis>, <ref refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" kindref="member">constEnd</ref> is returned.</para>
+<para>If the container is empty, <ref refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" kindref="member">constEnd</ref> is returned.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" kindref="member">findBegin</ref>, <ref refid="class_q_c_p_plottable_interface1_d_1a2a6f8cad846ea18d3ab46a95047de681" kindref="member">QCPPlottableInterface1D::findEnd</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2613" column="18" bodyfile="qcustomplot.h" bodystart="3097" bodyend="3106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1ac0d5f1babb70699e4732026af1ae12db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator QCPDataContainer&lt; DataType &gt;::at</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>at</name>
+        <qualifiedname>QCPDataContainer::at</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a const iterator to the element with the specified <emphasis>index</emphasis>. If <emphasis>index</emphasis> points beyond the available elements in this container, returns <ref refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" kindref="member">constEnd</ref>, i.e. an iterator past the last valid element.</para>
+<para>You can use this method to easily obtain iterators from a <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>, see the data selection page for an example. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2614" column="18" bodyfile="qcustomplot.h" bodystart="2614" bodyend="2614"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aba6e1a93c21ccc56a432b4a02c9d0ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPDataContainer&lt; DataType &gt;::keyRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain signDomain=QCP::sdBoth)</argsstring>
+        <name>keyRange</name>
+        <qualifiedname>QCPDataContainer::keyRange</qualifiedname>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>signDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the range encompassed by the (main-)key coordinate of all data points. The output parameter <emphasis>foundRange</emphasis> indicates whether a sensible range was found. If this is false, you should not use the returned <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> (e.g. the data container is empty or all points have the same key).</para>
+<para>Use <emphasis>signDomain</emphasis> to control which sign of the key coordinates should be considered. This is relevant e.g. for logarithmic plots which can mathematically only display one sign domain at a time.</para>
+<para>If the DataType reports that its main key is equal to the sort key (<emphasis>sortKeyIsMainKey</emphasis>), as is the case for most plottables, this method uses this fact and finds the range very quickly.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1a35a102dc2424d1228fc374d9313efbe9" kindref="member">valueRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2615" column="12" bodyfile="qcustomplot.h" bodystart="3124" bodyend="3228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a35a102dc2424d1228fc374d9313efbe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPDataContainer&lt; DataType &gt;::valueRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain signDomain=QCP::sdBoth, const QCPRange &amp;inKeyRange=QCPRange())</argsstring>
+        <name>valueRange</name>
+        <qualifiedname>QCPDataContainer::valueRange</qualifiedname>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>signDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>inKeyRange</declname>
+          <defval><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the range encompassed by the value coordinates of the data points in the specified key range (<emphasis>inKeyRange</emphasis>), using the full <emphasis>DataType::valueRange</emphasis> reported by the data points. The output parameter <emphasis>foundRange</emphasis> indicates whether a sensible range was found. If this is false, you should not use the returned <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> (e.g. the data container is empty or all points have the same value).</para>
+<para>If <emphasis>inKeyRange</emphasis> has both lower and upper bound set to zero (is equal to <computeroutput><ref refid="class_q_c_p_range" kindref="compound">QCPRange()</ref></computeroutput>), all data points are considered, without any restriction on the keys.</para>
+<para>Use <emphasis>signDomain</emphasis> to control which sign of the value coordinates should be considered. This is relevant e.g. for logarithmic plots which can mathematically only display one sign domain at a time.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1aba6e1a93c21ccc56a432b4a02c9d0ed2" kindref="member">keyRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2616" column="12" bodyfile="qcustomplot.h" bodystart="3247" bodyend="3324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aece90eeb2ba8d3c46d3d94023630fbc7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+        <definition>QCPDataRange QCPDataContainer&lt; DataType &gt;::dataRange</definition>
+        <argsstring>() const</argsstring>
+        <name>dataRange</name>
+        <qualifiedname>QCPDataContainer::dataRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> encompassing the entire data set of this container. This means the begin index of the returned range is 0, and the end index is <ref refid="class_q_c_p_data_container_1a8e9b262c739672e13472d0d45b720258" kindref="member">size</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2617" column="16" bodyfile="qcustomplot.h" bodystart="2617" bodyend="2617"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1aa1b36f5ae86a5a5a0b92141d3a0945c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::limitIteratorsToDataRange</definition>
+        <argsstring>(const_iterator &amp;begin, const_iterator &amp;end, const QCPDataRange &amp;dataRange) const</argsstring>
+        <name>limitIteratorsToDataRange</name>
+        <qualifiedname>QCPDataContainer::limitIteratorsToDataRange</qualifiedname>
+        <param>
+          <type>const_iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>dataRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes sure <emphasis>begin</emphasis> and <emphasis>end</emphasis> mark a data range that is both within the bounds of this data container&apos;s data, as well as within the specified <emphasis>dataRange</emphasis>. The initial range described by the passed iterators <emphasis>begin</emphasis> and <emphasis>end</emphasis> is never expanded, only contracted if necessary.</para>
+<para>This function doesn&apos;t require for <emphasis>dataRange</emphasis> to be within the bounds of this data container&apos;s valid range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2618" column="8" bodyfile="qcustomplot.h" bodystart="3335" bodyend="3341"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_data_container_1aae8cdb2bcc3b900ec22f26df3e7d67c7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::preallocateGrow</definition>
+        <argsstring>(int minimumPreallocSize)</argsstring>
+        <name>preallocateGrow</name>
+        <qualifiedname>QCPDataContainer::preallocateGrow</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>minimumPreallocSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2630" column="8" bodyfile="qcustomplot.h" bodystart="3353" bodyend="3366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_container_1a83c25ac14be1c920df85e797ee75c982" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataContainer&lt; DataType &gt;::performAutoSqueeze</definition>
+        <argsstring>()</argsstring>
+        <name>performAutoSqueeze</name>
+        <qualifiedname>QCPDataContainer::performAutoSqueeze</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2631" column="8" bodyfile="qcustomplot.h" bodystart="3383" bodyend="3402"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="related">
+      <memberdef kind="function" id="class_q_c_p_data_container_1a74c5e06728cb6fa778a25d9ec0c4bd36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class DataType</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool qcpLessThanSortKey</definition>
+        <argsstring>(const DataType &amp;a, const DataType &amp;b)</argsstring>
+        <name>qcpLessThanSortKey</name>
+        <qualifiedname>QCPDataContainer::qcpLessThanSortKey</qualifiedname>
+        <param>
+          <type>const DataType &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const DataType &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the sort key of <emphasis>a</emphasis> is less than the sort key of <emphasis>b</emphasis>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" kindref="member">QCPDataContainer::sort</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="2575" column="13" bodyfile="qcustomplot.h" bodystart="2575" bodyend="2575"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The generic data container for one-dimensional plottables. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class template provides a fast container for data storage of one-dimensional data. The data type is specified as template parameter (called <emphasis>DataType</emphasis> in the following) and must provide some methods as described in the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">next section</ref>.</para>
+<para>The data is stored in a sorted fashion, which allows very quick lookups by the sorted key as well as retrieval of ranges (see <ref refid="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" kindref="member">findBegin</ref>, <ref refid="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" kindref="member">findEnd</ref>, <ref refid="class_q_c_p_data_container_1aba6e1a93c21ccc56a432b4a02c9d0ed2" kindref="member">keyRange</ref>) using binary search. The container uses a preallocation and a postallocation scheme, such that appending and prepending data (with respect to the sort key) is very fast and minimizes reallocations. If data is added which needs to be inserted between existing keys, the merge usually can be done quickly too, using the fact that existing data is always sorted. The user can further improve performance by specifying that added data is already itself sorted by key, if he can guarantee that this is the case (see for example <ref refid="class_q_c_p_data_container_1a51d2a4c9ce4baf5e950b767d26673972" kindref="member">add(const QVector&lt;DataType&gt; &amp;data, bool alreadySorted)</ref>).</para>
+<para>The data can be accessed with the provided const iterators (<ref refid="class_q_c_p_data_container_1afcfa138af53d0c8c78953a71d7960ae3" kindref="member">constBegin</ref>, <ref refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" kindref="member">constEnd</ref>). If it is necessary to alter existing data in-place, the non-const iterators can be used (<ref refid="class_q_c_p_data_container_1a58c6f18e40003df1759ef571b485d720" kindref="member">begin</ref>, <ref refid="class_q_c_p_data_container_1a3c7d450cdad10302e6102f7fe064223c" kindref="member">end</ref>). Changing data members that are not the sort key (for most data types called <emphasis>key</emphasis>) is safe from the container&apos;s perspective.</para>
+<para>Great care must be taken however if the sort key is modified through the non-const iterators. For performance reasons, the iterators don&apos;t automatically cause a re-sorting upon their manipulation. It is thus the responsibility of the user to leave the container in a sorted state when finished with the data manipulation, before calling any other methods on the container. A complete re-sort (e.g. after finishing all sort key manipulation) can be done by calling <ref refid="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" kindref="member">sort</ref>. Failing to do so can not be detected by the container efficiently and will cause both rendering artifacts and potential data loss.</para>
+<para>Implementing one-dimensional plottables that make use of a <ref refid="class_q_c_p_data_container_1af86c0c63719f92c360ff67cc06c6fe6f" kindref="member">QCPDataContainer&lt;T&gt;</ref> is usually done by subclassing from <ref refid="class_q_c_p_abstract_plottable1_d" kindref="compound">QCPAbstractPlottable1D&lt;T&gt;</ref>, which introduces an according <emphasis>mDataContainer</emphasis> member and some convenience methods.</para>
+<sect1 id="class_q_c_p_data_container_1qcpdatacontainer-datatype">
+<title>Requirements for the DataType template parameter</title><para>The template parameter <computeroutput>DataType</computeroutput> is the type of the stored data points. It must be trivially copyable and have the following public methods, preferably inline:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>double sortKey() const</computeroutput><linebreak/>
+ Returns the member variable of this data point that is the sort key, defining the ordering in the container. Often this variable is simply called <emphasis>key</emphasis>.</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>static DataType fromSortKey(double sortKey)</computeroutput><linebreak/>
+ Returns a new instance of the data type initialized with its sort key set to <emphasis>sortKey</emphasis>.</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>static bool sortKeyIsMainKey()</computeroutput><linebreak/>
+ Returns true if the sort key is equal to the main key (see method <computeroutput>mainKey</computeroutput> below). For most plottables this is the case. It is not the case for example for <ref refid="class_q_c_p_curve" kindref="compound">QCPCurve</ref>, which uses <emphasis>t</emphasis> as sort key and <emphasis>key</emphasis> as main key. This is the reason why <ref refid="class_q_c_p_curve" kindref="compound">QCPCurve</ref> unlike <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref> can display parametric curves with loops.</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>double mainKey() const</computeroutput><linebreak/>
+ Returns the variable of this data point considered the main key. This is commonly the variable that is used as the coordinate of this data point on the key axis of the plottable. This method is used for example when determining the automatic axis rescaling of key axes (<ref refid="class_q_c_p_axis_1a499345f02ebce4b23d8ccec96e58daa9" kindref="member">QCPAxis::rescale</ref>).</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>double mainValue() const</computeroutput><linebreak/>
+ Returns the variable of this data point considered the main value. This is commonly the variable that is used as the coordinate of this data point on the value axis of the plottable.</para>
+</listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> valueRange() const</computeroutput><linebreak/>
+ Returns the range this data point spans in the value axis coordinate. If the data is single-valued (e.g. <ref refid="class_q_c_p_graph_data" kindref="compound">QCPGraphData</ref>), this is simply a range with both lower and upper set to the main data point value. However if the data points can represent multiple values at once (e.g <ref refid="class_q_c_p_financial_data" kindref="compound">QCPFinancialData</ref> with its <emphasis>high</emphasis>, <emphasis>low</emphasis>, <emphasis>open</emphasis> and <emphasis>close</emphasis> values at each <emphasis>key</emphasis>) this method should return the range those values span. This method is used for example when determining the automatic axis rescaling of value axes (<ref refid="class_q_c_p_axis_1a499345f02ebce4b23d8ccec96e58daa9" kindref="member">QCPAxis::rescale</ref>). </para>
+</listitem>
+</itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="2578" column="1" bodyfile="qcustomplot.h" bodystart="2579" bodyend="2632"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_data_container_1a42b98bd994307ccd163a43d576f91ad9" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>add</name></member>
+      <member refid="class_q_c_p_data_container_1a51d2a4c9ce4baf5e950b767d26673972" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>add</name></member>
+      <member refid="class_q_c_p_data_container_1a715e8e9972466804954a2f8fbd5288b7" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>add</name></member>
+      <member refid="class_q_c_p_data_container_1ac0d5f1babb70699e4732026af1ae12db" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>at</name></member>
+      <member refid="class_q_c_p_data_container_1a64f0f1621ca46de2352eaf87476db9b1" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>autoSqueeze</name></member>
+      <member refid="class_q_c_p_data_container_1a58c6f18e40003df1759ef571b485d720" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>begin</name></member>
+      <member refid="class_q_c_p_data_container_1a7e2b29736c6fd761649bda1a54ba967f" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>clear</name></member>
+      <member refid="class_q_c_p_data_container_1ae40a91f5cb0bcac61d727427449b7d15" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>const_iterator</name></member>
+      <member refid="class_q_c_p_data_container_1afcfa138af53d0c8c78953a71d7960ae3" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>constBegin</name></member>
+      <member refid="class_q_c_p_data_container_1aa7cc0ad035a00421ba5810fe673c5cb8" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>constEnd</name></member>
+      <member refid="class_q_c_p_data_container_1aece90eeb2ba8d3c46d3d94023630fbc7" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>dataRange</name></member>
+      <member refid="class_q_c_p_data_container_1a3c7d450cdad10302e6102f7fe064223c" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>end</name></member>
+      <member refid="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>findBegin</name></member>
+      <member refid="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>findEnd</name></member>
+      <member refid="class_q_c_p_data_container_1a7bdebfccd2f9f84bf032882f9d6b00a8" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>isEmpty</name></member>
+      <member refid="class_q_c_p_data_container_1a1bb453c3ae37d1ee5268878acb3a9d29" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>iterator</name></member>
+      <member refid="class_q_c_p_data_container_1aba6e1a93c21ccc56a432b4a02c9d0ed2" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>keyRange</name></member>
+      <member refid="class_q_c_p_data_container_1aa1b36f5ae86a5a5a0b92141d3a0945c4" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>limitIteratorsToDataRange</name></member>
+      <member refid="class_q_c_p_data_container_1aae64c517d64511ad7a81ff8ee7b29147" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>mAutoSqueeze</name></member>
+      <member refid="class_q_c_p_data_container_1a74906b4da829849c4062b5337c72585d" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>mData</name></member>
+      <member refid="class_q_c_p_data_container_1ab2115bf023c29691f441eaf1889de84a" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>mPreallocIteration</name></member>
+      <member refid="class_q_c_p_data_container_1a3554d3ad00e69f7ce057efa00ea6f4b2" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>mPreallocSize</name></member>
+      <member refid="class_q_c_p_data_container_1a83c25ac14be1c920df85e797ee75c982" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>performAutoSqueeze</name></member>
+      <member refid="class_q_c_p_data_container_1aae8cdb2bcc3b900ec22f26df3e7d67c7" prot="protected" virt="non-virtual"><scope>QCPDataContainer</scope><name>preallocateGrow</name></member>
+      <member refid="class_q_c_p_data_container_1af86c0c63719f92c360ff67cc06c6fe6f" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>QCPDataContainer</name></member>
+      <member refid="class_q_c_p_data_container_1a74c5e06728cb6fa778a25d9ec0c4bd36" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>qcpLessThanSortKey</name></member>
+      <member refid="class_q_c_p_data_container_1ae5f569a120648b167efa78835f12fd38" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>remove</name></member>
+      <member refid="class_q_c_p_data_container_1a2dbded7f0732bacf9db48fdfbbb620bc" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>remove</name></member>
+      <member refid="class_q_c_p_data_container_1abbe5d87ffc10b5aeffa5bb42cf03aa3c" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>removeAfter</name></member>
+      <member refid="class_q_c_p_data_container_1aa7f74cbce304b0369e1626c3798e1eda" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>removeBefore</name></member>
+      <member refid="class_q_c_p_data_container_1ae7042bd534fc3ce7befa2ce3f790b5bf" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>set</name></member>
+      <member refid="class_q_c_p_data_container_1aff99fffbb26597a354c4bc8312596ab2" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>set</name></member>
+      <member refid="class_q_c_p_data_container_1a233f866760a78950d2a393c1a4bc54b5" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>setAutoSqueeze</name></member>
+      <member refid="class_q_c_p_data_container_1a8e9b262c739672e13472d0d45b720258" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>size</name></member>
+      <member refid="class_q_c_p_data_container_1a75da92e33063b63d6da5014683591d45" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>sort</name></member>
+      <member refid="class_q_c_p_data_container_1a82fcc511def22287fc62579d0706387c" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>squeeze</name></member>
+      <member refid="class_q_c_p_data_container_1a35a102dc2424d1228fc374d9313efbe9" prot="public" virt="non-virtual"><scope>QCPDataContainer</scope><name>valueRange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

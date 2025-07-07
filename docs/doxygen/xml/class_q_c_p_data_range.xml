@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_data_range" kind="class" language="C++" prot="public">
+    <compoundname>QCPDataRange</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_q_c_p_data_range_1a849baf613e8ad866a66aaf45682dde53" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPDataRange::mBegin</definition>
+        <argsstring></argsstring>
+        <name>mBegin</name>
+        <qualifiedname>QCPDataRange::mBegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="945" column="7" bodyfile="qcustomplot.h" bodystart="945" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_data_range_1ac22cfcf2795d5e9f617d788be9fb14a0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int QCPDataRange::mEnd</definition>
+        <argsstring></argsstring>
+        <name>mEnd</name>
+        <qualifiedname>QCPDataRange::mEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="945" column="14" bodyfile="qcustomplot.h" bodystart="945" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_data_range_1a49e72fd9bace1da9d875136dcc04c986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPDataRange::QCPDataRange</definition>
+        <argsstring>()</argsstring>
+        <name>QCPDataRange</name>
+        <qualifiedname>QCPDataRange::QCPDataRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an empty <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>, with begin and end set to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="917" column="3" bodyfile="qcustomplot.cpp" bodystart="2257" bodyend="2261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a6c7f4a3684210423270515403060e9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPDataRange::QCPDataRange</definition>
+        <argsstring>(int begin, int end)</argsstring>
+        <name>QCPDataRange</name>
+        <qualifiedname>QCPDataRange::QCPDataRange</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>, initialized with the specified <emphasis>begin</emphasis> and <emphasis>end</emphasis>.</para>
+<para>No checks or corrections are made to ensure the resulting range is valid (<ref refid="class_q_c_p_data_range_1aae53a37472212dca0a7939963e20dba0" kindref="member">isValid</ref>). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="918" column="3" bodyfile="qcustomplot.cpp" bodystart="2268" bodyend="2272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a8bfd79a282f6ebd766d60caa683242d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::operator==</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>QCPDataRange::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="920" column="8" bodyfile="qcustomplot.h" bodystart="920" bodyend="920"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a5bcc9597731a7455407853ed0585f6ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::operator!=</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>QCPDataRange::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="921" column="8" bodyfile="qcustomplot.h" bodystart="921" bodyend="921"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1ae76d7eba9defdfafcd0fc41096793129" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPDataRange::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>QCPDataRange::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="924" column="7" bodyfile="qcustomplot.h" bodystart="924" bodyend="924"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1aee1b20fb045929c3753ee2ce14af7630" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPDataRange::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>QCPDataRange::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="925" column="7" bodyfile="qcustomplot.h" bodystart="925" bodyend="925"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1ac6af055e509d1b691c244954ff1c5887" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPDataRange::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>QCPDataRange::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of data points described by this data range. This is equal to the end index minus the begin index.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1a1e7836058f755c6ab9f11996477b7150" kindref="member">length</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="926" column="7" bodyfile="qcustomplot.h" bodystart="926" bodyend="926"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a1e7836058f755c6ab9f11996477b7150" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int QCPDataRange::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <qualifiedname>QCPDataRange::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of data points described by this data range. Equivalent to <ref refid="class_q_c_p_data_range_1ac6af055e509d1b691c244954ff1c5887" kindref="member">size</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="927" column="7" bodyfile="qcustomplot.h" bodystart="927" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a54ff59048e01e46ac4aefafc844626c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataRange::setBegin</definition>
+        <argsstring>(int begin)</argsstring>
+        <name>setBegin</name>
+        <qualifiedname>QCPDataRange::setBegin</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>begin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the begin of this data range. The <emphasis>begin</emphasis> index points to the first data point that is part of the data range.</para>
+<para>No checks or corrections are made to ensure the resulting range is valid (<ref refid="class_q_c_p_data_range_1aae53a37472212dca0a7939963e20dba0" kindref="member">isValid</ref>).</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1a277f1a9eafe70b9184d9c00b641ae5de" kindref="member">setEnd</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="930" column="8" bodyfile="qcustomplot.h" bodystart="930" bodyend="930"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a277f1a9eafe70b9184d9c00b641ae5de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPDataRange::setEnd</definition>
+        <argsstring>(int end)</argsstring>
+        <name>setEnd</name>
+        <qualifiedname>QCPDataRange::setEnd</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the end of this data range. The <emphasis>end</emphasis> index points to the data point just after the last data point that is part of the data range.</para>
+<para>No checks or corrections are made to ensure the resulting range is valid (<ref refid="class_q_c_p_data_range_1aae53a37472212dca0a7939963e20dba0" kindref="member">isValid</ref>).</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1a54ff59048e01e46ac4aefafc844626c6" kindref="member">setBegin</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="931" column="8" bodyfile="qcustomplot.h" bodystart="931" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1aae53a37472212dca0a7939963e20dba0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>QCPDataRange::isValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether this range is valid. A valid range has a begin index greater or equal to 0, and an end index greater or equal to the begin index.</para>
+<para><simplesect kind="note"><para>Invalid ranges should be avoided and are never the result of any of <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref>&apos;s methods (unless they are themselves fed with invalid ranges). Do not pass invalid ranges to <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref>&apos;s methods. The invalid range is not inherently prevented in <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>, to allow temporary invalid begin/end values while manipulating the range. An invalid range is not necessarily empty (<ref refid="class_q_c_p_data_range_1ac32e53fc05d6cd2eac96b96a7265d3b8" kindref="member">isEmpty</ref>), since its <ref refid="class_q_c_p_data_range_1a1e7836058f755c6ab9f11996477b7150" kindref="member">length</ref> can be negative and thus non-zero. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="934" column="8" bodyfile="qcustomplot.h" bodystart="934" bodyend="934"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1ac32e53fc05d6cd2eac96b96a7265d3b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::isEmpty</definition>
+        <argsstring>() const</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>QCPDataRange::isEmpty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether this range is empty, i.e. whether its begin index equals its end index.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1ac6af055e509d1b691c244954ff1c5887" kindref="member">size</ref>, <ref refid="class_q_c_p_data_range_1a1e7836058f755c6ab9f11996477b7150" kindref="member">length</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="935" column="8" bodyfile="qcustomplot.h" bodystart="935" bodyend="935"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a93529421d12fdd3a8bdb2b8061936352" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+        <definition>QCPDataRange QCPDataRange::bounded</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>bounded</name>
+        <qualifiedname>QCPDataRange::bounded</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data range that matches this data range, except that parts exceeding <emphasis>other</emphasis> are excluded.</para>
+<para>This method is very similar to <ref refid="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" kindref="member">intersection</ref>, with one distinction: If this range and the <emphasis>other</emphasis> range share no intersection, the returned data range will be empty with begin and end set to the respective boundary side of <emphasis>other</emphasis>, at which this range is residing. (<ref refid="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" kindref="member">intersection</ref> would just return a range with begin and end set to 0.) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="936" column="16" bodyfile="qcustomplot.cpp" bodystart="2283" bodyend="2294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a36c8ad8acf177ffeb0a72c8d73030844" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+        <definition>QCPDataRange QCPDataRange::expanded</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>expanded</name>
+        <qualifiedname>QCPDataRange::expanded</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data range that contains both this data range as well as <emphasis>other</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="937" column="16" bodyfile="qcustomplot.cpp" bodystart="2299" bodyend="2302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+        <definition>QCPDataRange QCPDataRange::intersection</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>QCPDataRange::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the data range which is contained in both this data range and <emphasis>other</emphasis>.</para>
+<para>This method is very similar to <ref refid="class_q_c_p_data_range_1a93529421d12fdd3a8bdb2b8061936352" kindref="member">bounded</ref>, with one distinction: If this range and the <emphasis>other</emphasis> range share no intersection, the returned data range will be empty with begin and end set to 0. (<ref refid="class_q_c_p_data_range_1a93529421d12fdd3a8bdb2b8061936352" kindref="member">bounded</ref> would return a range with begin and end set to one of the boundaries of <emphasis>other</emphasis>, depending on which side this range is on.)</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_selection_1af5267ced53687561367105ee77b874ab" kindref="member">QCPDataSelection::intersection</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="938" column="16" bodyfile="qcustomplot.cpp" bodystart="2314" bodyend="2321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a279ed36602b39607699dc5652bcaf813" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref></type>
+        <definition>QCPDataRange QCPDataRange::adjusted</definition>
+        <argsstring>(int changeBegin, int changeEnd) const</argsstring>
+        <name>adjusted</name>
+        <qualifiedname>QCPDataRange::adjusted</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>changeBegin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>changeEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data range where <emphasis>changeBegin</emphasis> and <emphasis>changeEnd</emphasis> were added to the begin and end indices, respectively. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="939" column="16" bodyfile="qcustomplot.h" bodystart="939" bodyend="939"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a8a1c437f9beffd55621f48f961d7f679" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::intersects</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>intersects</name>
+        <qualifiedname>QCPDataRange::intersects</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether this data range and <emphasis>other</emphasis> share common data points.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" kindref="member">intersection</ref>, <ref refid="class_q_c_p_data_range_1a13ca398776374a3160aa85433718b812" kindref="member">contains</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="940" column="8" bodyfile="qcustomplot.cpp" bodystart="2328" bodyend="2332"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_data_range_1a13ca398776374a3160aa85433718b812" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPDataRange::contains</definition>
+        <argsstring>(const QCPDataRange &amp;other) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>QCPDataRange::contains</qualifiedname>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether all data points of <emphasis>other</emphasis> are also contained inside this data range.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_data_range_1a8a1c437f9beffd55621f48f961d7f679" kindref="member">intersects</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="941" column="8" bodyfile="qcustomplot.cpp" bodystart="2339" bodyend="2342"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="related">
+      <memberdef kind="function" id="class_q_c_p_data_range_1a486dd7af8a090ed069672e3510e6a082" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>QDebug</type>
+        <definition>QDebug operator&lt;&lt;</definition>
+        <argsstring>(QDebug d, const QCPDataRange &amp;dataRange)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>QCPDataRange::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>QDebug</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>dataRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints <emphasis>dataRange</emphasis> in a human readable format to the qDebug output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="1087" column="8" bodyfile="qcustomplot.h" bodystart="1087" bodyend="1091"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Describes a data range given by begin and end index. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> holds two integers describing the begin (<ref refid="class_q_c_p_data_range_1a54ff59048e01e46ac4aefafc844626c6" kindref="member">setBegin</ref>) and end (<ref refid="class_q_c_p_data_range_1a277f1a9eafe70b9184d9c00b641ae5de" kindref="member">setEnd</ref>) index of a contiguous set of data points. The <emphasis>end</emphasis> index corresponds to the data point just after the last data point of the data range, like in standard iterators.</para>
+<para>Data Ranges are not bound to a certain plottable, thus they can be freely exchanged, created and modified. If a non-contiguous data set shall be described, the class <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> is used, which holds and manages multiple instances of <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>. In most situations, <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> is thus used.</para>
+<para>Both <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> and <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> offer convenience methods to work with them, e.g. <ref refid="class_q_c_p_data_range_1a93529421d12fdd3a8bdb2b8061936352" kindref="member">bounded</ref>, <ref refid="class_q_c_p_data_range_1a36c8ad8acf177ffeb0a72c8d73030844" kindref="member">expanded</ref>, <ref refid="class_q_c_p_data_range_1a8a1c437f9beffd55621f48f961d7f679" kindref="member">intersects</ref>, <ref refid="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" kindref="member">intersection</ref>, <ref refid="class_q_c_p_data_range_1a279ed36602b39607699dc5652bcaf813" kindref="member">adjusted</ref>, <ref refid="class_q_c_p_data_range_1a13ca398776374a3160aa85433718b812" kindref="member">contains</ref>. Further, addition and subtraction operators (defined in <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref>) can be used to join/subtract data ranges and data selections (or mixtures), to retrieve a corresponding <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref>.</para>
+<para>QCustomPlot&apos;s data selection mechanism is based on <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> and <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref>.</para>
+<para><simplesect kind="note"><para>Do not confuse <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> with <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref>. A <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> describes an interval in floating point plot coordinates, e.g. the current axis range. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="qcustomplot.h" line="914" column="1" bodyfile="qcustomplot.h" bodystart="915" bodyend="947"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_data_range_1a279ed36602b39607699dc5652bcaf813" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>adjusted</name></member>
+      <member refid="class_q_c_p_data_range_1ae76d7eba9defdfafcd0fc41096793129" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>begin</name></member>
+      <member refid="class_q_c_p_data_range_1a93529421d12fdd3a8bdb2b8061936352" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>bounded</name></member>
+      <member refid="class_q_c_p_data_range_1a13ca398776374a3160aa85433718b812" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>contains</name></member>
+      <member refid="class_q_c_p_data_range_1aee1b20fb045929c3753ee2ce14af7630" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>end</name></member>
+      <member refid="class_q_c_p_data_range_1a36c8ad8acf177ffeb0a72c8d73030844" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>expanded</name></member>
+      <member refid="class_q_c_p_data_range_1a84e1e03129dd52528efb4bac18d30183" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>intersection</name></member>
+      <member refid="class_q_c_p_data_range_1a8a1c437f9beffd55621f48f961d7f679" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>intersects</name></member>
+      <member refid="class_q_c_p_data_range_1ac32e53fc05d6cd2eac96b96a7265d3b8" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>isEmpty</name></member>
+      <member refid="class_q_c_p_data_range_1aae53a37472212dca0a7939963e20dba0" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>isValid</name></member>
+      <member refid="class_q_c_p_data_range_1a1e7836058f755c6ab9f11996477b7150" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>length</name></member>
+      <member refid="class_q_c_p_data_range_1a849baf613e8ad866a66aaf45682dde53" prot="private" virt="non-virtual"><scope>QCPDataRange</scope><name>mBegin</name></member>
+      <member refid="class_q_c_p_data_range_1ac22cfcf2795d5e9f617d788be9fb14a0" prot="private" virt="non-virtual"><scope>QCPDataRange</scope><name>mEnd</name></member>
+      <member refid="class_q_c_p_data_range_1a5bcc9597731a7455407853ed0585f6ab" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>operator!=</name></member>
+      <member refid="class_q_c_p_data_range_1a486dd7af8a090ed069672e3510e6a082" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_q_c_p_data_range_1a8bfd79a282f6ebd766d60caa683242d3" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>operator==</name></member>
+      <member refid="class_q_c_p_data_range_1a49e72fd9bace1da9d875136dcc04c986" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>QCPDataRange</name></member>
+      <member refid="class_q_c_p_data_range_1a6c7f4a3684210423270515403060e9cf" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>QCPDataRange</name></member>
+      <member refid="class_q_c_p_data_range_1a54ff59048e01e46ac4aefafc844626c6" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>setBegin</name></member>
+      <member refid="class_q_c_p_data_range_1a277f1a9eafe70b9184d9c00b641ae5de" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>setEnd</name></member>
+      <member refid="class_q_c_p_data_range_1ac6af055e509d1b691c244954ff1c5887" prot="public" virt="non-virtual"><scope>QCPDataRange</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

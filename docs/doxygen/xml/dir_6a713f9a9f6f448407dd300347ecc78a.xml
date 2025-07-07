@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_6a713f9a9f6f448407dd300347ecc78a" kind="dir">
+    <compoundname>ohc</compoundname>
+    <innerfile refid="calibrate_8cpp">calibrate.cpp</innerfile>
+    <innerfile refid="calibrate_8h">calibrate.h</innerfile>
+    <innerfile refid="intelhex_8cpp">intelhex.cpp</innerfile>
+    <innerfile refid="intelhex_8h">intelhex.h</innerfile>
+    <innerfile refid="packet_8h">packet.h</innerfile>
+    <innerfile refid="serialconn_8cpp">serialconn.cpp</innerfile>
+    <innerfile refid="serialconn_8h">serialconn.h</innerfile>
+    <innerfile refid="serialwin_8cpp">serialwin.cpp</innerfile>
+    <innerfile refid="serialwin_8h">serialwin.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ohc/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structboost_1_1polygon_1_1geometry__concept_3_01_point_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>boost::polygon::geometry_concept&lt; Point &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structboost_1_1polygon_1_1geometry__concept_3_01_point_01_4_1a3aec11cb0253b17c7b24ae626a4434f5" prot="public" static="no">
+        <type>point_concept</type>
+        <definition>typedef point_concept boost::polygon::geometry_concept&lt; Point &gt;::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>boost::polygon::geometry_concept&lt; Point &gt;::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/voronoii.cpp" line="17" column="50" bodyfile="ui/geom/voronoii.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/geom/voronoii.cpp" line="17" column="5" bodyfile="ui/geom/voronoii.cpp" bodystart="17" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structboost_1_1polygon_1_1geometry__concept_3_01_point_01_4_1a3aec11cb0253b17c7b24ae626a4434f5" prot="public" virt="non-virtual"><scope>boost::polygon::geometry_concept&lt; Point &gt;</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

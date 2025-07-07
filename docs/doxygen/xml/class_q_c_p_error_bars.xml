@@ -1,0 +1,1410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_q_c_p_error_bars" kind="class" language="C++" prot="public">
+    <compoundname>QCPErrorBars</compoundname>
+    <basecompoundref refid="class_q_c_p_abstract_plottable" prot="public" virt="non-virtual">QCPAbstractPlottable</basecompoundref>
+    <basecompoundref refid="class_q_c_p_plottable_interface1_d" prot="public" virt="non-virtual">QCPPlottableInterface1D</basecompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ErrorType</name>
+        <qualifiedname>QCPErrorBars::ErrorType</qualifiedname>
+        <enumvalue id="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474a9fca24d20d5376e41be216fc9b08cd21" prot="public">
+          <name>etKeyError</name>
+          <briefdescription>
+<para>The errors are for the key dimension (bars appear parallel to the key axis) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474a5f760fc9c0a98c7f1e93e33bf54e9d83" prot="public">
+          <name>etValueError</name>
+          <briefdescription>
+<para>The errors are for the value dimension (bars appear parallel to the value axis) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines in which orientation the error bars shall appear. If your data needs both error dimensions, create two <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> with different <ref refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" kindref="member">ErrorType</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1af0af493d454a8f3a0908830160680d2b" kindref="member">setErrorType</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6307" column="3" bodyfile="qcustomplot.h" bodystart="6307" bodyend="6309"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_q_c_p_error_bars_1a83c7f452d0eebd302a7e4fb3a1957634" prot="protected" static="no" mutable="no">
+        <type>QSharedPointer&lt; QCPErrorBarsDataContainer &gt;</type>
+        <definition>QSharedPointer&lt;QCPErrorBarsDataContainer&gt; QCPErrorBars::mDataContainer</definition>
+        <argsstring></argsstring>
+        <name>mDataContainer</name>
+        <qualifiedname>QCPErrorBars::mDataContainer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6354" column="18" bodyfile="qcustomplot.h" bodystart="6354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_error_bars_1a14b6a5b49295990da84a05a3a89026bb" prot="protected" static="no" mutable="no">
+        <type>QPointer&lt; <ref refid="class_q_c_p_abstract_plottable" kindref="compound">QCPAbstractPlottable</ref> &gt;</type>
+        <definition>QPointer&lt;QCPAbstractPlottable&gt; QCPErrorBars::mDataPlottable</definition>
+        <argsstring></argsstring>
+        <name>mDataPlottable</name>
+        <qualifiedname>QCPErrorBars::mDataPlottable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6355" column="12" bodyfile="qcustomplot.h" bodystart="6355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_error_bars_1af9fd3117b86aac728c9e8e87c406ed9a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" kindref="member">ErrorType</ref></type>
+        <definition>ErrorType QCPErrorBars::mErrorType</definition>
+        <argsstring></argsstring>
+        <name>mErrorType</name>
+        <qualifiedname>QCPErrorBars::mErrorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6356" column="13" bodyfile="qcustomplot.h" bodystart="6356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_error_bars_1a3873724f7ac3392bdf9d46a47076a1d2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPErrorBars::mWhiskerWidth</definition>
+        <argsstring></argsstring>
+        <name>mWhiskerWidth</name>
+        <qualifiedname>QCPErrorBars::mWhiskerWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6357" column="10" bodyfile="qcustomplot.h" bodystart="6357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_q_c_p_error_bars_1a5cb5628b75e5aff0875710705666ec57" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QCPErrorBars::mSymbolGap</definition>
+        <argsstring></argsstring>
+        <name>mSymbolGap</name>
+        <qualifiedname>QCPErrorBars::mSymbolGap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6358" column="10" bodyfile="qcustomplot.h" bodystart="6358" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_q_c_p_error_bars_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCustomPlot</definition>
+        <argsstring></argsstring>
+        <name>QCustomPlot</name>
+        <qualifiedname>QCPErrorBars::QCustomPlot</qualifiedname>
+        <param>
+          <type><ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6375" column="16" bodyfile="qcustomplot.h" bodystart="6375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_q_c_p_error_bars_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class QCPLegend</definition>
+        <argsstring></argsstring>
+        <name>QCPLegend</name>
+        <qualifiedname>QCPErrorBars::QCPLegend</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_legend" kindref="compound">QCPLegend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6376" column="16" bodyfile="qcustomplot.h" bodystart="6376" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a5cdcc33e5f173780c3d657e96216e5c1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QCPErrorBars::QCPErrorBars</definition>
+        <argsstring>(QCPAxis *keyAxis, QCPAxis *valueAxis)</argsstring>
+        <name>QCPErrorBars</name>
+        <qualifiedname>QCPErrorBars::QCPErrorBars</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>keyAxis</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_c_p_axis" kindref="compound">QCPAxis</ref> *</type>
+          <declname>valueAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an error bars plottable which uses <emphasis>keyAxis</emphasis> as its key axis (&quot;x&quot;) and <emphasis>valueAxis</emphasis> as its value axis (&quot;y&quot;). <emphasis>keyAxis</emphasis> and <emphasis>valueAxis</emphasis> must reside in the same <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance and not have the same orientation. If either of these restrictions is violated, a corresponding message is printed to the debug output (qDebug), the construction is not aborted, though.</para>
+<para>It is also important that the <emphasis>keyAxis</emphasis> and <emphasis>valueAxis</emphasis> are the same for the error bars plottable and the data plottable that the error bars shall be drawn on (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>The created <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> is automatically registered with the <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance inferred from <emphasis>keyAxis</emphasis>. This <ref refid="class_q_custom_plot" kindref="compound">QCustomPlot</ref> instance takes ownership of the <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref>, so do not delete it manually but use <ref refid="class_q_custom_plot_1af3dafd56884208474f311d6226513ab2" kindref="member">QCustomPlot::removePlottable()</ref> instead. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6312" column="12" bodyfile="qcustomplot.cpp" bodystart="27959" bodyend="27968"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aa26aa18c404d54f9669e9a0c5ea716f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>QCPErrorBars::~QCPErrorBars</definition>
+        <argsstring>() Q_DECL_OVERRIDE</argsstring>
+        <name>~QCPErrorBars</name>
+        <qualifiedname>QCPErrorBars::~QCPErrorBars</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6313" column="11" bodyfile="qcustomplot.cpp" bodystart="27970" bodyend="27972"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QSharedPointer&lt; QCPErrorBarsDataContainer &gt;</type>
+        <definition>QSharedPointer&lt; QCPErrorBarsDataContainer &gt; QCPErrorBars::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>QCPErrorBars::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a shared pointer to the internal data storage of type QCPErrorBarsDataContainer. You may use it to directly manipulate the error values, which may be more convenient and faster than using the regular <ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> methods. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6315" column="18" bodyfile="qcustomplot.h" bodystart="6315" bodyend="6315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a0bc7c198cd8da3e92033433d7d2a42f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_abstract_plottable" kindref="compound">QCPAbstractPlottable</ref> *</type>
+        <definition>QCPAbstractPlottable * QCPErrorBars::dataPlottable</definition>
+        <argsstring>() const</argsstring>
+        <name>dataPlottable</name>
+        <qualifiedname>QCPErrorBars::dataPlottable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6316" column="24" bodyfile="qcustomplot.h" bodystart="6316" bodyend="6316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a527e7df83c98709cef22a8447fee4f13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" kindref="member">ErrorType</ref></type>
+        <definition>ErrorType QCPErrorBars::errorType</definition>
+        <argsstring>() const</argsstring>
+        <name>errorType</name>
+        <qualifiedname>QCPErrorBars::errorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6317" column="13" bodyfile="qcustomplot.h" bodystart="6317" bodyend="6317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ae5a292470366ec92b248753f83b8646e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::whiskerWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>whiskerWidth</name>
+        <qualifiedname>QCPErrorBars::whiskerWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6318" column="10" bodyfile="qcustomplot.h" bodystart="6318" bodyend="6318"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a2c969749fa0db565a42b80db9da5f388" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::symbolGap</definition>
+        <argsstring>() const</argsstring>
+        <name>symbolGap</name>
+        <qualifiedname>QCPErrorBars::symbolGap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6319" column="10" bodyfile="qcustomplot.h" bodystart="6319" bodyend="6319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setData</definition>
+        <argsstring>(QSharedPointer&lt; QCPErrorBarsDataContainer &gt; data)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPErrorBars::setData</qualifiedname>
+        <param>
+          <type>QSharedPointer&lt; QCPErrorBarsDataContainer &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the current data container with the provided <emphasis>data</emphasis> container.</para>
+<para>Since a QSharedPointer is used, multiple <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> instances may share the same data container safely. Modifying the data in the container will then affect all <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> instances that share the container. Sharing can be achieved by simply exchanging the data containers wrapped in shared pointers: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting></para>
+<para>If you do not wish to share containers, but create a copy from an existing container, assign the data containers directly: <programlisting filename="documentation/doc-code-snippets/mainwindow.cpp"></programlisting> (This uses different notation compared with other plottables, because the <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> uses a <computeroutput>QVector&lt;QCPErrorBarsData&gt;</computeroutput> as its data container, instead of a <ref refid="class_q_c_p_data_container" kindref="compound">QCPDataContainer</ref>.)</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1aae296ad9817b3fa418db284af81cecf8" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6322" column="8" bodyfile="qcustomplot.cpp" bodystart="27992" bodyend="27995"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a2f33d68a7ec163b09017dce3d9d3abcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;error)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPErrorBars::setData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Sets symmetrical error values as specified in <emphasis>error</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1aae296ad9817b3fa418db284af81cecf8" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6323" column="8" bodyfile="qcustomplot.cpp" bodystart="28006" bodyend="28010"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aac0cf070b957c11177e91b02bcb433c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;errorMinus, const QVector&lt; double &gt; &amp;errorPlus)</argsstring>
+        <name>setData</name>
+        <qualifiedname>QCPErrorBars::setData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>errorMinus</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>errorPlus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Sets asymmetrical errors as specified in <emphasis>errorMinus</emphasis> and <emphasis>errorPlus</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1aae296ad9817b3fa418db284af81cecf8" kindref="member">addData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6324" column="8" bodyfile="qcustomplot.cpp" bodystart="28022" bodyend="28026"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setDataPlottable</definition>
+        <argsstring>(QCPAbstractPlottable *plottable)</argsstring>
+        <name>setDataPlottable</name>
+        <qualifiedname>QCPErrorBars::setDataPlottable</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_abstract_plottable" kindref="compound">QCPAbstractPlottable</ref> *</type>
+          <declname>plottable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the data plottable to which the error bars will be applied. The error values specified e.g. via <ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> will be associated one-to-one by the data point index to the data points of <emphasis>plottable</emphasis>. This means that the error bars will adopt the key/value coordinates of the data point with the same index.</para>
+<para>The passed <emphasis>plottable</emphasis> must be a one-dimensional plottable, i.e. it must implement the <ref refid="class_q_c_p_plottable_interface1_d" kindref="compound">QCPPlottableInterface1D</ref>. Further, it must not be a <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> instance itself. If either of these restrictions is violated, a corresponding qDebug output is generated, and the data plottable of this <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> instance is set to zero.</para>
+<para>For proper display, care must also be taken that the key and value axes of the <emphasis>plottable</emphasis> match those configured for this <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6325" column="8" bodyfile="qcustomplot.cpp" bodystart="28042" bodyend="28058"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1af0af493d454a8f3a0908830160680d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setErrorType</definition>
+        <argsstring>(ErrorType type)</argsstring>
+        <name>setErrorType</name>
+        <qualifiedname>QCPErrorBars::setErrorType</qualifiedname>
+        <param>
+          <type><ref refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" kindref="member">ErrorType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets in which orientation the error bars shall appear on the data points. If your data needs both error dimensions, create two <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> with different <emphasis>type</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6326" column="8" bodyfile="qcustomplot.cpp" bodystart="28064" bodyend="28067"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ad05f6ff9e46c6047f1cd2459744b7b59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setWhiskerWidth</definition>
+        <argsstring>(double pixels)</argsstring>
+        <name>setWhiskerWidth</name>
+        <qualifiedname>QCPErrorBars::setWhiskerWidth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>pixels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the width of the whiskers (the short bars at the end of the actual error bar backbones) to <emphasis>pixels</emphasis>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6327" column="8" bodyfile="qcustomplot.cpp" bodystart="28073" bodyend="28076"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a280ee8d863d8a2630c309701d019b3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::setSymbolGap</definition>
+        <argsstring>(double pixels)</argsstring>
+        <name>setSymbolGap</name>
+        <qualifiedname>QCPErrorBars::setSymbolGap</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>pixels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the gap diameter around the data points that will be left out when drawing the error bar backbones. This gap prevents that error bars are drawn too close to or even through scatter points. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6328" column="8" bodyfile="qcustomplot.cpp" bodystart="28083" bodyend="28086"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aae296ad9817b3fa418db284af81cecf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::addData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;error)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPErrorBars::addData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds symmetrical error values as specified in <emphasis>error</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6331" column="8" bodyfile="qcustomplot.cpp" bodystart="28097" bodyend="28100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a2135cf41d7925a3dcdadd4eb03fd3eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::addData</definition>
+        <argsstring>(const QVector&lt; double &gt; &amp;errorMinus, const QVector&lt; double &gt; &amp;errorPlus)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPErrorBars::addData</qualifiedname>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>errorMinus</declname>
+        </param>
+        <param>
+          <type>const QVector&lt; double &gt; &amp;</type>
+          <declname>errorPlus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds asymmetrical errors as specified in <emphasis>errorMinus</emphasis> and <emphasis>errorPlus</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6332" column="8" bodyfile="qcustomplot.cpp" bodystart="28112" bodyend="28120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a39ef73b0e61941fc4064fd3a5224c72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::addData</definition>
+        <argsstring>(double error)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPErrorBars::addData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds a single symmetrical error bar as specified in <emphasis>error</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6333" column="8" bodyfile="qcustomplot.cpp" bodystart="28131" bodyend="28134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a1833c5de9c2fe2952b977505d9f27cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::addData</definition>
+        <argsstring>(double errorMinus, double errorPlus)</argsstring>
+        <name>addData</name>
+        <qualifiedname>QCPErrorBars::addData</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>errorMinus</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>errorPlus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Adds a single asymmetrical error bar as specified in <emphasis>errorMinus</emphasis> and <emphasis>errorPlus</emphasis>. The errors will be associated one-to-one by the data point index to the associated data plottable (<ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref>).</para>
+<para>You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6334" column="8" bodyfile="qcustomplot.cpp" bodystart="28146" bodyend="28149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a18b797c62f2af000b926e52eb46d97c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int QCPErrorBars::dataCount</definition>
+        <argsstring>() const Q_DECL_OVERRIDE</argsstring>
+        <name>dataCount</name>
+        <qualifiedname>QCPErrorBars::dataCount</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1adf4ce17d263b506df80d0ac37e497432">dataCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of data points of the plottable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6337" column="15" bodyfile="qcustomplot.cpp" bodystart="28152" bodyend="28155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a7cba420078adc523efa59fb8c6ca23e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::dataMainKey</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataMainKey</name>
+        <qualifiedname>QCPErrorBars::dataMainKey</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1a572ed2583cb6a2bb590a265c3fc2b004">dataMainKey</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the main key of the data point at the given <emphasis>index</emphasis>.</para>
+<para>What the main key is, is defined by the plottable&apos;s data type. See the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">QCPDataContainer DataType</ref> documentation for details about this naming convention. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6338" column="18" bodyfile="qcustomplot.cpp" bodystart="28158" bodyend="28165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a3000a036124880a90c629d124c1cd1e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::dataSortKey</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataSortKey</name>
+        <qualifiedname>QCPErrorBars::dataSortKey</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1aa21351ab3d6edbcf8d95f9c377e5003b">dataSortKey</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the sort key of the data point at the given <emphasis>index</emphasis>.</para>
+<para>What the sort key is, is defined by the plottable&apos;s data type. See the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">QCPDataContainer DataType</ref> documentation for details about this naming convention. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6339" column="18" bodyfile="qcustomplot.cpp" bodystart="28168" bodyend="28175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ae9f6c79c03147efb1a67742c55386dc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::dataMainValue</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataMainValue</name>
+        <qualifiedname>QCPErrorBars::dataMainValue</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1a17f6fbd78e004b6f3c8257fea50f9808">dataMainValue</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the main value of the data point at the given <emphasis>index</emphasis>.</para>
+<para>What the main value is, is defined by the plottable&apos;s data type. See the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">QCPDataContainer DataType</ref> documentation for details about this naming convention. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6340" column="18" bodyfile="qcustomplot.cpp" bodystart="28178" bodyend="28185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1af71af55d929d832daf32e283b21e1f3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPErrorBars::dataValueRange</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataValueRange</name>
+        <qualifiedname>QCPErrorBars::dataValueRange</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1af9a720ace6499337406a5e65d4823f57">dataValueRange</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value range of the data point at the given <emphasis>index</emphasis>.</para>
+<para>What the value range is, is defined by the plottable&apos;s data type. See the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">QCPDataContainer DataType</ref> documentation for details about this naming convention. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6341" column="20" bodyfile="qcustomplot.cpp" bodystart="28188" bodyend="28202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ae79fed6566f1912a97344b20b35faac1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QPointF</type>
+        <definition>QPointF QCPErrorBars::dataPixelPosition</definition>
+        <argsstring>(int index) const Q_DECL_OVERRIDE</argsstring>
+        <name>dataPixelPosition</name>
+        <qualifiedname>QCPErrorBars::dataPixelPosition</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1a35fd032c6e5226ff7b50e0f37c57922b">dataPixelPosition</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the pixel position on the widget surface at which the data point at the given <emphasis>index</emphasis> appears.</para>
+<para>Usually this corresponds to the point of dataMainKey/ dataMainValue, in pixel coordinates. However, depending on the plottable, this might be a different apparent position than just a coord-to-pixel transform of those values. For example, <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref> apparent data values can be shifted depending on their stacking, bar grouping or configured base value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6342" column="19" bodyfile="qcustomplot.cpp" bodystart="28205" bodyend="28212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1af75958b95d9b9c7edfd9851c1d123850" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool QCPErrorBars::sortKeyIsMainKey</definition>
+        <argsstring>() const Q_DECL_OVERRIDE</argsstring>
+        <name>sortKeyIsMainKey</name>
+        <qualifiedname>QCPErrorBars::sortKeyIsMainKey</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1acec8492c49e051aaec5ca5267900a98e">sortKeyIsMainKey</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the sort key (<ref refid="class_q_c_p_error_bars_1a3000a036124880a90c629d124c1cd1e2" kindref="member">dataSortKey</ref>) is identical to the main key (<ref refid="class_q_c_p_error_bars_1a7cba420078adc523efa59fb8c6ca23e0" kindref="member">dataMainKey</ref>).</para>
+<para>What the sort and main keys are, is defined by the plottable&apos;s data type. See the <ref refid="class_q_c_p_data_container_1qcpdatacontainer-datatype" kindref="member">QCPDataContainer DataType</ref> documentation for details about this naming convention. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6343" column="16" bodyfile="qcustomplot.cpp" bodystart="28215" bodyend="28225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ad7c727736599dfb173f0952082e1a5b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref></type>
+        <definition>QCPDataSelection QCPErrorBars::selectTestRect</definition>
+        <argsstring>(const QRectF &amp;rect, bool onlySelectable) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTestRect</name>
+        <qualifiedname>QCPErrorBars::selectTestRect</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1a05874ade11a735bb290bb96ccf7fdac1">selectTestRect</reimplements>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a data selection containing all the data points of this plottable which are contained (or hit by) <emphasis>rect</emphasis>. This is used mainly in the selection rect interaction for data selection (data selection mechanism).</para>
+<para>If <emphasis>onlySelectable</emphasis> is true, an empty <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref> is returned if this plottable is not selectable (i.e. if <ref refid="class_q_c_p_abstract_plottable_1ac238d6e910f976f1f30d41c2bca44ac3" kindref="member">QCPAbstractPlottable::setSelectable</ref> is <ref refid="namespace_q_c_p_1ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe" kindref="member">QCP::stNone</ref>).</para>
+<para><simplesect kind="note"><para><emphasis>rect</emphasis> must be a normalized rect (positive or zero width and height). This is especially important when using the rect of <ref refid="class_q_c_p_selection_rect_1a15a43542e1f7b953a44c260b419e6d2c" kindref="member">QCPSelectionRect::accepted</ref>, which is not necessarily normalized. Use <computeroutput>QRect::normalized()</computeroutput> when passing a rect which might not be normalized.    </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6344" column="28" bodyfile="qcustomplot.cpp" bodystart="28230" bodyend="28260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a74c57d6abb8eda3c4c31b72d1df9f568" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int QCPErrorBars::findBegin</definition>
+        <argsstring>(double sortKey, bool expandedRange=true) const Q_DECL_OVERRIDE</argsstring>
+        <name>findBegin</name>
+        <qualifiedname>QCPErrorBars::findBegin</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1ac8f224af7f2afeed46d82368344d8d9e">findBegin</reimplements>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>expandedRange</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the index of the data point with a (sort-)key that is equal to, just below, or just above <emphasis>sortKey</emphasis>. If <emphasis>expandedRange</emphasis> is true, the data point just below <emphasis>sortKey</emphasis> will be considered, otherwise the one just above.</para>
+<para>This can be used in conjunction with <ref refid="class_q_c_p_error_bars_1ad22dd8499c6d45176ad0651751a0b0b0" kindref="member">findEnd</ref> to iterate over data points within a given key range, including or excluding the bounding data points that are just beyond the specified range.</para>
+<para>If <emphasis>expandedRange</emphasis> is true but there are no data points below <emphasis>sortKey</emphasis>, 0 is returned.</para>
+<para>If the container is empty, returns 0 (in that case, <ref refid="class_q_c_p_error_bars_1ad22dd8499c6d45176ad0651751a0b0b0" kindref="member">findEnd</ref> will also return 0, so a loop using these methods will not iterate over the index 0).</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1ad22dd8499c6d45176ad0651751a0b0b0" kindref="member">findEnd</ref>, <ref refid="class_q_c_p_data_container_1a2ad8a5399072d99a242d3a6d2d7e278a" kindref="member">QCPDataContainer::findBegin</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6345" column="15" bodyfile="qcustomplot.cpp" bodystart="28263" bodyend="28276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ad22dd8499c6d45176ad0651751a0b0b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int QCPErrorBars::findEnd</definition>
+        <argsstring>(double sortKey, bool expandedRange=true) const Q_DECL_OVERRIDE</argsstring>
+        <name>findEnd</name>
+        <qualifiedname>QCPErrorBars::findEnd</qualifiedname>
+        <reimplements refid="class_q_c_p_plottable_interface1_d_1a2a6f8cad846ea18d3ab46a95047de681">findEnd</reimplements>
+        <param>
+          <type>double</type>
+          <declname>sortKey</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>expandedRange</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the index one after the data point with a (sort-)key that is equal to, just above, or just below <emphasis>sortKey</emphasis>. If <emphasis>expandedRange</emphasis> is true, the data point just above <emphasis>sortKey</emphasis> will be considered, otherwise the one just below.</para>
+<para>This can be used in conjunction with <ref refid="class_q_c_p_error_bars_1a74c57d6abb8eda3c4c31b72d1df9f568" kindref="member">findBegin</ref> to iterate over data points within a given key range, including the bounding data points that are just below and above the specified range.</para>
+<para>If <emphasis>expandedRange</emphasis> is true but there are no data points above <emphasis>sortKey</emphasis>, the index just above the highest data point is returned.</para>
+<para>If the container is empty, returns 0.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_error_bars_1a74c57d6abb8eda3c4c31b72d1df9f568" kindref="member">findBegin</ref>, <ref refid="class_q_c_p_data_container_1afb8b8f23cc2b7234a793a25ce79fe48f" kindref="member">QCPDataContainer::findEnd</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6346" column="15" bodyfile="qcustomplot.cpp" bodystart="28279" bodyend="28292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a35d48d6b283898e725cc9f3fb38c2769" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::selectTest</definition>
+        <argsstring>(const QPointF &amp;pos, bool onlySelectable, QVariant *details=nullptr) const Q_DECL_OVERRIDE</argsstring>
+        <name>selectTest</name>
+        <qualifiedname>QCPErrorBars::selectTest</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a8e4964b629802ce50e1427c7fb21d35b">selectTest</reimplements>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onlySelectable</declname>
+        </param>
+        <param>
+          <type>QVariant *</type>
+          <declname>details</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements a selectTest specific to this plottable&apos;s point geometry.</para>
+<para>If <emphasis>details</emphasis> is not 0, it will be set to a <ref refid="class_q_c_p_data_selection" kindref="compound">QCPDataSelection</ref>, describing the closest data point to <emphasis>pos</emphasis>.</para>
+<para>\seebaseclassmethod <ref refid="class_q_c_p_abstract_plottable_1a8e4964b629802ce50e1427c7fb21d35b" kindref="member">QCPAbstractPlottable::selectTest</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6349" column="18" bodyfile="qcustomplot.cpp" bodystart="28302" bodyend="28323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ad8f0bfffcbb3c3bdf9ebe5f7ef2fe0cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_q_c_p_plottable_interface1_d" kindref="compound">QCPPlottableInterface1D</ref> *</type>
+        <definition>virtual QCPPlottableInterface1D * QCPErrorBars::interface1D</definition>
+        <argsstring>() Q_DECL_OVERRIDE</argsstring>
+        <name>interface1D</name>
+        <qualifiedname>QCPErrorBars::interface1D</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a53c8b30779771f2c743104e652e74ab1">interface1D</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this plottable is a one-dimensional plottable, i.e. it implements the <ref refid="class_q_c_p_plottable_interface1_d" kindref="compound">QCPPlottableInterface1D</ref>, returns the <emphasis>this</emphasis> pointer with that type. Otherwise (e.g. in the case of a <ref refid="class_q_c_p_color_map" kindref="compound">QCPColorMap</ref>) returns zero.</para>
+<para>You can use this method to gain read access to data coordinates while holding a pointer to the abstract base class only. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6350" column="35" bodyfile="qcustomplot.h" bodystart="6350" bodyend="6350"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a801e85931372abf2a1034bfb2eac5cd2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::draw</definition>
+        <argsstring>(QCPPainter *painter) Q_DECL_OVERRIDE</argsstring>
+        <name>draw</name>
+        <qualifiedname>QCPErrorBars::draw</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a453f676a5cee7bf846c5f0fa05ea84b3">draw</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6361" column="16" bodyfile="qcustomplot.cpp" bodystart="28326" bodyend="28385"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a20f5d292e66103f26bca00b11ce417b4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::drawLegendIcon</definition>
+        <argsstring>(QCPPainter *painter, const QRectF &amp;rect) const Q_DECL_OVERRIDE</argsstring>
+        <name>drawLegendIcon</name>
+        <qualifiedname>QCPErrorBars::drawLegendIcon</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a71c259f4f96533d12df152c446b17425">drawLegendIcon</reimplements>
+        <param>
+          <type><ref refid="class_q_c_p_painter" kindref="compound">QCPPainter</ref> *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6362" column="16" bodyfile="qcustomplot.cpp" bodystart="28388" bodyend="28403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a6cac828a430d66ac77a167549d01d212" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPErrorBars::getKeyRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth) const Q_DECL_OVERRIDE</argsstring>
+        <name>getKeyRange</name>
+        <qualifiedname>QCPErrorBars::getKeyRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1a56b4d9000f4de0de86c566c84eb05a21">getKeyRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that all data in this plottable span in the key axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_error_bars_1ab76215a186ae4862235821e028685f26" kindref="member">getValueRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6363" column="20" bodyfile="qcustomplot.cpp" bodystart="28406" bodyend="28477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1ab76215a186ae4862235821e028685f26" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref></type>
+        <definition>QCPRange QCPErrorBars::getValueRange</definition>
+        <argsstring>(bool &amp;foundRange, QCP::SignDomain inSignDomain=QCP::sdBoth, const QCPRange &amp;inKeyRange=QCPRange()) const Q_DECL_OVERRIDE</argsstring>
+        <name>getValueRange</name>
+        <qualifiedname>QCPErrorBars::getValueRange</qualifiedname>
+        <reimplements refid="class_q_c_p_abstract_plottable_1aa81c95aec08d86cdd5407e48b83ab186">getValueRange</reimplements>
+        <param>
+          <type>bool &amp;</type>
+          <declname>foundRange</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9" kindref="member">QCP::SignDomain</ref></type>
+          <declname>inSignDomain</declname>
+          <defval><ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref> &amp;</type>
+          <declname>inKeyRange</declname>
+          <defval><ref refid="class_q_c_p_range" kindref="compound">QCPRange</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the coordinate range that the data points in the specified key range (<emphasis>inKeyRange</emphasis>) span in the value axis dimension. For logarithmic plots, one can set <emphasis>inSignDomain</emphasis> to either <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> or <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a584784b75fb816abcc627cf743bb699f" kindref="member">QCP::sdPositive</ref> in order to restrict the returned range to that sign domain. E.g. when only negative range is wanted, set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9a2d18af0bc58f6528d1e82ce699fe4829" kindref="member">QCP::sdNegative</ref> and all positive points will be ignored for range calculation. For no restriction, just set <emphasis>inSignDomain</emphasis> to <ref refid="namespace_q_c_p_1afd50e7cf431af385614987d8553ff8a9aa38352ef02d51ddfa4399d9551566e24" kindref="member">QCP::sdBoth</ref> (default). <emphasis>foundRange</emphasis> is an output parameter that indicates whether a range could be found or not. If this is false, you shouldn&apos;t use the returned range (e.g. no points in data).</para>
+<para>If <emphasis>inKeyRange</emphasis> has both lower and upper bound set to zero (is equal to <computeroutput><ref refid="class_q_c_p_range" kindref="compound">QCPRange()</ref></computeroutput>), all data points are considered, without any restriction on the keys.</para>
+<para>Note that <emphasis>foundRange</emphasis> is not the same as <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>, since the range returned by this function may have size zero (e.g. when there is only one data point). In this case <emphasis>foundRange</emphasis> would return true, but the returned range is not a valid range in terms of <ref refid="class_q_c_p_range_1ab38bd4841c77c7bb86c9eea0f142dcc0" kindref="member">QCPRange::validRange</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" kindref="member">rescaleAxes</ref>, <ref refid="class_q_c_p_error_bars_1a6cac828a430d66ac77a167549d01d212" kindref="member">getKeyRange</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6364" column="20" bodyfile="qcustomplot.cpp" bodystart="28480" bodyend="28564"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1abeea5ff0d66732bbfc9b74869d8c552e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::getErrorBarLines</definition>
+        <argsstring>(QCPErrorBarsDataContainer::const_iterator it, QVector&lt; QLineF &gt; &amp;backbones, QVector&lt; QLineF &gt; &amp;whiskers) const</argsstring>
+        <name>getErrorBarLines</name>
+        <qualifiedname>QCPErrorBars::getErrorBarLines</qualifiedname>
+        <param>
+          <type>QCPErrorBarsDataContainer::const_iterator</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>QVector&lt; QLineF &gt; &amp;</type>
+          <declname>backbones</declname>
+        </param>
+        <param>
+          <type>QVector&lt; QLineF &gt; &amp;</type>
+          <declname>whiskers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6367" column="8" bodyfile="qcustomplot.cpp" bodystart="28577" bodyend="28626"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aac9ffa98815035d300b2e9a67495ba4c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::getVisibleDataBounds</definition>
+        <argsstring>(QCPErrorBarsDataContainer::const_iterator &amp;begin, QCPErrorBarsDataContainer::const_iterator &amp;end, const QCPDataRange &amp;rangeRestriction) const</argsstring>
+        <name>getVisibleDataBounds</name>
+        <qualifiedname>QCPErrorBars::getVisibleDataBounds</qualifiedname>
+        <param>
+          <type>QCPErrorBarsDataContainer::const_iterator &amp;</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>QCPErrorBarsDataContainer::const_iterator &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &amp;</type>
+          <declname>rangeRestriction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6368" column="8" bodyfile="qcustomplot.cpp" bodystart="28646" bodyend="28697"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a8e904076bad643f43af28b95f21c1b88" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QCPErrorBars::pointDistance</definition>
+        <argsstring>(const QPointF &amp;pixelPoint, QCPErrorBarsDataContainer::const_iterator &amp;closestData) const</argsstring>
+        <name>pointDistance</name>
+        <qualifiedname>QCPErrorBars::pointDistance</qualifiedname>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>pixelPoint</declname>
+        </param>
+        <param>
+          <type>QCPErrorBarsDataContainer::const_iterator &amp;</type>
+          <declname>closestData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6369" column="10" bodyfile="qcustomplot.cpp" bodystart="28705" bodyend="28736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a243e0bb2563fc2e9f08efd77e7175abf" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QCPErrorBars::getDataSegments</definition>
+        <argsstring>(QList&lt; QCPDataRange &gt; &amp;selectedSegments, QList&lt; QCPDataRange &gt; &amp;unselectedSegments) const</argsstring>
+        <name>getDataSegments</name>
+        <qualifiedname>QCPErrorBars::getDataSegments</qualifiedname>
+        <param>
+          <type>QList&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt; &amp;</type>
+          <declname>selectedSegments</declname>
+        </param>
+        <param>
+          <type>QList&lt; <ref refid="class_q_c_p_data_range" kindref="compound">QCPDataRange</ref> &gt; &amp;</type>
+          <declname>unselectedSegments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6371" column="8" bodyfile="qcustomplot.cpp" bodystart="28745" bodyend="28762"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1a5ad9abccb1be3df25485ad7dc21b3b89" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPErrorBars::errorBarVisible</definition>
+        <argsstring>(int index) const</argsstring>
+        <name>errorBarVisible</name>
+        <qualifiedname>QCPErrorBars::errorBarVisible</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6372" column="8" bodyfile="qcustomplot.cpp" bodystart="28773" bodyend="28794"/>
+      </memberdef>
+      <memberdef kind="function" id="class_q_c_p_error_bars_1aa9b1642567a0aff8a2f6e0556c563633" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QCPErrorBars::rectIntersectsLine</definition>
+        <argsstring>(const QRectF &amp;pixelRect, const QLineF &amp;line) const</argsstring>
+        <name>rectIntersectsLine</name>
+        <qualifiedname>QCPErrorBars::rectIntersectsLine</qualifiedname>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>pixelRect</declname>
+        </param>
+        <param>
+          <type>const QLineF &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="qcustomplot.h" line="6373" column="8" bodyfile="qcustomplot.cpp" bodystart="28803" bodyend="28815"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A plottable that adds a set of error bars to other plottables. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="QCPErrorBars.png"></image>
+</para>
+<para>The <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> plottable can be attached to other one-dimensional plottables (e.g. <ref refid="class_q_c_p_graph" kindref="compound">QCPGraph</ref>, <ref refid="class_q_c_p_curve" kindref="compound">QCPCurve</ref>, <ref refid="class_q_c_p_bars" kindref="compound">QCPBars</ref>, etc.) and equips them with error bars.</para>
+<para>Use <ref refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" kindref="member">setDataPlottable</ref> to define for which plottable the <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> shall display the error bars. The orientation of the error bars can be controlled with <ref refid="class_q_c_p_error_bars_1af0af493d454a8f3a0908830160680d2b" kindref="member">setErrorType</ref>.</para>
+<para>By using <ref refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" kindref="member">setData</ref>, you can supply the actual error data, either as symmetric error or plus/minus asymmetric errors. <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> only stores the error data. The absolute key/value position of each error bar will be adopted from the configured data plottable. The error data of the <ref refid="class_q_c_p_error_bars" kindref="compound">QCPErrorBars</ref> are associated one-to-one via their index to the data points of the data plottable. You can directly access and manipulate the error bar data via <ref refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" kindref="member">data</ref>.</para>
+<para>Set either of the plus/minus errors to NaN (<computeroutput>qQNaN()</computeroutput> or <computeroutput>std::numeric_limits&lt;double&gt;::quiet_NaN()</computeroutput>) to not show the respective error bar on the data point at that index.</para>
+<sect1 id="class_q_c_p_error_bars_1qcperrorbars-appearance">
+<title>Changing the appearance</title><para>The appearance of the error bars is defined by the pen (<ref refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" kindref="member">setPen</ref>), and the width of the whiskers (<ref refid="class_q_c_p_error_bars_1ad05f6ff9e46c6047f1cd2459744b7b59" kindref="member">setWhiskerWidth</ref>). Further, the error bar backbones may leave a gap around the data point center to prevent that error bars are drawn too close to or even through scatter points. This gap size can be controlled via <ref refid="class_q_c_p_error_bars_1a280ee8d863d8a2630c309701d019b3de" kindref="member">setSymbolGap</ref>. </para>
+</sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QCPErrorBars</label>
+        <link refid="class_q_c_p_error_bars"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QCPAbstractPlottable</label>
+        <link refid="class_q_c_p_abstract_plottable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>mSelection</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>mSelectionDecorator</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QCPAxis</label>
+        <link refid="class_q_c_p_axis"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mAxisRect</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>mDragStartRange</edgelabel>
+          <edgelabel>mRange</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mGrid</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>mAxisPainter</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QCPAxisPainterPrivate</label>
+        <link refid="class_q_c_p_axis_painter_private"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>lowerEnding</edgelabel>
+          <edgelabel>upperEnding</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QCPAxisRect</label>
+        <link refid="class_q_c_p_axis_rect"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>mInsetLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>QCPDataSelection</label>
+        <link refid="class_q_c_p_data_selection"/>
+      </node>
+      <node id="1">
+        <label>QCPErrorBars</label>
+        <link refid="class_q_c_p_error_bars"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QCPGrid</label>
+        <link refid="class_q_c_p_grid"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>mParentAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>QCPLayer</label>
+        <link refid="class_q_c_p_layer"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QCPLayerable</label>
+        <link refid="class_q_c_p_layerable"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mParentPlot</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mLayer</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QCPLayout</label>
+        <link refid="class_q_c_p_layout"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QCPLayoutElement</label>
+        <link refid="class_q_c_p_layout_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mParentLayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QCPLayoutGrid</label>
+        <link refid="class_q_c_p_layout_grid"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>QCPLayoutInset</label>
+        <link refid="class_q_c_p_layout_inset"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>QCPLegend</label>
+        <link refid="class_q_c_p_legend"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>QCPLineEnding</label>
+        <link refid="class_q_c_p_line_ending"/>
+      </node>
+      <node id="23">
+        <label>QCPPlottableInterface1D</label>
+        <link refid="class_q_c_p_plottable_interface1_d"/>
+      </node>
+      <node id="12">
+        <label>QCPRange</label>
+        <link refid="class_q_c_p_range"/>
+      </node>
+      <node id="22">
+        <label>QCPScatterStyle</label>
+        <link refid="class_q_c_p_scatter_style"/>
+      </node>
+      <node id="21">
+        <label>QCPSelectionDecorator</label>
+        <link refid="class_q_c_p_selection_decorator"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>mScatterStyle</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mPlottable</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>QCPSelectionRect</label>
+        <link refid="class_q_c_p_selection_rect"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QCustomPlot</label>
+        <link refid="class_q_custom_plot"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>xAxis</edgelabel>
+          <edgelabel>xAxis2</edgelabel>
+          <edgelabel>yAxis</edgelabel>
+          <edgelabel>yAxis2</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>legend</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>mPlotLayout</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>mCurrentLayer</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>mSelectionRect</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+      <node id="6">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="qcustomplot.h" line="6289" column="1" bodyfile="qcustomplot.h" bodystart="6290" bodyend="6377"/>
+    <listofallmembers>
+      <member refid="class_q_c_p_error_bars_1aae296ad9817b3fa418db284af81cecf8" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_error_bars_1a2135cf41d7925a3dcdadd4eb03fd3eb6" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_error_bars_1a39ef73b0e61941fc4064fd3a5224c72a" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_error_bars_1a1833c5de9c2fe2952b977505d9f27cd1" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addData</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa64e93cb5b606d8110d2cc0a349bb30f" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a70f8cabfd808f7d5204b9f18c45c13f5" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>addToLegend</name></member>
+      <member refid="class_q_c_p_layerable_1a71cbd212fde2703cee076e204a475709" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>antialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a022717896dc57b638a7b5a7be7212ba9" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>antialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a795370db6b1309de0ab60b633efb5ec2" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>antialiasedScatters</name></member>
+      <member refid="class_q_c_p_layerable_1acb663e375d2d36dc5c55021ee5a2119b" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>applyAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac032077fb0db93d6faa3273d02363398" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>applyDefaultAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8d06a59ea23324cce6330ebf2262c0ed" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>applyFillAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95f26b15a1e5d9c7bd2c0a46d760fc9" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>applyScattersAntialiasingHint</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a893b4896dfd92b68b05b2600b80f5826" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>brush</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a635cee3effc07ad421414c76fd83548c" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>clipRect</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7ad84a36472441cf1f555c5683d0da93" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a5acb50ae984eef09a7ab92315d2ad708" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>coordsToPixels</name></member>
+      <member refid="class_q_c_p_error_bars_1aeebd1b14f4c3573565efafd514988813" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>data</name></member>
+      <member refid="class_q_c_p_error_bars_1a18b797c62f2af000b926e52eb46d97c7" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataCount</name></member>
+      <member refid="class_q_c_p_error_bars_1a7cba420078adc523efa59fb8c6ca23e0" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataMainKey</name></member>
+      <member refid="class_q_c_p_error_bars_1ae9f6c79c03147efb1a67742c55386dc8" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataMainValue</name></member>
+      <member refid="class_q_c_p_error_bars_1ae79fed6566f1912a97344b20b35faac1" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataPixelPosition</name></member>
+      <member refid="class_q_c_p_error_bars_1a0bc7c198cd8da3e92033433d7d2a42f1" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>dataPlottable</name></member>
+      <member refid="class_q_c_p_error_bars_1a3000a036124880a90c629d124c1cd1e2" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataSortKey</name></member>
+      <member refid="class_q_c_p_error_bars_1af71af55d929d832daf32e283b21e1f3e" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>dataValueRange</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a9b104d9da4f38f934363945c313bf82e" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>deselectEvent</name></member>
+      <member refid="class_q_c_p_error_bars_1a801e85931372abf2a1034bfb2eac5cd2" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>draw</name></member>
+      <member refid="class_q_c_p_error_bars_1a20f5d292e66103f26bca00b11ce417b4" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>drawLegendIcon</name></member>
+      <member refid="class_q_c_p_error_bars_1a5ad9abccb1be3df25485ad7dc21b3b89" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>errorBarVisible</name></member>
+      <member refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>ErrorType</name></member>
+      <member refid="class_q_c_p_error_bars_1a527e7df83c98709cef22a8447fee4f13" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>errorType</name></member>
+      <member refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474a9fca24d20d5376e41be216fc9b08cd21" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>etKeyError</name></member>
+      <member refid="class_q_c_p_error_bars_1a95f0220f11a72648b96480a85ce26474a5f760fc9c0a98c7f1e93e33bf54e9d83" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>etValueError</name></member>
+      <member refid="class_q_c_p_error_bars_1a74c57d6abb8eda3c4c31b72d1df9f568" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>findBegin</name></member>
+      <member refid="class_q_c_p_error_bars_1ad22dd8499c6d45176ad0651751a0b0b0" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>findEnd</name></member>
+      <member refid="class_q_c_p_error_bars_1a243e0bb2563fc2e9f08efd77e7175abf" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>getDataSegments</name></member>
+      <member refid="class_q_c_p_error_bars_1abeea5ff0d66732bbfc9b74869d8c552e" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>getErrorBarLines</name></member>
+      <member refid="class_q_c_p_error_bars_1a6cac828a430d66ac77a167549d01d212" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>getKeyRange</name></member>
+      <member refid="class_q_c_p_error_bars_1ab76215a186ae4862235821e028685f26" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>getValueRange</name></member>
+      <member refid="class_q_c_p_error_bars_1aac9ffa98815035d300b2e9a67495ba4c" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>getVisibleDataBounds</name></member>
+      <member refid="class_q_c_p_layerable_1a8cbe5a0c9a5674249982f5ca5f8e02bc" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>initializeParentPlot</name></member>
+      <member refid="class_q_c_p_error_bars_1ad8f0bfffcbb3c3bdf9ebe5f7ef2fe0cf" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>interface1D</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa6f25b97ee99988fe352f17cb9ed962b" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>keyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a9d4e121a7f1d2314f906fe698209cac9" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>layer</name></member>
+      <member refid="class_q_c_p_layerable_1abbf8657cedea73ac1c3499b521c90eba" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>layerChanged</name></member>
+      <member refid="class_q_c_p_layerable_1a3ab45a4c76a3333ce42eb217a81733ec" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a152ac765bedf927fb240545d11d453ea" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1aa115755e525a8e3a86dc683f9cab755b" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a33f00674c0161c13315ab9da0895418e" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mBrush</name></member>
+      <member refid="class_q_c_p_error_bars_1a83c7f452d0eebd302a7e4fb3a1957634" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mDataContainer</name></member>
+      <member refid="class_q_c_p_error_bars_1a14b6a5b49295990da84a05a3a89026bb" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mDataPlottable</name></member>
+      <member refid="class_q_c_p_error_bars_1af9fd3117b86aac728c9e8e87c406ed9a" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mErrorType</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a426f42e254d0f8ce5436a868c61a6827" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1aa38ec5891aff0f50b36fd63e9372a0cd" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mLayer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac29ffef424e2488675930de18cde612a" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mName</name></member>
+      <member refid="class_q_c_p_layerable_1a4171e2e823aca242dd0279f00ed2de81" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>mouseDoubleClickEvent</name></member>
+      <member refid="class_q_c_p_layerable_1a9eee1ba47fd69be111059ca3881933e4" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>mouseMoveEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af6567604818db90f4fd52822f8bc8376" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>mousePressEvent</name></member>
+      <member refid="class_q_c_p_layerable_1aa0d79b005686f668622bbe66ac03ba2c" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>mouseReleaseEvent</name></member>
+      <member refid="class_q_c_p_layerable_1af94484cfb7cbbddb7de522e9be71d9a4" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>moveToLayer</name></member>
+      <member refid="class_q_c_p_layerable_1a3291445a980053e2d17a21d15957624e" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mParentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1aa2a528433e44db02b8aef23c1f9f90ed" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mParentPlot</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a67bc0622fd1b9fa14e54c14922dcec66" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mPen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3944521f7bec90974737c9d192fc57ba" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a206aa62c9eba32c82e892b29cdbf6314" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0dbc731cab717f4ff67b4ca100c74046" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mSelectionDecorator</name></member>
+      <member refid="class_q_c_p_error_bars_1a5cb5628b75e5aff0875710705666ec57" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mSymbolGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2901452ca4aea911a1827717934a4bda" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a62e3aed8427d6ce3ccf716f285106cb3" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mVisible</name></member>
+      <member refid="class_q_c_p_error_bars_1a3873724f7ac3392bdf9d46a47076a1d2" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>mWhiskerWidth</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a52c226eefcb1920240eeabae574d28c0" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>name</name></member>
+      <member refid="class_q_c_p_layerable_1aa78b7e644d2c519e1a9a6f2ac5fcd858" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>parentLayerable</name></member>
+      <member refid="class_q_c_p_layerable_1a36ed5b292b90934b524a4e5866a3526c" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>parentPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab20b7dbd8e0249ed61adb9622c427382" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>parentPlotInitialized</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ad5972efc31344e5a7a78ab4f8864b2d3" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>pen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3903c1120ab5c27e7fa46b597ef267bd" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a28d32c0062b9450847851ffdee1c5f69" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>pixelsToCoords</name></member>
+      <member refid="class_q_c_p_error_bars_1a8e904076bad643f43af28b95f21c1b88" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>pointDistance</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af78a036e40db6f53a31abadc5323715a" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_error_bars_1a5cdcc33e5f173780c3d657e96216e5c1" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>QCPErrorBars</name></member>
+      <member refid="class_q_c_p_layerable_1a4f87f420cb2597e2b393aab934d2f099" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>QCPLayerable</name></member>
+      <member refid="class_q_c_p_error_bars_1a8429035e7adfbd7f05805a6530ad5e3b" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>QCPLegend</name></member>
+      <member refid="class_q_c_p_error_bars_1a1cdf9df76adcfae45261690aa0ca2198" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>QCustomPlot</name></member>
+      <member refid="class_q_c_p_layerable_1ab054e88f15d485defcb95e7376f119e7" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>realVisibility</name></member>
+      <member refid="class_q_c_p_error_bars_1aa9b1642567a0aff8a2f6e0556c563633" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>rectIntersectsLine</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3cc235007e2343a65ad4f463767e0e20" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac95fb2604d9106d0852ad9ceb326fe8c" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>removeFromLegend</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a1491c4a606bccd2d09e65e11b79eb882" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>rescaleAxes</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ae96b83c961e257da116c6acf9c7da308" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>rescaleKeyAxis</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a714eaf36b12434cd71846215504db82e" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>rescaleValueAxis</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a016653741033bd332d1d4c3c725cc284" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a663b1a44123c8340ac041a29d1e2c973" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selectableChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a0b3b514474fe93354fc74cfc144184b4" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selected</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2d488568cf16600dd81fa23d7d439829" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>selectEvent</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a040bf09f41d456284cfd39cc37aa068f" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1af80ad8531642e786b6f4fad551c203c4" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>selectionCategory</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3af66432b1dca93b28e00e78a8c7c1d9" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a787a9c39421059006891744b731fa473" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selectionChanged</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7861518e47ca0c6a0c386032c2db075e" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>selectionDecorator</name></member>
+      <member refid="class_q_c_p_error_bars_1a35d48d6b283898e725cc9f3fb38c2769" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>selectTest</name></member>
+      <member refid="class_q_c_p_error_bars_1ad7c727736599dfb173f0952082e1a5b6" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>selectTestRect</name></member>
+      <member refid="class_q_c_p_layerable_1a4fd43e89be4a553ead41652565ff0581" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setAntialiased</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a089d6b5577120239b55c39ed27c39536" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setAntialiasedFill</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a2f03f067ede2ed4da6f7d0e4777a3f02" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setAntialiasedScatters</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a7a4b92144dca6453a1f0f210e27edc74" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setBrush</name></member>
+      <member refid="class_q_c_p_error_bars_1a92b1980003255f5f7c05407a4d92aabc" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setData</name></member>
+      <member refid="class_q_c_p_error_bars_1a2f33d68a7ec163b09017dce3d9d3abcc" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setData</name></member>
+      <member refid="class_q_c_p_error_bars_1aac0cf070b957c11177e91b02bcb433c8" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setData</name></member>
+      <member refid="class_q_c_p_error_bars_1aabb42a964cfbf780cd1c79850c7cd989" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setDataPlottable</name></member>
+      <member refid="class_q_c_p_error_bars_1af0af493d454a8f3a0908830160680d2b" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setErrorType</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a8524fa2994c63c0913ebd9bb2ffa3920" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setKeyAxis</name></member>
+      <member refid="class_q_c_p_layerable_1ab0d0da6d2de45a118886d2c8e16d5a54" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_layerable_1ab25a0e7b897993b44447caee0f142083" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setLayer</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab79c7ba76bc7fa89a4b3580e12149f1f" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setName</name></member>
+      <member refid="class_q_c_p_layerable_1aa23c893671f1f6744ac235cf2204cf3a" prot="protected" virt="non-virtual"><scope>QCPErrorBars</scope><name>setParentLayerable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ab74b09ae4c0e7e13142fe4b5bf46cac7" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setPen</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1ac238d6e910f976f1f30d41c2bca44ac3" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setSelectable</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a219bc5403a9d85d3129165ec3f5ae436" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setSelection</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a20e266ad646f8c4a7e4631040510e5d9" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setSelectionDecorator</name></member>
+      <member refid="class_q_c_p_error_bars_1a280ee8d863d8a2630c309701d019b3de" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setSymbolGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a71626a07367e241ec62ad2c34baf21cb" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setValueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1a3bed99ddc396b48ce3ebfdc0418744f8" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setVisible</name></member>
+      <member refid="class_q_c_p_error_bars_1ad05f6ff9e46c6047f1cd2459744b7b59" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>setWhiskerWidth</name></member>
+      <member refid="class_q_c_p_error_bars_1af75958b95d9b9c7edfd9851c1d123850" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>sortKeyIsMainKey</name></member>
+      <member refid="class_q_c_p_error_bars_1a2c969749fa0db565a42b80db9da5f388" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>symbolGap</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a842b3831660d3e33b73863fd133889dd" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>valueAxis</name></member>
+      <member refid="class_q_c_p_layerable_1af0297b944b6192b6d67d00bff41b6b70" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>visible</name></member>
+      <member refid="class_q_c_p_layerable_1a47dfd7b8fd99c08ca54e09c362b6f022" prot="protected" virt="virtual"><scope>QCPErrorBars</scope><name>wheelEvent</name></member>
+      <member refid="class_q_c_p_error_bars_1ae5a292470366ec92b248753f83b8646e" prot="public" virt="non-virtual"><scope>QCPErrorBars</scope><name>whiskerWidth</name></member>
+      <member refid="class_q_c_p_abstract_plottable_1a3223d1e2073bd1d3516863a1dce554b0" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>~QCPAbstractPlottable</name></member>
+      <member refid="class_q_c_p_error_bars_1aa26aa18c404d54f9669e9a0c5ea716f4" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>~QCPErrorBars</name></member>
+      <member refid="class_q_c_p_layerable_1a4231cf5b3601d6d3a5781283e7a9735b" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>~QCPLayerable</name></member>
+      <member refid="class_q_c_p_plottable_interface1_d_1a97508cd3c61b9e8580b9f0d9964f7fb1" prot="public" virt="virtual"><scope>QCPErrorBars</scope><name>~QCPPlottableInterface1D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

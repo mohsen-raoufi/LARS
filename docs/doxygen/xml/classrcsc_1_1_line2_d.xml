@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classrcsc_1_1_line2_d" kind="class" language="C++" prot="public">
+    <compoundname>rcsc::Line2D</compoundname>
+    <includes refid="line__2d_8h" local="no">line_2d.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_line2_d_1a1883ae697b1e5cf6b18fd47dae4bfc98" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::Line2D::EPSILON</definition>
+        <argsstring></argsstring>
+        <name>EPSILON</name>
+        <qualifiedname>rcsc::Line2D::EPSILON</qualifiedname>
+        <initializer>= 1.0e-10</initializer>
+        <briefdescription>
+<para>tolerance threshold </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="50" column="25" bodyfile="ui/geom/line_2d.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_line2_d_1a054923097e4f3fc20419bba854cb4d38" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double rcsc::Line2D::ERROR_VALUE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_VALUE</name>
+        <qualifiedname>rcsc::Line2D::ERROR_VALUE</qualifiedname>
+        <initializer>= std::numeric_limits&lt; double &gt;::max()</initializer>
+        <briefdescription>
+<para>error value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="51" column="25" bodyfile="ui/geom/line_2d.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrcsc_1_1_line2_d_1af1356eea212365dc93483ee6f5202ced" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::Line2D::M_a</definition>
+        <argsstring></argsstring>
+        <name>M_a</name>
+        <qualifiedname>rcsc::Line2D::M_a</qualifiedname>
+        <briefdescription>
+<para>line fomula A, coefficient for x </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="55" column="12" bodyfile="ui/geom/line_2d.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_line2_d_1ab0f0717196b9bdaa88fbe0c7ca87dddf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::Line2D::M_b</definition>
+        <argsstring></argsstring>
+        <name>M_b</name>
+        <qualifiedname>rcsc::Line2D::M_b</qualifiedname>
+        <briefdescription>
+<para>line fomula B, coefficient for y </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="56" column="12" bodyfile="ui/geom/line_2d.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrcsc_1_1_line2_d_1a6215f31fd7cc0585b75613d33603734a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rcsc::Line2D::M_c</definition>
+        <argsstring></argsstring>
+        <name>M_c</name>
+        <qualifiedname>rcsc::Line2D::M_c</qualifiedname>
+        <briefdescription>
+<para>line fomula constant C </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="57" column="12" bodyfile="ui/geom/line_2d.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1abd28d883d1a3738c971d22a45f454058" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Line2D::Line2D</definition>
+        <argsstring>()</argsstring>
+        <name>Line2D</name>
+        <qualifiedname>rcsc::Line2D::Line2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="60" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a57864264338e48c84e04547ae13b1027" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Line2D::Line2D</definition>
+        <argsstring>(const double &amp;a, const double &amp;b, const double &amp;c)</argsstring>
+        <name>Line2D</name>
+        <qualifiedname>rcsc::Line2D::Line2D</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>construct directly </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line formula A, coefficient for x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line formula B, coefficient for y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>constant C </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="69" column="5" bodyfile="ui/geom/line_2d.h" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a9329ca15c643c0742056b371d76cec32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Line2D::Line2D</definition>
+        <argsstring>(const Vector2D &amp;p1, const Vector2D &amp;p2)</argsstring>
+        <name>Line2D</name>
+        <qualifiedname>rcsc::Line2D::Line2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>construct from 2 points </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="82" column="5" bodyfile="ui/geom/line_2d.h" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a0cd49e70d4f5d3ff409bf2267a612956" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rcsc::Line2D::Line2D</definition>
+        <argsstring>(const Vector2D &amp;origin, const AngleDeg &amp;linedir)</argsstring>
+        <name>Line2D</name>
+        <qualifiedname>rcsc::Line2D::Line2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>linedir</declname>
+        </param>
+        <briefdescription>
+<para>construct from origin point + direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>origin point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linedir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction from origin point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="93" column="5" bodyfile="ui/geom/line_2d.h" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a2f76444b2a88c751595c4f9ffe807e1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+        <definition>const Line2D &amp; rcsc::Line2D::assign</definition>
+        <argsstring>(const Vector2D &amp;p1, const Vector2D &amp;p2)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Line2D::assign</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>construct from 2 points </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="106" column="13" bodyfile="ui/geom/line_2d.h" bodystart="106" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a35720d4c771147f1e37d4f4823f1f189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+        <definition>const Line2D &amp; rcsc::Line2D::assign</definition>
+        <argsstring>(const Vector2D &amp;origin, const AngleDeg &amp;linedir)</argsstring>
+        <name>assign</name>
+        <qualifiedname>rcsc::Line2D::assign</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>linedir</declname>
+        </param>
+        <briefdescription>
+<para>construct from origin point + direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>origin point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linedir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction from origin point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const reference to itself </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="122" column="13" bodyfile="ui/geom/line_2d.h" bodystart="122" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1aa0dfd4365d9e96901ff4f47339ba48cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::a</definition>
+        <argsstring>() const</argsstring>
+        <name>a</name>
+        <qualifiedname>rcsc::Line2D::a</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;A&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="136" column="13" bodyfile="ui/geom/line_2d.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a1f1e3192784e5143eac73cabd56e372d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::getA</definition>
+        <argsstring>() const</argsstring>
+        <name>getA</name>
+        <qualifiedname>rcsc::Line2D::getA</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;A&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="146" column="13" bodyfile="ui/geom/line_2d.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1aa39593b45dc77613b92075026a4498a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::b</definition>
+        <argsstring>() const</argsstring>
+        <name>b</name>
+        <qualifiedname>rcsc::Line2D::b</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;B&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="156" column="13" bodyfile="ui/geom/line_2d.h" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a8aebb9142d9e5147151c70a655b64e2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::getB</definition>
+        <argsstring>() const</argsstring>
+        <name>getB</name>
+        <qualifiedname>rcsc::Line2D::getB</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;A&apos; of line formula</para>
+</simplesect>
+accessor <simplesect kind="return"><para>coefficient &apos;B&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="170" column="13" bodyfile="ui/geom/line_2d.h" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1afaae1b2d4226e52a6ab88bc823a84aa7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::c</definition>
+        <argsstring>() const</argsstring>
+        <name>c</name>
+        <qualifiedname>rcsc::Line2D::c</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;C&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="180" column="13" bodyfile="ui/geom/line_2d.h" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a4b0f8e4e0bfe3701f3aeb5c0e5b1e870" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; rcsc::Line2D::getC</definition>
+        <argsstring>() const</argsstring>
+        <name>getC</name>
+        <qualifiedname>rcsc::Line2D::getC</qualifiedname>
+        <briefdescription>
+<para>accessor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>coefficient &apos;C&apos; of line formula </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="190" column="13" bodyfile="ui/geom/line_2d.h" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a9c3fe7b1b8e23c294485fb165927c113" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Line2D::getX</definition>
+        <argsstring>(const double &amp;y) const</argsstring>
+        <name>getX</name>
+        <qualifiedname>rcsc::Line2D::getX</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>get X-coordinate correspond to &apos;y&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered Y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>X coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="200" column="12" bodyfile="ui/geom/line_2d.h" bodystart="200" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a95a7f3cf6ad78a585ee8e3eb488b1324" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Line2D::getY</definition>
+        <argsstring>(const double &amp;x) const</argsstring>
+        <name>getY</name>
+        <qualifiedname>rcsc::Line2D::getY</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>get Y-coordinate correspond to &apos;x&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered X </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Y coordinate </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="214" column="12" bodyfile="ui/geom/line_2d.h" bodystart="214" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a5b1827ce61812812d928c97214e8c209" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Line2D::dist</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>dist</name>
+        <qualifiedname>rcsc::Line2D::dist</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>calculate distance from point to this line </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considrered point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>distance value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="229" column="12" bodyfile="ui/geom/line_2d.h" bodystart="229" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a44200680b596c8a3387efafec06faded" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double rcsc::Line2D::dist2</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>dist2</name>
+        <qualifiedname>rcsc::Line2D::dist2</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>get squared distance from this line to point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considrered point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>squared distance value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="239" column="12" bodyfile="ui/geom/line_2d.h" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a6955ea69df92d7b1e6f772ebe183e19f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rcsc::Line2D::isParallel</definition>
+        <argsstring>(const Line2D &amp;line) const</argsstring>
+        <name>isParallel</name>
+        <qualifiedname>rcsc::Line2D::isParallel</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>check if the slope of this line is same to the slope of &apos;line&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>true</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>almost same </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>false</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not same </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="251" column="10" bodyfile="ui/geom/line_2d.h" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1adb31be45e8af3aec989842e20b5b8584" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Line2D::intersection</definition>
+        <argsstring>(const Line2D &amp;line) const</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Line2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>get the intersection point with &apos;line&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>considered line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>intersection point. if it does not exist, the invaidated value vector is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="262" column="14" bodyfile="ui/geom/line_2d.h" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1ad583d30ae9a025a6eb0c907329e024d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Line2D::perpendicular</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>perpendicular</name>
+        <qualifiedname>rcsc::Line2D::perpendicular</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>calc perpendicular line (SUI-SEN) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point that perpendicular line pass through </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>perpendicular line </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="272" column="12" bodyfile="ui/geom/line_2d.h" bodystart="272" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a6cf87ed7d7bfa373486fd9e87607d6a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Line2D::projection</definition>
+        <argsstring>(const Vector2D &amp;p) const</argsstring>
+        <name>projection</name>
+        <qualifiedname>rcsc::Line2D::projection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>calc projection point from p </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>projection point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="282" column="14" bodyfile="ui/geom/line_2d.h" bodystart="282" bodyend="285"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a9e259dade249e0e5279c8cb969be0fd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D rcsc::Line2D::intersection</definition>
+        <argsstring>(const Line2D &amp;line1, const Line2D &amp;line2)</argsstring>
+        <name>intersection</name>
+        <qualifiedname>rcsc::Line2D::intersection</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>line1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref> &amp;</type>
+          <declname>line2</declname>
+        </param>
+        <briefdescription>
+<para>get the intersection point of 2 lines </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second line </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the intersection point. if no intersection, invalid vector is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="297" column="14" bodyfile="ui/geom/line_2d.cpp" bodystart="51" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a4d5367b318b34595fe2ced3ebce1788f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>static Line2D rcsc::Line2D::angle_bisector</definition>
+        <argsstring>(const Vector2D &amp;origin, const AngleDeg &amp;left, const AngleDeg &amp;right)</argsstring>
+        <name>angle_bisector</name>
+        <qualifiedname>rcsc::Line2D::angle_bisector</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_angle_deg" kindref="compound">AngleDeg</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>make angle bisector line from two angles </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>origin point that is passed through by result line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>left angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>right angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="308" column="12" bodyfile="ui/geom/line_2d.h" bodystart="308" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classrcsc_1_1_line2_d_1a67c9187a23d999e615eee125972d69a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrcsc_1_1_line2_d" kindref="compound">Line2D</ref></type>
+        <definition>Line2D rcsc::Line2D::perpendicular_bisector</definition>
+        <argsstring>(const Vector2D &amp;p1, const Vector2D &amp;p2)</argsstring>
+        <name>perpendicular_bisector</name>
+        <qualifiedname>rcsc::Line2D::perpendicular_bisector</qualifiedname>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrcsc_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>make perpendicular bisector line from twt points </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1st point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2nd point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>line object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/geom/line_2d.h" line="322" column="12" bodyfile="ui/geom/line_2d.cpp" bodystart="69" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>2d straight line class </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Line Fomula: aX + bY + c = 0 </para>
+    </detaileddescription>
+    <location file="ui/geom/line_2d.h" line="47" column="1" bodyfile="ui/geom/line_2d.h" bodystart="47" bodyend="325"/>
+    <listofallmembers>
+      <member refid="classrcsc_1_1_line2_d_1aa0dfd4365d9e96901ff4f47339ba48cd" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>a</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a4d5367b318b34595fe2ced3ebce1788f" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>angle_bisector</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a2f76444b2a88c751595c4f9ffe807e1d" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a35720d4c771147f1e37d4f4823f1f189" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>assign</name></member>
+      <member refid="classrcsc_1_1_line2_d_1aa39593b45dc77613b92075026a4498a0" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>b</name></member>
+      <member refid="classrcsc_1_1_line2_d_1afaae1b2d4226e52a6ab88bc823a84aa7" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>c</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a5b1827ce61812812d928c97214e8c209" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>dist</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a44200680b596c8a3387efafec06faded" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>dist2</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a1883ae697b1e5cf6b18fd47dae4bfc98" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>EPSILON</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a054923097e4f3fc20419bba854cb4d38" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>ERROR_VALUE</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a1f1e3192784e5143eac73cabd56e372d" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>getA</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a8aebb9142d9e5147151c70a655b64e2e" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>getB</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a4b0f8e4e0bfe3701f3aeb5c0e5b1e870" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>getC</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a9c3fe7b1b8e23c294485fb165927c113" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>getX</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a95a7f3cf6ad78a585ee8e3eb488b1324" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>getY</name></member>
+      <member refid="classrcsc_1_1_line2_d_1adb31be45e8af3aec989842e20b5b8584" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a9e259dade249e0e5279c8cb969be0fd0" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>intersection</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a6955ea69df92d7b1e6f772ebe183e19f" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>isParallel</name></member>
+      <member refid="classrcsc_1_1_line2_d_1abd28d883d1a3738c971d22a45f454058" prot="private" virt="non-virtual"><scope>rcsc::Line2D</scope><name>Line2D</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a57864264338e48c84e04547ae13b1027" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>Line2D</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a9329ca15c643c0742056b371d76cec32" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>Line2D</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a0cd49e70d4f5d3ff409bf2267a612956" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>Line2D</name></member>
+      <member refid="classrcsc_1_1_line2_d_1af1356eea212365dc93483ee6f5202ced" prot="private" virt="non-virtual"><scope>rcsc::Line2D</scope><name>M_a</name></member>
+      <member refid="classrcsc_1_1_line2_d_1ab0f0717196b9bdaa88fbe0c7ca87dddf" prot="private" virt="non-virtual"><scope>rcsc::Line2D</scope><name>M_b</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a6215f31fd7cc0585b75613d33603734a" prot="private" virt="non-virtual"><scope>rcsc::Line2D</scope><name>M_c</name></member>
+      <member refid="classrcsc_1_1_line2_d_1ad583d30ae9a025a6eb0c907329e024d3" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>perpendicular</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a67c9187a23d999e615eee125972d69a3" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>perpendicular_bisector</name></member>
+      <member refid="classrcsc_1_1_line2_d_1a6cf87ed7d7bfa373486fd9e87607d6a0" prot="public" virt="non-virtual"><scope>rcsc::Line2D</scope><name>projection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
