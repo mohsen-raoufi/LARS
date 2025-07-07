@@ -1,12 +1,12 @@
 # LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
 
 > **📚 Documentation**  
-> Developer & API Docs: [`docs/doxygen/html/index.html`](docs/doxygen/html/index.html)
+> Developer & API Docs: [`doxygen/html/index.html`](docs/doxygen/html/index.html)
 
 ---
 
 <!-- <img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="center"> -->
-<img src="docs/doxygen/html/media/LARS_Logo.png" alt="LARS Logo" width="100%">
+<img src="doxygen/html/media/LARS_Logo.png" alt="LARS Logo" width="100%">
 
 ---
 
