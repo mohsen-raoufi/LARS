@@ -94,20 +94,29 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   <img src="docs/media/kilobot_109.png" height="140px" alt="(c)">
   <img src="docs/media/weazle_balls.png" height="140px" alt="(d)">
 </p>
-<p align="center" style="font-size: 13px;">
+<!-- <p align="center" style="font-size: 13px;">
   (a) Kilobots synchronizing &nbsp;
   (b) Collective decision &nbsp;
   (c) 109 Kilobots snapshot &nbsp;
   (d) Active Weazle balls
-</p>
+</p> -->
 <p align="center">
   <img src="docs/media/thymios_PT.png" height="150px" alt="(e)">
   <img src="docs/media/themios_RW.png" height="150px" alt="(f)">
 </p>
 <p align="center" style="font-size: 13px;">
+  (top, left:) GUI snapshot of 42 Kilobots synchronizing on a grid with their internal binary state being detected by the color of their LED in blue or red,  <br>
+  (top, mid-left:) user view of 63 Kilobots making a collective decision on a tiled environment with projected dynamic noise <br>
+  (top, mid-right:) GUI Snapshot of 109 Kilobots with the trace of their random movement decaying over time <br>
+  (top, right:) GUI snapshot of two active balls randomly moving in the bounded arena, being tracked by LARS without the need for any markers <br>
+
+  (bottom, left:) GUI snapshot of two Thymios with different colors locating the center of the light distribution (projected by LARS). The trace of each robot shows the consistency of the color detection of each robot over time, even after a collision <br>
+  (bottom, right:) User view of Thymios moving randomly, with their centroid, the projection of their trajectory (light blue trails), their Voronoi tesselation (black lines) and the corresponding network (green lines). <br>
+</p>
+<!-- <p align="center" style="font-size: 13px;">
   (e) Thymios doing phototaxis &nbsp;&nbsp;
   (f) Thymios random walk
-</p>
+</p> -->
 
 ---
 
