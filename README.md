@@ -6,7 +6,7 @@
 ---
 
 <!-- <img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="center"> -->
-<img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;">
+<img src="docs/doxygen/html/media/LARS_Logo.png" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;">
 
 ---
 
@@ -55,6 +55,8 @@ LARS features a robust, real-time tracking module based on the **ARK** (Automati
 - 🔎 Robustly handles occlusions, variable lighting, and noisy backgrounds
 - 🔵 Generalizes to **any robot that appears approximately circular from above**—including Kilobots, Thymio, e-puck, and others—without the need for tags, markers, or hardware modifications
 - 🏷️ Automatically preserves and recovers robot identities even during close interactions or when robots briefly leave the field of view
+
+<img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;">
 
 **Beyond tracking:**  
 LARS projects **virtual visual objects** (gradients, cues, signals) in real time—directly onto the arena and the robots themselves.  
