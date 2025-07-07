@@ -1,6 +1,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+/**
+ * @file mainwindow.h
+ * @brief Main window class for the LARS GUI, managing UI events, robot tracking, video, and arena controls.
+ *
+ * This class handles all primary GUI logic and interfaces with hardware controllers, tracking, and experimental logic.
+ */
+
 #include <QMainWindow>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -105,12 +112,24 @@ namespace Ui {
 class MainWindow;
 }
 
+/**
+ * @brief Main application window for the LARS system.
+ *
+ * Handles all GUI events, robot tracking, data logging, and interface to the overhead controller.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief Constructs the main application window.
+     * @param parent Pointer to parent widget (default nullptr).
+     */
     explicit MainWindow(QWidget *parent = 0);
+    /**
+     * @brief Destructor for MainWindow.
+     */
     ~MainWindow();
 
     WorldModel wm;
@@ -145,8 +164,17 @@ private slots:
 
     void findMarkerRect();
 
+    /// @name Calibration Slots
+    /// @{
     void calibrateKilobot();
 
+    void calibUID(int);
+    void calibLeft(int);
+    void calibRight(int);
+    void calibStraight(int);
+    void calibSave();
+    void calibStop();
+    /// @}
 
     void on_fromVid_rButton_clicked();
 
@@ -157,11 +185,11 @@ private slots:
     //-------Mouse Functions---------
     //    bool eventFilter(QObject *obj, QEvent *event);
 
-    void mousePressEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event) override;
 
-    void mouseMoveEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event) override;
 
-    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
     bool isValidPlaceForSelect(int x, int y);
 
@@ -181,14 +209,8 @@ private slots:
 
     void resetHeatMap();
 
-
-    void calibUID(int);
-    void calibLeft(int);
-    void calibRight(int);
-    void calibStraight(int);
-    void calibSave();
-    void calibStop();
-
+    /// @name GUI Slots
+    /// @{
     // -------------------------------------------------------------------------------------------
     // GUI Functions
 
@@ -202,7 +224,7 @@ private slots:
 
     void SendKeyBoardData(int key);
 
-    void keyPressEvent(QKeyEvent *key);
+    void keyPressEvent(QKeyEvent *key) override;
 
 //    void on_JoyStick_button_pressed();
 
@@ -320,6 +342,7 @@ private slots:
     void on_draw_spatial_netw_stateChanged(int arg1);
 
     void on_drawBall_stateChanged(int arg1);
+    /// @}
 
 private:
     Ui::MainWindow *ui;

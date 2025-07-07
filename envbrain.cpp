@@ -1,5 +1,21 @@
+
 #include "envbrain.h"
 
+/**
+ * @file envbrain.cpp
+ * @brief Implementation of EnvBrain, environment logic and utilities for the robot arena.
+ *
+ * Handles collective environment modeling, heatmap processing, noise management, and geometric utilities.
+ */
+
+
+
+/**
+ * @brief Constructs the EnvBrain object.
+ *
+ * Initializes environment logic, heatmaps, ball velocity, and timers for periodic updates.
+ * @param wm Pointer to the world model.
+ */
 EnvBrain::EnvBrain(WorldModel *wm)
 {
 
@@ -37,6 +53,15 @@ EnvBrain::EnvBrain(WorldModel *wm)
     //    connect(&_timerNoise,SIGNAL(timeout()), this, SLOT(addNoise()));
 }
 
+/**
+ * @brief Generates a grid of points within the arena, helpful for initialization of an experiment.
+ * @param nRows Number of rows.
+ * @param nCols Number of columns.
+ * @param dx Horizontal spacing between points.
+ * @param dy Vertical spacing between points.
+ * @param origin Top-left origin for the grid.
+ * @return List of grid points.
+ */
 QList<QPoint> EnvBrain::makeGridPoints(int nRows, int nCols, int dx, int dy, QPoint origin)
 {
     QList<QPoint> pointList;
@@ -52,6 +77,14 @@ QList<QPoint> EnvBrain::makeGridPoints(int nRows, int nCols, int dx, int dy, QPo
     return pointList;
 }
 
+/**
+ * @brief Generates star-shaped point arrangements centered at a given origin, helpful for initialization of an experiment.
+ * @param nArms Number of star arms.
+ * @param nLayers Number of layers (distance steps) on each arm.
+ * @param d Distance between layers.
+ * @param origin Center of the star.
+ * @return List of star points.
+ */
 QList<QPoint> EnvBrain::makeStarPoints(int nArms, int nLayers, int d, QPoint origin)
 {
     QList<QPoint> pointList;
@@ -69,6 +102,9 @@ QList<QPoint> EnvBrain::makeStarPoints(int nArms, int nLayers, int d, QPoint ori
     return pointList;
 }
 
+/**
+ * @brief Resets the heatmap to an initial (zeroed) state.
+ */
 void EnvBrain::resetHeatMap()
 {
     //    cv::Mat temp(_wm->expFieldRect.width(), _wm->expFieldRect.height(), CV_64FC4, cv::Scalar(0,0,0,0));
@@ -81,6 +117,10 @@ void EnvBrain::resetHeatMap()
     //    temp2.copyTo(this->heatMapOnFrame);
 }
 
+/**
+ * @brief Updates the noise timer interval exponentially with respect to a slider/time parameter.
+ * @param time_interval User-defined time interval (slider value).
+ */
 void EnvBrain::updateNoiseProps(int time_interval)
 {
     //    qDebug() << "Noise Timer is updated: " << _wm->noiseFreq;
@@ -92,6 +132,10 @@ void EnvBrain::updateNoiseProps(int time_interval)
     //    _timerNoise.start(_wm->noiseFreq);
 }
 
+/**
+ * @brief Connects or disconnects the timer for adding noise to the environment.
+ * @param connect_bool If true, connect; else disconnect.
+ */
 void EnvBrain::connect_disconnect_add_noise(bool connect_bool)
 {
     if(connect_bool)
@@ -104,11 +148,19 @@ void EnvBrain::connect_disconnect_add_noise(bool connect_bool)
     }
 }
 
+/**
+ * @brief (Placeholder) Updates centroid of robot distribution. [Empty function]
+ */
 void EnvBrain::update_centroid()
 {
 
 }
 
+/**
+ * @brief Updates objects (e.g., the ball) to be drawn in the environment.
+ *
+ * Handles movement, collision with arena bounds, and collisions with robot circles.
+ */
 void EnvBrain::update_objects_to_draw()
 {
     _wm->ballSpeed = _wm->dummy_var2/20;
@@ -201,6 +253,11 @@ void EnvBrain::update_objects_to_draw()
 //    //    //    _wm->heatMap = QPixmap::fromImage(QImage((unsigned char*) heatMap.data, heatMap.cols, heatMap.rows, QImage::Format_RGBA64));
 //}
 
+/**
+ * @brief Periodically refreshes environment state, heatmap, and visualization objects.
+ *
+ * Called on a timer, updates robot positions, heatmap accumulation, centroid, and visualization elements.
+ */
 void EnvBrain::refresh()
 {
     QVector<QPoint> tempPosVec = _wm->kiloPosVec;
@@ -306,6 +363,11 @@ void EnvBrain::refresh()
 
 }
 
+/**
+ * @brief Adds spatial noise to the arena image.
+ *
+ * Applies random noise to each tile of the arena image and updates the processed image for visualization.
+ */
 void EnvBrain::addNoise()
 {
     arenaImage = _wm->arenaImg.toImage();

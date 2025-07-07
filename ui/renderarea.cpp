@@ -40,6 +40,16 @@
 #include "renderarea.h"
 #include <QDebug>
 
+/**
+ * @brief Constructs a RenderArea widget for rendering graphical elements in the UI.
+ *
+ * Initializes the RenderArea, setting up graphical assets, brushes, pens, and timers
+ * for periodic updates. Loads resources such as markers, logo, arena images, and custom brushes.
+ * Associates the provided WorldModel instance for access to rendering data.
+ * Also sets up gradients, pens, and event connections needed for UI drawing and updates.
+ *
+ * @param wm Pointer to the WorldModel providing data and state for rendering.
+ */
 RenderArea::RenderArea(WorldModel *wm) :
     QWidget()
 {
@@ -145,6 +155,11 @@ RenderArea::RenderArea(WorldModel *wm) :
     //
 }
 
+/**
+ * @brief Refresh the RenderArea display.
+ *
+ * Calls updatePainters() and schedules a repaint.
+ */
 void RenderArea::refresh()
 {
     //    qDebug() << "updating ..";
@@ -152,6 +167,11 @@ void RenderArea::refresh()
     update();
 }
 
+/**
+ * @brief Returns the index of the most central node in a graph (by degree centrality).
+ * @param graph igraph_t object representing the network graph.
+ * @return Index of the node with highest degree centrality.
+ */
 int RenderArea::getMostCentralNode(const igraph_t& graph) {
     igraph_vector_int_t centrality;
     igraph_vector_int_init(&centrality, 0);
@@ -168,6 +188,14 @@ int RenderArea::getMostCentralNode(const igraph_t& graph) {
     return max_centrality_index;
 }
 
+/**
+ * @brief Handles the paint event for the RenderArea widget.
+ *
+ * Draws all relevant graphical elements including background, markers, images, robots, networks, and overlays.
+ * Uses current state of the WorldModel for data and configuration.
+ *
+ * @param event Pointer to the paint event (unused).
+ */
 void RenderArea::paintEvent(QPaintEvent *)
 {
 
@@ -616,6 +644,9 @@ void RenderArea::paintEvent(QPaintEvent *)
     }
 }
 
+/**
+ * @brief Update painter objects (brushes, pens, gradients) to match current WorldModel state.
+ */
 void RenderArea::updatePainters()
 {
     brush_field->setColor(_wm->fieldCol);
@@ -635,6 +666,10 @@ void RenderArea::updatePainters()
 
 }
 
+
+/**
+ * @brief Updates the gradient painter for the arena background, based on arena size and center.
+ */
 void RenderArea::updateGradientPainter()
 {
     int arenaHalfWidth = (int) _wm->expFieldRect.width()/2;

@@ -1,6 +1,14 @@
 #include "arenaWindow.h"
 #include "ui_arenaWindow.h"
 
+/**
+ * @file arenaWindow.cpp
+ * @brief Implementation of ArenaWindow, a window for visualizing and interacting with the robot arena.
+ *
+ * This file contains the logic for rendering the arena, handling mouse events for interactive control,
+ * toggling fullscreen mode, and updating the visualization based on user actions.
+ */
+
 #include <QDebug>
 
 #include <QtQml/QQmlEngine>
@@ -9,6 +17,14 @@
 
 #include <QPushButton>
 
+/**
+ * @brief Constructs the ArenaWindow.
+ *
+ * Sets up the visualization window for the robot arena, initializes the render area, and configures the UI.
+ * @param parent Parent widget (default nullptr).
+ * @param wm Pointer to the world model for arena state.
+ * @param title Window title.
+ */
 ArenaWindow::ArenaWindow(QWidget *parent, WorldModel *wm, QString title) :
     QMainWindow(parent),
     ui(new Ui::ArenaWindow)
@@ -86,11 +102,22 @@ ArenaWindow::ArenaWindow(QWidget *parent, WorldModel *wm, QString title) :
     this->statusBar()->hide();
 }
 
+/**
+ * @brief Destructor for ArenaWindow.
+ *
+ * Cleans up UI and resources.
+ */
 ArenaWindow::~ArenaWindow()
 {
     delete ui;
 }
 
+/**
+ * @brief Toggles fullscreen mode for the arena window.
+ *
+ * Switches between fullscreen and normal window modes.
+ * @param goFullScreen If true, go to fullscreen; otherwise normal mode.
+ */
 void ArenaWindow::toggleFullScreen(bool goFullScreen)
 {
 //    qDebug() << "Arena Window: " << ui->centralwidget->rect().width();
@@ -101,6 +128,12 @@ void ArenaWindow::toggleFullScreen(bool goFullScreen)
 //    qDebug() << "Arena Window: " << ui->centralwidget->rect().width();
 }
 
+/**
+ * @brief Handles mouse press events in the arena window.
+ *
+ * Enables interactive mouse actions depending on the current mode. Emits movement signals for dragging.
+ * @param ev Pointer to mouse event data.
+ */
 void ArenaWindow::mousePressEvent(QMouseEvent* ev)
 {
     qDebug() << "mouse press event at ARENA: " << ev->pos().x() << ", " << ev->pos().y();
@@ -135,6 +168,12 @@ void ArenaWindow::mousePressEvent(QMouseEvent* ev)
 
 }
 
+/**
+ * @brief Handles mouse move events when dragging in the arena window.
+ *
+ * Emits movement signals to update the position interactively.
+ * @param ev Pointer to mouse event data.
+ */
 void ArenaWindow::mouseMoveEvent(QMouseEvent *ev)
 {
     if (this->isDragged) {
@@ -148,6 +187,12 @@ void ArenaWindow::mouseMoveEvent(QMouseEvent *ev)
     ev->accept();
 }
 
+/**
+ * @brief Handles mouse release events in the arena window.
+ *
+ * Ends dragging mode and emits signal for completion.
+ * @param ev Pointer to mouse event data.
+ */
 void ArenaWindow::mouseReleaseEvent(QMouseEvent *ev)
 {
     if (ev->button() == Qt::LeftButton) {
