@@ -7,7 +7,7 @@
 
 <!-- <img src="docs/doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" height="220px" align="center"> -->
 <!-- <img src="doxygen/html/media/LARS_Logo.png" alt="LARS Logo" width="100%"> -->
-<img src="../../media/LARS_Logo.png" alt="LARS Logo" width="100%">
+<img src="../../media/LARS_Logo.png" alt="LARS Logo" style="width:100%; max-height:400px; object-fit:contain;">
 
 ---
 
@@ -58,7 +58,7 @@ LARS features a robust, real-time tracking module based on the **ARK** (Automati
 - 🏷️ Automatically preserves and recovers robot identities even during close interactions or when robots briefly leave the field of view
 
 <!-- <img src="doxygen/html/media/ARK_to_LARS.gif" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;"> -->
-<img src="../../media/ARK_to_LARS.gif" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto;">
+<img src="../../media/ARK_to_LARS.gif" alt="Tracking Example" width="100%" style="display: block; margin: 0 auto; max-height:400px; object-fit:contain;"> 
 
 **Beyond tracking:**  
 LARS projects **virtual visual objects** (gradients, cues, signals) in real time—directly onto the arena and the robots themselves.  
@@ -78,7 +78,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
 <!-- <img src="doxygen/html/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px"> -->
-<img src="../../media/LARS_Diagram.png" alt="LARS MVC Architecture" height="320px">
+<img src="../../media/LARS_Diagram.png" alt="LARS MVC Architecture" height="400px">
 
 ---
 
@@ -108,8 +108,8 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
   (d) Active Weazle balls
 </p>
 <p align="center">
-  <img src="media/thymios_PT.png" height="150px" alt="(e)">
-  <img src="media/themios_RW.png" height="150px" alt="(f)">
+  <img src="../../media/thymios_PT.png" height="150px" alt="(e)">
+  <img src="../../media/themios_RW.png" height="150px" alt="(f)">
 </p>
 <!-- <p align="center">
   <img src="doxygen/html/media/thymios_PT.png" height="150px" alt="(e)">
