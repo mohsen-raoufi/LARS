@@ -1,4 +1,5 @@
-<link rel="icon" type="image/png" href="media/favicon.png">
+<!-- <link rel="icon" type="image/png" href="media/favicon.png"> -->
+<link rel="shortcut icon" type="image/png" href="media/favicon.png">
 # LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
 
 > **📚 Documentation**  
