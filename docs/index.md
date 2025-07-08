@@ -179,7 +179,7 @@ Open-source under the GNU GPL v3.0.
 ## 🔗 See Also
 
 - [Kilobot Wiki](http://diode.group.shef.ac.uk/kilobots/index.php/Kilobots)
-- API Docs: [`docs/doxygen/html/index.html`](docs/doxygen/html/index.html)
+- API Docs: [`doxygen/html/index.html`](docs/doxygen/html/index.html)
 
 ---
 
