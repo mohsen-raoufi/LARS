@@ -415,6 +415,10 @@ if __name__ == "__main__":
         # No CLI arguments: run the original demo code
         plt.rcParams['figure.dpi'] = 100
 
+        # if the etc/ folder exist here then use this prefix for path
+        prefix_path = "etc/validation"
+        
+
         robot_size = 56
         N = 5**2
         grid_size = (int(np.sqrt(N)), int(np.sqrt(N)))
@@ -448,12 +452,12 @@ if __name__ == "__main__":
         print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
         # Robot animation with random robots
-        N = 20
-        date_str = datetime.now().strftime("%d%H%M%S")
-        experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
-        print(f"Experiment name: {experiment_name}")
-        generate_robot_animation_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
-        output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
+        # N = 20
+        # date_str = datetime.now().strftime("%d%H%M%S")
+        # experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
+        # print(f"Experiment name: {experiment_name}")
+        # generate_robot_animation_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
+        # output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
     else:
         import argparse
         parser = argparse.ArgumentParser(description="Generate validation images and animations.")

@@ -1799,7 +1799,7 @@ color: rgb(0, 0, 0);
                 <string>generate</string>
                </property>
                <property name="checkable">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
               </widget>
              </item>

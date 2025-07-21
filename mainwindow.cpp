@@ -2676,7 +2676,7 @@ void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 void MainWindow::on_generateExpField_pushButton_clicked(bool checked)
 {
     // Example: Call Python function generate_robot_animation_random_robots with arguments
-    QString pythonScript = "etc/validation/generate_validation_images.py";
+    QString pythonScript = "/home/p27/LARS/LARS/etc/validation/generate_validation_images.py";
     QString functionName = "robot_anim_random";
     int robot_width = 40;
     int N = 10;
