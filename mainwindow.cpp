@@ -1788,7 +1788,7 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
 
 /**
  * @brief Handles the crop button click event to define or clear the cropping rectangle.
- *
+ * 
  * When enabled, calculates crop rectangle coordinates based on UI fields or detected markers, 
  * maps cropping region between GUI, fit, and capture coordinates, and updates internal state. 
  * When disabled, resets cropping to the full capture region. Always triggers an update in the tracker and resets the heatmap.
@@ -1869,7 +1869,7 @@ void MainWindow::on_crop_pushButton_clicked()
 
 /**
  * @brief Handles the 'Detect Marker' button click event to find ArUco markers in the current video frame.
- *
+ * 
  * Processes the current frame using OpenCV's ArUco detection tools. If markers are found, their positions and bounding rectangles are extracted and
  * stored in internal lists, and details are printed for debugging. Calls findMarkerRect() to update arena mapping based on detected marker locations.
  */
@@ -2289,7 +2289,7 @@ void MainWindow::on_drawHeatMap_CheckBox_clicked()
 
 /**
  * @brief Handles the 'Draw Colored Circles' checkbox click event.
- *
+ * 
  * Updates the drawColCircles flag in the world model.
  * @param checked True if the checkbox is checked.
  */
@@ -2316,7 +2316,7 @@ void MainWindow::on_seaBlue_pushButton_clicked()
 
 /**
  * @brief Handles the 'Draw Robot Circles' checkbox click event.
- *
+ * 
  * Toggles drawing of robot circles in the visualization.
  * @param checked True if the checkbox is checked (enabled).
  */
@@ -2339,7 +2339,7 @@ void MainWindow::on_ohc_set_prog_clicked()
 
 /**
  * @brief Handles the 'Write Log' button click event.
- *
+ * 
  * Starts or stops logging experiment data to a file based on the checked state.
  * Sets up file streams and connects/disconnects relevant signals for different logging modes.
  * @param checked True if logging is enabled.
@@ -2493,7 +2493,7 @@ void MainWindow::on_env4_rButton_clicked()
 
 /**
  * @brief Opens a file dialog to select an arena image.
- *
+ * 
  * Loads the selected arena image and updates the corresponding UI field.
  */
 void MainWindow::on_openImageField_pushButton_clicked()
@@ -2675,9 +2675,32 @@ void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 
 void MainWindow::on_generateExpField_pushButton_clicked(bool checked)
 {
-//    wm.loadImgBackground = checked;
-//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
-//    qDebug() << "Image loaded from: " << address;
-//    wm.arenaImg = QPixmap(address);
+    // Example: Call Python function generate_robot_animation_random_robots with arguments
+    QString pythonScript = "etc/validation/generate_validation_images.py";
+    QString functionName = "robot_anim_random";
+    int robot_width = 40;
+    int N = 10;
+    int robot_speed = 5;
+    QString output_path = "etc/validation/media/generated_anim.mp4";
+    QString log_output_path = "etc/validation/media/generated_anim_log.txt";
+
+    QStringList arguments;
+    arguments << pythonScript << functionName
+        << "--args"
+        << QString("robot_width=%1").arg(robot_width)
+        << QString("num_robots=%1").arg(N)
+        << QString("robot_speed=%1").arg(robot_speed)
+        << QString("output_path=%1").arg(output_path)
+        << QString("log_output_path=%1").arg(log_output_path);
+
+    QProcess *process = new QProcess(this);
+    connect(process, &QProcess::readyReadStandardOutput, [process]() {
+        qDebug() << process->readAllStandardOutput();
+    });
+    connect(process, &QProcess::readyReadStandardError, [process]() {
+        qDebug() << process->readAllStandardError();
+    });
+    process->start("python3", arguments);
+    qDebug() << "Started Python process to generate robot animation with arguments.";
 }
 
