@@ -34,3 +34,5 @@
 *.app
 .DS_Store
 .ipynb
+/etc/validation/media
+etc/validation/kilobot.png
