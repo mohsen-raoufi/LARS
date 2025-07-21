@@ -290,11 +290,11 @@ void RenderArea::paintEvent(QPaintEvent *)
         else
             painter.drawPixmap(*expArena, _wm->arenaProcessedImg);
         break;
-    case VIDEO:
-        if (videoPlaying && !videoFrame.isNull()) {
-            painter.drawImage(*expArena, videoFrame.scaled(expArena->size()));
-        }
-        break;
+//    case VIDEO:
+//        if (videoPlaying && !videoFrame.isNull()) {
+//            painter.drawImage(*expArena, videoFrame.scaled(expArena->size()));
+//        }
+//        break;
     default:
         break;
     }
