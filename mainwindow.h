@@ -344,6 +344,8 @@ private slots:
     void on_drawBall_stateChanged(int arg1);
     /// @}
 
+    void on_videoExpField_pushButton_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 

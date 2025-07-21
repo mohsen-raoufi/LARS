@@ -21,7 +21,7 @@
 enum BrushType {
     GRADIENT,
     IMAGE,
-//    VIDEO,
+    BR_VIDEO,
     SOLID,
     NULL_BRUSH
 };
@@ -136,7 +136,7 @@ public:
     QColor fieldCol;
     //    int fieldH = 0, fieldS = 0, fieldV = 0;
 
-    bool loadImgBackground;
+    bool loadImgBackground, loadvidBackground;
 
     void setFieldColorHSV(int H, int S, int V);
     void setFieldColor(QColor color);

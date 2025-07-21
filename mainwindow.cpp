@@ -1106,6 +1106,7 @@ void MainWindow::uiInitialization()
     // --- EXPERIMENT FIELD TYPE SELECTION ---
     connect(ui->gradientExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = GRADIENT;});
     connect(ui->imageExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = IMAGE;});
+    connect(ui->videoExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = BR_VIDEO;});
     connect(ui->nullExpField_pushButton, &QPushButton::clicked, [this]() { wm.expFieldType = NULL_BRUSH;});
 
     // --- ROBOT BRUSH TYPE SELECTION ---
@@ -2657,5 +2658,28 @@ void MainWindow::on_draw_spatial_netw_stateChanged(int arg1)
 void MainWindow::on_drawBall_stateChanged(int arg1)
 {
     wm.drawBall = ui->drawBall->isChecked();
+}
+
+
+
+
+void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
+{
+    wm.loadvidBackground = checked;
+//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
+    QString address = "/home/p27/LARS/LARS/etc/validation/media/robot_animation_random_robots_Kilobot_N_20.mp4"; // + ui->arenaImage_TextEdit->text();
+    qDebug() << "HEY !! video loaded from: " << address;
+    this->arenaWindow->_renderArea->playVideo(address.toStdString());
+//    this->arenaWindow->_renderArea->
+}
+
+
+
+void MainWindow::on_generateExpField_pushButton_clicked(bool checked)
+{
+//    wm.loadImgBackground = checked;
+//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
+//    qDebug() << "Image loaded from: " << address;
+//    wm.arenaImg = QPixmap(address);
 }
 
