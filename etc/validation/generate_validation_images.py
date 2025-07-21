@@ -416,7 +416,11 @@ if __name__ == "__main__":
         plt.rcParams['figure.dpi'] = 100
 
         # if the etc/ folder exist here then use this prefix for path
-        prefix_path = "etc/validation"
+        
+        if os.path.exists('etc'):
+            prefix_path = "etc/validation"
+        else:
+            prefix_path = ""
         
 
         robot_size = 56
@@ -427,17 +431,17 @@ if __name__ == "__main__":
 
         # Simple grid with circles
         experiment_name = f"grid_circle_N_{N}__{date_str}"
-        generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=100, image_size=(1000, 1000), output_path=f"{prefix_path}/media/{experiment_name}.png")
         print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
         # Simple grid with robot images
         experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
-        generate_robot_grid_image(robot_image_path=f"etc/validation/{robot_str}.png", grid_size=grid_size, robot_width=robot_size, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        generate_robot_grid_image(robot_image_path=f"{prefix_path}/{robot_str}.png", grid_size=grid_size, robot_width=robot_size, point_distance=100, image_size=(1000, 1000), output_path=f"{prefix_path}/media/{experiment_name}.png")
         print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
         # Robot image with random robot images
         experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
-        generate_robot_image_with_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        generate_robot_image_with_random_robots(robot_image_path=f"{prefix_path}/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), output_path=f"{prefix_path}/media/{experiment_name}.png")
         print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
 
         # Robot animation following a simple trajectory
@@ -447,17 +451,17 @@ if __name__ == "__main__":
         trajectory = [star_points[i] for i in order_index]
         speed = 10
         experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
-        generate_robot_animation_simple_trajectory(robot_image_path="etc/validation/kilobot.png", trajectory=trajectory, robot_width=robot_size, image_size=(1000, 1000), robot_speed=speed, 
-                                                   output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
+        generate_robot_animation_simple_trajectory(robot_image_path=f"{prefix_path}/{robot_str}.png", trajectory=trajectory, robot_width=robot_size, image_size=(1000, 1000), robot_speed=speed, 
+                                                   output_path=f"{prefix_path}/media/{experiment_name}.mp4", log_output_path=f"{prefix_path}/media/{experiment_name}_log.txt")
         print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
         # Robot animation with random robots
-        # N = 20
-        # date_str = datetime.now().strftime("%d%H%M%S")
-        # experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
-        # print(f"Experiment name: {experiment_name}")
-        # generate_robot_animation_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
-        # output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
+        N = 20
+        date_str = datetime.now().strftime("%d%H%M%S")
+        experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
+        print(f"Experiment name: {experiment_name}")
+        generate_robot_animation_random_robots(robot_image_path=f"{prefix_path}/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
+        output_path=f"{prefix_path}/media/{experiment_name}.mp4", log_output_path=f"{prefix_path}/media/{experiment_name}_log.txt")
     else:
         import argparse
         parser = argparse.ArgumentParser(description="Generate validation images and animations.")
