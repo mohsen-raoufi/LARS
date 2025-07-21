@@ -3,10 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
+import argparse
+
 from datetime import datetime
+
+import tqdm
 
 import matplotlib
 matplotlib.use("Agg")  # ensures deterministic size handling (especially on Mac)
+
+bg_color = 'gray'  # default background color for the images
+bg_color = (0.7, 0.7, 0.7)  # gray color in RGB format
     
 # generate a simple picture with a regular grid of circles/disks with specific distance
 def generate_grid_image(grid_size = (3,3), circle_radius = 1, point_distance = 2, image_size = (100, 100), output_path= "grid_image.png", circle_perfection = 1.0):
@@ -18,6 +25,7 @@ def generate_grid_image(grid_size = (3,3), circle_radius = 1, point_distance = 2
     """
 
     fig, ax = plt.subplots(figsize=(image_size[0]/100, image_size[1]/100), dpi=100)
+    fig.patch.set_facecolor(bg_color)
     ax.set_xlim(0, image_size[0])
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
@@ -65,6 +73,7 @@ def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50
         robot_image = cv2.resize(robot_image, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_AREA)
 
     fig, ax = plt.subplots(figsize=(image_size[0]/100, image_size[1]/100), dpi=100)
+    fig.patch.set_facecolor(bg_color)
     ax.set_xlim(0, image_size[0])
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
@@ -112,6 +121,7 @@ def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, rob
         robot_image = cv2.resize(robot_image, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_AREA)
 
     fig, ax = plt.subplots(figsize=(image_size[0]/100, image_size[1]/100), dpi=100)
+    fig.patch.set_facecolor(bg_color)
     ax.set_xlim(0, image_size[0])
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
@@ -159,7 +169,9 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
     if robot_image.shape[0] > robot_width or robot_image.shape[1] > robot_width:
         scale_factor = robot_width / max(robot_image.shape[:2])
         robot_image = cv2.resize(robot_image, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_AREA)
-
+    
+    robot_image = robot_image.astype(np.float32)
+    np.clip(robot_image, 0.0, 1.0, out=robot_image)
 
     # if the log_output_path is provided, create a log file
     if log_output_path:
@@ -167,6 +179,7 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
         log_file.write("Frame, X, Y\n")
     
     fig, ax = plt.subplots(figsize=(image_size[0]/100, image_size[1]/100), dpi=100)
+    fig.patch.set_facecolor(bg_color)
     ax.set_xlim(0, image_size[0])
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
@@ -202,6 +215,7 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
             ax.set_ylim(0, image_size[1])
             plt.axis('off')
             ax.set_aspect('equal')
+            # ax.set_facecolor('lightgray')
 
             # plot the trajectory line
             # ax.plot(*zip(*trajectory[:i_node + 1]), color='gray', linestyle='--', linewidth=1)
@@ -251,12 +265,16 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
         scale_factor = robot_width / max(robot_image.shape[:2])
         robot_image = cv2.resize(robot_image, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_AREA)
 
+    robot_image = robot_image.astype(np.float32)
+    np.clip(robot_image, 0.0, 1.0, out=robot_image)
+
     # if the log_output_path is provided, create a log file
     if log_output_path:
         log_file = open(log_output_path, 'w')
         log_file.write("Frame, Robot ID, X, Y\n")
 
     fig, ax = plt.subplots(figsize=(image_size[0]/100, image_size[1]/100), dpi=100)
+    fig.patch.set_facecolor(bg_color)
     ax.set_xlim(0, image_size[0])
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
@@ -284,12 +302,16 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
     
     scale_rand_theta = 1/10
 
-    for _ in range(animation_duration):  # Number of frames in the animation
+    # change the background color to gray
+    # ax.set_facecolor('lightgray')
+
+    for _ in tqdm.tqdm(range(animation_duration), desc="Animating robots time"):  # Number of frames in the animation
         ax.clear()
         ax.set_xlim(0, image_size[0])
         ax.set_ylim(0, image_size[1])
         plt.axis('off')
         ax.set_aspect('equal')
+        # ax.set_facecolor('lightgray')
 
         for i in range(num_robots):
             x, y, theta = robots[i]
@@ -334,7 +356,7 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
                         theta = np.arctan2(vy_reflected, vx_reflected) + np.random.uniform(-np.pi, np.pi) * 3 * scale_rand_theta  # Randomly change direction
 
                         # Optional: push robots apart to avoid overlap
-                        overlap = 0.2 * (2 * robot_width - distance + 1e-6)
+                        overlap = 0.05 * (2 * robot_width - distance + 1e-6)
                         x -= nx * overlap
                         y -= ny * overlap
 
@@ -388,77 +410,79 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
 
 
 if __name__ == "__main__":
+    import sys
+    if len(sys.argv) == 1:
+        # No CLI arguments: run the original demo code
+        plt.rcParams['figure.dpi'] = 100
 
+        robot_size = 56
+        N = 5**2
+        grid_size = (int(np.sqrt(N)), int(np.sqrt(N)))
+        robot_str = 'Kilobot'
+        date_str = datetime.now().strftime("%d%H%M%S")
 
-    plt.rcParams['figure.dpi'] = 100
+        # Simple grid with circles
+        experiment_name = f"grid_circle_N_{N}__{date_str}"
+        generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
-    # OPTIONAL : clipping the image so that it fits the range [0, 1]
-    # if not os.path.exists("etc/validation/kilobot.png"):
-    #     raise FileNotFoundError("Kilobot image file not found: etc/validation/kilobot.png")
-    # else:
-    #     kilobot_image = plt.imread("etc/validation/kilobot.png")
+        # Simple grid with robot images
+        experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
+        generate_robot_grid_image(robot_image_path=f"etc/validation/{robot_str}.png", grid_size=grid_size, robot_width=robot_size, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
-    # img = np.clip(kilobot_image, 0.0, 1.0- 1e-8)  # clip values to [0, 1]
+        # Robot image with random robot images
+        experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
+        generate_robot_image_with_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
+        print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
 
-    # # Suppose img is your float RGB image (dtype float32 or float64)
-    # img = np.asarray(img)
+        # Robot animation following a simple trajectory
+        image_width = 1000
+        star_points = [(image_width/2 + 300 * np.cos(theta), image_width/2 + 300 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
+        order_index = [0, 2, 4, 1, 3, 0]
+        trajectory = [star_points[i] for i in order_index]
+        speed = 10
+        experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
+        generate_robot_animation_simple_trajectory(robot_image_path="etc/validation/kilobot.png", trajectory=trajectory, robot_width=robot_size, image_size=(1000, 1000), robot_speed=speed, 
+                                                   output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
+        print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
-    # # Step 1: Convert to float32 (if not already)
-    # img = img.astype(np.float32)
+        # Robot animation with random robots
+        N = 20
+        date_str = datetime.now().strftime("%d%H%M%S")
+        experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
+        print(f"Experiment name: {experiment_name}")
+        generate_robot_animation_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
+        output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
+    else:
+        import argparse
+        parser = argparse.ArgumentParser(description="Generate validation images and animations.")
+        parser.add_argument('function', type=str, help='Function to call: grid, robot_grid, random_robots, robot_traj, robot_anim_random')
+        parser.add_argument('--args', nargs='*', help='Arguments for the function (key=value pairs)', default=[])
+        args = parser.parse_args()
 
-    # # Step 2: Clip aggressively to avoid tiny overshoots
-    # img = np.minimum(np.maximum(img, 0.0), 1.0)
+        # Convert key=value pairs to kwargs
+        kwargs = {}
+        for arg in args.args:
+            if '=' in arg:
+                k, v = arg.split('=', 1)
+                try:
+                    v_eval = eval(v, {"__builtins__": None}, {})
+                    kwargs[k] = v_eval
+                except:
+                    kwargs[k] = v
+            else:
+                kwargs[arg] = True
 
-    # # Optional: double-check the range manually
-    # print("Min:", img.min(), "Max:", img.max())  # should be within [0.0, 1.0]
-
-    # plt.imsave("etc/validation/kilobot.png", img)
-
-
-    ## Image Generator for validation purposes
-    N = 5**2
-    grid_size = (int(np.sqrt(N)), int(np.sqrt(N)))
-    robot_str = 'Kilobot'
-    date_str = datetime.now().strftime("%d%H%M%S")
-
-
-    # # ## Simple grid with circles
-    experiment_name = f"grid_circle_N_{N}__{date_str}"
-    generate_grid_image(grid_size=grid_size, circle_radius=30, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
-    print(f"Grid image generated and saved as '{experiment_name}.png'.")
-
-    # ## ## simple grid with robot images
-    experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
-    generate_robot_grid_image(robot_image_path=f"etc/validation/{robot_str}.png", grid_size=grid_size, robot_width=50, point_distance=100, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
-    print(f"Grid image generated and saved as '{experiment_name}.png'.")
-
-
-    ## ## Robot image with random robot images
-    experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
-    generate_robot_image_with_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=30, image_size=(1000, 1000), output_path=f"etc/validation/media/{experiment_name}.png")
-    print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
-
-
-    ## Robot animation following a simple trajectory
-    ## ## make trajectory points from a star shape
-    image_width = 1000
-    star_points = [(image_width/2 + 300 * np.cos(theta), image_width/2 + 300 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
-    # # set the trajectory based on a new order of the star points
-    order_index = [0, 2, 4, 1, 3, 0]
-    trajectory = [star_points[i] for i in order_index]
-    robot_str = 'Kilobot'
-    speed = 10
-    experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
-    generate_robot_animation_simple_trajectory(robot_image_path="etc/validation/kilobot.png", trajectory=trajectory, robot_width=60, image_size=(1000, 1000), robot_speed=speed, 
-                                               output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
-    print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
-
-    # ## Robot animation with random robots
-    N = 20
-    robot_str = 'Kilobot'
-    date_str = datetime.now().strftime("%d%H%M%S")
-    experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}__{date_str}"
-    print(f"Experiment name: {experiment_name}")
-    generate_robot_animation_random_robots(robot_image_path=f"etc/validation/{robot_str}.png", num_robots=N, robot_width=30, image_size=(1000, 1000), robot_speed=3, animation_duration=5000, 
-    output_path=f"etc/validation/media/{experiment_name}.mp4", log_output_path=f"etc/validation/media/{experiment_name}_log.txt")
-    # #
+        if args.function == 'grid':
+            generate_grid_image(**kwargs)
+        elif args.function == 'robot_grid':
+            generate_robot_grid_image(**kwargs)
+        elif args.function == 'random_robots':
+            generate_robot_image_with_random_robots(**kwargs)
+        elif args.function == 'robot_traj':
+            generate_robot_animation_simple_trajectory(**kwargs)
+        elif args.function == 'robot_anim_random':
+            generate_robot_animation_random_robots(**kwargs)
+        else:
+            print(f"Unknown function: {args.function}")
