@@ -38,6 +38,7 @@ public:
      * @param filename Path to the video file.
      */
     void playVideo(const std::string& filename);
+    void stopVideo();
 
 private:
     WorldModel* _wm;

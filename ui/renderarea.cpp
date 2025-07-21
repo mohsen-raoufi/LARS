@@ -176,6 +176,17 @@ void RenderArea::playVideo(const std::string& filename)
     }
 }
 
+void RenderArea::stopVideo()
+{
+    // Needs to be checked fully
+    if (videoPlaying) {
+        videoTimer->stop();                // Stop the timer
+        videoCapture.release();            // Release the video file
+        videoPlaying = false;              // Update your state
+        qDebug() << "Video stopped.";
+    }
+}
+
 /**
  * @brief Grab the next frame from the video and update the display.
  */

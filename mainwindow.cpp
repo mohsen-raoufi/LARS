@@ -1757,7 +1757,8 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
         {
             ui->TrigID_comboBox->addItem(QString::number(i));
         }
-        ui->TrigID_comboBox->setCurrentIndex(0);
+//        ui->TrigID_comboBox->setCurrentIndex(0); // set the triger ID to None if not needed: comment this out
+        ui->TrigID_comboBox->setCurrentIndex(1); // set the triger ID to ALL to see if you detected all the robots
 
     }
 
@@ -2664,43 +2665,96 @@ void MainWindow::on_drawBall_stateChanged(int arg1)
 
 void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 {
+    if(checked){
     wm.loadvidBackground = checked;
 //    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
-    QString address = "/home/p27/LARS/LARS/etc/validation/media/robot_animation_random_robots_Kilobot_N_20.mp4"; // + ui->arenaImage_TextEdit->text();
+//    QString address = "/home/p27/LARS/LARS/etc/validation/media/robot_animation_random_robots_kilobot_N_20.mp4";
+    QString address = ui->arenaImage_TextEdit->text();
     qDebug() << "HEY !! video loaded from: " << address;
     this->arenaWindow->_renderArea->playVideo(address.toStdString());
-//    this->arenaWindow->_renderArea->
+////    this->arenaWindow->_renderArea->
+    }
 }
 
 
-void MainWindow::on_generateExpField_pushButton_clicked(bool checked)
+void MainWindow::on_generateExpField_pushButton_clicked()
 {
     // Example: Call Python function generate_robot_animation_random_robots with arguments
     QString pythonScript = "/home/p27/LARS/LARS/etc/validation/generate_validation_images.py";
+
+    //// IMAGE : RANDOM POSITIONS
+
+//    QString functionName = "robot_anim_random";
+//    int robot_width = 56;
+//    int N = 25;
+//    int robot_speed = 3;
+//    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+//    QString output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + N + "_w_" + robot_width + "_sp_" + robot_speed;
+//    QString output_path = output_str + "_vid.mp4";
+//    QString log_output_path = output_str + "_log.txt";
+//    QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+
+//    QStringList arguments;
+//    arguments << pythonScript << functionName
+//        << "--args"
+//        << QString("robot_image_path=%1").arg(robot_image_path)
+//        << QString("robot_width=%1").arg(robot_width)
+//        << QString("num_robots=%1").arg(N)
+//        << QString("robot_speed=%1").arg(robot_speed)
+//        << QString("output_path=%1").arg(output_path)
+//        << QString("log_output_path=%1").arg(log_output_path);
+
+
+    //// ANIMATION : RANDOM MOVEMENT
     QString functionName = "robot_anim_random";
-    int robot_width = 40;
-    int N = 10;
-    int robot_speed = 5;
-    QString output_path = "etc/validation/media/generated_anim.mp4";
-    QString log_output_path = "etc/validation/media/generated_anim_log.txt";
+    int robot_width = 56;
+    int N = 25;
+    int robot_speed = 3;
+//    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+    QString output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
+                         + functionName
+                         + "_N_" + QString::number(N)
+                         + "_w_" + QString::number(robot_width)
+                         + "_sp_" + QString::number(robot_speed);
+    QString output_path = output_str + "_vid.mp4";
+    QString log_output_path = output_str + "_log.txt";
+    QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
 
     QStringList arguments;
     arguments << pythonScript << functionName
         << "--args"
+        << QString("robot_image_path=%1").arg(robot_image_path)
         << QString("robot_width=%1").arg(robot_width)
         << QString("num_robots=%1").arg(N)
         << QString("robot_speed=%1").arg(robot_speed)
         << QString("output_path=%1").arg(output_path)
         << QString("log_output_path=%1").arg(log_output_path);
 
+    ui->arenaImage_TextEdit->setText(output_path);
+
+
+
+    qDebug() << "Calling the python code ... ";
+
     QProcess *process = new QProcess(this);
     connect(process, &QProcess::readyReadStandardOutput, [process]() {
         qDebug() << process->readAllStandardOutput();
     });
+
     connect(process, &QProcess::readyReadStandardError, [process]() {
         qDebug() << process->readAllStandardError();
     });
-    process->start("python3", arguments);
+
+    connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+            [this, process](int exitCode, QProcess::ExitStatus exitStatus) {
+        qDebug() << "Python process finished with exit code:" << exitCode
+                 << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
+        process->deleteLater();  // clean up
+         ui->videoExpField_pushButton->click();
+    });
+
+
+    process->start("python", arguments);
     qDebug() << "Started Python process to generate robot animation with arguments.";
 }
 
