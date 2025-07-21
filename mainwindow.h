@@ -346,6 +346,9 @@ private slots:
 
     void on_videoExpField_pushButton_clicked(bool checked);
 
+
+    void on_generateExpField_pushButton_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 

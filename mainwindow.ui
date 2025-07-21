@@ -607,7 +607,7 @@ p, li { white-space: pre-wrap; }
 </string>
           </property>
           <property name="text">
-           <string>/home/p27/Kilobot_Materials/savedData/Kilobot_randomWalks_</string>
+           <string>/home/p27/Kilobot_Materials/savedData/eval_test_s</string>
           </property>
           <property name="frame">
            <bool>true</bool>
@@ -781,7 +781,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <item>
         <property name="text">
@@ -1790,6 +1790,19 @@ color: rgb(0, 0, 0);
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="generateExpField_pushButton">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>generate</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
@@ -1839,6 +1852,19 @@ color: rgb(0, 0, 0);
                </item>
                <item>
                 <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_8">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
@@ -1913,6 +1939,19 @@ color: rgb(0, 0, 0);
                </item>
                <item>
                 <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_9">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>

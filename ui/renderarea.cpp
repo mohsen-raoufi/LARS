@@ -188,9 +188,16 @@ void RenderArea::grabVideoFrame()
         videoFrame = QImage((const uchar*)frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888).copy();
         update();
     } else {
+        if (frame.empty()) { // loop the video
+            // end of the video: reset to beginning
+            videoCapture.set(cv::CAP_PROP_POS_FRAMES, 0);
+//            continue;
+        }
+        else{
         videoCapture.release();
         videoTimer->stop();
         videoPlaying = false;
+        }
     }
 }
 

@@ -533,8 +533,9 @@ void MainWindow::drawKilobots(Mat &frame)
                 }
                 }
             }
-            else{
-                rgbColor = Scalar(255,255,255);
+            else{ // if not showing the color based on the LED
+                rgbColor = Scalar(255,255,255); // white
+                rgbColor = Scalar(255, 174, 0); // orange
             }
 
             wm.kiloColor.append(rgbColor);
@@ -2661,8 +2662,6 @@ void MainWindow::on_drawBall_stateChanged(int arg1)
 }
 
 
-
-
 void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 {
     wm.loadvidBackground = checked;
@@ -2672,7 +2671,6 @@ void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
     this->arenaWindow->_renderArea->playVideo(address.toStdString());
 //    this->arenaWindow->_renderArea->
 }
-
 
 
 void MainWindow::on_generateExpField_pushButton_clicked(bool checked)
