@@ -3,6 +3,7 @@
         "__node_handle": "cpp",
         "bitset": "cpp",
         "memory": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "istream": "cpp"
     }
 }

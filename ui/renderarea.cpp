@@ -40,6 +40,9 @@
 #include "renderarea.h"
 #include <QDebug>
 
+#include <opencv2/opencv.hpp>
+#include <QTimer>
+
 /**
  * @brief Constructs a RenderArea widget for rendering graphical elements in the UI.
  *
@@ -61,6 +64,11 @@ RenderArea::RenderArea(WorldModel *wm) :
 
     this->bias_X = _wm->bias_X;
     this->bias_X = _wm->bias_Y;
+
+    // Video playback support
+    videoTimer = new QTimer(this);
+    connect(videoTimer, &QTimer::timeout, this, &RenderArea::grabVideoFrame);
+    videoPlaying = false;
 
     marker0 = QPixmap(":/Files/marker0.png");
     marker1 = QPixmap(":/Files/marker1.png");
@@ -156,6 +164,37 @@ RenderArea::RenderArea(WorldModel *wm) :
 }
 
 /**
+ * @brief Start playing a video from the given file path.
+ * @param filename Path to the video file.
+ */
+void RenderArea::playVideo(const std::string& filename)
+{
+    videoCapture.open(filename);
+    if (videoCapture.isOpened()) {
+        videoPlaying = true;
+        videoTimer->start(33); // ~30 FPS
+    }
+}
+
+/**
+ * @brief Grab the next frame from the video and update the display.
+ */
+void RenderArea::grabVideoFrame()
+{
+    if (!videoCapture.isOpened()) return;
+    cv::Mat frame;
+    if (videoCapture.read(frame)) {
+        cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
+        videoFrame = QImage((const uchar*)frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888).copy();
+        update();
+    } else {
+        videoCapture.release();
+        videoTimer->stop();
+        videoPlaying = false;
+    }
+}
+
+/**
  * @brief Refresh the RenderArea display.
  *
  * Calls updatePainters() and schedules a repaint.
@@ -243,7 +282,6 @@ void RenderArea::paintEvent(QPaintEvent *)
 
     switch (_wm->expFieldType) {
     case GRADIENT:
-        //        qDebug() << "wm ExpFieldType: " << "GRADIENT";
         painter.fillRect(*expArena, *radGradient);
         break;
     case IMAGE:
@@ -251,11 +289,13 @@ void RenderArea::paintEvent(QPaintEvent *)
             painter.drawPixmap(*expArena, _wm->arenaImg);
         else
             painter.drawPixmap(*expArena, _wm->arenaProcessedImg);
-        //        painter.drawPixmap(*expArena, QPixmap::fromImage(arenaImage));
-        //        painter.drawPixmap(*expArena, arenaImg);
+        break;
+    case VIDEO:
+        if (videoPlaying && !videoFrame.isNull()) {
+            painter.drawImage(*expArena, videoFrame.scaled(expArena->size()));
+        }
         break;
     default:
-        //        qDebug() << "wm ExpFieldType: " << "WHAT?!";
         break;
     }
 
@@ -426,13 +466,13 @@ void RenderArea::paintEvent(QPaintEvent *)
             }
         }
 
-        int max_degree_index = getMostCentralNode(graph);
+        // int max_degree_index = getMostCentralNode(graph);
 
-        index_node_to_light_net = max_degree_index;
+        // index_node_to_light_net = max_degree_index;
 
-        // set the _wm->rob_toEnlight.at(index_node_to_light_net) to true
-        if(index_node_to_light_net>=0)
-            _wm->rob_toEnlight[index_node_to_light_net] = true;
+        // // set the _wm->rob_toEnlight.at(index_node_to_light_net) to true
+        // if(index_node_to_light_net>=0)
+        //     _wm->rob_toEnlight[index_node_to_light_net] = true;
 
     }
 

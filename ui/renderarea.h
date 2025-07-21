@@ -26,60 +26,61 @@
 
 #define ANGLE_TO_CHORD(a) 16*((a)*180/Pi+40), 16*280
 
+
 class RenderArea : public QWidget
 {
     Q_OBJECT
 public:
     explicit RenderArea(WorldModel *wm);
+
+    /**
+     * @brief Start playing a video from the given file path.
+     * @param filename Path to the video file.
+     */
+    void playVideo(const std::string& filename);
+
 private:
-
-//    QVector<Kilobot *> _kiloList;
     WorldModel* _wm;
-
-//    QPainter painter;
-
     QBrush *brush_field, *brush_insideRect, *brush_yrobot, *brush_yrobot_MT, *brush_brobot, *brush_test;
     QBrush *brush_initPoints, *brush_initPoints2;
     QTimer _timer; //, _noiseTimer;
     int bias_X, bias_Y;
-
     QPen *pen_insideRect, *pen_RobCust1, *pen_pnts2Draw, *pen_circ2Draw, *pen_network, *pen_voronoii, *pen_tracePnts;
-
     QPixmap marker0, marker1, marker2, marker3;
     QPixmap arenaImg, SCIoIImg, webPage, centroidImage, ballImage;
     QRadialGradient *radGradient, *radGradientRob;
     QRect *expArena;
     int robRad;
-
     cv::Mat heatMapTemp;
     QImage heatMapQImage;
-
     QRect bigFieldRect;
     QPolygon bigFieldPoly;
-
     QImage arenaImage;
-
     bool refreshNoiseBool = false;
-
     voronoiGenerator VoronoiiGen;
     boost::polygon::voronoi_diagram<double> vd;
-
     int centroid_width = 30;
-
     int index_node_to_light_net = -1;
-
     igraph_t graph;
     igraph_vector_int_t edges;
 
+    // Video playback support
+    cv::VideoCapture videoCapture;
+    QImage videoFrame;
+    QTimer* videoTimer;
+    bool videoPlaying;
 
 signals:
 
 public slots:
     void refresh();
-//    void toggleNoiseBool();
     void paintEvent(QPaintEvent *);
     void updatePainters();
     void updateGradientPainter();
+    /**
+     * @brief Grab the next frame from the video and update the display.
+     */
+    void grabVideoFrame();
 
 protected:
     int getMostCentralNode(const igraph_t &graph);

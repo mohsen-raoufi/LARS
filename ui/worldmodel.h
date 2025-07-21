@@ -21,6 +21,7 @@
 enum BrushType {
     GRADIENT,
     IMAGE,
+    VIDEO,
     SOLID,
     NULL_BRUSH
 };
