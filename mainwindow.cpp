@@ -2086,9 +2086,27 @@ void MainWindow::on_smoothnessFact_slider_sliderMoved(int position)
 void MainWindow::on_imageExpField_pushButton_clicked(bool checked)
 {
     wm.loadImgBackground = checked;
-    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
-    qDebug() << "Image loaded from: " << address;
-    wm.arenaImg = QPixmap(address);
+    ////
+//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text(); // uncomment for normal behavior
+    // qDebug() << "Image loaded from: " << address;
+    // wm.arenaImg = QPixmap(address);
+
+
+    ui->arenaImage_TextEdit->setText("robot_calib_pattern_kilobot.png");
+
+    QString address = "/home/p27/LARS/LARS/etc/validation/media/" + ui->arenaImage_TextEdit->text(); // for evaluation
+    // load the image from the address using opencv
+    cv::Mat img = cv::imread(address.toStdString(), cv::IMREAD_UNCHANGED);
+    // convert the image to QPixmap
+    if(img.empty())
+    {
+        qDebug() << "Image not found at: " << address;
+        return;
+    }
+    // convert cv::Mat to QPixmap
+    QImage image = QImage((const unsigned char*)img.data, img.cols, img.rows, img.step, QImage::Format_ARGB32);
+    wm.arenaImg = QPixmap::fromImage(image);
+    
 }
 
 /**
@@ -2499,7 +2517,12 @@ void MainWindow::on_env4_rButton_clicked()
  */
 void MainWindow::on_openImageField_pushButton_clicked()
 {
-    QString fileAddress = QFileDialog::getOpenFileName(this,tr("Select Arena Image"), "/home/p27/kilobot_project/VRK/New_VRK_GUI/Files/", tr("All Files (*.*)"));
+    //// Uncomment below for normal behavior
+    //    QString fileAddress = QFileDialog::getOpenFileName(this,tr("Select Arena Image"), "/home/p27/kilobot_project/VRK/New_VRK_GUI/Files/", tr("All Files (*.*)"));
+    //    ui->arenaImage_TextEdit->setText(fileAddress.mid(fileAddress.lastIndexOf("/") + 1));
+
+    //// for evaluation only
+    QString fileAddress = QFileDialog::getOpenFileName(this,tr("Select Arena Image"), "/home/p27/LARS/LARS/etc/validation/media/", tr("All Files (*.*)"));
     ui->arenaImage_TextEdit->setText(fileAddress.mid(fileAddress.lastIndexOf("/") + 1));
     wm.arenaImg = QPixmap(fileAddress);
 }
@@ -2707,7 +2730,7 @@ void MainWindow::on_generateExpField_pushButton_clicked()
 
     //// ANIMATION : RANDOM MOVEMENT
     QString functionName = "robot_anim_random";
-    int robot_width = 56;
+    int robot_width = 2*56;
     int N = 25;
     int robot_speed = 3;
 //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");

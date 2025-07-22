@@ -54,7 +54,7 @@ def generate_grid_image(grid_size = (3,3), circle_radius = 1, point_distance = 2
 
 
 # generate a simple picture with a regular grid of robot snapshots from an png file with specific distance
-def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50, point_distance=100, image_size=(1000, 1000), output_path="robot_grid_image.png"):
+def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50, point_distance=100, image_size=(2000, 2000), output_path="robot_grid_image.png"):
     """
     Generates an image with a grid of robot snapshots.
     robot_image_path: path to the robot image file
@@ -101,7 +101,7 @@ def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50
     plt.close(fig)
 
 # generate a sample picture with random non-overlapping robots from the png file of a robot
-def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, robot_width=30, image_size=(1000, 1000), output_path="robot_image_with_random_robots.png"):
+def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, robot_width=30, image_size=(2000, 2000), output_path="robot_image_with_random_robots.png"):
     """Generates an image with random non-overlapping robots and a robot image.
     robot_image_path: path to the robot image file
     num_robots: number of random robots to generate
@@ -152,7 +152,7 @@ def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, rob
     plt.close(fig)
 
 # generate an animation of a robot moving in the space following a trajectory and bouncing off walls
-def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, robot_width=30, image_size=(1000, 1000), robot_speed=1, output_path="robot_animation.mp4", log_output_path=None):
+def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, robot_width=30, image_size=(2000, 2000), robot_speed=1, output_path="robot_animation.mp4", log_output_path=None):
     """
     Generates an animation of a robot moving along a trajectory.
     robot_image_path: path to the robot image file
@@ -245,7 +245,7 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
 
 
 # generate animation of multiple robots moving randomly in the space and bounding off walls and each other
-def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robot_width=30, image_size=(1000, 1000), robot_speed=1, animation_duration=10, output_path="robot_animation_random_robots.mp4", log_output_path=None):
+def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robot_width=30, image_size=(2000, 2000), robot_speed=1, animation_duration=10, output_path="robot_animation_random_robots.mp4", log_output_path=None):
     """
     Generates an animation of multiple robots moving randomly in the space.
     robot_image_path: path to the robot image file
@@ -279,6 +279,9 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
     plt.axis('off')
+
+    # load the empty_env.png to add as the light intensity disturbance later
+    # empty_env = plt.imread("etc/validation/empty_env.png")
 
     # Create a writer object for saving the animation
     writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, (image_size[0], image_size[1]))
@@ -369,7 +372,6 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
             robots[i] = (x, y, theta)
             # x -= robot_image.shape[1] / 2
             # y -= robot_image.shape[0] / 2
-            
 
             # Draw the robot at the current position
             ax.imshow(robot_image, extent=(x-robot_image.shape[1] / 2, x + robot_image.shape[1] / 2, y-robot_image.shape[0] / 2, y + robot_image.shape[0] / 2))
@@ -416,11 +418,12 @@ if __name__ == "__main__":
         plt.rcParams['figure.dpi'] = 100   
         
 
-        robot_size = 56
+        robot_size = 1.55*56
         N = 5**2
         grid_size = (int(np.sqrt(N)), int(np.sqrt(N)))
         robot_str = 'kilobot'
         date_str = datetime.now().strftime("%d%H%M%S")
+        image_size = (2000, 2000)
 
         # if the etc/ folder exist here then use this prefix for path
         
@@ -432,41 +435,45 @@ if __name__ == "__main__":
             robot_image_path = f"/home/p27/LARS/LARS/etc/validation/{robot_str}.png"
 
 
+        ## ## make a simple 2*2 grid of robot images for calibration purposes, set the distance to the max value so that robots place at the corners
+        experiment_name = f"robot_calib_pattern_{robot_str}"
+        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=(2,2), robot_width=robot_size, point_distance=image_size[0]-robot_size, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        print(f"Grid image generated and saved as '{experiment_name}.png'.")
         
 
         # Simple grid with circles
-        experiment_name = f"grid_circle_N_{N}__{date_str}"
-        generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=100, image_size=(1000, 1000), output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Grid image generated and saved as '{experiment_name}.png'.")
+        # experiment_name = f"grid_circle_N_{N}__{date_str}"
+        # generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=100, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
-        # Simple grid with robot images
-        experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
-        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=grid_size, robot_width=robot_size, point_distance=100, image_size=(1000, 1000), output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Grid image generated and saved as '{experiment_name}.png'.")
+        # # Simple grid with robot images
+        # experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
+        # generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=grid_size, robot_width=robot_size, point_distance=100, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
-        # Robot image with random robot images
-        experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
-        generate_robot_image_with_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=(1000, 1000), output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
+        # # Robot image with random robot images
+        # experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
+        # generate_robot_image_with_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
 
-        # Robot animation following a simple trajectory
-        image_width = 1000
-        star_points = [(image_width/2 + 300 * np.cos(theta), image_width/2 + 300 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
-        order_index = [0, 2, 4, 1, 3, 0]
-        trajectory = [star_points[i] for i in order_index]
-        speed = 10
-        experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
-        generate_robot_animation_simple_trajectory(robot_image_path=robot_image_path, trajectory=trajectory, robot_width=robot_size, image_size=(1000, 1000), robot_speed=speed, 
-                                                   output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=f"{prefix_path}/{experiment_name}_log.txt")
-        print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
+        # # Robot animation following a simple trajectory
+        # image_width = 1000
+        # star_points = [(image_width/2 + 300 * np.cos(theta), image_width/2 + 300 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
+        # order_index = [0, 2, 4, 1, 3, 0]
+        # trajectory = [star_points[i] for i in order_index]
+        # speed = 10
+        # experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
+        # generate_robot_animation_simple_trajectory(robot_image_path=robot_image_path, trajectory=trajectory, robot_width=robot_size, image_size=image_size, robot_speed=speed, 
+        #                                            output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=f"{prefix_path}/{experiment_name}_log.txt")
+        # print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
         # Robot animation with random robots
-        N = 20
-        date_str = datetime.now().strftime("%d%H%M%S")
-        experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
-        print(f"Experiment name: {experiment_name}")
-        generate_robot_animation_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=(1000, 1000), robot_speed=3, animation_duration=2000, 
-        output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=f"{prefix_path}/{experiment_name}_log.txt")
+        # N = 20
+        # date_str = datetime.now().strftime("%d%H%M%S")
+        # experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
+        # print(f"Experiment name: {experiment_name}")
+        # generate_robot_animation_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, robot_speed=3, animation_duration=50, 
+        # output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=f"{prefix_path}/{experiment_name}_log.txt")
     else:
         import argparse
         parser = argparse.ArgumentParser(description="Generate validation images and animations.")

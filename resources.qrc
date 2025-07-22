@@ -22,5 +22,6 @@
         <file>Files/centroid.png</file>
         <file>Files/psioi.png</file>
         <file>Files/ball.png</file>
+        <file>Files/LARS_Logo.png</file>
     </qresource>
 </RCC>

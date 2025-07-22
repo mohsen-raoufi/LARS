@@ -5,13 +5,13 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setOrganizationName("SCIoI");
     QCoreApplication::setOrganizationDomain("www.scioi.de");
-    QCoreApplication::setApplicationName("LARS ver2.1");
+    QCoreApplication::setApplicationName("LARS ver2.2");
 
     QApplication a(argc, argv);
 
     std::cout << "*** © Science of Intelligence, Project 27, Mohsen Raoufi ***" << std::endl;
     std::cout << "***** Light Augmented Reality for Swarm Systems (LARS) *****" << std::endl;
-    std::cout << "*********************** Version: 2.1 ***********************" << std::endl;
+    std::cout << "*********************** Version: 2.2 ***********************" << std::endl;
 
     QApplication::setStyle(QStyleFactory::create("Fusion"));
     QPalette p;
@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
     a.setPalette(p);
 
 //    a.setWindowIcon(QIcon(""));
-    a.setWindowIcon(QIcon("Files/KilobotHeter.png"));
-    a.setWindowIcon(QIcon("../Files/KilobotHeter.png"));          // To set the icon of the application
+//    a.setWindowIcon(QIcon("Files/LARS_Logo.png")); // KilobotHeter.png"));
+    a.setWindowIcon(QIcon(":/Files/LARS_Logo.png")); // /KilobotHeter.png"));          // To set the icon of the application
 
     MainWindow w;
 
