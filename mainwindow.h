@@ -427,6 +427,9 @@ private:
     int listInd = 0, nList = 1000;
 
 
+    // external calls
+//    QProcess *python_call_process = new QProcess(this);
+
 signals:
     void QImageProcReady(QImage image);
     void imageProcReady(cv::Mat image);

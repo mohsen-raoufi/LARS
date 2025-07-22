@@ -54,7 +54,7 @@ def generate_grid_image(grid_size = (3,3), circle_radius = 1, point_distance = 2
 
 
 # generate a simple picture with a regular grid of robot snapshots from an png file with specific distance
-def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50, point_distance=100, image_size=(2000, 2000), output_path="robot_grid_image.png"):
+def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50, point_distance=100, image_size=(2000, 2000), output_path="robot_grid_image.png", log_output_path=None):
     """
     Generates an image with a grid of robot snapshots.
     robot_image_path: path to the robot image file
@@ -62,6 +62,7 @@ def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50
     point_distance: distance between robot images in pixels
     output_path: path to save the generated image
     """
+
     if not os.path.exists(robot_image_path):
         raise FileNotFoundError(f"Robot image file not found: {robot_image_path}")
     else:
@@ -89,11 +90,38 @@ def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50
     # change the background color to gray
     # ax.set_facecolor('lightgray')
 
+    # generate an empty image with the size
+    empty_image = np.zeros((image_size[1], image_size[0], 3), dtype=np.uint8)
+    empty_image[:] = np.array(bg_color) * 255  # fill with the background color
+    ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
+
     for i in range(grid_size[0]):
         for j in range(grid_size[1]):
             x = x_offset + i * point_distance - robot_image.shape[1] / 2
             y = y_offset + j * point_distance - robot_image.shape[0] / 2
-            ax.imshow(robot_image, extent=(x, x + robot_image.shape[1], y, y + robot_image.shape[0]))
+            # ax.imshow(robot_image, extent=(x, x + robot_image.shape[1], y, y + robot_image.shape[0]))
+
+            # Draw the robot at the current position
+            # rotate the image of the robot based on the theta
+            ax = draw_robot_at_pos_w_rot(robot_image, theta=0, x=x, y=y, ax=ax)
+            # ax.imshow(robot_image, extent=(x-robot_image.shape[1] / 2, x + robot_image.shape[1] / 2, y-robot_image.shape[0] / 2, y + robot_image.shape[0] / 2))
+
+    # if the log_output_path is provided, create a log file
+    if log_output_path:
+        log_file = open(log_output_path, 'w')
+        log_file.write("X, Y\n")
+        for i in range(grid_size[0]):
+            for j in range(grid_size[1]):
+                x = x_offset + i * point_distance
+                y = y_offset + j * point_distance
+                log_file.write(f"{x}, {y}\n")
+        log_file.close()
+
+    
+    # 
+    # cv2.imwrite(output_path, cv2.cvtColor(empty_image, cv2.COLOR_RGB2BGR))  # OpenCV expects BGR format
+
+    
 
     plt.axis('off')
     # plt.show()
@@ -127,7 +155,12 @@ def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, rob
     ax.set_aspect('equal')
 
     # change the background color to white
-    ax.set_facecolor('white')
+    # ax.set_facecolor('white')
+
+    # generate an empty image with the size
+    empty_image = np.zeros((image_size[1], image_size[0], 3), dtype=np.uint8)
+    empty_image[:] = np.array(bg_color) * 255  # fill with the background color
+    ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
 
     
     # Generate random non-overlapping robots points
@@ -184,6 +217,11 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
     ax.set_ylim(0, image_size[1])
     ax.set_aspect('equal')
 
+    # generate an empty image with the size
+    empty_image = np.zeros((image_size[1], image_size[0], 3), dtype=np.uint8)
+    empty_image[:] = np.array(bg_color) * 255  # fill with the background color
+    ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
+
     # Create a writer object for saving the animation
     writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), 30, (image_size[0], image_size[1]))
 
@@ -197,6 +235,8 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
         dy = end[1] - start[1]
         distance = np.sqrt(dx**2 + dy**2)
         steps = int(distance / robot_speed)
+
+        
 
         for step in range(steps + 1):
             x = start[0] + (dx * step / steps) - int(robot_image.shape[1] / 2)
@@ -216,6 +256,8 @@ def generate_robot_animation_simple_trajectory(robot_image_path, trajectory, rob
             plt.axis('off')
             ax.set_aspect('equal')
             # ax.set_facecolor('lightgray')
+
+            ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
 
             # plot the trajectory line
             # ax.plot(*zip(*trajectory[:i_node + 1]), color='gray', linestyle='--', linewidth=1)
@@ -280,6 +322,11 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
     ax.set_aspect('equal')
     plt.axis('off')
 
+    # generate an empty image with the size
+    empty_image = np.zeros((image_size[1], image_size[0], 3), dtype=np.uint8)
+    empty_image[:] = np.array(bg_color) * 255  # fill with the background color
+    ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
+
     # load the empty_env.png to add as the light intensity disturbance later
     # empty_env = plt.imread("etc/validation/empty_env.png")
 
@@ -315,6 +362,8 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
         plt.axis('off')
         ax.set_aspect('equal')
         # ax.set_facecolor('lightgray')
+
+        ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
 
         for i in range(num_robots):
             x, y, theta = robots[i]
@@ -374,7 +423,13 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
             # y -= robot_image.shape[0] / 2
 
             # Draw the robot at the current position
-            ax.imshow(robot_image, extent=(x-robot_image.shape[1] / 2, x + robot_image.shape[1] / 2, y-robot_image.shape[0] / 2, y + robot_image.shape[0] / 2))
+            # rotate the image of the robot based on the theta
+            ax = draw_robot_at_pos_w_rot(robot_image, theta, x, y, ax)
+            # robot_image_rotated = cv2.warpAffine(robot_image, cv2.getRotationMatrix2D((robot_image.shape[1] / 2, robot_image.shape[0] / 2), np.degrees(theta), 1), (robot_image.shape[1], robot_image.shape[0]))
+            # x -= robot_image_rotated.shape[1] / 2
+            # y -= robot_image_rotated.shape[0] / 2
+            # ax.imshow(robot_image_rotated, extent=(x, x + robot_image_rotated.shape[1], y, y + robot_image_rotated.shape[0]))
+            # ax.imshow(robot_image, extent=(x-robot_image.shape[1] / 2, x + robot_image.shape[1] / 2, y-robot_image.shape[0] / 2, y + robot_image.shape[0] / 2))
 
 
             # Log the robot's position
@@ -411,6 +466,13 @@ def generate_robot_animation_random_robots(robot_image_path, num_robots=10, robo
     plt.close(fig)
 
 
+def draw_robot_at_pos_w_rot(robot_image, theta, x, y, ax):
+    robot_image_rotated = cv2.warpAffine(robot_image, cv2.getRotationMatrix2D((robot_image.shape[1] / 2, robot_image.shape[0] / 2), np.degrees(theta), 1), (robot_image.shape[1], robot_image.shape[0]))
+    x -= robot_image_rotated.shape[1] / 2
+    y -= robot_image_rotated.shape[0] / 2
+    ax.imshow(robot_image_rotated, extent=(x, x + robot_image_rotated.shape[1], y, y + robot_image_rotated.shape[0]))
+    return ax
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 1:
@@ -418,7 +480,7 @@ if __name__ == "__main__":
         plt.rcParams['figure.dpi'] = 100   
         
 
-        robot_size = 1.55*56
+        robot_size = 2*56; # 1.55*56
         N = 5**2
         grid_size = (int(np.sqrt(N)), int(np.sqrt(N)))
         robot_str = 'kilobot'
@@ -437,7 +499,7 @@ if __name__ == "__main__":
 
         ## ## make a simple 2*2 grid of robot images for calibration purposes, set the distance to the max value so that robots place at the corners
         experiment_name = f"robot_calib_pattern_{robot_str}"
-        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=(2,2), robot_width=robot_size, point_distance=image_size[0]-robot_size, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=(2,2), robot_width=robot_size, point_distance=1000, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
         print(f"Grid image generated and saved as '{experiment_name}.png'.")
         
 
@@ -467,7 +529,7 @@ if __name__ == "__main__":
         #                                            output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=f"{prefix_path}/{experiment_name}_log.txt")
         # print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
-        # Robot animation with random robots
+        # ## # Robot animation with random robots
         # N = 20
         # date_str = datetime.now().strftime("%d%H%M%S")
         # experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"

@@ -8,6 +8,8 @@
 *.obj
 
 *.user
+*.pro.user
+LARS.pro.user
 
 # Precompiled Headers
 *.gch
