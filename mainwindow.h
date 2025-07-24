@@ -352,6 +352,19 @@ private slots:
 
     void resetElapsedTimer();
 
+    void on_V_slider_sliderReleased();
+
+//    void on_test_eval_pushButton_clicked(bool checked);
+
+
+
+    // evaluation
+    void update_evaluation_test();
+
+    void on_test_eval_pushButton_clicked();
+
+    void on_genExp_TextEdit_editingFinished();
+
 private:
     Ui::MainWindow *ui;
 
@@ -409,7 +422,7 @@ private:
     bool cropRectDefined = false;
 
     QString srcStr;
-    QTimer *timer, *joyStick_Timer;
+    QTimer *timer, *joyStick_Timer, *test_eval_timer;
     cv::Rect cropRect;
     QSize procQSize, GUIQSize, fullCapSize;
     cv::Size capSize, procSize;
@@ -428,6 +441,9 @@ private:
 
     // Traces
     int listInd = 0, nList = 1000;
+
+    // Evaluation variables
+    bool dummy_detection_ready = false;
 
 
     // external calls

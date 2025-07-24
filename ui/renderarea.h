@@ -68,6 +68,7 @@ private:
     // Video playback support
     cv::VideoCapture videoCapture;
     QImage videoFrame;
+    cv::Mat frameFrame_CV;
     QTimer* videoTimer;
     bool videoPlaying;
 

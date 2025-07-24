@@ -91,7 +91,7 @@ public:
 
     QRect expFieldRect;
     QPolygon expFieldPoints;
-    BrushType expFieldType, robBrushType;
+    BrushType expFieldType, robBrushType = GRADIENT;
 
     int noiseTileNo = 50, noiseTimeIntv = -1;
     double noiseStrength = 0.2;
@@ -120,7 +120,7 @@ public:
 
     QPoint ballPos = QPoint(0,0);
     QPointF ballVel = QPointF(1.0,1.0);
-    int ballSpeed = 10, ballRad = 60;
+    int ballSpeed = 10, ballRad = 40; // for evaluation instead of Kilobto // 60; // normal, not to confuse with robots
 
 //    Graph robot_graph;
 

@@ -5,7 +5,7 @@
 
 /**
  * @brief Main constructor for the MainWindow class.
- * 
+ *
  * Initializes the GUI, sets up the camera environment, tracking modules, and the arena window.
  * Handles conditional compilation for different camera types, UI setup, and initial state definitions.
  * Assumes a multi-screen setup; positions main window on primary screen and maximizes it.
@@ -29,10 +29,11 @@ MainWindow::MainWindow(QWidget *parent) :
     // Initial Definitions
     timer = new QTimer();
     //    joyStick_Timer = new QTimer();
+    test_eval_timer = new QTimer(); // for evaluation
 
     // Create a secondary window (arena view) to render the experiment scene
     arenaWindow = new ArenaWindow(nullptr, &wm, "LARS ARENA WINDOW");
-//    arenaWindow2 = new ArenaWindow(nullptr, &wm, "ARENA WINDOW 2"); // Secondary Window is optional!
+    //    arenaWindow2 = new ArenaWindow(nullptr, &wm, "ARENA WINDOW 2"); // Secondary Window is optional!
 
 
     // Initialize environment processing logic (e.g., heatmaps, simulation states)
@@ -70,7 +71,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     /**
      * @brief Initialize the marker detection containers.
-     * 
+     *
      * Ensures that marker data is in a known default state to avoid crashes if detection fails.
      */
     detectedMarker temp;
@@ -95,8 +96,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 /**
  * @brief Destructor for MainWindow.
- * 
- * Cleans up allocated resources including UI and camera handles. 
+ *
+ * Cleans up allocated resources including UI and camera handles.
  * Prevents memory leaks and ensures a clean shutdown.
  */
 MainWindow::~MainWindow()
@@ -104,7 +105,7 @@ MainWindow::~MainWindow()
     qDebug() << "********* closing windows ... *********";
 
     // delete external calls
-//    delete python_call_process;
+    //    delete python_call_process;
 
     // Delete the arena window (secondary visualization)
     arenaWindow->close();
@@ -117,7 +118,7 @@ MainWindow::~MainWindow()
 
 /**
  * @brief Logs Kilobot (or other robots) positions and LED colors to the log file.
- * 
+ *
  * This function is used when only position and LED color are needed per robot.
  * Each entry includes timestamp, robot index, position (x, y), and LED color.
  */
@@ -135,23 +136,33 @@ void MainWindow::logToFile_FPS(QVector<QPoint> posVec)
     // remove the "FPS = " from the text and convert it to int
     int FPS_extracted = ui->error_label->text().remove("FPS = ").toInt();
     log_stream << FPS_extracted << "\t" << elapsedTimer.elapsed();
-    
+
     for (int i = 0; i < posVec.size(); ++i){
         log_stream << "\t" << i << "\t" << posVec[i].x() << "\t" << posVec[i].y() ;
     }
 
     // add the noise strength at the end of the line
-//    log_stream << "\t" << ui->noiseStrenght_label->text().toInt();
+//        log_stream << "\t" << ui->noiseStrenght_label->text().toInt();
+//        log_stream << "\t" << ui->noiseTiles_slider->value();
+
+
+//    log_stream << "\t" << ui->genExp_TextEdit->text().toInt();
 
     // add the brightness of the enviornment at the end of the line
-    log_stream << "\t" << ui->V_label->text().toInt();
+//    log_stream << "\t" << ui->V_label->text().toInt();
+
+
+    // //// latency test
+    log_stream << "\t" << wm.ballPos.x() << "\t" << wm.ballPos.y() << "\t" << ui->sliderRandom1->value();
+    // add the value of the sliderRandom1 as the robot speed
+
 
     log_stream << endl;
 }
 
 /**
  * @brief Logs Kilobot (or other robots) positions, LED colors, and velocities to the log file.
- * 
+ *
  * Useful for full behavioral logging. Each entry includes timestamp, robot index,
  * position (x, y), LED color, and velocity vector (vx, vy).
  */
@@ -167,7 +178,7 @@ void MainWindow::logToFile(QVector<Kilobot *> kiloVec)
 
 /**
  * @brief Logs raw position data (without robot metadata) to the log file.
- * 
+ *
  * Used for simpler tracking or external agents not using full Kilobot objects.
  * Each entry includes timestamp, index, and position (x, y).
  */
@@ -182,7 +193,7 @@ void MainWindow::logToFile(QVector<QPoint> posVec)
 
 /**
  * @brief Slot triggered when the capturing button is clicked.
- * 
+ *
  * Starts or stops camera or video capture based on UI state. Initializes the
  * capture source (camera or video), configures size parameters, and resets the heatmap.
  * Also updates the UI text and button label accordingly.
@@ -239,7 +250,7 @@ void MainWindow::on_capturing_button_clicked()
 
 /**
  * @brief Converts an integer (0–15) to its hexadecimal string representation.
- * 
+ *
  * Used for displaying or logging compact hex values from numeric inputs.
  * Modifies the output string passed by reference.
  */
@@ -277,7 +288,7 @@ void MainWindow::convertInt2HexStr(int input, std::string &output)
 
 /**
  * @brief Displays the input image on the GUI and emits image signals.
- * 
+ *
  * Converts the input OpenCV frame to RGB, calls drawKilobots to render annotations,
  * then displays the result in the GUI label. Emits signals before and after processing.
  */
@@ -309,7 +320,7 @@ void MainWindow::showImage(cv::Mat frame)
 
 /**
  * @brief Writes user settings (e.g., window size, hue value) to disk.
- * 
+ *
  * Saves GUI state to persistent storage under "SCIoI" application group.
  * Currently includes window size and slider value.
  */
@@ -326,7 +337,7 @@ void MainWindow::writeSettings()
 
 /**
  * @brief Reads saved user settings from disk.
- * 
+ *
  * Loads GUI state from previous session. Only the hue value is currently used.
  * Resize and slider re-trigger are present as commented-out TODOs.
  */
@@ -343,7 +354,7 @@ void MainWindow::readSettings()
 
 /**
  * @brief Utility function to display debug messages in the GUI text output.
- * 
+ *
  * Allows internal status or error messages to be shown to the user via the interface.
  */
 void MainWindow::myDebug(QString string)
@@ -353,7 +364,7 @@ void MainWindow::myDebug(QString string)
 
 /**
  * @brief Processes received robot data and updates internal state.
- * 
+ *
  * Accepts a list of Kilobots (or other robot instances), maps their positions into arena coordinates,
  * and updates internal world model data (positions, traces, and which robots should be enlightened).
  * Emits kilobot position vector for downstream modules.
@@ -417,7 +428,7 @@ void MainWindow::getKilos(QVector<Kilobot *> kiloVec)
 
 /**
  * @brief Receives a list of drawn circles to overlay on the video frame.
- * 
+ *
  * Used to annotate the GUI with circular visual indicators (e.g., targets, zones).
  */
 void MainWindow::getDrawnCircles(QVector<drawnCircle> circsToDraw)
@@ -428,7 +439,7 @@ void MainWindow::getDrawnCircles(QVector<drawnCircle> circsToDraw)
 
 /**
  * @brief Draws graphical overlays (like circles and optional labels) on top of a frame.
- * 
+ *
  * Handles both transparent and opaque overlays based on `drawnCircle` data.
  * Supports future extensions for drawn lines (currently commented out).
  */
@@ -512,7 +523,7 @@ void MainWindow::drawOverlay(Mat &frame)
 
 /**
  * @brief Renders Kilobots (or other robots) on the video frame.
- * 
+ *
  * Displays robot positions as colored circles, optionally with velocity vectors and IDs.
  * Heatmap and color options depend on GUI checkboxes. This function integrates robot state,
  * visual encoding, and conditional overlays.
@@ -589,7 +600,7 @@ void MainWindow::drawKilobots(Mat &frame)
 
 /**
  * @brief Draws and updates a heatmap based on robot positions.
- * 
+ *
  * For each Kilobot (or robot), draws a colored circle on a heatmap layer using the robot's LED color.
  * This overlay is then blended with the GUI video feed to visualize collective activity over time.
  */
@@ -651,7 +662,7 @@ void MainWindow::drawHeatMapOnGUI(Mat &frame)
     finImg.convertTo(finImg, frame.type());
     frame.copyTo(tmpFrame);
 
-//    cv::imshow("heatMap on Frame:", heatMapOnFrame);
+    //    cv::imshow("heatMap on Frame:", heatMapOnFrame);
 
     //    qDebug() << "frame types in heatmap: tmpFrame: " << tmpFrame.type() << ", finImg: " << finImg.type() << ", frame: " << frame.type();
 
@@ -671,7 +682,7 @@ void MainWindow::drawHeatMapOnGUI(Mat &frame)
 
 /**
  * @brief Detects and maps marker positions between camera and arena coordinates.
- * 
+ *
  * Uses bounding rectangles and centers of four detected markers to compute perspective transforms
  * (camera-to-arena and arena-to-camera). Updates the experimental field boundaries accordingly.
  */
@@ -780,7 +791,7 @@ void MainWindow::calibrateKilobot()
 
 /**
  * @brief Slot triggered when 'From Video' radio button is selected.
- * 
+ *
  * Currently only used for toggling UI elements (partially implemented).
  */
 void MainWindow::on_fromVid_rButton_clicked()
@@ -790,7 +801,7 @@ void MainWindow::on_fromVid_rButton_clicked()
 
 /**
  * @brief Slot triggered when 'From Camera' radio button is selected.
- * 
+ *
  * Currently only used for toggling UI elements (partially implemented).
  */
 void MainWindow::on_fromCam_rButton_clicked()
@@ -800,7 +811,7 @@ void MainWindow::on_fromCam_rButton_clicked()
 
 /**
  * @brief Rotates the input image based on the specified flag.
- * 
+ *
  * Flags:
  * 0 = 90° clockwise
  * 1 = 180°
@@ -825,7 +836,7 @@ void MainWindow::rot90(cv::Mat &matImage, int rotflag)
 
 /**
  * @brief Handles mouse release events used for defining a cropping region.
- * 
+ *
  * If the mouse position is valid, captures the rubber band (selection box) position
  * and updates UI elements and internal cropping rectangle accordingly.
  */
@@ -853,7 +864,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 
 /**
  * @brief Handles mouse press events to start drawing a selection box.
- * 
+ *
  * If the press occurs within a valid area, initializes a rubber band rectangle at the cursor position.
  */
 void MainWindow::mousePressEvent(QMouseEvent *event)
@@ -870,7 +881,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
 /**
  * @brief Handles mouse movement while drawing a selection box.
- * 
+ *
  * Updates the geometry of the rubber band rectangle or hides it if the area is invalid.
  */
 void MainWindow::mouseMoveEvent(QMouseEvent *event)
@@ -890,7 +901,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
 
 /**
  * @brief Checks whether the given (x,y) position is within the allowed area for selection.
- * 
+ *
  * Selection is limited to the region inside the output display label, accounting for mouse bias.
  */
 bool MainWindow::isValidPlaceForSelect(int x, int y)
@@ -903,7 +914,7 @@ bool MainWindow::isValidPlaceForSelect(int x, int y)
 
 /**
  * @brief Opens a file dialog for selecting a settings file.
- * 
+ *
  * The chosen file path is displayed in the user interface for further use.
  */
 void MainWindow::on_open_set_button_clicked()
@@ -915,7 +926,7 @@ void MainWindow::on_open_set_button_clicked()
 
 /**
  * @brief Updates the rotation index based on user selection.
- * 
+ *
  * Also updates a text output label to show the selected index.
  */
 void MainWindow::on_Rotate_ComboBox_activated(const QString &arg1)
@@ -927,13 +938,13 @@ void MainWindow::on_Rotate_ComboBox_activated(const QString &arg1)
 
 /**
  * @brief Starts or stops saving of raw and processed video streams.
- * 
+ *
  * If the button is checked, initializes video writers and starts saving based on the current settings.
  * Otherwise, stops and releases video writer threads and related connections.
  */
 void MainWindow::on_saveVid_button_clicked()
 {
-    bool saveProcVidBool = true;
+    bool saveProcVidBool = false; // true;
 
     if(ui->saveVid_button->isChecked())
     {
@@ -995,7 +1006,7 @@ void MainWindow::on_saveVid_button_clicked()
 
 /**
  * @brief Initialize UI elements and connect signals and slots.
- * 
+ *
  * Sets initial UI states, configures sliders and buttons, connects UI elements to their
  * respective handlers using Qt's signal/slot mechanism. Also initializes logging paths
  * and camera source selection.
@@ -1175,15 +1186,19 @@ void MainWindow::uiInitialization()
     // === WORLD MODEL INITIALIZATION ===
     // Load default arena image and apply initial render settings.
     // setting initial values of some parameters in the WM
-//    wm.arenaImg = QPixmap(":/Files/arena_01.png");
+    //    wm.arenaImg = QPixmap(":/Files/arena_01.png");
     wm.arenaImg = QPixmap(":/Files/empty_image.png");
 
     wm.drawNetwork = ui->draw_network->isChecked();
+    wm.spatialNetwork = ui->draw_spatial_netw->isChecked();
+    wm.dummy_var = ui->sliderRandom0->value();
 
     procQSize = ui->outputLabel->size(); // for saving the processed video, this would
     procSize = cv::Size(procQSize.width(), procQSize.height());
 
-    // Start main timer for tracking experiment runtime.
+    ui->filePath_user->setText("/home/p27/LARS/LARS/etc/validation/media/eval_test_latency_LARS_LOG_");
+
+    // Start main timer for tracking experiment runtime.s
     elapsedTimer.start();
 }
 
@@ -1526,7 +1541,7 @@ void MainWindow::SendKeyBoardData(int key)
 
 /**
  * @brief Override Qt key press handler.
- * 
+ *
  * Handles application-level keyboard shortcuts such as quitting the app with 'Esc'.
  */
 void MainWindow::keyPressEvent(QKeyEvent *key)
@@ -1765,6 +1780,7 @@ void MainWindow::update_startTracking_pushBotton()
  */
 void MainWindow::on_detectKilobots_pushButton_clicked()
 {
+    dummy_detection_ready = false;
     this->kbtracker.SETUPfindKilobots();
 
     qDebug() << "#" << kiloVector.size() << " Kilobots are detected!!";
@@ -1781,8 +1797,8 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
         {
             ui->TrigID_comboBox->addItem(QString::number(i));
         }
-//        ui->TrigID_comboBox->setCurrentIndex(0); // set the triger ID to None if not needed: comment this out
-        ui->TrigID_comboBox->setCurrentIndex(1); // set the triger ID to ALL to see if you detected all the robots
+                ui->TrigID_comboBox->setCurrentIndex(0); // set the triger ID to None if not needed: comment this out
+//        ui->TrigID_comboBox->setCurrentIndex(1); // set the triger ID to ALL to see if you detected all the robots
 
     }
 
@@ -1795,6 +1811,8 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
         ui->startTracking_pushButton->setCheckable(true);
 
     qDebug() << "detection done!";
+
+    dummy_detection_ready = true;
 
     //    detectedCircles = this->kbtracker.detectedCircles;
 
@@ -1813,9 +1831,9 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
 
 /**
  * @brief Handles the crop button click event to define or clear the cropping rectangle.
- * 
- * When enabled, calculates crop rectangle coordinates based on UI fields or detected markers, 
- * maps cropping region between GUI, fit, and capture coordinates, and updates internal state. 
+ *
+ * When enabled, calculates crop rectangle coordinates based on UI fields or detected markers,
+ * maps cropping region between GUI, fit, and capture coordinates, and updates internal state.
  * When disabled, resets cropping to the full capture region. Always triggers an update in the tracker and resets the heatmap.
  */
 void MainWindow::on_crop_pushButton_clicked()
@@ -1894,7 +1912,7 @@ void MainWindow::on_crop_pushButton_clicked()
 
 /**
  * @brief Handles the 'Detect Marker' button click event to find ArUco markers in the current video frame.
- * 
+ *
  * Processes the current frame using OpenCV's ArUco detection tools. If markers are found, their positions and bounding rectangles are extracted and
  * stored in internal lists, and details are printed for debugging. Calls findMarkerRect() to update arena mapping based on detected marker locations.
  */
@@ -1911,8 +1929,8 @@ void MainWindow::on_detectMarker_pushButton_clicked()
         cv::aruco::detectMarkers(inputImage, dictionary, corners, ids);
 
         cv::aruco::drawDetectedMarkers(inputImage, corners, ids);
-//        cv::imshow("Markers",inputImage);
-//        cv::imwrite("detected_markers.png", inputImage);
+        //        cv::imshow("Markers",inputImage);
+        //        cv::imwrite("detected_markers.png", inputImage);
 
         // if at least one marker detected
         qDebug() << "Aruco Markers found!: " << ids.size();
@@ -2051,11 +2069,11 @@ void MainWindow::on_debug_tracker_stateChanged(int arg1)
  */
 void MainWindow::on_maxDispl_slider_sliderMoved(int position)
 {
-//#ifdef FOR_KILOBOT
-//    this->kbtracker.morfiTrack_maxDisplacement = (float) position/10.0;
-//#else
+    //#ifdef FOR_KILOBOT
+    //    this->kbtracker.morfiTrack_maxDisplacement = (float) position/10.0;
+    //#else
     this->kbtracker.morfiTrack_maxDisplacement = (float) position/2.0;
-//#endif
+    //#endif
 }
 
 /**
@@ -2111,15 +2129,15 @@ void MainWindow::on_imageExpField_pushButton_clicked(bool checked)
 {
     wm.loadImgBackground = checked;
     ////
-//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text(); // uncomment for normal behavior
-//     qDebug() << "Image loaded from: " << address;
-//     wm.arenaImg = QPixmap(address);
+    //    QString address = ":/Files/" + ui->arenaImage_TextEdit->text(); // uncomment for normal behavior
+    //     qDebug() << "Image loaded from: " << address;
+    //     wm.arenaImg = QPixmap(address);
 
- //// // FOR MANUAL EVALUATION ONLY
-//    ui->arenaImage_TextEdit->setText("robot_calib_pattern_kilobot.png");
-//    QString address = "/home/p27/LARS/LARS/etc/validation/media/" + ui->arenaImage_TextEdit->text(); // for evaluation
+    //// // FOR MANUAL EVALUATION ONLY
+    //    ui->arenaImage_TextEdit->setText("robot_calib_pattern_kilobot.png");
+    //    QString address = "/home/p27/LARS/LARS/etc/validation/media/" + ui->arenaImage_TextEdit->text(); // for evaluation
 
-     //// // FOR Generating EVALUATION ONLY
+    //// // FOR Generating EVALUATION ONLY
     QString address = ui->arenaImage_TextEdit->text(); // for evaluation
     // load the image from the address using opencv
     cv::Mat img = cv::imread(address.toStdString(), cv::IMREAD_UNCHANGED);
@@ -2132,7 +2150,7 @@ void MainWindow::on_imageExpField_pushButton_clicked(bool checked)
     // convert cv::Mat to QPixmap
     QImage image = QImage((const unsigned char*)img.data, img.cols, img.rows, img.step, QImage::Format_ARGB32);
     wm.arenaImg = QPixmap::fromImage(image);
-    
+
 }
 
 /**
@@ -2334,7 +2352,7 @@ void MainWindow::on_drawHeatMap_CheckBox_clicked()
 
 /**
  * @brief Handles the 'Draw Colored Circles' checkbox click event.
- * 
+ *
  * Updates the drawColCircles flag in the world model.
  * @param checked True if the checkbox is checked.
  */
@@ -2361,7 +2379,7 @@ void MainWindow::on_seaBlue_pushButton_clicked()
 
 /**
  * @brief Handles the 'Draw Robot Circles' checkbox click event.
- * 
+ *
  * Toggles drawing of robot circles in the visualization.
  * @param checked True if the checkbox is checked (enabled).
  */
@@ -2384,7 +2402,7 @@ void MainWindow::on_ohc_set_prog_clicked()
 
 /**
  * @brief Handles the 'Write Log' button click event.
- * 
+ *
  * Starts or stops logging experiment data to a file based on the checked state.
  * Sets up file streams and connects/disconnects relevant signals for different logging modes.
  * @param checked True if logging is enabled.
@@ -2414,9 +2432,19 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
         log_stream << "CapSize:\t"  << capSize.width << "\t" << capSize.height << endl;
         log_stream << "FrameSize:\t"  << capSize.width << "\t" << capSize.height << endl;
 
-        log_stream << "Evaluation from experiment:\t" << ui->arenaImage_TextEdit->text() << endl;
+//        log_stream << "Evaluation from experiment:\t" << ui->arenaImage_TextEdit->text() << endl;
 
-        log_stream << "Here we added the V value (brightness) of the environment at the end of the line" << endl;
+//        log_stream << "Here we added the V value (brightness) of the environment at the end of the line" << endl;
+
+//        log_stream << "Here we added the Number of Noise Tiles at the end of the line" << endl;
+
+//        log_stream << "Here we added the Number of robots generated in the image at the end of the line" << endl;
+
+//        log_stream << "Here we added the speed of robots generated in the animation at the end of the line" << endl;
+
+
+        log_stream << "Evaluation from experiment Latency with QT Ball" << endl;
+        log_stream << "Here we added the position of the ball as well as the speed of it" << endl;
 
         int comboIndex = ui->logType_comboBox->currentIndex();
 
@@ -2555,7 +2583,7 @@ void MainWindow::on_env4_rButton_clicked()
 
 /**
  * @brief Opens a file dialog to select an arena image.
- * 
+ *
  * Loads the selected arena image and updates the corresponding UI field.
  */
 void MainWindow::on_openImageField_pushButton_clicked()
@@ -2634,7 +2662,7 @@ void MainWindow::on_draw_network_stateChanged(int arg1)
 void MainWindow::on_sliderRandom0_valueChanged(int value)
 {
     wm.dummy_var = value;
-//    kbtracker.setKbBigMin(int(value/10));
+    //    kbtracker.setKbBigMin(int(value/10));
     qDebug() << "Dummy Var 0 changed: " << value;
     qDebug() << "Nothing is assigned!!";
 }
@@ -2700,8 +2728,8 @@ void MainWindow::on_sliderRandom1_valueChanged(int value)
 {
     qDebug() << "Dummy Var 1 changed: " << value;
     wm.dummy_var2 = value;
-//    qDebug() << "Nothing is assigned!!";
-//    kbtracker.setKbBigMax(int(value/10));
+    //    qDebug() << "Nothing is assigned!!";
+    //    kbtracker.setKbBigMax(int(value/10));
 }
 
 
@@ -2732,13 +2760,15 @@ void MainWindow::on_drawBall_stateChanged(int arg1)
 void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 {
     if(checked){
-    wm.loadvidBackground = checked;
-//    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
-//    QString address = "/home/p27/LARS/LARS/etc/validation/media/robot_animation_random_robots_kilobot_N_20.mp4";
-    QString address = ui->arenaImage_TextEdit->text();
-    qDebug() << "HEY !! video loaded from: " << address;
-    this->arenaWindow->_renderArea->playVideo(address.toStdString());
-////    this->arenaWindow->_renderArea->
+        wm.loadvidBackground = checked;
+        //    QString address = ":/Files/" + ui->arenaImage_TextEdit->text();
+        //    QString address = "/home/p27/LARS/LARS/etc/validation/media/robot_animation_random_robots_kilobot_N_20.mp4";
+        QString address = ui->arenaImage_TextEdit->text();
+        qDebug() << "HEY !! video loaded from: " << address;
+        this->arenaWindow->_renderArea->playVideo(address.toStdString());
+
+        envBrain->resetHeatMap();
+        ////    this->arenaWindow->_renderArea->
     }
 }
 
@@ -2758,14 +2788,17 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         qDebug() << python_call_process->readAllStandardError();
     });
 
-    int test_num = 0; // 0: GRID Positions -> image  ||  1: Random Positions -> image  || 2: Star movement single robot -> animation || 3 : Random movement N -> animation
+    int test_num = 0;
+    // ////  0: GRID Positions -> image  ||  1: Random Positions -> image  || 2: Star movement single robot -> animation || 3 : Random movement N -> animation
+    // //// 4: random robot (non-grid) -> image
+
     test_num = ui->generate_comboBox->currentIndex();
 
     int dummy_var = ui->genExp_TextEdit->text().toInt();
 
     QStringList arguments;
     QString output_str, output_path;
-    int robot_width = 42;
+    int robot_width = 42/2;
 
     switch (test_num) {
     case 0: // 0: GRID Positions -> image
@@ -2774,7 +2807,7 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString functionName = "robot_grid";
 
         int N = dummy_var;
-//        robot_width = dummy_var;
+        //        robot_width = dummy_var;
         QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
         output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
         output_path = output_str + "_img.png";
@@ -2787,7 +2820,7 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString grid_size = QString("("+QString::number(grid_w)+","+QString::number(grid_h)+")");
         int image_w = 1000;
         QString image_size = QString("("+QString::number(image_w)+","+QString::number(image_w)+")");
-//        QString point_distance = QString("800");
+        //        QString point_distance = QString("800");
         int margin = 100;
         if(grid_w==1)
             grid_w = 2;
@@ -2795,23 +2828,23 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString point_distance = QString::number(point_distance_i);
 
         arguments << pythonScript << functionName
-            << "--args"
-            << QString("robot_image_path=%1").arg(robot_image_path)
-            << QString("robot_width=%1").arg(robot_width)
-            << QString("grid_size=%1").arg(grid_size)
-            << QString("output_path=%1").arg(output_path)
-            << QString("log_output_path=%1").arg(log_output_path)
-            << QString("image_size=%1").arg(image_size)
-            << QString("point_distance=%1").arg(point_distance);
+                  << "--args"
+                  << QString("robot_image_path=%1").arg(robot_image_path)
+                  << QString("robot_width=%1").arg(robot_width)
+                  << QString("grid_size=%1").arg(grid_size)
+                  << QString("output_path=%1").arg(output_path)
+                  << QString("log_output_path=%1").arg(log_output_path)
+                  << QString("image_size=%1").arg(image_size)
+                  << QString("point_distance=%1").arg(point_distance);
 
-//        ui->arenaImage_TextEdit->setText(output_path);
+        //        ui->arenaImage_TextEdit->setText(output_path);
 
         connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                 [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
             qDebug() << "Python process finished with exit code:" << exitCode
                      << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
             python_call_process->deleteLater();  // clean up
-             ui->imageExpField_pushButton->click();
+            ui->imageExpField_pushButton->click();
         });
         break;
     }
@@ -2828,22 +2861,60 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString image_size = QString("(1000,1000)");
 
         arguments << pythonScript << functionName
-            << "--args"
-            << QString("robot_image_path=%1").arg(robot_image_path)
-            << QString("robot_width=%1").arg(robot_width)
-            << QString("num_robots=%1").arg(N)
-            << QString("output_path=%1").arg(output_path)
-            << QString("log_output_path=%1").arg(log_output_path)
-            << QString("image_size=%1").arg(image_size);
+                  << "--args"
+                  << QString("robot_image_path=%1").arg(robot_image_path)
+                  << QString("robot_width=%1").arg(robot_width)
+                  << QString("num_robots=%1").arg(N)
+                  << QString("output_path=%1").arg(output_path)
+                  << QString("log_output_path=%1").arg(log_output_path)
+                  << QString("image_size=%1").arg(image_size);
 
-//        ui->arenaImage_TextEdit->setText(output_path);
+        //        ui->arenaImage_TextEdit->setText(output_path);
 
         connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                 [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
             qDebug() << "Python process finished with exit code:" << exitCode
                      << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
             python_call_process->deleteLater();  // clean up
-             ui->imageExpField_pushButton->click();
+            ui->imageExpField_pushButton->click();
+        });
+        break;
+    }
+    case 2: // 2: Star movement single robot -> animation
+    {
+        //// ANIMATION : STAR MOVEMENT 1 Robot
+        QString functionName = "robot_traj";
+        int robot_speed = dummy_var;
+        //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+        //        QString output_str
+        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
+                + functionName
+                + "_w_" + QString::number(robot_width)
+                + "_sp_" + QString::number(robot_speed);
+        output_path = output_str + "_vid.mp4";
+        QString log_output_path = output_str + "_log.txt";
+        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString image_size = QString("(500,500)");
+
+        arguments << pythonScript << functionName
+                  << "--args"
+                  << QString("robot_image_path=%1").arg(robot_image_path)
+                  << QString("robot_width=%1").arg(robot_width)
+                  << QString("robot_speed=%1").arg(robot_speed)
+                  << QString("output_path=%1").arg(output_path)
+                  << QString("image_size=%1").arg(image_size)
+                  << QString("log_output_path=%1").arg(log_output_path);
+
+
+        connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
+            qDebug() << "Python process finished with exit code:" << exitCode
+                     << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
+            python_call_process->deleteLater();  // clean up
+            ui->videoExpField_pushButton->click();
+            if(!ui->videoExpField_pushButton->isChecked())
+                ui->videoExpField_pushButton->click();
+            this->resetElapsedTimer();
         });
         break;
     }
@@ -2853,27 +2924,27 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString functionName = "robot_anim_random";
         int N = dummy_var;
         int robot_speed = 3;
-    //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-//        QString output_str
+        //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+        //        QString output_str
         output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
-                             + functionName
-                             + "_N_" + QString::number(N)
-                             + "_w_" + QString::number(robot_width)
-                             + "_sp_" + QString::number(robot_speed);
+                + functionName
+                + "_N_" + QString::number(N)
+                + "_w_" + QString::number(robot_width)
+                + "_sp_" + QString::number(robot_speed);
         output_path = output_str + "_vid.mp4";
         QString log_output_path = output_str + "_log.txt";
         QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
         QString image_size = QString("(1000,1000)");
 
         arguments << pythonScript << functionName
-            << "--args"
-            << QString("robot_image_path=%1").arg(robot_image_path)
-            << QString("robot_width=%1").arg(robot_width)
-            << QString("num_robots=%1").arg(N)
-            << QString("robot_speed=%1").arg(robot_speed)
-            << QString("output_path=%1").arg(output_path)
-            << QString("image_size=%1").arg(image_size)
-            << QString("log_output_path=%1").arg(log_output_path);
+                  << "--args"
+                  << QString("robot_image_path=%1").arg(robot_image_path)
+                  << QString("robot_width=%1").arg(robot_width)
+                  << QString("num_robots=%1").arg(N)
+                  << QString("robot_speed=%1").arg(robot_speed)
+                  << QString("output_path=%1").arg(output_path)
+                  << QString("image_size=%1").arg(image_size)
+                  << QString("log_output_path=%1").arg(log_output_path);
 
 
         connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
@@ -2881,8 +2952,43 @@ void MainWindow::on_generateExpField_pushButton_clicked()
             qDebug() << "Python process finished with exit code:" << exitCode
                      << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
             python_call_process->deleteLater();  // clean up
-             ui->videoExpField_pushButton->click();
-             this->resetElapsedTimer();
+            ui->videoExpField_pushButton->click();
+            this->resetElapsedTimer();
+        });
+        break;
+    }
+    case 4: // 4: random robot (grid) -> image
+    {
+        //// IMAGE : RANDOM ROBOTS on GRID
+        QString functionName = "random_robots_grid";
+
+        int N = dummy_var;
+        QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_path = output_str + "_img.png";
+        QString log_output_path = output_str + "_log.txt";
+        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        int image_w = 1000;
+        QString image_size = QString("("+QString::number(image_w)+","+QString::number(image_w)+")");
+
+        arguments << pythonScript << functionName
+                  << "--args"
+                  << QString("robot_image_path=%1").arg(robot_image_path)
+                  << QString("robot_width=%1").arg(robot_width)
+                  << QString("output_path=%1").arg(output_path)
+                  << QString("log_output_path=%1").arg(log_output_path)
+                  << QString("image_size=%1").arg(image_size)
+                  << QString("num_robots=%1").arg(N);
+
+        //        ui->arenaImage_TextEdit->setText(output_path);
+
+        connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
+            qDebug() << "Python process finished with exit code:" << exitCode
+                     << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
+            python_call_process->deleteLater();  // clean up
+            ui->imageExpField_pushButton->click();
+            update_evaluation_test(); // call the test evaluation step
         });
         break;
     }
@@ -2907,5 +3013,148 @@ void MainWindow::on_generateExpField_pushButton_clicked()
 void MainWindow::resetElapsedTimer()
 {
     elapsedTimer.restart();
+}
+
+
+void MainWindow::on_V_slider_sliderReleased()
+{
+
+}
+
+
+//void MainWindow::on_test_eval_pushButton_clicked(bool checked)
+//{
+//    if(checked)
+//    {
+//        if(ui->writeLog_button->isChecked())
+//        {
+            
+//            // reduce v_val at each iteration by 2
+//            // and update the V slider value
+//            for (int v_val = 255; v_val >= 0; v_val -= 10) {
+
+//                qDebug() << "V_VALUES : " << v_val;
+//                ui->V_slider->setValue(v_val);
+
+//                updateSliders();
+//                updateColors();
+
+//                for (int rep = 0; rep < 20; ++rep) {
+//                    this->on_detectKilobots_pushButton_clicked();
+
+//                    // wait as long as the dummy_detection_ready is false
+//                    while(!dummy_detection_ready)
+//                    {
+//                        QCoreApplication::processEvents();
+//                    }
+//                }
+
+
+
+//            }
+
+
+//        }
+//    }
+//}
+
+void MainWindow::update_evaluation_test()
+{
+
+//    int time_0 = elapsedTimer.elapsed();
+
+//    while (elapsedTimer.elapsed()-time_0 < 2000)
+//    {
+//        int dummy = 0;
+////        qDebug() << "ELAPSED TIME: " << elapsedTimer.elapsed()-time_0;
+//    }
+    for (int rep = 0; rep < 20; ++rep) {
+        this->on_detectKilobots_pushButton_clicked();
+
+        dummy_detection_ready = false;
+        // wait as long as the dummy_detection_ready is false
+        while(!dummy_detection_ready)
+        {
+            QCoreApplication::processEvents();
+        }
+    }
+
+//    ui->detectKilobots_pushButton->click();
+
+
+}
+
+
+void MainWindow::on_test_eval_pushButton_clicked()
+{
+
+    //// Test Brightness
+    //// {
+//    int v_val = ui->V_slider->value();
+
+//    if(v_val>80)
+//        ui->V_slider->setValue(v_val-10);
+//    else
+//        ui->V_slider->setValue(v_val-2);
+
+//    updateSliders();
+//    updateColors();
+
+    //// }
+
+
+
+////    // Test Noise Tile Size
+    //// {
+
+
+    // // for detection [for tracking skip this for loop]
+//    int N_reps = 50; // for detection evaluation
+//    for (int rep = 0; rep < N_reps; ++rep) {
+//        this->on_detectKilobots_pushButton_clicked();
+
+//        // wait as long as the dummy_detection_ready is false
+//        while(!dummy_detection_ready)
+//        {
+//            QCoreApplication::processEvents();
+//        }
+//    }
+
+
+//    int N_Tile = ui->noiseTiles_slider->value();
+//    ui->noiseTiles_slider->setValue(N_Tile + 10);
+
+    //// }
+    ///
+
+
+
+//// // Test scalability
+//     int N_robots = ui->genExp_TextEdit->text().toInt();
+//     int next_N = N_robots + 5;
+//     int w, h;
+//     w = int(sqrt(float(next_N)));
+//     h = ceil(float(next_N)/float(w));
+//     next_N = h*w;
+//     ui->genExp_TextEdit->setText(QString::number(next_N));
+
+//     ui->generateExpField_pushButton->click();
+
+
+    ui->sliderRandom1->setValue(ui->sliderRandom1->value()-5);
+
+
+}
+
+
+void MainWindow::on_genExp_TextEdit_editingFinished()
+{
+    QString path = "/home/p27/LARS/LARS/etc/validation/media/";
+    QString tmp = path + "eval_test_robot_traj_w_42_sp_" + QString::number(ui->genExp_TextEdit->text().toInt());
+//    eval_test_robot_traj_w_42_sp_26_vid
+    ui->arenaImage_TextEdit->setText(tmp + "_vid.mp4");
+
+    QString tmp_log_path = tmp +  "_LARS_LOG_";
+    ui->filePath_user->setText(tmp_log_path);
 }
 

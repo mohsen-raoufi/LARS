@@ -1421,6 +1421,38 @@ color: rgb(0, 0, 0);
         </attribute>
        </widget>
       </widget>
+      <widget class="QPushButton" name="test_eval_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>388</y>
+         <width>181</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <bold>true</bold>
+         <strikeout>false</strikeout>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string extracomment="Click this to detect the Fiducial Markers on the white board, to calculate the mapping between the table to the caputed frame"/>
+       </property>
+       <property name="text">
+        <string>test evalution</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/refresh.png</normalon>
+        </iconset>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="Camera_tab">
       <attribute name="title">
@@ -1884,7 +1916,7 @@ color: rgb(0, 0, 0);
                <item>
                 <widget class="QComboBox" name="generate_comboBox">
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>2</number>
                  </property>
                  <item>
                   <property name="text">
@@ -1904,6 +1936,11 @@ color: rgb(0, 0, 0);
                  <item>
                   <property name="text">
                    <string>rnd ani</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>rnd img NG</string>
                   </property>
                  </item>
                 </widget>
@@ -2255,7 +2292,7 @@ color: rgb(0, 0, 0);
                 <number>0</number>
                </property>
                <property name="maximum">
-                <number>200</number>
+                <number>300</number>
                </property>
                <property name="value">
                 <number>120</number>
@@ -3090,7 +3127,7 @@ color: rgb(0, 0, 0);
             <string>Network</string>
            </property>
            <property name="checked">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -3129,7 +3166,7 @@ color: rgb(0, 0, 0);
             <string>Spatial Network</string>
            </property>
            <property name="checked">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -3715,7 +3752,7 @@ color: rgb(255, 255, 255);</string>
              <number>1000</number>
             </property>
             <property name="value">
-             <number>200</number>
+             <number>380</number>
             </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -3725,7 +3762,7 @@ color: rgb(255, 255, 255);</string>
           <item>
            <widget class="QLabel" name="sliderRand0_label">
             <property name="text">
-             <string>200</string>
+             <string>380</string>
             </property>
            </widget>
           </item>

@@ -67,7 +67,7 @@ RenderArea::RenderArea(WorldModel *wm) :
 
     // Video playback support
     videoTimer = new QTimer(this);
-    connect(videoTimer, &QTimer::timeout, this, &RenderArea::grabVideoFrame);
+    //    connect(videoTimer, &QTimer::timeout, this, &RenderArea::grabVideoFrame);
     videoPlaying = false;
 
     marker0 = QPixmap(":/Files/marker0.png");
@@ -146,8 +146,9 @@ RenderArea::RenderArea(WorldModel *wm) :
     updatePainters();
 
 
-    _timer.start(15);
-    //    _timer.start(30);
+//    _timer.start(15);
+//    _timer.start(30);
+    _timer.start(60);
     connect(&_timer,SIGNAL(timeout()), this, SLOT(refresh()));
 
 
@@ -172,7 +173,7 @@ void RenderArea::playVideo(const std::string& filename)
     videoCapture.open(filename);
     if (videoCapture.isOpened()) {
         videoPlaying = true;
-        videoTimer->start(33); // ~30 FPS
+        videoTimer->start(15); // ~30 FPS
     }
 
 }
@@ -198,17 +199,17 @@ void RenderArea::grabVideoFrame()
     if (videoCapture.read(frame)) {
         cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
         videoFrame = QImage((const uchar*)frame.data, frame.cols, frame.rows, frame.step, QImage::Format_RGB888).copy();
-        update();
+        //        update();
     } else {
         if (frame.empty()) { // loop the video
             // end of the video: reset to beginning
             videoCapture.set(cv::CAP_PROP_POS_FRAMES, 0);
-//            continue;
+            //            continue;
         }
         else{
-        videoCapture.release();
-        videoTimer->stop();
-        videoPlaying = false;
+            videoCapture.release();
+            videoTimer->stop();
+            videoPlaying = false;
         }
     }
 }
@@ -221,6 +222,28 @@ void RenderArea::grabVideoFrame()
 void RenderArea::refresh()
 {
     //    qDebug() << "updating ..";
+
+    if(videoCapture.isOpened())
+    {
+        if (videoCapture.read(frameFrame_CV)) {
+            cv::cvtColor(frameFrame_CV, frameFrame_CV, cv::COLOR_BGR2RGB);
+
+            videoFrame = QImage((const uchar*)frameFrame_CV.data, frameFrame_CV.cols, frameFrame_CV.rows, frameFrame_CV.step, QImage::Format_RGB888).copy();
+            //        update();
+        } else {
+            if (frameFrame_CV.empty()) { // loop the video
+                // end of the video: reset to beginning
+                videoCapture.set(cv::CAP_PROP_POS_FRAMES, 0);
+                //            continue;
+            }
+            else{
+                videoCapture.release();
+                videoTimer->stop();
+                videoPlaying = false;
+            }
+        }
+    }
+
     updatePainters(); // Remove this later, and update Painters whenever needed!
     update();
 }
@@ -515,6 +538,9 @@ void RenderArea::paintEvent(QPaintEvent *)
                 break;
             case SOLID:
                 painter.drawEllipse(pnt, _wm->robRad, _wm->robRad);
+
+                // draw a rectangle
+                // painter.drawRect(QRect(pnt - QPoint(_wm->robRad, _wm->robRad), QSize(2*_wm->robRad, 2*_wm->robRad)));
                 break;
             case NULL_BRUSH:
                 painter.drawEllipse(pnt, _wm->robRad, _wm->robRad);

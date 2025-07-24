@@ -43,7 +43,7 @@ EnvBrain::EnvBrain(WorldModel *wm)
 
 
 #ifdef FOR_KILOBOT
-    _timer.start(50);
+    _timer.start(30);
 #else
     _timer.start(50);
 #endif
@@ -169,7 +169,7 @@ void EnvBrain::update_objects_to_draw()
     QPointF movement = _wm->ballSpeed * _wm->ballVel;
     //    qDebug() << "ballvel: " << _wm->ballVel.x() << ", " << _wm->ballVel.y();
     QPoint ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
-//    qDebug() << "ballPos: " << ballPosTmp.x() << ", " << ballPosTmp.y();
+    //    qDebug() << "ballPos: " << ballPosTmp.x() << ", " << ballPosTmp.y();
 
     // Check for collisions with arena bounds
     if (ballPosTmp.x() < _wm->insideRect.left() || ballPosTmp.x() > _wm->insideRect.right()) {
@@ -183,28 +183,31 @@ void EnvBrain::update_objects_to_draw()
 
 
     // Check for collisions with circles
-    for (const QPoint& circleCenter : _wm->rob_Type0_pos) {
-//        qDebug() << "Circle to collide center: " << circleCenter.x() << ", " << circleCenter.y();
+    if (false)
+    {
+        for (const QPoint& circleCenter : _wm->rob_Type0_pos) {
+            //        qDebug() << "Circle to collide center: " << circleCenter.x() << ", " << circleCenter.y();
 
-        // Calculate distance between ball center and circle center
-        int dx = circleCenter.x() + _wm->marker0_BR.x() - ballPosTmp.x();
-        int dy = circleCenter.y() + _wm->marker0_BR.y() - ballPosTmp.y();
-        int distance = std::sqrt(dx * dx + dy * dy);
+            // Calculate distance between ball center and circle center
+            int dx = circleCenter.x() + _wm->marker0_BR.x() - ballPosTmp.x();
+            int dy = circleCenter.y() + _wm->marker0_BR.y() - ballPosTmp.y();
+            int distance = std::sqrt(dx * dx + dy * dy);
 
-        // If the distance is less than the sum of the radii, collision occurs
-        if (distance < (_wm->ballRad + _wm->robRad)) {
-            // Calculate reflection angle
-            double angle = std::atan2(dy, dx);
-            double reflectionAngle = 2 * angle - std::atan2(_wm->ballVel.y(), _wm->ballVel.x());
+            // If the distance is less than the sum of the radii, collision occurs
+            if (distance < (_wm->ballRad + _wm->robRad)) {
+                // Calculate reflection angle
+                double angle = std::atan2(dy, dx);
+                double reflectionAngle = 2 * angle - std::atan2(_wm->ballVel.y(), _wm->ballVel.x());
 
-            // Update velocity based on reflection angle
-            _wm->ballVel.setX(std::cos(reflectionAngle));
-            _wm->ballVel.setY(std::sin(reflectionAngle));
+                // Update velocity based on reflection angle
+                _wm->ballVel.setX(std::cos(reflectionAngle));
+                _wm->ballVel.setY(std::sin(reflectionAngle));
 
-            // Move the ball to avoid sticking in the circle
-            movement = _wm->ballSpeed * _wm->ballVel;
-            ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
-//            ballPosTmp += ballSpeed * ballVel;
+                // Move the ball to avoid sticking in the circle
+                movement = _wm->ballSpeed * _wm->ballVel;
+                ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
+                //            ballPosTmp += ballSpeed * ballVel;
+            }
         }
     }
 
@@ -372,9 +375,9 @@ void EnvBrain::addNoise()
 {
 
     // if _wm->expFieldType is NULL_BRUSH then make an empty arenaImage that is fully transparent as arenaImage
-//    if (_wm->expFieldType == NULL_BRUSH)
-//        arenaImage = QImage(_wm->expFieldRect.width(), _wm->expFieldRect.height(), QImage::Format_RGB16);
-//    else
+    //    if (_wm->expFieldType == NULL_BRUSH)
+    //        arenaImage = QImage(_wm->expFieldRect.width(), _wm->expFieldRect.height(), QImage::Format_RGB16);
+    //    else
     arenaImage = _wm->arenaImg.toImage();
 
     int nTilesNoise = _wm->noiseTileNo;
