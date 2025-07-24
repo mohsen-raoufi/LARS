@@ -156,8 +156,11 @@ public:
 //    int cannyThresh = 119;//90;//112; //40;
 
     // Kilobots
-    int kbMinSize = 12;
-    int kbMaxSize = 17;
+//    int kbMinSize = 12;
+//    int kbMaxSize = 17;
+
+    int kbMinSize = 13;
+    int kbMaxSize = 18;
 //    int kbBigMinSize = 25;
 //    int kbBigMaxSize = 40;
     int houghAcc = 12;//13;//12; // 27;

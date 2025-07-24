@@ -370,6 +370,11 @@ void EnvBrain::refresh()
  */
 void EnvBrain::addNoise()
 {
+
+    // if _wm->expFieldType is NULL_BRUSH then make an empty arenaImage that is fully transparent as arenaImage
+//    if (_wm->expFieldType == NULL_BRUSH)
+//        arenaImage = QImage(_wm->expFieldRect.width(), _wm->expFieldRect.height(), QImage::Format_RGB16);
+//    else
     arenaImage = _wm->arenaImg.toImage();
 
     int nTilesNoise = _wm->noiseTileNo;

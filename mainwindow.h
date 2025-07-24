@@ -139,6 +139,7 @@ private slots:
     void logToFile(QVector<Kilobot *> kiloVec);
     void logToFile(QVector<QPoint> posVec);
     void logToFile_PosLED(QVector<Kilobot *> kiloVec);
+    void logToFile_FPS(QVector<QPoint> posVec);
 
     void on_capturing_button_clicked();
 
@@ -348,6 +349,8 @@ private slots:
 
 
     void on_generateExpField_pushButton_clicked();
+
+    void resetElapsedTimer();
 
 private:
     Ui::MainWindow *ui;

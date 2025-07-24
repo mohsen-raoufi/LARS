@@ -23,5 +23,7 @@
         <file>Files/psioi.png</file>
         <file>Files/ball.png</file>
         <file>Files/LARS_Logo.png</file>
+        <file>Files/arena_image.png</file>
+        <file>Files/empty_image.png</file>
     </qresource>
 </RCC>

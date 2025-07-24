@@ -781,7 +781,7 @@ p, li { white-space: pre-wrap; }
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>3</number>
        </property>
        <item>
         <property name="text">
@@ -796,6 +796,11 @@ p, li { white-space: pre-wrap; }
        <item>
         <property name="text">
          <string>Pos, LED</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pos, FPS</string>
         </property>
        </item>
       </widget>
@@ -1218,7 +1223,7 @@ color: rgb(0, 0, 0);
            <string>show IDs</string>
           </property>
           <property name="checked">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -1257,7 +1262,7 @@ color: rgb(0, 0, 0);
         <string>with colors</string>
        </property>
        <property name="checked">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QTabWidget" name="tabWidget_2">
@@ -1715,9 +1720,9 @@ color: rgb(0, 0, 0);
       <widget class="QGroupBox" name="groupBox_3">
        <property name="geometry">
         <rect>
-         <x>7</x>
+         <x>11</x>
          <y>0</y>
-         <width>323</width>
+         <width>291</width>
          <height>233</height>
         </rect>
        </property>
@@ -1727,9 +1732,9 @@ color: rgb(0, 0, 0);
        <widget class="QWidget" name="verticalLayoutWidget_3">
         <property name="geometry">
          <rect>
-          <x>2</x>
-          <y>20</y>
-          <width>293</width>
+          <x>4</x>
+          <y>18</y>
+          <width>285</width>
           <height>211</height>
          </rect>
         </property>
@@ -1812,7 +1817,7 @@ color: rgb(0, 0, 0);
              </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>40</width>
+               <width>20</width>
                <height>20</height>
               </size>
              </property>
@@ -1877,17 +1882,31 @@ color: rgb(0, 0, 0);
                 </spacer>
                </item>
                <item>
-                <spacer name="verticalSpacer_6">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
+                <widget class="QComboBox" name="generate_comboBox">
+                 <property name="currentIndex">
+                  <number>1</number>
                  </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
+                 <item>
+                  <property name="text">
+                   <string>grid</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>rnd img</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>star ani</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>rnd ani</string>
+                  </property>
+                 </item>
+                </widget>
                </item>
               </layout>
              </item>
@@ -1951,17 +1970,43 @@ color: rgb(0, 0, 0);
                 </spacer>
                </item>
                <item>
-                <spacer name="verticalSpacer_9">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
+                <widget class="QLineEdit" name="genExp_TextEdit">
+                 <property name="enabled">
+                  <bool>true</bool>
                  </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
                  </property>
-                </spacer>
+                 <property name="focusPolicy">
+                  <enum>Qt::StrongFocus</enum>
+                 </property>
+                 <property name="acceptDrops">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255); 
+color: rgb(0, 0, 0);
+</string>
+                 </property>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -2281,7 +2326,7 @@ color: rgb(0, 0, 0);
                 <number>100</number>
                </property>
                <property name="value">
-                <number>50</number>
+                <number>70</number>
                </property>
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>

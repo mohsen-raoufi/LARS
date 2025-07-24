@@ -130,6 +130,25 @@ void MainWindow::logToFile_PosLED(QVector<Kilobot *> kiloVec)
     log_stream << endl;
 }
 
+void MainWindow::logToFile_FPS(QVector<QPoint> posVec)
+{
+    // remove the "FPS = " from the text and convert it to int
+    int FPS_extracted = ui->error_label->text().remove("FPS = ").toInt();
+    log_stream << FPS_extracted << "\t" << elapsedTimer.elapsed();
+    
+    for (int i = 0; i < posVec.size(); ++i){
+        log_stream << "\t" << i << "\t" << posVec[i].x() << "\t" << posVec[i].y() ;
+    }
+
+    // add the noise strength at the end of the line
+//    log_stream << "\t" << ui->noiseStrenght_label->text().toInt();
+
+    // add the brightness of the enviornment at the end of the line
+    log_stream << "\t" << ui->V_label->text().toInt();
+
+    log_stream << endl;
+}
+
 /**
  * @brief Logs Kilobot (or other robots) positions, LED colors, and velocities to the log file.
  * 
@@ -545,7 +564,7 @@ void MainWindow::drawKilobots(Mat &frame)
             wm.kiloColor.append(rgbColor);
 
             if(ui->draw_bots->isChecked())
-                cv::circle(frame,Point(kiloVector[i]->getPosition().x(),kiloVector[i]->getPosition().y()),kbtracker.kbMinSize,rgbColor,2);
+                cv::circle(frame,Point(kiloVector[i]->getPosition().x(),kiloVector[i]->getPosition().y()),kbtracker.kbMinSize + 3,rgbColor,2);
 
             // TO DO: add some transparency to the circles, something like a weighted add, so that the circles are transparent!
 
@@ -1156,7 +1175,8 @@ void MainWindow::uiInitialization()
     // === WORLD MODEL INITIALIZATION ===
     // Load default arena image and apply initial render settings.
     // setting initial values of some parameters in the WM
-    wm.arenaImg = QPixmap(":/Files/arena_01.png");
+//    wm.arenaImg = QPixmap(":/Files/arena_01.png");
+    wm.arenaImg = QPixmap(":/Files/empty_image.png");
 
     wm.drawNetwork = ui->draw_network->isChecked();
 
@@ -2394,23 +2414,39 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
         log_stream << "CapSize:\t"  << capSize.width << "\t" << capSize.height << endl;
         log_stream << "FrameSize:\t"  << capSize.width << "\t" << capSize.height << endl;
 
-        if(ui->logType_comboBox->currentIndex()==0)
-        {
+        log_stream << "Evaluation from experiment:\t" << ui->arenaImage_TextEdit->text() << endl;
+
+        log_stream << "Here we added the V value (brightness) of the environment at the end of the line" << endl;
+
+        int comboIndex = ui->logType_comboBox->currentIndex();
+
+        switch (comboIndex) {
+        case 0:{
             connect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile(QVector<Kilobot*>))); // version 1: pos, vel, LED
             qDebug() << "Writing Pos, Vel, LED into the log file, in captured coordination system.";
             log_stream << "**** Writing Pos, Vel, LED ****" << endl;
+            break;
         }
-        else if(ui->logType_comboBox->currentIndex()==1)
-        {
+        case 1:{
             connect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile(QVector<QPoint>))); // version 2: pos
             qDebug() << "Writing Pos into the log file, in (mapped to) Arena coordination system.";
             log_stream << "**** Writing just the Pos in (mapped to) Arena coordination system ****" << endl;
+            break;
         }
-        else if(ui->logType_comboBox->currentIndex()==2)
-        {
+        case 2:{
             connect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile_PosLED(QVector<Kilobot*>))); // version 3: pos + LED
             qDebug() << "Writing Pos + LED into the log file, in captured coordination system.";
             log_stream << "**** Writing Pos + LED in captured coordination system ****" << endl;
+            break;
+        }
+        case 3:{
+            connect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile_FPS(QVector<QPoint>))); // version 2: pos
+            qDebug() << "Writing Pos into the log file, in (mapped to) Arena coordination system.";
+            log_stream << "**** Writing just FPS and the Pos in (mapped to) Arena coordination system ****" << endl;
+            break;
+        }
+        default:
+            break;
         }
 
     }
@@ -2419,6 +2455,7 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
         disconnect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile(QVector<Kilobot*>))); // version 1: pos, vel, LED
         disconnect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile(QVector<QPoint>))); // version 2: pos
         disconnect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile_PosLED(QVector<Kilobot*>))); // version 3: pos + LED
+        disconnect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile_FPS(QVector<QPoint>))); // version 2: pos
 
         if (log_file.isOpen()){
             qDebug() << "Closing file" << log_file.fileName();
@@ -2721,34 +2758,53 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         qDebug() << python_call_process->readAllStandardError();
     });
 
-    int test_num = 0; // 0: GRID Positions -> image  ||  1: Random Positions -> image  || 2: Start movement single robot -> animation || 3 : Random movement N -> animation
+    int test_num = 0; // 0: GRID Positions -> image  ||  1: Random Positions -> image  || 2: Star movement single robot -> animation || 3 : Random movement N -> animation
+    test_num = ui->generate_comboBox->currentIndex();
+
+    int dummy_var = ui->genExp_TextEdit->text().toInt();
 
     QStringList arguments;
+    QString output_str, output_path;
+    int robot_width = 42;
 
     switch (test_num) {
     case 0: // 0: GRID Positions -> image
     {
         //// IMAGE : GRID POSITIONS
         QString functionName = "robot_grid";
-        int robot_width = 56*2;
-        int N = 4;
+
+        int N = dummy_var;
+//        robot_width = dummy_var;
         QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-        QString output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
-        QString output_path = output_str + "_img.png";
+        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_path = output_str + "_img.png";
         QString log_output_path = output_str + "_log.txt";
         QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
-        QString grid_size = QString("(2,2)");
+        int grid_h, grid_w;
+        grid_w = int(sqrt(N));
+        grid_h = int(N/grid_w);
+        N = grid_h*grid_w;
+        QString grid_size = QString("("+QString::number(grid_w)+","+QString::number(grid_h)+")");
+        int image_w = 1000;
+        QString image_size = QString("("+QString::number(image_w)+","+QString::number(image_w)+")");
+//        QString point_distance = QString("800");
+        int margin = 100;
+        if(grid_w==1)
+            grid_w = 2;
+        int point_distance_i = int((image_w - margin)/(grid_w-1));
+        QString point_distance = QString::number(point_distance_i);
 
         arguments << pythonScript << functionName
             << "--args"
             << QString("robot_image_path=%1").arg(robot_image_path)
             << QString("robot_width=%1").arg(robot_width)
             << QString("grid_size=%1").arg(grid_size)
-            << QString("point_distance=%1").arg("1000")
             << QString("output_path=%1").arg(output_path)
-            << QString("log_output_path=%1").arg(log_output_path);
+            << QString("log_output_path=%1").arg(log_output_path)
+            << QString("image_size=%1").arg(image_size)
+            << QString("point_distance=%1").arg(point_distance);
 
-        ui->arenaImage_TextEdit->setText(output_path);
+//        ui->arenaImage_TextEdit->setText(output_path);
 
         connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                 [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
@@ -2762,42 +2818,52 @@ void MainWindow::on_generateExpField_pushButton_clicked()
     case 1: // 1: Random Positions -> image
     {
         //// IMAGE : RANDOM POSITIONS
-    //    QString functionName = "robot_anim_random";
-    //    int robot_width = 56;
-    //    int N = 25;
-    //    int robot_speed = 3;
-    //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-    //    QString output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + N + "_w_" + robot_width + "_sp_" + robot_speed;
-    //    QString output_path = output_str + "_vid.mp4";
-    //    QString log_output_path = output_str + "_log.txt";
-    //    QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString functionName = "random_robots";
+        int N = dummy_var;
+        QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
+        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_path = output_str + "_img.png";
+        QString log_output_path = output_str + "_log.txt";
+        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString image_size = QString("(1000,1000)");
 
-    //    arguments << pythonScript << functionName
-    //        << "--args"
-    //        << QString("robot_image_path=%1").arg(robot_image_path)
-    //        << QString("robot_width=%1").arg(robot_width)
-    //        << QString("num_robots=%1").arg(N)
-    //        << QString("robot_speed=%1").arg(robot_speed)
-    //        << QString("output_path=%1").arg(output_path)
-    //        << QString("log_output_path=%1").arg(log_output_path);
+        arguments << pythonScript << functionName
+            << "--args"
+            << QString("robot_image_path=%1").arg(robot_image_path)
+            << QString("robot_width=%1").arg(robot_width)
+            << QString("num_robots=%1").arg(N)
+            << QString("output_path=%1").arg(output_path)
+            << QString("log_output_path=%1").arg(log_output_path)
+            << QString("image_size=%1").arg(image_size);
+
+//        ui->arenaImage_TextEdit->setText(output_path);
+
+        connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
+            qDebug() << "Python process finished with exit code:" << exitCode
+                     << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
+            python_call_process->deleteLater();  // clean up
+             ui->imageExpField_pushButton->click();
+        });
         break;
     }
     case 3: // 3 : Random movement N -> animation
     {
         //// ANIMATION : RANDOM MOVEMENT
         QString functionName = "robot_anim_random";
-        int robot_width = 2*56;
-        int N = 25;
+        int N = dummy_var;
         int robot_speed = 3;
     //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-        QString output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
+//        QString output_str
+        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
                              + functionName
                              + "_N_" + QString::number(N)
                              + "_w_" + QString::number(robot_width)
                              + "_sp_" + QString::number(robot_speed);
-        QString output_path = output_str + "_vid.mp4";
+        output_path = output_str + "_vid.mp4";
         QString log_output_path = output_str + "_log.txt";
         QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString image_size = QString("(1000,1000)");
 
         arguments << pythonScript << functionName
             << "--args"
@@ -2806,9 +2872,9 @@ void MainWindow::on_generateExpField_pushButton_clicked()
             << QString("num_robots=%1").arg(N)
             << QString("robot_speed=%1").arg(robot_speed)
             << QString("output_path=%1").arg(output_path)
+            << QString("image_size=%1").arg(image_size)
             << QString("log_output_path=%1").arg(log_output_path);
 
-        ui->arenaImage_TextEdit->setText(output_path);
 
         connect(python_call_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                 [this, python_call_process](int exitCode, QProcess::ExitStatus exitStatus) {
@@ -2816,6 +2882,7 @@ void MainWindow::on_generateExpField_pushButton_clicked()
                      << "and exit status:" << (exitStatus == QProcess::NormalExit ? "NormalExit" : "CrashExit");
             python_call_process->deleteLater();  // clean up
              ui->videoExpField_pushButton->click();
+             this->resetElapsedTimer();
         });
         break;
     }
@@ -2826,17 +2893,19 @@ void MainWindow::on_generateExpField_pushButton_clicked()
     }
     }
 
-
-
-
-
-
-
     qDebug() << "Calling the python code ... ";
+
+    ui->arenaImage_TextEdit->setText(output_path);
+
+    QString LARS_log_file_path = output_str + "_LARS_LOG_";
+    ui->filePath_user->setText(LARS_log_file_path);
 
     python_call_process->start("python", arguments);
     qDebug() << "Started Python process to generate robot animation with arguments.";
+}
 
-
+void MainWindow::resetElapsedTimer()
+{
+    elapsedTimer.restart();
 }
 

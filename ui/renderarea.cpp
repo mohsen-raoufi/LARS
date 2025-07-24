@@ -174,6 +174,7 @@ void RenderArea::playVideo(const std::string& filename)
         videoPlaying = true;
         videoTimer->start(33); // ~30 FPS
     }
+
 }
 
 void RenderArea::stopVideo()
@@ -297,7 +298,6 @@ void RenderArea::paintEvent(QPaintEvent *)
     painter.drawPixmap(QRect(_wm->marker3_pos,QSize(_wm->marker_length,_wm->marker_length)), marker3);
 
     // Fill marker arenas
-
     switch (_wm->expFieldType) {
     case GRADIENT:
         painter.fillRect(*expArena, *radGradient);
@@ -312,6 +312,12 @@ void RenderArea::paintEvent(QPaintEvent *)
         if (videoPlaying && !videoFrame.isNull()) {
             painter.drawImage(*expArena, videoFrame.scaled(expArena->size()));
         }
+        break;
+    case NULL_BRUSH:
+        if(_wm->noiseTimeIntv==-1)
+            qDebug() << "Check the NULL BRUSH for environment!!";
+        else
+            painter.drawPixmap(*expArena, _wm->arenaProcessedImg);
         break;
     default:
         break;
