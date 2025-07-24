@@ -171,6 +171,101 @@ def generate_robot_grid_image(robot_image_path, grid_size=(3, 3), robot_width=50
     plt.savefig(output_path, bbox_inches=None, pad_inches=0)
     plt.close(fig)
 
+
+def generate_robot_grid_from_number(robot_image_path, num_robots=4, robot_width=50, image_size=(2000, 2000), output_path="robot_grid_image.png", log_output_path=None):
+    """
+    Generates a grid of robot images based on the total number of robots.
+
+    Args:
+        robot_image_path (str): Path to the robot image file.
+        number_of_robots (int): The total number of robots to display.
+        robot_width (int): Desired width for each robot image in pixels.
+        image_size (tuple): Size of the output image.
+        output_path (str): Path to save the output image.
+        log_output_path (str): Path to save the log file.
+    """
+
+    if not os.path.exists(robot_image_path):
+        raise FileNotFoundError(f"Robot image file not found: {robot_image_path}")
+    else:
+        robot_image = plt.imread(robot_image_path)
+
+    # resize the robot image 
+    if robot_image.shape[0] > robot_width or robot_image.shape[1] > robot_width:
+        scale_factor = robot_width / max(robot_image.shape[:2])
+        robot_image = cv2.resize(robot_image, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_AREA)
+
+    dpi = 100
+    fig, ax = plt.subplots(figsize=(image_size[0]/dpi, image_size[1]/dpi), dpi=dpi)
+    fig.patch.set_facecolor(bg_color)
+    ax.set_xlim(0, image_size[0])
+    ax.set_ylim(0, image_size[1])
+    ax.set_aspect('equal')
+
+
+    print("image_size:", image_size, "robot_width:", robot_width)
+
+
+    # Determine grid dimensions
+    grid_width = int(np.ceil(np.sqrt(num_robots)))
+    grid_height = int(np.ceil(num_robots / grid_width))
+    num_robots = int(grid_width * grid_height)  # Ensure we have exactly num_robots in the grid
+
+    print(f"Grid dimensions: {grid_width} x {grid_height} for {num_robots} robots.")
+    grid_size = (grid_width, grid_height)
+
+    # calculate the x_distance and y_distance between the robots
+    point_distance_x = int((image_size[0] - grid_width*robot_width)/grid_width)
+    point_distance_y = int((image_size[1] - grid_height*robot_width)/grid_height)
+
+    # Calculate the offset to center the grid in the image
+    # x_offset = (0*image_size[0] + robot_width) / 2
+    # y_offset = (0*image_size[1] + robot_width) / 2
+
+    x_offset = point_distance_x / 2 + robot_width / 2
+    y_offset = point_distance_y / 2 + robot_width / 2
+
+    print("image_size:", image_size, "grid_size:", grid_size, "point_distance_x:", point_distance_x, "point_distance_y:", point_distance_y)
+    print("x_offset:", x_offset, "y_offset:", y_offset)
+
+    # change the background color to gray
+    # ax.set_facecolor('lightgray')
+
+    # generate an empty image with the size
+    empty_image = np.zeros((image_size[1], image_size[0], 3), dtype=np.uint8)
+    empty_image[:] = np.array(bg_color) * 255  # fill with the background color
+    ax.imshow(empty_image, extent=(0, image_size[0], 0, image_size[1]))
+
+    pos_array = []
+    for i in range(grid_size[0]):
+        for j in range(grid_size[1]):
+            x = x_offset + (i * (point_distance_x+robot_width)) # - robot_width / 2
+            y = y_offset + (j * (point_distance_y+robot_width)) # - robot_width / 2
+            # ax.imshow(robot_image, extent=(x, x + robot_image.shape[1], y, y + robot_image.shape[0]))
+
+            # print(f"Drawing robot {i},2000 {j} at position: ({x}, {y})")
+            # Draw the robot at the current position
+            # rotate the image of the robot based on the theta
+            ax = draw_robot_at_pos_w_rot(robot_image, theta=0, x=x, y=y, ax=ax)
+
+            pos_array.append((x, y))
+
+
+
+    # if the log_output_path is provided, create a log file
+    if log_output_path:
+        log_file = open(log_output_path, 'w')
+        log_file.write("0 Robot ID, X, Y\n")
+        log_file.write("0 ")
+        log_file = log_pos_array(pos_array, log_file)
+        log_file.close()
+
+    plt.axis('off')
+    # plt.axis("on")
+    # plt.show()
+    plt.savefig(output_path, bbox_inches=None, pad_inches=0)
+    plt.close(fig)
+
 # generate a sample picture with random non-overlapping robots from the png file of a robot
 def generate_robot_image_with_random_robots(robot_image_path, num_robots=10, robot_width=30, image_size=(2000, 2000), 
                                             output_path="robot_image_with_random_robots.png", log_output_path=None):
@@ -572,51 +667,59 @@ if __name__ == "__main__":
 
 
         ## ## make a simple 2*2 grid of robot images for calibration purposes, set the distance to the max value so that robots place at the corners
-        experiment_name = f"robot_calib_pattern_{robot_str}"
-        log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
-        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=(2,2), robot_width=robot_size, point_distance=1000, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Grid image generated and saved as '{experiment_name}.png'.")
+        # experiment_name = f"robot_calib_pattern_{robot_str}"
+        # log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
+        # generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=(2,2), robot_width=robot_size, point_distance=1000, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Grid image generated and saved as '{experiment_name}.png'.")
         
 
         # Simple grid with circles
-        experiment_name = f"grid_circle_N_{N}__{date_str}"
-        log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
-        generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=400, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Grid image generated and saved as '{experiment_name}.png'.")
+        # experiment_name = f"grid_circle_N_{N}__{date_str}"
+        # log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
+        # generate_grid_image(grid_size=grid_size, circle_radius=robot_size/2, point_distance=400, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Grid image generated and saved as '{experiment_name}.png'.")
 
-        # Simple grid with robot images
-        experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
+        # Simple grid with robot images # square sizes
+        # experiment_name = f"robot_grid_image_{robot_str}_N_{N}__{date_str}"
+        # log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
+        # generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=grid_size, robot_width=robot_size, point_distance=400, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
+        # print(f"Grid image generated and saved as '{experiment_name}.png'.")
+
+        ## Simple grid with robot images based on the number of robots
+        N = 70
+        experiment_name = f"robot_grid_image_from_number_{robot_str}_N_{N}" # __{date_str}"
         log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
-        generate_robot_grid_image(robot_image_path=robot_image_path, grid_size=grid_size, robot_width=robot_size, point_distance=400, image_size=image_size, output_path=f"{prefix_path}/{experiment_name}.png")
-        print(f"Grid image generated and saved as '{experiment_name}.png'.")
+        generate_robot_grid_from_number(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size,
+                                        output_path=f"{prefix_path}/{experiment_name}.png", log_output_path=log_file_path)
+        print(f"Robot grid image generated and saved as '{experiment_name}.png'.")
 
         # # Robot image with random robot images
-        experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
-        log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
-        generate_robot_image_with_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, 
-                                                output_path=f"{prefix_path}/{experiment_name}.png",
-                                                log_output_path=log_file_path)
-        print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
+        # experiment_name = f"robot_image_with_random_robots_{robot_str}_N_{N}__{date_str}"
+        # log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
+        # generate_robot_image_with_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, 
+        #                                         output_path=f"{prefix_path}/{experiment_name}.png",
+        #                                         log_output_path=log_file_path)
+        # print(f"Robot image with random robots generated and saved as '{experiment_name}.png'.")
 
-        # Robot animation following a simple trajectory
-        image_width = 2000
-        star_points = [(image_width/2 + 800 * np.cos(theta), image_width/2 + 800 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
-        order_index = [0, 2, 4, 1, 3, 0]
-        trajectory = [star_points[i] for i in order_index]
-        speed = 10
-        experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
-        log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
-        generate_robot_animation_simple_trajectory(robot_image_path=robot_image_path, trajectory=trajectory, robot_width=robot_size, image_size=image_size, robot_speed=speed, 
-                                                   output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=log_file_path)
-        print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
+        # # Robot animation following a simple trajectory
+        # image_width = 2000
+        # star_points = [(image_width/2 + 800 * np.cos(theta), image_width/2 + 800 * np.sin(theta)) for theta in np.linspace(np.pi/2, 2 * np.pi + np.pi/2, 6)]
+        # order_index = [0, 2, 4, 1, 3, 0]
+        # trajectory = [star_points[i] for i in order_index]
+        # speed = 10
+        # experiment_name = f"robot_animation_star_traj_{robot_str}_Speed_{speed}"
+        # log_file_path = f"{prefix_path}/{experiment_name}_log.txt"
+        # generate_robot_animation_simple_trajectory(robot_image_path=robot_image_path, trajectory=trajectory, robot_width=robot_size, image_size=image_size, robot_speed=speed, 
+        #                                            output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=log_file_path)
+        # print(f"Robot animation generated and saved as '{experiment_name}.mp4'.")
 
-        ## # Robot animation with random robots
-        N = 20
-        date_str = datetime.now().strftime("%d%H%M%S")
-        experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
-        print(f"Experiment name: {experiment_name}")
-        generate_robot_animation_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, robot_speed=3, animation_duration=50, 
-        output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=log_file_path)
+        # ## # Robot animation with random robots
+        # N = 20
+        # date_str = datetime.now().strftime("%d%H%M%S")
+        # experiment_name = f"robot_animation_random_robots_{robot_str}_N_{N}"
+        # print(f"Experiment name: {experiment_name}")
+        # generate_robot_animation_random_robots(robot_image_path=robot_image_path, num_robots=N, robot_width=robot_size, image_size=image_size, robot_speed=3, animation_duration=50, 
+        # output_path=f"{prefix_path}/{experiment_name}.mp4", log_output_path=log_file_path)
     else:
         import argparse
         parser = argparse.ArgumentParser(description="Generate validation images and animations.")
