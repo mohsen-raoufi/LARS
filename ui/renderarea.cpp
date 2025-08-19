@@ -92,6 +92,8 @@ RenderArea::RenderArea(WorldModel *wm) :
     brush_initPoints = new QBrush(QColor::fromRgb(255,255,0),Qt::SolidPattern);
     brush_initPoints2 = new QBrush(QColor::fromRgb(0,255,0),Qt::SolidPattern);
 
+    pen_evalRob = new QPen(QColor::fromRgb(255,255,0), 2, Qt::SolidLine);
+
     //    brush_yrobot_MT = new QBrush(QColor::fromRgb(255,255,0),Qt::NoBrush);
     pen_pnts2Draw = new QPen(QColor::fromRgb(255,255,0), 0.5, Qt::DotLine);
     pen_circ2Draw = new QPen(QColor::fromRgb(255,0,0), 1.5, Qt::DotLine);
@@ -429,7 +431,17 @@ void RenderArea::paintEvent(QPaintEvent *)
     if(_wm->drawBall)
     {
         // DRAW BALL!!!
+//        qDebug() << "WM BALL POS IN Render area: " << _wm->ballPos.x() << ", " << _wm->ballPos.y();
         painter.drawPixmap(QRect(_wm->ballPos - QPoint(_wm->ballRad/2, _wm->ballRad/2), QSize(_wm->ballRad, _wm->ballRad)), ballImage);
+
+        int N_balls = _wm->dummy_var3;
+        for (int var = 0; var < N_balls - 1 ; ++var)
+        {
+            QPoint xtr_ball_tmp = _wm->ballPos + QPoint(0, int(var/2 + 1)*(-1 + 2*(var%2))*80);
+
+            painter.drawPixmap(QRect(xtr_ball_tmp - QPoint(_wm->ballRad/2, _wm->ballRad/2), QSize(_wm->ballRad, _wm->ballRad)), ballImage);
+
+        }
         //    painter.setPen(*pen_circ2Draw);
         //    painter.drawEllipse(_wm->ballPos, 20, 20);
     }
@@ -523,6 +535,7 @@ void RenderArea::paintEvent(QPaintEvent *)
 
     }
 
+//    qDebug() << "ROBOT BRUSH TYPE: " << _wm->robBrushType;
 
     // Points to Draw for Robots! // needs an update!
     for(int i = 0; i < _wm->rob_Type0_pos.size(); i++){
@@ -537,7 +550,16 @@ void RenderArea::paintEvent(QPaintEvent *)
                 painter.translate(-pnt);
                 break;
             case SOLID:
+//                painter.drawEllipse(pnt, _wm->robRad, _wm->robRad);
+
+
+                // FOR EVALUATION ONLY
+//                painter.setBrush(*brush_initPoints);
+//                painter.setPen(Qt::NoPen);
+                painter.setBrush(Qt::NoBrush);
+                painter.setPen(*pen_evalRob);
                 painter.drawEllipse(pnt, _wm->robRad, _wm->robRad);
+
 
                 // draw a rectangle
                 // painter.drawRect(QRect(pnt - QPoint(_wm->robRad, _wm->robRad), QSize(2*_wm->robRad, 2*_wm->robRad)));

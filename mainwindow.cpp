@@ -153,7 +153,7 @@ void MainWindow::logToFile_FPS(QVector<QPoint> posVec)
 
 
     // //// latency test
-    log_stream << "\t" << wm.ballPos.x() << "\t" << wm.ballPos.y() << "\t" << ui->sliderRandom1->value();
+    log_stream << "\t" << wm.ballPos.x() << "\t" << wm.ballPos.y() << "\t" << ui->sliderRandom1->value() << "\t" << ui->robRendRad_slider->value();
     // add the value of the sliderRandom1 as the robot speed
 
 
@@ -575,7 +575,7 @@ void MainWindow::drawKilobots(Mat &frame)
             wm.kiloColor.append(rgbColor);
 
             if(ui->draw_bots->isChecked())
-                cv::circle(frame,Point(kiloVector[i]->getPosition().x(),kiloVector[i]->getPosition().y()),kbtracker.kbMinSize + 3,rgbColor,2);
+                cv::circle(frame,Point(kiloVector[i]->getPosition().x(),kiloVector[i]->getPosition().y()),kbtracker.kbMaxSize,rgbColor,2);
 
             // TO DO: add some transparency to the circles, something like a weighted add, so that the circles are transparent!
 
@@ -944,7 +944,7 @@ void MainWindow::on_Rotate_ComboBox_activated(const QString &arg1)
  */
 void MainWindow::on_saveVid_button_clicked()
 {
-    bool saveProcVidBool = false; // true;
+    bool saveProcVidBool = false; // true;//
 
     if(ui->saveVid_button->isChecked())
     {
@@ -1783,7 +1783,7 @@ void MainWindow::on_detectKilobots_pushButton_clicked()
     dummy_detection_ready = false;
     this->kbtracker.SETUPfindKilobots();
 
-    qDebug() << "#" << kiloVector.size() << " Kilobots are detected!!";
+    qDebug() << "#" << kiloVector.size() << " Robots are detected!!";
     if(kiloVector.size()>0) // I already added id number 0 in the default of comboBox
     {
         ui->TrigID_comboBox->clear();
@@ -3156,5 +3156,8 @@ void MainWindow::on_genExp_TextEdit_editingFinished()
 
     QString tmp_log_path = tmp +  "_LARS_LOG_";
     ui->filePath_user->setText(tmp_log_path);
+
+    // ONLY FOR LATENCY EVALUATION
+    wm.dummy_var3 = ui->genExp_TextEdit->text().toInt();
 }
 

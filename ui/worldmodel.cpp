@@ -5,6 +5,8 @@ WorldModel::WorldModel()
     time = 0;
 
     expFieldRect = QRect(marker0_pos + QPoint(marker_length,marker_length), marker3_pos);
+
+    qDebug() << "BALL INITIAL POS: " << ballPos.x() << ", " << ballPos.y();
 }
 
 void WorldModel::setFieldColor(QColor color)

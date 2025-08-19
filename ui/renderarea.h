@@ -46,7 +46,7 @@ private:
     QBrush *brush_initPoints, *brush_initPoints2;
     QTimer _timer; //, _noiseTimer;
     int bias_X, bias_Y;
-    QPen *pen_insideRect, *pen_RobCust1, *pen_pnts2Draw, *pen_circ2Draw, *pen_network, *pen_voronoii, *pen_tracePnts;
+    QPen *pen_insideRect, *pen_RobCust1, *pen_pnts2Draw, *pen_circ2Draw, *pen_network, *pen_voronoii, *pen_tracePnts, *pen_evalRob;
     QPixmap marker0, marker1, marker2, marker3;
     QPixmap arenaImg, SCIoIImg, webPage, centroidImage, ballImage;
     QRadialGradient *radGradient, *radGradientRob;

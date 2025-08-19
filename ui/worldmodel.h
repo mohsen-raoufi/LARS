@@ -91,7 +91,7 @@ public:
 
     QRect expFieldRect;
     QPolygon expFieldPoints;
-    BrushType expFieldType, robBrushType = GRADIENT;
+    BrushType expFieldType, robBrushType = SOLID;
 
     int noiseTileNo = 50, noiseTimeIntv = -1;
     double noiseStrength = 0.2;
@@ -118,8 +118,9 @@ public:
     bool boolNullBrushForRobots = false;
     int robRad = 50;
 
-    QPoint ballPos = QPoint(0,0);
-    QPointF ballVel = QPointF(1.0,1.0);
+//    QPoint ballPos = QPoint(0,0);
+    QPoint ballPos = QPoint(marker0_pos.x(), marker0_pos.y() + int(arenaHeight/2));
+    QPointF ballVel = QPointF(1.0,0.0);
     int ballSpeed = 10, ballRad = 40; // for evaluation instead of Kilobto // 60; // normal, not to confuse with robots
 
 //    Graph robot_graph;
@@ -149,7 +150,7 @@ public:
     bool drawTrace = false, drawBoundary = true, drawHeatMap = false, drawColCircles = false, drawRobCircles = false, drawInitPoint = false;
     bool drawNetwork = false, drawVoronoii = false, drawCentroid = false, drawWithColors = true, spatialNetwork=false, drawBall=false;
 
-    int dummy_var = 0, dummy_var2=0;
+    int dummy_var = 0, dummy_var2=0, dummy_var3 = 1;
 
     QVector <wmCircle> circles2Draw;
 

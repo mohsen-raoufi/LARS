@@ -803,7 +803,7 @@ void KilobotTracker::getInitialKilobotStates()
 void KilobotTracker::SETUPfindKilobots()
 {
     if(debugBool)
-        qDebug() << "Start Setting up Find Kilobots...";
+        qDebug() << "Start Setting up Find robots...";
 
     // Mohsen's edition
     //    this->THREADSstop(); // MOHSEN
@@ -942,26 +942,26 @@ void KilobotTracker::SETUPfindKilobots()
         this->kilos.push_back(new Kilobot(i,QPointF(circles[i][0],circles[i][1]),QPointF(1,1),col));
     }
 
-    //    qDebug() << "hey I found some Kilobots: " << kilos.size();
+    //    qDebug() << "hey I found some robots: " << kilos.size();
     emit kiloList(kilos);
 
 
     this->kiloHeadings.clear();
     this->kiloHeadings.resize(this->kilos.size());
-    emit errorMessage(QString::fromStdString(to_string(kilos.size()))+ QString(" kilobots found!"));
+    emit errorMessage(QString::fromStdString(to_string(kilos.size()))+ QString(" robots found!"));
     emit activateExpButtons(this->kilos.size());
 
 
 
     if(debugBool)
-        qDebug() << "Finishes Setting up Find Kilobots!";
+        qDebug() << "Finishes Setting up Find robots!";
 }
 
 void KilobotTracker::identifyKilobots()
 {
 
     if (this->kilos.isEmpty()){
-        qDebug() << "There are no Kilobots to be indetified. Stopping the operation";
+        qDebug() << "There are no robots to be indetified. Stopping the operation";
         LOOPstartstop(IDENTIFY);
         return;
     }
@@ -1226,7 +1226,7 @@ void KilobotTracker::trackKilobots()
 #endif
 
     if(debugBool)
-        qDebug() << "Start Tracking Kilobots ...";
+        qDebug() << "Start Tracking robots ...";
 
     switch (this->trackType) {
     {
@@ -2649,7 +2649,7 @@ void KilobotTracker::trackKilobots()
     }
 
     if(debugBool)
-        qDebug() << "Successfully Finished Tracking Kilobots!";
+        qDebug() << "Successfully Finished Tracking Robots!";
 
     //    this->drawOverlay(display);
     //    this->showMat(display);

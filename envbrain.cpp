@@ -38,12 +38,18 @@ EnvBrain::EnvBrain(WorldModel *wm)
     double ball_vel_x = rand()/double(RAND_MAX);
     double ball_vel_y = rand()/double(RAND_MAX);
     double ball_speed = sqrt(ball_vel_x*ball_vel_x + ball_vel_y*ball_vel_y);
-    _wm->ballVel = QPointF(float(ball_vel_x/ball_speed), float(ball_vel_y/ball_speed));
+    //    _wm->ballVel = QPointF(float(ball_vel_x/ball_speed), float(ball_vel_y/ball_speed)); // COMMENT THIS FOR EVALUATION
     qDebug() << "ballvel: " << ball_vel_x << ", " << ball_vel_y;
+
+
+    //    _wm->ballPos.setY(100);
+    //    _wm->ballPos.setX(50);
+    //    qDebug() << "ballPos: " << _wm->ballPos.x() << ", " << _wm->ballPos.y();
 
 
 #ifdef FOR_KILOBOT
     _timer.start(30);
+//    _timer.start(10);
 #else
     _timer.start(50);
 #endif
@@ -163,58 +169,64 @@ void EnvBrain::update_centroid()
  */
 void EnvBrain::update_objects_to_draw()
 {
-    _wm->ballSpeed = _wm->dummy_var2/20;
-
-    // Update position based on velocity
-    QPointF movement = _wm->ballSpeed * _wm->ballVel;
-    //    qDebug() << "ballvel: " << _wm->ballVel.x() << ", " << _wm->ballVel.y();
-    QPoint ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
-    //    qDebug() << "ballPos: " << ballPosTmp.x() << ", " << ballPosTmp.y();
-
-    // Check for collisions with arena bounds
-    if (ballPosTmp.x() < _wm->insideRect.left() || ballPosTmp.x() > _wm->insideRect.right()) {
-        // If ball hits left or right bounds, reverse x velocity
-        _wm->ballVel.setX(-_wm->ballVel.x());
-    }
-    if (ballPosTmp.y() < _wm->insideRect.top() || ballPosTmp.y() > _wm->insideRect.bottom()) {
-        // If ball hits top or bottom bounds, reverse y velocity
-        _wm->ballVel.setY(-_wm->ballVel.y());
-    }
-
-
-    // Check for collisions with circles
-    if (false)
+    if(_wm->drawBall)
     {
-        for (const QPoint& circleCenter : _wm->rob_Type0_pos) {
-            //        qDebug() << "Circle to collide center: " << circleCenter.x() << ", " << circleCenter.y();
+        _wm->ballSpeed = _wm->dummy_var2/20;
 
-            // Calculate distance between ball center and circle center
-            int dx = circleCenter.x() + _wm->marker0_BR.x() - ballPosTmp.x();
-            int dy = circleCenter.y() + _wm->marker0_BR.y() - ballPosTmp.y();
-            int distance = std::sqrt(dx * dx + dy * dy);
+//        qDebug() << "BEFORE : ballPos: " << _wm->ballPos.x() << ", " << _wm->ballPos.y();
+        // Update position based on velocity
+        QPointF movement = _wm->ballSpeed * _wm->ballVel;
+        //    qDebug() << "ballvel: " << _wm->ballVel.x() << ", " << _wm->ballVel.y();
+        QPoint ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
+        //    qDebug() << "ballPos: " << ballPosTmp.x() << ", " << ballPosTmp.y();
 
-            // If the distance is less than the sum of the radii, collision occurs
-            if (distance < (_wm->ballRad + _wm->robRad)) {
-                // Calculate reflection angle
-                double angle = std::atan2(dy, dx);
-                double reflectionAngle = 2 * angle - std::atan2(_wm->ballVel.y(), _wm->ballVel.x());
+        // Check for collisions with arena bounds
+        if (ballPosTmp.x() < _wm->insideRect.left() || ballPosTmp.x() > _wm->insideRect.right()) {
+            // If ball hits left or right bounds, reverse x velocity
+            _wm->ballVel.setX(-_wm->ballVel.x());
+        }
+        if (ballPosTmp.y() < _wm->insideRect.top() || ballPosTmp.y() > _wm->insideRect.bottom()) {
+            // If ball hits top or bottom bounds, reverse y velocity
+            _wm->ballVel.setY(-_wm->ballVel.y());
+        }
 
-                // Update velocity based on reflection angle
-                _wm->ballVel.setX(std::cos(reflectionAngle));
-                _wm->ballVel.setY(std::sin(reflectionAngle));
 
-                // Move the ball to avoid sticking in the circle
-                movement = _wm->ballSpeed * _wm->ballVel;
-                ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
-                //            ballPosTmp += ballSpeed * ballVel;
+        // Check for collisions with circles
+        if (false)
+        {
+            for (const QPoint& circleCenter : _wm->rob_Type0_pos) {
+                //        qDebug() << "Circle to collide center: " << circleCenter.x() << ", " << circleCenter.y();
+
+                // Calculate distance between ball center and circle center
+                int dx = circleCenter.x() + _wm->marker0_BR.x() - ballPosTmp.x();
+                int dy = circleCenter.y() + _wm->marker0_BR.y() - ballPosTmp.y();
+                int distance = std::sqrt(dx * dx + dy * dy);
+
+                // If the distance is less than the sum of the radii, collision occurs
+                if (distance < (_wm->ballRad + _wm->robRad)) {
+                    // Calculate reflection angle
+                    double angle = std::atan2(dy, dx);
+                    double reflectionAngle = 2 * angle - std::atan2(_wm->ballVel.y(), _wm->ballVel.x());
+
+                    // Update velocity based on reflection angle
+                    _wm->ballVel.setX(std::cos(reflectionAngle));
+                    _wm->ballVel.setY(std::sin(reflectionAngle));
+
+                    // Move the ball to avoid sticking in the circle
+                    movement = _wm->ballSpeed * _wm->ballVel;
+                    ballPosTmp = _wm->ballPos + QPoint(movement.x(), movement.y());
+                    //            ballPosTmp += ballSpeed * ballVel;
+                }
             }
         }
-    }
 
-    // Ensure ball stays within arena bounds
-    ballPosTmp.setX(qBound(_wm->insideRect.left(), ballPosTmp.x(), _wm->insideRect.right()));
-    ballPosTmp.setY(qBound(_wm->insideRect.top(), ballPosTmp.y(), _wm->insideRect.bottom()));
-    _wm->ballPos = ballPosTmp;
+        // Ensure ball stays within arena bounds
+        ballPosTmp.setX(qBound(_wm->insideRect.left(), ballPosTmp.x(), _wm->insideRect.right()));
+        ballPosTmp.setY(qBound(_wm->insideRect.top(), ballPosTmp.y(), _wm->insideRect.bottom()));
+        _wm->ballPos = ballPosTmp;
+
+//        qDebug() << "AFTER : ballPos: " << _wm->ballPos.x() << ", " << _wm->ballPos.y();
+    }
 }
 
 //void EnvBrain::updateTraces(QVector<QPoint> posVec)
