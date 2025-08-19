@@ -91,7 +91,7 @@ public:
 
     QRect expFieldRect;
     QPolygon expFieldPoints;
-    BrushType expFieldType, robBrushType = SOLID;
+    BrushType expFieldType, robBrushType = GRADIENT;
 
     int noiseTileNo = 50, noiseTimeIntv = -1;
     double noiseStrength = 0.2;

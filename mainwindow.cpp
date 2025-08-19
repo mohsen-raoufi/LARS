@@ -200,6 +200,7 @@ void MainWindow::logToFile(QVector<QPoint> posVec)
  */
 void MainWindow::on_capturing_button_clicked()
 {
+    ui->outputLabel->setStyleSheet("");
     if(ui->useARKCap_CheckBox->isChecked()) {
         if(ui->fromCam_rButton->isChecked())//fromCam)
         {
@@ -590,7 +591,7 @@ void MainWindow::drawKilobots(Mat &frame)
             }
 
             if (ui->show_ids->isChecked()) {
-                int offset = kbtracker.kbMinSize;
+                int offset = kbtracker.kbMaxSize + 5;
                 putText(frame, QString::number(this->kiloVector[i]->getID()).toStdString(), Point(kiloVector[i]->getPosition().x(),kiloVector[i]->getPosition().y()-offset), FONT_HERSHEY_SIMPLEX, 0.6, rgbColor, 2);
             }
         }

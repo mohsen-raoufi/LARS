@@ -89,7 +89,7 @@
       <bool>true</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-image: url(:/Files/LARS_Logo.png) 0 0 0 0 stretch stretch;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::Panel</enum>
@@ -165,6 +165,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;*** Science of Intelligence ***&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;***** Project 27 *****&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  &lt;span style=&quot; font-family:'Courier New'; font-weight:600; color:#00ffff;&quot;&gt;&amp;lt;&lt;/span&gt;  &lt;span style=&quot; font-family:'Courier New'; font-weight:600; color:#d0d0d0;&quot;&gt;    L    A    R    S    &lt;/span&gt;  &lt;span style=&quot; font-family:'Courier New'; font-weight:600; color:#fcfea9;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;* Light Augmented Reality System *&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#d0d0d0;&quot;&gt;** Version: 2.2 **&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#d0d0d0;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -3194,7 +3195,7 @@ color: rgb(0, 0, 0);
         <rect>
          <x>12</x>
          <y>6</y>
-         <width>147</width>
+         <width>158</width>
          <height>231</height>
         </rect>
        </property>

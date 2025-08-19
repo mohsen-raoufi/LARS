@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=LARS
+Comment=Light-Augmented Reality System
+Exec=LARS
+Icon=lars
+Terminal=false
+Categories=Utility;
