@@ -1,10 +1,19 @@
-# LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
+# LARS: Light-Augmented Reality System for Collective Robotics Interaction 
+![GitHub version](https://img.shields.io/github/v/release/mohsen-raoufi/LARS?label=release)
+![GitHub last commit](https://img.shields.io/github/last-commit/mohsen-raoufi/LARS)
+![GitHub issues](https://img.shields.io/github/issues/mohsen-raoufi/LARS)
+![Platform](https://img.shields.io/badge/platform-Ubuntu-lightgrey)
+![Qt version](https://img.shields.io/badge/Qt-5.6+-green)
+![Top language](https://img.shields.io/github/languages/top/mohsen-raoufi/LARS)
+[![Docs](https://img.shields.io/badge/docs-online-blue)](https://mohsen-raoufi.github.io/LARS/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 **TL;DR:** LARS is a scalable light-based augmented reality system for collective robotics interaction.  
 It lets you track robots in real time, augment environments visually, and design experiments without hardware changes.
 
 > **📚 Documentation**  
-> Developer & API Docs: [📄 View Online](https://mohsen-raoufi.github.io/LARS/)
+> Developer & API Docs: [📄 View Online](https://mohsen-raoufi.github.io/LARS/)  
+> Full Paper: [📘 Sensors Journal Link](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)
 
 ---
 
@@ -45,7 +54,7 @@ LARS enables **indirect robot-robot communication** (stigmergy), while preservin
 
 ---
 
-## 🎯 Why LARS? (Objectives)
+## 🎯 Why LARS?
 
 - **For Research:**  
   - Supporting reliability, reproducibility, and flexibility in collective robotics experiments  
