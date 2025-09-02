@@ -1,7 +1,10 @@
 # LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
 
+**TL;DR:** LARS is a scalable light-based augmented reality system for collective robotics interaction.  
+It lets you track robots in real time, augment environments visually, and design experiments without hardware changes.
+
 > **📚 Documentation**  
-> Developer & API Docs: [`docs/doxygen/html/index.html`](docs/doxygen/html/index.html)
+> Developer & API Docs: [📄 View Online](https://mohsen-raoufi.github.io/LARS/)
 
 ---
 
@@ -13,15 +16,22 @@
 ## ✨ What is LARS?
 
 **LARS** (Light Augmented Reality System) is a cross-platform, open-source framework for *experimentation, education, and outreach* in collective robotics.  
-It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects, such as gradients, fields, trails, and even robot states, directly into the environment where real robots operate.
+It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects, such as gradients, fields, trails, and even robot states, directly into the physical environment where real robots operate.
 
 LARS enables **indirect robot-robot communication** (stigmergy), while preserving all real-world constraints. It turns "invisible" swarm dynamics into tangible, interactive experiences for researchers, students, and the public.
 
 ---
 
+📽️ **Demo Videos**  
+- [Overview Video](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Introducing_LARS/30005467/1?file=57487714)  
+- [Benchmarking & Performance Tests Video](https://figshare.com/articles/dataset/LARS_Light_Augmented_Reality_System_-_Benchmarking_Tests_Video/29967694/1?file=57359965)  
+- [Platform Adaptability Test Video](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Platform_Adaptability_Test_Video/29967193/1?file=57361201)  
+
+---
+
 ## 🛠️ Key Features
 
-- **Projection of Virtual, Visual Objects** 🔦  
+- **Projection of Virtual Visual Objects** 🔦  
 - **Marker-Free, Cross-platform Detection and Tracking System (based on ARK)** 🎯  
 - **Real-Time Performance** ⚡  
 - **Standalone System** 🖥️  
@@ -30,7 +40,7 @@ LARS enables **indirect robot-robot communication** (stigmergy), while preservin
 - **Direct Communication Possibility** 📡  
 - **Ease of Setup and Robustness** 🛠️  
 - **Logging for Post-Production** 📝  
-- **Cost Effective** 💶  
+- **Cost-Effective** 💶  
 - **Open Source** 🔓  
 
 ---
@@ -76,7 +86,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
 <p align="center">
-  <img src="docs/media/LARS_Diagram.png" alt="LARS MVC Architecture" height="400px">
+  <img src="docs/media/LARS_dynamic_diagram_dark.png" alt="LARS dynamic diagram" height="300px">
 </p>
 
 ---
@@ -108,7 +118,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 <p style="font-size: 13px; text-align: left;">
   (top, left:) GUI snapshot of 42 Kilobots synchronizing on a grid with their internal binary state being detected by the color of their LED in blue or red,  <br>
   (top, mid-left:) user view of 63 Kilobots making a collective decision on a tiled environment with projected dynamic noise <br>
-  (top, mid-right:) GUI Snapshot of 109 Kilobots with the trace of their random movement decaying over time <br>
+  (top, mid-right:) GUI snapshot of 109 Kilobots with the trace of their random movement decaying over time <br>
   (top, right:) GUI snapshot of two active balls randomly moving in the bounded arena, being tracked by LARS without the need for any markers <br>
 
   (bottom, left:) GUI snapshot of two Thymios with different colors locating the center of the light distribution (projected by LARS). The trace of each robot shows the consistency of the color detection of each robot over time, even after a collision <br>
@@ -149,11 +159,10 @@ sudo usermod -a -G dialout <user-name>
 
 If you use or adapt LARS in your research or publications, please cite:
 
-- Raoufi, M., Romanczuk, P., & Hamann, H. (2024). *LARS: Light Augmented Reality System for Swarm*. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
+- Raoufi, M., Romanczuk, P., & Hamann, H. (2025). LARS: A Light-Augmented Reality System for Collective Robotic Interaction. Sensors, 25(17), 5412. https://doi.org/10.3390/s25175412
 
 also include ARK:
 - Reina A., Cope A.J., Nikolaidis E., Marshall J.A.R., Sabo C. (2017) ARK: Augmented reality for Kilobots. *IEEE Robotics and Automation Letters* **2, 1755-1761**.
-
 
 ---
 
