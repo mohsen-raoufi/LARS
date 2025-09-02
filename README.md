@@ -11,10 +11,13 @@
 **TL;DR:** LARS is a scalable light-based augmented reality system for collective robotics interaction.  
 It lets you track robots in real time, augment environments visually, and design experiments without hardware changes.
 
-> **📚 Documentation**  
+> **📚 Documentation and Media**  
 > Developer & API Docs: [📄 View Online](https://mohsen-raoufi.github.io/LARS/)  
 > Doxygen Documents: [📑 Code Detailed Documents](https://mohsen-raoufi.github.io/LARS/html/index.html)  
-> Full Paper: [📘 _Sensors_ Journal Link](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)
+> Full Paper: [📘 Full Paper in _Sensors_ Journal](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)  
+> Overview Video: [📽️✨ Introducing LARS](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Introducing_LARS/30005467/1?file=57487714)  
+> Benchmarking Video: [📽️📊 Performance Tests](https://figshare.com/articles/dataset/LARS_Light_Augmented_Reality_System_-_Benchmarking_Tests_Video/29967694/1?file=57359965)  
+> Adaptability Video: [📽️🧪 Platform Adaptability Test](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Platform_Adaptability_Test_Video/29967193/1?file=57361201)
 
 ---
 
@@ -29,13 +32,6 @@ It lets you track robots in real time, augment environments visually, and design
 It leverages Extended Reality (XR) to seamlessly merge the physical and virtual worlds, projecting dynamic visual objects, such as gradients, fields, trails, and even robot states, directly into the physical environment where real robots operate.
 
 LARS enables **indirect robot-robot communication** (stigmergy), while preserving all real-world constraints. It turns "invisible" swarm dynamics into tangible, interactive experiences for researchers, students, and the public.
-
----
-
-📽️ **Demo Videos**  
-- [Overview Video](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Introducing_LARS/30005467/1?file=57487714)  
-- [Benchmarking & Performance Tests Video](https://figshare.com/articles/dataset/LARS_Light_Augmented_Reality_System_-_Benchmarking_Tests_Video/29967694/1?file=57359965)  
-- [Platform Adaptability Test Video](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Platform_Adaptability_Test_Video/29967193/1?file=57361201)  
 
 ---
 
