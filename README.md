@@ -13,7 +13,8 @@ It lets you track robots in real time, augment environments visually, and design
 
 > **📚 Documentation**  
 > Developer & API Docs: [📄 View Online](https://mohsen-raoufi.github.io/LARS/)  
-> Full Paper: [📘 Sensors Journal Link](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)
+> Doxygen Documents: [📑 Code Detailed Documents](https://mohsen-raoufi.github.io/LARS/html/index.html)  
+> Full Paper: [📘 _Sensors_ Journal Link](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)
 
 ---
 
