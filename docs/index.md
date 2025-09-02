@@ -4,8 +4,10 @@
 
 
 > **📚 Documentation and Media**  
-> Doxygen Documents: > [`html/index.html`](html/index.html)
-> Full Paper: [📘 Full Paper in _Sensors_ Journal](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)
+> Doxygen Documents: > [`html/index.html`](html/index.html)  
+
+> Full Paper: [📘 Full Paper in _Sensors_ Journal](https://www.mdpi.com/1424-8220/25/17/5412#app1-sensors-25-05412)  
+
 > Overview Video: [📽️✨ Introducing LARS](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Introducing_LARS/30005467/1?file=57487714)  
 > Benchmarking Video: [📽️📊 Performance Tests](https://figshare.com/articles/dataset/LARS_Light_Augmented_Reality_System_-_Benchmarking_Tests_Video/29967694/1?file=57359965)  
 > Adaptability Video: [📽️🧪 Platform Adaptability Test](https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Platform_Adaptability_Test_Video/29967193/1?file=57361201)
