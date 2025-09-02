@@ -168,6 +168,7 @@ sudo usermod -a -G dialout <user-name>
 ## 📄 Citation
 
 If you use or adapt LARS in your research or publications, please cite:
+- Raoufi, M., Romanczuk, P., & Hamann, H. (2025). LARS: A Light-Augmented Reality System for Collective Robotic Interaction. Sensors, 25(17), 5412. https://doi.org/10.3390/s25175412
 
 - Raoufi, M., Romanczuk, P., & Hamann, H. (2024). *LARS: Light Augmented Reality System for Swarm*. In Swarm Intelligence: 14th International Conference, ANTS 2024, Konstanz, Germany, October 9–11, 2024, Proceedings (Vol. 14987, p. 246). Springer Nature.
 
