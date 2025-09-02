@@ -86,7 +86,7 @@ LARS is built on the classic **Model-View-Controller (MVC)** pattern:
 - 🎮 **Controller:** Experiment orchestration, tracking, and logic
 
 <p align="center">
-  <img src="docs/media/LARS_dynamic_diagram_dark.jpg" alt="LARS dynamic diagram" height="300px">
+  <img src="docs/media/LARS_dynamic_diagram_dark.jpg" alt="LARS dynamic diagram" height="200px">
 </p>
 
 ---
