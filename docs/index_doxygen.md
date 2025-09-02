@@ -1,7 +1,7 @@
 # LARS: Light-Augmented Reality System for Collective Robotics Interaction 🚦🤖
 
 > **📚 Documentation**  
-> Developer & API Docs: [`doxygen/html/index.html`](doxygen/html/index.html)
+> Developer & API Docs: [`html/index.html`](html/index.html)
 
 ---
 
