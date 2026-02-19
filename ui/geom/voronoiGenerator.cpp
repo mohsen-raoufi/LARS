@@ -36,16 +36,17 @@ QPoint voronoiGenerator::findIntersection(const QLineF& line, double rectX, doub
     // Check for intersections with each side of the rectangle
     QLineF::IntersectType intersectType;
 
-    intersectType = line.intersect(topLine, &intersectionPoint);
+//    intersectType = line.intersect(topLine, &intersectionPoint); // QT OLD (same as the other 4s in the following
+    intersectType = line.intersects(topLine, &intersectionPoint);
     if (intersectType == QLineF::BoundedIntersection) return intersectionPoint.toPoint();
 
-    intersectType = line.intersect(bottomLine, &intersectionPoint);
+    intersectType = line.intersects(bottomLine, &intersectionPoint);
     if (intersectType == QLineF::BoundedIntersection) return intersectionPoint.toPoint();
 
-    intersectType = line.intersect(leftLine, &intersectionPoint);
+    intersectType = line.intersects(leftLine, &intersectionPoint);
     if (intersectType == QLineF::BoundedIntersection) return intersectionPoint.toPoint();
 
-    intersectType = line.intersect(rightLine, &intersectionPoint);
+    intersectType = line.intersects(rightLine, &intersectionPoint);
     if (intersectType == QLineF::BoundedIntersection) return intersectionPoint.toPoint();
 
     // If no intersection found or an unbounded intersection, handle appropriately

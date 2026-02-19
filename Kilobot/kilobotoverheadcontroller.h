@@ -7,7 +7,9 @@
 #include "Kilobot/kilobot.h"
 #include <QList>
 #include <QPushButton>
-#include<QTimer>
+#include <QTimer>
+//#include <QTime>
+#include <QElapsedTimer>
 
 // Include for communication with the OHC
 #include <stdint.h>
@@ -83,7 +85,8 @@ private:
     QVector < kilobot_message > message_q;
 
     QTimer timer;
-    QTime lastMsgTime;
+//    QTime lastMsgTime;
+    QElapsedTimer lastMsgTime;
 
 };
 

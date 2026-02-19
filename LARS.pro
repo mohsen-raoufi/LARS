@@ -10,7 +10,7 @@ TARGET = LARS
 TEMPLATE = app
 
 DEFINES += USE_OPENCV3
-DEFINES += USE_PYLON
+#DEFINES += USE_PYLON
 DEFINES += USE_CUDA
 DEFINES += FOR_KILOBOT
 
@@ -70,7 +70,7 @@ SOURCES += main.cpp\
     savevidthread.cpp \
     tracker/detectQR.cpp \
 #    tracker/kilobottracker_copy.cpp \
-    tracker/pylon.cpp \
+#    tracker/pylon.cpp \
  \#    tracker/pylon_org.cpp
 #    ui/geom/circle_2d.cpp \
 #    ui/geom/composite_region_2d.cpp \
@@ -111,7 +111,7 @@ HEADERS  += mainwindow.h \
     tracker/detectQR.h \
     tracker/kilobot.h \
 #    tracker/kilobottracker_copy.h \
-    tracker/pylon.h \
+#    tracker/pylon.h \
 #    tracker/pylon_org.h
 #    ui/geom/angle_deg.h \
 #    ui/geom/circle_2d.h \
@@ -146,9 +146,12 @@ FORMS    += mainwindow.ui \
 RESOURCES += \
     resources.qrc
 
+### PYLON CAMERA
+#LIBS += -L/opt/pylon/lib -lpylonbase -lpylonutility -lGenApi_gcc_v3_1_Basler_pylon -lGCBase_gcc_v3_1_Basler_pylon
+#INCLUDEPATH += /opt/pylon/include
+#SOURCES += tracker/pylon.cpp \
 
-LIBS += -L/opt/pylon/lib -lpylonbase -lpylonutility -lGenApi_gcc_v3_1_Basler_pylon -lGCBase_gcc_v3_1_Basler_pylon
-INCLUDEPATH += /opt/pylon/include
+#HEADERS += tracker/pylon.h \
 
 #SOURCES += tracker/pylon.cpp
 #HEADERS += tracker/pylon.h

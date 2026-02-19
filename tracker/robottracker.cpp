@@ -15,6 +15,11 @@
 #include <QtMath>
 #include <QDebug>
 
+#include <string>
+#include <iostream>
+#include <opencv2/opencv.hpp>
+#include <opencv2/videoio.hpp>
+
 #if USE_PYLON
 #include "pylon.h"
 #endif
@@ -35,6 +40,9 @@ QSemaphore camUsage;
  * to the data, and then places the data in a circular buffer for use by
  * the main thread, which operates on a QTimer to allow UI responsivity
  */
+
+
+
 class acquireThread : public QThread
 {
 public:
@@ -191,26 +199,80 @@ private:
 
 #endif
 #ifndef USE_PYLON
-                        cap.open(-1);
+                        //                          cap.open(0, cv::CAP_V4L2); // OLD
+                        //                          cap.open(-1); // VERY OLD
+
+
+                        std::string gst_pipeline = "v4l2src device=/dev/video0 io-mode=2 ! "
+                                                   "image/jpeg, width=1280, height=720, framerate=30/1 ! "
+                                                   "nvv4l2decoder mjpeg=1 ! "
+                                                   "nvvidconv ! "
+                                                   "video/x-raw, format=BGRx ! "
+                                                   "videoconvert ! "
+                                                   "video/x-raw, format=BGR ! "
+                                                   "appsink drop=1 sync=false";
+
+                        cap.open(gst_pipeline, cv::CAP_GSTREAMER);
+
+                        //                        std::string pipeline = "v4l2src device=/dev/video0 ! video/x-raw, width=" + std::to_string(1280) + ", height=" + std::to_string(720) + ", framerate=" + std::to_string(30) + "/1 ! videoconvert ! video/x-raw, format=BGR ! appsink drop=1";
+                        //                        std::string pipeline = "v4l2src device=/dev/video0 ! videoconvert ! video/x-raw, format=BGR ! appsink drop=1";
+                        //                        std::string pipeline = "v4l2src device=/dev/video0 ! "
+                        //                                               "video/x-raw, width=1920, height=1080, framerate=30/1 ! "
+                        //                                               "videoconvert ! "
+                        //                                               "video/x-raw, format=BGR ! "
+                        //                                               "appsink drop=1";
+
+                        //                        int width = 640;
+                        //                        int height = 480;
+
+                        //                        std::string gst_pipeline = "v4l2src device=/dev/video0 ! image/jpeg,width=640,height=480 ! nvv4l2decoder mjpeg=1 ! nvvidconv ! video/x-raw, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink drop=1";
+                        //                                                cap.open(gst_pipeline, cv::CAP_GSTREAMER);
+
+                        //                        qDebug() << "Attempting to open camera with pipeline: \n" << QString::fromStdString(pipeline) << Qt::endl;
+
+                        //    cv::VideoCapture cap(pipeline, cv::CAP_GSTREAMER);
+                        //                        cap.open(gst_pipeline, cv::CAP_GSTREAMER);
+
+                        //                        qDebut() << "Camera openned?";
 #endif
                         // set REZ
                         if (cap.isOpened()) {
                             //                            cap.set(CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M','J','P','G')); // Mohsen: is needed?
-                            cap.set(CAP_PROP_FRAME_WIDTH, IM_WIDTH);
-                            cap.set(CAP_PROP_FRAME_HEIGHT, IM_HEIGHT);
+                            ////                            cap.set(CAP_PROP_FOURCC, cv::VideoWriter::fourcc('Y','U','Y','V')); // Mohsen: is needed?
+                            //                            cap.set(CAP_PROP_FRAME_WIDTH, 1280); //IM_WIDTH);
+                            //                            cap.set(CAP_PROP_FRAME_HEIGHT, 720); // IM_HEIGHT);
+                            //                            cap.set(CAP_PROP_FPS, 30);
+                            //                            cap.set(CAP_PROP_BUFFERSIZE, 1);
+
+                            //                            cv::Mat tmp;
+                            //                            cap.retrieve(tmp);
+
+                            QThread::msleep(300);
 
                             cv::Mat tmp;
-                            cap.retrieve(tmp);
+                            // IMPORTANT: Use grab() before retrieve() to ensure the pipeline is primed
+                            if (cap.grab()) {
+                                cap.retrieve(tmp);
+                            }
 
-                            CRPW = tmp.cols;
-                            CRPH = tmp.rows;
-                            fullCapSize = QSize(CRPW, CRPH);
-                            qDebug() << "Capture size: " << fullCapSize.width() << ", " << fullCapSize.height();
+
+                            if (!tmp.empty()) {
+                                CRPW = tmp.cols;
+                                CRPH = tmp.rows;
+                                fullCapSize = QSize(CRPW, CRPH);
+                                qDebug() << "Capture size: " << fullCapSize.width() << ", " << fullCapSize.height();
+                            } else {
+                                qDebug() << "Warning: Initial frame is empty. Check camera connection.";
+                                this->msleep(2000);
+                            }
 
                             if(this->bool_halfSize)
                             {
                                 fullCapSize = QSize(CRPW/2, CRPH/2);
                             }
+
+                            //                             cv::imshow("cap", tmp);
+
 
                         } else {
                             this->keepRunning = false;
@@ -380,8 +442,8 @@ void KilobotTracker::LOOPstartstop(int expType)
     //    this->hough2 = cuda::createHoughCirclesDetector(1.0,1.0,this->LEDcannyThresh,this->LEDhoughAcc,this->kbLEDMinSize,this->kbLEDMaxSize,10000);// led detection : Mohsen's edition 1
 
     this->hough = cuda::createHoughCirclesDetector(1.0,this->kbMinSize,this->cannyThresh,this->houghAcc,this->kbMinSize,this->kbMaxSize,20000); // kilobot detection: Mohsen's edition 2
-//    if(detectHeter)
-//        this->houghLarger = cuda::createHoughCirclesDetector(1.0,this->kbBigMinSize,this->cannyThresh,this->houghAcc,this->kbBigMinSize,this->kbBigMaxSize,20000); // Thymios detection: Mohsen's edition 2
+    //    if(detectHeter)
+    //        this->houghLarger = cuda::createHoughCirclesDetector(1.0,this->kbBigMinSize,this->cannyThresh,this->houghAcc,this->kbBigMinSize,this->kbBigMaxSize,20000); // Thymios detection: Mohsen's edition 2
 
     //    this->hough.
 
@@ -890,15 +952,15 @@ void KilobotTracker::SETUPfindKilobots()
                  ,kbMinSize/* min circle size*/ \
                  ,kbMaxSize/* max circle size*/);
 
-//    if(detectHeter)
-//    {
-//        HoughCircles(res2,circles,HOUGH_GRADIENT,1.0/* rez scaling (1 = full rez, 2 = half etc)*/ \
-//                     ,this->kbBigMaxSize-1/* circle distance*/ \
-//                     ,cannyThresh /* Canny threshold*/ \
-//                     ,houghAcc /*cicle algorithm accuracy*/ \
-//                     ,kbBigMinSize/* min circle size*/ \
-//                     ,kbBigMaxSize/* max circle size*/);
-//    }
+    //    if(detectHeter)
+    //    {
+    //        HoughCircles(res2,circles,HOUGH_GRADIENT,1.0/* rez scaling (1 = full rez, 2 = half etc)*/ \
+    //                     ,this->kbBigMaxSize-1/* circle distance*/ \
+    //                     ,cannyThresh /* Canny threshold*/ \
+    //                     ,houghAcc /*cicle algorithm accuracy*/ \
+    //                     ,kbBigMinSize/* min circle size*/ \
+    //                     ,kbBigMaxSize/* max circle size*/);
+    //    }
 
     // the *2 is an assumption - should always be true...
     cv::cvtColor(display, display, COLOR_GRAY2RGB);
@@ -1248,12 +1310,12 @@ void KilobotTracker::trackKilobots()
             //            this->hough->detect(this->finalImageB,circlesGpu,stream); // Mohsen: changing from B to grayscale in the next line
             this->hough->detect(this->grayImage,circlesGpu,stream);
 
-//            if(detectHeter)
-//            {
-//                this->houghLarger->setVotesThreshold(circle_acc);
-//                //            this->hough->detect(this->finalImageB,circlesGpu,stream); // Mohsen: changing from B to grayscale in the next line
-//                this->houghLarger->detect(this->grayImage,circlesGpu,stream);
-//            }
+            //            if(detectHeter)
+            //            {
+            //                this->houghLarger->setVotesThreshold(circle_acc);
+            //                //            this->hough->detect(this->finalImageB,circlesGpu,stream); // Mohsen: changing from B to grayscale in the next line
+            //                this->houghLarger->detect(this->grayImage,circlesGpu,stream);
+            //            }
 
             //***************************************************************
             // FOR DEGUB: draw all the circles found through GPU-hough
@@ -1337,7 +1399,7 @@ void KilobotTracker::trackKilobots()
 
                 all_x_c.download(localDists);
 
-                //cout << endl << localDists << endl;
+                //cout << Qt::endl << localDists << Qt::endl;
 
                 // download circChans
                 Mat circChansXCpu;
@@ -1362,7 +1424,7 @@ void KilobotTracker::trackKilobots()
                     if (*min < float(this->kbMinSize)/1.15 && this->lost_count[i] < 10) { // check if the distance between the old and new position is small enough
                         circChans[0](Rect((*minLoc).y,0,1,1)).copyTo(kbChans[0](Rect(i,0,1,1)));
                         circChans[1](Rect((*minLoc).y,0,1,1)).copyTo(kbChans[1](Rect(i,0,1,1)));
-                        //cout << endl << circChansXCpu << endl;
+                        //cout << Qt::endl << circChansXCpu << Qt::endl;
                         this->lost_count[i] = 0;
                         // and on the cpu
                         kilos[i]->updateState(QPointF(circChansXCpu.at<float>((*minLoc).y),circChansYCpu.at<float>((*minLoc).y)),kilos[i]->getVelocity(), kilos[i]->getLedColour());
@@ -1429,11 +1491,11 @@ void KilobotTracker::trackKilobots()
                             this->hough->setVotesThreshold(this->houghAcc);
                             this->hough->detect(temp,circlesGpu_temp,stream);
 
-//                            if(detectHeter)
-//                            {
-//                                this->houghLarger->setVotesThreshold(this->houghAcc);
-//                                this->houghLarger->detect(temp,circlesGpu_temp,stream);
-//                            }
+                            //                            if(detectHeter)
+                            //                            {
+                            //                                this->houghLarger->setVotesThreshold(this->houghAcc);
+                            //                                this->houghLarger->detect(temp,circlesGpu_temp,stream);
+                            //                            }
 
                             if (circlesGpu_temp.size().width > 0) circlesGpu_temp.download(circles_rematch);
 #else
@@ -2301,7 +2363,7 @@ void KilobotTracker::trackKilobots()
                 Mat localDists;
 
                 all_x_c.download(localDists);
-                //                cout << endl << localDists << endl;
+                //                cout << Qt::endl << localDists << Qt::endl;
 
                 // download circChans
                 Mat circChansXCpu;
@@ -2332,7 +2394,7 @@ void KilobotTracker::trackKilobots()
                     if (*min < this->morfiTrack_maxDisplacement && this->lost_count[i] < var2) { // check if the distance between the old and new position is small enough
                         circChans[0](Rect((*minLoc).y,0,1,1)).copyTo(kbChans[0](Rect(i,0,1,1)));
                         circChans[1](Rect((*minLoc).y,0,1,1)).copyTo(kbChans[1](Rect(i,0,1,1)));
-                        //cout << endl << circChansXCpu << endl;
+                        //cout << Qt::endl << circChansXCpu << Qt::endl;
                         this->lost_count[i] = 0;
 
                         // and on the cpu
@@ -2925,7 +2987,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -2957,9 +3019,9 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
                     //    newOrientation = ledPostion - kilos[i]->getPosition();
                     //                    float ledX = circChansXCpu.at<float>(minLoc->y);
                     //                    float ledY = circChansYCpu.at<float>(minLoc->y);
-                    //                    qDebug() <<  minLoc->x << ", " << minLoc->y<< endl;
-                    //                    qDebug() << "ledX: " << ledX << ", " << ledY<< endl;
-                    //                    qDebug() << kilos[i]->getPosition()<< endl;
+                    //                    qDebug() <<  minLoc->x << ", " << minLoc->y<< Qt::endl;
+                    //                    qDebug() << "ledX: " << ledX << ", " << ledY<< Qt::endl;
+                    //                    qDebug() << kilos[i]->getPosition()<< Qt::endl;
                     QPointF ledPos(circChansXCpu.at<float>(minLoc->y), circChansYCpu.at<float>(minLoc->y));
                     kilos[i]->velocityBuffer.addOrientation(ledPos-kilos[i]->getPosition());
                     kilos[i]->updateState(kilos[i]->getPosition(),kilos[i]->velocityBuffer.getAvgOrientation(), kilos[i]->colBuffer.getAvgColour());
@@ -2969,8 +3031,8 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
             //                for (int i = 0; i < circChansXCpu.size().at<int>(0); ++i) {
             //                    qDebug() << "circChansXCpu: " << circChansXCpu.at<int>(i);
             //                }
-            //cout << "Mx = " << endl << " "  << circChansXCpu << endl << endl;
-            //cout << "My = " << endl << " "  << circChansYCpu << endl << endl;
+            //cout << "Mx = " << Qt::endl << " "  << circChansXCpu << Qt::endl << Qt::endl;
+            //cout << "My = " << Qt::endl << " "  << circChansYCpu << Qt::endl << Qt::endl;
 
         }
     }
@@ -3028,7 +3090,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3120,7 +3182,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3322,7 +3384,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3420,7 +3482,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3502,7 +3564,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3698,7 +3760,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3796,7 +3858,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -3878,7 +3940,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -4110,7 +4172,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -4142,9 +4204,9 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
                     //    newOrientation = ledPostion - kilos[i]->getPosition();
                     //                    float ledX = circChansXCpu.at<float>(minLoc->y);
                     //                    float ledY = circChansYCpu.at<float>(minLoc->y);
-                    //                    qDebug() <<  minLoc->x << ", " << minLoc->y<< endl;
-                    //                    qDebug() << "ledX: " << ledX << ", " << ledY<< endl;
-                    //                    qDebug() << kilos[i]->getPosition()<< endl;
+                    //                    qDebug() <<  minLoc->x << ", " << minLoc->y<< Qt::endl;
+                    //                    qDebug() << "ledX: " << ledX << ", " << ledY<< Qt::endl;
+                    //                    qDebug() << kilos[i]->getPosition()<< Qt::endl;
                     QPointF ledPos(circChansXCpu.at<float>(minLoc->y), circChansYCpu.at<float>(minLoc->y));
                     kilos[i]->velocityBuffer.addOrientation(ledPos-kilos[i]->getPosition());
                     kilos[i]->updateState(kilos[i]->getPosition(),kilos[i]->velocityBuffer.getAvgOrientation(), kilos[i]->colBuffer.getAvgColour());
@@ -4154,8 +4216,8 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
             //                for (int i = 0; i < circChansXCpu.size().at<int>(0); ++i) {
             //                    qDebug() << "circChansXCpu: " << circChansXCpu.at<int>(i);
             //                }
-            //cout << "Mx = " << endl << " "  << circChansXCpu << endl << endl;
-            //cout << "My = " << endl << " "  << circChansYCpu << endl << endl;
+            //cout << "Mx = " << Qt::endl << " "  << circChansXCpu << Qt::endl << Qt::endl;
+            //cout << "My = " << Qt::endl << " "  << circChansYCpu << Qt::endl << Qt::endl;
 
         }
     }
@@ -4213,7 +4275,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;
@@ -4305,7 +4367,7 @@ void KilobotTracker::getKiloBotLights(Mat &display) {
 
             all_x_c.download(localDists);
 
-            //cout << endl << localDists << endl;
+            //cout << Qt::endl << localDists << Qt::endl;
 
             // download circChans
             Mat circChansXCpu;

@@ -128,7 +128,7 @@ void MainWindow::logToFile_PosLED(QVector<Kilobot *> kiloVec)
     for (int i = 0; i < kiloVec.size(); ++i){
         log_stream << "\t" << i << "\t" << kiloVec[i]->getPosition().x() << "\t" << kiloVec[i]->getPosition().y() << "\t" << kiloVec[i]->getLedColour();
     }
-    log_stream << endl;
+    log_stream << Qt::endl;
 }
 
 void MainWindow::logToFile_FPS(QVector<QPoint> posVec)
@@ -157,7 +157,7 @@ void MainWindow::logToFile_FPS(QVector<QPoint> posVec)
     // add the value of the sliderRandom1 as the robot speed
 
 
-    log_stream << endl;
+    log_stream << Qt::endl;
 }
 
 /**
@@ -173,7 +173,7 @@ void MainWindow::logToFile(QVector<Kilobot *> kiloVec)
         log_stream << "\t" << i << "\t" << kiloVec[i]->getPosition().x() << "\t" << kiloVec[i]->getPosition().y() << "\t" << kiloVec[i]->getLedColour()
                    << "\t" << kiloVec[i]->getVelocity().x() << "\t" << kiloVec[i]->getVelocity().y() ;
     }
-    log_stream << endl;
+    log_stream << Qt::endl;
 }
 
 /**
@@ -188,7 +188,7 @@ void MainWindow::logToFile(QVector<QPoint> posVec)
     for (int i = 0; i < posVec.size(); ++i){
         log_stream << "\t" << i << "\t" << posVec[i].x() << "\t" << posVec[i].y() ;
     }
-    log_stream << endl;
+    log_stream << Qt::endl;
 }
 
 /**
@@ -1213,12 +1213,16 @@ void MainWindow::uiInitialization()
  */
 void MainWindow::plotData(QCustomPlot *customPlot, double value)
 {
-    static QTime time(QTime::currentTime());
-    double key = time.elapsed()/1000.0; // time elapsed since start of demo, by seconds
-    //    customPlot->graph(0)->addData(key,tempVal);
-    customPlot->xAxis->setRange(key, 3, Qt::AlignRight);
-    customPlot->replot();
+    qDebug() << "PLOTTING DATA IS NOT WORKING!! It";
 }
+
+//    static QTime time(QTime::currentTime());
+////    static QElapsedTimer time(QElapsedTimer::currentTime());
+//    double key = time.elapsed()/1000.0; // time elapsed since start of demo, by seconds
+//    //    customPlot->graph(0)->addData(key,tempVal);
+//    customPlot->xAxis->setRange(key, 3, Qt::AlignRight);
+//    customPlot->replot();
+//}
 
 /**
  * @brief Initializes the QCustomPlot for error visualization.
@@ -1919,15 +1923,18 @@ void MainWindow::on_crop_pushButton_clicked()
  */
 void MainWindow::on_detectMarker_pushButton_clicked()
 {
-    if(currentFrame.size>0)
+//    if(currentFrame.size>0) // OLD
+    if(!currentFrame.empty())
     {
         cv::Mat inputImage;
         currentFrame.copyTo(inputImage);
 
         std::vector<int> ids;
         std::vector<std::vector<cv::Point2f> > corners;
-        cv::Ptr<cv::aruco::Dictionary> dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
-        cv::aruco::detectMarkers(inputImage, dictionary, corners, ids);
+//        cv::Ptr<cv::aruco::Dictionary> dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250); // OLD
+        cv::aruco::Dictionary dictionaryObj = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
+//        cv::aruco::detectMarkers(inputImage, dictionary, corners, ids); // OLD
+        cv::aruco::detectMarkers(inputImage, cv::makePtr<cv::aruco::Dictionary>(dictionaryObj), corners, ids);
 
         cv::aruco::drawDetectedMarkers(inputImage, corners, ids);
         //        cv::imshow("Markers",inputImage);
@@ -2422,30 +2429,30 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
             log_stream.setDevice(&log_file);
         }
 
-        log_stream << "---- Kilobot Experiment: at SCIoI, Project 27. @Mohsen Raoufi ----" << endl;
-        log_stream << "Date:\t" << dateStrng << endl;
+        log_stream << "---- Kilobot Experiment: at SCIoI, Project 27. @Mohsen Raoufi ----" << Qt::endl;
+        log_stream << "Date:\t" << dateStrng << Qt::endl;
         log_stream << "Markers:\t"  << wm.marker0_pos.x() << "\t" <<  wm.marker0_pos.y() << "\t"
                    << wm.marker1_pos.x() << "\t" <<  wm.marker1_pos.y() << "\t"
                    << wm.marker2_pos.x() << "\t" <<  wm.marker2_pos.y() << "\t"
-                   << wm.marker3_pos.x() << "\t" <<  wm.marker3_pos.y() << endl;
-        log_stream << "Arena Size:\t"  << wm.marker3_pos.x() - wm.marker0_pos.x() << "\t" <<  wm.marker3_pos.y() - wm.marker0_pos.y() << endl;
-        log_stream << "Marker width:\t" << wm.marker_length << endl;
-        log_stream << "CapSize:\t"  << capSize.width << "\t" << capSize.height << endl;
-        log_stream << "FrameSize:\t"  << capSize.width << "\t" << capSize.height << endl;
+                   << wm.marker3_pos.x() << "\t" <<  wm.marker3_pos.y() << Qt::endl;
+        log_stream << "Arena Size:\t"  << wm.marker3_pos.x() - wm.marker0_pos.x() << "\t" <<  wm.marker3_pos.y() - wm.marker0_pos.y() << Qt::endl;
+        log_stream << "Marker width:\t" << wm.marker_length << Qt::endl;
+        log_stream << "CapSize:\t"  << capSize.width << "\t" << capSize.height << Qt::endl;
+        log_stream << "FrameSize:\t"  << capSize.width << "\t" << capSize.height << Qt::endl;
 
-//        log_stream << "Evaluation from experiment:\t" << ui->arenaImage_TextEdit->text() << endl;
+//        log_stream << "Evaluation from experiment:\t" << ui->arenaImage_TextEdit->text() << Qt::endl;
 
-//        log_stream << "Here we added the V value (brightness) of the environment at the end of the line" << endl;
+//        log_stream << "Here we added the V value (brightness) of the environment at the end of the line" << Qt::endl;
 
-//        log_stream << "Here we added the Number of Noise Tiles at the end of the line" << endl;
+//        log_stream << "Here we added the Number of Noise Tiles at the end of the line" << Qt::endl;
 
-//        log_stream << "Here we added the Number of robots generated in the image at the end of the line" << endl;
+//        log_stream << "Here we added the Number of robots generated in the image at the end of the line" << Qt::endl;
 
-//        log_stream << "Here we added the speed of robots generated in the animation at the end of the line" << endl;
+//        log_stream << "Here we added the speed of robots generated in the animation at the end of the line" << Qt::endl;
 
 
-        log_stream << "Evaluation from experiment Latency with QT Ball" << endl;
-        log_stream << "Here we added the position of the ball as well as the speed of it" << endl;
+        log_stream << "Evaluation from experiment Latency with QT Ball" << Qt::endl;
+        log_stream << "Here we added the position of the ball as well as the speed of it" << Qt::endl;
 
         int comboIndex = ui->logType_comboBox->currentIndex();
 
@@ -2453,25 +2460,25 @@ void MainWindow::on_writeLog_button_clicked(bool checked)
         case 0:{
             connect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile(QVector<Kilobot*>))); // version 1: pos, vel, LED
             qDebug() << "Writing Pos, Vel, LED into the log file, in captured coordination system.";
-            log_stream << "**** Writing Pos, Vel, LED ****" << endl;
+            log_stream << "**** Writing Pos, Vel, LED ****" << Qt::endl;
             break;
         }
         case 1:{
             connect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile(QVector<QPoint>))); // version 2: pos
             qDebug() << "Writing Pos into the log file, in (mapped to) Arena coordination system.";
-            log_stream << "**** Writing just the Pos in (mapped to) Arena coordination system ****" << endl;
+            log_stream << "**** Writing just the Pos in (mapped to) Arena coordination system ****" << Qt::endl;
             break;
         }
         case 2:{
             connect(&this->kbtracker, SIGNAL(kiloList(QVector<Kilobot*>)), this, SLOT(logToFile_PosLED(QVector<Kilobot*>))); // version 3: pos + LED
             qDebug() << "Writing Pos + LED into the log file, in captured coordination system.";
-            log_stream << "**** Writing Pos + LED in captured coordination system ****" << endl;
+            log_stream << "**** Writing Pos + LED in captured coordination system ****" << Qt::endl;
             break;
         }
         case 3:{
             connect(this, SIGNAL(kilobotPosVecReady(QVector<QPoint>)), this, SLOT(logToFile_FPS(QVector<QPoint>))); // version 2: pos
             qDebug() << "Writing Pos into the log file, in (mapped to) Arena coordination system.";
-            log_stream << "**** Writing just FPS and the Pos in (mapped to) Arena coordination system ****" << endl;
+            log_stream << "**** Writing just FPS and the Pos in (mapped to) Arena coordination system ****" << Qt::endl;
             break;
         }
         default:
@@ -2777,7 +2784,8 @@ void MainWindow::on_videoExpField_pushButton_clicked(bool checked)
 void MainWindow::on_generateExpField_pushButton_clicked()
 {
     // Example: Call Python function generate_robot_animation_random_robots with arguments
-    QString pythonScript = "/home/p27/LARS/LARS/etc/validation/generate_validation_images.py";
+    QString validation_DIR = "/home/jetsi/projects/LARS/LARS/etc/validation/";
+    QString pythonScript = validation_DIR + "generate_validation_images.py";
 
     QProcess *python_call_process = new QProcess(this);
 
@@ -2799,7 +2807,7 @@ void MainWindow::on_generateExpField_pushButton_clicked()
 
     QStringList arguments;
     QString output_str, output_path;
-    int robot_width = 42/2;
+    int robot_width = 70;
 
     switch (test_num) {
     case 0: // 0: GRID Positions -> image
@@ -2810,10 +2818,10 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         int N = dummy_var;
         //        robot_width = dummy_var;
         QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_str = validation_DIR + "media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
         output_path = output_str + "_img.png";
         QString log_output_path = output_str + "_log.txt";
-        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString robot_image_path = validation_DIR + "kilobot.png";
         int grid_h, grid_w;
         grid_w = int(sqrt(N));
         grid_h = int(N/grid_w);
@@ -2855,10 +2863,10 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         QString functionName = "random_robots";
         int N = dummy_var;
         QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_str = validation_DIR + "media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
         output_path = output_str + "_img.png";
         QString log_output_path = output_str + "_log.txt";
-        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString robot_image_path = validation_DIR + "kilobot.png";
         QString image_size = QString("(1000,1000)");
 
         arguments << pythonScript << functionName
@@ -2888,13 +2896,13 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         int robot_speed = dummy_var;
         //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
         //        QString output_str
-        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
+        output_str = validation_DIR + "media/eval_test_"
                 + functionName
                 + "_w_" + QString::number(robot_width)
                 + "_sp_" + QString::number(robot_speed);
         output_path = output_str + "_vid.mp4";
         QString log_output_path = output_str + "_log.txt";
-        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString robot_image_path = validation_DIR + "kilobot.png";
         QString image_size = QString("(500,500)");
 
         arguments << pythonScript << functionName
@@ -2927,14 +2935,14 @@ void MainWindow::on_generateExpField_pushButton_clicked()
         int robot_speed = 3;
         //    QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
         //        QString output_str
-        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_"
+        output_str = validation_DIR + "media/eval_test_"
                 + functionName
                 + "_N_" + QString::number(N)
                 + "_w_" + QString::number(robot_width)
                 + "_sp_" + QString::number(robot_speed);
         output_path = output_str + "_vid.mp4";
         QString log_output_path = output_str + "_log.txt";
-        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString robot_image_path = validation_DIR + "kilobot.png";
         QString image_size = QString("(1000,1000)");
 
         arguments << pythonScript << functionName
@@ -2965,10 +2973,10 @@ void MainWindow::on_generateExpField_pushButton_clicked()
 
         int N = dummy_var;
         QString dateStrng = QDateTime::currentDateTime().toString("yyyy_MM_dd__hh_mm");
-        output_str = "/home/p27/LARS/LARS/etc/validation/media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
+        output_str = validation_DIR + "media/eval_test_" + functionName + "_N_" + QString::number(N) + "_w_" + QString::number(robot_width);
         output_path = output_str + "_img.png";
         QString log_output_path = output_str + "_log.txt";
-        QString robot_image_path = "/home/p27/LARS/LARS/etc/validation/kilobot.png";
+        QString robot_image_path = validation_DIR + "kilobot.png";
         int image_w = 1000;
         QString image_size = QString("("+QString::number(image_w)+","+QString::number(image_w)+")");
 

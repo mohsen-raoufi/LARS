@@ -4,7 +4,9 @@
 #include <QObject>
 #include <QString>
 #include <QVector>
-#include <QTime>
+//#include <QTime>
+#include <QElapsedTimer>
+
 #include "intelhex.h"
 
 #define TIMEPERMSG_ms 50
@@ -16,7 +18,8 @@ private:
     QString portname;
     void *context;
     intelhex::hex_data data;
-    QTime delay;
+//    QTime delay;
+    QElapsedTimer delay;
     int mode;
     int page;
     int page_total;

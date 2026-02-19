@@ -51,7 +51,8 @@ using namespace cv;
 #include <QSemaphore>
 #include <QTimer>
 #include <QElapsedTimer>
-#include <QTime>
+//#include <QTime>
+#include <QElapsedTimer>
 //#include <QColor>
 #include <QDebug>
 
@@ -65,7 +66,7 @@ struct srcBuffer {
 #define BUFF_SIZE 2
 
 #define IM_WIDTH 1920 //960 //  2304
-#define IM_HEIGHT 1200 // 600 // 1536
+#define IM_HEIGHT 1080 // 1200 // 600 // 1536
 
 //#define IDENTIFY_TIMEOUT 10
 #define IDENTIFY_TIMEOUT 1

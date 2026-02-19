@@ -256,17 +256,22 @@ void RenderArea::refresh()
  * @return Index of the node with highest degree centrality.
  */
 int RenderArea::getMostCentralNode(const igraph_t& graph) {
-    igraph_vector_int_t centrality;
-    igraph_vector_int_init(&centrality, 0);
+//    igraph_vector_int_t centrality; // OLD
+//    igraph_vector_int_init(&centrality, 0); // OLD
+
+    igraph_vector_t centrality;
+    igraph_vector_init(&centrality, 0);
 
     // Calculate degree centrality
     igraph_degree(&graph, &centrality, igraph_vss_all(), IGRAPH_ALL, IGRAPH_NO_LOOPS);
 
     // Find the index of the most central node
-    int max_centrality_index = igraph_vector_int_which_max(&centrality);
+//    int max_centrality_index = igraph_vector_int_which_max(&centrality); // OLD
+    int max_centrality_index = igraph_vector_which_max(&centrality);
 
     // Cleanup
-    igraph_vector_int_destroy(&centrality);
+//    igraph_vector_int_destroy(&centrality); // OLD
+    igraph_vector_destroy(&centrality);
 
     return max_centrality_index;
 }
@@ -285,7 +290,8 @@ void RenderArea::paintEvent(QPaintEvent *)
     QPainter painter(this);
     painter.setRenderHint(QPainter::TextAntialiasing);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setRenderHint(QPainter::HighQualityAntialiasing);
+//    painter.setRenderHint(QPainter::HighQualityAntialiasing); // QT OLD
+    painter.setRenderHint(QPainter::Antialiasing);
     painter.setRenderHint(QPainter::SmoothPixmapTransform);
 
     // Draw Background field

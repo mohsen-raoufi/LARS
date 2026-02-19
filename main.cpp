@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
     p.setColor(QPalette::Base, QColor(53,53,53));
     p.setColor(QPalette::Highlight, QColor(50, 153, 168));
     p.setColor(QPalette::ButtonText, QColor(255,255,255));
-    p.setColor(QPalette::Foreground, QColor(255,255,255));
+//    p.setColor(QPalette::Foreground, QColor(255,255,255)); // OLD QT
+    p.setColor(QPalette::WindowText, QColor(255,255,255));
     p.setColor(QPalette::Text, QColor(255,255,255));
     a.setPalette(p);
 
