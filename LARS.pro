@@ -162,6 +162,14 @@ RESOURCES += \
 #    Files/marker2.png \
 #    Files/marker3.png
 
+### Static analysis: run 'make analyze' to invoke cppcheck on all sources
+analyze.commands = cppcheck --enable=all --std=c++11 --inconclusive \
+    --suppress=missingInclude --suppress=unusedFunction \
+    -DFOR_KILOBOT -DUSE_CUDA -DUSE_OPENCV3 \
+    -I$$PWD -I/usr/local/include/opencv4 -I/usr/include/boost \
+    $$HEADERS $$SOURCES
+QMAKE_EXTRA_TARGETS += analyze
+
 DISTFILES += \
     pyTestClass.py
 

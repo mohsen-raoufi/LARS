@@ -10,7 +10,7 @@
 #include <ios>
 #include <vector>
 
-#define USE_CUDA true
+// USE_CUDA is set via DEFINES += USE_CUDA in LARS.pro; do not hardcode here
 using namespace std;
 
 // OpenCV 3 :

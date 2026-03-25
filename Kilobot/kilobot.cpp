@@ -49,27 +49,15 @@ lightColour ColourBuffer::getAvgColour(){
         }
         }
     }
-    double * minVal = new double;
-    double * maxVal = new double;
-    int * maxLoc = new int;
-    cv::minMaxIdx(counters, minVal, maxVal, NULL, maxLoc);
+    double minVal, maxVal;
+    int minLoc[2], maxLoc[2];
+    cv::minMaxIdx(counters, &minVal, &maxVal, minLoc, maxLoc);
     switch (maxLoc[1]) {
-    case (0):{
-        return OFF;
-        break;
-    }
-    case (1):{
-        return RED;
-        break;
-    }
-    case (2):{
-        return GREEN;
-        break;
-    }
-    case (3):{
-        return BLUE;
-        break;
-    }
+    case 0: return OFF;
+    case 1: return RED;
+    case 2: return GREEN;
+    case 3: return BLUE;
+    default: return OFF;
     }
 }
 

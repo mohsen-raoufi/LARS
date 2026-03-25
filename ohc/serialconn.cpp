@@ -122,9 +122,8 @@ void SerialConnection::open() {
 
 #ifdef _WIN32
         QString comname = QString("\\\\.\\") + theport;
-        wchar_t comstr[512];
-        memcpy(comstr, comname.toStdWString().c_str(), sizeof(wchar_t)*comname.toStdWString().size());
-        HANDLE handle = CreateFile(comstr, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+        std::wstring comwstr = comname.toStdWString();
+        HANDLE handle = CreateFile(comwstr.c_str(), GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
         DCB dcbSerialParams = DCB();
 
         if (handle == INVALID_HANDLE_VALUE) {

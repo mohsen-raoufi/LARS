@@ -299,7 +299,13 @@ private:
                         cv::Mat tmpMat, unDist;
                         nonCropedImage.copyTo(tmpMat);
                         cv::undistort(tmpMat, unDist, camCalibMat, camDistMat);
-                        image = unDist(Rect(CRPX0, CRPY0, CRPW, CRPH));
+                        {
+                            int cx = std::max(0, CRPX0), cy = std::max(0, CRPY0);
+                            int cw = std::min(CRPW, unDist.cols - cx);
+                            int ch = std::min(CRPH, unDist.rows - cy);
+                            if (cw > 0 && ch > 0)
+                                image = unDist(Rect(cx, cy, cw, ch));
+                        }
 
 
                         if(this->bool_halfSize)
@@ -310,7 +316,13 @@ private:
 
                         //#endif
 #else
-                        image = nonCropedImage(Rect(CRPX0, CRPY0, CRPW, CRPH));
+                        {
+                            int cx = std::max(0, CRPX0), cy = std::max(0, CRPY0);
+                            int cw = std::min(CRPW, nonCropedImage.cols - cx);
+                            int ch = std::min(CRPH, nonCropedImage.rows - cy);
+                            if (cw > 0 && ch > 0)
+                                image = nonCropedImage(Rect(cx, cy, cw, ch));
+                        }
 #endif
                         // One has to check whether it is necessary for the image to have Size 2000 x 2000 pixels.
                         // We kept only because the original ARK code prescribes this size. // MOHSEN: what is this?!!
@@ -996,6 +1008,7 @@ void KilobotTracker::SETUPfindKilobots()
     //    setStitchedImage(pix);
 
     // generate kilobots
+    qDeleteAll(this->kilos);
     this->kilos.clear();
 
     kilobot_colour col = OFF;
