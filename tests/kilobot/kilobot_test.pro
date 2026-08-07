@@ -13,3 +13,5 @@ SOURCES += tst_kilobot.cpp \
            ../../Kilobot/kilobot.cpp
 
 HEADERS += ../../Kilobot/kilobot.h
+
+include(../coverage.pri)

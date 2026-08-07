@@ -1,0 +1,43 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit-and-component-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            qt5-qmake qtbase5-dev qtbase5-dev-tools libqt5test5 \
+            libopencv-dev \
+            libboost-graph-dev \
+            libigraph-dev \
+            gcovr
+
+      # tests/envbrain needs opencv2/cudaarithm.hpp (CUDA-enabled OpenCV),
+      # which plain apt libopencv-dev doesn't provide -- tests/tests.pro
+      # already skips that one subdir when the header isn't found, so this
+      # job simply runs whatever it built.
+      - name: Build and run tests with coverage
+        run: ./tests/run_coverage.sh
+
+      - name: Upload coverage report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-html
+          path: tests/coverage_html/
+
+      - name: Upload coverage to Codecov
+        if: always()
+        uses: codecov/codecov-action@v4
+        with:
+          files: tests/coverage.xml
+          fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}

@@ -38,3 +38,24 @@ LARS.pro.user
 .ipynb
 /etc/validation/media
 etc/validation/kilobot.png
+
+# qmake / QtTest build byproducts (tests/*/, build/)
+Makefile
+Makefile.*
+.qmake.stash
+moc_*.cpp
+moc_predefs.h
+*.moc
+target_wrapper.sh
+tests/*/tst_*
+!tests/*/tst_*.cpp
+!tests/*/tst_*.pro
+
+# gcov / gcovr coverage output
+*.gcno
+*.gcda
+tests/coverage.xml
+tests/coverage_html/
+
+# local IDE build directories (e.g. Qt Creator "shadow build")
+/build/

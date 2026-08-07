@@ -12,3 +12,5 @@ SOURCES += tst_serialconn.cpp \
 HEADERS += ../../ohc/serialconn.h \
            ../../ohc/intelhex.h \
            ../../ohc/packet.h
+
+include(../coverage.pri)

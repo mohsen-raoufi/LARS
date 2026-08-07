@@ -1,5 +1,8 @@
 # LARS: Light-Augmented Reality System for Collective Robotics
 
+[![tests](https://github.com/mohsen-raoufi/LARS/actions/workflows/tests.yml/badge.svg)](https://github.com/mohsen-raoufi/LARS/actions/workflows/tests.yml)
+[![coverage](https://codecov.io/gh/mohsen-raoufi/LARS/graph/badge.svg)](https://codecov.io/gh/mohsen-raoufi/LARS)
+
 **LARS** is an end-to-end, marker-free infrastructure designed to bridge physical robot swarms with virtual environments. It integrates high-speed detection, real-time tracking (100+ agents), and dynamic projection into a single standalone architecture.
 
 [📄 View Online Docs](https://mohsen-raoufi.github.io/LARS/) | [📘 Read the Paper](https://www.mdpi.com/1424-8220/25/17/5412) | [📽️ Intro Video](https://www.google.com/search?q=https://figshare.com/articles/media/LARS_Light_Augmented_Reality_System_-_Introducing_LARS/30005467/1)
