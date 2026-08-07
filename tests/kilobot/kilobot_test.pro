@@ -4,10 +4,12 @@ TEMPLATE = app
 TARGET = tst_kilobot
 
 INCLUDEPATH += ../../
-INCLUDEPATH += /usr/local/include/opencv4
 
-LIBS += -L/usr/local/lib \
-        -lopencv_core
+# Resolved via pkg-config instead of a hardcoded path: OpenCV lands in
+# different places depending on how it was installed (apt: /usr/include,
+# Homebrew: /opt/homebrew, source build on Jetson: /usr/local).
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv4
 
 SOURCES += tst_kilobot.cpp \
            ../../Kilobot/kilobot.cpp

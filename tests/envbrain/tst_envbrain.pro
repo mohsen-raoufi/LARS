@@ -11,10 +11,10 @@ DEFINES += USE_OPENCV3
 DEFINES += FOR_KILOBOT
 
 INCLUDEPATH += ../../
-INCLUDEPATH += /usr/local/include/opencv4
-INCLUDEPATH += /usr/include/boost
 
-LIBS += -L/usr/local/lib -lopencv_core -lopencv_imgproc -ligraph
+# Resolved via pkg-config instead of hardcoded paths (see tests/kilobot/kilobot_test.pro).
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv4 igraph
 
 SOURCES += tst_envbrain.cpp \
            ../../envbrain.cpp \

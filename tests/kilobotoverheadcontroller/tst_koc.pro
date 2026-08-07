@@ -4,9 +4,10 @@ TEMPLATE = app
 TARGET = tst_koc
 
 INCLUDEPATH += ../../
-INCLUDEPATH += /usr/local/include/opencv4
 
-LIBS += -L/usr/local/lib -lopencv_core
+# Resolved via pkg-config instead of a hardcoded path (see tests/kilobot/kilobot_test.pro).
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv4
 
 SOURCES += tst_koc.cpp \
            ../../Kilobot/kilobotoverheadcontroller.cpp \

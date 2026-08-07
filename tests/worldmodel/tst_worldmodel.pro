@@ -6,10 +6,11 @@ TARGET = tst_worldmodel
 DEFINES += FOR_KILOBOT
 
 INCLUDEPATH += ../../
-INCLUDEPATH += /usr/local/include/opencv4
-INCLUDEPATH += /usr/include/boost
 
-LIBS += -L/usr/local/lib -lopencv_core -ligraph
+# Resolved via pkg-config instead of hardcoded paths, which don't agree
+# across apt/Homebrew/source-built installs.
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv4 igraph
 
 SOURCES += tst_worldmodel.cpp \
            ../../ui/worldmodel.cpp
