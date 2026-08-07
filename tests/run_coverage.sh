@@ -8,6 +8,11 @@ cd "$(dirname "$0")"
 qmake
 make -j"$(nproc 2>/dev/null || sysctl -n hw.ncpu)"
 
+# A couple of tests build against QtGui (QColor/QBrush); on a headless CI
+# runner there's no X11 display, so force Qt's built-in headless platform
+# plugin instead of trying (and aborting) on xcb.
+export QT_QPA_PLATFORM=offscreen
+
 status=0
 for f in */tst_*; do
     [ -x "$f" ] || continue
@@ -22,7 +27,7 @@ gcovr --root .. \
       --exclude-unreachable-branches \
       --print-summary \
       --xml-pretty -o coverage.xml \
-      --html-details -o coverage_html/index.html \
+      --html --html-details -o coverage_html/index.html \
       .
 
 exit $status
